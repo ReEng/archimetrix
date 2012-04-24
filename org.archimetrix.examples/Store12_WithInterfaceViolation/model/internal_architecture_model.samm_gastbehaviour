@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<qimpressgast:GASTBehaviourRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:qimpressgast="http://q-impress.eu/qimpressgast">
+  <gastbehaviour>
+    <blockstatement href="../Store1.gast#_WQX28IRTEeC81IhLTZ23ZA"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_ZPnKo9L0EeC-rO4QZ37REw"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store1.gast#_WQX2_YRTEeC81IhLTZ23ZA"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_ZSHsEdL0EeC-rO4QZ37REw"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store1.gast#_WQX294RTEeC81IhLTZ23ZA"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_ZSHsE9L0EeC-rO4QZ37REw"/>
+  </gastbehaviour>
+</qimpressgast:GASTBehaviourRepository>

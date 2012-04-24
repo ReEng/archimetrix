@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="ASCII"?>
+<staticstructure:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:behaviour="http://q-impress.eu/samm/behaviour" xmlns:datatypes="http://q-impress.eu/samm/datatype" xmlns:staticstructure="http://q-impress.eu/samm/staticstructure" id="_s9oXIId2EeC4Y4PFAoVBqQ">
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_tDThUId2EeC4Y4PFAoVBqQ" documentation=" &lt;PC No. 1 Scanner>" name=" &lt;PC No. 0 Scanner>">
+    <provided id="_tEPVcId2EeC4Y4PFAoVBqQ" name="Object 0 (prov)" interfaceType="_tDfukYd2EeC4Y4PFAoVBqQ"/>
+    <provided id="_tEgbMYd2EeC4Y4PFAoVBqQ" name="Iterator 1 (prov)" interfaceType="_tEgbMId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tELEAId2EeC4Y4PFAoVBqQ" name="String 0 (req)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tEYfYId2EeC4Y4PFAoVBqQ" operation="_tDknEId2EeC4Y4PFAoVBqQ"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_tEhpUId2EeC4Y4PFAoVBqQ" documentation=" &lt;PC No. 7 StringBuffer>" name=" &lt;PC No. 6 StringBuffer>">
+    <provided id="_tEhpUod2EeC4Y4PFAoVBqQ" name="Serializable 4 (prov)" interfaceType="_tDo4gId2EeC4Y4PFAoVBqQ"/>
+    <provided id="_tEhpU4d2EeC4Y4PFAoVBqQ" name="CharSequence 5 (prov)" interfaceType="_tDo4god2EeC4Y4PFAoVBqQ"/>
+    <required id="_tEhpUYd2EeC4Y4PFAoVBqQ" name="String 3 (req)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_tEiQZId2EeC4Y4PFAoVBqQ" documentation=" &lt;PC No. 11 PrintStream>" name=" &lt;PC No. 10 PrintStream>">
+    <provided id="_tEiQaId2EeC4Y4PFAoVBqQ" name="PrintStream 7 (prov)" interfaceType="_tEiQZod2EeC4Y4PFAoVBqQ"/>
+    <required id="_tEiQZYd2EeC4Y4PFAoVBqQ" name="String 5 (req)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tEiQaYd2EeC4Y4PFAoVBqQ" operation="_tEiQZ4d2EeC4Y4PFAoVBqQ"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_tEi3c4d2EeC4Y4PFAoVBqQ" documentation=" &lt;PC No. 15 Seller>" name=" &lt;PC No. 14 Seller>">
+    <provided id="_tEnI5od2EeC4Y4PFAoVBqQ" name="Object 9 (prov)" interfaceType="_tDfukYd2EeC4Y4PFAoVBqQ"/>
+    <provided id="_tEnI6Yd2EeC4Y4PFAoVBqQ" name="IAccountOwner 10 (prov)" interfaceType="_tEnI6Id2EeC4Y4PFAoVBqQ"/>
+    <required id="_tEl6wId2EeC4Y4PFAoVBqQ" name="String 7 (req)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tEl6wod2EeC4Y4PFAoVBqQ" name="StorePackage$Literals 8 (req)" interfaceType="_tEl6wYd2EeC4Y4PFAoVBqQ"/>
+    <required id="_tEmh0Yd2EeC4Y4PFAoVBqQ" name="Collection 10 (req)" interfaceType="_tEmh0Id2EeC4Y4PFAoVBqQ"/>
+    <required id="_tEnI5Yd2EeC4Y4PFAoVBqQ" name="StringBuffer 11 (req)" interfaceType="_tEmh0od2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tEnI54d2EeC4Y4PFAoVBqQ" operation="_tDknEId2EeC4Y4PFAoVBqQ"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_tGIL0Id2EeC4Y4PFAoVBqQ" documentation=" &lt;PC No. 17 Customer>" name=" &lt;PC No. 16 Customer>">
+    <provided id="_tGKoE4d2EeC4Y4PFAoVBqQ" name="Object 11 (prov)" interfaceType="_tDfukYd2EeC4Y4PFAoVBqQ"/>
+    <provided id="_tGLPIId2EeC4Y4PFAoVBqQ" name="IAccountOwner 12 (prov)" interfaceType="_tEnI6Id2EeC4Y4PFAoVBqQ"/>
+    <required id="_tGKBAId2EeC4Y4PFAoVBqQ" name="String 12 (req)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tGKBAYd2EeC4Y4PFAoVBqQ" name="StorePackage$Literals 13 (req)" interfaceType="_tEl6wYd2EeC4Y4PFAoVBqQ"/>
+    <required id="_tGKoEId2EeC4Y4PFAoVBqQ" name="Collection 15 (req)" interfaceType="_tEmh0Id2EeC4Y4PFAoVBqQ"/>
+    <required id="_tGKoEYd2EeC4Y4PFAoVBqQ" name="Integer 16 (req)" interfaceType="_tEhpVod2EeC4Y4PFAoVBqQ"/>
+    <required id="_tGKoEod2EeC4Y4PFAoVBqQ" name="StringBuffer 17 (req)" interfaceType="_tEmh0od2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tGKoFId2EeC4Y4PFAoVBqQ" operation="_tDknEId2EeC4Y4PFAoVBqQ"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_tG8EOId2EeC4Y4PFAoVBqQ" documentation=" &lt;PC No. 37 StoreSwitch>" name=" &lt;PC No. 36 StoreSwitch>">
+    <provided id="_tG-gYId2EeC4Y4PFAoVBqQ" name="Object 22 (prov)" interfaceType="_tDfukYd2EeC4Y4PFAoVBqQ"/>
+    <required id="_tG9SQ4d2EeC4Y4PFAoVBqQ" name="List 54 (req)" interfaceType="_tG9SQId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tG9SRId2EeC4Y4PFAoVBqQ" name="Wishlist 55 (req)" interfaceType="_tGuBs4d2EeC4Y4PFAoVBqQ"/>
+    <required id="_tG95UId2EeC4Y4PFAoVBqQ" name="Store 56 (req)" interfaceType="_tGn7EId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tG95UYd2EeC4Y4PFAoVBqQ" name="Producer 57 (req)" interfaceType="_tG5A04d2EeC4Y4PFAoVBqQ"/>
+    <required id="_tG95Uod2EeC4Y4PFAoVBqQ" name="Product 58 (req)" interfaceType="_tGPgkYd2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tG-gYYd2EeC4Y4PFAoVBqQ" operation="_tDknEId2EeC4Y4PFAoVBqQ"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_tHHqUId2EeC4Y4PFAoVBqQ" documentation=" &lt;PC No. 47 CustomerMenu>" name=" &lt;PC No. 46 CustomerMenu>">
+    <provided id="_tHKGkId2EeC4Y4PFAoVBqQ" name="Object 30 (prov)" interfaceType="_tDfukYd2EeC4Y4PFAoVBqQ"/>
+    <provided id="_tHKGkod2EeC4Y4PFAoVBqQ" name="IMenu 31 (prov)" interfaceType="_tHAVlId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHIRYId2EeC4Y4PFAoVBqQ" name="Store 76 (req)" interfaceType="_tGn7EId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHIRYod2EeC4Y4PFAoVBqQ" name="String 78 (req)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHIRY4d2EeC4Y4PFAoVBqQ" name="Scanner 79 (req)" interfaceType="_tHAVlod2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHIRZId2EeC4Y4PFAoVBqQ" name="PrintStream 80 (req)" interfaceType="_tEiQZod2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHI4cId2EeC4Y4PFAoVBqQ" name="Integer 81 (req)" interfaceType="_tEhpVod2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHJfgId2EeC4Y4PFAoVBqQ" name="IListView 82 (req)" interfaceType="_tHAVkId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHJfgYd2EeC4Y4PFAoVBqQ" name="Product 83 (req)" interfaceType="_tGPgkYd2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tHKGkYd2EeC4Y4PFAoVBqQ" operation="_tDknEId2EeC4Y4PFAoVBqQ"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_tHMi1Yd2EeC4Y4PFAoVBqQ" documentation=" &lt;PC No. 51 SellerMenu>" name=" &lt;PC No. 50 SellerMenu>">
+    <provided id="_tHPmIod2EeC4Y4PFAoVBqQ" name="Object 34 (prov)" interfaceType="_tDfukYd2EeC4Y4PFAoVBqQ"/>
+    <provided id="_tHPmJId2EeC4Y4PFAoVBqQ" name="IMenu 35 (prov)" interfaceType="_tHAVlId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHNJ4Id2EeC4Y4PFAoVBqQ" name="Store 85 (req)" interfaceType="_tGn7EId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHNw8Yd2EeC4Y4PFAoVBqQ" name="String 87 (req)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHNw8od2EeC4Y4PFAoVBqQ" name="Scanner 88 (req)" interfaceType="_tHAVlod2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHNw84d2EeC4Y4PFAoVBqQ" name="PrintStream 89 (req)" interfaceType="_tEiQZod2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHOYAId2EeC4Y4PFAoVBqQ" name="Integer 90 (req)" interfaceType="_tEhpVod2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHO_EId2EeC4Y4PFAoVBqQ" name="IListView 91 (req)" interfaceType="_tHAVkId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHO_EYd2EeC4Y4PFAoVBqQ" name="Product 92 (req)" interfaceType="_tGPgkYd2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHPmIId2EeC4Y4PFAoVBqQ" name="StoreFactory 93 (req)" interfaceType="_tGoiIod2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHPmIYd2EeC4Y4PFAoVBqQ" name="Double 94 (req)" interfaceType="_tGO5gId2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tHPmI4d2EeC4Y4PFAoVBqQ" operation="_tDknEId2EeC4Y4PFAoVBqQ"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_tHQ0QId2EeC4Y4PFAoVBqQ" documentation=" &lt;PC No. 53 ProductSearch>" name=" &lt;PC No. 52 ProductSearch>">
+    <provided id="_tHQ0RId2EeC4Y4PFAoVBqQ" name="Object 36 (prov)" interfaceType="_tDfukYd2EeC4Y4PFAoVBqQ"/>
+    <provided id="_tHQ0Rod2EeC4Y4PFAoVBqQ" name="ISearch 37 (prov)" interfaceType="_tHEnAod2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHQ0QYd2EeC4Y4PFAoVBqQ" name="Product 95 (req)" interfaceType="_tGPgkYd2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHQ0Qod2EeC4Y4PFAoVBqQ" name="String 96 (req)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tHQ0Q4d2EeC4Y4PFAoVBqQ" name="Producer 97 (req)" interfaceType="_tG5A04d2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tHQ0RYd2EeC4Y4PFAoVBqQ" operation="_tDknEId2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tHQ0R4d2EeC4Y4PFAoVBqQ" operation="_tHEnA4d2EeC4Y4PFAoVBqQ"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_tQaJMId2EeC4Y4PFAoVBqQ" documentation=" &lt;PC No. 61 Double Object Integer Main MainMenu ProductsListViewEntry>" name=" &lt;PC No. 60 Double Object Integer Main MainMenu ProductsListVie...>">
+    <provided id="_tQdMgod2EeC4Y4PFAoVBqQ" name="Comparable 44 (prov)" interfaceType="_tDo4gYd2EeC4Y4PFAoVBqQ"/>
+    <provided id="_tQdMg4d2EeC4Y4PFAoVBqQ" name="Object 45 (prov)" interfaceType="_tDfukYd2EeC4Y4PFAoVBqQ"/>
+    <provided id="_tQdzkId2EeC4Y4PFAoVBqQ" name="IMenu 46 (prov)" interfaceType="_tHAVlId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tQb-YId2EeC4Y4PFAoVBqQ" name="String 102 (req)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tQb-YYd2EeC4Y4PFAoVBqQ" name="Store 103 (req)" interfaceType="_tGn7EId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tQb-Yod2EeC4Y4PFAoVBqQ" name="StoreFactory 104 (req)" interfaceType="_tGoiIod2EeC4Y4PFAoVBqQ"/>
+    <required id="_tQb-Y4d2EeC4Y4PFAoVBqQ" name="IListView 105 (req)" interfaceType="_tHAVkId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tQb-ZYd2EeC4Y4PFAoVBqQ" name="Scanner 107 (req)" interfaceType="_tHAVlod2EeC4Y4PFAoVBqQ"/>
+    <required id="_tQb-Zod2EeC4Y4PFAoVBqQ" name="PrintStream 108 (req)" interfaceType="_tEiQZod2EeC4Y4PFAoVBqQ"/>
+    <required id="_tQclcId2EeC4Y4PFAoVBqQ" name="IAccountOwner 109 (req)" interfaceType="_tEnI6Id2EeC4Y4PFAoVBqQ"/>
+    <required id="_tQdMgId2EeC4Y4PFAoVBqQ" name="Product 110 (req)" interfaceType="_tGPgkYd2EeC4Y4PFAoVBqQ"/>
+    <required id="_tQdMgYd2EeC4Y4PFAoVBqQ" name="ICalculator 111 (req)" interfaceType="_tHGcMId2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQdMhId2EeC4Y4PFAoVBqQ" operation="_tDknEId2EeC4Y4PFAoVBqQ"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_tQfowId2EeC4Y4PFAoVBqQ" documentation=" &lt;PC No. 63 Product Store StoreFactory Book DVD Wishlist StorePackage Literals Producer StoreAdapterFactory ProductsListView CustomerListView SellerListView>" name=" &lt;PC No. 62 Product Store StoreFactory Book DVD Wishlist StoreP...>">
+    <provided id="_tQzx0Id2EeC4Y4PFAoVBqQ" name="Product 47 (prov)" interfaceType="_tGPgkYd2EeC4Y4PFAoVBqQ"/>
+    <provided id="_tQzx54d2EeC4Y4PFAoVBqQ" name="Object 48 (prov)" interfaceType="_tDfukYd2EeC4Y4PFAoVBqQ"/>
+    <provided id="_tQ0Y4Yd2EeC4Y4PFAoVBqQ" name="IListView 49 (prov)" interfaceType="_tHAVkId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tQwugId2EeC4Y4PFAoVBqQ" name="String 112 (req)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tQxVkYd2EeC4Y4PFAoVBqQ" name="Double 114 (req)" interfaceType="_tGO5gId2EeC4Y4PFAoVBqQ"/>
+    <required id="_tQxVkod2EeC4Y4PFAoVBqQ" name="Collection 115 (req)" interfaceType="_tEmh0Id2EeC4Y4PFAoVBqQ"/>
+    <required id="_tQxVk4d2EeC4Y4PFAoVBqQ" name="StringBuffer 116 (req)" interfaceType="_tEmh0od2EeC4Y4PFAoVBqQ"/>
+    <required id="_tQzKwId2EeC4Y4PFAoVBqQ" name="ISearch 117 (req)" interfaceType="_tHEnAod2EeC4Y4PFAoVBqQ"/>
+    <required id="_tQzKwYd2EeC4Y4PFAoVBqQ" name="PrintStream 118 (req)" interfaceType="_tEiQZod2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx0Yd2EeC4Y4PFAoVBqQ" operation="_tGPgkod2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx0od2EeC4Y4PFAoVBqQ" operation="_tGPgk4d2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx04d2EeC4Y4PFAoVBqQ" operation="_tGPglod2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx1Id2EeC4Y4PFAoVBqQ" operation="_tGPgl4d2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx1Yd2EeC4Y4PFAoVBqQ" operation="_tGPgmod2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx1od2EeC4Y4PFAoVBqQ" operation="_tGPgm4d2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx14d2EeC4Y4PFAoVBqQ" operation="_tGPgnod2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx2Id2EeC4Y4PFAoVBqQ" operation="_tGPgn4d2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx2Yd2EeC4Y4PFAoVBqQ" operation="_tGPgoId2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx2od2EeC4Y4PFAoVBqQ" operation="_tGle2od2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx24d2EeC4Y4PFAoVBqQ" operation="_tGle3Yd2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx3Id2EeC4Y4PFAoVBqQ" operation="_tGle3od2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx3Yd2EeC4Y4PFAoVBqQ" operation="_tGle34d2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx3od2EeC4Y4PFAoVBqQ" operation="_tGle4Id2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx34d2EeC4Y4PFAoVBqQ" operation="_tGle5Id2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx4Id2EeC4Y4PFAoVBqQ" operation="_tGle54d2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx4Yd2EeC4Y4PFAoVBqQ" operation="_tGle7Id2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx4od2EeC4Y4PFAoVBqQ" operation="_tGle8Yd2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx44d2EeC4Y4PFAoVBqQ" operation="_tGle9od2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx5Id2EeC4Y4PFAoVBqQ" operation="_tGle-od2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx5Yd2EeC4Y4PFAoVBqQ" operation="_tGle_Yd2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQzx5od2EeC4Y4PFAoVBqQ" operation="_tGlfAId2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQ0Y4Id2EeC4Y4PFAoVBqQ" operation="_tDknEId2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQ0Y4od2EeC4Y4PFAoVBqQ" operation="_tHAVkYd2EeC4Y4PFAoVBqQ"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_tQ1nAId2EeC4Y4PFAoVBqQ" documentation=" &lt;PC No. 65 PriceCalculator ProducerSearch CustomerSearch>" name=" &lt;PC No. 64 PriceCalculator ProducerSearch CustomerSearch>">
+    <provided id="_tQ1nA4d2EeC4Y4PFAoVBqQ" name="Object 50 (prov)" interfaceType="_tDfukYd2EeC4Y4PFAoVBqQ"/>
+    <provided id="_tQ1nBYd2EeC4Y4PFAoVBqQ" name="ICalculator 51 (prov)" interfaceType="_tHGcMId2EeC4Y4PFAoVBqQ"/>
+    <provided id="_tQ1nB4d2EeC4Y4PFAoVBqQ" name="ISearch 52 (prov)" interfaceType="_tHEnAod2EeC4Y4PFAoVBqQ"/>
+    <required id="_tQ1nAYd2EeC4Y4PFAoVBqQ" name="Product 119 (req)" interfaceType="_tGPgkYd2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQ1nBId2EeC4Y4PFAoVBqQ" operation="_tDknEId2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQ1nBod2EeC4Y4PFAoVBqQ" operation="_tHGcMYd2EeC4Y4PFAoVBqQ"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_tQ1nCId2EeC4Y4PFAoVBqQ" operation="_tHEnA4d2EeC4Y4PFAoVBqQ"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:CompositeComponent" id="_t57nUId2EeC4Y4PFAoVBqQ" documentation="CC No. 2 de.upb.examples.reengineering.store.logic &lt; &lt;PC No. 14 Seller>  &lt;PC No. 16 Customer>  &lt;PC No. 52 ProductSearch>  &lt;PC No. 60 Double Object Integer Main MainMenu ProductsListVie...>  &lt;PC No. 64 PriceCalculator ProducerSearch CustomerSearch>>" name="CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+    <provided id="_t6PJUId2EeC4Y4PFAoVBqQ" documentation="java.lang.Object" name="Object 0 (prov)" interfaceType="_tDfukYd2EeC4Y4PFAoVBqQ"/>
+    <provided id="_t6Rlkod2EeC4Y4PFAoVBqQ" documentation="store.model.IAccountOwner" name="IAccountOwner 1 (prov)" interfaceType="_tEnI6Id2EeC4Y4PFAoVBqQ"/>
+    <provided id="_t6Rllod2EeC4Y4PFAoVBqQ" documentation="store.logic.ISearch" name="ISearch 2 (prov)" interfaceType="_tHEnAod2EeC4Y4PFAoVBqQ"/>
+    <provided id="_t6Rlmod2EeC4Y4PFAoVBqQ" documentation="java.lang.Comparable" name="Comparable 3 (prov)" interfaceType="_tDo4gYd2EeC4Y4PFAoVBqQ"/>
+    <provided id="_t6Rlnod2EeC4Y4PFAoVBqQ" documentation="store.ui.IMenu" name="IMenu 4 (prov)" interfaceType="_tHAVlId2EeC4Y4PFAoVBqQ"/>
+    <provided id="_t6SMo4d2EeC4Y4PFAoVBqQ" documentation="store.logic.ICalculator" name="ICalculator 5 (prov)" interfaceType="_tHGcMId2EeC4Y4PFAoVBqQ"/>
+    <required id="_t6VP8Id2EeC4Y4PFAoVBqQ" documentation="java.lang.String" name="String 0 (req)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+    <required id="_t6VP9Id2EeC4Y4PFAoVBqQ" documentation="store.model.StorePackage$Literals" name="StorePackage$Literals 1 (req)" interfaceType="_tEl6wYd2EeC4Y4PFAoVBqQ"/>
+    <required id="_t6VP-Id2EeC4Y4PFAoVBqQ" documentation="java.util.Collection" name="Collection 2 (req)" interfaceType="_tEmh0Id2EeC4Y4PFAoVBqQ"/>
+    <required id="_t6VP_Id2EeC4Y4PFAoVBqQ" documentation="java.lang.StringBuffer" name="StringBuffer 3 (req)" interfaceType="_tEmh0od2EeC4Y4PFAoVBqQ"/>
+    <required id="_t6VQCYd2EeC4Y4PFAoVBqQ" documentation="Ijava.lang.Integer" name="Integer 4 (req)" interfaceType="_tEhpVod2EeC4Y4PFAoVBqQ"/>
+    <required id="_t6VQEId2EeC4Y4PFAoVBqQ" documentation="Istore.model.Product" name="Product 5 (req)" interfaceType="_tGPgkYd2EeC4Y4PFAoVBqQ"/>
+    <required id="_t6VQF4d2EeC4Y4PFAoVBqQ" documentation="Istore.model.Producer" name="Producer 6 (req)" interfaceType="_tG5A04d2EeC4Y4PFAoVBqQ"/>
+    <required id="_t6V3Bod2EeC4Y4PFAoVBqQ" documentation="Istore.model.Store" name="Store 7 (req)" interfaceType="_tGn7EId2EeC4Y4PFAoVBqQ"/>
+    <required id="_t6V3Cod2EeC4Y4PFAoVBqQ" documentation="Istore.model.StoreFactory" name="StoreFactory 8 (req)" interfaceType="_tGoiIod2EeC4Y4PFAoVBqQ"/>
+    <required id="_t6V3Dod2EeC4Y4PFAoVBqQ" documentation="store.ui.IListView" name="IListView 9 (req)" interfaceType="_tHAVkId2EeC4Y4PFAoVBqQ"/>
+    <required id="_t6V3Eod2EeC4Y4PFAoVBqQ" documentation="java.util.Scanner" name="Scanner 10 (req)" interfaceType="_tHAVlod2EeC4Y4PFAoVBqQ"/>
+    <required id="_t6V3Fod2EeC4Y4PFAoVBqQ" documentation="Ijava.io.PrintStream" name="PrintStream 11 (req)" interfaceType="_tEiQZod2EeC4Y4PFAoVBqQ"/>
+    <subcomponents id="_t5_4wId2EeC4Y4PFAoVBqQ" name=" &lt;PC No. 14 Seller>-instance" realizedBy="_tEi3c4d2EeC4Y4PFAoVBqQ"/>
+    <subcomponents id="_t5_4wYd2EeC4Y4PFAoVBqQ" name=" &lt;PC No. 16 Customer>-instance" realizedBy="_tGIL0Id2EeC4Y4PFAoVBqQ"/>
+    <subcomponents id="_t5_4wod2EeC4Y4PFAoVBqQ" name=" &lt;PC No. 52 ProductSearch>-instance" realizedBy="_tHQ0QId2EeC4Y4PFAoVBqQ"/>
+    <subcomponents id="_t5_4w4d2EeC4Y4PFAoVBqQ" name=" &lt;PC No. 60 Double Object Integer Main MainMenu ProductsListVie...>-instance" realizedBy="_tQaJMId2EeC4Y4PFAoVBqQ"/>
+    <subcomponents id="_t5_4xId2EeC4Y4PFAoVBqQ" name=" &lt;PC No. 64 PriceCalculator ProducerSearch CustomerSearch>-instance" realizedBy="_tQ1nAId2EeC4Y4PFAoVBqQ"/>
+    <connector id="_t6F_YId2EeC4Y4PFAoVBqQ" documentation="Assembly Connector from  &lt;PC No. 60 Double Object Integer Main MainMenu ProductsListVie...> to  &lt;PC No. 14 Seller>">
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6MtEId2EeC4Y4PFAoVBqQ" port="_tQclcId2EeC4Y4PFAoVBqQ" subcomponent="_t5_4w4d2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6MtEYd2EeC4Y4PFAoVBqQ" port="_tEnI6Yd2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6MtEod2EeC4Y4PFAoVBqQ" documentation="Assembly Connector from  &lt;PC No. 60 Double Object Integer Main MainMenu ProductsListVie...> to  &lt;PC No. 64 PriceCalculator ProducerSearch CustomerSearch>">
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6MtE4d2EeC4Y4PFAoVBqQ" port="_tQdMgYd2EeC4Y4PFAoVBqQ" subcomponent="_t5_4w4d2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6MtFId2EeC4Y4PFAoVBqQ" port="_tQ1nBYd2EeC4Y4PFAoVBqQ" subcomponent="_t5_4xId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6MtFYd2EeC4Y4PFAoVBqQ" documentation="Assembly Connector from  &lt;PC No. 60 Double Object Integer Main MainMenu ProductsListVie...> to  &lt;PC No. 16 Customer>">
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6MtFod2EeC4Y4PFAoVBqQ" port="_tQclcId2EeC4Y4PFAoVBqQ" subcomponent="_t5_4w4d2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6MtF4d2EeC4Y4PFAoVBqQ" port="_tGLPIId2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wYd2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6PwYId2EeC4Y4PFAoVBqQ" documentation="provided delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 14 Seller>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6RlkId2EeC4Y4PFAoVBqQ" port="_t6PJUId2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6RlkYd2EeC4Y4PFAoVBqQ" port="_tEnI5od2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6Rlk4d2EeC4Y4PFAoVBqQ" documentation="provided delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 14 Seller>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6RllId2EeC4Y4PFAoVBqQ" port="_t6Rlkod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6RllYd2EeC4Y4PFAoVBqQ" port="_tEnI6Yd2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6Rll4d2EeC4Y4PFAoVBqQ" documentation="provided delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 52 ProductSearch>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6RlmId2EeC4Y4PFAoVBqQ" port="_t6Rllod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6RlmYd2EeC4Y4PFAoVBqQ" port="_tHQ0Rod2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wod2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6Rlm4d2EeC4Y4PFAoVBqQ" documentation="provided delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 60 Double Object Integer Main MainMenu ProductsListVie...>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6RlnId2EeC4Y4PFAoVBqQ" port="_t6Rlmod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6RlnYd2EeC4Y4PFAoVBqQ" port="_tQdMgod2EeC4Y4PFAoVBqQ" subcomponent="_t5_4w4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6SMoId2EeC4Y4PFAoVBqQ" documentation="provided delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 60 Double Object Integer Main MainMenu ProductsListVie...>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6SMoYd2EeC4Y4PFAoVBqQ" port="_t6Rlnod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6SMood2EeC4Y4PFAoVBqQ" port="_tQdzkId2EeC4Y4PFAoVBqQ" subcomponent="_t5_4w4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6SMpId2EeC4Y4PFAoVBqQ" documentation="provided delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 64 PriceCalculator ProducerSearch CustomerSearch>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6SMpYd2EeC4Y4PFAoVBqQ" port="_t6SMo4d2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6SMpod2EeC4Y4PFAoVBqQ" port="_tQ1nBYd2EeC4Y4PFAoVBqQ" subcomponent="_t5_4xId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6VP8Yd2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 14 Seller>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6VP8od2EeC4Y4PFAoVBqQ" port="_t6VP8Id2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6VP84d2EeC4Y4PFAoVBqQ" port="_tEl6wId2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6VP9Yd2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 14 Seller>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6VP9od2EeC4Y4PFAoVBqQ" port="_t6VP9Id2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6VP94d2EeC4Y4PFAoVBqQ" port="_tEl6wod2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6VP-Yd2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 14 Seller>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6VP-od2EeC4Y4PFAoVBqQ" port="_t6VP-Id2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6VP-4d2EeC4Y4PFAoVBqQ" port="_tEmh0Yd2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6VP_Yd2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 14 Seller>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6VP_od2EeC4Y4PFAoVBqQ" port="_t6VP_Id2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6VP_4d2EeC4Y4PFAoVBqQ" port="_tEnI5Yd2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6VQAId2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 16 Customer>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6VQAYd2EeC4Y4PFAoVBqQ" port="_t6VP8Id2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6VQAod2EeC4Y4PFAoVBqQ" port="_tGKBAId2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wYd2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6VQA4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 16 Customer>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6VQBId2EeC4Y4PFAoVBqQ" port="_t6VP9Id2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6VQBYd2EeC4Y4PFAoVBqQ" port="_tGKBAYd2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wYd2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6VQBod2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 16 Customer>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6VQB4d2EeC4Y4PFAoVBqQ" port="_t6VP-Id2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6VQCId2EeC4Y4PFAoVBqQ" port="_tGKoEId2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wYd2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6VQCod2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 16 Customer>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6VQC4d2EeC4Y4PFAoVBqQ" port="_t6VQCYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6VQDId2EeC4Y4PFAoVBqQ" port="_tGKoEYd2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wYd2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6VQDYd2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 16 Customer>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6VQDod2EeC4Y4PFAoVBqQ" port="_t6VP_Id2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6VQD4d2EeC4Y4PFAoVBqQ" port="_tGKoEod2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wYd2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6VQEYd2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 52 ProductSearch>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6VQEod2EeC4Y4PFAoVBqQ" port="_t6VQEId2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6VQE4d2EeC4Y4PFAoVBqQ" port="_tHQ0QYd2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wod2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6VQFId2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 52 ProductSearch>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6VQFYd2EeC4Y4PFAoVBqQ" port="_t6VP8Id2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6VQFod2EeC4Y4PFAoVBqQ" port="_tHQ0Qod2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wod2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6V3AId2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 52 ProductSearch>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6V3AYd2EeC4Y4PFAoVBqQ" port="_t6VQF4d2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6V3Aod2EeC4Y4PFAoVBqQ" port="_tHQ0Q4d2EeC4Y4PFAoVBqQ" subcomponent="_t5_4wod2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6V3A4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 60 Double Object Integer Main MainMenu ProductsListVie...>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6V3BId2EeC4Y4PFAoVBqQ" port="_t6VP8Id2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6V3BYd2EeC4Y4PFAoVBqQ" port="_tQb-YId2EeC4Y4PFAoVBqQ" subcomponent="_t5_4w4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6V3B4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 60 Double Object Integer Main MainMenu ProductsListVie...>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6V3CId2EeC4Y4PFAoVBqQ" port="_t6V3Bod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6V3CYd2EeC4Y4PFAoVBqQ" port="_tQb-YYd2EeC4Y4PFAoVBqQ" subcomponent="_t5_4w4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6V3C4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 60 Double Object Integer Main MainMenu ProductsListVie...>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6V3DId2EeC4Y4PFAoVBqQ" port="_t6V3Cod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6V3DYd2EeC4Y4PFAoVBqQ" port="_tQb-Yod2EeC4Y4PFAoVBqQ" subcomponent="_t5_4w4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6V3D4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 60 Double Object Integer Main MainMenu ProductsListVie...>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6V3EId2EeC4Y4PFAoVBqQ" port="_t6V3Dod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6V3EYd2EeC4Y4PFAoVBqQ" port="_tQb-Y4d2EeC4Y4PFAoVBqQ" subcomponent="_t5_4w4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6V3E4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 60 Double Object Integer Main MainMenu ProductsListVie...>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6V3FId2EeC4Y4PFAoVBqQ" port="_t6V3Eod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6V3FYd2EeC4Y4PFAoVBqQ" port="_tQb-ZYd2EeC4Y4PFAoVBqQ" subcomponent="_t5_4w4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6V3F4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 60 Double Object Integer Main MainMenu ProductsListVie...>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6V3GId2EeC4Y4PFAoVBqQ" port="_t6V3Fod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6V3GYd2EeC4Y4PFAoVBqQ" port="_tQb-Zod2EeC4Y4PFAoVBqQ" subcomponent="_t5_4w4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6V3God2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 60 Double Object Integer Main MainMenu ProductsListVie...>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6V3G4d2EeC4Y4PFAoVBqQ" port="_t6VQEId2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6V3HId2EeC4Y4PFAoVBqQ" port="_tQdMgId2EeC4Y4PFAoVBqQ" subcomponent="_t5_4w4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_t6V3HYd2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>> to  &lt;PC No. 64 PriceCalculator ProducerSearch CustomerSearch>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_t6V3Hod2EeC4Y4PFAoVBqQ" port="_t6VQEId2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_t6V3H4d2EeC4Y4PFAoVBqQ" port="_tQ1nAYd2EeC4Y4PFAoVBqQ" subcomponent="_t5_4xId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:CompositeComponent" id="_uCyBUId2EeC4Y4PFAoVBqQ" documentation="CC No. 4 de.upb.examples.reengineering.store.model.util &lt; &lt;PC No. 36 StoreSwitch>  &lt;PC No. 46 CustomerMenu>  &lt;PC No. 50 SellerMenu> CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>>" name="CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>>">
+    <provided id="_uCyoYId2EeC4Y4PFAoVBqQ" documentation="java.lang.Object" name="Object 6 (prov)" interfaceType="_tDfukYd2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uCyoZId2EeC4Y4PFAoVBqQ" documentation="store.ui.IMenu" name="IMenu 7 (prov)" interfaceType="_tHAVlId2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uCyoaId2EeC4Y4PFAoVBqQ" documentation="store.model.IAccountOwner" name="IAccountOwner 8 (prov)" interfaceType="_tEnI6Id2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uCyobId2EeC4Y4PFAoVBqQ" documentation="store.logic.ISearch" name="ISearch 9 (prov)" interfaceType="_tHEnAod2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uCyocId2EeC4Y4PFAoVBqQ" documentation="java.lang.Comparable" name="Comparable 10 (prov)" interfaceType="_tDo4gYd2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uCyodId2EeC4Y4PFAoVBqQ" documentation="store.logic.ICalculator" name="ICalculator 11 (prov)" interfaceType="_tHGcMId2EeC4Y4PFAoVBqQ"/>
+    <required id="_uCyoeId2EeC4Y4PFAoVBqQ" documentation="java.util.List" name="List 12 (req)" interfaceType="_tG9SQId2EeC4Y4PFAoVBqQ"/>
+    <required id="_uCyofId2EeC4Y4PFAoVBqQ" documentation="Istore.model.Wishlist" name="Wishlist 13 (req)" interfaceType="_tGuBs4d2EeC4Y4PFAoVBqQ"/>
+    <required id="_uCzPcod2EeC4Y4PFAoVBqQ" documentation="Istore.model.Store" name="Store 14 (req)" interfaceType="_tGn7EId2EeC4Y4PFAoVBqQ"/>
+    <required id="_uCzPdod2EeC4Y4PFAoVBqQ" documentation="Istore.model.Producer" name="Producer 15 (req)" interfaceType="_tG5A04d2EeC4Y4PFAoVBqQ"/>
+    <required id="_uCzPeod2EeC4Y4PFAoVBqQ" documentation="Istore.model.Product" name="Product 16 (req)" interfaceType="_tGPgkYd2EeC4Y4PFAoVBqQ"/>
+    <required id="_uCzPgYd2EeC4Y4PFAoVBqQ" documentation="java.lang.String" name="String 17 (req)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+    <required id="_uCzPhYd2EeC4Y4PFAoVBqQ" documentation="java.util.Scanner" name="Scanner 18 (req)" interfaceType="_tHAVlod2EeC4Y4PFAoVBqQ"/>
+    <required id="_uCzPiYd2EeC4Y4PFAoVBqQ" documentation="Ijava.io.PrintStream" name="PrintStream 19 (req)" interfaceType="_tEiQZod2EeC4Y4PFAoVBqQ"/>
+    <required id="_uCzPjYd2EeC4Y4PFAoVBqQ" documentation="Ijava.lang.Integer" name="Integer 20 (req)" interfaceType="_tEhpVod2EeC4Y4PFAoVBqQ"/>
+    <required id="_uCzPkYd2EeC4Y4PFAoVBqQ" documentation="store.ui.IListView" name="IListView 21 (req)" interfaceType="_tHAVkId2EeC4Y4PFAoVBqQ"/>
+    <required id="_uCzPrYd2EeC4Y4PFAoVBqQ" documentation="Istore.model.StoreFactory" name="StoreFactory 22 (req)" interfaceType="_tGoiIod2EeC4Y4PFAoVBqQ"/>
+    <required id="_uCzPsYd2EeC4Y4PFAoVBqQ" documentation="java.lang.Double" name="Double 23 (req)" interfaceType="_tGO5gId2EeC4Y4PFAoVBqQ"/>
+    <required id="_uCz2hod2EeC4Y4PFAoVBqQ" documentation="store.model.StorePackage$Literals" name="StorePackage$Literals 24 (req)" interfaceType="_tEl6wYd2EeC4Y4PFAoVBqQ"/>
+    <required id="_uCz2iod2EeC4Y4PFAoVBqQ" documentation="java.util.Collection" name="Collection 25 (req)" interfaceType="_tEmh0Id2EeC4Y4PFAoVBqQ"/>
+    <required id="_uCz2jod2EeC4Y4PFAoVBqQ" documentation="java.lang.StringBuffer" name="StringBuffer 26 (req)" interfaceType="_tEmh0od2EeC4Y4PFAoVBqQ"/>
+    <subcomponents id="_uCyBUYd2EeC4Y4PFAoVBqQ" name=" &lt;PC No. 36 StoreSwitch>-instance" realizedBy="_tG8EOId2EeC4Y4PFAoVBqQ"/>
+    <subcomponents id="_uCyBUod2EeC4Y4PFAoVBqQ" name=" &lt;PC No. 46 CustomerMenu>-instance" realizedBy="_tHHqUId2EeC4Y4PFAoVBqQ"/>
+    <subcomponents id="_uCyBU4d2EeC4Y4PFAoVBqQ" name=" &lt;PC No. 50 SellerMenu>-instance" realizedBy="_tHMi1Yd2EeC4Y4PFAoVBqQ"/>
+    <subcomponents id="_uCyBVId2EeC4Y4PFAoVBqQ" name="CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>-instance" realizedBy="_t57nUId2EeC4Y4PFAoVBqQ"/>
+    <connector id="_uCyoYYd2EeC4Y4PFAoVBqQ" documentation="provided delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 36 StoreSwitch>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCyoYod2EeC4Y4PFAoVBqQ" port="_uCyoYId2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCyoY4d2EeC4Y4PFAoVBqQ" port="_tG-gYId2EeC4Y4PFAoVBqQ" subcomponent="_uCyBUYd2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCyoZYd2EeC4Y4PFAoVBqQ" documentation="provided delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 46 CustomerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCyoZod2EeC4Y4PFAoVBqQ" port="_uCyoZId2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCyoZ4d2EeC4Y4PFAoVBqQ" port="_tHKGkod2EeC4Y4PFAoVBqQ" subcomponent="_uCyBUod2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCyoaYd2EeC4Y4PFAoVBqQ" documentation="provided delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCyoaod2EeC4Y4PFAoVBqQ" port="_uCyoaId2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCyoa4d2EeC4Y4PFAoVBqQ" port="_t6Rlkod2EeC4Y4PFAoVBqQ" subcomponent="_uCyBVId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCyobYd2EeC4Y4PFAoVBqQ" documentation="provided delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCyobod2EeC4Y4PFAoVBqQ" port="_uCyobId2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCyob4d2EeC4Y4PFAoVBqQ" port="_t6Rllod2EeC4Y4PFAoVBqQ" subcomponent="_uCyBVId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCyocYd2EeC4Y4PFAoVBqQ" documentation="provided delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCyocod2EeC4Y4PFAoVBqQ" port="_uCyocId2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCyoc4d2EeC4Y4PFAoVBqQ" port="_t6Rlmod2EeC4Y4PFAoVBqQ" subcomponent="_uCyBVId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCyodYd2EeC4Y4PFAoVBqQ" documentation="provided delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCyodod2EeC4Y4PFAoVBqQ" port="_uCyodId2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCyod4d2EeC4Y4PFAoVBqQ" port="_t6SMo4d2EeC4Y4PFAoVBqQ" subcomponent="_uCyBVId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCyoeYd2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 36 StoreSwitch>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCyoeod2EeC4Y4PFAoVBqQ" port="_uCyoeId2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCyoe4d2EeC4Y4PFAoVBqQ" port="_tG9SQ4d2EeC4Y4PFAoVBqQ" subcomponent="_uCyBUYd2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCyofYd2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 36 StoreSwitch>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPcId2EeC4Y4PFAoVBqQ" port="_uCyofId2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPcYd2EeC4Y4PFAoVBqQ" port="_tG9SRId2EeC4Y4PFAoVBqQ" subcomponent="_uCyBUYd2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPc4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 36 StoreSwitch>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPdId2EeC4Y4PFAoVBqQ" port="_uCzPcod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPdYd2EeC4Y4PFAoVBqQ" port="_tG95UId2EeC4Y4PFAoVBqQ" subcomponent="_uCyBUYd2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPd4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 36 StoreSwitch>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPeId2EeC4Y4PFAoVBqQ" port="_uCzPdod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPeYd2EeC4Y4PFAoVBqQ" port="_tG95UYd2EeC4Y4PFAoVBqQ" subcomponent="_uCyBUYd2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPe4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 36 StoreSwitch>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPfId2EeC4Y4PFAoVBqQ" port="_uCzPeod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPfYd2EeC4Y4PFAoVBqQ" port="_tG95Uod2EeC4Y4PFAoVBqQ" subcomponent="_uCyBUYd2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPfod2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 46 CustomerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPf4d2EeC4Y4PFAoVBqQ" port="_uCzPcod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPgId2EeC4Y4PFAoVBqQ" port="_tHIRYId2EeC4Y4PFAoVBqQ" subcomponent="_uCyBUod2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPgod2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 46 CustomerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPg4d2EeC4Y4PFAoVBqQ" port="_uCzPgYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPhId2EeC4Y4PFAoVBqQ" port="_tHIRYod2EeC4Y4PFAoVBqQ" subcomponent="_uCyBUod2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPhod2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 46 CustomerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPh4d2EeC4Y4PFAoVBqQ" port="_uCzPhYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPiId2EeC4Y4PFAoVBqQ" port="_tHIRY4d2EeC4Y4PFAoVBqQ" subcomponent="_uCyBUod2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPiod2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 46 CustomerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPi4d2EeC4Y4PFAoVBqQ" port="_uCzPiYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPjId2EeC4Y4PFAoVBqQ" port="_tHIRZId2EeC4Y4PFAoVBqQ" subcomponent="_uCyBUod2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPjod2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 46 CustomerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPj4d2EeC4Y4PFAoVBqQ" port="_uCzPjYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPkId2EeC4Y4PFAoVBqQ" port="_tHI4cId2EeC4Y4PFAoVBqQ" subcomponent="_uCyBUod2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPkod2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 46 CustomerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPk4d2EeC4Y4PFAoVBqQ" port="_uCzPkYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPlId2EeC4Y4PFAoVBqQ" port="_tHJfgId2EeC4Y4PFAoVBqQ" subcomponent="_uCyBUod2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPlYd2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 46 CustomerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPlod2EeC4Y4PFAoVBqQ" port="_uCzPeod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPl4d2EeC4Y4PFAoVBqQ" port="_tHJfgYd2EeC4Y4PFAoVBqQ" subcomponent="_uCyBUod2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPmId2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 50 SellerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPmYd2EeC4Y4PFAoVBqQ" port="_uCzPcod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPmod2EeC4Y4PFAoVBqQ" port="_tHNJ4Id2EeC4Y4PFAoVBqQ" subcomponent="_uCyBU4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPm4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 50 SellerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPnId2EeC4Y4PFAoVBqQ" port="_uCzPgYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPnYd2EeC4Y4PFAoVBqQ" port="_tHNw8Yd2EeC4Y4PFAoVBqQ" subcomponent="_uCyBU4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPnod2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 50 SellerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPn4d2EeC4Y4PFAoVBqQ" port="_uCzPhYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPoId2EeC4Y4PFAoVBqQ" port="_tHNw8od2EeC4Y4PFAoVBqQ" subcomponent="_uCyBU4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPoYd2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 50 SellerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPood2EeC4Y4PFAoVBqQ" port="_uCzPiYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPo4d2EeC4Y4PFAoVBqQ" port="_tHNw84d2EeC4Y4PFAoVBqQ" subcomponent="_uCyBU4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPpId2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 50 SellerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPpYd2EeC4Y4PFAoVBqQ" port="_uCzPjYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPpod2EeC4Y4PFAoVBqQ" port="_tHOYAId2EeC4Y4PFAoVBqQ" subcomponent="_uCyBU4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPp4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 50 SellerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPqId2EeC4Y4PFAoVBqQ" port="_uCzPkYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPqYd2EeC4Y4PFAoVBqQ" port="_tHO_EId2EeC4Y4PFAoVBqQ" subcomponent="_uCyBU4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzPqod2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 50 SellerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPq4d2EeC4Y4PFAoVBqQ" port="_uCzPeod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPrId2EeC4Y4PFAoVBqQ" port="_tHO_EYd2EeC4Y4PFAoVBqQ" subcomponent="_uCyBU4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCzProd2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 50 SellerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCzPr4d2EeC4Y4PFAoVBqQ" port="_uCzPrYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCzPsId2EeC4Y4PFAoVBqQ" port="_tHPmIId2EeC4Y4PFAoVBqQ" subcomponent="_uCyBU4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCz2gId2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to  &lt;PC No. 50 SellerMenu>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCz2gYd2EeC4Y4PFAoVBqQ" port="_uCzPsYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCz2god2EeC4Y4PFAoVBqQ" port="_tHPmIYd2EeC4Y4PFAoVBqQ" subcomponent="_uCyBU4d2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCz2g4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCz2hId2EeC4Y4PFAoVBqQ" port="_uCzPgYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCz2hYd2EeC4Y4PFAoVBqQ" port="_t6VP8Id2EeC4Y4PFAoVBqQ" subcomponent="_uCyBVId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCz2h4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCz2iId2EeC4Y4PFAoVBqQ" port="_uCz2hod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCz2iYd2EeC4Y4PFAoVBqQ" port="_t6VP9Id2EeC4Y4PFAoVBqQ" subcomponent="_uCyBVId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCz2i4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCz2jId2EeC4Y4PFAoVBqQ" port="_uCz2iod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCz2jYd2EeC4Y4PFAoVBqQ" port="_t6VP-Id2EeC4Y4PFAoVBqQ" subcomponent="_uCyBVId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCz2j4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCz2kId2EeC4Y4PFAoVBqQ" port="_uCz2jod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCz2kYd2EeC4Y4PFAoVBqQ" port="_t6VP_Id2EeC4Y4PFAoVBqQ" subcomponent="_uCyBVId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCz2kod2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCz2k4d2EeC4Y4PFAoVBqQ" port="_uCzPjYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCz2lId2EeC4Y4PFAoVBqQ" port="_t6VQCYd2EeC4Y4PFAoVBqQ" subcomponent="_uCyBVId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCz2lYd2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCz2lod2EeC4Y4PFAoVBqQ" port="_uCzPeod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCz2l4d2EeC4Y4PFAoVBqQ" port="_t6VQEId2EeC4Y4PFAoVBqQ" subcomponent="_uCyBVId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCz2mId2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCz2mYd2EeC4Y4PFAoVBqQ" port="_uCzPdod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCz2mod2EeC4Y4PFAoVBqQ" port="_t6VQF4d2EeC4Y4PFAoVBqQ" subcomponent="_uCyBVId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCz2m4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCz2nId2EeC4Y4PFAoVBqQ" port="_uCzPcod2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCz2nYd2EeC4Y4PFAoVBqQ" port="_t6V3Bod2EeC4Y4PFAoVBqQ" subcomponent="_uCyBVId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCz2nod2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCz2n4d2EeC4Y4PFAoVBqQ" port="_uCzPrYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCz2oId2EeC4Y4PFAoVBqQ" port="_t6V3Cod2EeC4Y4PFAoVBqQ" subcomponent="_uCyBVId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCz2oYd2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCz2ood2EeC4Y4PFAoVBqQ" port="_uCzPkYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCz2o4d2EeC4Y4PFAoVBqQ" port="_t6V3Dod2EeC4Y4PFAoVBqQ" subcomponent="_uCyBVId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCz2pId2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCz2pYd2EeC4Y4PFAoVBqQ" port="_uCzPhYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCz2pod2EeC4Y4PFAoVBqQ" port="_t6V3Eod2EeC4Y4PFAoVBqQ" subcomponent="_uCyBVId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+    <connector id="_uCz2p4d2EeC4Y4PFAoVBqQ" documentation="required delegation connector CC No. 3 de.upb.examples.reengineering.store.model.util &lt;.... 64 PriceCalculator ProducerSearch CustomerSearch>>> to CC No. 1 de.upb.examples.reengineering.store.logic &lt;...o. 64 PriceCalculator ProducerSearch CustomerSearch>>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_uCz2qId2EeC4Y4PFAoVBqQ" port="_uCzPiYd2EeC4Y4PFAoVBqQ"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_uCz2qYd2EeC4Y4PFAoVBqQ" port="_t6V3Fod2EeC4Y4PFAoVBqQ" subcomponent="_uCyBVId2EeC4Y4PFAoVBqQ"/>
+    </connector>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_uPluQId2EeC4Y4PFAoVBqQ" documentation="Captures calls to system-external services." name="SoMoX System-Level Dummy Component">
+    <provided id="_uPoxkId2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="Istore.model.Store (prov dummy)" interfaceType="_tGn7EId2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPoxlId2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="Istore.model.Producer (prov dummy)" interfaceType="_tG5A04d2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPoxmId2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="java.lang.Double (prov dummy)" interfaceType="_tGO5gId2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPoxnId2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="java.lang.StringBuffer (prov dummy)" interfaceType="_tEmh0od2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPoxoId2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="store.model.StorePackage$Literals (prov dummy)" interfaceType="_tEl6wYd2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPoxpId2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="Istore.model.Wishlist (prov dummy)" interfaceType="_tGuBs4d2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPoxqId2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="java.util.Collection (prov dummy)" interfaceType="_tEmh0Id2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPoxrId2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="java.util.List (prov dummy)" interfaceType="_tG9SQId2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPoxsId2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="java.lang.String (prov dummy)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPoxtId2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="java.lang.StringBuffer (prov dummy)" interfaceType="_tEmh0od2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPoxuId2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="java.lang.String (prov dummy)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPoxvId2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="java.lang.String (prov dummy)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPoxwId2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="java.util.Collection (prov dummy)" interfaceType="_tEmh0Id2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPoxxId2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="java.lang.Double (prov dummy)" interfaceType="_tGO5gId2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPoxyId2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="Istore.model.StoreFactory (prov dummy)" interfaceType="_tGoiIod2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPoxzId2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="Ijava.lang.Integer (prov dummy)" interfaceType="_tEhpVod2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPox0Id2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="java.util.Scanner (prov dummy)" interfaceType="_tHAVlod2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPox1Id2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="java.lang.String (prov dummy)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+    <provided id="_uPox2Id2EeC4Y4PFAoVBqQ" documentation="SoMoX created provided port" name="java.lang.String (prov dummy)" interfaceType="_tDfukId2EeC4Y4PFAoVBqQ"/>
+  </componenttype>
+  <interface id="_tDfukYd2EeC4Y4PFAoVBqQ" documentation="java.lang.Object" name="java.lang.Object">
+    <signatures id="_tDknEId2EeC4Y4PFAoVBqQ" name="toString"/>
+  </interface>
+  <interface id="_tDo4gId2EeC4Y4PFAoVBqQ" documentation="java.io.Serializable" name="java.io.Serializable"/>
+  <interface id="_tDo4gYd2EeC4Y4PFAoVBqQ" documentation="java.lang.Comparable" name="java.lang.Comparable"/>
+  <interface id="_tDo4god2EeC4Y4PFAoVBqQ" documentation="java.lang.CharSequence" name="java.lang.CharSequence"/>
+  <interface id="_tDfukId2EeC4Y4PFAoVBqQ" documentation="java.lang.String" name="java.lang.String" inheritance="_tDfukYd2EeC4Y4PFAoVBqQ _tDo4gId2EeC4Y4PFAoVBqQ _tDo4gYd2EeC4Y4PFAoVBqQ _tDo4god2EeC4Y4PFAoVBqQ">
+    <signatures id="_tDo4g4d2EeC4Y4PFAoVBqQ" name="equals" input="_tDsi4Id2EeC4Y4PFAoVBqQ"/>
+  </interface>
+  <interface id="_tEgbMId2EeC4Y4PFAoVBqQ" documentation="java.util.Iterator" name="java.util.Iterator"/>
+  <interface id="_tEhpVod2EeC4Y4PFAoVBqQ" documentation="Integer" name="Ijava.lang.Integer">
+    <signatures id="_tEhpV4d2EeC4Y4PFAoVBqQ" name="parseInt" input="_tEiQYId2EeC4Y4PFAoVBqQ"/>
+  </interface>
+  <interface id="_tEiQZod2EeC4Y4PFAoVBqQ" documentation="PrintStream" name="Ijava.io.PrintStream">
+    <signatures id="_tEiQZ4d2EeC4Y4PFAoVBqQ" name="println" input="_tEiQYId2EeC4Y4PFAoVBqQ"/>
+  </interface>
+  <interface id="_tEl6wYd2EeC4Y4PFAoVBqQ" documentation="de.upb.examples.reengineering.store.model.StorePackage$Literals" name="store.model.StorePackage$Literals" inheritance="_tDfukYd2EeC4Y4PFAoVBqQ"/>
+  <interface id="_tEmh0Id2EeC4Y4PFAoVBqQ" documentation="java.util.Collection" name="java.util.Collection"/>
+  <interface id="_tEmh0od2EeC4Y4PFAoVBqQ" documentation="java.lang.StringBuffer" name="java.lang.StringBuffer" inheritance="_tDo4gId2EeC4Y4PFAoVBqQ _tDo4god2EeC4Y4PFAoVBqQ">
+    <signatures id="_tEmh04d2EeC4Y4PFAoVBqQ" name="append" input="_tEiQYId2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tEmh1Id2EeC4Y4PFAoVBqQ" name="append" input="_tEmh1Yd2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tEmh14d2EeC4Y4PFAoVBqQ" name="toString"/>
+    <signatures id="_tEmh2Id2EeC4Y4PFAoVBqQ" name="append" input="_tEmh2Yd2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tEnI4Yd2EeC4Y4PFAoVBqQ" name="append" input="_tEnI4od2EeC4Y4PFAoVBqQ"/>
+  </interface>
+  <interface id="_tEnI6Id2EeC4Y4PFAoVBqQ" documentation="de.upb.examples.reengineering.store.model.IAccountOwner" name="store.model.IAccountOwner" inheritance="_tDfukYd2EeC4Y4PFAoVBqQ"/>
+  <interface id="_tGO5gId2EeC4Y4PFAoVBqQ" documentation="java.lang.Double" name="java.lang.Double" inheritance="_tDo4gYd2EeC4Y4PFAoVBqQ">
+    <signatures id="_tGO5gYd2EeC4Y4PFAoVBqQ" name="parseDouble" input="_tEiQYId2EeC4Y4PFAoVBqQ"/>
+  </interface>
+  <interface id="_tGPgkYd2EeC4Y4PFAoVBqQ" documentation="Product" name="Istore.model.Product">
+    <signatures id="_tGPgkod2EeC4Y4PFAoVBqQ" name="getPrice"/>
+    <signatures id="_tGPgk4d2EeC4Y4PFAoVBqQ" name="setPrice" input="_tGPglId2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGPglod2EeC4Y4PFAoVBqQ" name="getName"/>
+    <signatures id="_tGPgl4d2EeC4Y4PFAoVBqQ" name="setName" input="_tGPgmId2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGPgmod2EeC4Y4PFAoVBqQ" name="getId"/>
+    <signatures id="_tGPgm4d2EeC4Y4PFAoVBqQ" name="setId" input="_tGPgnId2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGPgnod2EeC4Y4PFAoVBqQ" name="getProducer"/>
+    <signatures id="_tGPgn4d2EeC4Y4PFAoVBqQ" name="basicGetProducer"/>
+    <signatures id="_tGPgoId2EeC4Y4PFAoVBqQ" name="basicSetProducer" input="_tGPgoYd2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGle2od2EeC4Y4PFAoVBqQ" name="setProducer" input="_tGle24d2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGle3Yd2EeC4Y4PFAoVBqQ" name="getWishlists"/>
+    <signatures id="_tGle3od2EeC4Y4PFAoVBqQ" name="getOfferedBy"/>
+    <signatures id="_tGle34d2EeC4Y4PFAoVBqQ" name="basicGetOfferedBy"/>
+    <signatures id="_tGle4Id2EeC4Y4PFAoVBqQ" name="basicSetOfferedBy" input="_tGle4Yd2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGle5Id2EeC4Y4PFAoVBqQ" name="setOfferedBy" input="_tGle5Yd2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGle54d2EeC4Y4PFAoVBqQ" name="eInverseAdd" input="_tGle6Id2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGle7Id2EeC4Y4PFAoVBqQ" name="eInverseRemove" input="_tGle7Yd2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGle8Yd2EeC4Y4PFAoVBqQ" name="eGet" input="_tGle8od2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGle9od2EeC4Y4PFAoVBqQ" name="eSet" input="_tGle94d2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGle-od2EeC4Y4PFAoVBqQ" name="eUnset" input="_tGle-4d2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGle_Yd2EeC4Y4PFAoVBqQ" name="eIsSet" input="_tGle_od2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGlfAId2EeC4Y4PFAoVBqQ" name="toString"/>
+  </interface>
+  <interface id="_tGn7EId2EeC4Y4PFAoVBqQ" documentation="Store" name="Istore.model.Store">
+    <signatures id="_tGn7EYd2EeC4Y4PFAoVBqQ" name="getCustomers"/>
+    <signatures id="_tGn7Eod2EeC4Y4PFAoVBqQ" name="getProducts"/>
+    <signatures id="_tGn7E4d2EeC4Y4PFAoVBqQ" name="getProducers"/>
+    <signatures id="_tGn7FId2EeC4Y4PFAoVBqQ" name="getSellers"/>
+    <signatures id="_tGn7FYd2EeC4Y4PFAoVBqQ" name="eInverseRemove" input="_tGn7Fod2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGn7God2EeC4Y4PFAoVBqQ" name="eGet" input="_tGn7G4d2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGn7H4d2EeC4Y4PFAoVBqQ" name="eSet" input="_tGn7IId2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGn7I4d2EeC4Y4PFAoVBqQ" name="eUnset" input="_tGn7JId2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGn7Jod2EeC4Y4PFAoVBqQ" name="eIsSet" input="_tGn7J4d2EeC4Y4PFAoVBqQ"/>
+  </interface>
+  <interface id="_tGoiIod2EeC4Y4PFAoVBqQ" documentation="StoreFactory" name="Istore.model.StoreFactory">
+    <signatures id="_tGoiI4d2EeC4Y4PFAoVBqQ" name="init"/>
+    <signatures id="_tGoiJId2EeC4Y4PFAoVBqQ" name="create" input="_tGoiJYd2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGoiJ4d2EeC4Y4PFAoVBqQ" name="createProduct"/>
+    <signatures id="_tGpJMId2EeC4Y4PFAoVBqQ" name="createCustomer"/>
+    <signatures id="_tGpJMYd2EeC4Y4PFAoVBqQ" name="createProducer"/>
+    <signatures id="_tGpJMod2EeC4Y4PFAoVBqQ" name="createStore"/>
+    <signatures id="_tGpJM4d2EeC4Y4PFAoVBqQ" name="createBook"/>
+    <signatures id="_tGpJNId2EeC4Y4PFAoVBqQ" name="createDVD"/>
+    <signatures id="_tGpJNYd2EeC4Y4PFAoVBqQ" name="createWishlist"/>
+    <signatures id="_tGpJNod2EeC4Y4PFAoVBqQ" name="createSeller"/>
+    <signatures id="_tGpJN4d2EeC4Y4PFAoVBqQ" name="getStorePackage"/>
+    <signatures id="_tGpJOId2EeC4Y4PFAoVBqQ" name="getPackage"/>
+  </interface>
+  <interface id="_tGuBs4d2EeC4Y4PFAoVBqQ" documentation="Wishlist" name="Istore.model.Wishlist">
+    <signatures id="_tGuowId2EeC4Y4PFAoVBqQ" name="getProducts"/>
+    <signatures id="_tGuowYd2EeC4Y4PFAoVBqQ" name="eInverseAdd" input="_tGuowod2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGuoxod2EeC4Y4PFAoVBqQ" name="eInverseRemove" input="_tGuox4d2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGuoy4d2EeC4Y4PFAoVBqQ" name="eGet" input="_tGuozId2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGuo0Id2EeC4Y4PFAoVBqQ" name="eSet" input="_tGuo0Yd2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGuo1Id2EeC4Y4PFAoVBqQ" name="eUnset" input="_tGuo1Yd2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tGuo14d2EeC4Y4PFAoVBqQ" name="eIsSet" input="_tGuo2Id2EeC4Y4PFAoVBqQ"/>
+  </interface>
+  <interface id="_tG5A04d2EeC4Y4PFAoVBqQ" documentation="Producer" name="Istore.model.Producer">
+    <signatures id="_tG5A1Id2EeC4Y4PFAoVBqQ" name="getId"/>
+    <signatures id="_tG5A1Yd2EeC4Y4PFAoVBqQ" name="setId" input="_tGPgnId2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tG5A1od2EeC4Y4PFAoVBqQ" name="getName"/>
+    <signatures id="_tG5A14d2EeC4Y4PFAoVBqQ" name="setName" input="_tGPgmId2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tG5A2Id2EeC4Y4PFAoVBqQ" name="getProducts"/>
+    <signatures id="_tG5A2Yd2EeC4Y4PFAoVBqQ" name="eInverseAdd" input="_tG5A2od2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tG5A3od2EeC4Y4PFAoVBqQ" name="eInverseRemove" input="_tG5A34d2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tG5n4od2EeC4Y4PFAoVBqQ" name="eGet" input="_tG5n44d2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tG5n54d2EeC4Y4PFAoVBqQ" name="eSet" input="_tG5n6Id2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tG5n64d2EeC4Y4PFAoVBqQ" name="eUnset" input="_tG5n7Id2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tG5n7od2EeC4Y4PFAoVBqQ" name="eIsSet" input="_tG5n74d2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tG5n8Yd2EeC4Y4PFAoVBqQ" name="toString"/>
+  </interface>
+  <interface id="_tG7dEYd2EeC4Y4PFAoVBqQ" documentation="StoreAdapterFactory" name="Imodel.util.StoreAdapterFactory">
+    <signatures id="_tG7dEod2EeC4Y4PFAoVBqQ" name="isFactoryForType" input="_tG7dE4d2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tG8EIId2EeC4Y4PFAoVBqQ" name="createAdapter" input="_tG8EIYd2EeC4Y4PFAoVBqQ"/>
+    <signatures id="_tG8EI4d2EeC4Y4PFAoVBqQ" name="createProductAdapter"/>
+    <signatures id="_tG8EJId2EeC4Y4PFAoVBqQ" name="createCustomerAdapter"/>
+    <signatures id="_tG8EJYd2EeC4Y4PFAoVBqQ" name="createProducerAdapter"/>
+    <signatures id="_tG8EJod2EeC4Y4PFAoVBqQ" name="createStoreAdapter"/>
+    <signatures id="_tG8EJ4d2EeC4Y4PFAoVBqQ" name="createBookAdapter"/>
+    <signatures id="_tG8EKId2EeC4Y4PFAoVBqQ" name="createDVDAdapter"/>
+    <signatures id="_tG8EKYd2EeC4Y4PFAoVBqQ" name="createWishlistAdapter"/>
+    <signatures id="_tG8EKod2EeC4Y4PFAoVBqQ" name="createSellerAdapter"/>
+    <signatures id="_tG8EK4d2EeC4Y4PFAoVBqQ" name="createEObjectAdapter"/>
+  </interface>
+  <interface id="_tG9SQId2EeC4Y4PFAoVBqQ" documentation="java.util.List" name="java.util.List" inheritance="_tDfukYd2EeC4Y4PFAoVBqQ _tEmh0Id2EeC4Y4PFAoVBqQ">
+    <signatures id="_tG9SQYd2EeC4Y4PFAoVBqQ" name="isEmpty"/>
+    <signatures id="_tG9SQod2EeC4Y4PFAoVBqQ" name="get"/>
+  </interface>
+  <interface id="_tHAVkId2EeC4Y4PFAoVBqQ" documentation="de.upb.examples.reengineering.store.ui.IListView" name="store.ui.IListView" inheritance="_tDfukYd2EeC4Y4PFAoVBqQ">
+    <signatures id="_tHAVkYd2EeC4Y4PFAoVBqQ" name="printList"/>
+  </interface>
+  <interface id="_tHAVlId2EeC4Y4PFAoVBqQ" documentation="de.upb.examples.reengineering.store.ui.IMenu" name="store.ui.IMenu" inheritance="_tDfukYd2EeC4Y4PFAoVBqQ"/>
+  <interface id="_tHAVlod2EeC4Y4PFAoVBqQ" documentation="java.util.Scanner" name="java.util.Scanner" inheritance="_tDfukYd2EeC4Y4PFAoVBqQ _tEgbMId2EeC4Y4PFAoVBqQ">
+    <signatures id="_tHAVl4d2EeC4Y4PFAoVBqQ" name="nextLine"/>
+  </interface>
+  <interface id="_tHEnAod2EeC4Y4PFAoVBqQ" documentation="de.upb.examples.reengineering.store.logic.ISearch" name="store.logic.ISearch" inheritance="_tDfukYd2EeC4Y4PFAoVBqQ">
+    <signatures id="_tHEnA4d2EeC4Y4PFAoVBqQ" name="searchPrice" input="_tHEnBId2EeC4Y4PFAoVBqQ"/>
+  </interface>
+  <interface id="_tHGcMId2EeC4Y4PFAoVBqQ" documentation="de.upb.examples.reengineering.store.logic.ICalculator" name="store.logic.ICalculator" inheritance="_tDfukYd2EeC4Y4PFAoVBqQ">
+    <signatures id="_tHGcMYd2EeC4Y4PFAoVBqQ" name="calculate" input="_tHEnBId2EeC4Y4PFAoVBqQ"/>
+  </interface>
+  <type xsi:type="datatypes:ComplexDataType" id="_tD268Id2EeC4Y4PFAoVBqQ" name="Object">
+    <elements id="_tD9BkId2EeC4Y4PFAoVBqQ" name="String" type="_tEAr8Id2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_tEAr8Id2EeC4Y4PFAoVBqQ" name="STRING"/>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_tEnI4Id2EeC4Y4PFAoVBqQ" name="FLOAT" type="float"/>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_tEnI5Id2EeC4Y4PFAoVBqQ" name="INTEGER" type="int"/>
+  <type xsi:type="datatypes:ComplexDataType" id="_tGQusId2EeC4Y4PFAoVBqQ" name="Producer">
+    <elements id="_tGR80Id2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGR80od2EeC4Y4PFAoVBqQ" name="String" type="_tEAr8Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGR804d2EeC4Y4PFAoVBqQ" name="Literals" type="_tGSj4Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGle04d2EeC4Y4PFAoVBqQ" name="StorePackage" type="_tGXcYId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGle1Id2EeC4Y4PFAoVBqQ" name="int" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGle1Yd2EeC4Y4PFAoVBqQ" name="Object" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGle1od2EeC4Y4PFAoVBqQ" name="boolean" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGle14d2EeC4Y4PFAoVBqQ" name="Collection" type="_tGhNZod2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGle2Id2EeC4Y4PFAoVBqQ" name="StringBuffer" type="_tGhNaod2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_tGR80Yd2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>"/>
+  <type xsi:type="datatypes:ComplexDataType" id="_tGSj4Id2EeC4Y4PFAoVBqQ" name="Literals">
+    <elements id="_tGTK8Id2EeC4Y4PFAoVBqQ" name="StorePackage" type="_tGXcYId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGle0Yd2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGle0od2EeC4Y4PFAoVBqQ" name="Object" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <type xsi:type="datatypes:ComplexDataType" id="_tGXcYId2EeC4Y4PFAoVBqQ" name="StorePackage">
+    <elements id="_tGcU4Id2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGcU4Yd2EeC4Y4PFAoVBqQ" name="StoreFactory" type="_tGcU4od2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGk3yId2EeC4Y4PFAoVBqQ" name="boolean" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGk3yYd2EeC4Y4PFAoVBqQ" name="int" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGk3yod2EeC4Y4PFAoVBqQ" name="String" type="_tEAr8Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGk3y4d2EeC4Y4PFAoVBqQ" name="Literals" type="_tGSj4Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGle0Id2EeC4Y4PFAoVBqQ" name="Object" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <type xsi:type="datatypes:ComplexDataType" id="_tGcU4od2EeC4Y4PFAoVBqQ" name="StoreFactory">
+    <elements id="_tGc78Id2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGc78Yd2EeC4Y4PFAoVBqQ" name="Exception" type="_tGc78od2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGc79Yd2EeC4Y4PFAoVBqQ" name="StorePackage" type="_tGXcYId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGc79od2EeC4Y4PFAoVBqQ" name="IllegalArgumentException" type="_tGdjAId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGdjAod2EeC4Y4PFAoVBqQ" name="Product" type="_tGexIId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNg4d2EeC4Y4PFAoVBqQ" name="Customer" type="_tGh0cId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGibi4d2EeC4Y4PFAoVBqQ" name="Producer" type="_tGQusId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGibjId2EeC4Y4PFAoVBqQ" name="Store" type="_tGjCkId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGjCmId2EeC4Y4PFAoVBqQ" name="Book" type="_tGjpoId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGjpqod2EeC4Y4PFAoVBqQ" name="DVD" type="_tGkQsId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGkQuod2EeC4Y4PFAoVBqQ" name="Wishlist" type="_tGkQu4d2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGk3x4d2EeC4Y4PFAoVBqQ" name="Seller" type="_tGgmUId2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <type xsi:type="datatypes:ComplexDataType" id="_tGc78od2EeC4Y4PFAoVBqQ" name="Exception">
+    <elements id="_tGc784d2EeC4Y4PFAoVBqQ" name="Throwable" type="_tGc79Id2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_tGc79Id2EeC4Y4PFAoVBqQ" name="Throwable"/>
+  <type xsi:type="datatypes:ComplexDataType" id="_tGdjAId2EeC4Y4PFAoVBqQ" name="IllegalArgumentException">
+    <elements id="_tGdjAYd2EeC4Y4PFAoVBqQ" name="String" type="_tEAr8Id2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <type xsi:type="datatypes:ComplexDataType" id="_tGexIId2EeC4Y4PFAoVBqQ" name="Product">
+    <elements id="_tGfYMId2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGfYMYd2EeC4Y4PFAoVBqQ" name="Seller" type="_tGgmUId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNeId2EeC4Y4PFAoVBqQ" name="Producer" type="_tGQusId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNeYd2EeC4Y4PFAoVBqQ" name="String" type="_tEAr8Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNeod2EeC4Y4PFAoVBqQ" name="double" type="_tEnI4Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNe4d2EeC4Y4PFAoVBqQ" name="Literals" type="_tGSj4Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNfId2EeC4Y4PFAoVBqQ" name="StorePackage" type="_tGXcYId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNfYd2EeC4Y4PFAoVBqQ" name="int" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNfod2EeC4Y4PFAoVBqQ" name="Object" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNf4d2EeC4Y4PFAoVBqQ" name="boolean" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNgId2EeC4Y4PFAoVBqQ" name="Double" type="_tEnI4Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNgYd2EeC4Y4PFAoVBqQ" name="Collection" type="_tGhNZod2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNgod2EeC4Y4PFAoVBqQ" name="StringBuffer" type="_tGhNaod2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <type xsi:type="datatypes:ComplexDataType" id="_tGgmUId2EeC4Y4PFAoVBqQ" name="Seller">
+    <elements id="_tGgmUYd2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGgmUod2EeC4Y4PFAoVBqQ" name="String" type="_tEAr8Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGgmU4d2EeC4Y4PFAoVBqQ" name="Literals" type="_tGSj4Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNYId2EeC4Y4PFAoVBqQ" name="StorePackage" type="_tGXcYId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNYYd2EeC4Y4PFAoVBqQ" name="int" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNYod2EeC4Y4PFAoVBqQ" name="Object" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNY4d2EeC4Y4PFAoVBqQ" name="boolean" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNZYd2EeC4Y4PFAoVBqQ" name="Collection" type="_tGhNZod2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNaYd2EeC4Y4PFAoVBqQ" name="StringBuffer" type="_tGhNaod2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNdYd2EeC4Y4PFAoVBqQ" name="IAccountOwner" type="_tGhNdod2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_tGhNZId2EeC4Y4PFAoVBqQ" name="BOOLEAN" type="boolean"/>
+  <type xsi:type="datatypes:ComplexDataType" id="_tGhNZod2EeC4Y4PFAoVBqQ" name="Collection">
+    <elements id="_tGhNZ4d2EeC4Y4PFAoVBqQ" name="E" type="_tGhNaId2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_tGhNaId2EeC4Y4PFAoVBqQ" name="E"/>
+  <type xsi:type="datatypes:ComplexDataType" id="_tGhNaod2EeC4Y4PFAoVBqQ" name="StringBuffer">
+    <elements id="_tGhNa4d2EeC4Y4PFAoVBqQ" name="String" type="_tEAr8Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNbId2EeC4Y4PFAoVBqQ" name="char" type="_tEAr8Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNbYd2EeC4Y4PFAoVBqQ" name="double" type="_tEnI4Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNbod2EeC4Y4PFAoVBqQ" name="int" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNb4d2EeC4Y4PFAoVBqQ" name="AbstractStringBuilder" type="_tGhNcId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNcYd2EeC4Y4PFAoVBqQ" name="Serializable" type="_tGhNcod2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGhNc4d2EeC4Y4PFAoVBqQ" name="CharSequence" type="_tGhNdId2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_tGhNcId2EeC4Y4PFAoVBqQ" name="AbstractStringBuilder"/>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_tGhNcod2EeC4Y4PFAoVBqQ" name="Serializable"/>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_tGhNdId2EeC4Y4PFAoVBqQ" name="CharSequence"/>
+  <type xsi:type="datatypes:ComplexDataType" id="_tGhNdod2EeC4Y4PFAoVBqQ" name="IAccountOwner">
+    <elements id="_tGhNd4d2EeC4Y4PFAoVBqQ" name="Object" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <type xsi:type="datatypes:ComplexDataType" id="_tGh0cId2EeC4Y4PFAoVBqQ" name="Customer">
+    <elements id="_tGibgId2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGibgYd2EeC4Y4PFAoVBqQ" name="String" type="_tEAr8Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGibgod2EeC4Y4PFAoVBqQ" name="int" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGibg4d2EeC4Y4PFAoVBqQ" name="Literals" type="_tGSj4Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGibhId2EeC4Y4PFAoVBqQ" name="StorePackage" type="_tGXcYId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGibhYd2EeC4Y4PFAoVBqQ" name="Object" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGibhod2EeC4Y4PFAoVBqQ" name="boolean" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGibh4d2EeC4Y4PFAoVBqQ" name="Collection" type="_tGhNZod2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGibiId2EeC4Y4PFAoVBqQ" name="Integer" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGibiYd2EeC4Y4PFAoVBqQ" name="StringBuffer" type="_tGhNaod2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGibiod2EeC4Y4PFAoVBqQ" name="IAccountOwner" type="_tGhNdod2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <type xsi:type="datatypes:ComplexDataType" id="_tGjCkId2EeC4Y4PFAoVBqQ" name="Store">
+    <elements id="_tGjCkYd2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGjCkod2EeC4Y4PFAoVBqQ" name="Literals" type="_tGSj4Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGjCk4d2EeC4Y4PFAoVBqQ" name="StorePackage" type="_tGXcYId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGjClId2EeC4Y4PFAoVBqQ" name="int" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGjClYd2EeC4Y4PFAoVBqQ" name="Object" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGjClod2EeC4Y4PFAoVBqQ" name="boolean" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGjCl4d2EeC4Y4PFAoVBqQ" name="Collection" type="_tGhNZod2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <type xsi:type="datatypes:ComplexDataType" id="_tGjpoId2EeC4Y4PFAoVBqQ" name="Book">
+    <elements id="_tGjpoYd2EeC4Y4PFAoVBqQ" name="Product" type="_tGexIId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGjpood2EeC4Y4PFAoVBqQ" name="String" type="_tEAr8Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGjpo4d2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGjppId2EeC4Y4PFAoVBqQ" name="Literals" type="_tGSj4Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGjppYd2EeC4Y4PFAoVBqQ" name="StorePackage" type="_tGXcYId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGjppod2EeC4Y4PFAoVBqQ" name="Object" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGjpp4d2EeC4Y4PFAoVBqQ" name="int" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGjpqId2EeC4Y4PFAoVBqQ" name="boolean" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGjpqYd2EeC4Y4PFAoVBqQ" name="StringBuffer" type="_tGhNaod2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <type xsi:type="datatypes:ComplexDataType" id="_tGkQsId2EeC4Y4PFAoVBqQ" name="DVD">
+    <elements id="_tGkQsYd2EeC4Y4PFAoVBqQ" name="Product" type="_tGexIId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGkQsod2EeC4Y4PFAoVBqQ" name="String" type="_tEAr8Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGkQs4d2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGkQtId2EeC4Y4PFAoVBqQ" name="Literals" type="_tGSj4Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGkQtYd2EeC4Y4PFAoVBqQ" name="StorePackage" type="_tGXcYId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGkQtod2EeC4Y4PFAoVBqQ" name="Object" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGkQt4d2EeC4Y4PFAoVBqQ" name="int" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGkQuId2EeC4Y4PFAoVBqQ" name="boolean" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGkQuYd2EeC4Y4PFAoVBqQ" name="StringBuffer" type="_tGhNaod2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <type xsi:type="datatypes:ComplexDataType" id="_tGkQu4d2EeC4Y4PFAoVBqQ" name="Wishlist">
+    <elements id="_tGk3wId2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGk3wYd2EeC4Y4PFAoVBqQ" name="Literals" type="_tGSj4Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGk3wod2EeC4Y4PFAoVBqQ" name="StorePackage" type="_tGXcYId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGk3w4d2EeC4Y4PFAoVBqQ" name="int" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGk3xId2EeC4Y4PFAoVBqQ" name="Object" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGk3xYd2EeC4Y4PFAoVBqQ" name="boolean" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+    <elements id="_tGk3xod2EeC4Y4PFAoVBqQ" name="Collection" type="_tGhNZod2EeC4Y4PFAoVBqQ"/>
+  </type>
+  <messagetype id="_tDsi4Id2EeC4Y4PFAoVBqQ" name="Object">
+    <parameters id="_tDwNQId2EeC4Y4PFAoVBqQ" name="arg0" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tEiQYId2EeC4Y4PFAoVBqQ" name="String">
+    <parameters id="_tEiQYYd2EeC4Y4PFAoVBqQ" name="arg0" type="_tEAr8Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tEmh1Yd2EeC4Y4PFAoVBqQ" name="char">
+    <parameters id="_tEmh1od2EeC4Y4PFAoVBqQ" name="arg0" type="_tEAr8Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tEmh2Yd2EeC4Y4PFAoVBqQ" name="double">
+    <parameters id="_tEmh2od2EeC4Y4PFAoVBqQ" name="arg0" type="_tEnI4Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tEnI4od2EeC4Y4PFAoVBqQ" name="int">
+    <parameters id="_tEnI44d2EeC4Y4PFAoVBqQ" name="arg0" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGPglId2EeC4Y4PFAoVBqQ" name="double">
+    <parameters id="_tGPglYd2EeC4Y4PFAoVBqQ" name="newPrice" type="_tEnI4Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGPgmId2EeC4Y4PFAoVBqQ" name="String">
+    <parameters id="_tGPgmYd2EeC4Y4PFAoVBqQ" name="newName" type="_tEAr8Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGPgnId2EeC4Y4PFAoVBqQ" name="String">
+    <parameters id="_tGPgnYd2EeC4Y4PFAoVBqQ" name="newId" type="_tEAr8Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGPgoYd2EeC4Y4PFAoVBqQ" name="Producer_&lt;unknownClassType>">
+    <parameters id="_tGPgood2EeC4Y4PFAoVBqQ" name="newProducer" type="_tGQusId2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGle2Yd2EeC4Y4PFAoVBqQ" name="msgs" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGle24d2EeC4Y4PFAoVBqQ" name="Producer">
+    <parameters id="_tGle3Id2EeC4Y4PFAoVBqQ" name="newProducer" type="_tGQusId2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGle4Yd2EeC4Y4PFAoVBqQ" name="Seller_&lt;unknownClassType>">
+    <parameters id="_tGle4od2EeC4Y4PFAoVBqQ" name="newOfferedBy" type="_tGgmUId2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGle44d2EeC4Y4PFAoVBqQ" name="msgs" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGle5Yd2EeC4Y4PFAoVBqQ" name="Seller">
+    <parameters id="_tGle5od2EeC4Y4PFAoVBqQ" name="newOfferedBy" type="_tGgmUId2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGle6Id2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>_int_&lt;unknownClassType>">
+    <parameters id="_tGle6Yd2EeC4Y4PFAoVBqQ" name="otherEnd" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGle6od2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGle64d2EeC4Y4PFAoVBqQ" name="msgs" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGle7Yd2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>_int_&lt;unknownClassType>">
+    <parameters id="_tGle7od2EeC4Y4PFAoVBqQ" name="otherEnd" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGle74d2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGle8Id2EeC4Y4PFAoVBqQ" name="msgs" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGle8od2EeC4Y4PFAoVBqQ" name="int_boolean_boolean">
+    <parameters id="_tGle84d2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGle9Id2EeC4Y4PFAoVBqQ" name="resolve" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGle9Yd2EeC4Y4PFAoVBqQ" name="coreType" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGle94d2EeC4Y4PFAoVBqQ" name="int_Object">
+    <parameters id="_tGle-Id2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGle-Yd2EeC4Y4PFAoVBqQ" name="newValue" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGle-4d2EeC4Y4PFAoVBqQ" name="int">
+    <parameters id="_tGle_Id2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGle_od2EeC4Y4PFAoVBqQ" name="int">
+    <parameters id="_tGle_4d2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGn7Fod2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>_int_&lt;unknownClassType>">
+    <parameters id="_tGn7F4d2EeC4Y4PFAoVBqQ" name="otherEnd" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGn7GId2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGn7GYd2EeC4Y4PFAoVBqQ" name="msgs" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGn7G4d2EeC4Y4PFAoVBqQ" name="int_boolean_boolean">
+    <parameters id="_tGn7HId2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGn7HYd2EeC4Y4PFAoVBqQ" name="resolve" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGn7Hod2EeC4Y4PFAoVBqQ" name="coreType" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGn7IId2EeC4Y4PFAoVBqQ" name="int_Object">
+    <parameters id="_tGn7IYd2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGn7Iod2EeC4Y4PFAoVBqQ" name="newValue" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGn7JId2EeC4Y4PFAoVBqQ" name="int">
+    <parameters id="_tGn7JYd2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGn7J4d2EeC4Y4PFAoVBqQ" name="int">
+    <parameters id="_tGn7KId2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGoiJYd2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>">
+    <parameters id="_tGoiJod2EeC4Y4PFAoVBqQ" name="eClass" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGuowod2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>_int_&lt;unknownClassType>">
+    <parameters id="_tGuow4d2EeC4Y4PFAoVBqQ" name="otherEnd" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGuoxId2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGuoxYd2EeC4Y4PFAoVBqQ" name="msgs" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGuox4d2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>_int_&lt;unknownClassType>">
+    <parameters id="_tGuoyId2EeC4Y4PFAoVBqQ" name="otherEnd" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGuoyYd2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGuoyod2EeC4Y4PFAoVBqQ" name="msgs" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGuozId2EeC4Y4PFAoVBqQ" name="int_boolean_boolean">
+    <parameters id="_tGuozYd2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGuozod2EeC4Y4PFAoVBqQ" name="resolve" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGuoz4d2EeC4Y4PFAoVBqQ" name="coreType" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGuo0Yd2EeC4Y4PFAoVBqQ" name="int_Object">
+    <parameters id="_tGuo0od2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tGuo04d2EeC4Y4PFAoVBqQ" name="newValue" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGuo1Yd2EeC4Y4PFAoVBqQ" name="int">
+    <parameters id="_tGuo1od2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tGuo2Id2EeC4Y4PFAoVBqQ" name="int">
+    <parameters id="_tGuo2Yd2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tG5A2od2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>_int_&lt;unknownClassType>">
+    <parameters id="_tG5A24d2EeC4Y4PFAoVBqQ" name="otherEnd" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tG5A3Id2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tG5A3Yd2EeC4Y4PFAoVBqQ" name="msgs" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tG5A34d2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>_int_&lt;unknownClassType>">
+    <parameters id="_tG5A4Id2EeC4Y4PFAoVBqQ" name="otherEnd" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tG5n4Id2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tG5n4Yd2EeC4Y4PFAoVBqQ" name="msgs" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tG5n44d2EeC4Y4PFAoVBqQ" name="int_boolean_boolean">
+    <parameters id="_tG5n5Id2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tG5n5Yd2EeC4Y4PFAoVBqQ" name="resolve" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tG5n5od2EeC4Y4PFAoVBqQ" name="coreType" type="_tGhNZId2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tG5n6Id2EeC4Y4PFAoVBqQ" name="int_Object">
+    <parameters id="_tG5n6Yd2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+    <parameters id="_tG5n6od2EeC4Y4PFAoVBqQ" name="newValue" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tG5n7Id2EeC4Y4PFAoVBqQ" name="int">
+    <parameters id="_tG5n7Yd2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tG5n74d2EeC4Y4PFAoVBqQ" name="int">
+    <parameters id="_tG5n8Id2EeC4Y4PFAoVBqQ" name="featureID" type="_tEnI5Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tG7dE4d2EeC4Y4PFAoVBqQ" name="Object">
+    <parameters id="_tG7dFId2EeC4Y4PFAoVBqQ" name="object" type="_tD268Id2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tG8EIYd2EeC4Y4PFAoVBqQ" name="&lt;unknownClassType>">
+    <parameters id="_tG8EIod2EeC4Y4PFAoVBqQ" name="target" type="_tGR80Yd2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+  <messagetype id="_tHEnBId2EeC4Y4PFAoVBqQ" name="Product">
+    <parameters id="_tHEnBYd2EeC4Y4PFAoVBqQ" name="product" type="_tGexIId2EeC4Y4PFAoVBqQ"/>
+  </messagetype>
+</staticstructure:Repository>

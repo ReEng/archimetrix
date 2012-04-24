@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sourcecodedecorator:SourceCodeDecoratorRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:functions="http://www.fzi.de/gast/functions" xmlns:sourcecodedecorator="http://q-impress.eu/sourcecodedecorator" xmlns:staticstructure="http://q-impress.eu/samm/staticstructure">
+  <fileLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_wxIl8IStEeCKIMkA1XDAVg"/>
+    <file href="../Store1.gast#_trfDpYStEeCKIMkA1XDAVg"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_wxIl8IStEeCKIMkA1XDAVg"/>
+    <file href="../Store1.gast#_trfDqIStEeCKIMkA1XDAVg"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_wxIl8IStEeCKIMkA1XDAVg"/>
+    <file href="../Store1.gast#_trfDqYStEeCKIMkA1XDAVg"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_wxIl8IStEeCKIMkA1XDAVg"/>
+    <file href="../Store1.gast#_trfDqoStEeCKIMkA1XDAVg"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_wxLpQIStEeCKIMkA1XDAVg"/>
+    <file href="../Store1.gast#_trfDq4StEeCKIMkA1XDAVg"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_wxLpQIStEeCKIMkA1XDAVg"/>
+    <file href="../Store1.gast#_treckoStEeCKIMkA1XDAVg"/>
+  </fileLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_wxIl8IStEeCKIMkA1XDAVg"/>
+    <file href="../Store1.gast#_trfDpYStEeCKIMkA1XDAVg"/>
+    <operation href="internal_architecture_model.samm_repository#_wwlMUoStEeCKIMkA1XDAVg"/>
+    <function xsi:type="functions:Method" href="../Store1.gast#_tsGHo4StEeCKIMkA1XDAVg"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_wxIl8IStEeCKIMkA1XDAVg"/>
+    <file href="../Store1.gast#_trfDqYStEeCKIMkA1XDAVg"/>
+    <operation href="internal_architecture_model.samm_repository#_wwmacoStEeCKIMkA1XDAVg"/>
+    <function xsi:type="functions:Method" href="../Store1.gast#_tsFgloStEeCKIMkA1XDAVg"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <operation href="internal_architecture_model.samm_repository#_wwnBgIStEeCKIMkA1XDAVg"/>
+    <function xsi:type="functions:Method" href="../Store1.gast#_tsHVw4StEeCKIMkA1XDAVg"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <operation href="internal_architecture_model.samm_repository#_wwnBgYStEeCKIMkA1XDAVg"/>
+    <function xsi:type="functions:Method" href="../Store1.gast#_tsH80YStEeCKIMkA1XDAVg"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_wxLpQIStEeCKIMkA1XDAVg"/>
+    <file href="../Store1.gast#_trfDq4StEeCKIMkA1XDAVg"/>
+    <operation href="internal_architecture_model.samm_repository#_wwnBhYStEeCKIMkA1XDAVg"/>
+    <function xsi:type="functions:Method" href="../Store1.gast#_tsFgkIStEeCKIMkA1XDAVg"/>
+  </methodLevelSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwlMUYStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJYIStEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwlMUYStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJYIStEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwlMUYStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJYIStEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwmacYStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJZ4StEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwlMUYStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJYIStEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwmaeYStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJaYStEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwlMUYStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJYIStEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwnBhIStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJaIStEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwnBiYStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJZoStEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwlMUYStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJYIStEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwmacYStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJZ4StEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwmaeYStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJaYStEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwlMUYStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJYIStEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwnBhIStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJaIStEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwnBiYStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJZoStEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwlMUYStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJYIStEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwmacYStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJZ4StEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwnBhIStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJaIStEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_wwmaeYStEeCKIMkA1XDAVg"/>
+    <gastClass href="../Store1.gast#_trwJaYStEeCKIMkA1XDAVg"/>
+  </interfaceSourceCodeLink>
+  <componentImplementingClassesLink providedInterfaces="//@interfaceSourceCodeLink.9 //@interfaceSourceCodeLink.10">
+    <component xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_wxIl8IStEeCKIMkA1XDAVg"/>
+    <implementingClasses href="../Store1.gast#_trwJYYStEeCKIMkA1XDAVg"/>
+    <implementingClasses href="../Store1.gast#_trwJY4StEeCKIMkA1XDAVg"/>
+    <implementingClasses href="../Store1.gast#_trwJZIStEeCKIMkA1XDAVg"/>
+    <implementingClasses href="../Store1.gast#_trwJZYStEeCKIMkA1XDAVg"/>
+  </componentImplementingClassesLink>
+  <componentImplementingClassesLink providedInterfaces="//@interfaceSourceCodeLink.13" requiredInterfaces="//@interfaceSourceCodeLink.11 //@interfaceSourceCodeLink.12">
+    <component xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_wxLpQIStEeCKIMkA1XDAVg"/>
+    <implementingClasses href="../Store1.gast#_trwJYoStEeCKIMkA1XDAVg"/>
+    <implementingClasses href="../Store1.gast#_trwJZoStEeCKIMkA1XDAVg"/>
+  </componentImplementingClassesLink>
+  <componentImplementingClassesLink subComponents="//@componentImplementingClassesLink.0 //@componentImplementingClassesLink.1" providedInterfaces="//@interfaceSourceCodeLink.15 //@interfaceSourceCodeLink.16 //@interfaceSourceCodeLink.17" requiredInterfaces="//@interfaceSourceCodeLink.18">
+    <component xsi:type="staticstructure:CompositeComponent" href="internal_architecture_model.samm_repository#_wz6NIIStEeCKIMkA1XDAVg"/>
+  </componentImplementingClassesLink>
+</sourcecodedecorator:SourceCodeDecoratorRepository>

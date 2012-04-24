@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ASCII"?>
+<staticstructure:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:behaviour="http://q-impress.eu/samm/behaviour" xmlns:datatypes="http://q-impress.eu/samm/datatype" xmlns:staticstructure="http://q-impress.eu/samm/staticstructure" id="_ZMPGgNL0EeC-rO4QZ37REw">
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_ZPmjlNL0EeC-rO4QZ37REw" documentation=" &lt;PC No. 5 ProductsListView>" name=" &lt;PC No. 4 ProductsListView>">
+    <provided id="_ZPnKotL0EeC-rO4QZ37REw" name="IListView 2 (prov)" interfaceType="_ZPnKoNL0EeC-rO4QZ37REw"/>
+    <required id="_ZPmjldL0EeC-rO4QZ37REw" name="ISearch 1 (req)" interfaceType="_ZPeAsNL0EeC-rO4QZ37REw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_ZPnKo9L0EeC-rO4QZ37REw" operation="_ZPnKodL0EeC-rO4QZ37REw"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_ZSHFANL0EeC-rO4QZ37REw" documentation=" &lt;PC No. 7 ProductSearch PriceCalculator>" name=" &lt;PC No. 6 ProductSearch PriceCalculator>">
+    <provided id="_ZSHsENL0EeC-rO4QZ37REw" name="ISearch 3 (prov)" interfaceType="_ZPeAsNL0EeC-rO4QZ37REw"/>
+    <provided id="_ZSHsEtL0EeC-rO4QZ37REw" name="ICalculator 4 (prov)" interfaceType="_ZPmjkNL0EeC-rO4QZ37REw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_ZSHsEdL0EeC-rO4QZ37REw" operation="_ZPeAsdL0EeC-rO4QZ37REw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_ZSHsE9L0EeC-rO4QZ37REw" operation="_ZPmjkdL0EeC-rO4QZ37REw"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:CompositeComponent" id="_ZXBaMNL0EeC-rO4QZ37REw" documentation="CC No. 2 de.upb.examples.reengineering.store.logic &lt; &lt;PC No. 6 ProductSearch PriceCalculator>  &lt;PC No. 4 ProductsListView>>" name="CC No. 1 de.upb.examples.reengineering.store.logic &lt;...Search PriceCalculator>  &lt;PC No. 4 ProductsListView>>">
+    <provided id="_ZXFEkNL0EeC-rO4QZ37REw" documentation="store.logic.ISearch" name="ISearch 0 (prov)" interfaceType="_ZPeAsNL0EeC-rO4QZ37REw"/>
+    <provided id="_ZXFro9L0EeC-rO4QZ37REw" documentation="store.logic.ICalculator" name="ICalculator 1 (prov)" interfaceType="_ZPmjkNL0EeC-rO4QZ37REw"/>
+    <provided id="_ZXFrp9L0EeC-rO4QZ37REw" documentation="store.ui.IListView" name="IListView 2 (prov)" interfaceType="_ZPnKoNL0EeC-rO4QZ37REw"/>
+    <subcomponents id="_ZXCBQNL0EeC-rO4QZ37REw" name=" &lt;PC No. 6 ProductSearch PriceCalculator>-instance" realizedBy="_ZSHFANL0EeC-rO4QZ37REw"/>
+    <subcomponents id="_ZXCBQdL0EeC-rO4QZ37REw" name=" &lt;PC No. 4 ProductsListView>-instance" realizedBy="_ZPmjlNL0EeC-rO4QZ37REw"/>
+    <connector id="_ZXCBQtL0EeC-rO4QZ37REw" documentation="Assembly Connector from  &lt;PC No. 4 ProductsListView> to  &lt;PC No. 6 ProductSearch PriceCalculator>">
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_ZXCBQ9L0EeC-rO4QZ37REw" port="_ZPmjldL0EeC-rO4QZ37REw" subcomponent="_ZXCBQdL0EeC-rO4QZ37REw"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_ZXCoUNL0EeC-rO4QZ37REw" port="_ZSHsENL0EeC-rO4QZ37REw" subcomponent="_ZXCBQNL0EeC-rO4QZ37REw"/>
+    </connector>
+    <connector id="_ZXFroNL0EeC-rO4QZ37REw" documentation="provided delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...Search PriceCalculator>  &lt;PC No. 4 ProductsListView>> to  &lt;PC No. 6 ProductSearch PriceCalculator>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_ZXFrodL0EeC-rO4QZ37REw" port="_ZXFEkNL0EeC-rO4QZ37REw"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_ZXFrotL0EeC-rO4QZ37REw" port="_ZSHsENL0EeC-rO4QZ37REw" subcomponent="_ZXCBQNL0EeC-rO4QZ37REw"/>
+    </connector>
+    <connector id="_ZXFrpNL0EeC-rO4QZ37REw" documentation="provided delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...Search PriceCalculator>  &lt;PC No. 4 ProductsListView>> to  &lt;PC No. 6 ProductSearch PriceCalculator>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_ZXFrpdL0EeC-rO4QZ37REw" port="_ZXFro9L0EeC-rO4QZ37REw"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_ZXFrptL0EeC-rO4QZ37REw" port="_ZSHsEtL0EeC-rO4QZ37REw" subcomponent="_ZXCBQNL0EeC-rO4QZ37REw"/>
+    </connector>
+    <connector id="_ZXFrqNL0EeC-rO4QZ37REw" documentation="provided delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...Search PriceCalculator>  &lt;PC No. 4 ProductsListView>> to  &lt;PC No. 4 ProductsListView>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_ZXFrqdL0EeC-rO4QZ37REw" port="_ZXFrp9L0EeC-rO4QZ37REw"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_ZXFrqtL0EeC-rO4QZ37REw" port="_ZPnKotL0EeC-rO4QZ37REw" subcomponent="_ZXCBQdL0EeC-rO4QZ37REw"/>
+    </connector>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_ZaGjYNL0EeC-rO4QZ37REw" documentation="Captures calls to system-external services." name="SoMoX System-Level Dummy Component"/>
+  <interface id="_ZPeAsNL0EeC-rO4QZ37REw" documentation="de.upb.examples.reengineering.store.logic.ISearch" name="store.logic.ISearch">
+    <signatures id="_ZPeAsdL0EeC-rO4QZ37REw" name="searchPrice" input="_ZPenwNL0EeC-rO4QZ37REw"/>
+  </interface>
+  <interface id="_ZPmjkNL0EeC-rO4QZ37REw" documentation="de.upb.examples.reengineering.store.logic.ICalculator" name="store.logic.ICalculator">
+    <signatures id="_ZPmjkdL0EeC-rO4QZ37REw" name="calculate" input="_ZPenwNL0EeC-rO4QZ37REw"/>
+  </interface>
+  <interface id="_ZPnKoNL0EeC-rO4QZ37REw" documentation="de.upb.examples.reengineering.store.ui.IListView" name="store.ui.IListView">
+    <signatures id="_ZPnKodL0EeC-rO4QZ37REw" name="createListEntry"/>
+  </interface>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_ZPenwtL0EeC-rO4QZ37REw" name="STRING"/>
+  <messagetype id="_ZPenwNL0EeC-rO4QZ37REw" name="String">
+    <parameters id="_ZPenwdL0EeC-rO4QZ37REw" name="productName" type="_ZPenwtL0EeC-rO4QZ37REw"/>
+  </messagetype>
+</staticstructure:Repository>

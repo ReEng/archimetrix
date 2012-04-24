@@ -1,0 +1,3 @@
+digraph G {
+"de.upb.examples.reengineering.store.logic.CustomerSearch\nde.upb.examples.reengineering.store.ui.IListView\nde.upb.examples.reengineering.store.logic.ISearch\nde.upb.examples.reengineering.store.ui.ProductsListView\nde.upb.examples.reengineering.store.logic.PriceCalculator\nde.upb.examples.reengineering.store.logic.ProductSearch\nde.upb.examples.reengineering.store.logic.ProducerSearch\nde.upb.examples.reengineering.store.ui.ProductsListViewEntry\nde.upb.examples.reengineering.store.logic.ICalculator";
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sourcecodedecorator:SourceCodeDecoratorRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:functions="http://www.fzi.de/gast/functions" xmlns:sourcecodedecorator="http://q-impress.eu/sourcecodedecorator" xmlns:staticstructure="http://q-impress.eu/samm/staticstructure">
+  <fileLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_t1ldFYP4EeC81IhLTZ23ZA"/>
+    <file href="../Store1.gast#_wFNhpILgEeC8KcVgiBxg9w"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_SdOIUIP5EeC81IhLTZ23ZA"/>
+    <file href="../Store1.gast#_wFNhkYLgEeC8KcVgiBxg9w"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_SdOIUIP5EeC81IhLTZ23ZA"/>
+    <file href="../Store1.gast#_wFNhoILgEeC8KcVgiBxg9w"/>
+  </fileLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_SdOIUIP5EeC81IhLTZ23ZA"/>
+    <file href="../Store1.gast#_wFNhkYLgEeC8KcVgiBxg9w"/>
+    <operation href="internal_architecture_model.samm_repository#_t1k2AoP4EeC81IhLTZ23ZA"/>
+    <function xsi:type="functions:Method" href="../Store1.gast#_wGLK4ILgEeC8KcVgiBxg9w"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_SdOIUIP5EeC81IhLTZ23ZA"/>
+    <file href="../Store1.gast#_wFNhkYLgEeC8KcVgiBxg9w"/>
+    <operation href="internal_architecture_model.samm_repository#_t1k2BoP4EeC81IhLTZ23ZA"/>
+    <function xsi:type="functions:Method" href="../Store1.gast#_wGLK4oLgEeC8KcVgiBxg9w"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_SdOIUIP5EeC81IhLTZ23ZA"/>
+    <file href="../Store1.gast#_wFNhkYLgEeC8KcVgiBxg9w"/>
+    <operation href="internal_architecture_model.samm_repository#_t1k2B4P4EeC81IhLTZ23ZA"/>
+    <function xsi:type="functions:Method" href="../Store1.gast#_wGLK5ILgEeC8KcVgiBxg9w"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_SdOIUIP5EeC81IhLTZ23ZA"/>
+    <file href="../Store1.gast#_wFNhoILgEeC8KcVgiBxg9w"/>
+    <operation href="internal_architecture_model.samm_repository#_t1ldEoP4EeC81IhLTZ23ZA"/>
+    <function xsi:type="functions:Method" href="../Store1.gast#_wGKj0ILgEeC8KcVgiBxg9w"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <operation href="internal_architecture_model.samm_repository#_t1ldGIP4EeC81IhLTZ23ZA"/>
+    <function xsi:type="functions:Method" href="../Store1.gast#_wGMZAoLgEeC8KcVgiBxg9w"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <operation href="internal_architecture_model.samm_repository#_t1ldGYP4EeC81IhLTZ23ZA"/>
+    <function xsi:type="functions:Method" href="../Store1.gast#_wGMZBILgEeC8KcVgiBxg9w"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <componentType xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_t1ldFYP4EeC81IhLTZ23ZA"/>
+    <file href="../Store1.gast#_wFNhpILgEeC8KcVgiBxg9w"/>
+    <operation href="internal_architecture_model.samm_repository#_t1mEIYP4EeC81IhLTZ23ZA"/>
+    <function xsi:type="functions:Method" href="../Store1.gast#_wGKj0oLgEeC8KcVgiBxg9w"/>
+  </methodLevelSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_t1k2AYP4EeC81IhLTZ23ZA"/>
+    <gastClass href="../Store1.gast#_wFnKO4LgEeC8KcVgiBxg9w"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_t1k2AYP4EeC81IhLTZ23ZA"/>
+    <gastClass href="../Store1.gast#_wFnKO4LgEeC8KcVgiBxg9w"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_t1ldEYP4EeC81IhLTZ23ZA"/>
+    <gastClass href="../Store1.gast#_wFnxQoLgEeC8KcVgiBxg9w"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_t1ldFoP4EeC81IhLTZ23ZA"/>
+    <gastClass href="../Store1.gast#_wFnxRILgEeC8KcVgiBxg9w"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_t1k2AYP4EeC81IhLTZ23ZA"/>
+    <gastClass href="../Store1.gast#_wFnKO4LgEeC8KcVgiBxg9w"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_t1mEIIP4EeC81IhLTZ23ZA"/>
+    <gastClass href="../Store1.gast#_wFnxQ4LgEeC8KcVgiBxg9w"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_t1k2AYP4EeC81IhLTZ23ZA"/>
+    <gastClass href="../Store1.gast#_wFnKO4LgEeC8KcVgiBxg9w"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface href="internal_architecture_model.samm_repository#_t1ldEYP4EeC81IhLTZ23ZA"/>
+    <gastClass href="../Store1.gast#_wFnxQoLgEeC8KcVgiBxg9w"/>
+  </interfaceSourceCodeLink>
+  <componentImplementingClassesLink providedInterfaces="//@interfaceSourceCodeLink.5" requiredInterfaces="//@interfaceSourceCodeLink.3 //@interfaceSourceCodeLink.4" isInitialComponent="true">
+    <component xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_t1ldFYP4EeC81IhLTZ23ZA"/>
+    <implementingClasses href="../Store1.gast#_wFnxQYLgEeC8KcVgiBxg9w"/>
+  </componentImplementingClassesLink>
+  <componentImplementingClassesLink providedInterfaces="//@interfaceSourceCodeLink.6 //@interfaceSourceCodeLink.7">
+    <component xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_SdOIUIP5EeC81IhLTZ23ZA"/>
+    <implementingClasses href="../Store1.gast#_wFnKPILgEeC8KcVgiBxg9w"/>
+    <implementingClasses href="../Store1.gast#_wFnxQILgEeC8KcVgiBxg9w"/>
+  </componentImplementingClassesLink>
+</sourcecodedecorator:SourceCodeDecoratorRepository>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ASCII"?>
+<staticstructure:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:behaviour="http://q-impress.eu/samm/behaviour" xmlns:datatypes="http://q-impress.eu/samm/datatype" xmlns:staticstructure="http://q-impress.eu/samm/staticstructure" id="_DmiOAIRTEeC81IhLTZ23ZA">
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_Dm2XFYRTEeC81IhLTZ23ZA" documentation=" &lt;PC No. 5 ProductsListView>" name=" &lt;PC No. 4 ProductsListView>">
+    <provided id="_Dm2-JYRTEeC81IhLTZ23ZA" name="IListView 2 (prov)" interfaceType="_Dm2-I4RTEeC81IhLTZ23ZA"/>
+    <required id="_Dm2-IYRTEeC81IhLTZ23ZA" name="List 1 (req)" interfaceType="_Dm2XFoRTEeC81IhLTZ23ZA"/>
+    <required id="_Dm2-IoRTEeC81IhLTZ23ZA" name="ISearch 2 (req)" interfaceType="_Dm1wAYRTEeC81IhLTZ23ZA"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_Dm2-JoRTEeC81IhLTZ23ZA" operation="_Dm2-JIRTEeC81IhLTZ23ZA"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_DnHc0IRTEeC81IhLTZ23ZA" documentation=" &lt;PC No. 7 ProductSearch PriceCalculator>" name=" &lt;PC No. 6 ProductSearch PriceCalculator>">
+    <provided id="_DnID4YRTEeC81IhLTZ23ZA" name="ISearch 3 (prov)" interfaceType="_Dm1wAYRTEeC81IhLTZ23ZA"/>
+    <provided id="_DnID5IRTEeC81IhLTZ23ZA" name="ICalculator 4 (prov)" interfaceType="_Dm2XEYRTEeC81IhLTZ23ZA"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_DnID4oRTEeC81IhLTZ23ZA" operation="_Dm1wAoRTEeC81IhLTZ23ZA"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_DnID44RTEeC81IhLTZ23ZA" operation="_Dm1wBoRTEeC81IhLTZ23ZA"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_DnID5YRTEeC81IhLTZ23ZA" operation="_Dm2XEoRTEeC81IhLTZ23ZA"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_DpNHlIRTEeC81IhLTZ23ZA" documentation="Captures calls to system-external services." name="SoMoX System-Level Dummy Component">
+    <provided id="_DpNHl4RTEeC81IhLTZ23ZA" documentation="SoMoX created provided port" name="java.util.List (prov dummy)" interfaceType="_Dm2XFoRTEeC81IhLTZ23ZA"/>
+  </componenttype>
+  <interface id="_Dm1wAYRTEeC81IhLTZ23ZA" documentation="de.upb.examples.reengineering.store.logic.ISearch" name="store.logic.ISearch">
+    <signatures id="_Dm1wAoRTEeC81IhLTZ23ZA" name="searchPrice" input="_Dm1wA4RTEeC81IhLTZ23ZA"/>
+    <signatures id="_Dm1wBoRTEeC81IhLTZ23ZA" name="searchProducer" input="_Dm1wB4RTEeC81IhLTZ23ZA"/>
+  </interface>
+  <interface id="_Dm2XEYRTEeC81IhLTZ23ZA" documentation="de.upb.examples.reengineering.store.logic.ICalculator" name="store.logic.ICalculator">
+    <signatures id="_Dm2XEoRTEeC81IhLTZ23ZA" name="calculate" input="_Dm1wA4RTEeC81IhLTZ23ZA"/>
+  </interface>
+  <interface id="_Dm2XF4RTEeC81IhLTZ23ZA" documentation="java.util.Collection" name="java.util.Collection"/>
+  <interface id="_Dm2XFoRTEeC81IhLTZ23ZA" documentation="java.util.List" name="java.util.List" inheritance="_Dm2XF4RTEeC81IhLTZ23ZA">
+    <signatures id="_Dm2XGIRTEeC81IhLTZ23ZA" name="get"/>
+    <signatures id="_Dm2-IIRTEeC81IhLTZ23ZA" name="add"/>
+  </interface>
+  <interface id="_Dm2-I4RTEeC81IhLTZ23ZA" documentation="de.upb.examples.reengineering.store.views.IListView" name="store.views.IListView">
+    <signatures id="_Dm2-JIRTEeC81IhLTZ23ZA" name="createListEntry"/>
+  </interface>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_Dm1wBYRTEeC81IhLTZ23ZA" name="STRING"/>
+  <messagetype id="_Dm1wA4RTEeC81IhLTZ23ZA" name="String">
+    <parameters id="_Dm1wBIRTEeC81IhLTZ23ZA" name="productName" type="_Dm1wBYRTEeC81IhLTZ23ZA"/>
+  </messagetype>
+  <messagetype id="_Dm1wB4RTEeC81IhLTZ23ZA" name="String">
+    <parameters id="_Dm1wCIRTEeC81IhLTZ23ZA" name="currentProduct" type="_Dm1wBYRTEeC81IhLTZ23ZA"/>
+  </messagetype>
+</staticstructure:Repository>

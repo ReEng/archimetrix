@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdma:Activity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xmlns:sdme="http://ns.storydriven.org/sdm/expressions/0.1.0" xmlns:sdmp="http://ns.storydriven.org/sdm/patterns/0.1.0" xmlns:sdmpe="http://ns.storydriven.org/sdm/patterns/expressions/0.1.0">
+  <ownedActivityEdge target="//@ownedActivityNode.10" source="//@ownedActivityNode.2"/>
+  <ownedActivityEdge target="//@ownedActivityNode.2" source="//@ownedActivityNode.0"/>
+  <ownedActivityEdge target="//@ownedActivityNode.4" source="//@ownedActivityNode.3" guard="EACH_TIME"/>
+  <ownedActivityEdge target="//@ownedActivityNode.8" source="//@ownedActivityNode.3" guard="END"/>
+  <ownedActivityEdge target="//@ownedActivityNode.5" source="//@ownedActivityNode.4" guard="SUCCESS"/>
+  <ownedActivityEdge target="//@ownedActivityNode.6" source="//@ownedActivityNode.5" guard="EACH_TIME"/>
+  <ownedActivityEdge target="//@ownedActivityNode.5" source="//@ownedActivityNode.6"/>
+  <ownedActivityEdge target="//@ownedActivityNode.1" source="//@ownedActivityNode.8" guard="END"/>
+  <ownedActivityEdge target="//@ownedActivityNode.3" source="//@ownedActivityNode.5" guard="END"/>
+  <ownedActivityEdge target="//@ownedActivityNode.7" source="//@ownedActivityNode.8" guard="EACH_TIME"/>
+  <ownedActivityEdge target="//@ownedActivityNode.8" source="//@ownedActivityNode.7"/>
+  <ownedActivityEdge target="//@ownedActivityNode.3" source="//@ownedActivityNode.4" guard="FAILURE"/>
+  <ownedActivityEdge target="//@ownedActivityNode.3" source="//@ownedActivityNode.9"/>
+  <ownedActivityEdge target="//@ownedActivityNode.11" source="//@ownedActivityNode.10" guard="SUCCESS"/>
+  <ownedActivityEdge target="//@ownedActivityNode.9" source="//@ownedActivityNode.10" guard="FAILURE"/>
+  <ownedActivityEdge target="//@ownedActivityNode.3" source="//@ownedActivityNode.11"/>
+  <ownedActivityNode xsi:type="sdma:StartNode" outgoing="//@ownedActivityEdge.1"/>
+  <ownedActivityNode xsi:type="sdma:StopNode" incoming="//@ownedActivityEdge.7"/>
+  <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="(p) Add method declaration to interface and set it as accessed target" outgoing="//@ownedActivityEdge.0" incoming="//@ownedActivityEdge.1">
+    <ownedRule comment="">
+      <variable xsi:type="sdmp:ObjectVariable" name="method2" bindingState="BOUND" incomingLink="//@ownedActivityNode.2/@ownedRule/@linkVariable.0" outgoingLink="//@ownedActivityNode.2/@ownedRule/@linkVariable.2 //@ownedActivityNode.2/@ownedRule/@linkVariable.5">
+        <attributeAssignment>
+          <attribute href="http://www.fzi.de/gast/types#//Member/visibility"/>
+          <valueExpression xsi:type="sdme:LiteralExpression" value="VISIBILITYPUBLIC">
+            <valueType href="http://www.fzi.de/gast/types#//Visibilities"/>
+          </valueExpression>
+        </attributeAssignment>
+        <classifier href="http://www.fzi.de/gast/functions#//Method"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="call" bindingState="BOUND" outgoingLink="//@ownedActivityNode.2/@ownedRule/@linkVariable.0 //@ownedActivityNode.2/@ownedRule/@linkVariable.3">
+        <classifier href="http://www.fzi.de/gast/accesses#//FunctionAccess"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="interface" bindingState="BOUND" outgoingLink="//@ownedActivityNode.2/@ownedRule/@linkVariable.1">
+        <classifier href="http://www.fzi.de/gast/types#//GASTClass"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="methodDecl" incomingLink="//@ownedActivityNode.2/@ownedRule/@linkVariable.1 //@ownedActivityNode.2/@ownedRule/@linkVariable.2 //@ownedActivityNode.2/@ownedRule/@linkVariable.3" outgoingLink="//@ownedActivityNode.2/@ownedRule/@linkVariable.4" bindingOperator="CREATE">
+        <attributeAssignment>
+          <attribute href="http://www.fzi.de/gast/types#//Member/abstract"/>
+          <valueExpression xsi:type="sdme:LiteralExpression" value="true">
+            <valueType href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+          </valueExpression>
+        </attributeAssignment>
+        <attributeAssignment>
+          <attribute href="http://www.fzi.de/gast/core#//NamedModelElement/simpleName"/>
+          <valueExpression xsi:type="sdmpe:AttributeValueExpression" comment="" object="//@ownedActivityNode.2/@ownedRule/@variable.0">
+            <attribute href="http://www.fzi.de/gast/core#//NamedModelElement/simpleName"/>
+          </valueExpression>
+        </attributeAssignment>
+        <attributeAssignment>
+          <attribute href="http://www.fzi.de/gast/types#//Member/visibility"/>
+          <valueExpression xsi:type="sdme:LiteralExpression" comment="" value="VISIBILITYPUBLIC">
+            <valueType href="http://www.fzi.de/gast/types#//Visibilities"/>
+          </valueExpression>
+        </attributeAssignment>
+        <classifier href="http://www.fzi.de/gast/functions#//Method"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="returnTypeAccessNew" incomingLink="//@ownedActivityNode.2/@ownedRule/@linkVariable.4" outgoingLink="//@ownedActivityNode.2/@ownedRule/@linkVariable.7" bindingOperator="CREATE">
+        <classifier href="http://www.fzi.de/gast/accesses#//DeclarationTypeAccess"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="returnTypeAccessOld" incomingLink="//@ownedActivityNode.2/@ownedRule/@linkVariable.5" outgoingLink="//@ownedActivityNode.2/@ownedRule/@linkVariable.6">
+        <classifier href="http://www.fzi.de/gast/accesses#//DeclarationTypeAccess"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="returnType" incomingLink="//@ownedActivityNode.2/@ownedRule/@linkVariable.6 //@ownedActivityNode.2/@ownedRule/@linkVariable.7">
+        <classifier href="http://www.fzi.de/gast/types#//GASTType"/>
+      </variable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY" source="//@ownedActivityNode.2/@ownedRule/@variable.1" bindingState="BOUND" target="//@ownedActivityNode.2/@ownedRule/@variable.0">
+        <targetEnd href="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE" source="//@ownedActivityNode.2/@ownedRule/@variable.2" target="//@ownedActivityNode.2/@ownedRule/@variable.3">
+        <targetEnd href="http://www.fzi.de/gast/types#//GASTClass/methods"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE" source="//@ownedActivityNode.2/@ownedRule/@variable.0" target="//@ownedActivityNode.2/@ownedRule/@variable.3">
+        <targetEnd href="http://www.fzi.de/gast/types#//Member/overriddenMember"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE" source="//@ownedActivityNode.2/@ownedRule/@variable.1" target="//@ownedActivityNode.2/@ownedRule/@variable.3">
+        <targetEnd href="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE" source="//@ownedActivityNode.2/@ownedRule/@variable.3" target="//@ownedActivityNode.2/@ownedRule/@variable.4">
+        <targetEnd href="http://www.fzi.de/gast/functions#//Function/returnTypeDeclaration"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" source="//@ownedActivityNode.2/@ownedRule/@variable.0" target="//@ownedActivityNode.2/@ownedRule/@variable.5">
+        <targetEnd href="http://www.fzi.de/gast/functions#//Function/returnTypeDeclaration"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" source="//@ownedActivityNode.2/@ownedRule/@variable.5" target="//@ownedActivityNode.2/@ownedRule/@variable.6">
+        <targetEnd href="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE" source="//@ownedActivityNode.2/@ownedRule/@variable.4" target="//@ownedActivityNode.2/@ownedRule/@variable.6">
+        <targetEnd href="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+      </linkVariable>
+    </ownedRule>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="for each implementing class ..." outgoing="//@ownedActivityEdge.3 //@ownedActivityEdge.2" incoming="//@ownedActivityEdge.8 //@ownedActivityEdge.11 //@ownedActivityEdge.12 //@ownedActivityEdge.15" forEach="true">
+    <ownedRule>
+      <variable xsi:type="sdmp:ObjectVariable" name="interface" bindingState="BOUND" incomingLink="//@ownedActivityNode.3/@ownedRule/@linkVariable.1">
+        <classifier href="http://www.fzi.de/gast/types#//GASTClass"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="class" outgoingLink="//@ownedActivityNode.3/@ownedRule/@linkVariable.0 //@ownedActivityNode.4/@ownedRule/@linkVariable.0">
+        <classifier href="http://www.fzi.de/gast/types#//GASTClass"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="implements" incomingLink="//@ownedActivityNode.3/@ownedRule/@linkVariable.0" outgoingLink="//@ownedActivityNode.3/@ownedRule/@linkVariable.1">
+        <classifier href="http://www.fzi.de/gast/accesses#//InheritanceTypeAccess"/>
+      </variable>
+      <linkVariable xsi:type="sdmp:LinkVariable" source="//@ownedActivityNode.3/@ownedRule/@variable.1" target="//@ownedActivityNode.3/@ownedRule/@variable.2">
+        <targetEnd href="http://www.fzi.de/gast/types#//GASTClass/inheritanceTypeAccesses"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" source="//@ownedActivityNode.3/@ownedRule/@variable.2" target="//@ownedActivityNode.3/@ownedRule/@variable.0">
+        <targetEnd href="http://www.fzi.de/gast/accesses#//Access/accessedClass"/>
+      </linkVariable>
+    </ownedRule>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="generate method stub" outgoing="//@ownedActivityEdge.4 //@ownedActivityEdge.11" incoming="//@ownedActivityEdge.2">
+    <ownedRule>
+      <variable xsi:type="sdmp:ObjectVariable" name="class" bindingState="BOUND" outgoingLink="//@ownedActivityNode.4/@ownedRule/@linkVariable.1">
+        <classifier href="http://www.fzi.de/gast/types#//GASTClass"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="methodStub" incomingLink="//@ownedActivityNode.4/@ownedRule/@linkVariable.0" outgoingLink="//@ownedActivityNode.4/@ownedRule/@linkVariable.2 //@ownedActivityNode.4/@ownedRule/@linkVariable.3" bindingOperator="CREATE">
+        <attributeAssignment>
+          <attribute href="http://www.fzi.de/gast/core#//NamedModelElement/simpleName"/>
+          <valueExpression xsi:type="sdmpe:AttributeValueExpression" object="//@ownedActivityNode.4/@ownedRule/@variable.3">
+            <attribute href="http://www.fzi.de/gast/core#//NamedModelElement/simpleName"/>
+          </valueExpression>
+        </attributeAssignment>
+        <attributeAssignment>
+          <attribute href="http://www.fzi.de/gast/types#//Member/visibility"/>
+          <valueExpression xsi:type="sdme:LiteralExpression" value="VISIBILITYPUBLIC">
+            <valueType href="http://www.fzi.de/gast/types#//Visibilities"/>
+          </valueExpression>
+        </attributeAssignment>
+        <classifier href="http://www.fzi.de/gast/functions#//Method"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="method2" bindingState="BOUND" incomingLink="//@ownedActivityNode.4/@ownedRule/@linkVariable.1">
+        <classifier href="http://www.fzi.de/gast/functions#//Method"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="methodDecl" bindingState="BOUND" incomingLink="//@ownedActivityNode.4/@ownedRule/@linkVariable.2">
+        <classifier href="http://www.fzi.de/gast/functions#//Method"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="returnTypeAccessMethodStub" incomingLink="//@ownedActivityNode.4/@ownedRule/@linkVariable.3" outgoingLink="//@ownedActivityNode.4/@ownedRule/@linkVariable.4" bindingOperator="CREATE">
+        <classifier href="http://www.fzi.de/gast/accesses#//DeclarationTypeAccess"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="returnType" bindingState="BOUND" incomingLink="//@ownedActivityNode.4/@ownedRule/@linkVariable.4">
+        <classifier href="http://www.fzi.de/gast/types#//GASTType"/>
+      </variable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE" source="//@ownedActivityNode.3/@ownedRule/@variable.1" target="//@ownedActivityNode.4/@ownedRule/@variable.1">
+        <targetEnd href="http://www.fzi.de/gast/types#//GASTClass/methods"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingSemantics="NEGATIVE" source="//@ownedActivityNode.4/@ownedRule/@variable.0" target="//@ownedActivityNode.4/@ownedRule/@variable.2">
+        <targetEnd href="http://www.fzi.de/gast/types#//GASTClass/methods"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE" source="//@ownedActivityNode.4/@ownedRule/@variable.1" target="//@ownedActivityNode.4/@ownedRule/@variable.3">
+        <targetEnd href="http://www.fzi.de/gast/types#//Member/overriddenMember"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" source="//@ownedActivityNode.4/@ownedRule/@variable.1" target="//@ownedActivityNode.4/@ownedRule/@variable.4">
+        <targetEnd href="http://www.fzi.de/gast/functions#//Function/returnTypeDeclaration"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE" source="//@ownedActivityNode.4/@ownedRule/@variable.4" target="//@ownedActivityNode.4/@ownedRule/@variable.5">
+        <targetEnd href="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+      </linkVariable>
+    </ownedRule>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:MatchingStoryNode" name="for each parameter 1" outgoing="//@ownedActivityEdge.5 //@ownedActivityEdge.8" incoming="//@ownedActivityEdge.6 //@ownedActivityEdge.4" forEach="true">
+    <ownedPattern>
+      <variable xsi:type="sdmp:ObjectVariable" name="method2" bindingState="BOUND" outgoingLink="//@ownedActivityNode.5/@ownedPattern/@linkVariable.0">
+        <classifier href="http://www.fzi.de/gast/functions#//Method"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="param" incomingLink="//@ownedActivityNode.5/@ownedPattern/@linkVariable.0">
+        <classifier href="http://www.fzi.de/gast/variables#//FormalParameter"/>
+      </variable>
+      <linkVariable xsi:type="sdmp:LinkVariable" source="//@ownedActivityNode.5/@ownedPattern/@variable.0" target="//@ownedActivityNode.5/@ownedPattern/@variable.1">
+        <targetEnd href="http://www.fzi.de/gast/functions#//Function/formalParameters"/>
+      </linkVariable>
+    </ownedPattern>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="create parameters for method stub" outgoing="//@ownedActivityEdge.6" incoming="//@ownedActivityEdge.5">
+    <ownedRule>
+      <variable xsi:type="sdmp:ObjectVariable" name="param" bindingState="BOUND" outgoingLink="//@ownedActivityNode.6/@ownedRule/@linkVariable.0">
+        <classifier href="http://www.fzi.de/gast/variables#//FormalParameter"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="paramType" incomingLink="//@ownedActivityNode.6/@ownedRule/@linkVariable.0" outgoingLink="//@ownedActivityNode.6/@ownedRule/@linkVariable.3">
+        <classifier href="http://www.fzi.de/gast/types#//GASTType"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="methodStub" bindingState="BOUND" outgoingLink="//@ownedActivityNode.6/@ownedRule/@linkVariable.1">
+        <classifier href="http://www.fzi.de/gast/functions#//Method"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="newParam" incomingLink="//@ownedActivityNode.6/@ownedRule/@linkVariable.1" outgoingLink="//@ownedActivityNode.6/@ownedRule/@linkVariable.2" bindingOperator="CREATE">
+        <attributeAssignment>
+          <attribute href="http://www.fzi.de/gast/core#//NamedModelElement/simpleName"/>
+          <valueExpression xsi:type="sdmpe:AttributeValueExpression" object="//@ownedActivityNode.6/@ownedRule/@variable.0">
+            <attribute href="http://www.fzi.de/gast/core#//NamedModelElement/simpleName"/>
+          </valueExpression>
+        </attributeAssignment>
+        <classifier href="http://www.fzi.de/gast/variables#//FormalParameter"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="typeAccessNewParam" incomingLink="//@ownedActivityNode.6/@ownedRule/@linkVariable.2 //@ownedActivityNode.6/@ownedRule/@linkVariable.3" bindingOperator="CREATE">
+        <classifier href="http://www.fzi.de/gast/accesses#//DeclarationTypeAccess"/>
+      </variable>
+      <linkVariable xsi:type="sdmp:LinkVariable" source="//@ownedActivityNode.6/@ownedRule/@variable.0" target="//@ownedActivityNode.6/@ownedRule/@variable.1">
+        <targetEnd href="http://www.fzi.de/gast/variables#//Variable/type"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE" source="//@ownedActivityNode.6/@ownedRule/@variable.2" target="//@ownedActivityNode.6/@ownedRule/@variable.3">
+        <targetEnd href="http://www.fzi.de/gast/functions#//Function/formalParameters"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE" source="//@ownedActivityNode.6/@ownedRule/@variable.3" target="//@ownedActivityNode.6/@ownedRule/@variable.4">
+        <targetEnd href="http://www.fzi.de/gast/variables#//Variable/typeDeclaration"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE" source="//@ownedActivityNode.6/@ownedRule/@variable.1" target="//@ownedActivityNode.6/@ownedRule/@variable.4">
+        <targetEnd href="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+      </linkVariable>
+    </ownedRule>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="create parameters for method decl" outgoing="//@ownedActivityEdge.10" incoming="//@ownedActivityEdge.9">
+    <ownedRule>
+      <variable xsi:type="sdmp:ObjectVariable" name="methodDecl" bindingState="BOUND" outgoingLink="//@ownedActivityNode.7/@ownedRule/@linkVariable.0">
+        <classifier href="http://www.fzi.de/gast/functions#//Method"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="newParam" incomingLink="//@ownedActivityNode.7/@ownedRule/@linkVariable.0" outgoingLink="//@ownedActivityNode.7/@ownedRule/@linkVariable.1" bindingOperator="CREATE">
+        <attributeAssignment>
+          <attribute href="http://www.fzi.de/gast/core#//NamedModelElement/simpleName"/>
+          <valueExpression xsi:type="sdmpe:AttributeValueExpression" comment="" object="//@ownedActivityNode.5/@ownedPattern/@variable.1">
+            <attribute href="http://www.fzi.de/gast/core#//NamedModelElement/simpleName"/>
+          </valueExpression>
+        </attributeAssignment>
+        <classifier href="http://www.fzi.de/gast/variables#//FormalParameter"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="param" bindingState="BOUND" outgoingLink="//@ownedActivityNode.7/@ownedRule/@linkVariable.2">
+        <classifier href="http://www.fzi.de/gast/variables#//FormalParameter"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="paramType" incomingLink="//@ownedActivityNode.7/@ownedRule/@linkVariable.2 //@ownedActivityNode.7/@ownedRule/@linkVariable.3">
+        <classifier href="http://www.fzi.de/gast/types#//GASTType"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="typeAccessNewParam" incomingLink="//@ownedActivityNode.7/@ownedRule/@linkVariable.1" outgoingLink="//@ownedActivityNode.7/@ownedRule/@linkVariable.3" bindingOperator="CREATE">
+        <classifier href="http://www.fzi.de/gast/accesses#//DeclarationTypeAccess"/>
+      </variable>
+      <linkVariable xsi:type="sdmp:LinkVariable" name="" bindingOperator="CREATE" source="//@ownedActivityNode.7/@ownedRule/@variable.0" target="//@ownedActivityNode.7/@ownedRule/@variable.1">
+        <targetEnd href="http://www.fzi.de/gast/functions#//Function/formalParameters"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE" source="//@ownedActivityNode.7/@ownedRule/@variable.1" target="//@ownedActivityNode.7/@ownedRule/@variable.4">
+        <targetEnd href="http://www.fzi.de/gast/variables#//Variable/typeDeclaration"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" source="//@ownedActivityNode.7/@ownedRule/@variable.2" target="//@ownedActivityNode.7/@ownedRule/@variable.3">
+        <targetEnd href="http://www.fzi.de/gast/variables#//Variable/type"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE" source="//@ownedActivityNode.7/@ownedRule/@variable.4" target="//@ownedActivityNode.7/@ownedRule/@variable.3">
+        <targetEnd href="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+      </linkVariable>
+    </ownedRule>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:MatchingStoryNode" name="for each parameter 2" outgoing="//@ownedActivityEdge.7 //@ownedActivityEdge.9" incoming="//@ownedActivityEdge.3 //@ownedActivityEdge.10" forEach="true">
+    <ownedPattern>
+      <variable xsi:type="sdmp:ObjectVariable" name="method2" bindingState="BOUND" outgoingLink="//@ownedActivityNode.8/@ownedPattern/@linkVariable.0">
+        <classifier href="http://www.fzi.de/gast/functions#//Method"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="param" incomingLink="//@ownedActivityNode.8/@ownedPattern/@linkVariable.0">
+        <classifier href="http://www.fzi.de/gast/variables#//FormalParameter"/>
+      </variable>
+      <linkVariable xsi:type="sdmp:LinkVariable" source="//@ownedActivityNode.8/@ownedPattern/@variable.0" target="//@ownedActivityNode.8/@ownedPattern/@variable.1">
+        <targetEnd href="http://www.fzi.de/gast/functions#//Function/formalParameters"/>
+      </linkVariable>
+    </ownedPattern>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="destroy cast statement, local variable, create new access" outgoing="//@ownedActivityEdge.12" incoming="//@ownedActivityEdge.14">
+    <ownedRule>
+      <variable xsi:type="sdmp:ObjectVariable" name="castStmt" bindingState="BOUND" incomingLink="//@ownedActivityNode.9/@ownedRule/@linkVariable.0" outgoingLink="//@ownedActivityNode.9/@ownedRule/@linkVariable.1" bindingOperator="DESTROY">
+        <classifier href="http://www.fzi.de/gast/statements#//SimpleStatement"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="block" outgoingLink="//@ownedActivityNode.9/@ownedRule/@linkVariable.0">
+        <classifier href="http://www.fzi.de/gast/statements#//BlockStatement"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="varAccess1" incomingLink="//@ownedActivityNode.9/@ownedRule/@linkVariable.1" outgoingLink="//@ownedActivityNode.9/@ownedRule/@linkVariable.2" bindingOperator="DESTROY">
+        <classifier href="http://www.fzi.de/gast/accesses#//VariableAccess"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="var1" incomingLink="//@ownedActivityNode.9/@ownedRule/@linkVariable.2 //@ownedActivityNode.9/@ownedRule/@linkVariable.3 //@ownedActivityNode.9/@ownedRule/@linkVariable.4" bindingOperator="DESTROY">
+        <classifier href="http://www.fzi.de/gast/variables#//LocalVariable"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="call" bindingState="BOUND" incomingLink="//@ownedActivityNode.9/@ownedRule/@linkVariable.10">
+        <classifier href="http://www.fzi.de/gast/accesses#//FunctionAccess"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="interface" bindingState="BOUND" incomingLink="//@ownedActivityNode.9/@ownedRule/@linkVariable.6">
+        <classifier href="http://www.fzi.de/gast/types#//GASTClass"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="stmt" outgoingLink="//@ownedActivityNode.9/@ownedRule/@linkVariable.8 //@ownedActivityNode.9/@ownedRule/@linkVariable.9 //@ownedActivityNode.9/@ownedRule/@linkVariable.10">
+        <classifier href="http://www.fzi.de/gast/statements#//SimpleStatement"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="varAccess2" incomingLink="//@ownedActivityNode.9/@ownedRule/@linkVariable.9" outgoingLink="//@ownedActivityNode.9/@ownedRule/@linkVariable.3" bindingOperator="DESTROY">
+        <classifier href="http://www.fzi.de/gast/accesses#//VariableAccess"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="varAccessNew" incomingLink="//@ownedActivityNode.9/@ownedRule/@linkVariable.8" outgoingLink="//@ownedActivityNode.9/@ownedRule/@linkVariable.7" bindingOperator="CREATE">
+        <classifier href="http://www.fzi.de/gast/accesses#//VariableAccess"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="var2" incomingLink="//@ownedActivityNode.9/@ownedRule/@linkVariable.5 //@ownedActivityNode.9/@ownedRule/@linkVariable.7" outgoingLink="//@ownedActivityNode.9/@ownedRule/@linkVariable.6">
+        <classifier href="http://www.fzi.de/gast/variables#//Variable"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="method" outgoingLink="//@ownedActivityNode.9/@ownedRule/@linkVariable.4 //@ownedActivityNode.9/@ownedRule/@linkVariable.5">
+        <classifier href="http://www.fzi.de/gast/functions#//Method"/>
+      </variable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY" source="//@ownedActivityNode.9/@ownedRule/@variable.1" target="//@ownedActivityNode.9/@ownedRule/@variable.0">
+        <targetEnd href="http://www.fzi.de/gast/statements#//BlockStatement/statements"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY" source="//@ownedActivityNode.9/@ownedRule/@variable.0" target="//@ownedActivityNode.9/@ownedRule/@variable.2">
+        <targetEnd href="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY" source="//@ownedActivityNode.9/@ownedRule/@variable.2" target="//@ownedActivityNode.9/@ownedRule/@variable.3">
+        <targetEnd href="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY" source="//@ownedActivityNode.9/@ownedRule/@variable.7" target="//@ownedActivityNode.9/@ownedRule/@variable.3">
+        <targetEnd href="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY" source="//@ownedActivityNode.9/@ownedRule/@variable.10" target="//@ownedActivityNode.9/@ownedRule/@variable.3">
+        <targetEnd href="http://www.fzi.de/gast/functions#//Function/localVariables"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" source="//@ownedActivityNode.9/@ownedRule/@variable.10" target="//@ownedActivityNode.9/@ownedRule/@variable.9">
+        <targetEnd href="http://www.fzi.de/gast/functions#//Function/localVariables"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" source="//@ownedActivityNode.9/@ownedRule/@variable.9" target="//@ownedActivityNode.9/@ownedRule/@variable.5">
+        <targetEnd href="http://www.fzi.de/gast/variables#//Variable/type"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE" source="//@ownedActivityNode.9/@ownedRule/@variable.8" target="//@ownedActivityNode.9/@ownedRule/@variable.9">
+        <targetEnd href="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE" source="//@ownedActivityNode.9/@ownedRule/@variable.6" target="//@ownedActivityNode.9/@ownedRule/@variable.8">
+        <targetEnd href="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY" source="//@ownedActivityNode.9/@ownedRule/@variable.6" target="//@ownedActivityNode.9/@ownedRule/@variable.7">
+        <targetEnd href="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" source="//@ownedActivityNode.9/@ownedRule/@variable.6" target="//@ownedActivityNode.9/@ownedRule/@variable.4">
+        <targetEnd href="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+      </linkVariable>
+    </ownedRule>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:MatchingStoryNode" name="(p) Decide if cast and call are done in same statement" outgoing="//@ownedActivityEdge.13 //@ownedActivityEdge.14" incoming="//@ownedActivityEdge.0">
+    <ownedPattern>
+      <variable xsi:type="sdmp:ObjectVariable" name="castStmt" bindingState="BOUND" outgoingLink="//@ownedActivityNode.10/@ownedPattern/@linkVariable.0">
+        <classifier href="http://www.fzi.de/gast/statements#//SimpleStatement"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="call" bindingState="BOUND" incomingLink="//@ownedActivityNode.10/@ownedPattern/@linkVariable.0">
+        <classifier href="http://www.fzi.de/gast/accesses#//FunctionAccess"/>
+      </variable>
+      <linkVariable xsi:type="sdmp:LinkVariable" source="//@ownedActivityNode.10/@ownedPattern/@variable.0" target="//@ownedActivityNode.10/@ownedPattern/@variable.1">
+        <targetEnd href="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+      </linkVariable>
+    </ownedPattern>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="(p) Destroy cast" outgoing="//@ownedActivityEdge.15" incoming="//@ownedActivityEdge.13">
+    <ownedRule>
+      <variable xsi:type="sdmp:ObjectVariable" name="class2" bindingState="BOUND" incomingLink="//@ownedActivityNode.11/@ownedRule/@linkVariable.1">
+        <classifier href="http://www.fzi.de/gast/types#//GASTClass"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="castStmt" bindingState="BOUND" outgoingLink="//@ownedActivityNode.11/@ownedRule/@linkVariable.0">
+        <classifier href="http://www.fzi.de/gast/statements#//SimpleStatement"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="cast" incomingLink="//@ownedActivityNode.11/@ownedRule/@linkVariable.0" outgoingLink="//@ownedActivityNode.11/@ownedRule/@linkVariable.1" bindingOperator="DESTROY">
+        <classifier href="http://www.fzi.de/gast/accesses#//CastTypeAccess"/>
+      </variable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY" source="//@ownedActivityNode.11/@ownedRule/@variable.1" target="//@ownedActivityNode.11/@ownedRule/@variable.2">
+        <targetEnd href="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY" source="//@ownedActivityNode.11/@ownedRule/@variable.2" target="//@ownedActivityNode.11/@ownedRule/@variable.0">
+        <targetEnd href="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+      </linkVariable>
+    </ownedRule>
+  </ownedActivityNode>
+</sdma:Activity>

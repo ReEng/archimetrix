@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metricvalues:MetricValuesModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:metricvalues="http://metricvalues/1.0" minCompThreshold="0.25"
+    maxMergeThreshold="1.0">
+  <iterations number="1" curCompThreshold="1.0" curMergeThreshold="0.45" isMergeIteration="true">
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb4oRPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 0 ProductSearch>" id="_gB5_QoRPEeC81IhLTZ23ZA">
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb5YRPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 2 PriceCalculator>" id="_gB6mWYRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb44RPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 4 ProductsListView>" id="_gB7NYIRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <requiredInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidatePairs firstComponent="#//@iterations.0/@componentCandidates.2"
+        secondComponent="#//@iterations.0/@componentCandidates.1">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="2.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.28824600176169324"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="4.0"/>
+      <metricValues metricID="org.somox.metrics.Instability" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.25905170540014905"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.49439604580402374"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling" value="10.0"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.0/@componentCandidates.1"
+        secondComponent="#//@iterations.0/@componentCandidates.2">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="4.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="2.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.28824600176169324"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="4.0"/>
+      <metricValues metricID="org.somox.metrics.Instability" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.25905170540014905"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.49439604580402374"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling" value="10.0"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.0/@componentCandidates.0"
+        secondComponent="#//@iterations.0/@componentCandidates.1">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="1.0"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="2.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.560178219125821"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="4.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.520912359158198"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.564633697271347"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling" value="6.0"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.0/@componentCandidates.1"
+        secondComponent="#//@iterations.0/@componentCandidates.0">
+      <metricValues metricID="org.somox.metrics.Coupling" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="4.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="1.0"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="2.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.3847559786894742"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="4.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"
+          value="0.75"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.7023343792983464"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.564633697271347"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount" value="4.0"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling" value="6.0"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount" value="3.0"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.0/@componentCandidates.2"
+        secondComponent="#//@iterations.0/@componentCandidates.0">
+      <metricValues metricID="org.somox.metrics.Coupling" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="2.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2788077727982811"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="4.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"
+          value="0.3333333333333333"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.408937074527854"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5717923268675804"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling" value="4.0"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount" value="2.0"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.0/@componentCandidates.0"
+        secondComponent="#//@iterations.0/@componentCandidates.2">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="2.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.29122278180259925"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="4.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.2619182343284289"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5717923268675804"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling" value="4.0"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+  </iterations>
+  <iterations number="2" curCompThreshold="1.0" curMergeThreshold="0.45" isMergeIteration="true">
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb4oRPEeC81IhLTZ23ZA platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb5YRPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 6 ProductSearch PriceCalculator>" id="_gCU2AIRPEeC81IhLTZ23ZA">
+        <providedInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb44RPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 4 ProductsListView>" id="_gB7NYIRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <requiredInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidatePairs firstComponent="#//@iterations.1/@componentCandidates.0"
+        secondComponent="#//@iterations.1/@componentCandidates.1">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2897343917821462"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.260484969864289"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.1/@componentCandidates.1"
+        secondComponent="#//@iterations.1/@componentCandidates.0">
+      <metricValues metricID="org.somox.metrics.Coupling" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2685641473633986"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"
+          value="0.3333333333333333"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.3989861241053967"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount" value="2.0"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+  </iterations>
+  <iterations number="3" curCompThreshold="1.0" curMergeThreshold="0.55" isMergeIteration="true">
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb44RPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 4 ProductsListView>" id="_gB7NYIRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <requiredInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb4oRPEeC81IhLTZ23ZA platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb5YRPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 6 ProductSearch PriceCalculator>" id="_gCU2AIRPEeC81IhLTZ23ZA">
+        <providedInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidatePairs firstComponent="#//@iterations.2/@componentCandidates.1"
+        secondComponent="#//@iterations.2/@componentCandidates.0">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2897343917821462"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.260484969864289"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.2/@componentCandidates.0"
+        secondComponent="#//@iterations.2/@componentCandidates.1">
+      <metricValues metricID="org.somox.metrics.Coupling" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2685641473633986"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"
+          value="0.3333333333333333"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.3989861241053967"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount" value="2.0"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+  </iterations>
+  <iterations number="4" curCompThreshold="1.0" curMergeThreshold="0.65" isMergeIteration="true">
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb44RPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 4 ProductsListView>" id="_gB7NYIRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <requiredInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb4oRPEeC81IhLTZ23ZA platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb5YRPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 6 ProductSearch PriceCalculator>" id="_gCU2AIRPEeC81IhLTZ23ZA">
+        <providedInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidatePairs firstComponent="#//@iterations.3/@componentCandidates.1"
+        secondComponent="#//@iterations.3/@componentCandidates.0">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2897343917821462"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.260484969864289"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.3/@componentCandidates.0"
+        secondComponent="#//@iterations.3/@componentCandidates.1">
+      <metricValues metricID="org.somox.metrics.Coupling" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2685641473633986"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"
+          value="0.3333333333333333"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.3989861241053967"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount" value="2.0"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+  </iterations>
+  <iterations number="5" curCompThreshold="1.0" curMergeThreshold="0.75" isMergeIteration="true">
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb44RPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 4 ProductsListView>" id="_gB7NYIRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <requiredInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb4oRPEeC81IhLTZ23ZA platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb5YRPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 6 ProductSearch PriceCalculator>" id="_gCU2AIRPEeC81IhLTZ23ZA">
+        <providedInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidatePairs firstComponent="#//@iterations.4/@componentCandidates.1"
+        secondComponent="#//@iterations.4/@componentCandidates.0">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2897343917821462"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.260484969864289"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.4/@componentCandidates.0"
+        secondComponent="#//@iterations.4/@componentCandidates.1">
+      <metricValues metricID="org.somox.metrics.Coupling" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2685641473633986"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"
+          value="0.3333333333333333"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.3989861241053967"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount" value="2.0"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+  </iterations>
+  <iterations number="6" curCompThreshold="1.0" curMergeThreshold="0.85" isMergeIteration="true">
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb44RPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 4 ProductsListView>" id="_gB7NYIRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <requiredInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb4oRPEeC81IhLTZ23ZA platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb5YRPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 6 ProductSearch PriceCalculator>" id="_gCU2AIRPEeC81IhLTZ23ZA">
+        <providedInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidatePairs firstComponent="#//@iterations.5/@componentCandidates.1"
+        secondComponent="#//@iterations.5/@componentCandidates.0">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2897343917821462"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.260484969864289"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.5/@componentCandidates.0"
+        secondComponent="#//@iterations.5/@componentCandidates.1">
+      <metricValues metricID="org.somox.metrics.Coupling" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2685641473633986"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"
+          value="0.3333333333333333"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.3989861241053967"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount" value="2.0"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+  </iterations>
+  <iterations number="7" curCompThreshold="1.0" curMergeThreshold="0.95" isMergeIteration="true">
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb44RPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 4 ProductsListView>" id="_gB7NYIRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <requiredInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb4oRPEeC81IhLTZ23ZA platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb5YRPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 6 ProductSearch PriceCalculator>" id="_gCU2AIRPEeC81IhLTZ23ZA">
+        <providedInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidatePairs firstComponent="#//@iterations.6/@componentCandidates.1"
+        secondComponent="#//@iterations.6/@componentCandidates.0">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2897343917821462"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.260484969864289"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.6/@componentCandidates.0"
+        secondComponent="#//@iterations.6/@componentCandidates.1">
+      <metricValues metricID="org.somox.metrics.Coupling" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2685641473633986"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"
+          value="0.3333333333333333"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.3989861241053967"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount" value="2.0"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+  </iterations>
+  <iterations number="8" curCompThreshold="1.0" curMergeThreshold="1.05">
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb44RPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 4 ProductsListView>" id="_gB7NYIRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <requiredInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb4oRPEeC81IhLTZ23ZA platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb5YRPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 6 ProductSearch PriceCalculator>" id="_gCU2AIRPEeC81IhLTZ23ZA">
+        <providedInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidatePairs firstComponent="#//@iterations.7/@componentCandidates.1"
+        secondComponent="#//@iterations.7/@componentCandidates.0">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2897343917821462"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.260484969864289"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.7/@componentCandidates.0"
+        secondComponent="#//@iterations.7/@componentCandidates.1">
+      <metricValues metricID="org.somox.metrics.Coupling" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2685641473633986"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"
+          value="0.3333333333333333"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.3989861241053967"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount" value="2.0"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+  </iterations>
+  <iterations number="9" curCompThreshold="0.9" curMergeThreshold="1.05">
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb44RPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 4 ProductsListView>" id="_gB7NYIRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <requiredInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb4oRPEeC81IhLTZ23ZA platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb5YRPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 6 ProductSearch PriceCalculator>" id="_gCU2AIRPEeC81IhLTZ23ZA">
+        <providedInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidatePairs firstComponent="#//@iterations.8/@componentCandidates.1"
+        secondComponent="#//@iterations.8/@componentCandidates.0">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2897343917821462"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.260484969864289"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.8/@componentCandidates.0"
+        secondComponent="#//@iterations.8/@componentCandidates.1">
+      <metricValues metricID="org.somox.metrics.Coupling" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2685641473633986"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"
+          value="0.3333333333333333"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.3989861241053967"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount" value="2.0"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+  </iterations>
+  <iterations number="10" curCompThreshold="0.8" curMergeThreshold="1.05">
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb44RPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 4 ProductsListView>" id="_gB7NYIRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <requiredInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb4oRPEeC81IhLTZ23ZA platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb5YRPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 6 ProductSearch PriceCalculator>" id="_gCU2AIRPEeC81IhLTZ23ZA">
+        <providedInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidatePairs firstComponent="#//@iterations.9/@componentCandidates.1"
+        secondComponent="#//@iterations.9/@componentCandidates.0">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2897343917821462"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.260484969864289"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.9/@componentCandidates.0"
+        secondComponent="#//@iterations.9/@componentCandidates.1">
+      <metricValues metricID="org.somox.metrics.Coupling" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2685641473633986"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"
+          value="0.3333333333333333"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.3989861241053967"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount" value="2.0"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+  </iterations>
+  <iterations number="11" curCompThreshold="0.7000000000000001" curMergeThreshold="1.05">
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb44RPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 4 ProductsListView>" id="_gB7NYIRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <requiredInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb4oRPEeC81IhLTZ23ZA platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb5YRPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 6 ProductSearch PriceCalculator>" id="_gCU2AIRPEeC81IhLTZ23ZA">
+        <providedInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidatePairs firstComponent="#//@iterations.10/@componentCandidates.1"
+        secondComponent="#//@iterations.10/@componentCandidates.0">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2897343917821462"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.260484969864289"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.10/@componentCandidates.0"
+        secondComponent="#//@iterations.10/@componentCandidates.1">
+      <metricValues metricID="org.somox.metrics.Coupling" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2685641473633986"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"
+          value="0.3333333333333333"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.3989861241053967"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount" value="2.0"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+  </iterations>
+  <iterations number="12" curCompThreshold="0.6000000000000001" curMergeThreshold="1.05">
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb44RPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 4 ProductsListView>" id="_gB7NYIRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <requiredInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb4oRPEeC81IhLTZ23ZA platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb5YRPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 6 ProductSearch PriceCalculator>" id="_gCU2AIRPEeC81IhLTZ23ZA">
+        <providedInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidatePairs firstComponent="#//@iterations.11/@componentCandidates.1"
+        secondComponent="#//@iterations.11/@componentCandidates.0">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2897343917821462"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.260484969864289"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.11/@componentCandidates.0"
+        secondComponent="#//@iterations.11/@componentCandidates.1">
+      <metricValues metricID="org.somox.metrics.Coupling" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2685641473633986"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"
+          value="0.3333333333333333"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.3989861241053967"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount" value="2.0"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+  </iterations>
+  <iterations number="13" curCompThreshold="0.5000000000000001" curMergeThreshold="1.05">
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb44RPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 4 ProductsListView>" id="_gB7NYIRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <requiredInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb4oRPEeC81IhLTZ23ZA platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb5YRPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 6 ProductSearch PriceCalculator>" id="_gCU2AIRPEeC81IhLTZ23ZA">
+        <providedInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidatePairs firstComponent="#//@iterations.12/@componentCandidates.1"
+        secondComponent="#//@iterations.12/@componentCandidates.0">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2897343917821462"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.260484969864289"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.12/@componentCandidates.0"
+        secondComponent="#//@iterations.12/@componentCandidates.1">
+      <metricValues metricID="org.somox.metrics.Coupling" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2685641473633986"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"
+          value="0.3333333333333333"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.3989861241053967"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount" value="2.0"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+  </iterations>
+  <iterations number="14" curCompThreshold="0.40000000000000013" curMergeThreshold="1.05">
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb44RPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 4 ProductsListView>" id="_gB7NYIRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <requiredInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb4oRPEeC81IhLTZ23ZA platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb5YRPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 6 ProductSearch PriceCalculator>" id="_gCU2AIRPEeC81IhLTZ23ZA">
+        <providedInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidatePairs firstComponent="#//@iterations.13/@componentCandidates.1"
+        secondComponent="#//@iterations.13/@componentCandidates.0">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2897343917821462"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.260484969864289"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.13/@componentCandidates.0"
+        secondComponent="#//@iterations.13/@componentCandidates.1">
+      <metricValues metricID="org.somox.metrics.Coupling" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2685641473633986"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"
+          value="0.3333333333333333"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.3989861241053967"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount" value="2.0"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+  </iterations>
+  <iterations number="15" curCompThreshold="0.30000000000000016" curMergeThreshold="1.05">
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb44RPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 4 ProductsListView>" id="_gB7NYIRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <requiredInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidates classes="platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb4oRPEeC81IhLTZ23ZA platform:/resource/Store12_RefactoredNotRelevantIV/Store1.gast#_ZmUb5YRPEeC81IhLTZ23ZA">
+      <component name=" &lt;PC No. 6 ProductSearch PriceCalculator>" id="_gCU2AIRPEeC81IhLTZ23ZA">
+        <providedInterfaces/>
+        <providedInterfaces/>
+      </component>
+    </componentCandidates>
+    <componentCandidatePairs firstComponent="#//@iterations.14/@componentCandidates.1"
+        secondComponent="#//@iterations.14/@componentCandidates.0">
+      <metricValues metricID="org.somox.metrics.Coupling"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2897343917821462"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.260484969864289"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+    <componentCandidatePairs firstComponent="#//@iterations.14/@componentCandidates.0"
+        secondComponent="#//@iterations.14/@componentCandidates.1">
+      <metricValues metricID="org.somox.metrics.Coupling" value="1.0"/>
+      <metricValues metricID="org.somox.metrics.basic.ExternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.PackageMapping" value="0.5"/>
+      <metricValues metricID="org.somox.metric.basic.AbstractTypesCount" value="3.0"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultMergeIndicatingMetric"
+          value="0.2685641473633986"/>
+      <metricValues metricID="org.somox.metrics.basic.TotalTypesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.Instability"/>
+      <metricValues metricID="org.somox.metrics.Abstractness" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.SubsystemComponent"/>
+      <metricValues metricID="org.somox.metrics.DMS" value="0.5"/>
+      <metricValues metricID="org.somox.metrics.AdherenceToInterfaceCommunication"
+          value="0.3333333333333333"/>
+      <metricValues metricID="org.somox.analyzer.simplemodelanalyzer.metrics.DefaultCompositionIndicatingMetric"
+          value="0.3989861241053967"/>
+      <metricValues metricID="org.somox.metrics.NameResemblance" value="0.5330941863358021"/>
+      <metricValues metricID="org.somox.metrics.basic.InternalAccessesCount" value="6.0"/>
+      <metricValues metricID="org.somox.metrics.basic.AfferentCoupling"/>
+      <metricValues metricID="org.somox.metric.basic.EfferentCoupling"/>
+      <metricValues metricID="org.somox.metrics.basic.InterfaceAccessesCount" value="2.0"/>
+      <metricValues metricID="org.somox.metrics.DirectoryMapping"/>
+      <metricValues metricID="org.somox.metrics.SliceLayerArchitectureQuality" value="1.0"/>
+    </componentCandidatePairs>
+  </iterations>
+  <iterations number="16" curCompThreshold="0.30000000000000016" curMergeThreshold="1.05">
+    <componentCandidates>
+      <component name="CC No. 1 de.upb.examples.reengineering.store.logic &lt;...sListView>  &lt;PC No. 6 ProductSearch PriceCalculator>>"
+          id="_gEcV4IRPEeC81IhLTZ23ZA">
+        <requiredInterfaces/>
+        <providedInterfaces/>
+        <providedInterfaces/>
+        <providedInterfaces/>
+        <components name=" &lt;PC No. 4 ProductsListView>" id="_gB7NYIRPEeC81IhLTZ23ZA">
+          <requiredInterfaces/>
+          <requiredInterfaces/>
+          <providedInterfaces/>
+        </components>
+        <components name=" &lt;PC No. 6 ProductSearch PriceCalculator>" id="_gCU2AIRPEeC81IhLTZ23ZA">
+          <providedInterfaces/>
+          <providedInterfaces/>
+        </components>
+      </component>
+    </componentCandidates>
+  </iterations>
+</metricvalues:MetricValuesModel>

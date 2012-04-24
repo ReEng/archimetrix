@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ASCII"?>
+<staticstructure:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:behaviour="http://q-impress.eu/samm/behaviour" xmlns:datatypes="http://q-impress.eu/samm/datatype" xmlns:staticstructure="http://q-impress.eu/samm/staticstructure" id="_BxSfINi_EeChHPOykpI_Lw">
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_B2rVddi_EeChHPOykpI_Lw" documentation=" &lt;PC No. 5 ProductsListView>" name=" &lt;PC No. 4 ProductsListView>">
+    <provided id="_B2sjkti_EeChHPOykpI_Lw" name="IListView 2 (prov)" interfaceType="_B2sjkNi_EeChHPOykpI_Lw"/>
+    <required id="_B2r8gNi_EeChHPOykpI_Lw" name="ISearch 1 (req)" interfaceType="_B2jZoNi_EeChHPOykpI_Lw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_B2sjk9i_EeChHPOykpI_Lw" operation="_B2sjkdi_EeChHPOykpI_Lw"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_B7xQ0Ni_EeChHPOykpI_Lw" documentation=" &lt;PC No. 7 ProductSearch PriceCalculator>" name=" &lt;PC No. 6 ProductSearch PriceCalculator>">
+    <provided id="_B7x34di_EeChHPOykpI_Lw" name="ISearch 3 (prov)" interfaceType="_B2jZoNi_EeChHPOykpI_Lw"/>
+    <provided id="_B7x35Ni_EeChHPOykpI_Lw" name="ICalculator 4 (prov)" interfaceType="_B2rVcdi_EeChHPOykpI_Lw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_B7x34ti_EeChHPOykpI_Lw" operation="_B2jZodi_EeChHPOykpI_Lw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_B7x349i_EeChHPOykpI_Lw" operation="_B2kAs9i_EeChHPOykpI_Lw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_B7x35di_EeChHPOykpI_Lw" operation="_B2rVcti_EeChHPOykpI_Lw"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:CompositeComponent" id="_B_sukNi_EeChHPOykpI_Lw" documentation="CC No. 2 de.upb.examples.reengineering.store.logic &lt; &lt;PC No. 6 ProductSearch PriceCalculator>  &lt;PC No. 4 ProductsListView>>" name="CC No. 1 de.upb.examples.reengineering.store.logic &lt;...Search PriceCalculator>  &lt;PC No. 4 ProductsListView>>">
+    <provided id="_B_vx4Ni_EeChHPOykpI_Lw" documentation="store.logic.ISearch" name="ISearch 0 (prov)" interfaceType="_B2jZoNi_EeChHPOykpI_Lw"/>
+    <provided id="_B_wY89i_EeChHPOykpI_Lw" documentation="store.logic.ICalculator" name="ICalculator 1 (prov)" interfaceType="_B2rVcdi_EeChHPOykpI_Lw"/>
+    <provided id="_B_wY99i_EeChHPOykpI_Lw" documentation="store.ui.IListView" name="IListView 2 (prov)" interfaceType="_B2sjkNi_EeChHPOykpI_Lw"/>
+    <subcomponents id="_B_tVoNi_EeChHPOykpI_Lw" name=" &lt;PC No. 6 ProductSearch PriceCalculator>-instance" realizedBy="_B7xQ0Ni_EeChHPOykpI_Lw"/>
+    <subcomponents id="_B_tVodi_EeChHPOykpI_Lw" name=" &lt;PC No. 4 ProductsListView>-instance" realizedBy="_B2rVddi_EeChHPOykpI_Lw"/>
+    <connector id="_B_tVoti_EeChHPOykpI_Lw" documentation="Assembly Connector from  &lt;PC No. 4 ProductsListView> to  &lt;PC No. 6 ProductSearch PriceCalculator>">
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_B_tVo9i_EeChHPOykpI_Lw" port="_B2r8gNi_EeChHPOykpI_Lw" subcomponent="_B_tVodi_EeChHPOykpI_Lw"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_B_tVpNi_EeChHPOykpI_Lw" port="_B7x34di_EeChHPOykpI_Lw" subcomponent="_B_tVoNi_EeChHPOykpI_Lw"/>
+    </connector>
+    <connector id="_B_wY8Ni_EeChHPOykpI_Lw" documentation="provided delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...Search PriceCalculator>  &lt;PC No. 4 ProductsListView>> to  &lt;PC No. 6 ProductSearch PriceCalculator>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_B_wY8di_EeChHPOykpI_Lw" port="_B_vx4Ni_EeChHPOykpI_Lw"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_B_wY8ti_EeChHPOykpI_Lw" port="_B7x34di_EeChHPOykpI_Lw" subcomponent="_B_tVoNi_EeChHPOykpI_Lw"/>
+    </connector>
+    <connector id="_B_wY9Ni_EeChHPOykpI_Lw" documentation="provided delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...Search PriceCalculator>  &lt;PC No. 4 ProductsListView>> to  &lt;PC No. 6 ProductSearch PriceCalculator>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_B_wY9di_EeChHPOykpI_Lw" port="_B_wY89i_EeChHPOykpI_Lw"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_B_wY9ti_EeChHPOykpI_Lw" port="_B7x35Ni_EeChHPOykpI_Lw" subcomponent="_B_tVoNi_EeChHPOykpI_Lw"/>
+    </connector>
+    <connector id="_B_wY-Ni_EeChHPOykpI_Lw" documentation="provided delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...Search PriceCalculator>  &lt;PC No. 4 ProductsListView>> to  &lt;PC No. 4 ProductsListView>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_B_wY-di_EeChHPOykpI_Lw" port="_B_wY99i_EeChHPOykpI_Lw"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_B_wY-ti_EeChHPOykpI_Lw" port="_B2sjkti_EeChHPOykpI_Lw" subcomponent="_B_tVodi_EeChHPOykpI_Lw"/>
+    </connector>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_CCXoENi_EeChHPOykpI_Lw" documentation="Captures calls to system-external services." name="SoMoX System-Level Dummy Component"/>
+  <interface id="_B2jZoNi_EeChHPOykpI_Lw" documentation="de.upb.examples.reengineering.store.logic.ISearch" name="store.logic.ISearch">
+    <signatures id="_B2jZodi_EeChHPOykpI_Lw" name="searchPrice" input="_B2kAsNi_EeChHPOykpI_Lw"/>
+    <signatures id="_B2kAs9i_EeChHPOykpI_Lw" name="searchDiscount" input="_B2kAsNi_EeChHPOykpI_Lw"/>
+  </interface>
+  <interface id="_B2rVcdi_EeChHPOykpI_Lw" documentation="de.upb.examples.reengineering.store.logic.ICalculator" name="store.logic.ICalculator">
+    <signatures id="_B2rVcti_EeChHPOykpI_Lw" name="calculate" input="_B2kAsNi_EeChHPOykpI_Lw"/>
+  </interface>
+  <interface id="_B2sjkNi_EeChHPOykpI_Lw" documentation="de.upb.examples.reengineering.store.ui.IListView" name="store.ui.IListView">
+    <signatures id="_B2sjkdi_EeChHPOykpI_Lw" name="createListEntry"/>
+  </interface>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_B2kAsti_EeChHPOykpI_Lw" name="STRING"/>
+  <messagetype id="_B2kAsNi_EeChHPOykpI_Lw" name="String">
+    <parameters id="_B2kAsdi_EeChHPOykpI_Lw" name="productName" type="_B2kAsti_EeChHPOykpI_Lw"/>
+  </messagetype>
+</staticstructure:Repository>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ASCII"?>
+<staticstructure:ServiceArchitectureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:staticstructure="http://q-impress.eu/samm/staticstructure" id="_Z42moIStEeCKIMkA1XDAVg" name="SoMoX Reverse Engineered System">
+  <provided id="_Z-eGcoStEeCKIMkA1XDAVg" name="ISearch 0 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_Z44b0YStEeCKIMkA1XDAVg"/>
+  </provided>
+  <provided id="_Z-eGdoStEeCKIMkA1XDAVg" name="ICalculator 1 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_Z45p8YStEeCKIMkA1XDAVg"/>
+  </provided>
+  <provided id="_Z-eGfIStEeCKIMkA1XDAVg" name="IListView 2 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_Z46RBYStEeCKIMkA1XDAVg"/>
+  </provided>
+  <subcomponents id="_Z-eGcIStEeCKIMkA1XDAVg" name=" &lt;PC No. 12 ProductSearch CustomerSearch PriceCalculator Produc...>">
+    <realizedBy xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_Z5lmcIStEeCKIMkA1XDAVg"/>
+  </subcomponents>
+  <subcomponents id="_Z-eGeoStEeCKIMkA1XDAVg" name=" &lt;PC No. 14 ProductsListView ProductsListViewEntry>">
+    <realizedBy xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_Z5nboIStEeCKIMkA1XDAVg"/>
+  </subcomponents>
+  <subcomponents id="_Z-eGhIStEeCKIMkA1XDAVg" name="SoMoX Dummy Component Instance">
+    <realizedBy xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_Z-eGg4StEeCKIMkA1XDAVg"/>
+  </subcomponents>
+  <connector id="_Z-eGdYStEeCKIMkA1XDAVg">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_Z-eGc4StEeCKIMkA1XDAVg" subcomponent="_Z-eGcIStEeCKIMkA1XDAVg">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_Z5mNgYStEeCKIMkA1XDAVg"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_Z-eGdIStEeCKIMkA1XDAVg" port="_Z-eGcoStEeCKIMkA1XDAVg"/>
+  </connector>
+  <connector id="_Z-eGeYStEeCKIMkA1XDAVg">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_Z-eGd4StEeCKIMkA1XDAVg" subcomponent="_Z-eGcIStEeCKIMkA1XDAVg">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_Z5mNhIStEeCKIMkA1XDAVg"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_Z-eGeIStEeCKIMkA1XDAVg" port="_Z-eGdoStEeCKIMkA1XDAVg"/>
+  </connector>
+  <connector id="_Z-eGf4StEeCKIMkA1XDAVg">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_Z-eGfYStEeCKIMkA1XDAVg" subcomponent="_Z-eGeoStEeCKIMkA1XDAVg">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_Z5oCsoStEeCKIMkA1XDAVg"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_Z-eGfoStEeCKIMkA1XDAVg" port="_Z-eGfIStEeCKIMkA1XDAVg"/>
+  </connector>
+  <connector id="_Z-eGgIStEeCKIMkA1XDAVg" documentation="Assembly Connector from  &lt;PC No. 14 ProductsListView ProductsListViewEntry> to  &lt;PC No. 12 ProductSearch CustomerSearch PriceCalculator Produc...>">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_Z-eGgYStEeCKIMkA1XDAVg" subcomponent="_Z-eGeoStEeCKIMkA1XDAVg">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_Z5oCsYStEeCKIMkA1XDAVg"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_Z-eGgoStEeCKIMkA1XDAVg" subcomponent="_Z-eGcIStEeCKIMkA1XDAVg">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_Z5mNgYStEeCKIMkA1XDAVg"/>
+    </endpoints>
+  </connector>
+  <connector id="_Z-eGh4StEeCKIMkA1XDAVg" documentation="Assembly Connector from  &lt;PC No. 14 ProductsListView ProductsListViewEntry> to SoMoX Dummy Component Instance">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_Z-eGiIStEeCKIMkA1XDAVg" subcomponent="_Z-eGeoStEeCKIMkA1XDAVg">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_Z5oCsIStEeCKIMkA1XDAVg"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_Z-eGiYStEeCKIMkA1XDAVg" subcomponent="_Z-eGhIStEeCKIMkA1XDAVg">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_Z-eGhoStEeCKIMkA1XDAVg"/>
+    </endpoints>
+  </connector>
+  <service id="_Z-eGcYStEeCKIMkA1XDAVg" name=" &lt;PC No. 12 ProductSearch CustomerSearch PriceCalculator Produc...>" subcomponentInstance="_Z-eGcIStEeCKIMkA1XDAVg">
+    <container href="pathmap://SOMOX_MODELS/somox-default.samm_targetenvironment#_7wiiMHcAEd-o5LaIF71Pmg"/>
+  </service>
+  <service id="_Z-eGe4StEeCKIMkA1XDAVg" name=" &lt;PC No. 14 ProductsListView ProductsListViewEntry>" subcomponentInstance="_Z-eGeoStEeCKIMkA1XDAVg">
+    <container href="pathmap://SOMOX_MODELS/somox-default.samm_targetenvironment#_7wiiMHcAEd-o5LaIF71Pmg"/>
+  </service>
+  <service id="_Z-eGhYStEeCKIMkA1XDAVg" name="SoMoX Dummy Component Allocation Service" subcomponentInstance="_Z-eGhIStEeCKIMkA1XDAVg">
+    <container href="pathmap://SOMOX_MODELS/somox-default.samm_targetenvironment#_7wiiMHcAEd-o5LaIF71Pmg"/>
+  </service>
+</staticstructure:ServiceArchitectureModel>

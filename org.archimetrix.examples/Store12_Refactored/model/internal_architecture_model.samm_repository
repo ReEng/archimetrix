@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ASCII"?>
+<staticstructure:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:behaviour="http://q-impress.eu/samm/behaviour" xmlns:datatypes="http://q-impress.eu/samm/datatype" xmlns:staticstructure="http://q-impress.eu/samm/staticstructure" id="_t1KmUIP4EeC81IhLTZ23ZA">
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_t1ldFYP4EeC81IhLTZ23ZA" documentation=" &lt;PC No. 5 ProductsListView>" name=" &lt;PC No. 4 ProductsListView>">
+    <provided id="_t1mEIoP4EeC81IhLTZ23ZA" name="IListView 2 (prov)" interfaceType="_t1mEIIP4EeC81IhLTZ23ZA"/>
+    <required id="_t1ldGoP4EeC81IhLTZ23ZA" name="List 1 (req)" interfaceType="_t1ldFoP4EeC81IhLTZ23ZA"/>
+    <required id="_t1ldG4P4EeC81IhLTZ23ZA" name="ISearch 2 (req)" interfaceType="_t1k2AYP4EeC81IhLTZ23ZA"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_t1mEI4P4EeC81IhLTZ23ZA" operation="_t1mEIYP4EeC81IhLTZ23ZA"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_SdOIUIP5EeC81IhLTZ23ZA" documentation=" &lt;PC No. 7 ProductSearch PriceCalculator>" name=" &lt;PC No. 6 ProductSearch PriceCalculator>">
+    <provided id="_SdOvYYP5EeC81IhLTZ23ZA" name="ISearch 3 (prov)" interfaceType="_t1k2AYP4EeC81IhLTZ23ZA"/>
+    <provided id="_SdPWcIP5EeC81IhLTZ23ZA" name="ICalculator 4 (prov)" interfaceType="_t1ldEYP4EeC81IhLTZ23ZA"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_SdOvYoP5EeC81IhLTZ23ZA" operation="_t1k2AoP4EeC81IhLTZ23ZA"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_SdOvY4P5EeC81IhLTZ23ZA" operation="_t1k2BoP4EeC81IhLTZ23ZA"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_SdOvZIP5EeC81IhLTZ23ZA" operation="_t1k2B4P4EeC81IhLTZ23ZA"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_SdPWcYP5EeC81IhLTZ23ZA" operation="_t1ldEoP4EeC81IhLTZ23ZA"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_Sfupz4P5EeC81IhLTZ23ZA" documentation="Captures calls to system-external services." name="SoMoX System-Level Dummy Component">
+    <provided id="_Sfup0oP5EeC81IhLTZ23ZA" documentation="SoMoX created provided port" name="java.util.List (prov dummy)" interfaceType="_t1ldFoP4EeC81IhLTZ23ZA"/>
+  </componenttype>
+  <interface id="_t1k2AYP4EeC81IhLTZ23ZA" documentation="de.upb.examples.reengineering.store.system.logic.ISearch" name="system.logic.ISearch">
+    <signatures id="_t1k2AoP4EeC81IhLTZ23ZA" name="searchPrice" input="_t1k2A4P4EeC81IhLTZ23ZA"/>
+    <signatures id="_t1k2BoP4EeC81IhLTZ23ZA" name="searchDiscount" input="_t1k2A4P4EeC81IhLTZ23ZA"/>
+    <signatures id="_t1k2B4P4EeC81IhLTZ23ZA" name="searchProducer" input="_t1k2CIP4EeC81IhLTZ23ZA"/>
+  </interface>
+  <interface id="_t1ldEYP4EeC81IhLTZ23ZA" documentation="de.upb.examples.reengineering.store.system.logic.ICalculator" name="system.logic.ICalculator">
+    <signatures id="_t1ldEoP4EeC81IhLTZ23ZA" name="calculate" input="_t1k2A4P4EeC81IhLTZ23ZA"/>
+  </interface>
+  <interface id="_t1ldF4P4EeC81IhLTZ23ZA" documentation="java.util.Collection" name="java.util.Collection"/>
+  <interface id="_t1ldFoP4EeC81IhLTZ23ZA" documentation="java.util.List" name="java.util.List" inheritance="_t1ldF4P4EeC81IhLTZ23ZA">
+    <signatures id="_t1ldGIP4EeC81IhLTZ23ZA" name="get"/>
+    <signatures id="_t1ldGYP4EeC81IhLTZ23ZA" name="add"/>
+  </interface>
+  <interface id="_t1mEIIP4EeC81IhLTZ23ZA" documentation="de.upb.examples.reengineering.store.ui.views.IListView" name="ui.views.IListView">
+    <signatures id="_t1mEIYP4EeC81IhLTZ23ZA" name="createListEntry"/>
+  </interface>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_t1k2BYP4EeC81IhLTZ23ZA" name="STRING"/>
+  <messagetype id="_t1k2A4P4EeC81IhLTZ23ZA" name="String">
+    <parameters id="_t1k2BIP4EeC81IhLTZ23ZA" name="productName" type="_t1k2BYP4EeC81IhLTZ23ZA"/>
+  </messagetype>
+  <messagetype id="_t1k2CIP4EeC81IhLTZ23ZA" name="String">
+    <parameters id="_t1k2CYP4EeC81IhLTZ23ZA" name="currentProduct" type="_t1k2BYP4EeC81IhLTZ23ZA"/>
+  </messagetype>
+</staticstructure:Repository>

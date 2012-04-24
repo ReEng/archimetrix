@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ASCII"?>
+<staticstructure:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:behaviour="http://q-impress.eu/samm/behaviour" xmlns:datatypes="http://q-impress.eu/samm/datatype" xmlns:staticstructure="http://q-impress.eu/samm/staticstructure" id="_gBr80IRPEeC81IhLTZ23ZA">
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_gB7NYIRPEeC81IhLTZ23ZA" documentation=" &lt;PC No. 5 ProductsListView>" name=" &lt;PC No. 4 ProductsListView>">
+    <provided id="_gB7NaYRPEeC81IhLTZ23ZA" name="IListView 2 (prov)" interfaceType="_gB7NZ4RPEeC81IhLTZ23ZA"/>
+    <required id="_gB7NZYRPEeC81IhLTZ23ZA" name="List 1 (req)" interfaceType="_gB7NYYRPEeC81IhLTZ23ZA"/>
+    <required id="_gB7NZoRPEeC81IhLTZ23ZA" name="ISearch 2 (req)" interfaceType="_gB6mUIRPEeC81IhLTZ23ZA"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_gB7NaoRPEeC81IhLTZ23ZA" operation="_gB7NaIRPEeC81IhLTZ23ZA"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_gCU2AIRPEeC81IhLTZ23ZA" documentation=" &lt;PC No. 7 ProductSearch PriceCalculator>" name=" &lt;PC No. 6 ProductSearch PriceCalculator>">
+    <provided id="_gCU2AoRPEeC81IhLTZ23ZA" name="ISearch 3 (prov)" interfaceType="_gB6mUIRPEeC81IhLTZ23ZA"/>
+    <provided id="_gCU2BYRPEeC81IhLTZ23ZA" name="ICalculator 4 (prov)" interfaceType="_gB6mW4RPEeC81IhLTZ23ZA"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_gCU2A4RPEeC81IhLTZ23ZA" operation="_gB6mUYRPEeC81IhLTZ23ZA"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_gCU2BIRPEeC81IhLTZ23ZA" operation="_gB6mVYRPEeC81IhLTZ23ZA"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_gCU2BoRPEeC81IhLTZ23ZA" operation="_gB6mXIRPEeC81IhLTZ23ZA"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:CompositeComponent" id="_gEcV4IRPEeC81IhLTZ23ZA" documentation="CC No. 2 de.upb.examples.reengineering.store.logic &lt; &lt;PC No. 4 ProductsListView>  &lt;PC No. 6 ProductSearch PriceCalculator>>" name="CC No. 1 de.upb.examples.reengineering.store.logic &lt;...sListView>  &lt;PC No. 6 ProductSearch PriceCalculator>>">
+    <provided id="_gEdkA4RPEeC81IhLTZ23ZA" documentation="store.ui.IListView" name="IListView 0 (prov)" interfaceType="_gB7NZ4RPEeC81IhLTZ23ZA"/>
+    <provided id="_gEdkB4RPEeC81IhLTZ23ZA" documentation="store.logic.ISearch" name="ISearch 1 (prov)" interfaceType="_gB6mUIRPEeC81IhLTZ23ZA"/>
+    <provided id="_gEdkC4RPEeC81IhLTZ23ZA" documentation="store.logic.ICalculator" name="ICalculator 2 (prov)" interfaceType="_gB6mW4RPEeC81IhLTZ23ZA"/>
+    <required id="_gEdkD4RPEeC81IhLTZ23ZA" documentation="java.util.List" name="List 0 (req)" interfaceType="_gB7NYYRPEeC81IhLTZ23ZA"/>
+    <subcomponents id="_gEc88IRPEeC81IhLTZ23ZA" name=" &lt;PC No. 4 ProductsListView>-instance" realizedBy="_gB7NYIRPEeC81IhLTZ23ZA"/>
+    <subcomponents id="_gEc88YRPEeC81IhLTZ23ZA" name=" &lt;PC No. 6 ProductSearch PriceCalculator>-instance" realizedBy="_gCU2AIRPEeC81IhLTZ23ZA"/>
+    <connector id="_gEdkAIRPEeC81IhLTZ23ZA" documentation="Assembly Connector from  &lt;PC No. 4 ProductsListView> to  &lt;PC No. 6 ProductSearch PriceCalculator>">
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_gEdkAYRPEeC81IhLTZ23ZA" port="_gB7NZoRPEeC81IhLTZ23ZA" subcomponent="_gEc88IRPEeC81IhLTZ23ZA"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_gEdkAoRPEeC81IhLTZ23ZA" port="_gCU2AoRPEeC81IhLTZ23ZA" subcomponent="_gEc88YRPEeC81IhLTZ23ZA"/>
+    </connector>
+    <connector id="_gEdkBIRPEeC81IhLTZ23ZA" documentation="provided delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...sListView>  &lt;PC No. 6 ProductSearch PriceCalculator>> to  &lt;PC No. 4 ProductsListView>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_gEdkBYRPEeC81IhLTZ23ZA" port="_gEdkA4RPEeC81IhLTZ23ZA"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_gEdkBoRPEeC81IhLTZ23ZA" port="_gB7NaYRPEeC81IhLTZ23ZA" subcomponent="_gEc88IRPEeC81IhLTZ23ZA"/>
+    </connector>
+    <connector id="_gEdkCIRPEeC81IhLTZ23ZA" documentation="provided delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...sListView>  &lt;PC No. 6 ProductSearch PriceCalculator>> to  &lt;PC No. 6 ProductSearch PriceCalculator>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_gEdkCYRPEeC81IhLTZ23ZA" port="_gEdkB4RPEeC81IhLTZ23ZA"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_gEdkCoRPEeC81IhLTZ23ZA" port="_gCU2AoRPEeC81IhLTZ23ZA" subcomponent="_gEc88YRPEeC81IhLTZ23ZA"/>
+    </connector>
+    <connector id="_gEdkDIRPEeC81IhLTZ23ZA" documentation="provided delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...sListView>  &lt;PC No. 6 ProductSearch PriceCalculator>> to  &lt;PC No. 6 ProductSearch PriceCalculator>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_gEdkDYRPEeC81IhLTZ23ZA" port="_gEdkC4RPEeC81IhLTZ23ZA"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_gEdkDoRPEeC81IhLTZ23ZA" port="_gCU2BYRPEeC81IhLTZ23ZA" subcomponent="_gEc88YRPEeC81IhLTZ23ZA"/>
+    </connector>
+    <connector id="_gEdkEIRPEeC81IhLTZ23ZA" documentation="required delegation connector CC No. 1 de.upb.examples.reengineering.store.logic &lt;...sListView>  &lt;PC No. 6 ProductSearch PriceCalculator>> to  &lt;PC No. 4 ProductsListView>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_gEdkEYRPEeC81IhLTZ23ZA" port="_gEdkD4RPEeC81IhLTZ23ZA"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_gEdkEoRPEeC81IhLTZ23ZA" port="_gB7NZYRPEeC81IhLTZ23ZA" subcomponent="_gEc88IRPEeC81IhLTZ23ZA"/>
+    </connector>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_gEupwIRPEeC81IhLTZ23ZA" documentation="Captures calls to system-external services." name="SoMoX System-Level Dummy Component">
+    <provided id="_gEupw4RPEeC81IhLTZ23ZA" documentation="SoMoX created provided port" name="java.util.List (prov dummy)" interfaceType="_gB7NYYRPEeC81IhLTZ23ZA"/>
+  </componenttype>
+  <interface id="_gB6mUIRPEeC81IhLTZ23ZA" documentation="de.upb.examples.reengineering.store.logic.ISearch" name="store.logic.ISearch">
+    <signatures id="_gB6mUYRPEeC81IhLTZ23ZA" name="searchPrice" input="_gB6mUoRPEeC81IhLTZ23ZA"/>
+    <signatures id="_gB6mVYRPEeC81IhLTZ23ZA" name="searchDiscount" input="_gB6mUoRPEeC81IhLTZ23ZA"/>
+  </interface>
+  <interface id="_gB6mW4RPEeC81IhLTZ23ZA" documentation="de.upb.examples.reengineering.store.logic.ICalculator" name="store.logic.ICalculator">
+    <signatures id="_gB6mXIRPEeC81IhLTZ23ZA" name="calculate" input="_gB6mUoRPEeC81IhLTZ23ZA"/>
+  </interface>
+  <interface id="_gB7NYoRPEeC81IhLTZ23ZA" documentation="java.util.Collection" name="java.util.Collection"/>
+  <interface id="_gB7NYYRPEeC81IhLTZ23ZA" documentation="java.util.List" name="java.util.List" inheritance="_gB7NYoRPEeC81IhLTZ23ZA">
+    <signatures id="_gB7NY4RPEeC81IhLTZ23ZA" name="get"/>
+    <signatures id="_gB7NZIRPEeC81IhLTZ23ZA" name="add"/>
+  </interface>
+  <interface id="_gB7NZ4RPEeC81IhLTZ23ZA" documentation="de.upb.examples.reengineering.store.ui.IListView" name="store.ui.IListView">
+    <signatures id="_gB7NaIRPEeC81IhLTZ23ZA" name="createListEntry"/>
+  </interface>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_gB6mVIRPEeC81IhLTZ23ZA" name="STRING"/>
+  <messagetype id="_gB6mUoRPEeC81IhLTZ23ZA" name="String">
+    <parameters id="_gB6mU4RPEeC81IhLTZ23ZA" name="productName" type="_gB6mVIRPEeC81IhLTZ23ZA"/>
+  </messagetype>
+</staticstructure:Repository>

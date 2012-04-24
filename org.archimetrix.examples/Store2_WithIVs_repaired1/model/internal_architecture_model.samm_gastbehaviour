@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="ASCII"?>
+<qimpressgast:GASTBehaviourRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:qimpressgast="http://q-impress.eu/qimpressgast">
+  <gastbehaviour>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tEYfYId2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tEiQaYd2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1IwtYd2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tEnI54d2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1YoYId2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tGKoFId2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tG-gYYd2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tHKGkYd2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tHPmI4d2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tHQ0RYd2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1XaOod2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tHQ0R4d2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQdMhId2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1Bb84d2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx0Yd2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1Bb9Yd2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx0od2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1Bb-4d2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx04d2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1Bb_Yd2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx1Id2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1BcA4d2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx1Yd2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1BcBYd2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx1od2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1BcC4d2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx14d2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1CDCId2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx2Id2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1CDCod2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx2Yd2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1CDFYd2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx2od2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1CqFYd2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx24d2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1CqG4d2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx3Id2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1CqKId2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx3Yd2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1CqKod2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx3od2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1DRJod2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx34d2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1DRN4d2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx4Id2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1D4Nod2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx4Yd2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1D4QId2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx4od2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1EfQYd2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx44d2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1EfWId2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx5Id2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1FGYYd2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx5Yd2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1FtZod2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQzx5od2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1FtZod2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQ0Y4Id2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1A09Id2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQ0Y4od2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQ1nBId2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M0yLYId2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQ1nBod2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+  <gastbehaviour>
+    <blockstatement href="../Store2.gast#_M1L0AYd2EeC4Y4PFAoVBqQ"/>
+    <gastbehaviourstub href="internal_architecture_model.samm_repository#_tQ1nCId2EeC4Y4PFAoVBqQ"/>
+  </gastbehaviour>
+</qimpressgast:GASTBehaviourRepository>
