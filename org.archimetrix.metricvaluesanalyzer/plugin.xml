@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+ <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.archimetrix.menu?after=org.archimetrix.architecturepreview.ui.separator">
+         <command
+               commandId="org.archimetrix.metricvaluesanalyzer.start"
+               label="(Metric Values Analyzer)"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.archimetrix.metricvaluesanalyzer.StartingHandler"
+            id="org.archimetrix.metricvaluesanalyzer.start"
+            name="Metric Values Analyzer">
+      </command>
+   </extension>
+
+</plugin>

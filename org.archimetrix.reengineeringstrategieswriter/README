@@ -1,0 +1,6 @@
+This project helps to transform story diagrams created with the editor from storydriven.org into the input that Archimetrix expects.
+More precisely, an ecore file that contains a package and a class is created and single story diagrams are added to operations of this class.
+Furthermore, the required parameters and parameter expressions are created.
+Use config.properties to configure this process.
+
+This project will not be needed anymore if another story diagram editor is used that is able to create an adequate input for Archimetrix.

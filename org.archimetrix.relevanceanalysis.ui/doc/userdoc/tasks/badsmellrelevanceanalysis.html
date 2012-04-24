@@ -1,0 +1,35 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Bad Smell Relevance Analysis</title>
+</head>
+
+<body>
+<h1>Bad Smell Relevance Analysis</h1>
+
+<p>The bad smell relevance analysis can be started via the menu bar: <b>Archimetrix -> Reengineering of Design Deficiencies -> Find Relevant Bad Smells</b>.
+	The opened wizard requires the file with the saved bad smell occurrences (*.psa) and the metric values model as input.
+	
+	Here again, depending on the size of the system under analysis, the bad smell relevance analysis takes some time to load the required model elements.
+	After that, the <em>Relevant Bad Smells View</em> opens.
+	</p>
+
+<h2>The Relevant Bad Smells View</h2>
+<p>The Relevant Bad Smells View shows the analysis results in tabular form.
+Each line presents one bad smell occurrence. 
+The first column <em>Bad Smell</em> shows the name of the bad smell specification.
+The second column <em>Roles</em> shows the roles of the pattern specification and the names of the objects that play theses roles in the concrete pattern candidate.
+The next columns show the relevance values for the different strategies that were explained in [Pla11] in Section 4.2.3:
+<em>Relevance CL</em> presents the value for the relevance strategy <em>Class Locations</em>; 
+<em>Relevance NEA</em> shows the value for the relevance strategy <em>NumberOfExternalAccesses</em>;
+the value for the <em>Higher Interface Adherence</em> relevance strategy is presented in the column <em>Relevance HIA</em>;
+<em>Relevance DCC</em> shows the value for the <em>Communication via Data Classes</em> relevance strategy.
+The last two columns are the same as in the Relevant Components View.
+They show the overall relevance and if a candidate is pareto optimal.
+Pareto optimal candidates are highlighted as well as the candidate with the highest overall relevance.
+</p>
+</body>
+</html>

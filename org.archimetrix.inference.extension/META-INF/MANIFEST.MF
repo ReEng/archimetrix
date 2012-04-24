@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Archimetrix Inference
+Bundle-SymbolicName: org.archimetrix.inference.extension;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: University of Paderborn
+Require-Bundle: org.eclipse.core.runtime,
+ org.fujaba.commons;bundle-version="1.0.0",
+ org.reclipse.structure.inference;bundle-version="1.0.0",
+ org.reclipse.structure.generator;bundle-version="1.0.0",
+ org.reclipse.structure.specification;bundle-version="1.0.0",
+ eu.qimpress.samm;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: org.archimetrix.inference

@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Archimetrix Architecture Preview
+Bundle-SymbolicName: org.archimetrix.architecturepreview
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.archimetrix.architecturepreview.ArchitecturePreviewPlugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ eu.qimpress.sourcecodedecorator;bundle-version="1.0.0",
+ org.storydriven.storydiagrams;bundle-version="1.0.0",
+ org.reclipse.structure.inference.annotations;bundle-version="1.0.0",
+ org.eclipse.emf;bundle-version="2.6.0",
+ org.reclipse.interpreter.adapter.extension;bundle-version="1.0.0",
+ eu.qimpress.gast;bundle-version="1.0.0",
+ org.somox.core;bundle-version="1.0.0",
+ org.somox.filter;bundle-version="1.0.0",
+ org.somox.metricvaluesstorage;bundle-version="1.0.0",
+ org.somox.analyzer.sissymodelanalyzer;bundle-version="1.0.0",
+ org.somox.ui;bundle-version="1.0.0",
+ de.uka.ipd.sdq.workflow.launchconfig;bundle-version="1.1.0",
+ org.reclipse.structure.specification;bundle-version="1.0.0",
+ org.fujaba.commons;bundle-version="1.0.0",
+ org.eclipse.core.resources;bundle-version="3.6.0",
+ de.mdelab.sdm.interpreter.ocl;bundle-version="1.0.0",
+ de.mdelab.sdm.interpreter.common;bundle-version="1.0.0",
+ de.mdelab.sdm.interpreter.common.eclipse;bundle-version="1.0.0",
+ org.storydriven.modeling.interpreter.adapter;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: org.archimetrix.architecturepreview,
+ org.archimetrix.architecturepreview.starters
+Bundle-Vendor: University of Paderborn
