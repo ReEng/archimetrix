@@ -2,25 +2,23 @@
 <feature
       id="org.archimetrix.feature"
       label="Archimetrix Feature"
-      version="1.1.0.qualifier"
-      provider-name="University of Paderborn">
+      version="1.2.0.qualifier"
+      provider-name="Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn">
 
-   <description>
-      This feature contains all relevant plug-ins for the pattern based architecture analysis. It also features the structural analysis part of Reclipse.
+   <description url="www.fujaba.de/archimetrix">
+      This feature contains all relevant plug-ins for the pattern based
+architecture analysis. It also features the structural analysis
+part of Reclipse.
    </description>
 
    <requires>
       <import plugin="org.eclipse.ui"/>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="eu.qimpress.sourcecodedecorator" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.storydriven.modeling" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.reclipse.structure.inference.annotations" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf" version="2.6.0" match="greaterOrEqual"/>
       <import plugin="org.reclipse.interpreter.adapter.extension" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="de.mdelab.sdm.interpreter.common" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="de.mdelab.sdm.interpreter.common.eclipse" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="eu.qimpress.gast" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.storydriven.modeling.interpreter.adapter" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.somox.core" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.somox.filter" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.somox.metricvaluesstorage" version="1.0.0" match="greaterOrEqual"/>
@@ -30,6 +28,9 @@
       <import plugin="org.reclipse.structure.specification" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.fujaba.commons" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.resources" version="3.6.0" match="greaterOrEqual"/>
+      <import plugin="de.mdelab.sdm.interpreter.common" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="de.mdelab.sdm.interpreter.common.eclipse" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.storydriven.modeling.interpreter.adapter" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.archimetrix.relevanceanalysis" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.archimetrix.relevanceanalysis.ui" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.archimetrix.architecturepreview" version="1.0.0" match="greaterOrEqual"/>
@@ -51,6 +52,9 @@
       <import plugin="org.eclipse.emf.common" version="2.6.0" match="greaterOrEqual"/>
       <import plugin="de.fzi.gast" version="1.0.0" match="greaterOrEqual"/>
       <import feature="org.reclipse.models.gast.feature" version="1.1.0.qualifier"/>
+      <import plugin="org.storydriven.storydiagrams" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="de.mdelab.sdm.interpreter.ocl" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.storydriven.core" version="1.0.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
