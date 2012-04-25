@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.archimetrix.feature"
+      label="Archimetrix Feature"
+      version="1.1.0.qualifier"
+      provider-name="University of Paderborn">
+
+   <description>
+      This feature contains all relevant plug-ins for the pattern based architecture analysis. It also features the structural analysis part of Reclipse.
+   </description>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="eu.qimpress.sourcecodedecorator" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.storydriven.modeling" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.reclipse.structure.inference.annotations" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf" version="2.6.0" match="greaterOrEqual"/>
+      <import plugin="org.reclipse.interpreter.adapter.extension" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="de.mdelab.sdm.interpreter.common" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="de.mdelab.sdm.interpreter.common.eclipse" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="eu.qimpress.gast" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.storydriven.modeling.interpreter.adapter" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.somox.core" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.somox.filter" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.somox.metricvaluesstorage" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.somox.analyzer.sissymodelanalyzer" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.somox.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="de.uka.ipd.sdq.workflow.launchconfig" version="1.1.0" match="greaterOrEqual"/>
+      <import plugin="org.reclipse.structure.specification" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.fujaba.commons" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.resources" version="3.6.0" match="greaterOrEqual"/>
+      <import plugin="org.archimetrix.relevanceanalysis" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.archimetrix.relevanceanalysis.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.archimetrix.architecturepreview" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.archimetrix.commons" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.ecore" version="2.6.1" match="greaterOrEqual"/>
+      <import plugin="org.reclipse.structure.inference" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.reclipse.structure.generator" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="eu.qimpress.samm" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.archimetrix.inference.extension" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.reclipse.structure.inference.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.reclipse.structure.inference.ui.matching" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="eu.qimpress.samm.edit" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="eu.qimpress.samm.editor" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="eu.qimpress.sourcecodedecorator.edit" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="eu.qimpress.sourcecodedecorator.editor" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.reclipse.generator" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.reclipse.generator.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.reclipse.structure.generator.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.common" version="2.6.0" match="greaterOrEqual"/>
+      <import plugin="de.fzi.gast" version="1.0.0" match="greaterOrEqual"/>
+      <import feature="org.reclipse.models.gast.feature" version="1.1.0.qualifier"/>
+   </requires>
+
+   <plugin
+         id="org.archimetrix.architecturepreview"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.archimetrix.architecturepreview.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.archimetrix.commons"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.archimetrix.inference.extension"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.archimetrix.inference.extension.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.archimetrix.metricvaluesanalyzer"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.archimetrix.reengineeringstrategieswriter"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.archimetrix.relevanceanalysis"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.archimetrix.relevanceanalysis.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
