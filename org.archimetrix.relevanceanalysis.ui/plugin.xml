@@ -21,32 +21,22 @@
       <menuContribution
             allPopups="false"
             locationURI="menu:org.archimetrix.ui.main.menu">
-         <menu
-               icon="icons/reengineering.png"
-               id="org.archimetrix.menu"
-               label="Reengineering of Design Deficiencies"
-               tooltip="Tasks that help with the reengineering of design deficiencies in component-based software architectures">
-            <command
-                  commandId="org.archimetrix.relevanceanalysis.ui.relevantcomponents.start"
-                  icon="icons/components.png"
-                  id="org.archimetrix.relevanceanalysis.findrelevantcomponents.command"
-                  label="Find Relevant Components"
-                  style="push"
-                  tooltip="Identify components that are assumed to contain design deficiencies">
-            </command>
-            <command
-                  commandId="org.archimetrix.relevanceanalysis.ui.relevantbadsmells.start"
-                  icon="icons/badSmells.png"
-                  id="org.archimetrix.relevanceanalysis.findrelevantbadsmells.command"
-                  label="Find Relevant Bad Smells"
-                  style="push"
-                  tooltip="Identify bad smell occurrences that are recommended to be removed">
-            </command>
-         </menu>
-         <separator
-               name="org.archimetrix.relevanceanalysis.ui.separator"
-               visible="true">
-         </separator>
+         <command
+               commandId="org.archimetrix.relevanceanalysis.ui.relevantcomponents.start"
+               icon="icons/components.png"
+               id="org.archimetrix.relevanceanalysis.findrelevantcomponents.command"
+               label="Find Relevant Components"
+               style="push"
+               tooltip="Identify components that are assumed to contain design deficiencies">
+         </command>
+         <command
+               commandId="org.archimetrix.relevanceanalysis.ui.relevantbadsmells.start"
+               icon="icons/badSmells.png"
+               id="org.archimetrix.relevanceanalysis.findrelevantbadsmells.command"
+               label="Find Relevant Bad Smells"
+               style="push"
+               tooltip="Identify bad smell occurrences that are recommended to be removed">
+         </command>
       </menuContribution>
       <menuContribution
             allPopups="false"
@@ -99,6 +89,24 @@
             name="Relevant Components View"
             restorable="true">
       </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.archimetrix.inference.extension.ui.perspectives.ArchimetrixPerspective">
+         <view
+               id="org.archimetrix.relevanceanalysis.ui.relevantComponentsView"
+               minimized="false"
+               relationship="bottom"
+               relative="org.eclipse.ui.editorss">
+         </view>
+         <view
+               id="org.archimetrix.relevanceanalysis.ui.relevantBadSmellsView"
+               minimized="false"
+               relationship="stack"
+               relative="org.archimetrix.relevanceanalysis.ui.relevantComponentsView">
+         </view>
+      </perspectiveExtension>
    </extension>
 
 </plugin>

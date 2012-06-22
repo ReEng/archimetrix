@@ -60,7 +60,22 @@
          <menu
                id="org.archimetrix.ui.main.menu"
                label="Archimetrix">
+               <visibleWhen checkEnabled="false">
+            		<with variable="activeWorkbenchWindow.activePerspective">
+                		<equals value="org.archimetrix.inference.extension.ui.perspectives.ArchimetrixPerspective"/>
+            		</with>
+         		</visibleWhen>
          </menu>
       </menuContribution>
+   </extension>
+   
+      <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.archimetrix.inference.extension.ui.perspectives.ArchimetrixPerspective"
+            icon="icons/releng_gears.gif"
+            id="org.archimetrix.inference.extension.ui.perspectives.ArchimetrixPerspective"
+            name="Archimetrix Perspective">
+      </perspective>
    </extension>
 </plugin>

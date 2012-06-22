@@ -5,7 +5,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="menu:org.archimetrix.menu?after=org.archimetrix.relevanceanalysis.findrelevantbadsmells.command">
+            locationURI="menu:org.archimetrix.ui.main.menu?after=org.archimetrix.relevanceanalysis.findrelevantbadsmells.command">
          <command
                commandId="architecturepreview.start"
                icon="icons/architecturepreview.png"
@@ -13,10 +13,6 @@
                label="View Architecture Preview"
                style="push">
          </command>
-         <separator
-               name="org.archimetrix.architecturepreview.ui.separator"
-               visible="true">
-         </separator>
       </menuContribution>
       <menuContribution
             allPopups="true"
