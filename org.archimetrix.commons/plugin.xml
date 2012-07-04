@@ -67,6 +67,22 @@
          		</visibleWhen>
          </menu>
       </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.archimetrix.ui.main.menu">
+         <command
+               commandId="org.archimetrix.commons.StartGASTExtractionCommand"
+               id="org.archimetrix.commons.StartGASTExtractionMenuContribution"
+               label="Extract GAST"
+               style="push">
+         </command>
+         <command
+               commandId="org.archimetrix.commons.StartArchitectureReconstructionCommand"
+               id="org.archimetrix.commons.StartArchitectureReconstructionMenuContribution"
+               label="Start Architecture Reconstruction"
+               style="push">
+         </command>
+      </menuContribution>
    </extension>
    
       <extension
@@ -78,4 +94,17 @@
             name="Archimetrix Perspective">
       </perspective>
    </extension>
+      <extension
+            point="org.eclipse.ui.commands">
+         <command
+               defaultHandler="org.archimetrix.commons.handlers.OpenLaunchDialogHandler"
+               id="org.archimetrix.commons.StartArchitectureReconstructionCommand"
+               name="Start Architecture Reconstruction">
+         </command>
+         <command
+               defaultHandler="org.archimetrix.commons.handlers.OpenLaunchDialogHandler"
+               id="org.archimetrix.commons.StartGASTExtractionCommand"
+               name="Extract GAST">
+         </command>
+      </extension>
 </plugin>
