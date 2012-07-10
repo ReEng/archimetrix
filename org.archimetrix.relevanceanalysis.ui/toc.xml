@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toc label="Archimetrix" topic="doc/index.html">
+   <topic href="doc/index.html" label="Archimetrix">     
+      <topic label="Archimetrix User Guide">
+         <anchor id="org.archimetrix.help.userGuide"/>
+      </topic>
+      <topic label="Archimetrix Developer Guide">
+         <anchor id="org.archimetrix.help.developerGuide"/>
+      </topic>
+      <anchor id="org.archimetrix.help.otherContent"/>
+   </topic>
+</toc>

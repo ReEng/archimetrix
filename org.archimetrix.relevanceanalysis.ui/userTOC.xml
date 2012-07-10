@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Archimetrix User Guide" link_to="toc.xml#org.archimetrix.help.userGuide" topic="doc/userdoc/toc.html">
+   <topic href="doc/userdoc/gettingstarted.html" label="Getting Started">
+   </topic>
+   <topic label="Tasks">
+      <anchor id="org.archimetrix.help.user.tasks"/>
+      <topic href="doc/userdoc/tasks/componentrelevanceanalysis.html" label="Component Relevance Analysis">
+      </topic>
+      <topic href="doc/userdoc/tasks/badsmellrelevanceanalysis.html" label="Bad Smell Relevance Analysis">
+      </topic>
+      <topic href="doc/userdoc/tasks/architecturepreview.html" label="Architecture Preview">
+      </topic>
+   </topic>
+   <topic href="doc/userdoc/problems.html" label="Known Bugs">
+   </topic>
+</toc>
