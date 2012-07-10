@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin> 
+ <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.archimetrix.ui.main.menu?after=org.archimetrix.relevanceanalysis.findrelevantbadsmells.command">
+         <command
+               commandId="architecturepreview.start"
+               icon="icons/architecturepreview.png"
+               id="org.archimetrix.architecturepreview.menu"
+               label="View Architecture Preview"
+               style="push">
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:org.archimetrix.relevanceanalysis.ui.relevantBadSmellsView?after=additions">
+         <command
+               commandId="architecturepreview.startFromRelevantBadSmellsView"
+               icon="icons/architecturepreview.png"
+               label="View Architecture Preview for this Bad Smell Occurrence"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.archimetrix.architecturepreview.ui.handler.ArchitecturePreviewStartingHandler"
+            id="architecturepreview.start"
+            name="Architecture Preview">
+      </command>
+      <command
+            defaultHandler="org.archimetrix.architecturepreview.ui.handler.ArchitecturePreviewStartingFromRelevantBadSmellsViewHandler"
+            id="architecturepreview.startFromRelevantBadSmellsView"
+            name="Architecture Preview">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="org.archimetrix.views"
+            class="org.archimetrix.architecturepreview.ui.views.ArchitecturePreviewView"
+            icon="icons/architecturepreview.png"
+            id="org.archimetrix.architecturepreview.ui.architecturepreviewview"
+            name="Architecture Preview View"
+            restorable="true">
+      </view>
+   </extension>
+</plugin>
