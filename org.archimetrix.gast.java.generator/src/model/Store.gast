@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:accesses="http://www.fzi.de/gast/accesses" xmlns:core="http://www.fzi.de/gast/core" xmlns:statements="http://www.fzi.de/gast/statements" xmlns:types="http://www.fzi.de/gast/types" id="_ptHnILxdEeGEKb8B5vUJ9Q">
+  <packages id="_pyuf4bxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="268" simpleName="java">
+    <subPackages id="_pytRwLxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="38" simpleName="util">
+      <classes id="_p0A5VrxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="34" visibility="VISIBILITYPUBLIC" simpleName="ArrayList" referenceType="true">
+        <position assembly="_py4Q4bxdEeGEKb8B5vUJ9Q"/>
+        <self id="_p2lFILxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="35" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_p2lFIbxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="36" accessedTarget="_p0A5VrxdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_p0BgYLxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="40" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="List" referenceType="true" interface="true">
+        <position assembly="_py4Q6bxdEeGEKb8B5vUJ9Q"/>
+        <self id="_p2keHrxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="41" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_p2keH7xdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="42" accessedTarget="_p0BgYLxdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes xsi:type="types:GenericClass" id="_p0CHcLxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="71" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="List" referenceType="true" interface="true">
+        <position assembly="_py4Q67xdEeGEKb8B5vUJ9Q"/>
+        <methods id="_p0s10LxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="230" simpleName="get" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1" assembly="_py4Q67xdEeGEKb8B5vUJ9Q"/>
+          <returnTypeDeclaration id="_p0s10bxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="231" accessedTarget="_p0CHcrxdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1" assembly="_py4Q67xdEeGEKb8B5vUJ9Q"/>
+          </returnTypeDeclaration>
+        </methods>
+        <methods id="_p0s10rxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="250" simpleName="add" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1" assembly="_py4Q67xdEeGEKb8B5vUJ9Q"/>
+          <returnTypeDeclaration id="_p0tc4LxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="251" accessedTarget="_p0A5VbxdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1" assembly="_py4Q67xdEeGEKb8B5vUJ9Q"/>
+          </returnTypeDeclaration>
+        </methods>
+        <inheritanceTypeAccesses id="_p4kpObxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="176" accessedTarget="_p0CHc7xdEeGEKb8B5vUJ9Q">
+          <position assembly="_py4Q67xdEeGEKb8B5vUJ9Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_p4kpOrxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="185" accessedTarget="_p0CHdLxdEeGEKb8B5vUJ9Q">
+          <position assembly="_py4Q67xdEeGEKb8B5vUJ9Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_p2keELxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="72" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_p2keEbxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="73" accessedTarget="_p0CHcLxdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+        <typeParameters id="_p0CHcbxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="74" visibility="VISIBILITYPUBLIC" simpleName="E" referenceType="true">
+          <position assembly="_py4Q6rxdEeGEKb8B5vUJ9Q"/>
+          <self id="_p2j3DLxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="75" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            <typeDeclaration id="_p2j3DbxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="76" accessedTarget="_p0CHcbxdEeGEKb8B5vUJ9Q">
+              <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            </typeDeclaration>
+          </self>
+        </typeParameters>
+      </classes>
+      <classes xsi:type="types:GenericClass" id="_p0CHdLxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="177" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="Collection" referenceType="true" interface="true">
+        <position assembly="_py439LxdEeGEKb8B5vUJ9Q"/>
+        <self id="_p2io7bxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="178" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_p2jP8LxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="179" accessedTarget="_p0CHdLxdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+        <typeParameters id="_p0CHdbxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="180" visibility="VISIBILITYPUBLIC" simpleName="E" referenceType="true">
+          <position assembly="_py4387xdEeGEKb8B5vUJ9Q"/>
+          <self id="_p2io67xdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="181" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            <typeDeclaration id="_p2io7LxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="182" accessedTarget="_p0CHdbxdEeGEKb8B5vUJ9Q">
+              <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            </typeDeclaration>
+          </self>
+        </typeParameters>
+      </classes>
+      <classes xsi:type="types:GenericClass" id="_p0Cug7xdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="259" visibility="VISIBILITYPUBLIC" simpleName="ArrayList" referenceType="true">
+        <position assembly="_py5fAbxdEeGEKb8B5vUJ9Q"/>
+        <constructors id="_p0tc4bxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="258" simpleName="ArrayList" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1" assembly="_py5fAbxdEeGEKb8B5vUJ9Q"/>
+        </constructors>
+        <self id="_p2io4bxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="260" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_p2io4rxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="261" accessedTarget="_p0Cug7xdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+        <typeParameters id="_p0CuhLxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="262" visibility="VISIBILITYPUBLIC" simpleName="E" referenceType="true">
+          <position assembly="_py5fALxdEeGEKb8B5vUJ9Q"/>
+          <self id="_p2iB0LxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="263" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            <typeDeclaration id="_p2io4LxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="264" accessedTarget="_p0CuhLxdEeGEKb8B5vUJ9Q">
+              <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            </typeDeclaration>
+          </self>
+        </typeParameters>
+      </classes>
+    </subPackages>
+    <subPackages id="_pyt40rxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="84" simpleName="lang">
+      <classes id="_p0CHcrxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="80" visibility="VISIBILITYPUBLIC" final="true" simpleName="String" referenceType="true">
+        <position assembly="_py438LxdEeGEKb8B5vUJ9Q"/>
+        <inheritanceTypeAccesses id="_p4lQQbxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="193" accessedTarget="_p0CHc7xdEeGEKb8B5vUJ9Q">
+          <position assembly="_py438LxdEeGEKb8B5vUJ9Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_p4lQQrxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="199" accessedTarget="_p0CHdrxdEeGEKb8B5vUJ9Q">
+          <position assembly="_py438LxdEeGEKb8B5vUJ9Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_p4lQQ7xdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="208" accessedTarget="_p0CugLxdEeGEKb8B5vUJ9Q">
+          <position assembly="_py438LxdEeGEKb8B5vUJ9Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_p4lQRLxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="213" accessedTarget="_p0CugrxdEeGEKb8B5vUJ9Q">
+          <position assembly="_py438LxdEeGEKb8B5vUJ9Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_p2j3CrxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="81" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_p2j3C7xdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="82" accessedTarget="_p0CHcrxdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_p0CHc7xdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="171" visibility="VISIBILITYPUBLIC" simpleName="Object" referenceType="true">
+        <position assembly="_py438rxdEeGEKb8B5vUJ9Q"/>
+        <self id="_p2jP8bxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="172" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_p2jP8rxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="173" accessedTarget="_p0CHc7xdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes xsi:type="types:GenericClass" id="_p0CugLxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="200" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="Comparable" referenceType="true" interface="true">
+        <position assembly="_py43-LxdEeGEKb8B5vUJ9Q"/>
+        <self id="_p2io57xdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="201" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_p2io6LxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="202" accessedTarget="_p0CugLxdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+        <typeParameters id="_p0CugbxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="203" visibility="VISIBILITYPUBLIC" simpleName="T" referenceType="true">
+          <position assembly="_py4397xdEeGEKb8B5vUJ9Q"/>
+          <self id="_p2io5bxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="204" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            <typeDeclaration id="_p2io5rxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="205" accessedTarget="_p0CugbxdEeGEKb8B5vUJ9Q">
+              <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            </typeDeclaration>
+          </self>
+        </typeParameters>
+      </classes>
+      <classes id="_p0CugrxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="209" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="CharSequence" referenceType="true" interface="true">
+        <position assembly="_py43-bxdEeGEKb8B5vUJ9Q"/>
+        <self id="_p2io47xdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="210" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_p2io5LxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="211" accessedTarget="_p0CugrxdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+    </subPackages>
+    <subPackages id="_pyuf4LxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="198" simpleName="io">
+      <classes id="_p0CHdrxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="194" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="Serializable" referenceType="true" interface="true">
+        <position assembly="_py439bxdEeGEKb8B5vUJ9Q"/>
+        <self id="_p2io6bxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="195" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_p2io6rxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="196" accessedTarget="_p0CHdrxdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+    </subPackages>
+  </packages>
+  <packages id="_pyuf4rxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="269" simpleName="de.upb.examples.reengineering.store">
+    <subPackages id="_pyt40LxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="48" simpleName="logic">
+      <classes id="_p0BgYbxdEeGEKb8B5vUJ9Q" sissyId="45" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="ISearch" referenceType="true" interface="true">
+        <position endColumn="1" startColumn="1" endLine="7" startLine="4" sourceFile="_py4Q4LxdEeGEKb8B5vUJ9Q"/>
+        <methods id="_p0okYLxdEeGEKb8B5vUJ9Q" sissyId="87" simpleName="searchPrice" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+          <position endColumn="47" startColumn="4" endLine="6" startLine="6" sourceFile="_py4Q4LxdEeGEKb8B5vUJ9Q"/>
+          <returnTypeDeclaration id="_p0okYbxdEeGEKb8B5vUJ9Q" sissyId="88" accessedTarget="_p0A5VLxdEeGEKb8B5vUJ9Q">
+            <position endColumn="47" startColumn="4" endLine="6" startLine="6" sourceFile="_py4Q4LxdEeGEKb8B5vUJ9Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_p2mTRLxdEeGEKb8B5vUJ9Q" sissyId="90" simpleName="productName" const="false">
+            <position endColumn="47" startColumn="30" endLine="6" startLine="6" sourceFile="_py4Q4LxdEeGEKb8B5vUJ9Q"/>
+            <typeDeclaration id="_p2mTRbxdEeGEKb8B5vUJ9Q" sissyId="89" accessedTarget="_p0CHcrxdEeGEKb8B5vUJ9Q">
+              <position endColumn="47" startColumn="30" endLine="6" startLine="6" sourceFile="_py4Q4LxdEeGEKb8B5vUJ9Q"/>
+            </typeDeclaration>
+          </formalParameters>
+        </methods>
+        <inheritanceTypeAccesses id="_p4kpMLxdEeGEKb8B5vUJ9Q" sissyId="175" accessedTarget="_p0CHc7xdEeGEKb8B5vUJ9Q">
+          <position endColumn="1" startColumn="1" endLine="7" startLine="4" sourceFile="_py4Q4LxdEeGEKb8B5vUJ9Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_p2keHLxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="46" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_p2keHbxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="47" accessedTarget="_p0BgYbxdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_p0BgYrxdEeGEKb8B5vUJ9Q" sissyId="50" visibility="VISIBILITYPUBLIC" simpleName="ProductSearch" referenceType="true">
+        <position endColumn="1" startColumn="1" endLine="25" startLine="4" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+        <constructors id="_p0sOwLxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="166" simpleName="ProductSearch" visibility="VISIBILITYPUBLIC" static="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+        </constructors>
+        <methods id="_p0qZkrxdEeGEKb8B5vUJ9Q" sissyId="143" simpleName="searchPrice" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" overriddenMember="_p0okYLxdEeGEKb8B5vUJ9Q" virtual="true">
+          <position endColumn="4" startColumn="4" endLine="10" startLine="7" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+          <returnTypeDeclaration id="_p0qZk7xdEeGEKb8B5vUJ9Q" sissyId="146" accessedTarget="_p0A5VLxdEeGEKb8B5vUJ9Q">
+            <position endColumn="4" startColumn="4" endLine="10" startLine="7" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_p2lsOrxdEeGEKb8B5vUJ9Q" sissyId="148" simpleName="productName" const="false">
+            <position endColumn="47" startColumn="30" endLine="7" startLine="7" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+            <typeDeclaration id="_p2lsO7xdEeGEKb8B5vUJ9Q" sissyId="147" accessedTarget="_p0CHcrxdEeGEKb8B5vUJ9Q">
+              <position endColumn="47" startColumn="30" endLine="7" startLine="7" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <body id="_p1dDwbxdEeGEKb8B5vUJ9Q" sissyId="144">
+            <position endColumn="4" startColumn="4" endLine="10" startLine="8" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+            <statements xsi:type="statements:JumpStatement" id="_p1dDwrxdEeGEKb8B5vUJ9Q" sissyId="145" kind="RETURN">
+              <position endColumn="15" startColumn="7" endLine="9" startLine="9" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+            </statements>
+          </body>
+        </methods>
+        <methods id="_p0rAoLxdEeGEKb8B5vUJ9Q" sissyId="149" simpleName="searchDiscount" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="4" startColumn="4" endLine="16" startLine="13" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+          <returnTypeDeclaration id="_p0rAobxdEeGEKb8B5vUJ9Q" sissyId="152" accessedTarget="_p0A5VLxdEeGEKb8B5vUJ9Q">
+            <position endColumn="4" startColumn="4" endLine="16" startLine="13" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_p2lsOLxdEeGEKb8B5vUJ9Q" sissyId="154" simpleName="productName" const="false">
+            <position endColumn="50" startColumn="33" endLine="13" startLine="13" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+            <typeDeclaration id="_p2lsObxdEeGEKb8B5vUJ9Q" sissyId="153" accessedTarget="_p0CHcrxdEeGEKb8B5vUJ9Q">
+              <position endColumn="50" startColumn="33" endLine="13" startLine="13" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <body id="_p1dDw7xdEeGEKb8B5vUJ9Q" sissyId="150">
+            <position endColumn="4" startColumn="4" endLine="16" startLine="14" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+            <statements xsi:type="statements:JumpStatement" id="_p1dDxLxdEeGEKb8B5vUJ9Q" sissyId="151" kind="RETURN">
+              <position endColumn="15" startColumn="7" endLine="15" startLine="15" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+            </statements>
+          </body>
+        </methods>
+        <methods id="_p0rAorxdEeGEKb8B5vUJ9Q" sissyId="155" simpleName="searchProducer" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="4" startColumn="4" endLine="22" startLine="19" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+          <returnTypeDeclaration id="_p0rAo7xdEeGEKb8B5vUJ9Q" sissyId="158" accessedTarget="_p0CHcrxdEeGEKb8B5vUJ9Q">
+            <position endColumn="4" startColumn="4" endLine="22" startLine="19" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_p2lsNrxdEeGEKb8B5vUJ9Q" sissyId="160" simpleName="currentProduct" const="false">
+            <position endColumn="53" startColumn="33" endLine="19" startLine="19" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+            <typeDeclaration id="_p2lsN7xdEeGEKb8B5vUJ9Q" sissyId="159" accessedTarget="_p0CHcrxdEeGEKb8B5vUJ9Q">
+              <position endColumn="53" startColumn="33" endLine="19" startLine="19" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <body id="_p1dDxbxdEeGEKb8B5vUJ9Q" sissyId="156">
+            <position endColumn="4" startColumn="4" endLine="22" startLine="20" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+            <statements xsi:type="statements:JumpStatement" id="_p1dDxrxdEeGEKb8B5vUJ9Q" sissyId="157" kind="RETURN">
+              <position endColumn="26" startColumn="7" endLine="21" startLine="21" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+            </statements>
+          </body>
+        </methods>
+        <inheritanceTypeAccesses id="_p4kpMbxdEeGEKb8B5vUJ9Q" sissyId="186" accessedTarget="_p0CHc7xdEeGEKb8B5vUJ9Q">
+          <position endColumn="45" startColumn="28" endLine="4" startLine="4" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_p4kpMrxdEeGEKb8B5vUJ9Q" sissyId="187" accessedTarget="_p0BgYbxdEeGEKb8B5vUJ9Q">
+          <position endColumn="45" startColumn="28" endLine="4" startLine="4" sourceFile="_py3p37xdEeGEKb8B5vUJ9Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_p2keGrxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="51" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_p2keG7xdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="52" accessedTarget="_p0BgYrxdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_p0BgZLxdEeGEKb8B5vUJ9Q" sissyId="62" visibility="VISIBILITYPUBLIC" simpleName="PriceCalculator" referenceType="true">
+        <position endColumn="1" startColumn="1" endLine="20" startLine="4" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+        <constructors id="_p0rnsLxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="161" simpleName="PriceCalculator" visibility="VISIBILITYPUBLIC" static="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+        </constructors>
+        <methods id="_p0pygLxdEeGEKb8B5vUJ9Q" sissyId="93" simpleName="calculate" numberOfStatements="5" linesOfComments="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" overriddenMember="_p0pygrxdEeGEKb8B5vUJ9Q" virtual="true">
+          <position endColumn="4" startColumn="5" endLine="18" startLine="7" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+          <returnTypeDeclaration id="_p0pygbxdEeGEKb8B5vUJ9Q" sissyId="100" accessedTarget="_p0A5VLxdEeGEKb8B5vUJ9Q">
+            <position endColumn="4" startColumn="5" endLine="18" startLine="7" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_p2mTQrxdEeGEKb8B5vUJ9Q" sissyId="102" simpleName="productName" const="false">
+            <position endColumn="45" startColumn="28" endLine="8" startLine="8" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+            <typeDeclaration id="_p2mTQ7xdEeGEKb8B5vUJ9Q" sissyId="101" accessedTarget="_p0CHcrxdEeGEKb8B5vUJ9Q">
+              <position endColumn="45" startColumn="28" endLine="8" startLine="8" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <localVariables id="_p2j3ALxdEeGEKb8B5vUJ9Q" sissyId="112" simpleName="discount" const="false">
+            <position endColumn="59" startColumn="14" endLine="15" startLine="15" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+            <typeDeclaration id="_p2j3AbxdEeGEKb8B5vUJ9Q" sissyId="113" accessedTarget="_p0A5VLxdEeGEKb8B5vUJ9Q">
+              <position endColumn="59" startColumn="14" endLine="15" startLine="15" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <localVariables id="_p2j3ArxdEeGEKb8B5vUJ9Q" sissyId="109" simpleName="pSearch" const="false">
+            <position endColumn="52" startColumn="21" endLine="14" startLine="14" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+            <typeDeclaration id="_p2j3A7xdEeGEKb8B5vUJ9Q" sissyId="110" accessedTarget="_p0BgYrxdEeGEKb8B5vUJ9Q">
+              <position endColumn="52" startColumn="21" endLine="14" startLine="14" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <localVariables id="_p2j3BLxdEeGEKb8B5vUJ9Q" sissyId="106" simpleName="price" const="false">
+            <position endColumn="52" startColumn="14" endLine="11" startLine="11" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+            <typeDeclaration id="_p2j3BbxdEeGEKb8B5vUJ9Q" sissyId="107" accessedTarget="_p0A5VLxdEeGEKb8B5vUJ9Q">
+              <position endColumn="52" startColumn="14" endLine="11" startLine="11" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <localVariables id="_p2j3BrxdEeGEKb8B5vUJ9Q" sissyId="103" simpleName="search" const="false">
+            <position endColumn="40" startColumn="15" endLine="10" startLine="10" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+            <typeDeclaration id="_p2j3B7xdEeGEKb8B5vUJ9Q" sissyId="104" accessedTarget="_p0BgYbxdEeGEKb8B5vUJ9Q">
+              <position endColumn="40" startColumn="15" endLine="10" startLine="10" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <body id="_p1ccsLxdEeGEKb8B5vUJ9Q" sissyId="94">
+            <position endColumn="4" startColumn="4" endLine="18" startLine="9" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_p1ccsbxdEeGEKb8B5vUJ9Q" sissyId="95">
+              <position endColumn="40" startColumn="7" endLine="10" startLine="10" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4lQRbxdEeGEKb8B5vUJ9Q" sissyId="105" accessedTarget="_p2j3BrxdEeGEKb8B5vUJ9Q" write="true">
+                <position endColumn="40" startColumn="15" endLine="10" startLine="10" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_p4lQRrxdEeGEKb8B5vUJ9Q" sissyId="215" accessedTarget="_p0sOwLxdEeGEKb8B5vUJ9Q">
+                <position endColumn="40" startColumn="24" endLine="10" startLine="10" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_p1ccsrxdEeGEKb8B5vUJ9Q" sissyId="96">
+              <position endColumn="52" startColumn="7" endLine="11" startLine="11" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4l3ULxdEeGEKb8B5vUJ9Q" sissyId="108" accessedTarget="_p2j3BLxdEeGEKb8B5vUJ9Q" write="true">
+                <position endColumn="52" startColumn="14" endLine="11" startLine="11" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4l3UbxdEeGEKb8B5vUJ9Q" sissyId="216" accessedTarget="_p2j3BrxdEeGEKb8B5vUJ9Q">
+                <position endColumn="28" startColumn="22" endLine="11" startLine="11" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_p4l3UrxdEeGEKb8B5vUJ9Q" sissyId="217" accessedTarget="_p0okYLxdEeGEKb8B5vUJ9Q">
+                <position endColumn="52" startColumn="22" endLine="11" startLine="11" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_p4l3U7xdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="218">
+                <accesses xsi:type="accesses:VariableAccess" id="_p4medbxdEeGEKb8B5vUJ9Q" sissyId="219" accessedTarget="_p2mTQrxdEeGEKb8B5vUJ9Q">
+                  <position endColumn="51" startColumn="41" endLine="11" startLine="11" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+                </accesses>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_p1ccs7xdEeGEKb8B5vUJ9Q" sissyId="97">
+              <position endColumn="52" startColumn="7" endLine="14" startLine="14" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4l3VLxdEeGEKb8B5vUJ9Q" sissyId="111" accessedTarget="_p2j3ArxdEeGEKb8B5vUJ9Q" write="true">
+                <position endColumn="52" startColumn="21" endLine="14" startLine="14" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CastTypeAccess" id="_p4l3VbxdEeGEKb8B5vUJ9Q" sissyId="220" accessedTarget="_p0BgYrxdEeGEKb8B5vUJ9Q">
+                <position endColumn="52" startColumn="31" endLine="14" startLine="14" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4l3VrxdEeGEKb8B5vUJ9Q" sissyId="221" accessedTarget="_p2j3BrxdEeGEKb8B5vUJ9Q">
+                <position endColumn="52" startColumn="47" endLine="14" startLine="14" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_p1cctLxdEeGEKb8B5vUJ9Q" sissyId="98">
+              <position endColumn="59" startColumn="7" endLine="15" startLine="15" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4l3V7xdEeGEKb8B5vUJ9Q" sissyId="114" accessedTarget="_p2j3ALxdEeGEKb8B5vUJ9Q" write="true">
+                <position endColumn="59" startColumn="14" endLine="15" startLine="15" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4l3WLxdEeGEKb8B5vUJ9Q" sissyId="222" accessedTarget="_p2j3ArxdEeGEKb8B5vUJ9Q">
+                <position endColumn="32" startColumn="25" endLine="15" startLine="15" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_p4l3WbxdEeGEKb8B5vUJ9Q" sissyId="223" accessedTarget="_p0rAoLxdEeGEKb8B5vUJ9Q">
+                <position endColumn="59" startColumn="25" endLine="15" startLine="15" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_p4l3WrxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="224">
+                <accesses xsi:type="accesses:VariableAccess" id="_p4medrxdEeGEKb8B5vUJ9Q" sissyId="225" accessedTarget="_p2mTQrxdEeGEKb8B5vUJ9Q">
+                  <position endColumn="58" startColumn="48" endLine="15" startLine="15" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+                </accesses>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:JumpStatement" id="_p1cctbxdEeGEKb8B5vUJ9Q" sissyId="99" kind="RETURN">
+              <position endColumn="30" startColumn="7" endLine="17" startLine="17" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4l3W7xdEeGEKb8B5vUJ9Q" sissyId="226" accessedTarget="_p2j3BLxdEeGEKb8B5vUJ9Q">
+                <position endColumn="18" startColumn="14" endLine="17" startLine="17" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4l3XLxdEeGEKb8B5vUJ9Q" sissyId="227" accessedTarget="_p2j3ALxdEeGEKb8B5vUJ9Q">
+                <position endColumn="29" startColumn="22" endLine="17" startLine="17" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <inheritanceTypeAccesses id="_p4kpNLxdEeGEKb8B5vUJ9Q" sissyId="189" accessedTarget="_p0CHc7xdEeGEKb8B5vUJ9Q">
+          <position endColumn="51" startColumn="30" endLine="4" startLine="4" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_p4kpNbxdEeGEKb8B5vUJ9Q" sissyId="190" accessedTarget="_p0BgZbxdEeGEKb8B5vUJ9Q">
+          <position endColumn="51" startColumn="30" endLine="4" startLine="4" sourceFile="_py3p3rxdEeGEKb8B5vUJ9Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_p2keFrxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="63" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_p2keF7xdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="64" accessedTarget="_p0BgZLxdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_p0BgZbxdEeGEKb8B5vUJ9Q" sissyId="65" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="ICalculator" referenceType="true" interface="true">
+        <position endColumn="1" startColumn="1" endLine="7" startLine="4" sourceFile="_py3p3LxdEeGEKb8B5vUJ9Q"/>
+        <methods id="_p0pygrxdEeGEKb8B5vUJ9Q" sissyId="115" simpleName="calculate" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+          <position endColumn="46" startColumn="5" endLine="6" startLine="6" sourceFile="_py3p3LxdEeGEKb8B5vUJ9Q"/>
+          <returnTypeDeclaration id="_p0pyg7xdEeGEKb8B5vUJ9Q" sissyId="116" accessedTarget="_p0A5VLxdEeGEKb8B5vUJ9Q">
+            <position endColumn="46" startColumn="5" endLine="6" startLine="6" sourceFile="_py3p3LxdEeGEKb8B5vUJ9Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_p2mTQLxdEeGEKb8B5vUJ9Q" sissyId="118" simpleName="productName" const="false">
+            <position endColumn="46" startColumn="29" endLine="6" startLine="6" sourceFile="_py3p3LxdEeGEKb8B5vUJ9Q"/>
+            <typeDeclaration id="_p2mTQbxdEeGEKb8B5vUJ9Q" sissyId="117" accessedTarget="_p0CHcrxdEeGEKb8B5vUJ9Q">
+              <position endColumn="46" startColumn="29" endLine="6" startLine="6" sourceFile="_py3p3LxdEeGEKb8B5vUJ9Q"/>
+            </typeDeclaration>
+          </formalParameters>
+        </methods>
+        <inheritanceTypeAccesses id="_p4kpNrxdEeGEKb8B5vUJ9Q" sissyId="188" accessedTarget="_p0CHc7xdEeGEKb8B5vUJ9Q">
+          <position endColumn="1" startColumn="1" endLine="7" startLine="4" sourceFile="_py3p3LxdEeGEKb8B5vUJ9Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_p2keFLxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="66" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_p2keFbxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="67" accessedTarget="_p0BgZbxdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+    </subPackages>
+    <subPackages id="_pyt40bxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="61" simpleName="ui">
+      <classes id="_p0BgY7xdEeGEKb8B5vUJ9Q" sissyId="58" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="IListView" referenceType="true" interface="true">
+        <position endColumn="1" startColumn="1" endLine="6" startLine="3" sourceFile="_py3CwbxdEeGEKb8B5vUJ9Q"/>
+        <methods id="_p0pLcLxdEeGEKb8B5vUJ9Q" sissyId="91" simpleName="createListEntry" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+          <position endColumn="32" startColumn="4" endLine="5" startLine="5" sourceFile="_py3CwbxdEeGEKb8B5vUJ9Q"/>
+          <returnTypeDeclaration id="_p0pLcbxdEeGEKb8B5vUJ9Q" sissyId="92" accessedTarget="_p0CHcrxdEeGEKb8B5vUJ9Q">
+            <position endColumn="32" startColumn="4" endLine="5" startLine="5" sourceFile="_py3CwbxdEeGEKb8B5vUJ9Q"/>
+          </returnTypeDeclaration>
+        </methods>
+        <inheritanceTypeAccesses id="_p4kpM7xdEeGEKb8B5vUJ9Q" sissyId="214" accessedTarget="_p0CHc7xdEeGEKb8B5vUJ9Q">
+          <position endColumn="1" startColumn="1" endLine="6" startLine="3" sourceFile="_py3CwbxdEeGEKb8B5vUJ9Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_p2keGLxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="59" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_p2keGbxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="60" accessedTarget="_p0BgY7xdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_p0BgZrxdEeGEKb8B5vUJ9Q" sissyId="68" visibility="VISIBILITYPUBLIC" simpleName="ProductsListView" referenceType="true">
+        <position endColumn="1" startColumn="1" endLine="40" startLine="12" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+        <constructors id="_p0rnsbxdEeGEKb8B5vUJ9Q" sissyId="162" simpleName="ProductsListView" numberOfStatements="2" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="4" startColumn="4" endLine="22" startLine="18" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+          <body id="_p1dDx7xdEeGEKb8B5vUJ9Q" sissyId="163">
+            <position endColumn="4" startColumn="4" endLine="22" startLine="19" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_p1dDyLxdEeGEKb8B5vUJ9Q" sissyId="164">
+              <position endColumn="32" startColumn="7" endLine="20" startLine="20" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_p4mea7xdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="248" accessedTarget="_p2keErxdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4mebLxdEeGEKb8B5vUJ9Q" sissyId="249" accessedTarget="_p2j3CLxdEeGEKb8B5vUJ9Q">
+                <position endColumn="15" startColumn="7" endLine="20" startLine="20" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_p4mebbxdEeGEKb8B5vUJ9Q" sissyId="252" accessedTarget="_p0s10rxdEeGEKb8B5vUJ9Q">
+                <position endColumn="32" startColumn="7" endLine="20" startLine="20" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_p4mebrxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="253"/>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_p1dDybxdEeGEKb8B5vUJ9Q" sissyId="165">
+              <position endColumn="32" startColumn="7" endLine="21" startLine="21" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_p4meb7xdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="254" accessedTarget="_p2keErxdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4mecLxdEeGEKb8B5vUJ9Q" sissyId="255" accessedTarget="_p2j3CLxdEeGEKb8B5vUJ9Q">
+                <position endColumn="15" startColumn="7" endLine="21" startLine="21" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_p4mecbxdEeGEKb8B5vUJ9Q" sissyId="256" accessedTarget="_p0s10rxdEeGEKb8B5vUJ9Q">
+                <position endColumn="32" startColumn="7" endLine="21" startLine="21" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_p4mecrxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="257"/>
+            </statements>
+          </body>
+        </constructors>
+        <constructors id="_p0sOwbxdEeGEKb8B5vUJ9Q" simpleName="products" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPACKAGE" initializer="true">
+          <position endColumn="48" startColumn="28" endLine="15" startLine="15" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+          <body id="_p1dDyrxdEeGEKb8B5vUJ9Q" sissyId="168">
+            <position endColumn="48" startColumn="28" endLine="15" startLine="15" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_p1dDy7xdEeGEKb8B5vUJ9Q" sissyId="169">
+              <position endColumn="48" startColumn="28" endLine="15" startLine="15" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4mec7xdEeGEKb8B5vUJ9Q" sissyId="170" accessedTarget="_p2j3CLxdEeGEKb8B5vUJ9Q" write="true">
+                <position endColumn="48" startColumn="17" endLine="15" startLine="15" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_p4medLxdEeGEKb8B5vUJ9Q" sissyId="267" accessedTarget="_p0tc4bxdEeGEKb8B5vUJ9Q" typeArguments="_p0CHcrxdEeGEKb8B5vUJ9Q">
+                <position endColumn="48" startColumn="28" endLine="15" startLine="15" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </constructors>
+        <fields id="_p2j3CLxdEeGEKb8B5vUJ9Q" sissyId="86" visibility="VISIBILITYPACKAGE" simpleName="products" const="false">
+          <position endColumn="48" startColumn="17" endLine="15" startLine="15" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+          <typeDeclaration id="_p2j3CbxdEeGEKb8B5vUJ9Q" sissyId="79" accessedTarget="_p0CHcLxdEeGEKb8B5vUJ9Q" typeArguments="_p0CHcrxdEeGEKb8B5vUJ9Q">
+            <position endColumn="48" startColumn="17" endLine="15" startLine="15" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+          </typeDeclaration>
+        </fields>
+        <methods id="_p0qZkLxdEeGEKb8B5vUJ9Q" sissyId="119" simpleName="createListEntry" numberOfStatements="6" linesOfComments="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" overriddenMember="_p0pLcLxdEeGEKb8B5vUJ9Q" virtual="true">
+          <position endColumn="4" startColumn="5" endLine="38" startLine="25" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+          <returnTypeDeclaration id="_p0qZkbxdEeGEKb8B5vUJ9Q" sissyId="127" accessedTarget="_p0CHcrxdEeGEKb8B5vUJ9Q">
+            <position endColumn="4" startColumn="5" endLine="38" startLine="25" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+          </returnTypeDeclaration>
+          <localVariables id="_p2jP87xdEeGEKb8B5vUJ9Q" sissyId="140" simpleName="producer" const="false">
+            <position endColumn="62" startColumn="14" endLine="35" startLine="35" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+            <typeDeclaration id="_p2jP9LxdEeGEKb8B5vUJ9Q" sissyId="141" accessedTarget="_p0CHcrxdEeGEKb8B5vUJ9Q">
+              <position endColumn="62" startColumn="14" endLine="35" startLine="35" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <localVariables id="_p2jP9bxdEeGEKb8B5vUJ9Q" sissyId="137" simpleName="pSearch" const="false">
+            <position endColumn="52" startColumn="21" endLine="34" startLine="34" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+            <typeDeclaration id="_p2jP9rxdEeGEKb8B5vUJ9Q" sissyId="138" accessedTarget="_p0BgYrxdEeGEKb8B5vUJ9Q">
+              <position endColumn="52" startColumn="21" endLine="34" startLine="34" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <localVariables id="_p2jP97xdEeGEKb8B5vUJ9Q" sissyId="134" simpleName="price" const="false">
+            <position endColumn="55" startColumn="14" endLine="31" startLine="31" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+            <typeDeclaration id="_p2jP-LxdEeGEKb8B5vUJ9Q" sissyId="135" accessedTarget="_p0A5VLxdEeGEKb8B5vUJ9Q">
+              <position endColumn="55" startColumn="14" endLine="31" startLine="31" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <localVariables id="_p2jP-bxdEeGEKb8B5vUJ9Q" sissyId="131" simpleName="search" const="false">
+            <position endColumn="40" startColumn="15" endLine="30" startLine="30" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+            <typeDeclaration id="_p2jP-rxdEeGEKb8B5vUJ9Q" sissyId="132" accessedTarget="_p0BgYbxdEeGEKb8B5vUJ9Q">
+              <position endColumn="40" startColumn="15" endLine="30" startLine="30" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <localVariables id="_p2jP-7xdEeGEKb8B5vUJ9Q" sissyId="128" simpleName="currentProduct" const="false">
+            <position endColumn="45" startColumn="14" endLine="28" startLine="28" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+            <typeDeclaration id="_p2jP_LxdEeGEKb8B5vUJ9Q" sissyId="129" accessedTarget="_p0CHcrxdEeGEKb8B5vUJ9Q">
+              <position endColumn="45" startColumn="14" endLine="28" startLine="28" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <body id="_p1cctrxdEeGEKb8B5vUJ9Q" sissyId="120">
+            <position endColumn="4" startColumn="4" endLine="38" startLine="27" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_p1cct7xdEeGEKb8B5vUJ9Q" sissyId="121">
+              <position endColumn="45" startColumn="7" endLine="28" startLine="28" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4l3XbxdEeGEKb8B5vUJ9Q" sissyId="130" accessedTarget="_p2jP-7xdEeGEKb8B5vUJ9Q" write="true">
+                <position endColumn="45" startColumn="14" endLine="28" startLine="28" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:SelfAccess" id="_p4l3XrxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="228" accessedTarget="_p2keErxdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4l3X7xdEeGEKb8B5vUJ9Q" sissyId="229" accessedTarget="_p2j3CLxdEeGEKb8B5vUJ9Q">
+                <position endColumn="39" startColumn="31" endLine="28" startLine="28" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_p4l3YLxdEeGEKb8B5vUJ9Q" sissyId="232" accessedTarget="_p0s10LxdEeGEKb8B5vUJ9Q">
+                <position endColumn="45" startColumn="31" endLine="28" startLine="28" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_p4l3YbxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="233"/>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_p1ccuLxdEeGEKb8B5vUJ9Q" sissyId="122">
+              <position endColumn="40" startColumn="7" endLine="30" startLine="30" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4l3YrxdEeGEKb8B5vUJ9Q" sissyId="133" accessedTarget="_p2jP-bxdEeGEKb8B5vUJ9Q" write="true">
+                <position endColumn="40" startColumn="15" endLine="30" startLine="30" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_p4l3Y7xdEeGEKb8B5vUJ9Q" sissyId="234" accessedTarget="_p0sOwLxdEeGEKb8B5vUJ9Q">
+                <position endColumn="40" startColumn="24" endLine="30" startLine="30" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_p1ccubxdEeGEKb8B5vUJ9Q" sissyId="123">
+              <position endColumn="55" startColumn="7" endLine="31" startLine="31" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4l3ZLxdEeGEKb8B5vUJ9Q" sissyId="136" accessedTarget="_p2jP97xdEeGEKb8B5vUJ9Q" write="true">
+                <position endColumn="55" startColumn="14" endLine="31" startLine="31" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4l3ZbxdEeGEKb8B5vUJ9Q" sissyId="235" accessedTarget="_p2jP-bxdEeGEKb8B5vUJ9Q">
+                <position endColumn="28" startColumn="22" endLine="31" startLine="31" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_p4l3ZrxdEeGEKb8B5vUJ9Q" sissyId="236" accessedTarget="_p0okYLxdEeGEKb8B5vUJ9Q">
+                <position endColumn="55" startColumn="22" endLine="31" startLine="31" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_p4meYLxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="237">
+                <accesses xsi:type="accesses:VariableAccess" id="_p4med7xdEeGEKb8B5vUJ9Q" sissyId="238" accessedTarget="_p2jP-7xdEeGEKb8B5vUJ9Q">
+                  <position endColumn="54" startColumn="41" endLine="31" startLine="31" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+                </accesses>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_p1ccurxdEeGEKb8B5vUJ9Q" sissyId="124">
+              <position endColumn="52" startColumn="7" endLine="34" startLine="34" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4meYbxdEeGEKb8B5vUJ9Q" sissyId="139" accessedTarget="_p2jP9bxdEeGEKb8B5vUJ9Q" write="true">
+                <position endColumn="52" startColumn="21" endLine="34" startLine="34" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CastTypeAccess" id="_p4meYrxdEeGEKb8B5vUJ9Q" sissyId="239" accessedTarget="_p0BgYrxdEeGEKb8B5vUJ9Q">
+                <position endColumn="52" startColumn="31" endLine="34" startLine="34" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4meY7xdEeGEKb8B5vUJ9Q" sissyId="240" accessedTarget="_p2jP-bxdEeGEKb8B5vUJ9Q">
+                <position endColumn="52" startColumn="47" endLine="34" startLine="34" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_p1ccu7xdEeGEKb8B5vUJ9Q" sissyId="125">
+              <position endColumn="62" startColumn="7" endLine="35" startLine="35" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4meZLxdEeGEKb8B5vUJ9Q" sissyId="142" accessedTarget="_p2jP87xdEeGEKb8B5vUJ9Q" write="true">
+                <position endColumn="62" startColumn="14" endLine="35" startLine="35" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4meZbxdEeGEKb8B5vUJ9Q" sissyId="241" accessedTarget="_p2jP9bxdEeGEKb8B5vUJ9Q">
+                <position endColumn="32" startColumn="25" endLine="35" startLine="35" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_p4meZrxdEeGEKb8B5vUJ9Q" sissyId="242" accessedTarget="_p0rAorxdEeGEKb8B5vUJ9Q">
+                <position endColumn="62" startColumn="25" endLine="35" startLine="35" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_p4meZ7xdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="243">
+                <accesses xsi:type="accesses:VariableAccess" id="_p4meeLxdEeGEKb8B5vUJ9Q" sissyId="244" accessedTarget="_p2jP-7xdEeGEKb8B5vUJ9Q">
+                  <position endColumn="61" startColumn="48" endLine="35" startLine="35" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+                </accesses>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:JumpStatement" id="_p1dDwLxdEeGEKb8B5vUJ9Q" sissyId="126" kind="RETURN">
+              <position endColumn="67" startColumn="7" endLine="37" startLine="37" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4meaLxdEeGEKb8B5vUJ9Q" sissyId="245" accessedTarget="_p2jP-7xdEeGEKb8B5vUJ9Q">
+                <position endColumn="27" startColumn="14" endLine="37" startLine="37" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4meabxdEeGEKb8B5vUJ9Q" sissyId="246" accessedTarget="_p2jP97xdEeGEKb8B5vUJ9Q">
+                <position endColumn="42" startColumn="38" endLine="37" startLine="37" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_p4mearxdEeGEKb8B5vUJ9Q" sissyId="247" accessedTarget="_p2jP87xdEeGEKb8B5vUJ9Q">
+                <position endColumn="60" startColumn="53" endLine="37" startLine="37" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <inheritanceTypeAccesses id="_p4kpN7xdEeGEKb8B5vUJ9Q" sissyId="191" accessedTarget="_p0CHc7xdEeGEKb8B5vUJ9Q">
+          <position endColumn="50" startColumn="31" endLine="12" startLine="12" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_p4kpOLxdEeGEKb8B5vUJ9Q" sissyId="192" accessedTarget="_p0BgY7xdEeGEKb8B5vUJ9Q">
+          <position endColumn="50" startColumn="31" endLine="12" startLine="12" sourceFile="_py3p27xdEeGEKb8B5vUJ9Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_p2keErxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="69" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_p2keE7xdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="70" accessedTarget="_p0BgZrxdEeGEKb8B5vUJ9Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+    </subPackages>
+  </packages>
+  <types xsi:type="types:GASTClass" id="_p0ASQLxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="1" visibility="VISIBILITYPACKAGE" simpleName="char" primitive="true">
+    <self id="_p2lsNLxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="2" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_p2lsNbxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="3" accessedTarget="_p0ASQLxdEeGEKb8B5vUJ9Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTClass" id="_p0ASQbxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="4" visibility="VISIBILITYPACKAGE" simpleName="short" primitive="true">
+    <self id="_p2lsMrxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="5" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_p2lsM7xdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="6" accessedTarget="_p0ASQbxdEeGEKb8B5vUJ9Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTClass" id="_p0ASQrxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="7" visibility="VISIBILITYPACKAGE" simpleName="byte" primitive="true">
+    <self id="_p2lsMLxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="8" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_p2lsMbxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="9" accessedTarget="_p0ASQrxdEeGEKb8B5vUJ9Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTClass" id="_p0A5ULxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="10" visibility="VISIBILITYPACKAGE" simpleName="int" primitive="true">
+    <self id="_p2lFLLxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="11" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_p2lFLbxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="12" accessedTarget="_p0A5ULxdEeGEKb8B5vUJ9Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTClass" id="_p0A5UbxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="13" visibility="VISIBILITYPACKAGE" simpleName="long" primitive="true">
+    <self id="_p2lFKrxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="14" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_p2lFK7xdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="15" accessedTarget="_p0A5UbxdEeGEKb8B5vUJ9Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTClass" id="_p0A5UrxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="16" visibility="VISIBILITYPACKAGE" simpleName="float" primitive="true">
+    <self id="_p2lFKLxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="17" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_p2lFKbxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="18" accessedTarget="_p0A5UrxdEeGEKb8B5vUJ9Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTClass" id="_p0A5U7xdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="19" visibility="VISIBILITYPACKAGE" simpleName="void" primitive="true">
+    <self id="_p2lFJrxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="20" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_p2lFJ7xdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="21" accessedTarget="_p0A5U7xdEeGEKb8B5vUJ9Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTClass" id="_p0A5VLxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="22" visibility="VISIBILITYPACKAGE" simpleName="double" primitive="true">
+    <self id="_p2lFJLxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="23" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_p2lFJbxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="24" accessedTarget="_p0A5VLxdEeGEKb8B5vUJ9Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTClass" id="_p0A5VbxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="25" visibility="VISIBILITYPACKAGE" simpleName="boolean" primitive="true">
+    <self id="_p2lFIrxdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="26" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_p2lFI7xdEeGEKb8B5vUJ9Q" status="IMPLICIT" sissyId="27" accessedTarget="_p0A5VbxdEeGEKb8B5vUJ9Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <basePaths id="_py2bsbxdEeGEKb8B5vUJ9Q" path="">
+    <directories id="_py2bsLxdEeGEKb8B5vUJ9Q" simpleName="/"/>
+    <directories id="_py3CwLxdEeGEKb8B5vUJ9Q" simpleName="UnknownDirectory">
+      <files id="_py4Q6rxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="77" simpleName=""/>
+      <files id="_py4387xdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="183" simpleName=""/>
+      <files id="_py4397xdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="206" simpleName=""/>
+      <files id="_py5fALxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="265" simpleName=""/>
+    </directories>
+    <directories id="_py3p0LxdEeGEKb8B5vUJ9Q" simpleName="FILE:D:">
+      <subDirectory id="_py3p0bxdEeGEKb8B5vUJ9Q" simpleName="Workspaces">
+        <subDirectory id="_py3p0rxdEeGEKb8B5vUJ9Q" simpleName="runtime-Archimetrix">
+          <subDirectory id="_py3p07xdEeGEKb8B5vUJ9Q" simpleName="Store12_WithInterfaceViolation">
+            <subDirectory id="_py3p1LxdEeGEKb8B5vUJ9Q" simpleName="src">
+              <subDirectory id="_py3p1bxdEeGEKb8B5vUJ9Q" simpleName="de">
+                <subDirectory id="_py3p1rxdEeGEKb8B5vUJ9Q" simpleName="upb">
+                  <subDirectory id="_py3p17xdEeGEKb8B5vUJ9Q" simpleName="examples">
+                    <subDirectory id="_py3p2LxdEeGEKb8B5vUJ9Q" simpleName="reengineering">
+                      <subDirectory id="_py3p2bxdEeGEKb8B5vUJ9Q" simpleName="store">
+                        <subDirectory id="_py3p2rxdEeGEKb8B5vUJ9Q" simpleName="ui">
+                          <files id="_py3CwbxdEeGEKb8B5vUJ9Q" sissyId="28" simpleName="IListView.java" sourceFile="true"/>
+                          <files id="_py3p27xdEeGEKb8B5vUJ9Q" sissyId="29" simpleName="ProductsListView.java" sourceFile="true" importedTypes="_p0A5VrxdEeGEKb8B5vUJ9Q _p0BgYLxdEeGEKb8B5vUJ9Q _p0BgYbxdEeGEKb8B5vUJ9Q _p0BgYrxdEeGEKb8B5vUJ9Q"/>
+                        </subDirectory>
+                        <subDirectory id="_py3p3bxdEeGEKb8B5vUJ9Q" simpleName="logic">
+                          <files id="_py3p3LxdEeGEKb8B5vUJ9Q" sissyId="30" simpleName="ICalculator.java" sourceFile="true"/>
+                          <files id="_py3p3rxdEeGEKb8B5vUJ9Q" sissyId="31" simpleName="PriceCalculator.java" sourceFile="true"/>
+                          <files id="_py3p37xdEeGEKb8B5vUJ9Q" sissyId="32" simpleName="ProductSearch.java" sourceFile="true"/>
+                          <files id="_py4Q4LxdEeGEKb8B5vUJ9Q" sissyId="33" simpleName="ISearch.java" sourceFile="true"/>
+                        </subDirectory>
+                      </subDirectory>
+                    </subDirectory>
+                  </subDirectory>
+                </subDirectory>
+              </subDirectory>
+            </subDirectory>
+          </subDirectory>
+        </subDirectory>
+      </subDirectory>
+    </directories>
+    <directories id="_py4Q4rxdEeGEKb8B5vUJ9Q" simpleName="ARCHIVE:D:">
+      <subDirectory id="_py4Q47xdEeGEKb8B5vUJ9Q" simpleName="Programme">
+        <subDirectory id="_py4Q5LxdEeGEKb8B5vUJ9Q" simpleName="Java">
+          <subDirectory id="_py4Q5bxdEeGEKb8B5vUJ9Q" simpleName="jdk1.6.0_31">
+            <subDirectory id="_py4Q5rxdEeGEKb8B5vUJ9Q" simpleName="lib">
+              <subDirectory id="_py4Q57xdEeGEKb8B5vUJ9Q" simpleName="rt.jar?java">
+                <subDirectory id="_py4Q6LxdEeGEKb8B5vUJ9Q" simpleName="util">
+                  <files id="_py4Q4bxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="37" simpleName="ArrayList.class"/>
+                  <files id="_py4Q6bxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="43" simpleName="List.class"/>
+                  <files id="_py4Q67xdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="78" simpleName="List.class"/>
+                  <files id="_py439LxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="184" simpleName="Collection.class"/>
+                  <files id="_py5fAbxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="266" simpleName="ArrayList.class"/>
+                </subDirectory>
+                <subDirectory id="_py438bxdEeGEKb8B5vUJ9Q" simpleName="lang">
+                  <files id="_py438LxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="83" simpleName="String.class"/>
+                  <files id="_py438rxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="174" simpleName="Object.class"/>
+                  <files id="_py43-LxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="207" simpleName="Comparable.class"/>
+                  <files id="_py43-bxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="212" simpleName="CharSequence.class"/>
+                </subDirectory>
+                <subDirectory id="_py439rxdEeGEKb8B5vUJ9Q" simpleName="io">
+                  <files id="_py439bxdEeGEKb8B5vUJ9Q" status="LIBRARY" sissyId="197" simpleName="Serializable.class"/>
+                </subDirectory>
+              </subDirectory>
+            </subDirectory>
+          </subDirectory>
+        </subDirectory>
+      </subDirectory>
+    </directories>
+  </basePaths>
+</core:Root>

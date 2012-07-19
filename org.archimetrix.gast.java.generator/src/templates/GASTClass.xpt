@@ -1,0 +1,71 @@
+«IMPORT gast::core»
+«IMPORT gast::types»
+
+«DEFINE Type FOR types::GASTClass»
+	«FILE qualifiedName.replaceAll("\\.","/") + ".java"»
+		package «surroundingPackage.qualifiedName»;
+		
+		«EXPAND Import FOREACH allAccessedClasses»
+		
+		«IF this.interface»
+			«EXPAND Interface»
+		«ELSE»
+			«EXPAND Class»
+		«ENDIF»
+		
+	«ENDFILE»
+«ENDDEFINE»
+
+
+«DEFINE Import FOR types::GASTClass»
+	«IF this.simpleName != "double"»
+		import «this.qualifiedName»;
+	«ENDIF»
+«ENDDEFINE»
+
+«DEFINE Interface FOR types::GASTClass»
+		public interface «simpleName» «EXPAND InheritanceAccess» {
+		
+			«EXPAND Method::MethodDeclaration FOREACH methods»
+		
+		}
+«ENDDEFINE»
+
+
+«DEFINE Class FOR types::GASTClass»	
+		public class «simpleName» «EXPAND InheritanceAccess» {
+		
+			«EXPAND Field::Field FOREACH fields»
+			«EXPAND Method::Method FOREACH methods»
+		
+		}
+«ENDDEFINE»
+
+
+«DEFINE InheritanceAccess FOR types::GASTClass»
+	
+	«LET inheritanceTypeAccesses.reject(access|access.accessedClass.interface) AS superclasses»
+	«LET superclasses.reject(access|access.accessedClass.simpleName.matches("Object")) AS realSuperClasses»
+		
+		«IF !realSuperClasses.isEmpty»
+			extends
+			«FOREACH realSuperClasses AS superclass SEPARATOR ','»
+				«superclass.accessedClass.simpleName»
+			«ENDFOREACH»
+		«ENDIF»
+	«ENDLET»
+	«ENDLET»
+	
+	«LET inheritanceTypeAccesses.select(access|access.accessedClass.interface) AS interfaces»
+		«IF !interfaces.isEmpty»
+			implements
+			«FOREACH interfaces AS interface SEPARATOR ','»
+				«interface.accessedClass.simpleName»
+			«ENDFOREACH»
+		«ENDIF»
+	«ENDLET»
+	
+
+
+	
+«ENDDEFINE»

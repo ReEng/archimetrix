@@ -1,0 +1,11 @@
+«IMPORT gast»
+
+«DEFINE Visibility FOR types::Member»
+	«IF this.visibility.toString() == "VISIBILITYPUBLIC"»
+		public
+	«ELSEIF this.visibility.toString() == "VISIBILITYPROTECTED"»
+		protected
+	«ELSEIF this.visibility.toString() == "VISIBILITYPRIVAT"»
+		private
+	«ENDIF»
+«ENDDEFINE»
