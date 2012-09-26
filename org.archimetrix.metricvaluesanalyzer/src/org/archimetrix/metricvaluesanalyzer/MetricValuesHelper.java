@@ -36,11 +36,23 @@ public class MetricValuesHelper
       if (componentType instanceof PrimitiveComponent)
       {
          s.append(componentType.getName());
+         // PrimitiveComponent primitiveComp = ((PrimitiveComponent)componentType);
+         // primitiveComp.getPassiveResources();
       }
       else if (componentType instanceof CompositeComponent)
       {
+         // CompositeComponent compComp = ((CompositeComponent) componentType);
+         // compComp.getSubcomponents(); // TODO
          s.append(componentType.getName());
       }
+      // for (GASTClass gastClass : componentType.getClasses())
+      // {
+      // s.append(gastClass.getSimpleName() + " ");
+      // }
+      // for (ComponentCandidate subComp : componentType.getSubComponents())
+      // {
+      // s.append(printComponentCandidate(subComp));
+      // }
       s.append(">");
       return s.toString();
    }

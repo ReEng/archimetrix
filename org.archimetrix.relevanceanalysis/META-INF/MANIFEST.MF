@@ -1,12 +1,12 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Archimetrix Relevance Analysis
+Bundle-Name: Relevanceanalysis
 Bundle-SymbolicName: org.archimetrix.relevanceanalysis;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.archimetrix.relevanceanalysis.RelevanceAnalysisPlugin
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui,
- org.somox.metricvaluesstorage;bundle-version="1.0.0",
+ org.somox.metricValuesPersistency;bundle-version="1.0.0",
  eu.qimpress.sourcecodedecorator;bundle-version="1.0.0",
  org.reclipse.structure.inference.annotations;bundle-version="1.0.0",
  org.reclipse.structure.specification;bundle-version="1.0.0",
@@ -20,4 +20,3 @@ Export-Package: org.archimetrix.relevanceanalysis,
  org.archimetrix.relevanceanalysis.badsmells.strategies,
  org.archimetrix.relevanceanalysis.badsmells.util,
  org.archimetrix.relevanceanalysis.components
-Bundle-Vendor: University of Paderborn

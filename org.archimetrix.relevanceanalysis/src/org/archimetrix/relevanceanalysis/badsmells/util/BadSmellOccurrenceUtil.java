@@ -69,7 +69,6 @@ public class BadSmellOccurrenceUtil
       }
       catch (IOException e)
       {
-         RelevanceAnalysisPlugin.getDefault().logError("Error occurred during loading config file.", e);
       }
       return null;
    }

@@ -21,7 +21,6 @@ import org.eclipse.ui.IViewPart;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
-import org.reclipse.structure.inference.annotations.ASGAnnotation;
 
 
 /**
@@ -63,7 +62,7 @@ public class FindRelevantBadSmellsWizard extends Wizard
          monitor.beginTask(JOB_NAME, 100);
          Resource badSmellsRes = ResourceLoader.loadResource(this.badSmellsPath);
          Resource metricValuesRes = ResourceLoader.loadResource(this.metricValuesPath);
-         AbstractRelevanceAnalysis<ASGAnnotation> analysis = new RelevantBadSmellsAnalysis(badSmellsRes.getContents(),
+         AbstractRelevanceAnalysis analysis = new RelevantBadSmellsAnalysis(badSmellsRes.getContents(),
                (MetricValuesModel) metricValuesRes.getContents().get(0));
          monitor.worked(10);
          analysis.startAnalysis();
@@ -146,7 +145,7 @@ public class FindRelevantBadSmellsWizard extends Wizard
       }
       catch (PartInitException e)
       {
-         RelevanceAnalysisUIPlugin.getDefault().logError("Error occurred during opening result view.", e);
+         e.printStackTrace();
       }
    }
 

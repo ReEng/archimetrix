@@ -1,7 +1,6 @@
 package org.archimetrix.relevanceanalysis.ui.views;
 
 
-import org.archimetrix.commons.SortTreeViewerListener;
 import org.archimetrix.relevanceanalysis.ui.providers.RelevantComponentsViewContentProvider;
 import org.archimetrix.relevanceanalysis.ui.providers.RelevantComponentsViewLabelProvider;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -25,8 +24,7 @@ import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
  * @version $Revision$ $Date$
  * 
  */
-public class RelevantComponentsView extends
-      AbstractRelevanceAnalysisView<ComponentImplementingClassesLink>
+public class RelevantComponentsView extends AbstractRelevanceAnalysisView<ComponentImplementingClassesLink>
 {
 
    private static final String COMPLEXITY_COLUMN_TITLE = "Complexity (CPC)";
@@ -50,8 +48,7 @@ public class RelevantComponentsView extends
          @Override
          public void selectionChanged(final SelectionChangedEvent event)
          {
-            RelevantComponentsView.selectedComponents = ((TreeSelection) event
-                  .getSelection()).toArray();
+            RelevantComponentsView.selectedComponents = ((TreeSelection) event.getSelection()).toArray();
          }
       });
    }
@@ -62,23 +59,19 @@ public class RelevantComponentsView extends
       this.viewer = new TreeViewer(root, SWT.FULL_SELECTION | SWT.MULTI);
       this.viewer.getTree().setLinesVisible(true);
       this.viewer.getTree().setHeaderVisible(true);
-      this.viewer.getTree().setLayoutData(
-            new GridData(SWT.FILL, SWT.FILL, true, true));
+      this.viewer.getTree().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
    }
 
 
    public void createColumns()
    {
-      String[] names = new String[] { COMPONENT_COLUMN_TITLE,
-            CLOSENESS_TO_THRESHOLD_COLUMN_TITLE, COMPLEXITY_COLUMN_TITLE,
-            TOTAL_RELEVANCE_COLUMN_TITLE, PARETO_OPTIMALITY_COLUMN_TITLE };
+      String[] names = new String[] { COMPONENT_COLUMN_TITLE, CLOSENESS_TO_THRESHOLD_COLUMN_TITLE,
+            COMPLEXITY_COLUMN_TITLE, TOTAL_RELEVANCE_COLUMN_TITLE, PARETO_OPTIMALITY_COLUMN_TITLE };
       boolean firstColumn = true;
       for (String name : names)
       {
          TreeColumn tc = new TreeColumn(this.viewer.getTree(), SWT.LEFT);
          tc.setText(name);
-         tc.addSelectionListener(new SortTreeViewerListener());
-         
          if (firstColumn)
          {
             tc.setWidth(350);
@@ -89,7 +82,6 @@ public class RelevantComponentsView extends
             tc.pack();
          }
       }
-
    }
 
 

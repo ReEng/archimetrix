@@ -12,9 +12,7 @@ import org.reclipse.structure.inference.annotations.ASGAnnotation;
 
 /**
  * The class determines the pareto optimal bad smell occurrences for the bad smell relevance
- * analysis. A solution is called pareto optimal if and only if there is no solution that dominates
- * this solution. A solution y dominates a solution z iff for each i in [1..n], f_i(y)>=f_i(z) and
- * it exists an i in [1..n] such that f_i(y)>f_i(z).
+ * analysis.
  * 
  * @author mcp
  * @author Last editor: $Author$
@@ -24,25 +22,22 @@ import org.reclipse.structure.inference.annotations.ASGAnnotation;
 public class ParetoOptimalBadSmellsResultStrategy extends BadSmellsResultStrategy
 {
 
-   /**
-    * Calculates the pareto optimality (1=true, 0=false). Only bad smell occurrences of the same
-    * type are considered.
-    * 
-    * @see org.archimetrix.relevanceanalysis.badsmells.strategies.IBadSmellsStrategy#getRelevanceValue(org.reclipse.structure.inference.annotations.ASGAnnotation,
-    *      metricvalues.ComponentCandidate, metricvalues.MetricValuesModel)
-    */
    @Override
    public double getRelevanceValue(final ASGAnnotation badSmellAnnotation, final ComponentCandidate comp,
          final MetricValuesModel metricValuesModel)
    {
+      // calculate pareto optimality: 1=true, 0=false
       Set<ASGAnnotation> annotations = this.relevanceResults.getRelevanceSubjects();
       for (ASGAnnotation otherAnnotation : annotations)
       {
          if (BadSmellOccurrenceUtil.get().getBadSmellName(badSmellAnnotation)
                .equals(BadSmellOccurrenceUtil.get().getBadSmellName(otherAnnotation)))
          {
+            // consider only bad smell occurrences of the same type
             if (isDominatedByOtherAnnotation(badSmellAnnotation, otherAnnotation))
             {
+               // a solution is called pareto optimal if and only if there is no solution that
+               // dominates this solution
                return 0;
             }
          }
@@ -50,17 +45,11 @@ public class ParetoOptimalBadSmellsResultStrategy extends BadSmellsResultStrateg
       return 1;
    }
 
-   /**
-    * Calculates if a given annotation is dominated by the other given annotation by comparing the
-    * relevance values from the relevance strategies. Relevance values <0 are ignored because they
-    * come from non applicable strategies.
-    * 
-    * @param annotation
-    * @param otherAnnotation
-    * @return true if the annotation is dominated by otherAnnotation, else false 
-    */
+
    private boolean isDominatedByOtherAnnotation(final ASGAnnotation annotation, final ASGAnnotation otherAnnotation)
    {
+      // a solution y dominates a solution z iff for each i in [1..n], f_i(y)>=f_i(z)
+      // and it exists an i in [1..n] such that f_i(y)>f_i(z).
       boolean greater = false;
       Double[] relevanceValuesForAnnotation = this.relevanceResults.getRelevanceValues(annotation);
       for (int i = 0; i < relevanceValuesForAnnotation.length; i++)
@@ -68,6 +57,7 @@ public class ParetoOptimalBadSmellsResultStrategy extends BadSmellsResultStrateg
          Double value = relevanceValuesForAnnotation[i];
          if (value != null && value >= 0)
          {
+            // values <0 are ignored because they come from non applicable strategies
             Double otherValue = this.relevanceResults.getRelevanceValues(otherAnnotation)[i];
             if (value > otherValue)
             {

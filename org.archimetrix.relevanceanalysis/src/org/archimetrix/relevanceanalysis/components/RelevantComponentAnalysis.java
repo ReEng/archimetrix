@@ -2,7 +2,6 @@ package org.archimetrix.relevanceanalysis.components;
 
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import metricvalues.MetricValuesModel;
@@ -48,13 +47,16 @@ public class RelevantComponentAnalysis extends AbstractRelevanceAnalysis<Compone
    @Override
    public void startAnalysis()
    {
+	   RelevanceAnalysisPlugin.getDefault().log("Started Component Relevance Analysis");
+	   RelevanceAnalysisPlugin.getDefault().log("Started Component Relevance Analysis");
       for (int i = 0; i < this.relevanceStrategies.size() + AbstractRelevanceAnalysis.NUMBER_OF_RESULT_STRATEGIES; i++)
       {
          calculateRelevanceValuesForStrategy(i);
-         RelevanceAnalysisPlugin.getDefault().log(Calendar.getInstance().getTime() +
-               ": Components Rating: Finished rating for relevance strategy " + (i + 1) + "/"
+         RelevanceAnalysisPlugin.getDefault().log(
+               "Components Rating: Finished rating for relevance strategy " + (i + 1) + "/"
                      + (this.relevanceStrategies.size() + AbstractRelevanceAnalysis.NUMBER_OF_RESULT_STRATEGIES) + ".");
       }
+      RelevanceAnalysisPlugin.getDefault().log("Finished Component Relevance Analysis");
    }
 
 
@@ -75,6 +77,7 @@ public class RelevantComponentAnalysis extends AbstractRelevanceAnalysis<Compone
          }
          this.relevanceValues.setRelevanceValue(link, i, relevanceValue);
       }
+      RelevanceAnalysisPlugin.getDefault().log("Finished Component Relevance Analysis");
    }
 
 

@@ -8,7 +8,6 @@ import java.util.Collections;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
@@ -26,10 +25,6 @@ import de.fzi.gast.types.typesPackage;
 
 public class StartingHandler extends AbstractHandler
 {
-
-   private static final String PACKAGE_NAME = "org.reclipse.reengineering";
-
-   private static final String CLASS_NAME = "ReengineeringStrategies";
 
    private static final String RESOURCE = "/Store12_WithInterfaceViolation/ReengineeringStrategies.ecore";
 
@@ -57,7 +52,7 @@ public class StartingHandler extends AbstractHandler
 
       EPackage ePackage = EcoreFactory.eINSTANCE.createEPackage();
       ePackage.getEClassifiers().add(this.clazz);
-      ePackage.setName(PACKAGE_NAME);
+      ePackage.setName("org.reclipse.reengineering");
       resource.getContents().add(ePackage);
 
       try
@@ -66,11 +61,9 @@ public class StartingHandler extends AbstractHandler
       }
       catch (IOException e)
       {
-         Activator.getDefault().logError("Error occurred during execution of StartingHandler.", e);
       }
 
-      Activator.getDefault().getLog()
-            .log(new Status(Status.INFO, Activator.PLUGIN_ID, "Reengineering Strategies Writer finished."));
+      System.out.println("Reengineering Strategies Writer finished.");
       return null;
    }
 
@@ -89,7 +82,7 @@ public class StartingHandler extends AbstractHandler
    private EClass createEClass()
    {
       EClass clazz = EcoreFactory.eINSTANCE.createEClass();
-      clazz.setName(CLASS_NAME);
+      clazz.setName("ReengineeringStrategies");
       return clazz;
    }
 

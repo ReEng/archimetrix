@@ -54,7 +54,7 @@ public class StartPatternDetectionForComponentWizardPage extends StartInferenceW
 
       ResourceSelectionSectionProvider sectionProvider = new ResourceSelectionSectionProvider();
       Group inputs = sectionProvider.createInputGroup(composite);
-      this.badSmellsSection = new ResourceSelectionSectionProvider().createBadSmellsCatalogResourceSelection(inputs, this);
+      this.badSmellsSection = new ResourceSelectionSectionProvider().addBadSmellsCatalogResourceSelection(inputs, this);
 
       setControl(composite);
       setPageComplete(false);

@@ -47,8 +47,8 @@ public class FindRelevantComponentsWizardPage extends AbstractWizardPage
       composite.setLayout(new GridLayout());
 
       Group inputs = this.resourceSelectionSectionProvider.createInputGroup(composite);
-      this.scdSection = this.resourceSelectionSectionProvider.createSourceCodeDecoratorResourceSelection(inputs, this);
-      this.metricValuesSection = this.resourceSelectionSectionProvider.createMetricValuesResourceSelection(inputs, this);
+      this.scdSection = this.resourceSelectionSectionProvider.addSourceCodeDecoratorResourceSelection(inputs, this);
+      this.metricValuesSection = this.resourceSelectionSectionProvider.addMetricValuesResourceSelection(inputs, this);
 
       setControl(composite);
       setPageComplete(false);

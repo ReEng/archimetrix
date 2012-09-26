@@ -6,7 +6,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="menu:org.archimetrix.menu?after=org.archimetrix.architecturepreview.ui.separator">
+            locationURI="menu:org.archimetrix.menu?after=org.archimetrix.architectureprognosis.ui.separator">
          <command
                commandId="org.archimetrix.reengineeringstrategieswriter.start"
                label="(Reengineering Strategies Writer)"

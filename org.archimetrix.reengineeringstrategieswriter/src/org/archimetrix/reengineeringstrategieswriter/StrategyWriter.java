@@ -13,32 +13,31 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.storydriven.storydiagrams.activities.ActivitiesFactory;
-import org.storydriven.storydiagrams.activities.Activity;
-import org.storydriven.storydiagrams.activities.ActivityNode;
-import org.storydriven.storydiagrams.activities.OperationExtension;
-import org.storydriven.storydiagrams.activities.StoryNode;
-import org.storydriven.storydiagrams.calls.CallsFactory;
-import org.storydriven.storydiagrams.calls.ParameterExtension;
-import org.storydriven.storydiagrams.calls.expressions.CallsExpressionsFactory;
-import org.storydriven.storydiagrams.calls.expressions.ParameterExpression;
-import org.storydriven.storydiagrams.patterns.AbstractVariable;
-import org.storydriven.storydiagrams.patterns.BindingState;
-import org.storydriven.storydiagrams.patterns.ObjectVariable;
-import org.storydriven.storydiagrams.patterns.StoryPattern;
+import org.storydriven.modeling.activities.ActivitiesFactory;
+import org.storydriven.modeling.activities.Activity;
+import org.storydriven.modeling.activities.ActivityNode;
+import org.storydriven.modeling.activities.OperationExtension;
+import org.storydriven.modeling.activities.StoryNode;
+import org.storydriven.modeling.calls.CallsFactory;
+import org.storydriven.modeling.calls.ParameterExtension;
+import org.storydriven.modeling.calls.expressions.ExpressionsFactory;
+import org.storydriven.modeling.calls.expressions.ParameterExpression;
+import org.storydriven.modeling.patterns.AbstractVariable;
+import org.storydriven.modeling.patterns.BindingState;
+import org.storydriven.modeling.patterns.ObjectVariable;
+import org.storydriven.modeling.patterns.StoryPattern;
 
 
 public class StrategyWriter
 {
 
 
-   private static final String STORYDRIVEN_EXTENSION = "http://ns.storydriven.org/extension";
    private static final String ACTIVITY_NODE_PARAM_BIND_PREFIX = "(p)";
 
 
    public ParameterExpression createParameterExpression(final EParameter parameter, final ObjectVariable var)
    {
-      ParameterExpression expression = CallsExpressionsFactory.eINSTANCE.createParameterExpression();
+      ParameterExpression expression = ExpressionsFactory.eINSTANCE.createParameterExpression();
       ParameterExtension paramExtension = CallsFactory.eINSTANCE.createParameterExtension();
       paramExtension.setParameter(parameter);
       expression.setParameter(paramExtension);
@@ -58,7 +57,7 @@ public class StrategyWriter
       }
       catch (IOException e)
       {
-         Activator.getDefault().logError("Error occurred during activity loading.", e);
+         e.printStackTrace();
       }
 
       Activity activity = (Activity) r.getContents().get(0);
@@ -88,7 +87,7 @@ public class StrategyWriter
 
    public void createParameterExpressions(final EOperation method, final String[] paramNames)
    {
-      OperationExtension opExt = (OperationExtension) method.getEAnnotation(STORYDRIVEN_EXTENSION)
+      OperationExtension opExt = (OperationExtension) method.getEAnnotation("http://ns.storydriven.org/extension")
             .getContents().get(0);
       Activity activity = opExt.getOwnedActivity();
       for (int i = 0; i < activity.getOwnedActivityNodes().size(); i++)

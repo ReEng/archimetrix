@@ -8,10 +8,7 @@ import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
 
 
 /**
- * The class determines the pareto optimal candidates for the component relevance analysis. A
- * solution is called pareto optimal if and only if there is no solution that dominates this
- * solution. A solution y dominates a solution z iff for each i in [1..n], f_i(y)>=f_i(z) and it
- * exists an i in [1..n] such that f_i(y)>f_i(z).
+ * The class determines the pareto optimal candidates for the component relevance analysis.
  * 
  * @author mcp
  * @author Last editor: $Author$
@@ -21,21 +18,19 @@ import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
 public class ParetoOptimalComponentsResultStrategy extends ComponentsResultStrategy
 {
 
-   /**
-    * Calculates the pareto optimality (1=true, 0=false).
-    * 
-    * @see org.archimetrix.relevanceanalysis.components.strategies.IComponentsStrategy#getRelevanceValue(eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink,
-    *      metricvalues.MetricValuesModel)
-    */
    @Override
    public double getRelevanceValue(final ComponentImplementingClassesLink component,
          final MetricValuesModel metricValuesModel)
    {
+      // calculate pareto optimality: 1=true, 0=false
       Set<ComponentImplementingClassesLink> components = this.relevanceResults.getRelevanceSubjects();
       for (ComponentImplementingClassesLink otherComponent : components)
       {
+         // values <0 are ignored because they come from non-applicable strategies
          if (isDominatedByOtherComponent(component, otherComponent))
          {
+            // a solution is called pareto optimal if and only if there is no solution that
+            // dominates this solution
             return 0;
          }
       }
@@ -43,18 +38,11 @@ public class ParetoOptimalComponentsResultStrategy extends ComponentsResultStrat
    }
 
 
-   /**
-    * Calculates if a given component is dominated by the other given component by comparing the
-    * relevance values from the relevance strategies. Relevance values <0 are ignored because they
-    * come from non applicable strategies.
-    * 
-    * @param component
-    * @param otherComponent
-    * @return true if the component is dominated by otherComponent, else false 
-    */
    public boolean isDominatedByOtherComponent(final ComponentImplementingClassesLink component,
          final ComponentImplementingClassesLink otherComponent)
    {
+      // a solution y dominates a solution z iff for each i in [1..n], f_i(y)>=f_i(z) and it exists
+      // an i in [1..n] such that f_i(y)>f_i(z).
       boolean greater = false;
       Double[] relevanceValuesForComponent = this.relevanceResults.getRelevanceValues(component);
       for (int i = 0; i < relevanceValuesForComponent.length; i++)
@@ -62,6 +50,7 @@ public class ParetoOptimalComponentsResultStrategy extends ComponentsResultStrat
          Double value = relevanceValuesForComponent[i];
          if (value != null && value >= 0)
          {
+            // values <0 are ignored because they come from non applicable strategies
             Double otherValue = this.relevanceResults.getRelevanceValues(otherComponent)[i];
             if (value > otherValue)
             {

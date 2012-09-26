@@ -5,7 +5,6 @@ import metricvalues.MetricValuesModel;
 
 import org.archimetrix.commons.ResourceLoader;
 import org.archimetrix.relevanceanalysis.AbstractRelevanceAnalysis;
-import org.archimetrix.relevanceanalysis.RelevanceAnalysisPlugin;
 import org.archimetrix.relevanceanalysis.components.RelevantComponentAnalysis;
 import org.archimetrix.relevanceanalysis.ui.RelevanceAnalysisUIPlugin;
 import org.archimetrix.relevanceanalysis.ui.views.RelevantComponentsView;
@@ -23,7 +22,6 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
 import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorPackage;
 import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorRepository;
 
@@ -60,51 +58,19 @@ public class FindRelevantComponentsWizard extends Wizard
       @Override
       protected IStatus run(final IProgressMonitor monitor)
       {
+         // TODO: use monitor better
          monitor.beginTask(JOB_NAME, 100);
-         log("Component Relevance Analysis started.");
-         
-         Resource scdRes = loadSourceCodeDecorator(monitor);
-         Resource metricValuesRes = loadMetricValuesModel(monitor);
-         analyzeComponentRelevance(monitor, scdRes, metricValuesRes);
-         
+         Resource scdRes = ResourceLoader.loadResource(this.scdPath);
+         Resource metricValuesRes = ResourceLoader.loadResource(this.metricValuesPath);
+         MetricValuesModel metricValuesModel = (MetricValuesModel) metricValuesRes.getContents().get(0);
+         SourceCodeDecoratorRepository scdModel = (SourceCodeDecoratorRepository) scdRes.getContents().get(0);
+         AbstractRelevanceAnalysis analysis = new RelevantComponentAnalysis(scdModel, metricValuesModel);
+         monitor.worked(10);
+         analysis.startAnalysis();
+         monitor.worked(89);
+         this.analysisResult = analysis.getResult();
          monitor.done();
          return Status.OK_STATUS;
-      }
-
-
-      private void analyzeComponentRelevance(final IProgressMonitor monitor,
-            Resource sourceCodeDecorator, Resource metricValues)
-      {
-         MetricValuesModel metricValuesModel = (MetricValuesModel) metricValues.getContents().get(0);
-         SourceCodeDecoratorRepository scdModel = (SourceCodeDecoratorRepository) sourceCodeDecorator.getContents().get(0);
-         AbstractRelevanceAnalysis<ComponentImplementingClassesLink> analysis = new RelevantComponentAnalysis(scdModel, metricValuesModel);
-         
-         monitor.subTask("Analyzing component relevance...");
-         log("Starting analysis");
-         analysis.startAnalysis();
-         log("Analysis finished");
-         monitor.worked(49);
-         this.analysisResult = analysis.getResult();
-      }
-
-
-      private Resource loadMetricValuesModel(final IProgressMonitor monitor)
-      {
-         monitor.subTask("Loading metric values model...");
-         Resource metricValuesRes = ResourceLoader.loadResource(this.metricValuesPath);
-         monitor.worked(25);
-         log("Metric values model loaded.");
-         return metricValuesRes;
-      }
-
-
-      private Resource loadSourceCodeDecorator(final IProgressMonitor monitor)
-      {
-         monitor.subTask("Loading source code decorator...");
-         Resource scdRes = ResourceLoader.loadResource(this.scdPath);
-         monitor.worked(25);
-         log("Source Code Decorator loaded.");
-         return scdRes;
       }
 
 
@@ -182,7 +148,7 @@ public class FindRelevantComponentsWizard extends Wizard
       }
       catch (PartInitException e)
       {
-         RelevanceAnalysisUIPlugin.getDefault().logError("Error occurred during opening result view.", e);
+         e.printStackTrace();
       }
    }
 
@@ -198,10 +164,5 @@ public class FindRelevantComponentsWizard extends Wizard
    {
       this.page = new FindRelevantComponentsWizardPage(PAGE_TITLE);
       addPage(this.page);
-   }
-   
-   private static void log(String message)
-   {
-      RelevanceAnalysisPlugin.getDefault().log(message, null);
    }
 }
