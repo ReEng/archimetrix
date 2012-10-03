@@ -24,7 +24,7 @@ import org.storydriven.modeling.activities.OperationExtension;
  */
 public class ReengineeringStrategiesWizardPage extends AbstractTreeViewerPage
 {
-   private static final String WIZARD_PAGE_DESCRIPTION = "Select the reengineering strategy that shall be used to accomplish the removal of the selected bad smell occurrence.";
+   private static final String WIZARD_PAGE_DESCRIPTION = "Select the reengineering strategy that shall be used to accomplish the removal of the selected deficiency occurrence.";
 
    private static final String WIZARD_PAGE_TITLE = "Select Reengineering Strategy";
 

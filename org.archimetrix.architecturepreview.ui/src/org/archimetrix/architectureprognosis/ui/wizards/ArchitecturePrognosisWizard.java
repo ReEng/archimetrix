@@ -93,9 +93,9 @@ public class ArchitecturePrognosisWizard extends Wizard
       }
    }
 
-   private static final String ARCHITECTURE_PROGNOSIS_WIZARD_TITLE = "Architecture Prognosis";
+   private static final String ARCHITECTURE_PROGNOSIS_WIZARD_TITLE = "Architecture Preview";
 
-   private static final String JOB_NAME = "Architecture Prognosis";
+   private static final String JOB_NAME = "Architecture Preview";
 
    protected ArchitecturePrognosisWizardPage page;
 

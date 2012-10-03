@@ -1,6 +1,8 @@
 package org.archimetrix.commons;
 
 
+import java.util.HashMap;
+
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -18,11 +20,19 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 public class ResourceLoader
 {
 
+   final static private HashMap<URI, Resource> resourceCache;
+
+   static
+   {
+      resourceCache = new HashMap<URI, Resource>();
+   }
+
+
    /**
     * Returns an EMF resource from a file that lies behind the given path.
     * 
     * @param path that specifies the location of the resource to be returned
-    * @return a resource
+    * @return a resource or null if the path is empty
     */
    public static Resource loadResource(final String path)
    {
@@ -30,9 +40,24 @@ public class ResourceLoader
       {
          return null;
       }
+           
       URI uri = URI.createPlatformResourceURI(path, true);
+      Resource resource = resourceCache.get(uri);
+      
+      if (resource == null)
+      {
+         resource = loadResourceFrom(uri);
+      }
+      return resource;
+   }
+
+
+   private static Resource loadResourceFrom(URI uri)
+   {
+      Resource resource;
       ResourceSet ress = new ResourceSetImpl();
-      Resource res = ress.getResource(uri, true);
-      return res;
+      resource = ress.getResource(uri, true);
+      resourceCache.put(uri, resource);
+      return resource;
    }
 }
