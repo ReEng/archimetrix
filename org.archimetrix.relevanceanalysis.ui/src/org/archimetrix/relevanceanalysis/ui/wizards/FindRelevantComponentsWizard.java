@@ -5,6 +5,8 @@ import metricvalues.MetricValuesModel;
 
 import org.archimetrix.commons.ResourceLoader;
 import org.archimetrix.relevanceanalysis.AbstractRelevanceAnalysis;
+import org.archimetrix.relevanceanalysis.RelevanceResults;
+import org.archimetrix.relevanceanalysis.badsmells.util.RelevanceResultsStorage;
 import org.archimetrix.relevanceanalysis.components.RelevantComponentAnalysis;
 import org.archimetrix.relevanceanalysis.ui.RelevanceAnalysisUIPlugin;
 import org.archimetrix.relevanceanalysis.ui.views.RelevantComponentsView;
@@ -22,6 +24,7 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 
+import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
 import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorPackage;
 import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorRepository;
 
@@ -68,7 +71,9 @@ public class FindRelevantComponentsWizard extends Wizard
          monitor.worked(10);
          analysis.startAnalysis();
          monitor.worked(89);
-         this.analysisResult = analysis.getResult();
+         RelevanceResults<ComponentImplementingClassesLink> result = analysis.getResult();
+         RelevanceResultsStorage.storeRelevantComponents(scdRes, result);
+         this.analysisResult = result;
          monitor.done();
          return Status.OK_STATUS;
       }

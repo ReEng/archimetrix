@@ -3,8 +3,11 @@ package org.archimetrix.relevanceanalysis.ui.views;
 
 import org.archimetrix.relevanceanalysis.AbstractRelevanceAnalysis;
 import org.archimetrix.relevanceanalysis.badsmells.util.BadSmellOccurrenceUtil;
+import org.archimetrix.relevanceanalysis.badsmells.util.RelevanceResultsStorage;
 import org.archimetrix.relevanceanalysis.ui.providers.RelevantComponentsViewContentProvider;
 import org.archimetrix.relevanceanalysis.ui.providers.RelevantComponentsViewLabelProvider;
+import org.eclipse.emf.common.EMFPlugin;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TreeSelection;
@@ -37,8 +40,6 @@ public class RelevantComponentsView extends AbstractRelevanceAnalysisView<Compon
 
    private static final String CLOSENESS_TO_THRESHOLD_COLUMN_TITLE = "Closeness To Threshold";
    
-   private static final int NO_OF_RELEVANCE_STRATEGIES = 2;
-
    private static final String COMPONENT_COLUMN_TITLE = "Component";
 
    public static final String ID = "org.archimetrix.relevanceanalysis.ui.relevantComponentsView";
@@ -65,20 +66,7 @@ public class RelevantComponentsView extends AbstractRelevanceAnalysisView<Compon
    @Override
    public void createSorter()
    {
-      this.viewer.setSorter(new ViewerSorter()
-      {
-         @Override
-         public int compare(final Viewer viewer, final Object e1, final Object e2)
-         {
-            ComponentImplementingClassesLinkImpl c1 = (ComponentImplementingClassesLinkImpl) e1;
-            ComponentImplementingClassesLinkImpl c2 = (ComponentImplementingClassesLinkImpl) e2;
-            // The last elements in the arrays are the total relevance values.
-            Double d1 = relevanceResults.getRelevanceValues(c1)[RelevantComponentsView.NO_OF_RELEVANCE_STRATEGIES];
-            Double d2 = relevanceResults.getRelevanceValues(c2)[RelevantComponentsView.NO_OF_RELEVANCE_STRATEGIES];
-            // Multiply comparison by -1 to ensure a reverse sorting order.
-            return -1 * d1.compareTo(d2);
-         };
-      });
+      this.viewer.setSorter(new RelevantComponentsSorter());
    }
 
 

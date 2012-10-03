@@ -5,7 +5,9 @@ import metricvalues.MetricValuesModel;
 
 import org.archimetrix.commons.ResourceLoader;
 import org.archimetrix.relevanceanalysis.AbstractRelevanceAnalysis;
+import org.archimetrix.relevanceanalysis.RelevanceResults;
 import org.archimetrix.relevanceanalysis.badsmells.RelevantBadSmellsAnalysis;
+import org.archimetrix.relevanceanalysis.badsmells.util.RelevanceResultsStorage;
 import org.archimetrix.relevanceanalysis.ui.RelevanceAnalysisUIPlugin;
 import org.archimetrix.relevanceanalysis.ui.views.RelevantBadSmellsView;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -21,6 +23,7 @@ import org.eclipse.ui.IViewPart;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
+import org.reclipse.structure.inference.annotations.ASGAnnotation;
 
 
 /**
@@ -67,7 +70,9 @@ public class FindRelevantBadSmellsWizard extends Wizard
          monitor.worked(10);
          analysis.startAnalysis();
          monitor.worked(89);
-         this.analysisResult = analysis.getResult();
+         RelevanceResults<ASGAnnotation> result = analysis.getResult();
+         RelevanceResultsStorage.storeRelevantDeficiencies(badSmellsRes, result);
+         this.analysisResult = result;
          monitor.done();
          return Status.OK_STATUS;
       }

@@ -13,6 +13,8 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 
+import eu.qimpress.sourcecodedecorator.impl.ComponentImplementingClassesLinkImpl;
+
 
 /**
  * The Relevant Bad Smells View visualizes the results of the Bad Smell Relevance Analysis in a
@@ -43,6 +45,7 @@ public class RelevantBadSmellsView extends AbstractRelevanceAnalysisView<ASGAnno
 
    public static final String ID = "org.archimetrix.relevanceanalysis.ui.relevantBadSmellsView";
 
+   
    private static ASGAnnotation selectedAnnotation;
 
 
@@ -94,16 +97,7 @@ public class RelevantBadSmellsView extends AbstractRelevanceAnalysisView<ASGAnno
    @Override
    public void createSorter()
    {
-      this.viewer.setSorter(new ViewerSorter()
-      {
-         @Override
-         public int compare(final Viewer viewer, final Object e1, final Object e2)
-         {
-            String annoName1 = BadSmellOccurrenceUtil.get().getBadSmellName(((ASGAnnotation) e1));
-            String annoName2 = BadSmellOccurrenceUtil.get().getBadSmellName(((ASGAnnotation) e2));
-            return annoName1.compareTo(annoName2);
-         };
-      });
+      this.viewer.setSorter(new RelevantDeficienciesSorter());
    }
 
 
