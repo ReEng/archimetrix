@@ -9,7 +9,7 @@ import org.osgi.framework.BundleContext;
 public class ArchitecturePrognosisPlugin extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.archimetrix.architectureprognosis"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.archimetrix.architecturepreview"; //$NON-NLS-1$
 
 	// The shared instance
 	private static ArchitecturePrognosisPlugin plugin;
