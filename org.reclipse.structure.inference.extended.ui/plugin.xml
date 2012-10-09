@@ -13,10 +13,11 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="menu:org.archimetrix.ui.main.menu">
+            locationURI="menu:org.archimetrix.ui.main.menu?after=org.archimetrix.relevanceanalysis.findrelevantcomponents.command">
          <command
                commandId="org.reclipse.structure.inference.extended.start"
                icon="icons/start.png"
+               id="org.archimetrix.deficiencydetection.command"
                label="Start Pattern Based Architecture Analysis"
                style="push">
          </command>

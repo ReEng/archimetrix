@@ -24,10 +24,6 @@
          <menu
                id="org.archimetrix.ui.main.menu"
                label="Archimetrix">
-            <separator
-                  name="org.archimetrix.relevanceanalysis.ui.separator"
-                  visible="true">
-            </separator>
             <menu
                   icon="icons/reengineering.png"
                   id="org.archimetrix.menu"
