@@ -21,17 +21,17 @@ public interface WizardConstants
 
    public static final String METRIC_VALUES_MODEL_STRING = "Metric Values Model";
 
-   public static final String BAD_SMELLS_DESCRIPTION = "Select the Detected Bad Smells";
+   public static final String BAD_SMELLS_DESCRIPTION = "Select the Detected Deficiencies";
 
-   public static final String DETECTED_BAD_SMELLS_STRING = "Detected Bad Smells";
+   public static final String DETECTED_BAD_SMELLS_STRING = "Detected Deficiencies";
 
    public static final String SOURCE_CODE_DECORATOR_MODEL_DESCRIPTION = "Select the Source Code Decorator Model";
 
    public static final String SOURCE_CODE_DECORATOR_MODEL_STRING = "Source Code Decorator Model";
 
-   public static final String BAD_SMELLS_CATALOG_DESCRIPTION = "Select the Bad Smells catalog";
+   public static final String BAD_SMELLS_CATALOG_DESCRIPTION = "Select the Deficiency catalog";
 
-   public static final String BAD_SMELLS_CATALOG_STRING = "Bad Smells Catalog";
+   public static final String BAD_SMELLS_CATALOG_STRING = "Deficiency Catalog";
 
    public static final String REENGINEERING_STRATEGIES_DESCRIPTION = "Select an ecore file that contains Reengineering Strategies";
 
@@ -49,13 +49,13 @@ public interface WizardConstants
 
    public static final String NO_REENGINEERING_STRATEGIES_ERROR_MESSAGE = "A resource with the reengineering strategies in form of story diagrams has to be given.";
 
-   public static final String NO_BAD_SMELLS_CATALOG_ERROR_MESSAGE = "A resource with the bad smells catalog has to be given.";
+   public static final String NO_BAD_SMELLS_CATALOG_ERROR_MESSAGE = "A resource with the deficiency catalog has to be given.";
 
    public static final String NO_SCD_ERROR_MESSAGE = "A resource with the source code decorator of the program to be analyzed has to be provided.";
 
    public static final String NO_METRIC_VALUES_ERROR_MESSAGE = "A resource with the metric values from the clustering has to be provided.";
 
-   public static final String NO_BAD_SMELLS_ERROR_MESSAGE = "A resource with the detected bad smells has to be provided.";
+   public static final String NO_BAD_SMELLS_ERROR_MESSAGE = "A resource with the detected deficiencies has to be provided.";
 
 
    public static final String SETT_SCDM = "scdm";

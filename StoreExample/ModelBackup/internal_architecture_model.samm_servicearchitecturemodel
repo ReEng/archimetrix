@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<staticstructure:ServiceArchitectureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:staticstructure="http://q-impress.eu/samm/staticstructure" id="_2jsqcBHwEeKuwc-LnKnbXA" name="SoMoX Reverse Engineered System">
+  <provided id="_3YdIMxHwEeKuwc-LnKnbXA" name="IReporting 9 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_2jsqcxHwEeKuwc-LnKnbXA"/>
+  </provided>
+  <provided id="_3YdIORHwEeKuwc-LnKnbXA" name="Assets 10 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_2jsqshHwEeKuwc-LnKnbXA"/>
+  </provided>
+  <provided id="_3YdIPxHwEeKuwc-LnKnbXA" name="IDatabase 11 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_2jsqvxHwEeKuwc-LnKnbXA"/>
+  </provided>
+  <provided id="_3YdIRRHwEeKuwc-LnKnbXA" name="INetwork 12 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_2jsq0RHwEeKuwc-LnKnbXA"/>
+  </provided>
+  <provided id="_3YdISxHwEeKuwc-LnKnbXA" name="ILogistics 13 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_2jsqfxHwEeKuwc-LnKnbXA"/>
+  </provided>
+  <provided id="_3YdITxHwEeKuwc-LnKnbXA" name="IPayment 14 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_2jsqhBHwEeKuwc-LnKnbXA"/>
+  </provided>
+  <provided id="_3YdIUxHwEeKuwc-LnKnbXA" name="IStoreQuery 15 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_2jsqmxHwEeKuwc-LnKnbXA"/>
+  </provided>
+  <provided id="_3YdIVxHwEeKuwc-LnKnbXA" name="ICalculator 16 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_2jsqpRHwEeKuwc-LnKnbXA"/>
+  </provided>
+  <provided id="_3YdIWxHwEeKuwc-LnKnbXA" name="ISearch 17 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_2jsqoBHwEeKuwc-LnKnbXA"/>
+  </provided>
+  <provided id="_3YdIXxHwEeKuwc-LnKnbXA" name="IListView 18 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_2jsqzBHwEeKuwc-LnKnbXA"/>
+  </provided>
+  <subcomponents id="_3YdIMRHwEeKuwc-LnKnbXA" name=" &lt;PC No. 0 Reporting>">
+    <realizedBy xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_2jsqchHwEeKuwc-LnKnbXA"/>
+  </subcomponents>
+  <subcomponents id="_3YdINxHwEeKuwc-LnKnbXA" name=" &lt;PC No. 14 Assets>">
+    <realizedBy xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_2jsqrBHwEeKuwc-LnKnbXA"/>
+  </subcomponents>
+  <subcomponents id="_3YdIPRHwEeKuwc-LnKnbXA" name=" &lt;PC No. 16 Database>">
+    <realizedBy xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_2jsqvhHwEeKuwc-LnKnbXA"/>
+  </subcomponents>
+  <subcomponents id="_3YdIQxHwEeKuwc-LnKnbXA" name=" &lt;PC No. 20 NetworkManager>">
+    <realizedBy xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_2jsq0BHwEeKuwc-LnKnbXA"/>
+  </subcomponents>
+  <subcomponents id="_3YdISRHwEeKuwc-LnKnbXA" name="CC No. 3 de.upb.storeexample.logistics &lt;...No. 12 ProductSearch>>  &lt;PC No. 18 ProductsListView>>">
+    <realizedBy xsi:type="staticstructure:CompositeComponent" href="internal_architecture_model.samm_repository#_3Nw7IBHwEeKuwc-LnKnbXA"/>
+  </subcomponents>
+  <subcomponents id="_3YdIcBHwEeKuwc-LnKnbXA" name="SoMoX Dummy Component Instance">
+    <realizedBy xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_3YdIbxHwEeKuwc-LnKnbXA"/>
+  </subcomponents>
+  <connector id="_3YdINhHwEeKuwc-LnKnbXA">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdINBHwEeKuwc-LnKnbXA" subcomponent="_3YdIMRHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_2jsqfBHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_3YdINRHwEeKuwc-LnKnbXA" port="_3YdIMxHwEeKuwc-LnKnbXA"/>
+  </connector>
+  <connector id="_3YdIPBHwEeKuwc-LnKnbXA">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIOhHwEeKuwc-LnKnbXA" subcomponent="_3YdINxHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_2jsquRHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_3YdIOxHwEeKuwc-LnKnbXA" port="_3YdIORHwEeKuwc-LnKnbXA"/>
+  </connector>
+  <connector id="_3YdIQhHwEeKuwc-LnKnbXA">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIQBHwEeKuwc-LnKnbXA" subcomponent="_3YdIPRHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_2jsqxxHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_3YdIQRHwEeKuwc-LnKnbXA" port="_3YdIPxHwEeKuwc-LnKnbXA"/>
+  </connector>
+  <connector id="_3YdISBHwEeKuwc-LnKnbXA">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIRhHwEeKuwc-LnKnbXA" subcomponent="_3YdIQxHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_2jsq1hHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_3YdIRxHwEeKuwc-LnKnbXA" port="_3YdIRRHwEeKuwc-LnKnbXA"/>
+  </connector>
+  <connector id="_3YdIThHwEeKuwc-LnKnbXA">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdITBHwEeKuwc-LnKnbXA" subcomponent="_3YdISRHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_3Nw7KBHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_3YdITRHwEeKuwc-LnKnbXA" port="_3YdISxHwEeKuwc-LnKnbXA"/>
+  </connector>
+  <connector id="_3YdIUhHwEeKuwc-LnKnbXA">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIUBHwEeKuwc-LnKnbXA" subcomponent="_3YdISRHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_3Nw7LBHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_3YdIURHwEeKuwc-LnKnbXA" port="_3YdITxHwEeKuwc-LnKnbXA"/>
+  </connector>
+  <connector id="_3YdIVhHwEeKuwc-LnKnbXA">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIVBHwEeKuwc-LnKnbXA" subcomponent="_3YdISRHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_3Nw7MBHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_3YdIVRHwEeKuwc-LnKnbXA" port="_3YdIUxHwEeKuwc-LnKnbXA"/>
+  </connector>
+  <connector id="_3YdIWhHwEeKuwc-LnKnbXA">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIWBHwEeKuwc-LnKnbXA" subcomponent="_3YdISRHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_3Nw7NBHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_3YdIWRHwEeKuwc-LnKnbXA" port="_3YdIVxHwEeKuwc-LnKnbXA"/>
+  </connector>
+  <connector id="_3YdIXhHwEeKuwc-LnKnbXA">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIXBHwEeKuwc-LnKnbXA" subcomponent="_3YdISRHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_3Nw7OBHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_3YdIXRHwEeKuwc-LnKnbXA" port="_3YdIWxHwEeKuwc-LnKnbXA"/>
+  </connector>
+  <connector id="_3YdIYhHwEeKuwc-LnKnbXA">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIYBHwEeKuwc-LnKnbXA" subcomponent="_3YdISRHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_3Nw7PBHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_3YdIYRHwEeKuwc-LnKnbXA" port="_3YdIXxHwEeKuwc-LnKnbXA"/>
+  </connector>
+  <connector id="_3YdIYxHwEeKuwc-LnKnbXA" documentation="Assembly Connector from  &lt;PC No. 14 Assets> to  &lt;PC No. 0 Reporting>">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIZBHwEeKuwc-LnKnbXA" subcomponent="_3YdINxHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_2jsqrRHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIZRHwEeKuwc-LnKnbXA" subcomponent="_3YdIMRHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_2jsqfBHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+  </connector>
+  <connector id="_3YdIZhHwEeKuwc-LnKnbXA" documentation="Assembly Connector from  &lt;PC No. 14 Assets> to CC No. 3 de.upb.storeexample.logistics &lt;...No. 12 ProductSearch>>  &lt;PC No. 18 ProductsListView>>">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIZxHwEeKuwc-LnKnbXA" subcomponent="_3YdINxHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_2jsqrhHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIaBHwEeKuwc-LnKnbXA" subcomponent="_3YdISRHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_3Nw7LBHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+  </connector>
+  <connector id="_3YdIaRHwEeKuwc-LnKnbXA" documentation="Assembly Connector from  &lt;PC No. 14 Assets> to CC No. 3 de.upb.storeexample.logistics &lt;...No. 12 ProductSearch>>  &lt;PC No. 18 ProductsListView>>">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIahHwEeKuwc-LnKnbXA" subcomponent="_3YdINxHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_2jsqrxHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIaxHwEeKuwc-LnKnbXA" subcomponent="_3YdISRHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_3Nw7KBHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+  </connector>
+  <connector id="_3YdIbBHwEeKuwc-LnKnbXA" documentation="Assembly Connector from  &lt;PC No. 14 Assets> to CC No. 3 de.upb.storeexample.logistics &lt;...No. 12 ProductSearch>>  &lt;PC No. 18 ProductsListView>>">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIbRHwEeKuwc-LnKnbXA" subcomponent="_3YdINxHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_2jsqsBHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIbhHwEeKuwc-LnKnbXA" subcomponent="_3YdISRHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_3Nw7MBHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+  </connector>
+  <connector id="_3YdIcxHwEeKuwc-LnKnbXA" documentation="Assembly Connector from  &lt;PC No. 14 Assets> to SoMoX Dummy Component Instance">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIdBHwEeKuwc-LnKnbXA" subcomponent="_3YdINxHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_2jsqsRHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_3YdIdRHwEeKuwc-LnKnbXA" subcomponent="_3YdIcBHwEeKuwc-LnKnbXA">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_3YdIchHwEeKuwc-LnKnbXA"/>
+    </endpoints>
+  </connector>
+  <service id="_3YdIMhHwEeKuwc-LnKnbXA" name=" &lt;PC No. 0 Reporting>" subcomponentInstance="_3YdIMRHwEeKuwc-LnKnbXA">
+    <container href="pathmap://SOMOX_MODELS/somox-default.samm_targetenvironment#_7wiiMHcAEd-o5LaIF71Pmg"/>
+  </service>
+  <service id="_3YdIOBHwEeKuwc-LnKnbXA" name=" &lt;PC No. 14 Assets>" subcomponentInstance="_3YdINxHwEeKuwc-LnKnbXA">
+    <container href="pathmap://SOMOX_MODELS/somox-default.samm_targetenvironment#_7wiiMHcAEd-o5LaIF71Pmg"/>
+  </service>
+  <service id="_3YdIPhHwEeKuwc-LnKnbXA" name=" &lt;PC No. 16 Database>" subcomponentInstance="_3YdIPRHwEeKuwc-LnKnbXA">
+    <container href="pathmap://SOMOX_MODELS/somox-default.samm_targetenvironment#_7wiiMHcAEd-o5LaIF71Pmg"/>
+  </service>
+  <service id="_3YdIRBHwEeKuwc-LnKnbXA" name=" &lt;PC No. 20 NetworkManager>" subcomponentInstance="_3YdIQxHwEeKuwc-LnKnbXA">
+    <container href="pathmap://SOMOX_MODELS/somox-default.samm_targetenvironment#_7wiiMHcAEd-o5LaIF71Pmg"/>
+  </service>
+  <service id="_3YdIShHwEeKuwc-LnKnbXA" name="CC No. 3 de.upb.storeexample.logistics &lt;...No. 12 ProductSearch>>  &lt;PC No. 18 ProductsListView>>" subcomponentInstance="_3YdISRHwEeKuwc-LnKnbXA">
+    <container href="pathmap://SOMOX_MODELS/somox-default.samm_targetenvironment#_7wiiMHcAEd-o5LaIF71Pmg"/>
+  </service>
+  <service id="_3YdIcRHwEeKuwc-LnKnbXA" name="SoMoX Dummy Component Allocation Service" subcomponentInstance="_3YdIcBHwEeKuwc-LnKnbXA">
+    <container href="pathmap://SOMOX_MODELS/somox-default.samm_targetenvironment#_7wiiMHcAEd-o5LaIF71Pmg"/>
+  </service>
+</staticstructure:ServiceArchitectureModel>

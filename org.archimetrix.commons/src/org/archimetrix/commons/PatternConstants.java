@@ -25,11 +25,11 @@ public interface PatternConstants
 
    public static final String ILLEGAL_METHOD_ACCESS_PATTERN = "IllegalMethodAccess";
 
-   public static final String ILLEGAL_METHOD_ACCESS_BC_PATTERN = "IllegalMethodAccessBetweenComponents";
+   public static final String ILLEGAL_METHOD_ACCESS_BC_PATTERN = "InterfaceViolation";
 
-   public static final String INVALIDATED_ILLEGAL_METHOD_ACCESS_PATTERN = "IllegalMethodAccess_Distorted";
+   public static final String DISTORTED_ILLEGAL_METHOD_ACCESS_PATTERN = "IllegalMethodAccess_Distorted";
 
-   public static final String INVALIDATED_ILLEGAL_METHOD_ACCESS_BC_PATTERN = "IllegalMethodAccessBetweenComponents_Distorted";
+   public static final String DISTORTED_ILLEGAL_METHOD_ACCESS_BC_PATTERN = "IllegalMethodAccessBetweenComponents_Distorted";
 
    public static final String NON_TO_ROLE = "nonTO";
 

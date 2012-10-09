@@ -17,6 +17,8 @@ import org.reclipse.structure.inference.annotations.ASGAnnotation;
  */
 public interface IBadSmellsStrategy
 {
+   
+   public static final int NO_OF_RANKING_METRICS = 4;
 
    public double getRelevanceValue(ASGAnnotation badSmellAnnotation, ComponentCandidate comp,
          MetricValuesModel metricValuesModel);

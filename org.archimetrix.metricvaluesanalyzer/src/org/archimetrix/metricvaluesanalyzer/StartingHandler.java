@@ -22,14 +22,11 @@ import org.eclipse.ui.handlers.HandlerUtil;
 public class StartingHandler extends AbstractHandler
 {
 
-   private static final String JOB_NAME = "Metric Values Analyzer";
-
-
    @Override
    public Object execute(final ExecutionEvent event) throws ExecutionException
    {
       final ExecutionEvent execEvent = event;
-      Job job = new Job(JOB_NAME)
+      Job job = new Job("Metric Values Analyzer")
       {
          @Override
          protected IStatus run(final IProgressMonitor monitor)
@@ -55,11 +52,11 @@ public class StartingHandler extends AbstractHandler
          properties.load(stream);
          stream.close();
 
-         final String input = properties.getProperty(Constants.CONFIG_INPUT);
-         final String output = properties.getProperty(Constants.CONFIG_OUTPUT);
+         final String input = properties.getProperty("metricvaluesanalyzer.input");
+         final String output = properties.getProperty("metricvaluesanalyzer.output");
 
-         int modus = Integer.parseInt(properties.getProperty(Constants.CONFIG_MODUS));
-         boolean append = Boolean.parseBoolean(properties.getProperty(Constants.CONFIG_APPEND));
+         int modus = Integer.parseInt(properties.getProperty("metricvaluesanalyzer.modus"));
+         boolean append = Boolean.parseBoolean(properties.getProperty("metricvaluesanalyzer.append"));
 
          Activator.getDefault().log("Started Metric Values Analyzer!");
          Activator.getDefault().log("Result will be stored in " + output + ".");
@@ -83,11 +80,11 @@ public class StartingHandler extends AbstractHandler
       }
       catch (FileNotFoundException e)
       {
-         Activator.getDefault().logError("Error occurred during analysis.", e);
+         e.printStackTrace();
       }
       catch (IOException e)
       {
-         Activator.getDefault().logError("Error occurred during analysis.", e);
+         e.printStackTrace();
       }
    }
 

@@ -1,6 +1,5 @@
 package org.archimetrix.relevanceanalysis.ui;
 
-import org.eclipse.core.runtime.Status;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -59,10 +58,4 @@ public class RelevanceAnalysisUIPlugin extends AbstractUIPlugin {
 	public static ImageDescriptor getImageDescriptor(final String path) {
 		return imageDescriptorFromPlugin(PLUGIN_ID, path);
 	}
-	
-
-   public void logError(final String msg, final Exception e)
-   {
-      getLog().log(new Status(Status.ERROR, PLUGIN_ID, Status.ERROR, msg, e));
-   }
 }

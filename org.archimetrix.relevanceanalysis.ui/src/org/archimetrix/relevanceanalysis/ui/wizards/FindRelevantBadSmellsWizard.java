@@ -5,7 +5,9 @@ import metricvalues.MetricValuesModel;
 
 import org.archimetrix.commons.ResourceLoader;
 import org.archimetrix.relevanceanalysis.AbstractRelevanceAnalysis;
+import org.archimetrix.relevanceanalysis.RelevanceResults;
 import org.archimetrix.relevanceanalysis.badsmells.RelevantBadSmellsAnalysis;
+import org.archimetrix.relevanceanalysis.badsmells.util.RelevanceResultsStorage;
 import org.archimetrix.relevanceanalysis.ui.RelevanceAnalysisUIPlugin;
 import org.archimetrix.relevanceanalysis.ui.views.RelevantBadSmellsView;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -63,12 +65,14 @@ public class FindRelevantBadSmellsWizard extends Wizard
          monitor.beginTask(JOB_NAME, 100);
          Resource badSmellsRes = ResourceLoader.loadResource(this.badSmellsPath);
          Resource metricValuesRes = ResourceLoader.loadResource(this.metricValuesPath);
-         AbstractRelevanceAnalysis<ASGAnnotation> analysis = new RelevantBadSmellsAnalysis(badSmellsRes.getContents(),
+         AbstractRelevanceAnalysis analysis = new RelevantBadSmellsAnalysis(badSmellsRes.getContents(),
                (MetricValuesModel) metricValuesRes.getContents().get(0));
          monitor.worked(10);
          analysis.startAnalysis();
          monitor.worked(89);
-         this.analysisResult = analysis.getResult();
+         RelevanceResults<ASGAnnotation> result = analysis.getResult();
+         RelevanceResultsStorage.storeRelevantDeficiencies(badSmellsRes, result);
+         this.analysisResult = result;
          monitor.done();
          return Status.OK_STATUS;
       }
@@ -146,7 +150,7 @@ public class FindRelevantBadSmellsWizard extends Wizard
       }
       catch (PartInitException e)
       {
-         RelevanceAnalysisUIPlugin.getDefault().logError("Error occurred during opening result view.", e);
+         e.printStackTrace();
       }
    }
 

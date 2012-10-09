@@ -5,7 +5,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="menu:org.archimetrix.menu?after=org.archimetrix.architecturepreview.ui.separator">
+            locationURI="menu:org.archimetrix.menu?after=org.archimetrix.architectureprognosis.ui.separator">
          <command
                commandId="org.archimetrix.metricvaluesanalyzer.start"
                label="(Metric Values Analyzer)"

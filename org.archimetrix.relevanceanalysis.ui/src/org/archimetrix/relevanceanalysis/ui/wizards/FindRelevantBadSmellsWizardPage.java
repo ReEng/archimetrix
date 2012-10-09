@@ -49,8 +49,8 @@ public class FindRelevantBadSmellsWizardPage extends AbstractWizardPage
 
       ResourceSelectionSectionProvider sectionProvider = new ResourceSelectionSectionProvider();
       Group inputs = sectionProvider.createInputGroup(composite);
-      this.badSmellsSection = sectionProvider.createBadSmellsResourceSelection(inputs, this);
-      this.metricValuesSection = sectionProvider.createMetricValuesResourceSelection(inputs, this);
+      this.badSmellsSection = sectionProvider.addBadSmellsResourceSelection(inputs, this);
+      this.metricValuesSection = sectionProvider.addMetricValuesResourceSelection(inputs, this);
 
       setControl(composite);
 

@@ -32,35 +32,35 @@ public class ResourceSelectionSectionProvider
    }
 
 
-   public ResourceSelectionSection createSourceCodeDecoratorResourceSelection(final Composite parent, final WizardPage page)
+   public ResourceSelectionSection addSourceCodeDecoratorResourceSelection(final Composite parent, final WizardPage page)
    {
       return new ResourceSelectionSection(parent, WizardConstants.SOURCE_CODE_DECORATOR_MODEL_STRING, page,
             WizardConstants.SOURCE_CODE_DECORATOR_MODEL_DESCRIPTION, WizardConstants.SOURCECODEDECORATOR_FILE_EXTENSION);
    }
 
 
-   public ResourceSelectionSection createBadSmellsResourceSelection(final Composite parent, final WizardPage page)
+   public ResourceSelectionSection addBadSmellsResourceSelection(final Composite parent, final WizardPage page)
    {
       return new ResourceSelectionSection(parent, WizardConstants.DETECTED_BAD_SMELLS_STRING, page,
             WizardConstants.BAD_SMELLS_DESCRIPTION, WizardConstants.BAD_SMELLS_FILE_EXTENSION);
    }
 
 
-   public ResourceSelectionSection createMetricValuesResourceSelection(final Composite parent, final WizardPage page)
+   public ResourceSelectionSection addMetricValuesResourceSelection(final Composite parent, final WizardPage page)
    {
       return new ResourceSelectionSection(parent, WizardConstants.METRIC_VALUES_MODEL_STRING, page,
             WizardConstants.METRIC_VALUES_MODEL_DESCRIPTION, WizardConstants.ECORE_FILE_EXTENSION);
    }
 
 
-   public ResourceSelectionSection createBadSmellsCatalogResourceSelection(final Composite parent, final WizardPage page)
+   public ResourceSelectionSection addBadSmellsCatalogResourceSelection(final Composite parent, final WizardPage page)
    {
       return new ResourceSelectionSection(parent, WizardConstants.BAD_SMELLS_CATALOG_STRING, page,
             WizardConstants.BAD_SMELLS_CATALOG_DESCRIPTION, WizardConstants.BAD_SMELLS_CATALOG_EXTENSION);
    }
 
 
-   public ResourceSelectionSection createReengineeringStrategiesSelection(final Composite parent, final WizardPage page)
+   public ResourceSelectionSection addReengineeringStrategiesSelection(final Composite parent, final WizardPage page)
    {
       return new ResourceSelectionSection(parent, WizardConstants.REENGINEERING_STRATEGIES_STRING, page,
             WizardConstants.REENGINEERING_STRATEGIES_DESCRIPTION, WizardConstants.ECORE_FILE_EXTENSION);

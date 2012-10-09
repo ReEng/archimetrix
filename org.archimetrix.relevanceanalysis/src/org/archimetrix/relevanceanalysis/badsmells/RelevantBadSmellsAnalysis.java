@@ -87,6 +87,8 @@ public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnno
                "Bad Smell Occurrences Rating: Finished rating for relevance strategy " + (i + 1) + "/"
                      + (this.relevanceStrategies.size() + AbstractRelevanceAnalysis.NUMBER_OF_RESULT_STRATEGIES) + ".");
       }
+      
+      
    }
 
 

@@ -4,6 +4,7 @@ package org.archimetrix.relevanceanalysis.components.strategies;
 import metricvalues.MetricValuesModel;
 import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
 
+
 /**
  * The interface for relevance strategies of the component relevance analysis.
  * 
@@ -14,6 +15,7 @@ import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
  */
 public interface IComponentsStrategy
 {
+   public static final int NO_OF_RELEVANCE_STRATEGIES = 2;
 
    public double getRelevanceValue(ComponentImplementingClassesLink component, MetricValuesModel metricValuesModel);
 

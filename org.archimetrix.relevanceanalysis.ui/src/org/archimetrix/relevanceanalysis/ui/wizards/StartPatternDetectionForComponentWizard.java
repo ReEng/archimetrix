@@ -2,17 +2,19 @@ package org.archimetrix.relevanceanalysis.ui.wizards;
 
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 
-import org.archimetrix.inference.ArchimetrixInferenceJob;
+import org.archimetrix.commons.wizards.WizardConstants;
 import org.archimetrix.relevanceanalysis.ui.views.RelevantComponentsView;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.ui.IViewPart;
 import org.eclipse.ui.IWorkbench;
-import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
-import org.fujaba.commons.console.ReportLevel;
-import org.reclipse.structure.inference.ui.views.annotations.AnnotationView;
+import org.reclipse.structure.inference.InferenceEngine;
+import org.reclipse.structure.inference.InterpreterInferenceEngine;
+import org.reclipse.structure.inference.evaluation.SimilarityEvaluator;
+import org.reclipse.structure.inference.extended.ModifyCatalogAndGenerateAlgorithmsAction;
+import org.reclipse.structure.inference.notification.ReportLevel;
 import org.reclipse.structure.inference.ui.wizards.StartInferenceWizard;
 
 import eu.qimpress.samm.staticstructure.ComponentType;
@@ -20,8 +22,8 @@ import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
 
 
 /**
- * This class represents the wizard that is used to start the bad smell detection from the Relevant Components View. It
- * uses the StartPatternDetectionForComponentWizardPage.
+ * This class represents the wizard that is used to start the bad smell detection from the Relevant
+ * Components View. It uses the StartPatternDetectionForComponentWizardPage.
  * 
  * @author mcp
  * @author Last editor: $Author$
@@ -30,102 +32,90 @@ import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
  */
 public class StartPatternDetectionForComponentWizard extends StartInferenceWizard
 {
-	private static final String WIZARD_TITLE = "Start Bad Smell Detection";
+   private static final String RECLIPSE_STRUCTURAL_INFERENCE = "Reclipse Structural Inference";
+
+   private static final String WIZARD_TITLE = "Start Bad Smell Detection";
+
+   private Resource engines;
 
 
-	public StartPatternDetectionForComponentWizard(final IWorkbench workbench)
-	{
-		super();
+   public StartPatternDetectionForComponentWizard(final IWorkbench workbench)
+   {
+      super();
 
-		setWindowTitle(WIZARD_TITLE);
-	}
-
-
-	@Override
-	public boolean performFinish()
-	{
-		// save settings
-		storePageSettings();
-
-		Collection<ComponentType> selectedComponents = getSelectedComponents();
-		String catalogPath = page.getCatalog().getURI().toPlatformString(true);
-		String hostPath = getSCDM().getURI().toPlatformString(true);
-		String enginesPath = page.getEnginesPath();
-		ReportLevel reportLevel = ReportLevel.DEBUG;
-
-		final ArchimetrixInferenceJob job = new ArchimetrixInferenceJob(catalogPath, hostPath, enginesPath,
-				selectedComponents, reportLevel);
-
-		// cache views
-		IViewPart part = null;
-		try
-		{
-			part = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().showView(AnnotationView.ID);
-		}
-		catch (PartInitException e)
-		{
-			e.printStackTrace();
-			return false;
-		}
-
-		// check for existing annotations view
-		if (part == null || !(part instanceof AnnotationView))
-		{
-			return false;
-		}
-
-		final AnnotationView annotations = (AnnotationView) part;
-
-		// configure view
-		PlatformUI.getWorkbench().getDisplay().syncExec(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				if (annotations != null)
-				{
-					annotations.switchToInference(job.getEngine());
-				}
-			}
-		});
-
-		job.schedule();
-
-		return true;
-	}
+      setWindowTitle(WIZARD_TITLE);
+   }
 
 
-	private Collection<ComponentType> getSelectedComponents()
-	{
-		Object[] selectedComponentImplementingClassesLinks = RelevantComponentsView.getSelectedComponents();
-		Collection<ComponentType> selectedComponents = new ArrayList<ComponentType>();
-		for (Object object : selectedComponentImplementingClassesLinks)
-		{
-			ComponentImplementingClassesLink link = (ComponentImplementingClassesLink) object;
-			selectedComponents.add(link.getComponent());
-		}
-		return selectedComponents;
-	}
+   @Override
+   public boolean performFinish()
+   {
+      Object[] selection = getSelectedComponents();
+      Resource catalog = this.page.getCatalog();
+      StringBuilder catalogPath = new StringBuilder(catalog.getURI().toPlatformString(false));
+      catalogPath.append(".");
+      catalogPath.append(WizardConstants.ECORE_FILE_EXTENSION);
+      URI uri = URI.createPlatformResourceURI(catalogPath.toString(), true);
+      this.engines = catalog.getResourceSet().createResource(uri);
+
+      ModifyCatalogAndGenerateAlgorithmsAction generateAction = new ModifyCatalogAndGenerateAlgorithmsAction(catalog,
+            this.engines, selection);
+      PlatformUI.getWorkbench().getDisplay().syncExec(generateAction);
+
+      return super.performFinish();
+   }
 
 
-	private Resource getSCDM()
-	{
-		ComponentImplementingClassesLink link = (ComponentImplementingClassesLink) RelevantComponentsView
-				.getSelectedComponents()[0];
-		return link.eResource();
-	}
+   private Object[] getSelectedComponents()
+   {
+      Object[] selectedComponentImplementingClassesLinks = RelevantComponentsView.getSelectedComponents();
+      List<ComponentType> selectedComponents = new ArrayList<ComponentType>();
+      for (Object object : selectedComponentImplementingClassesLinks)
+      {
+         ComponentImplementingClassesLink link = (ComponentImplementingClassesLink) object;
+         selectedComponents.add(link.getComponent());
+      }
+      return selectedComponents.toArray();
+   }
 
 
-	@Override
-	public void addPages()
-	{
-		this.page = new StartPatternDetectionForComponentWizardPage(WIZARD_TITLE);
-		addPage(this.page);
-	}
+   @Override
+   protected InferenceEngine getInferenceEngine()
+   {
+      final InferenceEngine engine = new InterpreterInferenceEngine(RECLIPSE_STRUCTURAL_INFERENCE);
+
+      engine.setAstRoot(getSCDM());
+      engine.setCatalog(this.page.getCatalog());
+      engine.setEngines(this.engines);
+      engine.setAnnotationEvaluator(new SimilarityEvaluator());
+      engine.setSearchForAdditionalElements(true);
+
+      // TODO this should be configurable due to performance issues
+      engine.setReportLevel(ReportLevel.EVERYTHING);
+
+      return engine;
+   }
 
 
-	@Override
-	protected void storePageSettings()
-	{
-	}
+   private Resource getSCDM()
+   {
+      ComponentImplementingClassesLink link = (ComponentImplementingClassesLink) RelevantComponentsView
+            .getSelectedComponents()[0];
+      return link.eResource();
+   }
+
+
+   @Override
+   public void addPages()
+   {
+      this.page = new StartPatternDetectionForComponentWizardPage(WIZARD_TITLE);
+      addPage(this.page);
+   }
+
+
+   @Override
+   protected void storePageSettings()
+   {
+   }
+
 }

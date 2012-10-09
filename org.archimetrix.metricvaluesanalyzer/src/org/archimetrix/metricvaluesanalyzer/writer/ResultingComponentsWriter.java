@@ -6,7 +6,6 @@ import java.io.IOException;
 
 import metricvalues.MetricValuesModel;
 
-import org.archimetrix.metricvaluesanalyzer.Constants;
 import org.archimetrix.metricvaluesanalyzer.MetricValuesHelper;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -32,6 +31,7 @@ public class ResultingComponentsWriter
 
    private Repository loadSamm(final URI uri)
    {
+      // URI uri = URI.createPlatformResourceURI(inputFileName, true);
       ResourceSet sammRess = new ResourceSetImpl();
       URI normalized = sammRess.getURIConverter().normalize(uri);
       Resource resource = sammRess.getResource(normalized, true);
@@ -52,10 +52,11 @@ public class ResultingComponentsWriter
       this.bf.append(";Last Resulting Components:  ");
       for (ComponentType comp : samm.getComponenttype())
       {
+         // EcoreUtil.resolveAll(comp);
          this.bf.append(MetricValuesHelper.printComponentType(comp));
          this.bf.append(" ,  ");
       }
-      this.bf.append(Constants.LINE_SEPARATOR);
+      this.bf.append("\n");
    }
 
 

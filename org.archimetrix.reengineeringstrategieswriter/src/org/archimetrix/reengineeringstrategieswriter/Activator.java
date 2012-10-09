@@ -1,6 +1,5 @@
 package org.archimetrix.reengineeringstrategieswriter;
 
-import org.eclipse.core.runtime.Status;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
@@ -47,11 +46,5 @@ public class Activator extends AbstractUIPlugin {
 	public static Activator getDefault() {
 		return plugin;
 	}
-	
-
-   public void logError(final String msg, final Exception e)
-   {
-      getLog().log(new Status(Status.ERROR, PLUGIN_ID, Status.ERROR, msg, e));
-   }
 
 }

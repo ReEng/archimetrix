@@ -9,7 +9,6 @@ import metricvalues.ComponentCandidate;
 import metricvalues.Iteration;
 import metricvalues.MetricValue;
 
-import org.archimetrix.metricvaluesanalyzer.Constants;
 import org.archimetrix.metricvaluesanalyzer.MetricValuesHelper;
 import org.archimetrix.metricvaluesanalyzer.calculation.CompositionIndicationFunctionHelper;
 import org.archimetrix.metricvaluesanalyzer.calculation.MergeIndicationFunctionHelper;
@@ -35,9 +34,9 @@ public class ComponentPairValuesWriter
    {
       for (ComponentCandidate compCand : iteration.getComponentCandidatesList())
       {
-         bf.append(Constants.CELL_SEPARATOR);
+         bf.append(";");
          bf.append(MetricValuesHelper.printComponent(compCand.getFirstComponent()) + ", ");
-         bf.append(MetricValuesHelper.printComponent(compCand.getSecondComponent()) + Constants.CELL_SEPARATOR);
+         bf.append(MetricValuesHelper.printComponent(compCand.getSecondComponent()) + ";");
 
          writeMetricAndStrategyValues(bf, compCand);
 
@@ -46,8 +45,7 @@ public class ComponentPairValuesWriter
    }
 
 
-   private void writeMetricAndStrategyValues(final BufferedWriter bf, final ComponentCandidate compCand)
-         throws IOException
+   private void writeMetricAndStrategyValues(final BufferedWriter bf, final ComponentCandidate compCand) throws IOException
    {
       double nameResemblance = 0;
       double coupling = 0;
@@ -154,17 +152,12 @@ public class ComponentPairValuesWriter
       NumberFormat nf = NumberFormat.getInstance();
       nf.setMaximumFractionDigits(5);
 
-      bf.append(nf.format(interfaceAdherence)).append(Constants.CELL_SEPARATOR).append(nf.format(interfaceAccesses))
-            .append(Constants.CELL_SEPARATOR).append(nf.format(coupling)).append(Constants.CELL_SEPARATOR)
-            .append(nf.format(afferentCoupling)).append(Constants.CELL_SEPARATOR).append(nf.format(efferentCoupling))
-            .append(Constants.CELL_SEPARATOR).append(nf.format(intAccesses)).append(Constants.CELL_SEPARATOR)
-            .append(nf.format(extAccesses)).append(Constants.CELL_SEPARATOR).append(nf.format(packageMapping))
-            .append(Constants.CELL_SEPARATOR).append(nf.format(directoryMapping)).append(Constants.CELL_SEPARATOR)
-            .append(nf.format(totalTypes)).append(Constants.CELL_SEPARATOR).append(nf.format(abstractTypes))
-            .append(Constants.CELL_SEPARATOR).append(nf.format(abstractness)).append(Constants.CELL_SEPARATOR)
-            .append(nf.format(instability)).append(Constants.CELL_SEPARATOR).append(nf.format(subsystemComponent))
-            .append(Constants.CELL_SEPARATOR).append(nf.format(dms)).append(Constants.CELL_SEPARATOR)
-            .append(nf.format(nameResemblance)).append(Constants.CELL_SEPARATOR).append(nf.format(slaq));
+      bf.append(nf.format(interfaceAdherence) + ";" + nf.format(interfaceAccesses) + ";" + nf.format(coupling) + ";"
+            + nf.format(afferentCoupling) + ";" + nf.format(efferentCoupling) + ";" + nf.format(intAccesses) + ";"
+            + nf.format(extAccesses) + ";" + nf.format(packageMapping) + ";" + nf.format(directoryMapping) + ";"
+            + nf.format(totalTypes) + ";" + nf.format(abstractTypes) + ";" + nf.format(abstractness) + ";"
+            + nf.format(instability) + ";" + nf.format(subsystemComponent) + ";" + nf.format(dms) + ";"
+            + nf.format(nameResemblance) + ";" + nf.format(slaq));
 
       writeMergeStrategyValues(nf, bf, nameResemblance, coupling, interfaceAdherence, subsystemComponent, slaq,
             packageMapping, directoryMapping, defaultMergeIndicatingMetric);
@@ -174,11 +167,9 @@ public class ComponentPairValuesWriter
    }
 
 
-   private void writeCompositionStrategyValues(final NumberFormat nf, final BufferedWriter bf,
-         final double nameResemblance, final double coupling, final double interfaceAdherence,
-         final double subsystemComponent, final double slaq, final double packageMapping,
-         final double directoryMapping, final double dms, final double defaultCompositionIndicatingMetric)
-         throws IOException
+   private void writeCompositionStrategyValues(final NumberFormat nf, final BufferedWriter bf, final double nameResemblance,
+         final double coupling, final double interfaceAdherence, final double subsystemComponent, final double slaq, final double packageMapping,
+         final double directoryMapping, final double dms, final double defaultCompositionIndicatingMetric) throws IOException
    {
       CompositionIndicationFunctionHelper cif = new CompositionIndicationFunctionHelper(somoxConfig);
       double nameResemblanceStrategy = cif.getNameResemblanceStrategy(nameResemblance, coupling);
@@ -187,19 +178,20 @@ public class ComponentPairValuesWriter
       double hierarchyMappingStrategy = cif.getHierarchyMappingStrategy(packageMapping, directoryMapping);
       double dmsStrategy = cif.getDmsStrategy(dms);
 
-      bf.append(Constants.CELL_SEPARATOR).append(Constants.CELL_SEPARATOR).append(nf.format(nameResemblanceStrategy))
-            .append(Constants.CELL_SEPARATOR).append(nf.format(interfaceAdherenceStrategy))
-            .append(Constants.CELL_SEPARATOR).append(nf.format(subsystemComponentStrategy))
-            .append(Constants.CELL_SEPARATOR).append(nf.format(hierarchyMappingStrategy))
-            .append(Constants.CELL_SEPARATOR).append(nf.format(dmsStrategy));
-      bf.append(Constants.CELL_SEPARATOR).append(nf.format(defaultCompositionIndicatingMetric));
+      bf.append(";;" + nf.format(nameResemblanceStrategy) + ";" + nf.format(interfaceAdherenceStrategy) + ";"
+            + nf.format(subsystemComponentStrategy) + ";" + nf.format(hierarchyMappingStrategy) + ";"
+            + nf.format(dmsStrategy));
+      bf.append(";" + nf.format(defaultCompositionIndicatingMetric));
+      // bf.append(";"
+      // + nf.format(cif.computeOverallDirectedMetricValue(nameResemblanceStrategy,
+      // interfaceAdherenceStrategy,
+      // subsystemComponentStrategy, hierarchyMappingStrategy, dmsStrategy)));
    }
 
 
-   private void writeMergeStrategyValues(final NumberFormat nf, final BufferedWriter bf, final double nameResemblance,
-         final double coupling, final double interfaceAdherence, final double subsystemComponent, final double slaq,
-         final double packageMapping, final double directoryMapping, final double defaultMergeIndicatingMetric)
-         throws IOException
+   private void writeMergeStrategyValues(final NumberFormat nf, final BufferedWriter bf, final double nameResemblance, final double coupling,
+         final double interfaceAdherence, final double subsystemComponent, final double slaq, final double packageMapping,
+         final double directoryMapping, final double defaultMergeIndicatingMetric) throws IOException
    {
       MergeIndicationFunctionHelper mif = new MergeIndicationFunctionHelper(somoxConfig);
       double nameResemblanceStrategy = mif.getNameResemblanceStrategy(nameResemblance, coupling);
@@ -207,11 +199,13 @@ public class ComponentPairValuesWriter
       double subsystemComponentStrategy = mif.getSubsystemComponentStrategy(subsystemComponent, slaq);
       double hierarchyMappingStrategy = mif.getHierarchyMappingStrategy(packageMapping, directoryMapping);
 
-      bf.append(Constants.CELL_SEPARATOR).append(Constants.CELL_SEPARATOR).append(nf.format(nameResemblanceStrategy))
-            .append(Constants.CELL_SEPARATOR).append(nf.format(interfaceAdherenceStrategy))
-            .append(Constants.CELL_SEPARATOR).append(nf.format(subsystemComponentStrategy))
-            .append(Constants.CELL_SEPARATOR).append(nf.format(hierarchyMappingStrategy));
-      bf.append(Constants.CELL_SEPARATOR + nf.format(defaultMergeIndicatingMetric));
+      bf.append(";;" + nf.format(nameResemblanceStrategy) + ";" + nf.format(interfaceAdherenceStrategy) + ";"
+            + nf.format(subsystemComponentStrategy) + ";" + nf.format(hierarchyMappingStrategy));
+      bf.append(";" + nf.format(defaultMergeIndicatingMetric));
+      // bf.append(";"
+      // + nf.format(mif.computeOverallDirectedMetricValue(nameResemblanceStrategy,
+      // interfaceAdherenceStrategy,
+      // subsystemComponentStrategy, hierarchyMappingStrategy)));
    }
 
 

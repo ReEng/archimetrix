@@ -1,12 +1,12 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Archimetrix Metric Values Analyzer
+Bundle-Name: Metric Values Analyzer
 Bundle-SymbolicName: org.archimetrix.metricvaluesanalyzer;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.archimetrix.metricvaluesanalyzer.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.somox.metricvaluesstorage;bundle-version="1.0.0",
+ org.somox.metricValuesPersistency;bundle-version="1.0.0",
  eu.qimpress.sourcecodedecorator;bundle-version="1.0.0",
  org.somox.core;bundle-version="1.0.0",
  eu.qimpress.gast;bundle-version="1.0.0",
@@ -16,4 +16,3 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.archimetrix.metricvaluesanalyzer,
  org.archimetrix.metricvaluesanalyzer.calculation,
  org.archimetrix.metricvaluesanalyzer.writer
-Bundle-Vendor: University of Paderborn

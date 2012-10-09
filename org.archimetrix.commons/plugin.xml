@@ -1,59 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.5"?>
+<?eclipse version="3.4"?>
 <plugin>
-
-   <extension point="org.reclipse.structure.specification.metamodel">
-      <metamodel
-            description="This model  is referred to as the source code decorator model and it combines the SAMM and the GAST model into one."
-            id="eu.qimpress.sourcecodedecorator"
-            labeler="org.archimetrix.commons.SourceCodeDecoratorLabeler"
-            name="Combined SAMM and GAST model"
-            version="1.0">
-         <package
-               uri="http://www.fzi.de/gast/accesses">
-         </package>
-         <package
-               uri="http://www.fzi.de/gast/annotations">
-         </package>
-         <package
-               uri="http://www.fzi.de/gast/core">
-         </package>
-         <package
-               uri="http://www.fzi.de/gast/expressions">
-         </package>
-         <package
-               uri="http://www.fzi.de/gast/functions">
-         </package>
-         <package
-               uri="http://www.fzi.de/gast/metricresults">
-         </package>
-         <package
-               uri="http://www.fzi.de/gast/statements">
-         </package>
-         <package
-               uri="http://www.fzi.de/gast/types">
-         </package>
-         <package
-               uri="http://www.fzi.de/gast/variables">
-         </package>
-         <package
-               uri="http://qimpress.eu/sourcecodedecorator/1.0">
-         </package>
-         <package
-               uri="http://q-impress.eu/samm/staticstructure">
-         </package>
-      </metamodel>
-   </extension>
-
-   <extension point="org.reclipse.metrics.metrics">
-      <metric
-            acronym="SIZE"
-            id="org.reclipse.models.metric2"
-            name="This is some Text that should be name!">
-      </metric>
-   </extension>
-
-   <extension point="org.eclipse.ui.menus">
+<extension point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
             locationURI="menu:org.eclipse.ui.main.menu">
@@ -62,7 +10,7 @@
                label="Archimetrix">
                <visibleWhen checkEnabled="false">
             		<with variable="activeWorkbenchWindow.activePerspective">
-                		<equals value="org.archimetrix.inference.extension.ui.perspectives.ArchimetrixPerspective"/>
+                		<equals value="org.archimetrix.commons.extension.ui.perspectives.ArchimetrixPerspective"/>
             		</with>
          		</visibleWhen>
          </menu>
@@ -72,29 +20,33 @@
             locationURI="menu:org.archimetrix.ui.main.menu">
          <command
                commandId="org.archimetrix.commons.StartGASTExtractionCommand"
+               icon="icons/sissy.gif"
                id="org.archimetrix.commons.StartGASTExtractionMenuContribution"
                label="Extract GAST"
                style="push">
          </command>
          <command
                commandId="org.archimetrix.commons.StartArchitectureReconstructionCommand"
+               icon="icons/somox_16x16.gif"
                id="org.archimetrix.commons.StartArchitectureReconstructionMenuContribution"
                label="Start Architecture Reconstruction"
                style="push">
          </command>
       </menuContribution>
    </extension>
-   
+
+
       <extension
          point="org.eclipse.ui.perspectives">
       <perspective
-            class="org.archimetrix.inference.extension.ui.perspectives.ArchimetrixPerspective"
+            class="org.archimetrix.commons.extension.ui.perspectives.ArchimetrixPerspective"
             icon="icons/releng_gears.gif"
-            id="org.archimetrix.inference.extension.ui.perspectives.ArchimetrixPerspective"
+            id="org.archimetrix.commons.extension.ui.perspectives.ArchimetrixPerspective"
             name="Archimetrix Perspective">
       </perspective>
-   </extension>
-      <extension
+      </extension>
+      
+            <extension
             point="org.eclipse.ui.commands">
          <command
                defaultHandler="org.archimetrix.commons.handlers.OpenLaunchDialogHandler"
