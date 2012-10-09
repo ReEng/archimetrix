@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="ASCII"?>
+<staticstructure:ServiceArchitectureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:staticstructure="http://q-impress.eu/samm/staticstructure" id="_MEBKwBIREeKKlKNniG-R8Q" name="SoMoX Reverse Engineered System">
+  <provided id="_MvRHMxIREeKKlKNniG-R8Q" name="INetwork 9 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_MECY4RIREeKKlKNniG-R8Q"/>
+  </provided>
+  <provided id="_MvRHORIREeKKlKNniG-R8Q" name="IReporting 10 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_MEC_8BIREeKKlKNniG-R8Q"/>
+  </provided>
+  <provided id="_MvRHPxIREeKKlKNniG-R8Q" name="Assets 11 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_MEE1JRIREeKKlKNniG-R8Q"/>
+  </provided>
+  <provided id="_MvRHRRIREeKKlKNniG-R8Q" name="IDatabase 12 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_MEFcMBIREeKKlKNniG-R8Q"/>
+  </provided>
+  <provided id="_MvRHSxIREeKKlKNniG-R8Q" name="ILogistics 13 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_MEC_-xIREeKKlKNniG-R8Q"/>
+  </provided>
+  <provided id="_MvRHTxIREeKKlKNniG-R8Q" name="IPayment 14 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_MEDAABIREeKKlKNniG-R8Q"/>
+  </provided>
+  <provided id="_MvRHUxIREeKKlKNniG-R8Q" name="IStoreQuery 15 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_MEDnERIREeKKlKNniG-R8Q"/>
+  </provided>
+  <provided id="_MvRHVxIREeKKlKNniG-R8Q" name="ICalculator 16 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_MEEOFhIREeKKlKNniG-R8Q"/>
+  </provided>
+  <provided id="_MvRHWxIREeKKlKNniG-R8Q" name="ISearch 17 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_MEEOERIREeKKlKNniG-R8Q"/>
+  </provided>
+  <provided id="_MvRHXxIREeKKlKNniG-R8Q" name="IListView 18 (prov)(sys)">
+    <interfaceType href="internal_architecture_model.samm_repository#_MEFcPRIREeKKlKNniG-R8Q"/>
+  </provided>
+  <subcomponents id="_MvRHMRIREeKKlKNniG-R8Q" name=" &lt;PC No. 0 NetworkManager>">
+    <realizedBy xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_MECY4BIREeKKlKNniG-R8Q"/>
+  </subcomponents>
+  <subcomponents id="_MvRHNxIREeKKlKNniG-R8Q" name=" &lt;PC No. 2 Reporting>">
+    <realizedBy xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_MECY6hIREeKKlKNniG-R8Q"/>
+  </subcomponents>
+  <subcomponents id="_MvRHPRIREeKKlKNniG-R8Q" name=" &lt;PC No. 16 Assets>">
+    <realizedBy xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_MEEOHRIREeKKlKNniG-R8Q"/>
+  </subcomponents>
+  <subcomponents id="_MvRHQxIREeKKlKNniG-R8Q" name=" &lt;PC No. 18 Database>">
+    <realizedBy xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_MEE1MRIREeKKlKNniG-R8Q"/>
+  </subcomponents>
+  <subcomponents id="_MvRHSRIREeKKlKNniG-R8Q" name="CC No. 3 de.upb.storeexample.logistics &lt;...No. 14 ProductSearch>>  &lt;PC No. 20 ProductsListView>>">
+    <realizedBy xsi:type="staticstructure:CompositeComponent" href="internal_architecture_model.samm_repository#_MrL4cBIREeKKlKNniG-R8Q"/>
+  </subcomponents>
+  <subcomponents id="_MvRuQRIREeKKlKNniG-R8Q" name="SoMoX Dummy Component Instance">
+    <realizedBy xsi:type="staticstructure:PrimitiveComponent" href="internal_architecture_model.samm_repository#_MvRuQBIREeKKlKNniG-R8Q"/>
+  </subcomponents>
+  <connector id="_MvRHNhIREeKKlKNniG-R8Q">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHNBIREeKKlKNniG-R8Q" subcomponent="_MvRHMRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MECY6BIREeKKlKNniG-R8Q"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_MvRHNRIREeKKlKNniG-R8Q" port="_MvRHMxIREeKKlKNniG-R8Q"/>
+  </connector>
+  <connector id="_MvRHPBIREeKKlKNniG-R8Q">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHOhIREeKKlKNniG-R8Q" subcomponent="_MvRHNxIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MEC_-BIREeKKlKNniG-R8Q"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_MvRHOxIREeKKlKNniG-R8Q" port="_MvRHORIREeKKlKNniG-R8Q"/>
+  </connector>
+  <connector id="_MvRHQhIREeKKlKNniG-R8Q">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHQBIREeKKlKNniG-R8Q" subcomponent="_MvRHPRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MEE1LBIREeKKlKNniG-R8Q"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_MvRHQRIREeKKlKNniG-R8Q" port="_MvRHPxIREeKKlKNniG-R8Q"/>
+  </connector>
+  <connector id="_MvRHSBIREeKKlKNniG-R8Q">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHRhIREeKKlKNniG-R8Q" subcomponent="_MvRHQxIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MEFcOBIREeKKlKNniG-R8Q"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_MvRHRxIREeKKlKNniG-R8Q" port="_MvRHRRIREeKKlKNniG-R8Q"/>
+  </connector>
+  <connector id="_MvRHThIREeKKlKNniG-R8Q">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHTBIREeKKlKNniG-R8Q" subcomponent="_MvRHSRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MrL4eBIREeKKlKNniG-R8Q"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_MvRHTRIREeKKlKNniG-R8Q" port="_MvRHSxIREeKKlKNniG-R8Q"/>
+  </connector>
+  <connector id="_MvRHUhIREeKKlKNniG-R8Q">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHUBIREeKKlKNniG-R8Q" subcomponent="_MvRHSRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MrL4fBIREeKKlKNniG-R8Q"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_MvRHURIREeKKlKNniG-R8Q" port="_MvRHTxIREeKKlKNniG-R8Q"/>
+  </connector>
+  <connector id="_MvRHVhIREeKKlKNniG-R8Q">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHVBIREeKKlKNniG-R8Q" subcomponent="_MvRHSRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MrL4gBIREeKKlKNniG-R8Q"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_MvRHVRIREeKKlKNniG-R8Q" port="_MvRHUxIREeKKlKNniG-R8Q"/>
+  </connector>
+  <connector id="_MvRHWhIREeKKlKNniG-R8Q">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHWBIREeKKlKNniG-R8Q" subcomponent="_MvRHSRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MrL4hBIREeKKlKNniG-R8Q"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_MvRHWRIREeKKlKNniG-R8Q" port="_MvRHVxIREeKKlKNniG-R8Q"/>
+  </connector>
+  <connector id="_MvRHXhIREeKKlKNniG-R8Q">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHXBIREeKKlKNniG-R8Q" subcomponent="_MvRHSRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MrL4iBIREeKKlKNniG-R8Q"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_MvRHXRIREeKKlKNniG-R8Q" port="_MvRHWxIREeKKlKNniG-R8Q"/>
+  </connector>
+  <connector id="_MvRHYhIREeKKlKNniG-R8Q">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHYBIREeKKlKNniG-R8Q" subcomponent="_MvRHSRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MrL4jBIREeKKlKNniG-R8Q"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_MvRHYRIREeKKlKNniG-R8Q" port="_MvRHXxIREeKKlKNniG-R8Q"/>
+  </connector>
+  <connector id="_MvRHYxIREeKKlKNniG-R8Q" documentation="Assembly Connector from  &lt;PC No. 16 Assets> to  &lt;PC No. 2 Reporting>">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHZBIREeKKlKNniG-R8Q" subcomponent="_MvRHPRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MEE1IBIREeKKlKNniG-R8Q"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHZRIREeKKlKNniG-R8Q" subcomponent="_MvRHNxIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MEC_-BIREeKKlKNniG-R8Q"/>
+    </endpoints>
+  </connector>
+  <connector id="_MvRHZhIREeKKlKNniG-R8Q" documentation="Assembly Connector from  &lt;PC No. 16 Assets> to CC No. 3 de.upb.storeexample.logistics &lt;...No. 14 ProductSearch>>  &lt;PC No. 20 ProductsListView>>">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHZxIREeKKlKNniG-R8Q" subcomponent="_MvRHPRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MEE1IRIREeKKlKNniG-R8Q"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHaBIREeKKlKNniG-R8Q" subcomponent="_MvRHSRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MrL4fBIREeKKlKNniG-R8Q"/>
+    </endpoints>
+  </connector>
+  <connector id="_MvRHaRIREeKKlKNniG-R8Q" documentation="Assembly Connector from  &lt;PC No. 16 Assets> to CC No. 3 de.upb.storeexample.logistics &lt;...No. 14 ProductSearch>>  &lt;PC No. 20 ProductsListView>>">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHahIREeKKlKNniG-R8Q" subcomponent="_MvRHPRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MEE1IhIREeKKlKNniG-R8Q"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHaxIREeKKlKNniG-R8Q" subcomponent="_MvRHSRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MrL4eBIREeKKlKNniG-R8Q"/>
+    </endpoints>
+  </connector>
+  <connector id="_MvRHbBIREeKKlKNniG-R8Q" documentation="Assembly Connector from  &lt;PC No. 16 Assets> to CC No. 3 de.upb.storeexample.logistics &lt;...No. 14 ProductSearch>>  &lt;PC No. 20 ProductsListView>>">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHbRIREeKKlKNniG-R8Q" subcomponent="_MvRHPRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MEE1IxIREeKKlKNniG-R8Q"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRHbhIREeKKlKNniG-R8Q" subcomponent="_MvRHSRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MrL4gBIREeKKlKNniG-R8Q"/>
+    </endpoints>
+  </connector>
+  <connector id="_MvRuRBIREeKKlKNniG-R8Q" documentation="Assembly Connector from  &lt;PC No. 16 Assets> to SoMoX Dummy Component Instance">
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRuRRIREeKKlKNniG-R8Q" subcomponent="_MvRHPRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MEE1JBIREeKKlKNniG-R8Q"/>
+    </endpoints>
+    <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_MvRuRhIREeKKlKNniG-R8Q" subcomponent="_MvRuQRIREeKKlKNniG-R8Q">
+      <port xsi:type="staticstructure:InterfacePort" href="internal_architecture_model.samm_repository#_MvRuQxIREeKKlKNniG-R8Q"/>
+    </endpoints>
+  </connector>
+  <service id="_MvRHMhIREeKKlKNniG-R8Q" name=" &lt;PC No. 0 NetworkManager>" subcomponentInstance="_MvRHMRIREeKKlKNniG-R8Q">
+    <container href="pathmap://SOMOX_MODELS/somox-default.samm_targetenvironment#_7wiiMHcAEd-o5LaIF71Pmg"/>
+  </service>
+  <service id="_MvRHOBIREeKKlKNniG-R8Q" name=" &lt;PC No. 2 Reporting>" subcomponentInstance="_MvRHNxIREeKKlKNniG-R8Q">
+    <container href="pathmap://SOMOX_MODELS/somox-default.samm_targetenvironment#_7wiiMHcAEd-o5LaIF71Pmg"/>
+  </service>
+  <service id="_MvRHPhIREeKKlKNniG-R8Q" name=" &lt;PC No. 16 Assets>" subcomponentInstance="_MvRHPRIREeKKlKNniG-R8Q">
+    <container href="pathmap://SOMOX_MODELS/somox-default.samm_targetenvironment#_7wiiMHcAEd-o5LaIF71Pmg"/>
+  </service>
+  <service id="_MvRHRBIREeKKlKNniG-R8Q" name=" &lt;PC No. 18 Database>" subcomponentInstance="_MvRHQxIREeKKlKNniG-R8Q">
+    <container href="pathmap://SOMOX_MODELS/somox-default.samm_targetenvironment#_7wiiMHcAEd-o5LaIF71Pmg"/>
+  </service>
+  <service id="_MvRHShIREeKKlKNniG-R8Q" name="CC No. 3 de.upb.storeexample.logistics &lt;...No. 14 ProductSearch>>  &lt;PC No. 20 ProductsListView>>" subcomponentInstance="_MvRHSRIREeKKlKNniG-R8Q">
+    <container href="pathmap://SOMOX_MODELS/somox-default.samm_targetenvironment#_7wiiMHcAEd-o5LaIF71Pmg"/>
+  </service>
+  <service id="_MvRuQhIREeKKlKNniG-R8Q" name="SoMoX Dummy Component Allocation Service" subcomponentInstance="_MvRuQRIREeKKlKNniG-R8Q">
+    <container href="pathmap://SOMOX_MODELS/somox-default.samm_targetenvironment#_7wiiMHcAEd-o5LaIF71Pmg"/>
+  </service>
+</staticstructure:ServiceArchitectureModel>

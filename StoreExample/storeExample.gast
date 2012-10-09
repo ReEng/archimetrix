@@ -1,0 +1,1961 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:accesses="http://www.fzi.de/gast/accesses" xmlns:core="http://www.fzi.de/gast/core" xmlns:statements="http://www.fzi.de/gast/statements" xmlns:types="http://www.fzi.de/gast/types" id="_DBMfYBIREeKKlKNniG-R8Q">
+  <types xsi:type="types:GASTClass" id="_DGz_MBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="1" visibility="VISIBILITYPACKAGE" simpleName="char" primitive="true">
+    <self id="_DJaARhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="2" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_DJaARxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="3" accessedTarget="_DGz_MBIREeKKlKNniG-R8Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTClass" id="_DGz_MRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="4" visibility="VISIBILITYPACKAGE" simpleName="short" primitive="true">
+    <self id="_DJaARBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="5" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_DJaARRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="6" accessedTarget="_DGz_MRIREeKKlKNniG-R8Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTClass" id="_DGz_MhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="7" visibility="VISIBILITYPACKAGE" simpleName="byte" primitive="true">
+    <self id="_DJaAQhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="8" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_DJaAQxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="9" accessedTarget="_DGz_MhIREeKKlKNniG-R8Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTClass" id="_DGz_MxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="10" visibility="VISIBILITYPACKAGE" simpleName="int" primitive="true">
+    <self id="_DJaAQBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="11" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_DJaAQRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="12" accessedTarget="_DGz_MxIREeKKlKNniG-R8Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTClass" id="_DGz_NBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="13" visibility="VISIBILITYPACKAGE" simpleName="long" primitive="true">
+    <self id="_DJaAPhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="14" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_DJaAPxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="15" accessedTarget="_DGz_NBIREeKKlKNniG-R8Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTClass" id="_DG0mQBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="16" visibility="VISIBILITYPACKAGE" simpleName="float" primitive="true">
+    <self id="_DJaAPBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="17" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_DJaAPRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="18" accessedTarget="_DG0mQBIREeKKlKNniG-R8Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTClass" id="_DG0mQRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="19" visibility="VISIBILITYPACKAGE" simpleName="void" primitive="true">
+    <self id="_DJaAOhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="20" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_DJaAOxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="21" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTClass" id="_DG0mQhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="22" visibility="VISIBILITYPACKAGE" simpleName="double" primitive="true">
+    <self id="_DJaAOBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="23" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_DJaAORIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="24" accessedTarget="_DG0mQhIREeKKlKNniG-R8Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTClass" id="_DG0mQxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="25" visibility="VISIBILITYPACKAGE" simpleName="boolean" primitive="true">
+    <self id="_DJaANhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="26" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+      <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      <typeDeclaration id="_DJaANxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="27" accessedTarget="_DG0mQxIREeKKlKNniG-R8Q">
+        <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+      </typeDeclaration>
+    </self>
+  </types>
+  <types xsi:type="types:GASTArray" id="_DG3CgRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="204" simpleName="Item[]" referenceType="true" decoratedType="_DG2bdhIREeKKlKNniG-R8Q"/>
+  <directories id="_DFPR4BIREeKKlKNniG-R8Q" simpleName="/"/>
+  <directories id="_DFPR4RIREeKKlKNniG-R8Q" simpleName="UnknownDirectory">
+    <files id="_DFSVPRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="222" pathName=""/>
+    <files id="_DFS8QRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="233" pathName=""/>
+    <files id="_DFS8QhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="237" pathName=""/>
+    <files id="_DFS8RRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="532" pathName=""/>
+    <files id="_DFS8RxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="550" pathName=""/>
+    <files id="_DFS8SBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="554" pathName=""/>
+    <files id="_DFTjURIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="563" pathName=""/>
+    <files id="_DFTjUhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="567" pathName=""/>
+    <files id="_DFTjVxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="592" pathName=""/>
+    <files id="_DFTjWhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="747" pathName=""/>
+  </directories>
+  <directories id="_DFPR4xIREeKKlKNniG-R8Q" simpleName="FILE:D:"/>
+  <directories id="_DFP48BIREeKKlKNniG-R8Q" simpleName="Workspaces"/>
+  <directories id="_DFP48RIREeKKlKNniG-R8Q" simpleName="MA Platenius Runtime-Workspace"/>
+  <directories id="_DFP48hIREeKKlKNniG-R8Q" simpleName="StoreExample"/>
+  <directories id="_DFP48xIREeKKlKNniG-R8Q" simpleName="src"/>
+  <directories id="_DFP49BIREeKKlKNniG-R8Q" simpleName="de"/>
+  <directories id="_DFP49RIREeKKlKNniG-R8Q" simpleName="upb"/>
+  <directories id="_DFP49hIREeKKlKNniG-R8Q" simpleName="storeexample"/>
+  <directories id="_DFP49xIREeKKlKNniG-R8Q" simpleName="database">
+    <files id="_DFPR4hIREeKKlKNniG-R8Q" sissyId="28" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\database\\IDatabase.java"/>
+    <files id="_DFRuIRIREeKKlKNniG-R8Q" sissyId="45" sourceFile="true" importedTypes="_DG2bcBIREeKKlKNniG-R8Q" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\database\\Database.java"/>
+  </directories>
+  <directories id="_DFP4-RIREeKKlKNniG-R8Q" simpleName="store">
+    <files id="_DFP4-BIREeKKlKNniG-R8Q" sissyId="29" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\store\\IStoreQuery.java"/>
+    <files id="_DFQgChIREeKKlKNniG-R8Q" sissyId="37" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\store\\IOrder.java"/>
+    <files id="_DFRHFxIREeKKlKNniG-R8Q" sissyId="43" sourceFile="true" importedTypes="_DG10ZRIREeKKlKNniG-R8Q _DG10ZhIREeKKlKNniG-R8Q _DG0mRhIREeKKlKNniG-R8Q _DG1NUBIREeKKlKNniG-R8Q" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\store\\Inventory.java"/>
+    <files id="_DFRuIBIREeKKlKNniG-R8Q" sissyId="44" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\store\\ICalculator.java"/>
+    <files id="_DFRuIhIREeKKlKNniG-R8Q" sissyId="46" sourceFile="true" importedTypes="_DG1NURIREeKKlKNniG-R8Q _DG1NUhIREeKKlKNniG-R8Q" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\store\\PriceCalculator.java"/>
+    <files id="_DFRuJBIREeKKlKNniG-R8Q" sissyId="48" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\store\\Item.java"/>
+    <files id="_DFRuJRIREeKKlKNniG-R8Q" sissyId="49" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\store\\StoreQuery.java"/>
+  </directories>
+  <directories id="_DFP4-xIREeKKlKNniG-R8Q" simpleName="payment">
+    <files id="_DFP4-hIREeKKlKNniG-R8Q" sissyId="30" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\payment\\Invoice.java"/>
+    <files id="_DFRHERIREeKKlKNniG-R8Q" sissyId="39" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\payment\\IPayment.java"/>
+    <files id="_DFSVMBIREeKKlKNniG-R8Q" sissyId="51" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\payment\\PaymentManager.java"/>
+  </directories>
+  <directories id="_DFQgARIREeKKlKNniG-R8Q" simpleName="search">
+    <files id="_DFQgABIREeKKlKNniG-R8Q" sissyId="31" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\store\\search\\ProductSearch.java"/>
+    <files id="_DFQgAhIREeKKlKNniG-R8Q" sissyId="32" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\store\\search\\ISearch.java"/>
+  </directories>
+  <directories id="_DFQgBBIREeKKlKNniG-R8Q" simpleName="network">
+    <files id="_DFQgAxIREeKKlKNniG-R8Q" sissyId="33" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\network\\NetworkManager.java"/>
+    <files id="_DFQgCRIREeKKlKNniG-R8Q" sissyId="36" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\network\\INetwork.java"/>
+  </directories>
+  <directories id="_DFQgBhIREeKKlKNniG-R8Q" simpleName="ui">
+    <files id="_DFQgBRIREeKKlKNniG-R8Q" sissyId="34" sourceFile="true" importedTypes="_DG0mRBIREeKKlKNniG-R8Q _DG0mRRIREeKKlKNniG-R8Q _DG0mRhIREeKKlKNniG-R8Q _DG1NUBIREeKKlKNniG-R8Q _DG1NURIREeKKlKNniG-R8Q _DG1NUhIREeKKlKNniG-R8Q" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\ui\\ProductsListView.java"/>
+    <files id="_DFRHEBIREeKKlKNniG-R8Q" sissyId="38" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\ui\\IListView.java"/>
+  </directories>
+  <directories id="_DFQgCBIREeKKlKNniG-R8Q" simpleName="accounting">
+    <files id="_DFQgBxIREeKKlKNniG-R8Q" sissyId="35" sourceFile="true" importedTypes="_DG1NUxIREeKKlKNniG-R8Q _DG1NVBIREeKKlKNniG-R8Q _DG1NVRIREeKKlKNniG-R8Q _DG1NVhIREeKKlKNniG-R8Q _DG1NVxIREeKKlKNniG-R8Q _DG10YBIREeKKlKNniG-R8Q _DG10YRIREeKKlKNniG-R8Q _DG10YhIREeKKlKNniG-R8Q _DG10YxIREeKKlKNniG-R8Q" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\accounting\\Assets.java"/>
+    <files id="_DFRuJhIREeKKlKNniG-R8Q" sissyId="50" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\accounting\\Report.java"/>
+  </directories>
+  <directories id="_DFRHExIREeKKlKNniG-R8Q" simpleName="controlling">
+    <files id="_DFRHEhIREeKKlKNniG-R8Q" sissyId="40" sourceFile="true" importedTypes="_DG10ZBIREeKKlKNniG-R8Q" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\controlling\\IReporting.java"/>
+    <files id="_DFRHFBIREeKKlKNniG-R8Q" sissyId="41" sourceFile="true" importedTypes="_DG10ZBIREeKKlKNniG-R8Q" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\controlling\\Reporting.java"/>
+  </directories>
+  <directories id="_DFRHFhIREeKKlKNniG-R8Q" simpleName="logistics">
+    <files id="_DFRHFRIREeKKlKNniG-R8Q" sissyId="42" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\logistics\\Logistics.java"/>
+    <files id="_DFRuIxIREeKKlKNniG-R8Q" sissyId="47" sourceFile="true" pathName="FILE:D:\\Workspaces\\MA Platenius Runtime-Workspace\\StoreExample\\src\\de\\upb\\storeexample\\logistics\\ILogistics.java"/>
+  </directories>
+  <directories id="_DFSVMhIREeKKlKNniG-R8Q" simpleName="ARCHIVE:D:"/>
+  <directories id="_DFSVMxIREeKKlKNniG-R8Q" simpleName="Programme"/>
+  <directories id="_DFSVNBIREeKKlKNniG-R8Q" simpleName="Java"/>
+  <directories id="_DFSVNRIREeKKlKNniG-R8Q" simpleName="jre1.6.0_33"/>
+  <directories id="_DFSVNhIREeKKlKNniG-R8Q" simpleName="lib"/>
+  <directories id="_DFSVNxIREeKKlKNniG-R8Q" simpleName="rt.jar?java"/>
+  <directories id="_DFSVOBIREeKKlKNniG-R8Q" simpleName="util">
+    <files id="_DFSVMRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="55" pathName="ARCHIVE:D:\\Programme\\Java\\jre1.6.0_33\\lib\\rt.jar?java/util/ArrayList.class"/>
+    <files id="_DFSVORIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="61" pathName="ARCHIVE:D:\\Programme\\Java\\jre1.6.0_33\\lib\\rt.jar?java/util/List.class"/>
+    <files id="_DFSVOhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="141" pathName="ARCHIVE:D:\\Programme\\Java\\jre1.6.0_33\\lib\\rt.jar?java/util/HashMap.class"/>
+    <files id="_DFS8QBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="223" pathName="ARCHIVE:D:\\Programme\\Java\\jre1.6.0_33\\lib\\rt.jar?java/util/List.class"/>
+    <files id="_DFS8QxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="238" pathName="ARCHIVE:D:\\Programme\\Java\\jre1.6.0_33\\lib\\rt.jar?java/util/HashMap.class"/>
+    <files id="_DFS8RhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="533" pathName="ARCHIVE:D:\\Programme\\Java\\jre1.6.0_33\\lib\\rt.jar?java/util/Collection.class"/>
+    <files id="_DFTjUBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="555" pathName="ARCHIVE:D:\\Programme\\Java\\jre1.6.0_33\\lib\\rt.jar?java/util/AbstractMap.class"/>
+    <files id="_DFTjUxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="568" pathName="ARCHIVE:D:\\Programme\\Java\\jre1.6.0_33\\lib\\rt.jar?java/util/Map.class"/>
+    <files id="_DFUKYBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="748" pathName="ARCHIVE:D:\\Programme\\Java\\jre1.6.0_33\\lib\\rt.jar?java/util/ArrayList.class"/>
+  </directories>
+  <directories id="_DFSVPBIREeKKlKNniG-R8Q" simpleName="lang">
+    <files id="_DFSVOxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="212" pathName="ARCHIVE:D:\\Programme\\Java\\jre1.6.0_33\\lib\\rt.jar?java/lang/String.class"/>
+    <files id="_DFS8RBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="517" pathName="ARCHIVE:D:\\Programme\\Java\\jre1.6.0_33\\lib\\rt.jar?java/lang/Object.class"/>
+    <files id="_DFTjVBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="573" pathName="ARCHIVE:D:\\Programme\\Java\\jre1.6.0_33\\lib\\rt.jar?java/lang/Cloneable.class"/>
+    <files id="_DFTjWBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="593" pathName="ARCHIVE:D:\\Programme\\Java\\jre1.6.0_33\\lib\\rt.jar?java/lang/Comparable.class"/>
+    <files id="_DFTjWRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="598" pathName="ARCHIVE:D:\\Programme\\Java\\jre1.6.0_33\\lib\\rt.jar?java/lang/CharSequence.class"/>
+  </directories>
+  <directories id="_DFTjVhIREeKKlKNniG-R8Q" simpleName="io">
+    <files id="_DFTjVRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="578" pathName="ARCHIVE:D:\\Programme\\Java\\jre1.6.0_33\\lib\\rt.jar?java/io/Serializable.class"/>
+  </directories>
+  <packages id="_DFFg4hIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="752" simpleName="java">
+    <subPackages id="_DFDEoBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="56" simpleName="util">
+      <classes id="_DG0mRBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="52" visibility="VISIBILITYPUBLIC" simpleName="ArrayList" referenceType="true">
+        <position assembly="_DFSVMRIREeKKlKNniG-R8Q"/>
+        <self id="_DJaANBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="53" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJaANRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="54" accessedTarget="_DG0mRBIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG0mRRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="58" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="List" referenceType="true" interface="true">
+        <position assembly="_DFSVORIREeKKlKNniG-R8Q"/>
+        <self id="_DJaAMhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="59" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJaAMxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="60" accessedTarget="_DG0mRRIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG2bcBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="138" visibility="VISIBILITYPUBLIC" simpleName="HashMap" referenceType="true">
+        <position assembly="_DFSVOhIREeKKlKNniG-R8Q"/>
+        <self id="_DJZZLBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="139" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZLRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="140" accessedTarget="_DG2bcBIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes xsi:type="types:GenericClass" id="_DG3CgxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="216" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="List" referenceType="true" interface="true">
+        <position assembly="_DFS8QBIREeKKlKNniG-R8Q"/>
+        <methods id="_DINtaBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="691" simpleName="get" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1" assembly="_DFS8QBIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DINtaRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="692" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1" assembly="_DFS8QBIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+        </methods>
+        <methods id="_DIOUcBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="727" simpleName="add" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1" assembly="_DFS8QBIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIOUcRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="728" accessedTarget="_DG0mQxIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1" assembly="_DFS8QBIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+        </methods>
+        <inheritanceTypeAccesses id="_DKx5NRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="525" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position assembly="_DFS8QBIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_DKx5NhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="534" accessedTarget="_DG3plBIREeKKlKNniG-R8Q">
+          <position assembly="_DFS8QBIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJYyIBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="217" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJYyIRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="218" accessedTarget="_DG3CgxIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+        <typeParameters id="_DG3ChBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="219" visibility="VISIBILITYPUBLIC" simpleName="E" referenceType="true">
+          <position assembly="_DFSVPRIREeKKlKNniG-R8Q"/>
+          <self id="_DJYyHhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="220" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            <typeDeclaration id="_DJYyHxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="221" accessedTarget="_DG3ChBIREeKKlKNniG-R8Q">
+              <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            </typeDeclaration>
+          </self>
+        </typeParameters>
+      </classes>
+      <classes xsi:type="types:GenericClass" id="_DG3pkBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="227" visibility="VISIBILITYPUBLIC" simpleName="HashMap" referenceType="true">
+        <position assembly="_DFS8QxIREeKKlKNniG-R8Q"/>
+        <constructors id="_DIOUcxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="750" simpleName="HashMap" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1" assembly="_DFS8QxIREeKKlKNniG-R8Q"/>
+        </constructors>
+        <methods id="_DINtahIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="711" simpleName="get" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1" assembly="_DFS8QxIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DINtaxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="712" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1" assembly="_DFS8QxIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+        </methods>
+        <methods id="_DINtbBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="718" simpleName="put" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1" assembly="_DFS8QxIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DINtbRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="719" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1" assembly="_DFS8QxIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+        </methods>
+        <inheritanceTypeAccesses id="_DKx5OBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="556" accessedTarget="_DG3plhIREeKKlKNniG-R8Q">
+          <position assembly="_DFS8QxIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_DKx5ORIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="569" accessedTarget="_DG4QoRIREeKKlKNniG-R8Q">
+          <position assembly="_DFS8QxIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_DKx5OhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="574" accessedTarget="_DG4QpBIREeKKlKNniG-R8Q">
+          <position assembly="_DFS8QxIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_DKx5OxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="580" accessedTarget="_DG4QpRIREeKKlKNniG-R8Q">
+          <position assembly="_DFS8QxIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJYyGhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="228" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJYyGxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="229" accessedTarget="_DG3pkBIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+        <typeParameters id="_DG3pkRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="230" visibility="VISIBILITYPUBLIC" simpleName="K" referenceType="true">
+          <position assembly="_DFS8QRIREeKKlKNniG-R8Q"/>
+          <self id="_DJYyGBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="231" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            <typeDeclaration id="_DJYyGRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="232" accessedTarget="_DG3pkRIREeKKlKNniG-R8Q">
+              <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            </typeDeclaration>
+          </self>
+        </typeParameters>
+        <typeParameters id="_DG3pkhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="234" visibility="VISIBILITYPUBLIC" simpleName="V" referenceType="true">
+          <position assembly="_DFS8QhIREeKKlKNniG-R8Q"/>
+          <self id="_DJYyFhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="235" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            <typeDeclaration id="_DJYyFxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="236" accessedTarget="_DG3pkhIREeKKlKNniG-R8Q">
+              <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            </typeDeclaration>
+          </self>
+        </typeParameters>
+      </classes>
+      <classes xsi:type="types:GenericClass" id="_DG3plBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="526" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="Collection" referenceType="true" interface="true">
+        <position assembly="_DFS8RhIREeKKlKNniG-R8Q"/>
+        <self id="_DJYLCBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="527" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJYLCRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="528" accessedTarget="_DG3plBIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+        <typeParameters id="_DG3plRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="529" visibility="VISIBILITYPUBLIC" simpleName="E" referenceType="true">
+          <position assembly="_DFS8RRIREeKKlKNniG-R8Q"/>
+          <self id="_DJYLBhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="530" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            <typeDeclaration id="_DJYLBxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="531" accessedTarget="_DG3plRIREeKKlKNniG-R8Q">
+              <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            </typeDeclaration>
+          </self>
+        </typeParameters>
+      </classes>
+      <classes xsi:type="types:GenericClass" id="_DG3plhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="544" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="AbstractMap" referenceType="true">
+        <position assembly="_DFTjUBIREeKKlKNniG-R8Q"/>
+        <self id="_DJYLBBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="545" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJYLBRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="546" accessedTarget="_DG3plhIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+        <typeParameters id="_DG3plxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="547" visibility="VISIBILITYPUBLIC" simpleName="K" referenceType="true">
+          <position assembly="_DFS8RxIREeKKlKNniG-R8Q"/>
+          <self id="_DJYLAhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="548" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            <typeDeclaration id="_DJYLAxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="549" accessedTarget="_DG3plxIREeKKlKNniG-R8Q">
+              <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            </typeDeclaration>
+          </self>
+        </typeParameters>
+        <typeParameters id="_DG4QoBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="551" visibility="VISIBILITYPUBLIC" simpleName="V" referenceType="true">
+          <position assembly="_DFS8SBIREeKKlKNniG-R8Q"/>
+          <self id="_DJYLABIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="552" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            <typeDeclaration id="_DJYLARIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="553" accessedTarget="_DG4QoBIREeKKlKNniG-R8Q">
+              <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            </typeDeclaration>
+          </self>
+        </typeParameters>
+      </classes>
+      <classes xsi:type="types:GenericClass" id="_DG4QoRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="557" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="Map" referenceType="true" interface="true">
+        <position assembly="_DFTjUxIREeKKlKNniG-R8Q"/>
+        <self id="_DJXkAhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="558" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJXkAxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="559" accessedTarget="_DG4QoRIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+        <typeParameters id="_DG4QohIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="560" visibility="VISIBILITYPUBLIC" simpleName="K" referenceType="true">
+          <position assembly="_DFTjURIREeKKlKNniG-R8Q"/>
+          <self id="_DJXkABIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="561" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            <typeDeclaration id="_DJXkARIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="562" accessedTarget="_DG4QohIREeKKlKNniG-R8Q">
+              <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            </typeDeclaration>
+          </self>
+        </typeParameters>
+        <typeParameters id="_DG4QoxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="564" visibility="VISIBILITYPUBLIC" simpleName="V" referenceType="true">
+          <position assembly="_DFTjUhIREeKKlKNniG-R8Q"/>
+          <self id="_DJXj_hIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="565" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            <typeDeclaration id="_DJXj_xIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="566" accessedTarget="_DG4QoxIREeKKlKNniG-R8Q">
+              <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            </typeDeclaration>
+          </self>
+        </typeParameters>
+      </classes>
+      <classes xsi:type="types:GenericClass" id="_DG43sRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="741" visibility="VISIBILITYPUBLIC" simpleName="ArrayList" referenceType="true">
+        <position assembly="_DFUKYBIREeKKlKNniG-R8Q"/>
+        <constructors id="_DIOUchIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="740" simpleName="ArrayList" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1" assembly="_DFUKYBIREeKKlKNniG-R8Q"/>
+        </constructors>
+        <self id="_DJXj8hIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="742" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJXj8xIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="743" accessedTarget="_DG43sRIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+        <typeParameters id="_DG43shIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="744" visibility="VISIBILITYPUBLIC" simpleName="E" referenceType="true">
+          <position assembly="_DFTjWhIREeKKlKNniG-R8Q"/>
+          <self id="_DJXj8BIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="745" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            <typeDeclaration id="_DJXj8RIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="746" accessedTarget="_DG43shIREeKKlKNniG-R8Q">
+              <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            </typeDeclaration>
+          </self>
+        </typeParameters>
+      </classes>
+    </subPackages>
+    <subPackages id="_DFFg4BIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="213" simpleName="lang">
+      <classes id="_DG3CghIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="209" visibility="VISIBILITYPUBLIC" final="true" simpleName="String" referenceType="true">
+        <position assembly="_DFSVOxIREeKKlKNniG-R8Q"/>
+        <inheritanceTypeAccesses id="_DKx5MRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="584" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position assembly="_DFSVOxIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_DKx5MhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="585" accessedTarget="_DG4QpRIREeKKlKNniG-R8Q">
+          <position assembly="_DFSVOxIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_DKx5MxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="594" accessedTarget="_DG4QphIREeKKlKNniG-R8Q">
+          <position assembly="_DFSVOxIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_DKx5NBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="599" accessedTarget="_DG43sBIREeKKlKNniG-R8Q">
+          <position assembly="_DFSVOxIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJYyJBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="210" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJYyJRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="211" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG3pkxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="514" visibility="VISIBILITYPUBLIC" simpleName="Object" referenceType="true">
+        <position assembly="_DFS8RBIREeKKlKNniG-R8Q"/>
+        <self id="_DJYLChIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="515" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJYLCxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="516" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG4QpBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="570" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="Cloneable" referenceType="true" interface="true">
+        <position assembly="_DFTjVBIREeKKlKNniG-R8Q"/>
+        <self id="_DJXj_BIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="571" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJXj_RIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="572" accessedTarget="_DG4QpBIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes xsi:type="types:GenericClass" id="_DG4QphIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="586" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="Comparable" referenceType="true" interface="true">
+        <position assembly="_DFTjWBIREeKKlKNniG-R8Q"/>
+        <self id="_DJXj-BIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="587" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJXj-RIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="588" accessedTarget="_DG4QphIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+        <typeParameters id="_DG4QpxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="589" visibility="VISIBILITYPUBLIC" simpleName="T" referenceType="true">
+          <position assembly="_DFTjVxIREeKKlKNniG-R8Q"/>
+          <self id="_DJXj9hIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="590" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            <typeDeclaration id="_DJXj9xIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="591" accessedTarget="_DG4QpxIREeKKlKNniG-R8Q">
+              <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            </typeDeclaration>
+          </self>
+        </typeParameters>
+      </classes>
+      <classes id="_DG43sBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="595" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="CharSequence" referenceType="true" interface="true">
+        <position assembly="_DFTjWRIREeKKlKNniG-R8Q"/>
+        <self id="_DJXj9BIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="596" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJXj9RIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="597" accessedTarget="_DG43sBIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+    </subPackages>
+    <subPackages id="_DFFg4RIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="579" simpleName="io">
+      <classes id="_DG4QpRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="575" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="Serializable" referenceType="true" interface="true">
+        <position assembly="_DFTjVRIREeKKlKNniG-R8Q"/>
+        <self id="_DJXj-hIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="576" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJXj-xIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="577" accessedTarget="_DG4QpRIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+    </subPackages>
+  </packages>
+  <packages id="_DFFg4xIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="753" simpleName="de.upb.storeexample">
+    <subPackages id="_DFDrsBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="66" simpleName="network">
+      <classes id="_DG0mRhIREeKKlKNniG-R8Q" sissyId="63" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="INetwork" referenceType="true" interface="true">
+        <position endColumn="1" startColumn="1" endLine="7" startLine="3" sourceFile="_DFQgCRIREeKKlKNniG-R8Q"/>
+        <methods id="_DIL4NRIREeKKlKNniG-R8Q" sissyId="362" simpleName="sendData" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+          <position endColumn="49" startColumn="5" endLine="5" startLine="5" sourceFile="_DFQgCRIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIL4NhIREeKKlKNniG-R8Q" sissyId="363" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+            <position endColumn="49" startColumn="5" endLine="5" startLine="5" sourceFile="_DFQgCRIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_DJanRBIREeKKlKNniG-R8Q" sissyId="365" simpleName="address" const="false">
+            <position endColumn="36" startColumn="26" endLine="5" startLine="5" sourceFile="_DFQgCRIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJanRRIREeKKlKNniG-R8Q" sissyId="364" accessedTarget="_DGz_MxIREeKKlKNniG-R8Q">
+              <position endColumn="36" startColumn="26" endLine="5" startLine="5" sourceFile="_DFQgCRIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <formalParameters id="_DJanYBIREeKKlKNniG-R8Q" sissyId="367" simpleName="data" const="false">
+            <position endColumn="49" startColumn="39" endLine="5" startLine="5" sourceFile="_DFQgCRIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJanYRIREeKKlKNniG-R8Q" sissyId="366" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+              <position endColumn="49" startColumn="39" endLine="5" startLine="5" sourceFile="_DFQgCRIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+        </methods>
+        <inheritanceTypeAccesses id="_DKwrEBIREeKKlKNniG-R8Q" sissyId="541" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="1" startColumn="1" endLine="7" startLine="3" sourceFile="_DFQgCRIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJaAMBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="64" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJaAMRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="65" accessedTarget="_DG0mRhIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG1NUBIREeKKlKNniG-R8Q" sissyId="68" visibility="VISIBILITYPUBLIC" simpleName="NetworkManager" referenceType="true">
+        <position endColumn="1" startColumn="1" endLine="9" startLine="3" sourceFile="_DFQgAxIREeKKlKNniG-R8Q"/>
+        <constructors id="_DINGVRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="476" simpleName="NetworkManager" visibility="VISIBILITYPUBLIC" static="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+        </constructors>
+        <methods id="_DIL4PxIREeKKlKNniG-R8Q" sissyId="402" simpleName="sendData" visibility="VISIBILITYPUBLIC" overriddenMember="_DIL4NRIREeKKlKNniG-R8Q" virtual="true">
+          <position endColumn="5" startColumn="6" endLine="7" startLine="5" sourceFile="_DFQgAxIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIL4QBIREeKKlKNniG-R8Q" sissyId="404" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="6" endLine="7" startLine="5" sourceFile="_DFQgAxIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_DJaAVBIREeKKlKNniG-R8Q" sissyId="406" simpleName="address" const="false">
+            <position endColumn="36" startColumn="26" endLine="6" startLine="6" sourceFile="_DFQgAxIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJaAVRIREeKKlKNniG-R8Q" sissyId="405" accessedTarget="_DGz_MxIREeKKlKNniG-R8Q">
+              <position endColumn="36" startColumn="26" endLine="6" startLine="6" sourceFile="_DFQgAxIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <formalParameters id="_DJanXhIREeKKlKNniG-R8Q" sissyId="408" simpleName="data" const="false">
+            <position endColumn="49" startColumn="39" endLine="6" startLine="6" sourceFile="_DFQgAxIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJanXxIREeKKlKNniG-R8Q" sissyId="407" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+              <position endColumn="49" startColumn="39" endLine="6" startLine="6" sourceFile="_DFQgAxIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <body id="_DIqZZBIREeKKlKNniG-R8Q" sissyId="403">
+            <position endColumn="5" startColumn="52" endLine="7" startLine="6" sourceFile="_DFQgAxIREeKKlKNniG-R8Q"/>
+          </body>
+        </methods>
+        <inheritanceTypeAccesses id="_DKwrERIREeKKlKNniG-R8Q" sissyId="606" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="47" startColumn="29" endLine="3" startLine="3" sourceFile="_DFQgAxIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_DKwrEhIREeKKlKNniG-R8Q" sissyId="607" accessedTarget="_DG0mRhIREeKKlKNniG-R8Q">
+          <position endColumn="47" startColumn="29" endLine="3" startLine="3" sourceFile="_DFQgAxIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZShIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="69" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZSxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="70" accessedTarget="_DG1NUBIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+    </subPackages>
+    <subPackages id="_DFESwRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="84" simpleName="controlling">
+      <classes id="_DG1NUxIREeKKlKNniG-R8Q" sissyId="81" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="IReporting" referenceType="true" interface="true">
+        <position endColumn="1" startColumn="1" endLine="9" startLine="5" sourceFile="_DFRHEhIREeKKlKNniG-R8Q"/>
+        <methods id="_DIG_sBIREeKKlKNniG-R8Q" sissyId="242" simpleName="sendReport" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+          <position endColumn="35" startColumn="5" endLine="7" startLine="7" sourceFile="_DFRHEhIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIG_sRIREeKKlKNniG-R8Q" sissyId="243" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+            <position endColumn="35" startColumn="5" endLine="7" startLine="7" sourceFile="_DFRHEhIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_DJanVhIREeKKlKNniG-R8Q" sissyId="245" simpleName="r" const="false">
+            <position endColumn="35" startColumn="28" endLine="7" startLine="7" sourceFile="_DFRHEhIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJanVxIREeKKlKNniG-R8Q" sissyId="244" accessedTarget="_DG10ZBIREeKKlKNniG-R8Q">
+              <position endColumn="35" startColumn="28" endLine="7" startLine="7" sourceFile="_DFRHEhIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+        </methods>
+        <inheritanceTypeAccesses id="_DKwrFhIREeKKlKNniG-R8Q" sissyId="518" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="1" startColumn="1" endLine="9" startLine="5" sourceFile="_DFRHEhIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZRBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="82" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZRRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="83" accessedTarget="_DG1NUxIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG1NVBIREeKKlKNniG-R8Q" sissyId="86" visibility="VISIBILITYPUBLIC" simpleName="Reporting" referenceType="true">
+        <position endColumn="1" startColumn="1" endLine="12" startLine="5" sourceFile="_DFRHFBIREeKKlKNniG-R8Q"/>
+        <constructors id="_DINGWhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="484" simpleName="Reporting" visibility="VISIBILITYPUBLIC" static="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+        </constructors>
+        <methods id="_DIMfRxIREeKKlKNniG-R8Q" sissyId="450" simpleName="sendReport" visibility="VISIBILITYPUBLIC" overriddenMember="_DIG_sBIREeKKlKNniG-R8Q" virtual="true">
+          <position endColumn="5" startColumn="6" endLine="10" startLine="7" sourceFile="_DFRHFBIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIMfSBIREeKKlKNniG-R8Q" sissyId="452" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="6" endLine="10" startLine="7" sourceFile="_DFRHFBIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_DJaATBIREeKKlKNniG-R8Q" sissyId="454" simpleName="r" const="false">
+            <position endColumn="35" startColumn="28" endLine="8" startLine="8" sourceFile="_DFRHFBIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJaATRIREeKKlKNniG-R8Q" sissyId="453" accessedTarget="_DG10ZBIREeKKlKNniG-R8Q">
+              <position endColumn="35" startColumn="28" endLine="8" startLine="8" sourceFile="_DFRHFBIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <body id="_DIrAYBIREeKKlKNniG-R8Q" sissyId="451">
+            <position endColumn="5" startColumn="38" endLine="10" startLine="8" sourceFile="_DFRHFBIREeKKlKNniG-R8Q"/>
+          </body>
+        </methods>
+        <inheritanceTypeAccesses id="_DKwrFxIREeKKlKNniG-R8Q" sissyId="608" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="44" startColumn="24" endLine="5" startLine="5" sourceFile="_DFRHFBIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_DKwrGBIREeKKlKNniG-R8Q" sissyId="609" accessedTarget="_DG1NUxIREeKKlKNniG-R8Q">
+          <position endColumn="44" startColumn="24" endLine="5" startLine="5" sourceFile="_DFRHFBIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZQhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="87" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZQxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="88" accessedTarget="_DG1NVBIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+    </subPackages>
+    <subPackages id="_DFESwhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="93" simpleName="logistics">
+      <classes id="_DG1NVRIREeKKlKNniG-R8Q" sissyId="90" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="ILogistics" referenceType="true" interface="true">
+        <position endColumn="1" startColumn="1" endLine="7" startLine="3" sourceFile="_DFRuIxIREeKKlKNniG-R8Q"/>
+        <methods id="_DIL4PRIREeKKlKNniG-R8Q" sissyId="400" simpleName="calculateDaysToDelivery" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+          <position endColumn="38" startColumn="5" endLine="5" startLine="5" sourceFile="_DFRuIxIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIL4PhIREeKKlKNniG-R8Q" sissyId="401" accessedTarget="_DGz_MxIREeKKlKNniG-R8Q">
+            <position endColumn="38" startColumn="5" endLine="5" startLine="5" sourceFile="_DFRuIxIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+        </methods>
+        <inheritanceTypeAccesses id="_DKwrGRIREeKKlKNniG-R8Q" sissyId="540" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="1" startColumn="1" endLine="7" startLine="3" sourceFile="_DFRuIxIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZQBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="91" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZQRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="92" accessedTarget="_DG1NVRIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG1NVhIREeKKlKNniG-R8Q" sissyId="95" visibility="VISIBILITYPUBLIC" simpleName="Logistics" referenceType="true">
+        <position endColumn="1" startColumn="1" endLine="10" startLine="3" sourceFile="_DFRHFRIREeKKlKNniG-R8Q"/>
+        <constructors id="_DIMfThIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="470" simpleName="Logistics" visibility="VISIBILITYPUBLIC" static="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+        </constructors>
+        <methods id="_DIKDCxIREeKKlKNniG-R8Q" sissyId="304" simpleName="calculateDaysToDelivery" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" overriddenMember="_DIL4PRIREeKKlKNniG-R8Q" virtual="true">
+          <position endColumn="5" startColumn="6" endLine="8" startLine="5" sourceFile="_DFRHFRIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIKDDBIREeKKlKNniG-R8Q" sissyId="307" accessedTarget="_DGz_MxIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="6" endLine="8" startLine="5" sourceFile="_DFRHFRIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <body id="_DIpyVxIREeKKlKNniG-R8Q" sissyId="305">
+            <position endColumn="5" startColumn="42" endLine="8" startLine="6" sourceFile="_DFRHFRIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:JumpStatement" id="_DIpyWBIREeKKlKNniG-R8Q" sissyId="306" kind="RETURN">
+              <position endColumn="17" startColumn="9" endLine="7" startLine="7" sourceFile="_DFRHFRIREeKKlKNniG-R8Q"/>
+            </statements>
+          </body>
+        </methods>
+        <inheritanceTypeAccesses id="_DKwrGhIREeKKlKNniG-R8Q" sissyId="523" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="44" startColumn="24" endLine="3" startLine="3" sourceFile="_DFRHFRIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_DKwrGxIREeKKlKNniG-R8Q" sissyId="524" accessedTarget="_DG1NVRIREeKKlKNniG-R8Q">
+          <position endColumn="44" startColumn="24" endLine="3" startLine="3" sourceFile="_DFRHFRIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZPhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="96" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZPxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="97" accessedTarget="_DG1NVhIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+    </subPackages>
+    <subPackages id="_DFESwxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="102" simpleName="payment">
+      <classes id="_DG1NVxIREeKKlKNniG-R8Q" sissyId="99" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="IPayment" referenceType="true" interface="true">
+        <position endColumn="1" startColumn="1" endLine="7" startLine="3" sourceFile="_DFRHERIREeKKlKNniG-R8Q"/>
+        <methods id="_DIKDBxIREeKKlKNniG-R8Q" sissyId="296" simpleName="sendInvoice" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+          <position endColumn="54" startColumn="5" endLine="5" startLine="5" sourceFile="_DFRHERIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIKDCBIREeKKlKNniG-R8Q" sissyId="297" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+            <position endColumn="54" startColumn="5" endLine="5" startLine="5" sourceFile="_DFRHERIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_DJanUhIREeKKlKNniG-R8Q" sissyId="299" simpleName="address" const="false">
+            <position endColumn="42" startColumn="29" endLine="5" startLine="5" sourceFile="_DFRHERIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJanUxIREeKKlKNniG-R8Q" sissyId="298" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+              <position endColumn="42" startColumn="29" endLine="5" startLine="5" sourceFile="_DFRHERIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <formalParameters id="_DJanYhIREeKKlKNniG-R8Q" sissyId="301" simpleName="amount" const="false">
+            <position endColumn="54" startColumn="45" endLine="5" startLine="5" sourceFile="_DFRHERIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJanYxIREeKKlKNniG-R8Q" sissyId="300" accessedTarget="_DGz_MxIREeKKlKNniG-R8Q">
+              <position endColumn="54" startColumn="45" endLine="5" startLine="5" sourceFile="_DFRHERIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+        </methods>
+        <inheritanceTypeAccesses id="_DKwrHBIREeKKlKNniG-R8Q" sissyId="600" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="1" startColumn="1" endLine="7" startLine="3" sourceFile="_DFRHERIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZPBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="100" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZPRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="101" accessedTarget="_DG1NVxIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG10YBIREeKKlKNniG-R8Q" sissyId="104" visibility="VISIBILITYPUBLIC" simpleName="PaymentManager" referenceType="true">
+        <position endColumn="1" startColumn="1" endLine="10" startLine="3" sourceFile="_DFSVMBIREeKKlKNniG-R8Q"/>
+        <constructors id="_DINGWRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="483" simpleName="PaymentManager" visibility="VISIBILITYPUBLIC" static="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+        </constructors>
+        <methods id="_DIMfRRIREeKKlKNniG-R8Q" sissyId="443" simpleName="sendInvoice" visibility="VISIBILITYPUBLIC" overriddenMember="_DIKDBxIREeKKlKNniG-R8Q" virtual="true">
+          <position endColumn="5" startColumn="6" endLine="8" startLine="5" sourceFile="_DFSVMBIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIMfRhIREeKKlKNniG-R8Q" sissyId="445" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="6" endLine="8" startLine="5" sourceFile="_DFSVMBIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_DJaAThIREeKKlKNniG-R8Q" sissyId="447" simpleName="address" const="false">
+            <position endColumn="42" startColumn="29" endLine="6" startLine="6" sourceFile="_DFSVMBIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJaATxIREeKKlKNniG-R8Q" sissyId="446" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+              <position endColumn="42" startColumn="29" endLine="6" startLine="6" sourceFile="_DFSVMBIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <formalParameters id="_DJanWhIREeKKlKNniG-R8Q" sissyId="449" simpleName="amount" const="false">
+            <position endColumn="54" startColumn="45" endLine="6" startLine="6" sourceFile="_DFSVMBIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJanWxIREeKKlKNniG-R8Q" sissyId="448" accessedTarget="_DGz_MxIREeKKlKNniG-R8Q">
+              <position endColumn="54" startColumn="45" endLine="6" startLine="6" sourceFile="_DFSVMBIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <body id="_DIqZbBIREeKKlKNniG-R8Q" sissyId="444">
+            <position endColumn="5" startColumn="57" endLine="8" startLine="6" sourceFile="_DFSVMBIREeKKlKNniG-R8Q"/>
+          </body>
+        </methods>
+        <inheritanceTypeAccesses id="_DKwrHRIREeKKlKNniG-R8Q" sissyId="612" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="47" startColumn="29" endLine="3" startLine="3" sourceFile="_DFSVMBIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_DKwrHhIREeKKlKNniG-R8Q" sissyId="613" accessedTarget="_DG1NVxIREeKKlKNniG-R8Q">
+          <position endColumn="47" startColumn="29" endLine="3" startLine="3" sourceFile="_DFSVMBIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZOhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="105" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZOxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="106" accessedTarget="_DG10YBIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG2bdxIREeKKlKNniG-R8Q" sissyId="188" visibility="VISIBILITYPUBLIC" simpleName="Invoice" referenceType="true">
+        <position endColumn="1" startColumn="1" endLine="5" startLine="3" sourceFile="_DFP4-hIREeKKlKNniG-R8Q"/>
+        <constructors id="_DINGVxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="478" simpleName="Invoice" visibility="VISIBILITYPUBLIC" static="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+        </constructors>
+        <inheritanceTypeAccesses id="_DKxSKhIREeKKlKNniG-R8Q" sissyId="610" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="1" startColumn="1" endLine="5" startLine="3" sourceFile="_DFP4-hIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJYyNhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="189" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJYyNxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="190" accessedTarget="_DG2bdxIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+    </subPackages>
+    <subPackages id="_DFE50BIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="111" simpleName="store">
+      <classes id="_DG10YRIREeKKlKNniG-R8Q" sissyId="108" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="IStoreQuery" referenceType="true" interface="true">
+        <position endColumn="1" startColumn="1" endLine="7" startLine="3" sourceFile="_DFP4-BIREeKKlKNniG-R8Q"/>
+        <methods id="_DIKDDxIREeKKlKNniG-R8Q" sissyId="312" simpleName="getInventory" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+          <position endColumn="33" startColumn="5" endLine="5" startLine="5" sourceFile="_DFP4-BIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIKDEBIREeKKlKNniG-R8Q" sissyId="313" accessedTarget="_DG10YhIREeKKlKNniG-R8Q">
+            <position endColumn="33" startColumn="5" endLine="5" startLine="5" sourceFile="_DFP4-BIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+        </methods>
+        <inheritanceTypeAccesses id="_DKwrHxIREeKKlKNniG-R8Q" sissyId="521" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="1" startColumn="1" endLine="7" startLine="3" sourceFile="_DFP4-BIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZOBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="109" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZORIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="110" accessedTarget="_DG10YRIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG10YhIREeKKlKNniG-R8Q" sissyId="113" visibility="VISIBILITYPUBLIC" simpleName="Inventory" referenceType="true">
+        <position endColumn="1" startColumn="1" endLine="42" startLine="8" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+        <constructors id="_DINGUBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="471" simpleName="Inventory" visibility="VISIBILITYPUBLIC" static="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+        </constructors>
+        <fields id="_DJYyKBIREeKKlKNniG-R8Q" sissyId="206" visibility="VISIBILITYPRIVAT" simpleName="items" const="false">
+          <position endColumn="24" startColumn="20" endLine="14" startLine="14" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+          <typeDeclaration id="_DJYyKRIREeKKlKNniG-R8Q" sissyId="205" accessedTarget="_DG3CgRIREeKKlKNniG-R8Q">
+            <position endColumn="24" startColumn="20" endLine="14" startLine="14" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+          </typeDeclaration>
+        </fields>
+        <methods id="_DIKDERIREeKKlKNniG-R8Q" sissyId="314" simpleName="setItems" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="5" startColumn="5" endLine="18" startLine="16" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIKDEhIREeKKlKNniG-R8Q" sissyId="317" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="5" endLine="18" startLine="16" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_DJanThIREeKKlKNniG-R8Q" sissyId="319" simpleName="items" const="false">
+            <position endColumn="37" startColumn="26" endLine="16" startLine="16" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJanTxIREeKKlKNniG-R8Q" sissyId="318" accessedTarget="_DG3CgRIREeKKlKNniG-R8Q">
+              <position endColumn="37" startColumn="26" endLine="16" startLine="16" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <body id="_DIpyWRIREeKKlKNniG-R8Q" sissyId="315">
+            <position endColumn="5" startColumn="40" endLine="18" startLine="16" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIpyWhIREeKKlKNniG-R8Q" sissyId="316">
+              <position endColumn="26" startColumn="9" endLine="17" startLine="17" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKzHZRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="658" accessedTarget="_DJZZNhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzHZhIREeKKlKNniG-R8Q" sissyId="659" accessedTarget="_DJYyKBIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="18" startColumn="9" endLine="17" startLine="17" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzHZxIREeKKlKNniG-R8Q" sissyId="660" accessedTarget="_DJanThIREeKKlKNniG-R8Q">
+                <position endColumn="26" startColumn="22" endLine="17" startLine="17" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <methods id="_DIKqEBIREeKKlKNniG-R8Q" sissyId="320" simpleName="getItems" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="5" startColumn="5" endLine="22" startLine="20" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIKqERIREeKKlKNniG-R8Q" sissyId="323" accessedTarget="_DG3CgRIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="5" endLine="22" startLine="20" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <body id="_DIpyWxIREeKKlKNniG-R8Q" sissyId="321">
+            <position endColumn="5" startColumn="30" endLine="22" startLine="20" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:JumpStatement" id="_DIpyXBIREeKKlKNniG-R8Q" sissyId="322" kind="RETURN">
+              <position endColumn="21" startColumn="9" endLine="21" startLine="21" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKzHaRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="661" accessedTarget="_DJZZNhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzHahIREeKKlKNniG-R8Q" sissyId="662" accessedTarget="_DJYyKBIREeKKlKNniG-R8Q">
+                <position endColumn="20" startColumn="16" endLine="21" startLine="21" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <methods id="_DILRIBIREeKKlKNniG-R8Q" sissyId="324" simpleName="checkStock" numberOfStatements="2" linesOfComments="10" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="5" startColumn="5" endLine="30" startLine="24" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DILRIRIREeKKlKNniG-R8Q" sissyId="328" accessedTarget="_DGz_MxIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="5" endLine="30" startLine="24" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <localVariables id="_DJYLHhIREeKKlKNniG-R8Q" sissyId="329" simpleName="stock" const="false">
+            <position endColumn="37" startColumn="13" endLine="26" startLine="26" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJYLHxIREeKKlKNniG-R8Q" sissyId="330" accessedTarget="_DGz_MxIREeKKlKNniG-R8Q">
+              <position endColumn="37" startColumn="13" endLine="26" startLine="26" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <body id="_DIpyXRIREeKKlKNniG-R8Q" sissyId="325">
+            <position endColumn="5" startColumn="5" endLine="30" startLine="25" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIpyXhIREeKKlKNniG-R8Q" sissyId="326">
+              <position endColumn="37" startColumn="9" endLine="26" startLine="26" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzuYBIREeKKlKNniG-R8Q" sissyId="331" accessedTarget="_DJYLHhIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="37" startColumn="13" endLine="26" startLine="26" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKzuYRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="663" accessedTarget="_DJZZNhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKzuYhIREeKKlKNniG-R8Q" sissyId="664" accessedTarget="_DIKqEBIREeKKlKNniG-R8Q">
+                <position endColumn="30" startColumn="21" endLine="26" startLine="26" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:JumpStatement" id="_DIpyXxIREeKKlKNniG-R8Q" sissyId="327" kind="RETURN">
+              <position endColumn="21" startColumn="9" endLine="29" startLine="29" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzuYxIREeKKlKNniG-R8Q" sissyId="665" accessedTarget="_DJYLHhIREeKKlKNniG-R8Q">
+                <position endColumn="20" startColumn="16" endLine="29" startLine="29" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <inheritanceTypeAccesses id="_DKwrIBIREeKKlKNniG-R8Q" sissyId="611" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="1" startColumn="1" endLine="42" startLine="8" sourceFile="_DFRHFxIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZNhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="114" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZNxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="115" accessedTarget="_DG10YhIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG10YxIREeKKlKNniG-R8Q" sissyId="117" visibility="VISIBILITYPUBLIC" simpleName="StoreQuery" referenceType="true">
+        <position endColumn="1" startColumn="1" endLine="16" startLine="3" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+        <constructors id="_DINGUhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="473" simpleName="StoreQuery" visibility="VISIBILITYPUBLIC" static="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+        </constructors>
+        <constructors id="_DINtZRIREeKKlKNniG-R8Q" simpleName="inventory" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPACKAGE" initializer="true">
+          <position endColumn="47" startColumn="35" endLine="5" startLine="5" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+          <body id="_DIrAcBIREeKKlKNniG-R8Q" sissyId="503">
+            <position endColumn="47" startColumn="35" endLine="5" startLine="5" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIrAcRIREeKKlKNniG-R8Q" sissyId="504">
+              <position endColumn="47" startColumn="35" endLine="5" startLine="5" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK08lhIREeKKlKNniG-R8Q" sissyId="505" accessedTarget="_DJYyJhIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="47" startColumn="23" endLine="5" startLine="5" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DK08lxIREeKKlKNniG-R8Q" sissyId="739" accessedTarget="_DINGUBIREeKKlKNniG-R8Q">
+                <position endColumn="47" startColumn="35" endLine="5" startLine="5" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </constructors>
+        <fields id="_DJYyJhIREeKKlKNniG-R8Q" sissyId="208" visibility="VISIBILITYPRIVAT" simpleName="inventory" const="false">
+          <position endColumn="47" startColumn="23" endLine="5" startLine="5" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+          <typeDeclaration id="_DJYyJxIREeKKlKNniG-R8Q" sissyId="207" accessedTarget="_DG10YhIREeKKlKNniG-R8Q">
+            <position endColumn="47" startColumn="23" endLine="5" startLine="5" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+          </typeDeclaration>
+        </fields>
+        <methods id="_DIL4MRIREeKKlKNniG-R8Q" sissyId="354" simpleName="getInventory" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" overriddenMember="_DIKDDxIREeKKlKNniG-R8Q" virtual="true">
+          <position endColumn="5" startColumn="6" endLine="10" startLine="7" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIL4MhIREeKKlKNniG-R8Q" sissyId="357" accessedTarget="_DG10YhIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="6" endLine="10" startLine="7" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <body id="_DIqZVhIREeKKlKNniG-R8Q" sissyId="355">
+            <position endColumn="5" startColumn="37" endLine="10" startLine="8" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:JumpStatement" id="_DIqZVxIREeKKlKNniG-R8Q" sissyId="356" kind="RETURN">
+              <position endColumn="25" startColumn="9" endLine="9" startLine="9" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKzuZBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="666" accessedTarget="_DJZZNBIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzuZRIREeKKlKNniG-R8Q" sissyId="667" accessedTarget="_DJYyJhIREeKKlKNniG-R8Q">
+                <position endColumn="24" startColumn="16" endLine="9" startLine="9" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <methods id="_DIL4MxIREeKKlKNniG-R8Q" sissyId="358" simpleName="checkStock" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="5" startColumn="5" endLine="14" startLine="12" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIL4NBIREeKKlKNniG-R8Q" sissyId="361" accessedTarget="_DGz_MxIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="5" endLine="14" startLine="12" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <body id="_DIqZWBIREeKKlKNniG-R8Q" sissyId="359">
+            <position endColumn="5" startColumn="29" endLine="14" startLine="12" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:JumpStatement" id="_DIqZWRIREeKKlKNniG-R8Q" sissyId="360" kind="RETURN">
+              <position endColumn="48" startColumn="9" endLine="13" startLine="13" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKzuZhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="668" accessedTarget="_DJZZNBIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKzuZxIREeKKlKNniG-R8Q" sissyId="669" accessedTarget="_DIL4MRIREeKKlKNniG-R8Q">
+                <position endColumn="34" startColumn="16" endLine="13" startLine="13" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKzuaBIREeKKlKNniG-R8Q" sissyId="670" accessedTarget="_DILRIBIREeKKlKNniG-R8Q">
+                <position endColumn="47" startColumn="16" endLine="13" startLine="13" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <inheritanceTypeAccesses id="_DKwrIRIREeKKlKNniG-R8Q" sissyId="519" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="46" startColumn="25" endLine="3" startLine="3" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_DKwrIhIREeKKlKNniG-R8Q" sissyId="520" accessedTarget="_DG10YRIREeKKlKNniG-R8Q">
+          <position endColumn="46" startColumn="25" endLine="3" startLine="3" sourceFile="_DFRuJRIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZNBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="118" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZNRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="119" accessedTarget="_DG10YxIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG2bcxIREeKKlKNniG-R8Q" sissyId="176" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="ICalculator" referenceType="true" interface="true">
+        <position endColumn="1" startColumn="1" endLine="11" startLine="8" sourceFile="_DFRuIBIREeKKlKNniG-R8Q"/>
+        <methods id="_DIKDDRIREeKKlKNniG-R8Q" sissyId="308" simpleName="calculate" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+          <position endColumn="46" startColumn="5" endLine="10" startLine="10" sourceFile="_DFRuIBIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIKDDhIREeKKlKNniG-R8Q" sissyId="309" accessedTarget="_DG0mQhIREeKKlKNniG-R8Q">
+            <position endColumn="46" startColumn="5" endLine="10" startLine="10" sourceFile="_DFRuIBIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_DJanUBIREeKKlKNniG-R8Q" sissyId="311" simpleName="productName" const="false">
+            <position endColumn="46" startColumn="29" endLine="10" startLine="10" sourceFile="_DFRuIBIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJanURIREeKKlKNniG-R8Q" sissyId="310" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+              <position endColumn="46" startColumn="29" endLine="10" startLine="10" sourceFile="_DFRuIBIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+        </methods>
+        <inheritanceTypeAccesses id="_DKxSJRIREeKKlKNniG-R8Q" sissyId="522" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="1" startColumn="1" endLine="11" startLine="8" sourceFile="_DFRuIBIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZJhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="177" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZJxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="178" accessedTarget="_DG2bcxIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG2bdBIREeKKlKNniG-R8Q" sissyId="179" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="IOrder" referenceType="true" interface="true">
+        <position endColumn="1" startColumn="1" endLine="5" startLine="3" sourceFile="_DFQgChIREeKKlKNniG-R8Q"/>
+        <inheritanceTypeAccesses id="_DKxSJhIREeKKlKNniG-R8Q" sissyId="602" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="1" startColumn="1" endLine="5" startLine="3" sourceFile="_DFQgChIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZJBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="180" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZJRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="181" accessedTarget="_DG2bdBIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG2bdRIREeKKlKNniG-R8Q" sissyId="182" visibility="VISIBILITYPUBLIC" simpleName="PriceCalculator" referenceType="true">
+        <position endColumn="1" startColumn="1" endLine="23" startLine="7" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+        <constructors id="_DINGUxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="474" simpleName="PriceCalculator" visibility="VISIBILITYPUBLIC" static="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+        </constructors>
+        <methods id="_DIL4NxIREeKKlKNniG-R8Q" sissyId="368" simpleName="calculate" numberOfStatements="5" linesOfComments="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" overriddenMember="_DIKDDRIREeKKlKNniG-R8Q" virtual="true">
+          <position endColumn="4" startColumn="5" endLine="21" startLine="10" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIL4OBIREeKKlKNniG-R8Q" sissyId="375" accessedTarget="_DG0mQhIREeKKlKNniG-R8Q">
+            <position endColumn="4" startColumn="5" endLine="21" startLine="10" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_DJanQhIREeKKlKNniG-R8Q" sissyId="377" simpleName="productName" const="false">
+            <position endColumn="45" startColumn="28" endLine="11" startLine="11" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJanQxIREeKKlKNniG-R8Q" sissyId="376" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+              <position endColumn="45" startColumn="28" endLine="11" startLine="11" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <localVariables id="_DJYLFhIREeKKlKNniG-R8Q" sissyId="387" simpleName="discount" const="false">
+            <position endColumn="59" startColumn="14" endLine="18" startLine="18" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJYLFxIREeKKlKNniG-R8Q" sissyId="388" accessedTarget="_DG0mQhIREeKKlKNniG-R8Q">
+              <position endColumn="59" startColumn="14" endLine="18" startLine="18" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <localVariables id="_DJYLGBIREeKKlKNniG-R8Q" sissyId="384" simpleName="pSearch" const="false">
+            <position endColumn="52" startColumn="21" endLine="17" startLine="17" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJYLGRIREeKKlKNniG-R8Q" sissyId="385" accessedTarget="_DG1NUhIREeKKlKNniG-R8Q">
+              <position endColumn="52" startColumn="21" endLine="17" startLine="17" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <localVariables id="_DJYLGhIREeKKlKNniG-R8Q" sissyId="381" simpleName="price" const="false">
+            <position endColumn="52" startColumn="14" endLine="14" startLine="14" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJYLGxIREeKKlKNniG-R8Q" sissyId="382" accessedTarget="_DG0mQhIREeKKlKNniG-R8Q">
+              <position endColumn="52" startColumn="14" endLine="14" startLine="14" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <localVariables id="_DJYLHBIREeKKlKNniG-R8Q" sissyId="378" simpleName="search" const="false">
+            <position endColumn="40" startColumn="15" endLine="13" startLine="13" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJYLHRIREeKKlKNniG-R8Q" sissyId="379" accessedTarget="_DG1NURIREeKKlKNniG-R8Q">
+              <position endColumn="40" startColumn="15" endLine="13" startLine="13" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <body id="_DIqZWhIREeKKlKNniG-R8Q" sissyId="369">
+            <position endColumn="4" startColumn="4" endLine="21" startLine="12" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIqZWxIREeKKlKNniG-R8Q" sissyId="370">
+              <position endColumn="40" startColumn="7" endLine="13" startLine="13" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzuaRIREeKKlKNniG-R8Q" sissyId="380" accessedTarget="_DJYLHBIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="40" startColumn="15" endLine="13" startLine="13" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKzuahIREeKKlKNniG-R8Q" sissyId="671" accessedTarget="_DINGURIREeKKlKNniG-R8Q">
+                <position endColumn="40" startColumn="24" endLine="13" startLine="13" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_DIqZXBIREeKKlKNniG-R8Q" sissyId="371">
+              <position endColumn="52" startColumn="7" endLine="14" startLine="14" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzuaxIREeKKlKNniG-R8Q" sissyId="383" accessedTarget="_DJYLGhIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="52" startColumn="14" endLine="14" startLine="14" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzubBIREeKKlKNniG-R8Q" sissyId="672" accessedTarget="_DJYLHBIREeKKlKNniG-R8Q">
+                <position endColumn="28" startColumn="22" endLine="14" startLine="14" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKzubRIREeKKlKNniG-R8Q" sissyId="673" accessedTarget="_DILRKBIREeKKlKNniG-R8Q">
+                <position endColumn="52" startColumn="22" endLine="14" startLine="14" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_DKzubhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="674">
+                <accesses xsi:type="accesses:VariableAccess" id="_DK1jlBIREeKKlKNniG-R8Q" sissyId="675" accessedTarget="_DJanQhIREeKKlKNniG-R8Q">
+                  <position endColumn="51" startColumn="41" endLine="14" startLine="14" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+                </accesses>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_DIqZXRIREeKKlKNniG-R8Q" sissyId="372">
+              <position endColumn="52" startColumn="7" endLine="17" startLine="17" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzubxIREeKKlKNniG-R8Q" sissyId="386" accessedTarget="_DJYLGBIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="52" startColumn="21" endLine="17" startLine="17" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CastTypeAccess" id="_DKzucBIREeKKlKNniG-R8Q" sissyId="676" accessedTarget="_DG1NUhIREeKKlKNniG-R8Q">
+                <position endColumn="52" startColumn="31" endLine="17" startLine="17" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzucRIREeKKlKNniG-R8Q" sissyId="677" accessedTarget="_DJYLHBIREeKKlKNniG-R8Q">
+                <position endColumn="52" startColumn="47" endLine="17" startLine="17" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_DIqZXhIREeKKlKNniG-R8Q" sissyId="373">
+              <position endColumn="59" startColumn="7" endLine="18" startLine="18" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzuchIREeKKlKNniG-R8Q" sissyId="389" accessedTarget="_DJYLFhIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="59" startColumn="14" endLine="18" startLine="18" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzucxIREeKKlKNniG-R8Q" sissyId="678" accessedTarget="_DJYLGBIREeKKlKNniG-R8Q">
+                <position endColumn="32" startColumn="25" endLine="18" startLine="18" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKzudBIREeKKlKNniG-R8Q" sissyId="679" accessedTarget="_DILRJBIREeKKlKNniG-R8Q">
+                <position endColumn="59" startColumn="25" endLine="18" startLine="18" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_DKzudRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="680">
+                <accesses xsi:type="accesses:VariableAccess" id="_DK1jlRIREeKKlKNniG-R8Q" sissyId="681" accessedTarget="_DJanQhIREeKKlKNniG-R8Q">
+                  <position endColumn="58" startColumn="48" endLine="18" startLine="18" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+                </accesses>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:JumpStatement" id="_DIqZXxIREeKKlKNniG-R8Q" sissyId="374" kind="RETURN">
+              <position endColumn="30" startColumn="7" endLine="20" startLine="20" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzudhIREeKKlKNniG-R8Q" sissyId="682" accessedTarget="_DJYLGhIREeKKlKNniG-R8Q">
+                <position endColumn="18" startColumn="14" endLine="20" startLine="20" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzudxIREeKKlKNniG-R8Q" sissyId="683" accessedTarget="_DJYLFhIREeKKlKNniG-R8Q">
+                <position endColumn="29" startColumn="22" endLine="20" startLine="20" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <inheritanceTypeAccesses id="_DKxSJxIREeKKlKNniG-R8Q" sissyId="542" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="51" startColumn="30" endLine="7" startLine="7" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_DKxSKBIREeKKlKNniG-R8Q" sissyId="543" accessedTarget="_DG2bcxIREeKKlKNniG-R8Q">
+          <position endColumn="51" startColumn="30" endLine="7" startLine="7" sourceFile="_DFRuIhIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZIhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="183" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZIxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="184" accessedTarget="_DG2bdRIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG2bdhIREeKKlKNniG-R8Q" sissyId="185" visibility="VISIBILITYPUBLIC" simpleName="Item" referenceType="true">
+        <position endColumn="1" startColumn="1" endLine="5" startLine="3" sourceFile="_DFRuJBIREeKKlKNniG-R8Q"/>
+        <constructors id="_DINGVhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="477" simpleName="Item" visibility="VISIBILITYPUBLIC" static="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+        </constructors>
+        <inheritanceTypeAccesses id="_DKxSKRIREeKKlKNniG-R8Q" sissyId="537" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="1" startColumn="1" endLine="5" startLine="3" sourceFile="_DFRuJBIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZIBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="186" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZIRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="187" accessedTarget="_DG2bdhIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <subPackages id="_DFESwBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="75" simpleName="search">
+        <classes id="_DG1NURIREeKKlKNniG-R8Q" sissyId="72" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="ISearch" referenceType="true" interface="true">
+          <position endColumn="1" startColumn="1" endLine="12" startLine="9" sourceFile="_DFQgAhIREeKKlKNniG-R8Q"/>
+          <methods id="_DILRKBIREeKKlKNniG-R8Q" sissyId="350" simpleName="searchPrice" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+            <position endColumn="47" startColumn="4" endLine="11" startLine="11" sourceFile="_DFQgAhIREeKKlKNniG-R8Q"/>
+            <returnTypeDeclaration id="_DIL4MBIREeKKlKNniG-R8Q" sissyId="351" accessedTarget="_DG0mQhIREeKKlKNniG-R8Q">
+              <position endColumn="47" startColumn="4" endLine="11" startLine="11" sourceFile="_DFQgAhIREeKKlKNniG-R8Q"/>
+            </returnTypeDeclaration>
+            <formalParameters id="_DJanRhIREeKKlKNniG-R8Q" sissyId="353" simpleName="productName" const="false">
+              <position endColumn="47" startColumn="30" endLine="11" startLine="11" sourceFile="_DFQgAhIREeKKlKNniG-R8Q"/>
+              <typeDeclaration id="_DJanRxIREeKKlKNniG-R8Q" sissyId="352" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+                <position endColumn="47" startColumn="30" endLine="11" startLine="11" sourceFile="_DFQgAhIREeKKlKNniG-R8Q"/>
+              </typeDeclaration>
+            </formalParameters>
+          </methods>
+          <inheritanceTypeAccesses id="_DKwrExIREeKKlKNniG-R8Q" sissyId="601" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+            <position endColumn="1" startColumn="1" endLine="12" startLine="9" sourceFile="_DFQgAhIREeKKlKNniG-R8Q"/>
+          </inheritanceTypeAccesses>
+          <self id="_DJZZSBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="73" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            <typeDeclaration id="_DJZZSRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="74" accessedTarget="_DG1NURIREeKKlKNniG-R8Q">
+              <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            </typeDeclaration>
+          </self>
+        </classes>
+        <classes id="_DG1NUhIREeKKlKNniG-R8Q" sissyId="77" visibility="VISIBILITYPUBLIC" simpleName="ProductSearch" referenceType="true">
+          <position endColumn="1" startColumn="1" endLine="25" startLine="4" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+          <constructors id="_DINGURIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="472" simpleName="ProductSearch" visibility="VISIBILITYPUBLIC" static="true" virtual="true">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </constructors>
+          <methods id="_DILRIhIREeKKlKNniG-R8Q" sissyId="332" simpleName="searchPrice" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" overriddenMember="_DILRKBIREeKKlKNniG-R8Q" virtual="true">
+            <position endColumn="4" startColumn="4" endLine="10" startLine="7" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+            <returnTypeDeclaration id="_DILRIxIREeKKlKNniG-R8Q" sissyId="335" accessedTarget="_DG0mQhIREeKKlKNniG-R8Q">
+              <position endColumn="4" startColumn="4" endLine="10" startLine="7" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+            </returnTypeDeclaration>
+            <formalParameters id="_DJanTBIREeKKlKNniG-R8Q" sissyId="337" simpleName="productName" const="false">
+              <position endColumn="47" startColumn="30" endLine="7" startLine="7" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+              <typeDeclaration id="_DJanTRIREeKKlKNniG-R8Q" sissyId="336" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+                <position endColumn="47" startColumn="30" endLine="7" startLine="7" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+              </typeDeclaration>
+            </formalParameters>
+            <body id="_DIqZUBIREeKKlKNniG-R8Q" sissyId="333">
+              <position endColumn="4" startColumn="4" endLine="10" startLine="8" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+              <statements xsi:type="statements:JumpStatement" id="_DIqZURIREeKKlKNniG-R8Q" sissyId="334" kind="RETURN">
+                <position endColumn="15" startColumn="7" endLine="9" startLine="9" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+              </statements>
+            </body>
+          </methods>
+          <methods id="_DILRJBIREeKKlKNniG-R8Q" sissyId="338" simpleName="searchDiscount" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" virtual="true">
+            <position endColumn="4" startColumn="4" endLine="16" startLine="13" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+            <returnTypeDeclaration id="_DILRJRIREeKKlKNniG-R8Q" sissyId="341" accessedTarget="_DG0mQhIREeKKlKNniG-R8Q">
+              <position endColumn="4" startColumn="4" endLine="16" startLine="13" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+            </returnTypeDeclaration>
+            <formalParameters id="_DJanShIREeKKlKNniG-R8Q" sissyId="343" simpleName="productName" const="false">
+              <position endColumn="50" startColumn="33" endLine="13" startLine="13" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+              <typeDeclaration id="_DJanSxIREeKKlKNniG-R8Q" sissyId="342" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+                <position endColumn="50" startColumn="33" endLine="13" startLine="13" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+              </typeDeclaration>
+            </formalParameters>
+            <body id="_DIqZUhIREeKKlKNniG-R8Q" sissyId="339">
+              <position endColumn="4" startColumn="4" endLine="16" startLine="14" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+              <statements xsi:type="statements:JumpStatement" id="_DIqZUxIREeKKlKNniG-R8Q" sissyId="340" kind="RETURN">
+                <position endColumn="15" startColumn="7" endLine="15" startLine="15" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+              </statements>
+            </body>
+          </methods>
+          <methods id="_DILRJhIREeKKlKNniG-R8Q" sissyId="344" simpleName="searchProducer" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" virtual="true">
+            <position endColumn="4" startColumn="4" endLine="22" startLine="19" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+            <returnTypeDeclaration id="_DILRJxIREeKKlKNniG-R8Q" sissyId="347" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+              <position endColumn="4" startColumn="4" endLine="22" startLine="19" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+            </returnTypeDeclaration>
+            <formalParameters id="_DJanSBIREeKKlKNniG-R8Q" sissyId="349" simpleName="currentProduct" const="false">
+              <position endColumn="53" startColumn="33" endLine="19" startLine="19" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+              <typeDeclaration id="_DJanSRIREeKKlKNniG-R8Q" sissyId="348" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+                <position endColumn="53" startColumn="33" endLine="19" startLine="19" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+              </typeDeclaration>
+            </formalParameters>
+            <body id="_DIqZVBIREeKKlKNniG-R8Q" sissyId="345">
+              <position endColumn="4" startColumn="4" endLine="22" startLine="20" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+              <statements xsi:type="statements:JumpStatement" id="_DIqZVRIREeKKlKNniG-R8Q" sissyId="346" kind="RETURN">
+                <position endColumn="26" startColumn="7" endLine="21" startLine="21" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+              </statements>
+            </body>
+          </methods>
+          <inheritanceTypeAccesses id="_DKwrFBIREeKKlKNniG-R8Q" sissyId="603" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+            <position endColumn="45" startColumn="28" endLine="4" startLine="4" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+          </inheritanceTypeAccesses>
+          <inheritanceTypeAccesses id="_DKwrFRIREeKKlKNniG-R8Q" sissyId="604" accessedTarget="_DG1NURIREeKKlKNniG-R8Q">
+            <position endColumn="45" startColumn="28" endLine="4" startLine="4" sourceFile="_DFQgABIREeKKlKNniG-R8Q"/>
+          </inheritanceTypeAccesses>
+          <self id="_DJZZRhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="78" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            <typeDeclaration id="_DJZZRxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="79" accessedTarget="_DG1NUhIREeKKlKNniG-R8Q">
+              <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+            </typeDeclaration>
+          </self>
+        </classes>
+      </subPackages>
+    </subPackages>
+    <subPackages id="_DFE50RIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="124" simpleName="accounting">
+      <classes id="_DG10ZBIREeKKlKNniG-R8Q" sissyId="121" visibility="VISIBILITYPUBLIC" simpleName="Report" referenceType="true">
+        <position endColumn="1" startColumn="1" endLine="15" startLine="3" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+        <constructors id="_DINGVBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="475" simpleName="Report" visibility="VISIBILITYPUBLIC" static="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+        </constructors>
+        <fields id="_DJYyIhIREeKKlKNniG-R8Q" sissyId="215" visibility="VISIBILITYPRIVAT" simpleName="text" const="false">
+          <position endColumn="23" startColumn="20" endLine="5" startLine="5" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+          <typeDeclaration id="_DJYyIxIREeKKlKNniG-R8Q" sissyId="214" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+            <position endColumn="23" startColumn="20" endLine="5" startLine="5" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+          </typeDeclaration>
+        </fields>
+        <methods id="_DIL4ORIREeKKlKNniG-R8Q" sissyId="390" simpleName="setText" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="5" startColumn="5" endLine="9" startLine="7" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIL4OhIREeKKlKNniG-R8Q" sissyId="393" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="5" endLine="9" startLine="7" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_DJanQBIREeKKlKNniG-R8Q" sissyId="395" simpleName="text" const="false">
+            <position endColumn="35" startColumn="25" endLine="7" startLine="7" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJanQRIREeKKlKNniG-R8Q" sissyId="394" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+              <position endColumn="35" startColumn="25" endLine="7" startLine="7" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <body id="_DIqZYBIREeKKlKNniG-R8Q" sissyId="391">
+            <position endColumn="5" startColumn="38" endLine="9" startLine="7" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIqZYRIREeKKlKNniG-R8Q" sissyId="392">
+              <position endColumn="24" startColumn="9" endLine="8" startLine="8" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKzueBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="684" accessedTarget="_DJZZMhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzueRIREeKKlKNniG-R8Q" sissyId="685" accessedTarget="_DJYyIhIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="17" startColumn="9" endLine="8" startLine="8" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzuehIREeKKlKNniG-R8Q" sissyId="686" accessedTarget="_DJanQBIREeKKlKNniG-R8Q">
+                <position endColumn="24" startColumn="21" endLine="8" startLine="8" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <methods id="_DIL4OxIREeKKlKNniG-R8Q" sissyId="396" simpleName="getText" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="5" startColumn="5" endLine="13" startLine="11" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIL4PBIREeKKlKNniG-R8Q" sissyId="399" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="5" endLine="13" startLine="11" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <body id="_DIqZYhIREeKKlKNniG-R8Q" sissyId="397">
+            <position endColumn="5" startColumn="29" endLine="13" startLine="11" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:JumpStatement" id="_DIqZYxIREeKKlKNniG-R8Q" sissyId="398" kind="RETURN">
+              <position endColumn="20" startColumn="9" endLine="12" startLine="12" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKzuexIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="687" accessedTarget="_DJZZMhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK0VcBIREeKKlKNniG-R8Q" sissyId="688" accessedTarget="_DJYyIhIREeKKlKNniG-R8Q">
+                <position endColumn="19" startColumn="16" endLine="12" startLine="12" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <inheritanceTypeAccesses id="_DKwrIxIREeKKlKNniG-R8Q" sissyId="539" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="1" startColumn="1" endLine="15" startLine="3" sourceFile="_DFRuJhIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZMhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="122" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZMxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="123" accessedTarget="_DG10ZBIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG2bcRIREeKKlKNniG-R8Q" sissyId="169" visibility="VISIBILITYPUBLIC" simpleName="Assets" referenceType="true">
+        <position endColumn="1" startColumn="1" endLine="64" startLine="13" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+        <constructors id="_DIMfTRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="469" simpleName="Assets" visibility="VISIBILITYPUBLIC" static="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+        </constructors>
+        <constructors id="_DINtYRIREeKKlKNniG-R8Q" simpleName="storeQuery" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPACKAGE" initializer="true">
+          <position endColumn="51" startColumn="38" endLine="15" startLine="15" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <body id="_DIrAaBIREeKKlKNniG-R8Q" sissyId="487">
+            <position endColumn="51" startColumn="38" endLine="15" startLine="15" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIrAaRIREeKKlKNniG-R8Q" sissyId="488">
+              <position endColumn="51" startColumn="38" endLine="15" startLine="15" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK08jhIREeKKlKNniG-R8Q" sissyId="489" accessedTarget="_DJYyMhIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="51" startColumn="25" endLine="15" startLine="15" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DK08jxIREeKKlKNniG-R8Q" sissyId="735" accessedTarget="_DINGUhIREeKKlKNniG-R8Q">
+                <position endColumn="51" startColumn="38" endLine="15" startLine="15" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </constructors>
+        <constructors id="_DINtYhIREeKKlKNniG-R8Q" simpleName="logistics" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPACKAGE" initializer="true">
+          <position endColumn="48" startColumn="36" endLine="16" startLine="16" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <body id="_DIrAahIREeKKlKNniG-R8Q" sissyId="491">
+            <position endColumn="48" startColumn="36" endLine="16" startLine="16" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIrAaxIREeKKlKNniG-R8Q" sissyId="492">
+              <position endColumn="48" startColumn="36" endLine="16" startLine="16" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK08kBIREeKKlKNniG-R8Q" sissyId="493" accessedTarget="_DJYyMBIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="48" startColumn="24" endLine="16" startLine="16" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DK08kRIREeKKlKNniG-R8Q" sissyId="736" accessedTarget="_DIMfThIREeKKlKNniG-R8Q">
+                <position endColumn="48" startColumn="36" endLine="16" startLine="16" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </constructors>
+        <constructors id="_DINtYxIREeKKlKNniG-R8Q" simpleName="payment" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPACKAGE" initializer="true">
+          <position endColumn="49" startColumn="32" endLine="17" startLine="17" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <body id="_DIrAbBIREeKKlKNniG-R8Q" sissyId="495">
+            <position endColumn="49" startColumn="32" endLine="17" startLine="17" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIrAbRIREeKKlKNniG-R8Q" sissyId="496">
+              <position endColumn="49" startColumn="32" endLine="17" startLine="17" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK08khIREeKKlKNniG-R8Q" sissyId="497" accessedTarget="_DJYyLhIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="49" startColumn="22" endLine="17" startLine="17" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DK08kxIREeKKlKNniG-R8Q" sissyId="737" accessedTarget="_DINGWRIREeKKlKNniG-R8Q">
+                <position endColumn="49" startColumn="32" endLine="17" startLine="17" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </constructors>
+        <constructors id="_DINtZBIREeKKlKNniG-R8Q" simpleName="reporting" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPACKAGE" initializer="true">
+          <position endColumn="48" startColumn="36" endLine="18" startLine="18" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <body id="_DIrAbhIREeKKlKNniG-R8Q" sissyId="499">
+            <position endColumn="48" startColumn="36" endLine="18" startLine="18" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIrAbxIREeKKlKNniG-R8Q" sissyId="500">
+              <position endColumn="48" startColumn="36" endLine="18" startLine="18" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK08lBIREeKKlKNniG-R8Q" sissyId="501" accessedTarget="_DJYyLBIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="48" startColumn="24" endLine="18" startLine="18" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DK08lRIREeKKlKNniG-R8Q" sissyId="738" accessedTarget="_DINGWhIREeKKlKNniG-R8Q">
+                <position endColumn="48" startColumn="36" endLine="18" startLine="18" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </constructors>
+        <fields id="_DJYyKhIREeKKlKNniG-R8Q" sissyId="203" visibility="VISIBILITYPRIVAT" simpleName="price" const="false">
+          <position endColumn="21" startColumn="17" endLine="20" startLine="20" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <typeDeclaration id="_DJYyKxIREeKKlKNniG-R8Q" sissyId="202" accessedTarget="_DGz_MxIREeKKlKNniG-R8Q">
+            <position endColumn="21" startColumn="17" endLine="20" startLine="20" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          </typeDeclaration>
+        </fields>
+        <fields id="_DJYyLBIREeKKlKNniG-R8Q" sissyId="201" visibility="VISIBILITYPRIVAT" simpleName="reporting" const="false">
+          <position endColumn="48" startColumn="24" endLine="18" startLine="18" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <typeDeclaration id="_DJYyLRIREeKKlKNniG-R8Q" sissyId="200" accessedTarget="_DG1NUxIREeKKlKNniG-R8Q">
+            <position endColumn="48" startColumn="24" endLine="18" startLine="18" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          </typeDeclaration>
+        </fields>
+        <fields id="_DJYyLhIREeKKlKNniG-R8Q" sissyId="199" visibility="VISIBILITYPRIVAT" simpleName="payment" const="false">
+          <position endColumn="49" startColumn="22" endLine="17" startLine="17" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <typeDeclaration id="_DJYyLxIREeKKlKNniG-R8Q" sissyId="198" accessedTarget="_DG1NVxIREeKKlKNniG-R8Q">
+            <position endColumn="49" startColumn="22" endLine="17" startLine="17" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          </typeDeclaration>
+        </fields>
+        <fields id="_DJYyMBIREeKKlKNniG-R8Q" sissyId="197" visibility="VISIBILITYPRIVAT" simpleName="logistics" const="false">
+          <position endColumn="48" startColumn="24" endLine="16" startLine="16" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <typeDeclaration id="_DJYyMRIREeKKlKNniG-R8Q" sissyId="196" accessedTarget="_DG1NVRIREeKKlKNniG-R8Q">
+            <position endColumn="48" startColumn="24" endLine="16" startLine="16" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          </typeDeclaration>
+        </fields>
+        <fields id="_DJYyMhIREeKKlKNniG-R8Q" sissyId="195" visibility="VISIBILITYPRIVAT" simpleName="storeQuery" const="false">
+          <position endColumn="51" startColumn="25" endLine="15" startLine="15" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <typeDeclaration id="_DJYyMxIREeKKlKNniG-R8Q" sissyId="194" accessedTarget="_DG10YRIREeKKlKNniG-R8Q">
+            <position endColumn="51" startColumn="25" endLine="15" startLine="15" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          </typeDeclaration>
+        </fields>
+        <methods id="_DIJb8BIREeKKlKNniG-R8Q" sissyId="246" simpleName="calculateDeliveryTime" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPRIVAT" virtual="true">
+          <position endColumn="5" startColumn="5" endLine="24" startLine="22" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIJb8RIREeKKlKNniG-R8Q" sissyId="249" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="5" endLine="24" startLine="22" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <body id="_DIpyQBIREeKKlKNniG-R8Q" sissyId="247">
+            <position endColumn="5" startColumn="42" endLine="24" startLine="22" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIpyQRIREeKKlKNniG-R8Q" sissyId="248">
+              <position endColumn="44" startColumn="9" endLine="23" startLine="23" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKx5PRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="614" accessedTarget="_DJZZKhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKygQBIREeKKlKNniG-R8Q" sissyId="615" accessedTarget="_DJYyMBIREeKKlKNniG-R8Q">
+                <position endColumn="18" startColumn="9" endLine="23" startLine="23" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKygQRIREeKKlKNniG-R8Q" sissyId="616" accessedTarget="_DIL4PRIREeKKlKNniG-R8Q">
+                <position endColumn="44" startColumn="9" endLine="23" startLine="23" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <methods id="_DIJb8hIREeKKlKNniG-R8Q" sissyId="250" simpleName="calculateValue" numberOfStatements="2" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="5" startColumn="5" endLine="30" startLine="26" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIJb8xIREeKKlKNniG-R8Q" sissyId="254" accessedTarget="_DGz_MxIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="5" endLine="30" startLine="26" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <localVariables id="_DJYyEhIREeKKlKNniG-R8Q" sissyId="255" simpleName="inventory" const="false">
+            <position endColumn="55" startColumn="19" endLine="28" startLine="28" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJYyExIREeKKlKNniG-R8Q" sissyId="256" accessedTarget="_DG10YhIREeKKlKNniG-R8Q">
+              <position endColumn="55" startColumn="19" endLine="28" startLine="28" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <body id="_DIpyQhIREeKKlKNniG-R8Q" sissyId="251">
+            <position endColumn="5" startColumn="5" endLine="30" startLine="27" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIpyQxIREeKKlKNniG-R8Q" sissyId="252">
+              <position endColumn="55" startColumn="9" endLine="28" startLine="28" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKygQhIREeKKlKNniG-R8Q" sissyId="257" accessedTarget="_DJYyEhIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="55" startColumn="19" endLine="28" startLine="28" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKygQxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="617" accessedTarget="_DJZZKhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKygRBIREeKKlKNniG-R8Q" sissyId="618" accessedTarget="_DJYyMhIREeKKlKNniG-R8Q">
+                <position endColumn="41" startColumn="31" endLine="28" startLine="28" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKygRRIREeKKlKNniG-R8Q" sissyId="619" accessedTarget="_DIKDDxIREeKKlKNniG-R8Q">
+                <position endColumn="55" startColumn="31" endLine="28" startLine="28" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:JumpStatement" id="_DIpyRBIREeKKlKNniG-R8Q" sissyId="253" kind="RETURN">
+              <position endColumn="56" startColumn="9" endLine="29" startLine="29" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKygRhIREeKKlKNniG-R8Q" sissyId="620" accessedTarget="_DJYyEhIREeKKlKNniG-R8Q">
+                <position endColumn="25" startColumn="16" endLine="29" startLine="29" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKygRxIREeKKlKNniG-R8Q" sissyId="621" accessedTarget="_DIKqEBIREeKKlKNniG-R8Q">
+                <position endColumn="35" startColumn="16" endLine="29" startLine="29" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKygSBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="622" accessedTarget="_DJZZKhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKygSRIREeKKlKNniG-R8Q" sissyId="623" accessedTarget="_DIJb-BIREeKKlKNniG-R8Q">
+                <position endColumn="55" startColumn="46" endLine="29" startLine="29" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <methods id="_DIJb9BIREeKKlKNniG-R8Q" sissyId="258" simpleName="checkStock" numberOfStatements="2" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPRIVAT" virtual="true">
+          <position endColumn="5" startColumn="5" endLine="35" startLine="32" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIJb9RIREeKKlKNniG-R8Q" sissyId="262" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="5" endLine="35" startLine="32" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <localVariables id="_DJYyEBIREeKKlKNniG-R8Q" sissyId="263" simpleName="sq" const="false">
+            <position endColumn="47" startColumn="20" endLine="33" startLine="33" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJYyERIREeKKlKNniG-R8Q" sissyId="264" accessedTarget="_DG10YxIREeKKlKNniG-R8Q">
+              <position endColumn="47" startColumn="20" endLine="33" startLine="33" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <body id="_DIpyRRIREeKKlKNniG-R8Q" sissyId="259">
+            <position endColumn="5" startColumn="31" endLine="35" startLine="32" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIpyRhIREeKKlKNniG-R8Q" sissyId="260">
+              <position endColumn="47" startColumn="9" endLine="33" startLine="33" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKygShIREeKKlKNniG-R8Q" sissyId="265" accessedTarget="_DJYyEBIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="47" startColumn="20" endLine="33" startLine="33" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CastTypeAccess" id="_DKygSxIREeKKlKNniG-R8Q" sissyId="624" accessedTarget="_DG10YxIREeKKlKNniG-R8Q">
+                <position endColumn="47" startColumn="25" endLine="33" startLine="33" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKygTBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="625" accessedTarget="_DJZZKhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKygTRIREeKKlKNniG-R8Q" sissyId="626" accessedTarget="_DJYyMhIREeKKlKNniG-R8Q">
+                <position endColumn="47" startColumn="38" endLine="33" startLine="33" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_DIpyRxIREeKKlKNniG-R8Q" sissyId="261">
+              <position endColumn="24" startColumn="9" endLine="34" startLine="34" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKygThIREeKKlKNniG-R8Q" sissyId="627" accessedTarget="_DJYyEBIREeKKlKNniG-R8Q">
+                <position endColumn="11" startColumn="9" endLine="34" startLine="34" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKygTxIREeKKlKNniG-R8Q" sissyId="628" accessedTarget="_DIL4MxIREeKKlKNniG-R8Q">
+                <position endColumn="24" startColumn="9" endLine="34" startLine="34" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <methods id="_DIJb9hIREeKKlKNniG-R8Q" sissyId="266" simpleName="fileReport" numberOfStatements="3" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPRIVAT" virtual="true">
+          <position endColumn="5" startColumn="5" endLine="41" startLine="37" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIJb9xIREeKKlKNniG-R8Q" sissyId="271" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="5" endLine="41" startLine="37" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <localVariables id="_DJYLIBIREeKKlKNniG-R8Q" sissyId="272" simpleName="r" const="false">
+            <position endColumn="29" startColumn="16" endLine="38" startLine="38" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJYLIRIREeKKlKNniG-R8Q" sissyId="273" accessedTarget="_DG10ZBIREeKKlKNniG-R8Q">
+              <position endColumn="29" startColumn="16" endLine="38" startLine="38" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <body id="_DIpySBIREeKKlKNniG-R8Q" sissyId="267">
+            <position endColumn="5" startColumn="31" endLine="41" startLine="37" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIpySRIREeKKlKNniG-R8Q" sissyId="268">
+              <position endColumn="29" startColumn="9" endLine="38" startLine="38" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKygUBIREeKKlKNniG-R8Q" sissyId="274" accessedTarget="_DJYLIBIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="29" startColumn="16" endLine="38" startLine="38" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKygURIREeKKlKNniG-R8Q" sissyId="629" accessedTarget="_DINGVBIREeKKlKNniG-R8Q">
+                <position endColumn="29" startColumn="20" endLine="38" startLine="38" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_DIpyShIREeKKlKNniG-R8Q" sissyId="269">
+              <position endColumn="32" startColumn="9" endLine="39" startLine="39" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKygUhIREeKKlKNniG-R8Q" sissyId="630" accessedTarget="_DJYLIBIREeKKlKNniG-R8Q">
+                <position endColumn="10" startColumn="9" endLine="39" startLine="39" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKygUxIREeKKlKNniG-R8Q" sissyId="631" accessedTarget="_DIL4ORIREeKKlKNniG-R8Q">
+                <position endColumn="32" startColumn="9" endLine="39" startLine="39" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_DKygVBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="632"/>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_DIpySxIREeKKlKNniG-R8Q" sissyId="270">
+              <position endColumn="32" startColumn="9" endLine="40" startLine="40" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKygVRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="633" accessedTarget="_DJZZKhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzHUBIREeKKlKNniG-R8Q" sissyId="634" accessedTarget="_DJYyLBIREeKKlKNniG-R8Q">
+                <position endColumn="18" startColumn="9" endLine="40" startLine="40" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKzHURIREeKKlKNniG-R8Q" sissyId="635" accessedTarget="_DIG_sBIREeKKlKNniG-R8Q">
+                <position endColumn="32" startColumn="9" endLine="40" startLine="40" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_DKzHUhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="636">
+                <accesses xsi:type="accesses:VariableAccess" id="_DK1jkRIREeKKlKNniG-R8Q" sissyId="637" accessedTarget="_DJYLIBIREeKKlKNniG-R8Q">
+                  <position endColumn="30" startColumn="30" endLine="40" startLine="40" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+                </accesses>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <methods id="_DIJb-BIREeKKlKNniG-R8Q" sissyId="275" simpleName="getPrice" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="5" startColumn="5" endLine="45" startLine="43" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIKDABIREeKKlKNniG-R8Q" sissyId="278" accessedTarget="_DGz_MxIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="5" endLine="45" startLine="43" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <body id="_DIpyTBIREeKKlKNniG-R8Q" sissyId="276">
+            <position endColumn="5" startColumn="27" endLine="45" startLine="43" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:JumpStatement" id="_DIpyTRIREeKKlKNniG-R8Q" sissyId="277" kind="RETURN">
+              <position endColumn="21" startColumn="9" endLine="44" startLine="44" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKzHUxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="638" accessedTarget="_DJZZKhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzHVBIREeKKlKNniG-R8Q" sissyId="639" accessedTarget="_DJYyKhIREeKKlKNniG-R8Q">
+                <position endColumn="20" startColumn="16" endLine="44" startLine="44" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <methods id="_DIKDARIREeKKlKNniG-R8Q" sissyId="279" simpleName="handleOrder" numberOfStatements="4" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="5" startColumn="5" endLine="53" startLine="47" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIKDAhIREeKKlKNniG-R8Q" sissyId="285" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="5" endLine="53" startLine="47" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <body id="_DIpyThIREeKKlKNniG-R8Q" sissyId="280">
+            <position endColumn="5" startColumn="5" endLine="53" startLine="48" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIpyTxIREeKKlKNniG-R8Q" sissyId="281">
+              <position endColumn="21" startColumn="9" endLine="49" startLine="49" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKzHVRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="640" accessedTarget="_DJZZKhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKzHVhIREeKKlKNniG-R8Q" sissyId="641" accessedTarget="_DIJb9BIREeKKlKNniG-R8Q">
+                <position endColumn="21" startColumn="9" endLine="49" startLine="49" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_DIpyUBIREeKKlKNniG-R8Q" sissyId="282">
+              <position endColumn="32" startColumn="9" endLine="50" startLine="50" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKzHVxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="642" accessedTarget="_DJZZKhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKzHWBIREeKKlKNniG-R8Q" sissyId="643" accessedTarget="_DIJb8BIREeKKlKNniG-R8Q">
+                <position endColumn="32" startColumn="9" endLine="50" startLine="50" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_DIpyURIREeKKlKNniG-R8Q" sissyId="283">
+              <position endColumn="22" startColumn="9" endLine="51" startLine="51" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKzHWRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="644" accessedTarget="_DJZZKhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKzHWhIREeKKlKNniG-R8Q" sissyId="645" accessedTarget="_DIKDAxIREeKKlKNniG-R8Q">
+                <position endColumn="22" startColumn="9" endLine="51" startLine="51" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_DIpyUhIREeKKlKNniG-R8Q" sissyId="284">
+              <position endColumn="21" startColumn="9" endLine="52" startLine="52" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKzHWxIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="646" accessedTarget="_DJZZKhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKzHXBIREeKKlKNniG-R8Q" sissyId="647" accessedTarget="_DIJb9hIREeKKlKNniG-R8Q">
+                <position endColumn="21" startColumn="9" endLine="52" startLine="52" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <methods id="_DIKDAxIREeKKlKNniG-R8Q" sissyId="286" simpleName="sendInvoice" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPRIVAT" virtual="true">
+          <position endColumn="5" startColumn="5" endLine="58" startLine="55" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIKDBBIREeKKlKNniG-R8Q" sissyId="289" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="5" endLine="58" startLine="55" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <body id="_DIpyUxIREeKKlKNniG-R8Q" sissyId="287">
+            <position endColumn="5" startColumn="32" endLine="58" startLine="55" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIpyVBIREeKKlKNniG-R8Q" sissyId="288">
+              <position endColumn="65" startColumn="9" endLine="57" startLine="57" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKzHXRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="648" accessedTarget="_DJZZKhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzHXhIREeKKlKNniG-R8Q" sissyId="649" accessedTarget="_DJYyLhIREeKKlKNniG-R8Q">
+                <position endColumn="16" startColumn="9" endLine="57" startLine="57" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DKzHXxIREeKKlKNniG-R8Q" sissyId="650" accessedTarget="_DIKDBxIREeKKlKNniG-R8Q">
+                <position endColumn="65" startColumn="9" endLine="57" startLine="57" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_DKzHYBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="651"/>
+              <accesses xsi:type="accesses:CompositeAccess" id="_DKzHYRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="652">
+                <accesses xsi:type="accesses:SelfAccess" id="_DK1jkhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="653" accessedTarget="_DJZZKhIREeKKlKNniG-R8Q"/>
+                <accesses xsi:type="accesses:FunctionAccess" id="_DK1jkxIREeKKlKNniG-R8Q" sissyId="654" accessedTarget="_DIJb8hIREeKKlKNniG-R8Q">
+                  <position endColumn="63" startColumn="48" endLine="57" startLine="57" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+                </accesses>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <methods id="_DIKDBRIREeKKlKNniG-R8Q" sissyId="290" simpleName="setPrice" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="5" startColumn="5" endLine="62" startLine="60" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIKDBhIREeKKlKNniG-R8Q" sissyId="293" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="5" endLine="62" startLine="60" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_DJanVBIREeKKlKNniG-R8Q" sissyId="295" simpleName="price" const="false">
+            <position endColumn="34" startColumn="26" endLine="60" startLine="60" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJanVRIREeKKlKNniG-R8Q" sissyId="294" accessedTarget="_DGz_MxIREeKKlKNniG-R8Q">
+              <position endColumn="34" startColumn="26" endLine="60" startLine="60" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <body id="_DIpyVRIREeKKlKNniG-R8Q" sissyId="291">
+            <position endColumn="5" startColumn="37" endLine="62" startLine="60" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIpyVhIREeKKlKNniG-R8Q" sissyId="292">
+              <position endColumn="26" startColumn="9" endLine="61" startLine="61" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DKzHYhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="655" accessedTarget="_DJZZKhIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzHYxIREeKKlKNniG-R8Q" sissyId="656" accessedTarget="_DJYyKhIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="18" startColumn="9" endLine="61" startLine="61" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_DKzHZBIREeKKlKNniG-R8Q" sissyId="657" accessedTarget="_DJanVBIREeKKlKNniG-R8Q">
+                <position endColumn="26" startColumn="22" endLine="61" startLine="61" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <inheritanceTypeAccesses id="_DKxSIxIREeKKlKNniG-R8Q" sissyId="605" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="1" startColumn="1" endLine="64" startLine="13" sourceFile="_DFQgBxIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZKhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="170" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZKxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="171" accessedTarget="_DG2bcRIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+    </subPackages>
+    <subPackages id="_DFE50hIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="130" simpleName="database">
+      <classes id="_DG10ZRIREeKKlKNniG-R8Q" sissyId="127" visibility="VISIBILITYPUBLIC" simpleName="Database" referenceType="true">
+        <position endColumn="1" startColumn="1" endLine="19" startLine="5" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+        <constructors id="_DINtYBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="485" simpleName="Database" visibility="VISIBILITYPUBLIC" static="true" virtual="true">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+        </constructors>
+        <constructors id="_DINtZxIREeKKlKNniG-R8Q" simpleName="database" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPACKAGE" initializer="true">
+          <position endColumn="72" startColumn="47" endLine="7" startLine="7" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+          <body id="_DIrAdBIREeKKlKNniG-R8Q" sissyId="511">
+            <position endColumn="72" startColumn="47" endLine="7" startLine="7" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIrAdRIREeKKlKNniG-R8Q" sissyId="512">
+              <position endColumn="72" startColumn="47" endLine="7" startLine="7" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK08mhIREeKKlKNniG-R8Q" sissyId="513" accessedTarget="_DJYyFBIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="72" startColumn="36" endLine="7" startLine="7" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DK1jkBIREeKKlKNniG-R8Q" sissyId="751" accessedTarget="_DIOUcxIREeKKlKNniG-R8Q" typeArguments="_DG3CghIREeKKlKNniG-R8Q">
+                <position endColumn="72" startColumn="47" endLine="7" startLine="7" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </constructors>
+        <fields id="_DJYyFBIREeKKlKNniG-R8Q" sissyId="241" visibility="VISIBILITYPRIVAT" simpleName="database" const="false">
+          <position endColumn="72" startColumn="36" endLine="7" startLine="7" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+          <typeDeclaration id="_DJYyFRIREeKKlKNniG-R8Q" sissyId="239" accessedTarget="_DG3pkBIREeKKlKNniG-R8Q" typeArguments="_DG3CghIREeKKlKNniG-R8Q">
+            <position endColumn="72" startColumn="36" endLine="7" startLine="7" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+          </typeDeclaration>
+        </fields>
+        <methods id="_DIMfSRIREeKKlKNniG-R8Q" sissyId="455" simpleName="retrieveData" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" overriddenMember="_DIL4QRIREeKKlKNniG-R8Q" virtual="true">
+          <position endColumn="5" startColumn="6" endLine="12" startLine="9" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIMfShIREeKKlKNniG-R8Q" sissyId="458" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="6" endLine="12" startLine="9" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_DJaAShIREeKKlKNniG-R8Q" sissyId="460" simpleName="key" const="false">
+            <position endColumn="41" startColumn="32" endLine="10" startLine="10" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJaASxIREeKKlKNniG-R8Q" sissyId="459" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+              <position endColumn="41" startColumn="32" endLine="10" startLine="10" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <body id="_DIrAYRIREeKKlKNniG-R8Q" sissyId="456">
+            <position endColumn="5" startColumn="44" endLine="12" startLine="10" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:JumpStatement" id="_DIrAYhIREeKKlKNniG-R8Q" sissyId="457" kind="RETURN">
+              <position endColumn="33" startColumn="9" endLine="11" startLine="11" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DK0VhhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="709" accessedTarget="_DJZZMBIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK0VhxIREeKKlKNniG-R8Q" sissyId="710" accessedTarget="_DJYyFBIREeKKlKNniG-R8Q">
+                <position endColumn="24" startColumn="16" endLine="11" startLine="11" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DK0ViBIREeKKlKNniG-R8Q" sissyId="713" accessedTarget="_DINtahIREeKKlKNniG-R8Q">
+                <position endColumn="32" startColumn="16" endLine="11" startLine="11" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_DK08gBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="714">
+                <accesses xsi:type="accesses:VariableAccess" id="_DK1jmBIREeKKlKNniG-R8Q" sissyId="715" accessedTarget="_DJaAShIREeKKlKNniG-R8Q">
+                  <position endColumn="31" startColumn="29" endLine="11" startLine="11" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+                </accesses>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <methods id="_DIMfSxIREeKKlKNniG-R8Q" sissyId="461" simpleName="storedata" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" overriddenMember="_DIMfQRIREeKKlKNniG-R8Q" virtual="true">
+          <position endColumn="5" startColumn="6" endLine="17" startLine="14" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIMfTBIREeKKlKNniG-R8Q" sissyId="464" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+            <position endColumn="5" startColumn="6" endLine="17" startLine="14" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_DJaASBIREeKKlKNniG-R8Q" sissyId="466" simpleName="key" const="false">
+            <position endColumn="36" startColumn="27" endLine="15" startLine="15" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJaASRIREeKKlKNniG-R8Q" sissyId="465" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+              <position endColumn="36" startColumn="27" endLine="15" startLine="15" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <formalParameters id="_DJanWBIREeKKlKNniG-R8Q" sissyId="468" simpleName="data" const="false">
+            <position endColumn="49" startColumn="39" endLine="15" startLine="15" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJanWRIREeKKlKNniG-R8Q" sissyId="467" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+              <position endColumn="49" startColumn="39" endLine="15" startLine="15" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <body id="_DIrAYxIREeKKlKNniG-R8Q" sissyId="462">
+            <position endColumn="5" startColumn="52" endLine="17" startLine="15" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIrAZBIREeKKlKNniG-R8Q" sissyId="463">
+              <position endColumn="32" startColumn="9" endLine="16" startLine="16" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DK08gRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="716" accessedTarget="_DJZZMBIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK08ghIREeKKlKNniG-R8Q" sissyId="717" accessedTarget="_DJYyFBIREeKKlKNniG-R8Q">
+                <position endColumn="17" startColumn="9" endLine="16" startLine="16" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DK08gxIREeKKlKNniG-R8Q" sissyId="720" accessedTarget="_DINtbBIREeKKlKNniG-R8Q">
+                <position endColumn="32" startColumn="9" endLine="16" startLine="16" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_DK08hBIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="721">
+                <accesses xsi:type="accesses:VariableAccess" id="_DK1jmRIREeKKlKNniG-R8Q" sissyId="723" accessedTarget="_DJaASBIREeKKlKNniG-R8Q">
+                  <position endColumn="24" startColumn="22" endLine="16" startLine="16" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+                </accesses>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_DK08hRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="722">
+                <accesses xsi:type="accesses:VariableAccess" id="_DK1jmhIREeKKlKNniG-R8Q" sissyId="724" accessedTarget="_DJanWBIREeKKlKNniG-R8Q">
+                  <position endColumn="30" startColumn="27" endLine="16" startLine="16" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+                </accesses>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <inheritanceTypeAccesses id="_DKxSIBIREeKKlKNniG-R8Q" sissyId="581" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="42" startColumn="23" endLine="5" startLine="5" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_DKxSIRIREeKKlKNniG-R8Q" sissyId="582" accessedTarget="_DG10ZhIREeKKlKNniG-R8Q">
+          <position endColumn="42" startColumn="23" endLine="5" startLine="5" sourceFile="_DFRuIRIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZMBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="128" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZMRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="129" accessedTarget="_DG10ZRIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG10ZhIREeKKlKNniG-R8Q" sissyId="132" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="IDatabase" referenceType="true" interface="true">
+        <position endColumn="1" startColumn="1" endLine="9" startLine="3" sourceFile="_DFPR4hIREeKKlKNniG-R8Q"/>
+        <methods id="_DIL4QRIREeKKlKNniG-R8Q" sissyId="409" simpleName="retrieveData" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+          <position endColumn="41" startColumn="5" endLine="5" startLine="5" sourceFile="_DFPR4hIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIMfQBIREeKKlKNniG-R8Q" sissyId="410" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+            <position endColumn="41" startColumn="5" endLine="5" startLine="5" sourceFile="_DFPR4hIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_DJaAUhIREeKKlKNniG-R8Q" sissyId="412" simpleName="key" const="false">
+            <position endColumn="41" startColumn="32" endLine="5" startLine="5" sourceFile="_DFPR4hIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJaAUxIREeKKlKNniG-R8Q" sissyId="411" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+              <position endColumn="41" startColumn="32" endLine="5" startLine="5" sourceFile="_DFPR4hIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+        </methods>
+        <methods id="_DIMfQRIREeKKlKNniG-R8Q" sissyId="413" simpleName="storedata" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+          <position endColumn="49" startColumn="5" endLine="7" startLine="7" sourceFile="_DFPR4hIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIMfQhIREeKKlKNniG-R8Q" sissyId="414" accessedTarget="_DG0mQRIREeKKlKNniG-R8Q">
+            <position endColumn="49" startColumn="5" endLine="7" startLine="7" sourceFile="_DFPR4hIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <formalParameters id="_DJaAUBIREeKKlKNniG-R8Q" sissyId="416" simpleName="key" const="false">
+            <position endColumn="36" startColumn="27" endLine="7" startLine="7" sourceFile="_DFPR4hIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJaAURIREeKKlKNniG-R8Q" sissyId="415" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+              <position endColumn="36" startColumn="27" endLine="7" startLine="7" sourceFile="_DFPR4hIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+          <formalParameters id="_DJanXBIREeKKlKNniG-R8Q" sissyId="418" simpleName="data" const="false">
+            <position endColumn="49" startColumn="39" endLine="7" startLine="7" sourceFile="_DFPR4hIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJanXRIREeKKlKNniG-R8Q" sissyId="417" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+              <position endColumn="49" startColumn="39" endLine="7" startLine="7" sourceFile="_DFPR4hIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </formalParameters>
+        </methods>
+        <inheritanceTypeAccesses id="_DKxSIhIREeKKlKNniG-R8Q" sissyId="583" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="1" startColumn="1" endLine="9" startLine="3" sourceFile="_DFPR4hIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZLhIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="133" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZLxIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="134" accessedTarget="_DG10ZhIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+    </subPackages>
+    <subPackages id="_DFE50xIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="175" simpleName="ui">
+      <classes id="_DG2bchIREeKKlKNniG-R8Q" sissyId="172" visibility="VISIBILITYPUBLIC" abstract="true" simpleName="IListView" referenceType="true" interface="true">
+        <position endColumn="1" startColumn="1" endLine="6" startLine="3" sourceFile="_DFRHEBIREeKKlKNniG-R8Q"/>
+        <methods id="_DIKDCRIREeKKlKNniG-R8Q" sissyId="302" simpleName="createListEntry" visibility="VISIBILITYPUBLIC" abstract="true" virtual="true">
+          <position endColumn="32" startColumn="4" endLine="5" startLine="5" sourceFile="_DFRHEBIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIKDChIREeKKlKNniG-R8Q" sissyId="303" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+            <position endColumn="32" startColumn="4" endLine="5" startLine="5" sourceFile="_DFRHEBIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+        </methods>
+        <inheritanceTypeAccesses id="_DKxSJBIREeKKlKNniG-R8Q" sissyId="538" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="1" startColumn="1" endLine="6" startLine="3" sourceFile="_DFRHEBIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJZZKBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="173" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJZZKRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="174" accessedTarget="_DG2bchIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+      <classes id="_DG3CgBIREeKKlKNniG-R8Q" sissyId="191" visibility="VISIBILITYPUBLIC" simpleName="ProductsListView" referenceType="true">
+        <position endColumn="1" startColumn="1" endLine="50" startLine="14" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+        <constructors id="_DINGWBIREeKKlKNniG-R8Q" sissyId="479" simpleName="ProductsListView" numberOfStatements="2" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" virtual="true">
+          <position endColumn="4" startColumn="4" endLine="26" startLine="22" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+          <body id="_DIrAZRIREeKKlKNniG-R8Q" sissyId="480">
+            <position endColumn="4" startColumn="4" endLine="26" startLine="23" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIrAZhIREeKKlKNniG-R8Q" sissyId="481">
+              <position endColumn="32" startColumn="7" endLine="24" startLine="24" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DK08hhIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="725" accessedTarget="_DJYyNBIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK08hxIREeKKlKNniG-R8Q" sissyId="726" accessedTarget="_DJYyHBIREeKKlKNniG-R8Q">
+                <position endColumn="15" startColumn="7" endLine="24" startLine="24" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DK08iBIREeKKlKNniG-R8Q" sissyId="729" accessedTarget="_DIOUcBIREeKKlKNniG-R8Q">
+                <position endColumn="32" startColumn="7" endLine="24" startLine="24" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_DK08iRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="730"/>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_DIrAZxIREeKKlKNniG-R8Q" sissyId="482">
+              <position endColumn="32" startColumn="7" endLine="25" startLine="25" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:SelfAccess" id="_DK08ihIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="731" accessedTarget="_DJYyNBIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK08ixIREeKKlKNniG-R8Q" sissyId="732" accessedTarget="_DJYyHBIREeKKlKNniG-R8Q">
+                <position endColumn="15" startColumn="7" endLine="25" startLine="25" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DK08jBIREeKKlKNniG-R8Q" sissyId="733" accessedTarget="_DIOUcBIREeKKlKNniG-R8Q">
+                <position endColumn="32" startColumn="7" endLine="25" startLine="25" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_DK08jRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="734"/>
+            </statements>
+          </body>
+        </constructors>
+        <constructors id="_DINtZhIREeKKlKNniG-R8Q" simpleName="products" numberOfStatements="1" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPACKAGE" initializer="true">
+          <position endColumn="48" startColumn="28" endLine="17" startLine="17" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+          <body id="_DIrAchIREeKKlKNniG-R8Q" sissyId="507">
+            <position endColumn="48" startColumn="28" endLine="17" startLine="17" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIrAcxIREeKKlKNniG-R8Q" sissyId="508">
+              <position endColumn="48" startColumn="28" endLine="17" startLine="17" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK08mBIREeKKlKNniG-R8Q" sissyId="509" accessedTarget="_DJYyHBIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="48" startColumn="17" endLine="17" startLine="17" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DK08mRIREeKKlKNniG-R8Q" sissyId="749" accessedTarget="_DIOUchIREeKKlKNniG-R8Q" typeArguments="_DG3CghIREeKKlKNniG-R8Q">
+                <position endColumn="48" startColumn="28" endLine="17" startLine="17" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </constructors>
+        <fields id="_DJYyHBIREeKKlKNniG-R8Q" sissyId="226" visibility="VISIBILITYPACKAGE" simpleName="products" const="false">
+          <position endColumn="48" startColumn="17" endLine="17" startLine="17" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+          <typeDeclaration id="_DJYyHRIREeKKlKNniG-R8Q" sissyId="224" accessedTarget="_DG3CgxIREeKKlKNniG-R8Q" typeArguments="_DG3CghIREeKKlKNniG-R8Q">
+            <position endColumn="48" startColumn="17" endLine="17" startLine="17" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+          </typeDeclaration>
+        </fields>
+        <methods id="_DIMfQxIREeKKlKNniG-R8Q" sissyId="419" simpleName="createListEntry" numberOfStatements="6" linesOfComments="6" numberOfEdgesInCFG="1" numberOfNodesInCFG="1" visibility="VISIBILITYPUBLIC" overriddenMember="_DIKDCRIREeKKlKNniG-R8Q" virtual="true">
+          <position endColumn="4" startColumn="5" endLine="42" startLine="29" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+          <returnTypeDeclaration id="_DIMfRBIREeKKlKNniG-R8Q" sissyId="427" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+            <position endColumn="4" startColumn="5" endLine="42" startLine="29" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+          </returnTypeDeclaration>
+          <localVariables id="_DJYLDBIREeKKlKNniG-R8Q" sissyId="440" simpleName="producer" const="false">
+            <position endColumn="62" startColumn="14" endLine="39" startLine="39" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJYLDRIREeKKlKNniG-R8Q" sissyId="441" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+              <position endColumn="62" startColumn="14" endLine="39" startLine="39" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <localVariables id="_DJYLDhIREeKKlKNniG-R8Q" sissyId="437" simpleName="pSearch" const="false">
+            <position endColumn="52" startColumn="21" endLine="38" startLine="38" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJYLDxIREeKKlKNniG-R8Q" sissyId="438" accessedTarget="_DG1NUhIREeKKlKNniG-R8Q">
+              <position endColumn="52" startColumn="21" endLine="38" startLine="38" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <localVariables id="_DJYLEBIREeKKlKNniG-R8Q" sissyId="434" simpleName="price" const="false">
+            <position endColumn="55" startColumn="14" endLine="35" startLine="35" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJYLERIREeKKlKNniG-R8Q" sissyId="435" accessedTarget="_DG0mQhIREeKKlKNniG-R8Q">
+              <position endColumn="55" startColumn="14" endLine="35" startLine="35" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <localVariables id="_DJYLEhIREeKKlKNniG-R8Q" sissyId="431" simpleName="search" const="false">
+            <position endColumn="40" startColumn="15" endLine="34" startLine="34" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJYLExIREeKKlKNniG-R8Q" sissyId="432" accessedTarget="_DG1NURIREeKKlKNniG-R8Q">
+              <position endColumn="40" startColumn="15" endLine="34" startLine="34" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <localVariables id="_DJYLFBIREeKKlKNniG-R8Q" sissyId="428" simpleName="currentProduct" const="false">
+            <position endColumn="45" startColumn="14" endLine="32" startLine="32" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+            <typeDeclaration id="_DJYLFRIREeKKlKNniG-R8Q" sissyId="429" accessedTarget="_DG3CghIREeKKlKNniG-R8Q">
+              <position endColumn="45" startColumn="14" endLine="32" startLine="32" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+            </typeDeclaration>
+          </localVariables>
+          <body id="_DIqZZRIREeKKlKNniG-R8Q" sissyId="420">
+            <position endColumn="4" startColumn="4" endLine="42" startLine="31" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+            <statements xsi:type="statements:SimpleStatement" id="_DIqZZhIREeKKlKNniG-R8Q" sissyId="421">
+              <position endColumn="45" startColumn="7" endLine="32" startLine="32" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK0VcRIREeKKlKNniG-R8Q" sissyId="430" accessedTarget="_DJYLFBIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="45" startColumn="14" endLine="32" startLine="32" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:SelfAccess" id="_DK0VchIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="689" accessedTarget="_DJYyNBIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK0VcxIREeKKlKNniG-R8Q" sissyId="690" accessedTarget="_DJYyHBIREeKKlKNniG-R8Q">
+                <position endColumn="39" startColumn="31" endLine="32" startLine="32" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DK0VdBIREeKKlKNniG-R8Q" sissyId="693" accessedTarget="_DINtaBIREeKKlKNniG-R8Q">
+                <position endColumn="45" startColumn="31" endLine="32" startLine="32" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_DK0VdRIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="694"/>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_DIqZZxIREeKKlKNniG-R8Q" sissyId="422">
+              <position endColumn="40" startColumn="7" endLine="34" startLine="34" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK0VdhIREeKKlKNniG-R8Q" sissyId="433" accessedTarget="_DJYLEhIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="40" startColumn="15" endLine="34" startLine="34" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DK0VdxIREeKKlKNniG-R8Q" sissyId="695" accessedTarget="_DINGURIREeKKlKNniG-R8Q">
+                <position endColumn="40" startColumn="24" endLine="34" startLine="34" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_DIqZaBIREeKKlKNniG-R8Q" sissyId="423">
+              <position endColumn="55" startColumn="7" endLine="35" startLine="35" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK0VeBIREeKKlKNniG-R8Q" sissyId="436" accessedTarget="_DJYLEBIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="55" startColumn="14" endLine="35" startLine="35" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK0VeRIREeKKlKNniG-R8Q" sissyId="696" accessedTarget="_DJYLEhIREeKKlKNniG-R8Q">
+                <position endColumn="28" startColumn="22" endLine="35" startLine="35" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DK0VehIREeKKlKNniG-R8Q" sissyId="697" accessedTarget="_DILRKBIREeKKlKNniG-R8Q">
+                <position endColumn="55" startColumn="22" endLine="35" startLine="35" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_DK0VexIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="698">
+                <accesses xsi:type="accesses:VariableAccess" id="_DK1jlhIREeKKlKNniG-R8Q" sissyId="699" accessedTarget="_DJYLFBIREeKKlKNniG-R8Q">
+                  <position endColumn="54" startColumn="41" endLine="35" startLine="35" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+                </accesses>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_DIqZaRIREeKKlKNniG-R8Q" sissyId="424">
+              <position endColumn="52" startColumn="7" endLine="38" startLine="38" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK0VfBIREeKKlKNniG-R8Q" sissyId="439" accessedTarget="_DJYLDhIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="52" startColumn="21" endLine="38" startLine="38" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CastTypeAccess" id="_DK0VfRIREeKKlKNniG-R8Q" sissyId="700" accessedTarget="_DG1NUhIREeKKlKNniG-R8Q">
+                <position endColumn="52" startColumn="31" endLine="38" startLine="38" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK0VfhIREeKKlKNniG-R8Q" sissyId="701" accessedTarget="_DJYLEhIREeKKlKNniG-R8Q">
+                <position endColumn="52" startColumn="47" endLine="38" startLine="38" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:SimpleStatement" id="_DIqZahIREeKKlKNniG-R8Q" sissyId="425">
+              <position endColumn="62" startColumn="7" endLine="39" startLine="39" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK0VfxIREeKKlKNniG-R8Q" sissyId="442" accessedTarget="_DJYLDBIREeKKlKNniG-R8Q" write="true">
+                <position endColumn="62" startColumn="14" endLine="39" startLine="39" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK0VgBIREeKKlKNniG-R8Q" sissyId="702" accessedTarget="_DJYLDhIREeKKlKNniG-R8Q">
+                <position endColumn="32" startColumn="25" endLine="39" startLine="39" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:FunctionAccess" id="_DK0VgRIREeKKlKNniG-R8Q" sissyId="703" accessedTarget="_DILRJhIREeKKlKNniG-R8Q">
+                <position endColumn="62" startColumn="25" endLine="39" startLine="39" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:CompositeAccess" id="_DK0VghIREeKKlKNniG-R8Q" status="LIBRARY" sissyId="704">
+                <accesses xsi:type="accesses:VariableAccess" id="_DK1jlxIREeKKlKNniG-R8Q" sissyId="705" accessedTarget="_DJYLFBIREeKKlKNniG-R8Q">
+                  <position endColumn="61" startColumn="48" endLine="39" startLine="39" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+                </accesses>
+              </accesses>
+            </statements>
+            <statements xsi:type="statements:JumpStatement" id="_DIqZaxIREeKKlKNniG-R8Q" sissyId="426" kind="RETURN">
+              <position endColumn="67" startColumn="7" endLine="41" startLine="41" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK0VgxIREeKKlKNniG-R8Q" sissyId="706" accessedTarget="_DJYLFBIREeKKlKNniG-R8Q">
+                <position endColumn="27" startColumn="14" endLine="41" startLine="41" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK0VhBIREeKKlKNniG-R8Q" sissyId="707" accessedTarget="_DJYLEBIREeKKlKNniG-R8Q">
+                <position endColumn="42" startColumn="38" endLine="41" startLine="41" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+              <accesses xsi:type="accesses:VariableAccess" id="_DK0VhRIREeKKlKNniG-R8Q" sissyId="708" accessedTarget="_DJYLDBIREeKKlKNniG-R8Q">
+                <position endColumn="60" startColumn="53" endLine="41" startLine="41" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+              </accesses>
+            </statements>
+          </body>
+        </methods>
+        <inheritanceTypeAccesses id="_DKxSKxIREeKKlKNniG-R8Q" sissyId="535" accessedTarget="_DG3pkxIREeKKlKNniG-R8Q">
+          <position endColumn="50" startColumn="31" endLine="14" startLine="14" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <inheritanceTypeAccesses id="_DKxSLBIREeKKlKNniG-R8Q" sissyId="536" accessedTarget="_DG2bchIREeKKlKNniG-R8Q">
+          <position endColumn="50" startColumn="31" endLine="14" startLine="14" sourceFile="_DFQgBRIREeKKlKNniG-R8Q"/>
+        </inheritanceTypeAccesses>
+        <self id="_DJYyNBIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="192" visibility="VISIBILITYPRIVAT" simpleName="&lt;self>" const="false">
+          <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          <typeDeclaration id="_DJYyNRIREeKKlKNniG-R8Q" status="IMPLICIT" sissyId="193" accessedTarget="_DG3CgBIREeKKlKNniG-R8Q">
+            <position endColumn="-1" startColumn="-1" endLine="-1" startLine="-1"/>
+          </typeDeclaration>
+        </self>
+      </classes>
+    </subPackages>
+  </packages>
+</core:Root>

@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0"
+    xmlns:sdmc="http://ns.storydriven.org/sdm/calls/0.1.0" xmlns:sdmce="http://ns.storydriven.org/sdm/calls/expressions/0.1.0"
+    xmlns:sdme="http://ns.storydriven.org/sdm/expressions/0.1.0" xmlns:sdmp="http://ns.storydriven.org/sdm/patterns/0.1.0"
+    xmlns:sdmpe="http://ns.storydriven.org/sdm/patterns/expressions/0.1.0" name="org.reclipse.reengineering">
+  <eClassifiers xsi:type="ecore:EClass" name="ReengineeringStrategies">
+    <eOperations name="interfaceViolationReengineeringStrategy1">
+      <eAnnotations source="http://ns.storydriven.org/extension">
+        <contents xsi:type="sdma:OperationExtension">
+          <ownedActivity>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.1"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.0"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3"/>
+            <ownedActivityNode xsi:type="sdma:StartNode" outgoing="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.1"/>
+            <ownedActivityNode xsi:type="sdma:StopNode" incoming="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.0"/>
+            <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="(p) delete cast statement"
+                outgoing="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.0"
+                incoming="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.2">
+              <ownedRule>
+                <variable xsi:type="sdmp:ObjectVariable" name="castStmt" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.0"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.2"
+                    bindingOperator="DESTROY" classifier="http://www.fzi.de/gast/statements#//SimpleStatement"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="method" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.1 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.6 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.9"
+                    classifier="http://www.fzi.de/gast/functions#//Method"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="access" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.2"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.3"
+                    bindingOperator="DESTROY" classifier="http://www.fzi.de/gast/accesses#//VariableAccess"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="var1" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.1 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.3"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.4"
+                    bindingOperator="DESTROY" classifier="http://www.fzi.de/gast/variables#//LocalVariable"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="var2" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.6"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.7"
+                    classifier="http://www.fzi.de/gast/variables#//LocalVariable"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="class2" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.8"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.5"
+                    classifier="http://www.fzi.de/gast/types#//GASTClass">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/class2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0"/>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="interface" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.5 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.7"
+                    classifier="http://www.fzi.de/gast/types#//GASTClass">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/interface/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0"/>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="dta" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.4"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.8"
+                    bindingOperator="DESTROY" classifier="http://www.fzi.de/gast/accesses#//DeclarationTypeAccess"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="block" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.9"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.0"
+                    classifier="http://www.fzi.de/gast/statements#//BlockStatement"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.8"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.0"
+                    targetEnd="http://www.fzi.de/gast/statements#//BlockStatement/statements"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.1"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/functions#//Function/localVariables"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.0"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.2"
+                    targetEnd="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.2"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.3"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.7"
+                    targetEnd="http://www.fzi.de/gast/variables#//Variable/typeDeclaration"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.5"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.6"
+                    targetEnd="http://www.fzi.de/gast/types#//GASTClass/superTypes"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.1"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.4"
+                    targetEnd="http://www.fzi.de/gast/functions#//Function/localVariables"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.4"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.6"
+                    targetEnd="http://www.fzi.de/gast/variables#//Variable/type"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.7"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.5"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.1"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.8"
+                    targetEnd="http://www.fzi.de/gast/functions#//Function/allStatements"/>
+              </ownedRule>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="(p) delete call statement"
+                outgoing="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.2"
+                incoming="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.1">
+              <ownedRule>
+                <variable xsi:type="sdmp:ObjectVariable" name="call" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.0"
+                    bindingOperator="DESTROY" classifier="http://www.fzi.de/gast/accesses#//FunctionAccess">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/call/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0"/>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="callStmt" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.1 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.0"
+                    bindingOperator="DESTROY" classifier="http://www.fzi.de/gast/statements#//SimpleStatement"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="method" outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.2"
+                    classifier="http://www.fzi.de/gast/functions#//Method"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="block" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.2"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.1"
+                    classifier="http://www.fzi.de/gast/statements#//BlockStatement"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.0"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.1"
+                    targetEnd="http://www.fzi.de/gast/accesses#//BaseAccess/parentStatement"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.3"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.1"
+                    targetEnd="http://www.fzi.de/gast/statements#//BlockStatement/statements"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.2"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/functions#//Function/allStatements"/>
+              </ownedRule>
+            </ownedActivityNode>
+          </ownedActivity>
+        </contents>
+      </eAnnotations>
+      <eAnnotations source="http://reclipse.reengineering.org/strategydescription">
+        <details key="http://reclipse.reengineering.org/strategydescription" value="Removes an interface violation occurrence by simply deleting the violating method call."/>
+      </eAnnotations>
+      <eParameters name="class1" eType="ecore:EClass http://www.fzi.de/gast/types#//GASTClass"/>
+      <eParameters name="class2" eType="ecore:EClass http://www.fzi.de/gast/types#//GASTClass">
+        <eAnnotations source="http://ns.storydriven.org/extension">
+          <contents xsi:type="sdmc:ParameterExtension"/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="interface" eType="ecore:EClass http://www.fzi.de/gast/types#//GASTClass">
+        <eAnnotations source="http://ns.storydriven.org/extension">
+          <contents xsi:type="sdmc:ParameterExtension"/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="method2" eType="ecore:EClass http://www.fzi.de/gast/functions#//Method"/>
+      <eParameters name="call" eType="ecore:EClass http://www.fzi.de/gast/accesses#//FunctionAccess">
+        <eAnnotations source="http://ns.storydriven.org/extension">
+          <contents xsi:type="sdmc:ParameterExtension"/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="castStmt" eType="ecore:EClass http://www.fzi.de/gast/statements#//SimpleStatement"/>
+    </eOperations>
+    <eOperations name="interfaceViolationReengineeringStrategy2">
+      <eAnnotations source="http://ns.storydriven.org/extension">
+        <contents xsi:type="sdma:OperationExtension">
+          <ownedActivity>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.10"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.0"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3"
+                guard="EACH_TIME"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.8"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3"
+                guard="END"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4"
+                guard="SUCCESS"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5"
+                guard="EACH_TIME"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.1"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.8"
+                guard="END"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5"
+                guard="END"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.8"
+                guard="EACH_TIME"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.8"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4"
+                guard="FAILURE"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.11"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.10"
+                guard="SUCCESS"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.10"
+                guard="FAILURE"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3"
+                source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.11"/>
+            <ownedActivityNode xsi:type="sdma:StartNode" outgoing="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.1"/>
+            <ownedActivityNode xsi:type="sdma:StopNode" incoming="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.7"/>
+            <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="(p) Add method declaration to interface and set it as accessed target"
+                outgoing="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.0"
+                incoming="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.1">
+              <ownedRule comment="">
+                <variable xsi:type="sdmp:ObjectVariable" name="method2" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.0"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.2 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.5"
+                    classifier="http://www.fzi.de/gast/functions#//Method">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/method2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0"/>
+                  <attributeAssignment attribute="http://www.fzi.de/gast/types#//Member/visibility">
+                    <valueExpression xsi:type="sdme:LiteralExpression" value="VISIBILITYPUBLIC"
+                        valueType="http://www.fzi.de/gast/types#//Visibilities"/>
+                  </attributeAssignment>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="call" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.0 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.3"
+                    classifier="http://www.fzi.de/gast/accesses#//FunctionAccess">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/call/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0"/>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="interface" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.1"
+                    classifier="http://www.fzi.de/gast/types#//GASTClass">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/interface/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0"/>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="methodDecl" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.1 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.2 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.3"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.4"
+                    bindingOperator="CREATE" classifier="http://www.fzi.de/gast/functions#//Method">
+                  <attributeAssignment attribute="http://www.fzi.de/gast/types#//Member/abstract">
+                    <valueExpression xsi:type="sdme:LiteralExpression" value="true"
+                        valueType="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+                  </attributeAssignment>
+                  <attributeAssignment attribute="http://www.fzi.de/gast/core#//NamedModelElement/simpleName">
+                    <valueExpression xsi:type="sdmpe:AttributeValueExpression" comment=""
+                        object="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.0"
+                        attribute="http://www.fzi.de/gast/core#//NamedModelElement/simpleName"/>
+                  </attributeAssignment>
+                  <attributeAssignment attribute="http://www.fzi.de/gast/types#//Member/visibility">
+                    <valueExpression xsi:type="sdme:LiteralExpression" comment=""
+                        value="VISIBILITYPUBLIC" valueType="http://www.fzi.de/gast/types#//Visibilities"/>
+                  </attributeAssignment>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="returnTypeAccessNew"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.4"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.7"
+                    bindingOperator="CREATE" classifier="http://www.fzi.de/gast/accesses#//DeclarationTypeAccess"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="returnTypeAccessOld"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.5"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.6"
+                    classifier="http://www.fzi.de/gast/accesses#//DeclarationTypeAccess"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="returnType" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.6 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.7"
+                    classifier="http://www.fzi.de/gast/types#//GASTType"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.1"
+                    bindingState="BOUND" target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.0"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.2"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/types#//GASTClass/methods"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.0"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/types#//Member/overriddenMember"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.1"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.3"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.4"
+                    targetEnd="http://www.fzi.de/gast/functions#//Function/returnTypeDeclaration"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.0"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.5"
+                    targetEnd="http://www.fzi.de/gast/functions#//Function/returnTypeDeclaration"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.5"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.6"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.4"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.6"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+              </ownedRule>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="for each implementing class ..."
+                outgoing="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.3 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.2"
+                incoming="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.8 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.11 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.12 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.15"
+                forEach="true">
+              <ownedRule>
+                <variable xsi:type="sdmp:ObjectVariable" name="interface" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.1"
+                    classifier="http://www.fzi.de/gast/types#//GASTClass"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="class" outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.0 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@linkVariable.0"
+                    classifier="http://www.fzi.de/gast/types#//GASTClass"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="implements" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.0"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.1"
+                    classifier="http://www.fzi.de/gast/accesses#//InheritanceTypeAccess"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.1"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.2"
+                    targetEnd="http://www.fzi.de/gast/types#//GASTClass/inheritanceTypeAccesses"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.2"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.0"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedClass"/>
+              </ownedRule>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="generate method stub"
+                outgoing="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.4 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.11"
+                incoming="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.2">
+              <ownedRule>
+                <variable xsi:type="sdmp:ObjectVariable" name="class" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@linkVariable.1"
+                    classifier="http://www.fzi.de/gast/types#//GASTClass"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="methodStub" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@linkVariable.0"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@linkVariable.2 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@linkVariable.3"
+                    bindingOperator="CREATE" classifier="http://www.fzi.de/gast/functions#//Method">
+                  <attributeAssignment attribute="http://www.fzi.de/gast/core#//NamedModelElement/simpleName">
+                    <valueExpression xsi:type="sdmpe:AttributeValueExpression" object="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@variable.3"
+                        attribute="http://www.fzi.de/gast/core#//NamedModelElement/simpleName"/>
+                  </attributeAssignment>
+                  <attributeAssignment attribute="http://www.fzi.de/gast/types#//Member/visibility">
+                    <valueExpression xsi:type="sdme:LiteralExpression" value="VISIBILITYPUBLIC"
+                        valueType="http://www.fzi.de/gast/types#//Visibilities"/>
+                  </attributeAssignment>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="method2" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@linkVariable.1"
+                    classifier="http://www.fzi.de/gast/functions#//Method"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="methodDecl" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@linkVariable.2"
+                    classifier="http://www.fzi.de/gast/functions#//Method"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="returnTypeAccessMethodStub"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@linkVariable.3"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@linkVariable.4"
+                    bindingOperator="CREATE" classifier="http://www.fzi.de/gast/accesses#//DeclarationTypeAccess"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="returnType" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@linkVariable.4"
+                    classifier="http://www.fzi.de/gast/types#//GASTType"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.1"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@variable.1"
+                    targetEnd="http://www.fzi.de/gast/types#//GASTClass/methods"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingSemantics="NEGATIVE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@variable.0"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@variable.2"
+                    targetEnd="http://www.fzi.de/gast/types#//GASTClass/methods"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@variable.1"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/types#//Member/overriddenMember"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@variable.1"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@variable.4"
+                    targetEnd="http://www.fzi.de/gast/functions#//Function/returnTypeDeclaration"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@variable.4"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedRule/@variable.5"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+              </ownedRule>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:MatchingStoryNode" name="for each parameter 1"
+                outgoing="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.5 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.8"
+                incoming="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.6 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.4"
+                forEach="true">
+              <ownedPattern>
+                <variable xsi:type="sdmp:ObjectVariable" name="method2" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5/@ownedPattern/@linkVariable.0"
+                    classifier="http://www.fzi.de/gast/functions#//Method"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="param" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5/@ownedPattern/@linkVariable.0"
+                    classifier="http://www.fzi.de/gast/variables#//FormalParameter"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5/@ownedPattern/@variable.0"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5/@ownedPattern/@variable.1"
+                    targetEnd="http://www.fzi.de/gast/functions#//Function/formalParameters"/>
+              </ownedPattern>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="create parameters for method stub"
+                outgoing="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.6"
+                incoming="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.5">
+              <ownedRule>
+                <variable xsi:type="sdmp:ObjectVariable" name="param" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@linkVariable.0"
+                    classifier="http://www.fzi.de/gast/variables#//FormalParameter"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="paramType" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@linkVariable.0 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@linkVariable.3"
+                    classifier="http://www.fzi.de/gast/types#//GASTType"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="methodStub" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@linkVariable.1"
+                    classifier="http://www.fzi.de/gast/functions#//Method"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="newParam" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@linkVariable.1"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@linkVariable.2"
+                    bindingOperator="CREATE" classifier="http://www.fzi.de/gast/variables#//FormalParameter">
+                  <attributeAssignment attribute="http://www.fzi.de/gast/core#//NamedModelElement/simpleName">
+                    <valueExpression xsi:type="sdmpe:AttributeValueExpression" object="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@variable.0"
+                        attribute="http://www.fzi.de/gast/core#//NamedModelElement/simpleName"/>
+                  </attributeAssignment>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="typeAccessNewParam"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@linkVariable.2"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@linkVariable.3"
+                    bindingOperator="CREATE" classifier="http://www.fzi.de/gast/accesses#//DeclarationTypeAccess"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@variable.0"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@variable.1"
+                    targetEnd="http://www.fzi.de/gast/variables#//Variable/type"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@variable.2"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/functions#//Function/formalParameters"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@variable.3"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@variable.4"
+                    targetEnd="http://www.fzi.de/gast/variables#//Variable/typeDeclaration"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@variable.4"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.6/@ownedRule/@variable.1"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+              </ownedRule>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="create parameters for method decl"
+                outgoing="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.10"
+                incoming="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.9">
+              <ownedRule>
+                <variable xsi:type="sdmp:ObjectVariable" name="methodDecl" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7/@ownedRule/@linkVariable.0"
+                    classifier="http://www.fzi.de/gast/functions#//Method"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="newParam" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7/@ownedRule/@linkVariable.0"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7/@ownedRule/@linkVariable.1"
+                    bindingOperator="CREATE" classifier="http://www.fzi.de/gast/variables#//FormalParameter">
+                  <attributeAssignment attribute="http://www.fzi.de/gast/core#//NamedModelElement/simpleName">
+                    <valueExpression xsi:type="sdmpe:AttributeValueExpression" comment=""
+                        object="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5/@ownedPattern/@variable.1"
+                        attribute="http://www.fzi.de/gast/core#//NamedModelElement/simpleName"/>
+                  </attributeAssignment>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="param" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7/@ownedRule/@linkVariable.2"
+                    classifier="http://www.fzi.de/gast/variables#//FormalParameter"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="paramType" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7/@ownedRule/@linkVariable.2 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7/@ownedRule/@linkVariable.3"
+                    classifier="http://www.fzi.de/gast/types#//GASTType"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="typeAccessNewParam"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7/@ownedRule/@linkVariable.1"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7/@ownedRule/@linkVariable.3"
+                    bindingOperator="CREATE" classifier="http://www.fzi.de/gast/accesses#//DeclarationTypeAccess"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" name="" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7/@ownedRule/@variable.0"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7/@ownedRule/@variable.1"
+                    targetEnd="http://www.fzi.de/gast/functions#//Function/formalParameters"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7/@ownedRule/@variable.1"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7/@ownedRule/@variable.4"
+                    targetEnd="http://www.fzi.de/gast/variables#//Variable/typeDeclaration"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7/@ownedRule/@variable.2"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/variables#//Variable/type"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7/@ownedRule/@variable.4"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.7/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+              </ownedRule>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:MatchingStoryNode" name="for each parameter 2"
+                outgoing="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.7 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.9"
+                incoming="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.3 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.10"
+                forEach="true">
+              <ownedPattern>
+                <variable xsi:type="sdmp:ObjectVariable" name="method2" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.8/@ownedPattern/@linkVariable.0"
+                    classifier="http://www.fzi.de/gast/functions#//Method"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="param" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.8/@ownedPattern/@linkVariable.0"
+                    classifier="http://www.fzi.de/gast/variables#//FormalParameter"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.8/@ownedPattern/@variable.0"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.8/@ownedPattern/@variable.1"
+                    targetEnd="http://www.fzi.de/gast/functions#//Function/formalParameters"/>
+              </ownedPattern>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="destroy cast statement, local variable, create new access"
+                outgoing="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.12"
+                incoming="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.14">
+              <ownedRule>
+                <variable xsi:type="sdmp:ObjectVariable" name="castStmt" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.0"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.1"
+                    bindingOperator="DESTROY" classifier="http://www.fzi.de/gast/statements#//SimpleStatement"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="block" outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.0"
+                    classifier="http://www.fzi.de/gast/statements#//BlockStatement"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="varAccess1" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.1"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.2"
+                    bindingOperator="DESTROY" classifier="http://www.fzi.de/gast/accesses#//VariableAccess"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="var1" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.2 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.3 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.4"
+                    bindingOperator="DESTROY" classifier="http://www.fzi.de/gast/variables#//LocalVariable"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="call" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.10"
+                    classifier="http://www.fzi.de/gast/accesses#//FunctionAccess"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="interface" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.6"
+                    classifier="http://www.fzi.de/gast/types#//GASTClass"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="stmt" outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.8 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.9 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.10"
+                    classifier="http://www.fzi.de/gast/statements#//SimpleStatement"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="varAccess2" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.9"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.3"
+                    bindingOperator="DESTROY" classifier="http://www.fzi.de/gast/accesses#//VariableAccess"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="varAccessNew" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.8"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.7"
+                    bindingOperator="CREATE" classifier="http://www.fzi.de/gast/accesses#//VariableAccess"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="var2" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.5 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.7"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.6"
+                    classifier="http://www.fzi.de/gast/variables#//Variable"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="method" outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.4 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@linkVariable.5"
+                    classifier="http://www.fzi.de/gast/functions#//Method"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.1"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.0"
+                    targetEnd="http://www.fzi.de/gast/statements#//BlockStatement/statements"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.0"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.2"
+                    targetEnd="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.2"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.7"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.10"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/functions#//Function/localVariables"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.10"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.9"
+                    targetEnd="http://www.fzi.de/gast/functions#//Function/localVariables"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.9"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.5"
+                    targetEnd="http://www.fzi.de/gast/variables#//Variable/type"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.8"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.9"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.6"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.8"
+                    targetEnd="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.6"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.7"
+                    targetEnd="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.6"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.9/@ownedRule/@variable.4"
+                    targetEnd="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+              </ownedRule>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:MatchingStoryNode" name="(p) Decide if cast and call are done in same statement"
+                outgoing="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.13 #//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.14"
+                incoming="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.0">
+              <ownedPattern>
+                <variable xsi:type="sdmp:ObjectVariable" name="castStmt" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.10/@ownedPattern/@linkVariable.0"
+                    classifier="http://www.fzi.de/gast/statements#//SimpleStatement">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/castStmt/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0"/>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="call" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.10/@ownedPattern/@linkVariable.0"
+                    classifier="http://www.fzi.de/gast/accesses#//FunctionAccess">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/call/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.1"/>
+                </variable>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.10/@ownedPattern/@variable.0"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.10/@ownedPattern/@variable.1"
+                    targetEnd="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+              </ownedPattern>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="(p) Destroy cast"
+                outgoing="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.15"
+                incoming="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.13">
+              <ownedRule>
+                <variable xsi:type="sdmp:ObjectVariable" name="class2" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.11/@ownedRule/@linkVariable.1"
+                    classifier="http://www.fzi.de/gast/types#//GASTClass">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/class2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0"/>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="castStmt" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.11/@ownedRule/@linkVariable.0"
+                    classifier="http://www.fzi.de/gast/statements#//SimpleStatement">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/castStmt/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.1"/>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="cast" incomingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.11/@ownedRule/@linkVariable.0"
+                    outgoingLink="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.11/@ownedRule/@linkVariable.1"
+                    bindingOperator="DESTROY" classifier="http://www.fzi.de/gast/accesses#//CastTypeAccess"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.11/@ownedRule/@variable.1"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.11/@ownedRule/@variable.2"
+                    targetEnd="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.11/@ownedRule/@variable.2"
+                    target="#//ReengineeringStrategies/interfaceViolationReengineeringStrategy2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.11/@ownedRule/@variable.0"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+              </ownedRule>
+            </ownedActivityNode>
+          </ownedActivity>
+        </contents>
+      </eAnnotations>
+      <eAnnotations source="http://reclipse.reengineering.org/strategydescription">
+        <details key="http://reclipse.reengineering.org/strategydescription" value="Removes an Interface Violation occurrence by extending the interface and modifying the call to access the interface's method."/>
+      </eAnnotations>
+      <eParameters name="class1" eType="ecore:EClass http://www.fzi.de/gast/types#//GASTClass"/>
+      <eParameters name="class2" eType="ecore:EClass http://www.fzi.de/gast/types#//GASTClass">
+        <eAnnotations source="http://ns.storydriven.org/extension">
+          <contents xsi:type="sdmc:ParameterExtension"/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="interface" eType="ecore:EClass http://www.fzi.de/gast/types#//GASTClass">
+        <eAnnotations source="http://ns.storydriven.org/extension">
+          <contents xsi:type="sdmc:ParameterExtension"/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="method2" eType="ecore:EClass http://www.fzi.de/gast/functions#//Method">
+        <eAnnotations source="http://ns.storydriven.org/extension">
+          <contents xsi:type="sdmc:ParameterExtension"/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="call" eType="ecore:EClass http://www.fzi.de/gast/accesses#//FunctionAccess">
+        <eAnnotations source="http://ns.storydriven.org/extension">
+          <contents xsi:type="sdmc:ParameterExtension"/>
+          <contents xsi:type="sdmc:ParameterExtension"/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="castStmt" eType="ecore:EClass http://www.fzi.de/gast/statements#//SimpleStatement">
+        <eAnnotations source="http://ns.storydriven.org/extension">
+          <contents xsi:type="sdmc:ParameterExtension"/>
+          <contents xsi:type="sdmc:ParameterExtension"/>
+        </eAnnotations>
+      </eParameters>
+    </eOperations>
+    <eOperations name="distortedInterfaceViolationReengineeringStrategy">
+      <eAnnotations source="http://ns.storydriven.org/extension">
+        <contents xsi:type="sdma:OperationExtension">
+          <ownedActivity>
+            <ownedActivityEdge target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4"
+                source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2"
+                source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.0"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5"
+                source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4"
+                guard="SUCCESS"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3"
+                source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4"
+                guard="FAILURE"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.1"
+                source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5"/>
+            <ownedActivityEdge target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.1"
+                source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3"/>
+            <ownedActivityNode xsi:type="sdma:StartNode" outgoing="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.1"/>
+            <ownedActivityNode xsi:type="sdma:StopNode" incoming="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.5 #//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.4"/>
+            <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="(p) Add method declaration to interface and set it as accessed target"
+                outgoing="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.0"
+                incoming="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.1">
+              <ownedRule comment="">
+                <variable xsi:type="sdmp:ObjectVariable" name="method2" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.0"
+                    outgoingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.2"
+                    classifier="http://www.fzi.de/gast/functions#//Method">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/method2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0"/>
+                  <attributeAssignment attribute="http://www.fzi.de/gast/types#//Member/visibility">
+                    <valueExpression xsi:type="sdme:LiteralExpression" value="VISIBILITYPUBLIC"
+                        valueType="http://www.fzi.de/gast/types#//Visibilities"/>
+                  </attributeAssignment>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="call" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.0 #//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.3"
+                    classifier="http://www.fzi.de/gast/accesses#//FunctionAccess">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/call/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0"/>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="interface" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.1"
+                    classifier="http://www.fzi.de/gast/types#//GASTClass">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/interface/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0"/>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="methodDecl" incomingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.1 #//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.2 #//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.3"
+                    classifier="http://www.fzi.de/gast/functions#//Method">
+                  <attributeAssignment attribute="http://www.fzi.de/gast/types#//Member/abstract">
+                    <valueExpression xsi:type="sdme:LiteralExpression" value="true"
+                        valueType="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+                  </attributeAssignment>
+                  <attributeAssignment attribute="http://www.fzi.de/gast/core#//NamedModelElement/simpleName">
+                    <valueExpression xsi:type="sdmpe:AttributeValueExpression" comment=""
+                        object="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.0"
+                        attribute="http://www.fzi.de/gast/core#//NamedModelElement/simpleName"/>
+                  </attributeAssignment>
+                  <attributeAssignment attribute="http://www.fzi.de/gast/types#//Member/visibility">
+                    <valueExpression xsi:type="sdme:LiteralExpression" comment=""
+                        value="VISIBILITYPUBLIC" valueType="http://www.fzi.de/gast/types#//Visibilities"/>
+                  </attributeAssignment>
+                </variable>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.1"
+                    bindingState="BOUND" target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.0"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.2"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/types#//GASTClass/methods"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.0"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/types#//Member/overriddenMember"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.1"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+              </ownedRule>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="destroy cast statement, local variable, create new access"
+                outgoing="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.5"
+                incoming="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.3">
+              <ownedRule>
+                <variable xsi:type="sdmp:ObjectVariable" name="castStmt" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.0"
+                    outgoingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.1"
+                    bindingOperator="DESTROY" classifier="http://www.fzi.de/gast/statements#//SimpleStatement"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="block" outgoingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.0"
+                    classifier="http://www.fzi.de/gast/statements#//BlockStatement"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="varAccess1" incomingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.1"
+                    outgoingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.2"
+                    bindingOperator="DESTROY" classifier="http://www.fzi.de/gast/accesses#//VariableAccess"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="var1" incomingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.2 #//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.3 #//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.4"
+                    bindingOperator="DESTROY" classifier="http://www.fzi.de/gast/variables#//LocalVariable"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="call" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.10"
+                    classifier="http://www.fzi.de/gast/accesses#//FunctionAccess"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="interface" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.6"
+                    classifier="http://www.fzi.de/gast/types#//GASTClass"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="stmt" outgoingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.8 #//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.9 #//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.10"
+                    classifier="http://www.fzi.de/gast/statements#//SimpleStatement"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="varAccess2" incomingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.9"
+                    outgoingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.3"
+                    bindingOperator="DESTROY" classifier="http://www.fzi.de/gast/accesses#//VariableAccess"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="varAccessNew" incomingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.8"
+                    outgoingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.7"
+                    bindingOperator="CREATE" classifier="http://www.fzi.de/gast/accesses#//VariableAccess"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="var2" incomingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.5 #//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.7"
+                    outgoingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.6"
+                    classifier="http://www.fzi.de/gast/variables#//Variable"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="method" outgoingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.4 #//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@linkVariable.5"
+                    classifier="http://www.fzi.de/gast/functions#//Method"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.1"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.0"
+                    targetEnd="http://www.fzi.de/gast/statements#//BlockStatement/statements"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.0"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.2"
+                    targetEnd="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.2"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.7"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.10"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.3"
+                    targetEnd="http://www.fzi.de/gast/functions#//Function/localVariables"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.10"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.9"
+                    targetEnd="http://www.fzi.de/gast/functions#//Function/localVariables"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.9"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.5"
+                    targetEnd="http://www.fzi.de/gast/variables#//Variable/type"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.8"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.9"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="CREATE"
+                    source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.6"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.8"
+                    targetEnd="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.6"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.7"
+                    targetEnd="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.6"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3/@ownedRule/@variable.4"
+                    targetEnd="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+              </ownedRule>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:MatchingStoryNode" name="(p) Decide if cast and call are done in same statement"
+                outgoing="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.2 #//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.3"
+                incoming="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.0">
+              <ownedPattern>
+                <variable xsi:type="sdmp:ObjectVariable" name="castStmt" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedPattern/@linkVariable.0"
+                    classifier="http://www.fzi.de/gast/statements#//SimpleStatement">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/castStmt/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0"/>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="call" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedPattern/@linkVariable.0"
+                    classifier="http://www.fzi.de/gast/accesses#//FunctionAccess">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/call/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.1"/>
+                </variable>
+                <linkVariable xsi:type="sdmp:LinkVariable" source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedPattern/@variable.0"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4/@ownedPattern/@variable.1"
+                    targetEnd="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+              </ownedPattern>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="(p) Destroy cast"
+                outgoing="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.4"
+                incoming="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.2">
+              <ownedRule>
+                <variable xsi:type="sdmp:ObjectVariable" name="class2" bindingState="BOUND"
+                    incomingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5/@ownedRule/@linkVariable.1"
+                    classifier="http://www.fzi.de/gast/types#//GASTClass">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/class2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0"/>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="castStmt" bindingState="BOUND"
+                    outgoingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5/@ownedRule/@linkVariable.0"
+                    classifier="http://www.fzi.de/gast/statements#//SimpleStatement">
+                  <bindingExpression xsi:type="sdmce:ParameterExpression" parameter="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/castStmt/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.1"/>
+                </variable>
+                <variable xsi:type="sdmp:ObjectVariable" name="cast" incomingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5/@ownedRule/@linkVariable.0"
+                    outgoingLink="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5/@ownedRule/@linkVariable.1"
+                    bindingOperator="DESTROY" classifier="http://www.fzi.de/gast/accesses#//CastTypeAccess"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5/@ownedRule/@variable.1"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5/@ownedRule/@variable.2"
+                    targetEnd="http://www.fzi.de/gast/statements#//Statement/accesses"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" bindingOperator="DESTROY"
+                    source="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5/@ownedRule/@variable.2"
+                    target="#//ReengineeringStrategies/distortedInterfaceViolationReengineeringStrategy/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5/@ownedRule/@variable.0"
+                    targetEnd="http://www.fzi.de/gast/accesses#//Access/accessedTarget"/>
+              </ownedRule>
+            </ownedActivityNode>
+          </ownedActivity>
+        </contents>
+      </eAnnotations>
+      <eParameters name="class1" eType="ecore:EClass http://www.fzi.de/gast/types#//GASTClass"/>
+      <eParameters name="class2" eType="ecore:EClass http://www.fzi.de/gast/types#//GASTClass">
+        <eAnnotations source="http://ns.storydriven.org/extension">
+          <contents xsi:type="sdmc:ParameterExtension"/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="interface" eType="ecore:EClass http://www.fzi.de/gast/types#//GASTClass">
+        <eAnnotations source="http://ns.storydriven.org/extension">
+          <contents xsi:type="sdmc:ParameterExtension"/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="method2" eType="ecore:EClass http://www.fzi.de/gast/functions#//Method">
+        <eAnnotations source="http://ns.storydriven.org/extension">
+          <contents xsi:type="sdmc:ParameterExtension"/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="call" eType="ecore:EClass http://www.fzi.de/gast/accesses#//FunctionAccess">
+        <eAnnotations source="http://ns.storydriven.org/extension">
+          <contents xsi:type="sdmc:ParameterExtension"/>
+          <contents xsi:type="sdmc:ParameterExtension"/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="castStmt" eType="ecore:EClass http://www.fzi.de/gast/statements#//SimpleStatement">
+        <eAnnotations source="http://ns.storydriven.org/extension">
+          <contents xsi:type="sdmc:ParameterExtension"/>
+          <contents xsi:type="sdmc:ParameterExtension"/>
+        </eAnnotations>
+      </eParameters>
+    </eOperations>
+  </eClassifiers>
+</ecore:EPackage>
