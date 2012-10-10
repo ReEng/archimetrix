@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="org.fujaba.commons" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appinfo>
+         <meta.schema plugin="org.fujaba.commons" id="palette" name="Used to specify the palette for an diagram editor in FujabaForEclipse"/>
+      </appinfo>
+      <documentation>
+         This extension point is used to specify the palette for an diagram editor in FujabaForEclipse consisting of previously defined palette containers.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appinfo>
+            <meta.element />
+         </appinfo>
+      </annotation>
+      <complexType>
+         <sequence>
+            <element ref="palette" minOccurs="0" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="palette">
+      <annotation>
+         <documentation>
+            Defines a palette for an editor, the factory to create the palette with and the palette containers the palette consists of. To define the palette containers use the &lt;samp&gt;org.fujaba.commons.paletteContainers&lt;/samp&gt; extensionpoint.
+         </documentation>
+      </annotation>
+      <complexType>
+         <sequence>
+            <element ref="containerRef" minOccurs="0" maxOccurs="unbounded"/>
+            <element ref="hideContainerRef" minOccurs="0" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  unique name that will be used to reference this palette
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="editor" type="string" use="required">
+            <annotation>
+               <documentation>
+                  class that extends the &lt;samp&gt;org.fujaba.commons.AbstractSimpleEditorPart&lt;/samp&gt; class
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn="org.fujaba.commons.editor.AbstractSimpleEditorPart:"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="factory" type="string" use="default" value="org.fujaba.commons.editor.palette.PaletteFactory">
+            <annotation>
+               <documentation>
+                  a class that implements the &lt;samp&gt;org.fujaba.commons..extensionpoints.IPaletteExtension&lt;/samp&gt; interface --- defaults to using the default factory &lt;samp&gt;org.fujaba.commons.editor.palette.PaletteFactory&lt;/samp&gt;
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn=":de.uni_paderborn.fujaba4eclipse.extensionpoints.IPaletteExtension"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="extends" type="string">
+            <annotation>
+               <documentation>
+                  a palette whose containers should be inherited
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="identifier" basedOn="org.fujaba.commons.extensionpoints.palettes/palette/@id"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="containerRef">
+      <annotation>
+         <documentation>
+            inserts the palette container with the specified id into the palette and allows to control its position relative to other containers
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="containerID" type="string" use="required">
+            <annotation>
+               <documentation>
+                  id of an previously defined palette container
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="identifier" basedOn="org.fujaba.commons.paletteContainer/paletteContainer/@id"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="prevContainerIDs" type="string">
+            <annotation>
+               <documentation>
+                  previous container ids (as comma separated list)
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="identifier" basedOn="org.fujaba.commons.paletteContainer/paletteContainer/@id"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="nextContainerIDs" type="string">
+            <annotation>
+               <documentation>
+                  next container ids (as comma separated list)
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="identifier" basedOn="org.fujaba.commons.paletteContainer/paletteContainer/@id"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="hideContainerRef">
+      <annotation>
+         <documentation>
+            in case of extending another palette, this allows to hide some of the inherited palette containers
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="containerID" type="string" use="required">
+            <annotation>
+               <documentation>
+                  id of an inherited palette container which should be hidden in this palette
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="identifier" basedOn="org.fujaba.commons.paletteContainer/paletteContainer/@id"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="since"/>
+      </appinfo>
+      <documentation>
+         0.8.1
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="examples"/>
+      </appinfo>
+      <documentation>
+         see &lt;code&gt;plugin.xml&lt;/code&gt;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="apiInfo"/>
+      </appinfo>
+      <documentation>
+         see &lt;code&gt;de.uni_paderborn.fujaba4eclipse.extensionpoints.IPaletteExtension&lt;/code&gt;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="implementation"/>
+      </appinfo>
+      <documentation>
+         see &lt;code&gt;de.uni_paderborn.fujaba4eclipse.extensionpoints.IPaletteExtension&lt;/code&gt;
+      </documentation>
+   </annotation>
+
+
+</schema>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.fujaba.sdm.ui.editor.SDMEditor"
+            contributorClass="org.fujaba.commons.editor.CommonMultiPageEditorActionBarContributor"
+            default="true"
+            extensions="ecore.diagrams"
+            filenames="ecore"
+            icon="icons/diagram_sdd.gif"
+            id="org.fujaba.sdm.ui.editor"
+            name="Story Diagram Editor">
+      </editor>
+   </extension>
+
+</plugin>
