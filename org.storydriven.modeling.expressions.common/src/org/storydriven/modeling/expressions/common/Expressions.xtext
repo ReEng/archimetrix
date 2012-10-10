@@ -1,0 +1,101 @@
+grammar org.storydriven.modeling.expressions.common.Expressions with org.eclipse.xtext.common.Terminals
+
+import "http://www.eclipse.org/emf/2002/Ecore"
+generate expressions "http://www.storydriven.org/modeling/expressions/common/Expressions"
+
+// Boolean Logic Layer    ------------------------------------------------
+LExpression:
+	Equivalent
+	;
+
+Equivalent returns LExpression:
+	Implication({Equivalent.left=current} 'equiv' right=Equivalent)?;
+
+Implication returns LExpression:
+	Disjunction({Imply.left=current} 'imply' right=Implication)?;
+	
+Disjunction returns LExpression:
+	Conjunction(({Or.left=current} 'or' | {Xor.left=current} 'xor') right=Disjunction)?;
+
+Conjunction returns LExpression:
+	Negation({And.left=current} 'and' right=Conjunction)?;
+
+Negation returns LExpression:
+	'not' Negated  
+	| CExpression;  
+
+Negated returns LExpression:
+	{Not}not= CExpression;
+
+// Compare Layer   ------------------------------------------------
+CExpression returns LExpression:
+	'(' LExpression ')' |
+	  Compare 
+	| BooleanValue
+	| Variable
+	;
+
+Compare returns CExpression:
+	SomeValue( 
+	  {LessOrEqual.left=current} '<='
+	| {Less.left=current} '<'
+	| {GreaterOrEqual.left=current} '>='
+	| {Greater.left=current} '>'
+	| {Equal.left=current} '='
+	| {Unequal.left=current} '!='
+	| {Approx.left=current} '~') 
+	right=SomeValue
+	;	
+
+SomeValue:
+	StringValue
+	| BooleanValue
+	| AExpression
+	;
+
+
+// Arithmetic Layer   ------------------------------------------------
+AExpression:
+	Addition;
+
+Addition returns AExpression:
+	Multiplication (({Plus.left=current} '+' | {Minus.left=current} '-') right=Multiplication)*;
+	
+Multiplication returns AExpression:
+	Power (({Multi.left=current} '*' | {Div.left=current} '/' | {Mod.left=current} '%') right=Power)*;
+
+Power returns AExpression:
+	PrimaryExpression (({Pow.left=current} '^') right=PrimaryExpression)*;
+
+
+PrimaryExpression returns AExpression:
+	'(' AExpression ')' |
+	NumberValue
+	|Variable;
+
+NumberValue: 
+	numValue = NUMBER
+	;
+
+NUMBER returns EBigDecimal:
+	INT ('.' INT)?;
+	
+BooleanValue: 
+	value = BOOLEAN
+	;
+	
+terminal BOOLEAN returns EBoolean: 
+	'true' 
+	| 'false';
+
+StringValue: 
+	strValue = STRING
+	;
+
+Variable:
+	varName = VARIABLE_VALUE;
+
+VARIABLE_VALUE returns EString: 
+	ID  
+	| ID '.' ID ;
+	

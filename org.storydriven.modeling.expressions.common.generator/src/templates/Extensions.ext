@@ -1,0 +1,4 @@
+import org::storydriven::modeling::expressions::common::expressions;
+
+sortedGreetings(Model this) :
+	this.greetings.sortBy(g|g.name.toLowerCase());
