@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdma:Activity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xmlns:sdmce="http://ns.storydriven.org/sdm/calls/expressions/0.1.0" xmlns:sdme="http://ns.storydriven.org/sdm/expressions/0.1.0">
+  <ownedActivityEdge target="//@ownedActivityNode.1" source="//@ownedActivityNode.0"/>
+  <ownedActivityNode xsi:type="sdma:StartNode" outgoing="//@ownedActivityEdge.0"/>
+  <ownedActivityNode xsi:type="sdma:StopNode" incoming="//@ownedActivityEdge.0">
+    <returnValues xsi:type="sdme:ComparisonExpression" operator="EQUAL">
+      <leftExpression xsi:type="sdme:TextualExpression" expressionText="5" language="OCL" languageVersion="1.0"/>
+      <rightExpression xsi:type="sdmce:MethodCallExpression" callee="//@ownedActivityNode.1/@returnValue/@rightExpression/@opaqueCallable">
+        <target xsi:type="sdme:TextualExpression" expressionText="'Hello'" language="OCL" languageVersion="1.0"/>
+        <opaqueCallable name="java.lang.String.length" outParameter="//@ownedActivityNode.1/@returnValue/@rightExpression/@opaqueCallable/@containedParameters.0">
+          <containedParameters name="return">
+            <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+          </containedParameters>
+        </opaqueCallable>
+      </rightExpression>
+    </returnValues>
+  </ownedActivityNode>
+</sdma:Activity>

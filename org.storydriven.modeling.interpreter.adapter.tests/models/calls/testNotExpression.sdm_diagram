@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xsi:schemaLocation="http://ns.storydriven.org/sdm/activities/0.1.0 http://ns.storydriven.org/sdm/0.1.0#//activities" xmi:id="_9tdX8GN7EeC9wIPmzuE1hQ" type="SDM" name="testNotExpression.sdm_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_999SEGN7EeC9wIPmzuE1hQ" type="2001">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_999SEWN7EeC9wIPmzuE1hQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_999SEmN7EeC9wIPmzuE1hQ" fontName="Ubuntu"/>
+    <element xmi:type="sdma:StartNode" href="testNotExpression.sdm#//@ownedActivityNode.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_999SE2N7EeC9wIPmzuE1hQ" x="517" y="84"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_-MJfEGN7EeC9wIPmzuE1hQ" type="2002">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_-MJfEWN7EeC9wIPmzuE1hQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_-MJfEmN7EeC9wIPmzuE1hQ" fontName="Ubuntu"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_-MJfE2N7EeC9wIPmzuE1hQ"/>
+    <element xmi:type="sdma:StopNode" href="testNotExpression.sdm#//@ownedActivityNode.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-MJfFGN7EeC9wIPmzuE1hQ" x="524" y="182"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_9tdX8WN7EeC9wIPmzuE1hQ"/>
+  <element xmi:type="sdma:Activity" href="testNotExpression.sdm#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_-gdiMGN7EeC9wIPmzuE1hQ" type="4001" source="_999SEGN7EeC9wIPmzuE1hQ" target="_-MJfEGN7EeC9wIPmzuE1hQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_-gdiMWN7EeC9wIPmzuE1hQ" fontName="Ubuntu"/>
+    <element xmi:type="sdma:ActivityEdge" href="testNotExpression.sdm#//@ownedActivityEdge.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-gdiMmN7EeC9wIPmzuE1hQ" points="[1, 8, -10, -94]$[16, 114, 5, 12]"/>
+  </edges>
+</notation:Diagram>

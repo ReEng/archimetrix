@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdma:Activity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xmlns:sdme="http://ns.storydriven.org/sdm/expressions/0.1.0">
+  <ownedActivityEdge target="//@ownedActivityNode.2" source="//@ownedActivityNode.0"/>
+  <ownedActivityEdge target="//@ownedActivityNode.4" source="//@ownedActivityNode.2" guard="SUCCESS"/>
+  <ownedActivityEdge target="//@ownedActivityNode.3" source="//@ownedActivityNode.4" guard="SUCCESS"/>
+  <ownedActivityEdge target="//@ownedActivityNode.1" source="//@ownedActivityNode.2" guard="FAILURE"/>
+  <ownedActivityEdge target="//@ownedActivityNode.5" source="//@ownedActivityNode.4" guard="FAILURE"/>
+  <ownedActivityNode xsi:type="sdma:StartNode" outgoing="//@ownedActivityEdge.0"/>
+  <ownedActivityNode xsi:type="sdma:StopNode" name="stopFalse1" incoming="//@ownedActivityEdge.3">
+    <returnValues xsi:type="sdme:LiteralExpression" value="false">
+      <valueType href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+    </returnValues>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:MatchingStoryNode" name="match1" outgoing="//@ownedActivityEdge.1 //@ownedActivityEdge.3" incoming="//@ownedActivityEdge.0">
+    <ownedPattern>
+      <constraint>
+        <constraintExpression xsi:type="sdme:BinaryLogicExpression" operator="OR">
+          <leftExpression xsi:type="sdme:LiteralExpression" value="true">
+            <valueType href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+          </leftExpression>
+          <rightExpression xsi:type="sdme:LiteralExpression" value="false">
+            <valueType href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+          </rightExpression>
+        </constraintExpression>
+      </constraint>
+    </ownedPattern>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:StopNode" name="stopTrue" incoming="//@ownedActivityEdge.2">
+    <returnValues xsi:type="sdme:LiteralExpression" value="true">
+      <valueType href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+    </returnValues>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:MatchingStoryNode" name="match2" outgoing="//@ownedActivityEdge.2 //@ownedActivityEdge.4" incoming="//@ownedActivityEdge.1">
+    <ownedPattern>
+      <constraint>
+        <constraintExpression xsi:type="sdme:ComparisonExpression">
+          <leftExpression xsi:type="sdme:LiteralExpression" value="1">
+            <valueType href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+          </leftExpression>
+          <rightExpression xsi:type="sdme:LiteralExpression" value="3">
+            <valueType href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+          </rightExpression>
+        </constraintExpression>
+      </constraint>
+    </ownedPattern>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:StopNode" name="stopFalse2" incoming="//@ownedActivityEdge.4">
+    <returnValues xsi:type="sdme:LiteralExpression" value="false">
+      <valueType href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+    </returnValues>
+  </ownedActivityNode>
+</sdma:Activity>

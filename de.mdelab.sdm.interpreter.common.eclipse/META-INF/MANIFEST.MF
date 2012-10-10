@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SDM Interpreter for Eclipse
+Bundle-SymbolicName: de.mdelab.sdm.interpreter.common.eclipse;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: MDELab.de
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.6.0",
+ de.mdelab.sdm.interpreter.common;bundle-version="1.0.0"
+Export-Package: de.mdelab.sdm.interpreter.common.expressions

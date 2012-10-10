@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xsi:schemaLocation="http://ns.storydriven.org/sdm/activities/0.1.0 http://ns.storydriven.org/sdm/0.1.0#//activities" xmi:id="_L1GWIGN-EeC9wIPmzuE1hQ" type="SDM" name="testComparisonExpression.sdm_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_MKeJMGN-EeC9wIPmzuE1hQ" type="2001">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_MKewQGN-EeC9wIPmzuE1hQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_MKewQWN-EeC9wIPmzuE1hQ" fontName="Ubuntu"/>
+    <element xmi:type="sdma:StartNode" href="testComparisonExpression.sdm#//@ownedActivityNode.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MKewQmN-EeC9wIPmzuE1hQ" x="445" y="47"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_MbQXMGN-EeC9wIPmzuE1hQ" type="2002">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_MbQXMWN-EeC9wIPmzuE1hQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_MbQXMmN-EeC9wIPmzuE1hQ" fontName="Ubuntu"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_MbQXM2N-EeC9wIPmzuE1hQ"/>
+    <element xmi:type="sdma:StopNode" href="testComparisonExpression.sdm#//@ownedActivityNode.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MbQXNGN-EeC9wIPmzuE1hQ" x="445" y="149"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_L1GWIWN-EeC9wIPmzuE1hQ"/>
+  <element xmi:type="sdma:Activity" href="testComparisonExpression.sdm#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_NJ8CIGN-EeC9wIPmzuE1hQ" type="4001" source="_MKeJMGN-EeC9wIPmzuE1hQ" target="_MbQXMGN-EeC9wIPmzuE1hQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_NJ8CIWN-EeC9wIPmzuE1hQ" fontName="Ubuntu"/>
+    <element xmi:type="sdma:ActivityEdge" href="testComparisonExpression.sdm#//@ownedActivityEdge.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NJ8CImN-EeC9wIPmzuE1hQ" points="[3, 8, 0, -90]$[2, 95, -1, -3]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NJ_FcGN-EeC9wIPmzuE1hQ" id="(0.43478260869565216,0.13043478260869565)"/>
+  </edges>
+</notation:Diagram>

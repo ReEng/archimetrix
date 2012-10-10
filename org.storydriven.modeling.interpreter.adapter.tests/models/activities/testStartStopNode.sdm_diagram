@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xsi:schemaLocation="http://ns.storydriven.org/sdm/activities/0.1.0 http://ns.storydriven.org/sdm/0.1.0#//activities" xmi:id="_S1WKcFOTEeCvPvbq2p6eaw" type="SDM" name="testStartStopNode.sdm_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_TUngYFOTEeCvPvbq2p6eaw" type="2001">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_TUngYVOTEeCvPvbq2p6eaw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_TUngYlOTEeCvPvbq2p6eaw" fontName="Segoe UI"/>
+    <element xmi:type="sdma:StartNode" href="testStartStopNode.sdm#//@ownedActivityNode.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TUngY1OTEeCvPvbq2p6eaw" x="529" y="83"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_TpgyUFOTEeCvPvbq2p6eaw" type="2002">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_TpgyUVOTEeCvPvbq2p6eaw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_TpgyUlOTEeCvPvbq2p6eaw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_TpgyU1OTEeCvPvbq2p6eaw"/>
+    <element xmi:type="sdma:StopNode" href="testStartStopNode.sdm#//@ownedActivityNode.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TpgyVFOTEeCvPvbq2p6eaw" x="533" y="186"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_S1WKcVOTEeCvPvbq2p6eaw"/>
+  <element xmi:type="sdma:Activity" href="testStartStopNode.sdm#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_UKbHAFOTEeCvPvbq2p6eaw" type="4001" source="_TUngYFOTEeCvPvbq2p6eaw" target="_TpgyUFOTEeCvPvbq2p6eaw">
+    <styles xmi:type="notation:FontStyle" xmi:id="_UKbHAVOTEeCvPvbq2p6eaw" fontName="Segoe UI"/>
+    <element xmi:type="sdma:ActivityEdge" href="testStartStopNode.sdm#//@ownedActivityEdge.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UKbHAlOTEeCvPvbq2p6eaw" points="[1, 8, -7, -99]$[10, 119, 2, 12]"/>
+  </edges>
+</notation:Diagram>

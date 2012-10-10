@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xsi:schemaLocation="http://ns.storydriven.org/sdm/activities/0.1.0 http://ns.storydriven.org/sdm/0.1.0#//activities" xmi:id="_wuiVUWN5EeC9wIPmzuE1hQ" type="SDM" name="testLiteralExpression.sdm_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_xl_hwGN5EeC9wIPmzuE1hQ" type="2001">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_xl_hwWN5EeC9wIPmzuE1hQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_xl_hwmN5EeC9wIPmzuE1hQ" fontName="Ubuntu"/>
+    <element xmi:type="sdma:StartNode" href="testLiteralExpression.sdm#//@ownedActivityNode.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xl_hw2N5EeC9wIPmzuE1hQ" x="500" y="25"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_x1TJEGN5EeC9wIPmzuE1hQ" type="2002">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_x1TJEWN5EeC9wIPmzuE1hQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_x1TJEmN5EeC9wIPmzuE1hQ" fontName="Ubuntu"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_x1TJE2N5EeC9wIPmzuE1hQ"/>
+    <element xmi:type="sdma:StopNode" href="testLiteralExpression.sdm#//@ownedActivityNode.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x1TJFGN5EeC9wIPmzuE1hQ" x="498" y="127"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_wuiVUmN5EeC9wIPmzuE1hQ"/>
+  <element xmi:type="sdma:Activity" href="testLiteralExpression.sdm#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_yfjnAGN5EeC9wIPmzuE1hQ" type="4001" source="_xl_hwGN5EeC9wIPmzuE1hQ" target="_x1TJEGN5EeC9wIPmzuE1hQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_yfjnAWN5EeC9wIPmzuE1hQ" fontName="Ubuntu"/>
+    <element xmi:type="sdma:ActivityEdge" href="testLiteralExpression.sdm#//@ownedActivityEdge.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yfjnAmN5EeC9wIPmzuE1hQ" points="[3, 12, -1, -98]$[3, 122, -1, 12]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yf1T0GN5EeC9wIPmzuE1hQ" id="(0.3333333333333333,0.2)"/>
+  </edges>
+</notation:Diagram>

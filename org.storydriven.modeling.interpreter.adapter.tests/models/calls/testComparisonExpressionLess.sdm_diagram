@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xsi:schemaLocation="http://ns.storydriven.org/sdm/activities/0.1.0 http://ns.storydriven.org/sdm/0.1.0#//activities" xmi:id="_PqKGsGN_EeC9wIPmzuE1hQ" type="SDM" name="testComparisonExpressionLess.sdm_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_P4grwGN_EeC9wIPmzuE1hQ" type="2001">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_P4grwWN_EeC9wIPmzuE1hQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_P4grwmN_EeC9wIPmzuE1hQ" fontName="Ubuntu"/>
+    <element xmi:type="sdma:StartNode" href="testComparisonExpressionLess.sdm#//@ownedActivityNode.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P4grw2N_EeC9wIPmzuE1hQ" x="588" y="74"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_QIV3gGN_EeC9wIPmzuE1hQ" type="2002">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_QIV3gWN_EeC9wIPmzuE1hQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_QIV3gmN_EeC9wIPmzuE1hQ" fontName="Ubuntu"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_QIV3g2N_EeC9wIPmzuE1hQ"/>
+    <element xmi:type="sdma:StopNode" href="testComparisonExpressionLess.sdm#//@ownedActivityNode.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QIV3hGN_EeC9wIPmzuE1hQ" x="593" y="165"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_PqKGsWN_EeC9wIPmzuE1hQ"/>
+  <element xmi:type="sdma:Activity" href="testComparisonExpressionLess.sdm#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_Qm5bwGN_EeC9wIPmzuE1hQ" type="4001" source="_P4grwGN_EeC9wIPmzuE1hQ" target="_QIV3gGN_EeC9wIPmzuE1hQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_Qm5bwWN_EeC9wIPmzuE1hQ" fontName="Ubuntu"/>
+    <element xmi:type="sdma:ActivityEdge" href="testComparisonExpressionLess.sdm#//@ownedActivityEdge.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Qm5bwmN_EeC9wIPmzuE1hQ" points="[1, 8, -11, -95]$[13, 107, 1, 4]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Qm7Q8GN_EeC9wIPmzuE1hQ" id="(0.6086956521739131,0.8260869565217391)"/>
+  </edges>
+</notation:Diagram>

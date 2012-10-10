@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SDM Interpreter Metamodel-Independent Parts
+Bundle-SymbolicName: de.mdelab.sdm.interpreter.common;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: MDELab.de
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: de.mdelab.sdm.interpreter.common,
+ de.mdelab.sdm.interpreter.common.adapters,
+ de.mdelab.sdm.interpreter.common.adapters.activity,
+ de.mdelab.sdm.interpreter.common.adapters.expressions,
+ de.mdelab.sdm.interpreter.common.adapters.m3,
+ de.mdelab.sdm.interpreter.common.adapters.storypattern,
+ de.mdelab.sdm.interpreter.common.expressions,
+ de.mdelab.sdm.interpreter.common.storypatternmatcher,
+ de.mdelab.sdm.interpreter.common.storypatternmatcher.strategies,
+ de.mdelab.sdm.interpreter.common.tasks,
+ de.mdelab.sdm.interpreter.common.tasks.activity,
+ de.mdelab.sdm.interpreter.common.tasks.notifying,
+ de.mdelab.sdm.interpreter.common.tasks.notifying.activity,
+ de.mdelab.sdm.interpreter.common.variables

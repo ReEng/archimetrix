@@ -1,0 +1,5 @@
+#Mon Mar 21 12:05:36 CET 2011
+eclipse.preferences.version=1
+encoding//models/sdm_common_overview.ecore=UTF-8
+encoding//models/sdm_common_overview.ecorediag=UTF-8
+encoding//src/de/mdelab/sdm/interpreter/common/tasks/notifying/INotificationReceiver.java=UTF-8

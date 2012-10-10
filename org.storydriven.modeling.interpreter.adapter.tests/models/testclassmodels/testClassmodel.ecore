@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0"
+    xmlns:sdme="http://ns.storydriven.org/sdm/expressions/0.1.0" xmlns:sdmp="http://ns.storydriven.org/sdm/patterns/0.1.0"
+    xmlns:sdmpe="http://ns.storydriven.org/sdm/patterns/expressions/0.1.0" name="testMetamodel"
+    nsURI="http://testMetamodel/1.0" nsPrefix="testMetamodel">
+  <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//Element">
+    <eOperations name="operation1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://ns.storydriven.org/extension">
+        <contents xsi:type="sdma:OperationExtension">
+          <ownedActivity>
+            <ownedActivityEdge target="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2"
+                source="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.1"/>
+            <ownedActivityEdge target="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.0"
+                source="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4"/>
+            <ownedActivityEdge target="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.3"
+                source="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.0"
+                guard="SUCCESS"/>
+            <ownedActivityEdge target="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.4"
+                source="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2"/>
+            <ownedActivityEdge target="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.5"
+                source="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.0"
+                guard="FAILURE"/>
+            <ownedActivityNode xsi:type="sdma:MatchingStoryNode" outgoing="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.2 #//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.4"
+                incoming="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.1">
+              <ownedPattern>
+                <variable xsi:type="sdmp:ObjectVariable" name="a" bindingState="BOUND"
+                    outgoingLink="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.0/@ownedPattern/@linkVariable.0"
+                    classifier="testMetamodel.ecore#//ClassA"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="b" incomingLink="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.0/@ownedPattern/@linkVariable.0"
+                    classifier="testMetamodel.ecore#//ClassB"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" name="l2" source="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.0/@ownedPattern/@variable.0"
+                    target="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.0/@ownedPattern/@variable.1"
+                    targetEnd="testMetamodel.ecore#//ClassA/toOneRef"/>
+              </ownedPattern>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:StartNode" outgoing="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.0"/>
+            <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="createElement"
+                outgoing="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.3"
+                incoming="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.0">
+              <ownedRule>
+                <variable xsi:type="sdmp:ObjectVariable" name="a" bindingOperator="CREATE"
+                    classifier="testMetamodel.ecore#//ClassA"/>
+              </ownedRule>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:StopNode" name="stopTrue" incoming="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.2">
+              <returnValues xsi:type="sdme:LiteralExpression" value="true" valueType="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:ActivityCallNode" outgoing="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.1"
+                incoming="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.3"
+                callee="sdma:Activity ../activities/calledActivity.sdm#/" calledActivity="../activities/calledActivity.sdm#/">
+              <ownedParameterBindings parameter="#//Class/operation2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@containedParameters.0">
+                <valueExpression xsi:type="sdmpe:ObjectVariableExpression" object="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.0/@ownedPattern/@variable.0"/>
+              </ownedParameterBindings>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:StopNode" name="stopFalse" incoming="#//Class/operation1/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.4">
+              <returnValues xsi:type="sdme:LiteralExpression" value="false" valueType="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+            </ownedActivityNode>
+          </ownedActivity>
+        </contents>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="operation2" eType="ecore:EClass testMetamodel.ecore#//ClassA">
+      <eAnnotations source="http://ns.storydriven.org/extension">
+        <contents xsi:type="sdma:OperationExtension">
+          <containedParameters name="methodReturnValue" eType="ecore:EClass testMetamodel.ecore#//ClassA"/>
+          <ownedActivity outParameter="#//Class/operation2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@containedParameters.0">
+            <ownedActivityEdge target="#//Class/operation2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2"
+                source="#//Class/operation2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.0"/>
+            <ownedActivityEdge target="#//Class/operation2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.1"
+                source="#//Class/operation2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2"/>
+            <ownedActivityNode xsi:type="sdma:StartNode" outgoing="#//Class/operation2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.0"/>
+            <ownedActivityNode xsi:type="sdma:StopNode" incoming="#//Class/operation2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.1">
+              <returnValues xsi:type="sdmpe:ObjectVariableExpression" object="#//Class/operation2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.0"/>
+            </ownedActivityNode>
+            <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="create objects"
+                outgoing="#//Class/operation2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.1"
+                incoming="#//Class/operation2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityEdge.0">
+              <ownedRule>
+                <variable xsi:type="sdmp:ObjectVariable" name="v1" outgoingLink="#//Class/operation2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.0"
+                    bindingOperator="CREATE" classifier="testMetamodel.ecore#//ClassA"/>
+                <variable xsi:type="sdmp:ObjectVariable" name="v2" incomingLink="#//Class/operation2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@linkVariable.0"
+                    bindingOperator="CREATE" classifier="testMetamodel.ecore#//ClassB"/>
+                <linkVariable xsi:type="sdmp:LinkVariable" name="l1" bindingOperator="CREATE"
+                    source="#//Class/operation2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.0"
+                    target="#//Class/operation2/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivity/@ownedActivityNode.2/@ownedRule/@variable.1"
+                    targetEnd="testMetamodel.ecore#//ClassA/toOneRef"/>
+              </ownedRule>
+            </ownedActivityNode>
+          </ownedActivity>
+        </contents>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="operation3"/>
+    <eOperations name="testStartStopNode">
+      <eAnnotations source="http://ns.storydriven.org/extension">
+        <contents xsi:type="sdma:Activity">
+          <ownedActivityEdge target="#//Class/testStartStopNode/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivityNode.1"
+              source="#//Class/testStartStopNode/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivityNode.0"/>
+          <ownedActivityNode xsi:type="sdma:StartNode" outgoing="#//Class/testStartStopNode/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivityEdge.0"/>
+          <ownedActivityNode xsi:type="sdma:StopNode" incoming="#//Class/testStartStopNode/%http:%2F%2Fns.storydriven.org%2Fextension%/@contents.0/@ownedActivityEdge.0">
+            <returnValues xsi:type="sdme:LiteralExpression" value="true" valueType="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+          </ownedActivityNode>
+        </contents>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toOneRef"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toManyRef" upperBound="-1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mapReference" upperBound="-1"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="counter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//Element" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

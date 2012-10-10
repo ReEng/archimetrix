@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdma:Activity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xmlns:sdme="http://ns.storydriven.org/sdm/expressions/0.1.0" xmlns:sdmp="http://ns.storydriven.org/sdm/patterns/0.1.0">
+  <ownedActivityEdge target="//@ownedActivityNode.4" source="//@ownedActivityNode.0"/>
+  <ownedActivityEdge target="//@ownedActivityNode.1" source="//@ownedActivityNode.3" guard="SUCCESS"/>
+  <ownedActivityEdge target="//@ownedActivityNode.2" source="//@ownedActivityNode.3" guard="FAILURE"/>
+  <ownedActivityEdge target="//@ownedActivityNode.3" source="//@ownedActivityNode.4"/>
+  <ownedActivityNode xsi:type="sdma:StartNode" outgoing="//@ownedActivityEdge.0"/>
+  <ownedActivityNode xsi:type="sdma:StopNode" name="stopTrue" incoming="//@ownedActivityEdge.1">
+    <returnValue xsi:type="sdme:LiteralExpression" value="true">
+      <valueType href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+    </returnValue>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:StopNode" name="stopFalse" incoming="//@ownedActivityEdge.2">
+    <returnValues xsi:type="sdme:LiteralExpression" value="false">
+      <valueType href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+    </returnValues>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:MatchingStoryNode" name="match" outgoing="//@ownedActivityEdge.1 //@ownedActivityEdge.2" incoming="//@ownedActivityEdge.3">
+    <ownedPattern>
+      <variable xsi:type="sdmp:ObjectVariable" name="v">
+        <classifier href="../../testclassmodels/testMetamodel.ecore#//ClassA"/>
+      </variable>
+    </ownedPattern>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="create elements" outgoing="//@ownedActivityEdge.3" incoming="//@ownedActivityEdge.0">
+    <ownedRule>
+      <variable xsi:type="sdmp:ObjectVariable" name="v" bindingOperator="CREATE">
+        <classifier href="../../testclassmodels/testMetamodel.ecore#//ClassA"/>
+      </variable>
+    </ownedRule>
+  </ownedActivityNode>
+</sdma:Activity>

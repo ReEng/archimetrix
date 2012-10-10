@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="testMetamodel"
+    nsURI="http://testMetamodel/1.0" nsPrefix="testMetamodel">
+  <eClassifiers xsi:type="ecore:EClass" name="ClassA" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toOneRef" eType="#//ClassB"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toManyRef" upperBound="-1"
+        eType="#//ClassB"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mapReference" upperBound="-1"
+        containment="true">
+      <eGenericType eClassifier="#//MapEntry">
+        <eTypeArguments eClassifier="#//ClassB"/>
+        <eTypeArguments eClassifier="#//ClassC"/>
+      </eGenericType>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassB" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refToC" upperBound="-1"
+        eType="#//ClassC"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bidirectRef" eType="#//ClassC"
+        eOpposite="#//ClassC/bidirectRef2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassC" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bidirectRef2" eType="#//ClassB"
+        eOpposite="#//ClassB/bidirectRef"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="counter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//Element" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MapEntry" instanceClassName="java.util.Map$Entry">
+    <eTypeParameters name="KeyType"/>
+    <eTypeParameters name="ValueType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" lowerBound="1">
+      <eGenericType eTypeParameter="#//MapEntry/KeyType"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value">
+      <eGenericType eTypeParameter="#//MapEntry/ValueType"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

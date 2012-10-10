@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdma:Activity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xmlns:sdmp="http://ns.storydriven.org/sdm/patterns/0.1.0" xmlns:sdmpe="http://ns.storydriven.org/sdm/patterns/expressions/0.1.0">
+  <ownedActivityEdge target="//@ownedActivityNode.2" source="//@ownedActivityNode.0"/>
+  <ownedActivityEdge target="//@ownedActivityNode.1" source="//@ownedActivityNode.2"/>
+  <ownedActivityNode xsi:type="sdma:StartNode" outgoing="//@ownedActivityEdge.0"/>
+  <ownedActivityNode xsi:type="sdma:StopNode" incoming="//@ownedActivityEdge.1">
+    <returnValues xsi:type="sdmpe:ObjectVariableExpression" object="//@ownedActivityNode.2/@ownedRule/@variable.0"/>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="create element" outgoing="//@ownedActivityEdge.1" incoming="//@ownedActivityEdge.0">
+    <ownedRule>
+      <variable xsi:type="sdmp:ObjectVariable" name="v" bindingOperator="CREATE">
+        <classifier href="../../testclassmodels/testMetamodel.ecore#//ClassA"/>
+      </variable>
+    </ownedRule>
+  </ownedActivityNode>
+</sdma:Activity>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sdm_common_overview"
+    nsURI="http://sdm_common_overview/1.0" nsPrefix="sdm_common_overview">
+  <eClassifiers xsi:type="ecore:EClass" name="SDMInterpreter" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variablesManager" eType="#//SDMVariablesManager"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wrapperFactory" eType="#//SDMWrapperFactory"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EclipseBasedSDMInterpreter" eSuperTypes="#//SDMInterpreter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SDMVariablesManager">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sdmInterpreter" eType="#//SDMInterpreter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="EReference0" eType="#//ExpressionInterpreter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EclipseBasedSDMVariablesManager" eSuperTypes="#//SDMVariablesManager"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SDMWrapperFactory" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SDMWrapper" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sdmInterpreter" eType="#//SDMVariablesManager"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SDMActivityWrapper" abstract="true"
+      eSuperTypes="#//SDMWrapper"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SDMActivityNodeWrapper" abstract="true"
+      eSuperTypes="#//SDMWrapper"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SDMExpressionWrapper" abstract="true"
+      eSuperTypes="#//SDMWrapper"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SDMClassifierWrapper" abstract="true"
+      eSuperTypes="#//SDMWrapper"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SDMVariable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classifierWrapper" eType="#//SDMClassifierWrapper"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionInterpreter" abstract="true"/>
+</ecore:EPackage>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xsi:schemaLocation="http://ns.storydriven.org/sdm/activities/0.1.0 http://ns.storydriven.org/sdm/0.1.0#//activities" xmi:id="_fH-NEFRsEeCDOYhkSPHy6A" type="SDM" name="testDestroyObjectVariable.sdm_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_fi_VIFRsEeCDOYhkSPHy6A" type="2001">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_fi_VIVRsEeCDOYhkSPHy6A"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_fi_VIlRsEeCDOYhkSPHy6A" fontName="Segoe UI"/>
+    <element xmi:type="sdma:StartNode" href="testDestroyObjectVariable.sdm#//@ownedActivityNode.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fi_VI1RsEeCDOYhkSPHy6A" x="416" y="47"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_f_d1wFRsEeCDOYhkSPHy6A" type="2002">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_f_d1wVRsEeCDOYhkSPHy6A"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_f_d1wlRsEeCDOYhkSPHy6A" fontName="Segoe UI"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_f_d1w1RsEeCDOYhkSPHy6A"/>
+    <element xmi:type="sdma:StopNode" href="testDestroyObjectVariable.sdm#//@ownedActivityNode.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_f_d1xFRsEeCDOYhkSPHy6A" x="406" y="368"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_geMZIFRsEeCDOYhkSPHy6A" type="2007" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_geNAMFRsEeCDOYhkSPHy6A" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_geNAMVRsEeCDOYhkSPHy6A" type="7006">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_geNAMlRsEeCDOYhkSPHy6A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_geNAM1RsEeCDOYhkSPHy6A"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_geNANFRsEeCDOYhkSPHy6A" type="7007">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_geNANVRsEeCDOYhkSPHy6A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_geNANlRsEeCDOYhkSPHy6A"/>
+    </children>
+    <element xmi:type="sdma:ModifyingStoryNode" href="testDestroyObjectVariable.sdm#//@ownedActivityNode.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_geMZIVRsEeCDOYhkSPHy6A" x="342" y="169"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_fH-NEVRsEeCDOYhkSPHy6A"/>
+  <element xmi:type="sdma:Activity" href="testDestroyObjectVariable.sdm#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_iyKm4FRsEeCDOYhkSPHy6A" type="4001" source="_fi_VIFRsEeCDOYhkSPHy6A" target="_geMZIFRsEeCDOYhkSPHy6A">
+    <styles xmi:type="notation:FontStyle" xmi:id="_iyKm4VRsEeCDOYhkSPHy6A" fontName="Segoe UI"/>
+    <element xmi:type="sdma:ActivityEdge" href="testDestroyObjectVariable.sdm#//@ownedActivityEdge.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iyKm4lRsEeCDOYhkSPHy6A" points="[-1, 8, 30, -134]$[19, 133, 50, -9]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_jRrNYFRsEeCDOYhkSPHy6A" type="4001" source="_geMZIFRsEeCDOYhkSPHy6A" target="_f_d1wFRsEeCDOYhkSPHy6A">
+    <styles xmi:type="notation:FontStyle" xmi:id="_jRrNYVRsEeCDOYhkSPHy6A" fontName="Segoe UI"/>
+    <element xmi:type="sdma:ActivityEdge" href="testDestroyObjectVariable.sdm#//@ownedActivityEdge.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jRrNYlRsEeCDOYhkSPHy6A" points="[3, 27, -22, -156]$[24, 195, -1, 12]"/>
+  </edges>
+</notation:Diagram>

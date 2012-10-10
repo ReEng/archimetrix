@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SDM Expression Interpreter for OCL
+Bundle-SymbolicName: de.mdelab.sdm.interpreter.ocl;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: MDELab.de
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.ocl.ecore;bundle-version="3.0.1",
+ de.mdelab.sdm.interpreter.common;bundle-version="1.0.0",
+ de.mdelab.sdm.interpreter.common.eclipse;bundle-version="1.0.0"

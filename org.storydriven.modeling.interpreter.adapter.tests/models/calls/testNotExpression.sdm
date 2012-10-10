@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdma:Activity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xmlns:sdme="http://ns.storydriven.org/sdm/expressions/0.1.0">
+  <ownedActivityEdge target="//@ownedActivityNode.1" source="//@ownedActivityNode.0"/>
+  <ownedActivityNode xsi:type="sdma:StartNode" outgoing="//@ownedActivityEdge.0"/>
+  <ownedActivityNode xsi:type="sdma:StopNode" incoming="//@ownedActivityEdge.0">
+    <returnValues xsi:type="sdme:NotExpression">
+      <negatedExpression xsi:type="sdme:LiteralExpression" value="false">
+        <valueType href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </negatedExpression>
+    </returnValues>
+  </ownedActivityNode>
+</sdma:Activity>

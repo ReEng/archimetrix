@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xsi:schemaLocation="http://ns.storydriven.org/sdm/activities/0.1.0 http://ns.storydriven.org/sdm/0.1.0#//activities" xmi:id="_8AuTkFPIEeCjIeqinRGQIw" type="SDM" name="testMatchingObjectVariable.sdm_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_8kWlEFPIEeCjIeqinRGQIw" type="2001">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_8kWlEVPIEeCjIeqinRGQIw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_8kWlElPIEeCjIeqinRGQIw" fontName="Segoe UI"/>
+    <element xmi:type="sdma:StartNode" href="testMatchingObjectVariable.sdm#//@ownedActivityNode.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8kWlE1PIEeCjIeqinRGQIw" x="563" y="49"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_87M-0FPIEeCjIeqinRGQIw" type="2002">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_87M-0VPIEeCjIeqinRGQIw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_87M-0lPIEeCjIeqinRGQIw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_87M-01PIEeCjIeqinRGQIw"/>
+    <element xmi:type="sdma:StopNode" href="testMatchingObjectVariable.sdm#//@ownedActivityNode.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_87M-1FPIEeCjIeqinRGQIw" x="425" y="380"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_-6xC0FPIEeCjIeqinRGQIw" type="2002">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_-6xC0VPIEeCjIeqinRGQIw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_-6xC0lPIEeCjIeqinRGQIw" fontName="Segoe UI"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_-6xC01PIEeCjIeqinRGQIw"/>
+    <element xmi:type="sdma:StopNode" href="testMatchingObjectVariable.sdm#//@ownedActivityNode.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-6xC1FPIEeCjIeqinRGQIw" x="721" y="382"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="__9mY0FPIEeCjIeqinRGQIw" type="2006" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="__9m_4FPIEeCjIeqinRGQIw" type="5006"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="__9nm8FPIEeCjIeqinRGQIw" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="__9nm8VPIEeCjIeqinRGQIw" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="__9nm8lPIEeCjIeqinRGQIw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="__9nm81PIEeCjIeqinRGQIw"/>
+    </children>
+    <element xmi:type="sdma:MatchingStoryNode" href="testMatchingObjectVariable.sdm#//@ownedActivityNode.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="__9mY0VPIEeCjIeqinRGQIw" x="491" y="184"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_8AuTkVPIEeCjIeqinRGQIw"/>
+  <element xmi:type="sdma:Activity" href="testMatchingObjectVariable.sdm#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_CIimYFPJEeCjIeqinRGQIw" type="4001" source="__9mY0FPIEeCjIeqinRGQIw" target="_87M-0FPIEeCjIeqinRGQIw">
+    <styles xmi:type="notation:FontStyle" xmi:id="_CIimYVPJEeCjIeqinRGQIw" fontName="Segoe UI"/>
+    <element xmi:type="sdma:ActivityEdge" href="testMatchingObjectVariable.sdm#//@ownedActivityEdge.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CIjNcFPJEeCjIeqinRGQIw" points="[-16, 28, 89, -152]$[-102, 192, 3, 12]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_CuZFcFPJEeCjIeqinRGQIw" type="4001" source="__9mY0FPIEeCjIeqinRGQIw" target="_-6xC0FPIEeCjIeqinRGQIw">
+    <styles xmi:type="notation:FontStyle" xmi:id="_CuZFcVPJEeCjIeqinRGQIw" fontName="Segoe UI"/>
+    <element xmi:type="sdma:ActivityEdge" href="testMatchingObjectVariable.sdm#//@ownedActivityEdge.2"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CuZsgFPJEeCjIeqinRGQIw" points="[28, 28, -163, -154]$[193, 194, 2, 12]"/>
+  </edges>
+</notation:Diagram>

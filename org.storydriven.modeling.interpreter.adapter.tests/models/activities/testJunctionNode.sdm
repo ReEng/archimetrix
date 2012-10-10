@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdma:Activity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xmlns:sdme="http://ns.storydriven.org/sdm/expressions/0.1.0" xmlns:sdmp="http://ns.storydriven.org/sdm/patterns/0.1.0" xmlns:sdmpe="http://ns.storydriven.org/sdm/patterns/expressions/0.1.0">
+  <ownedActivityEdge target="//@ownedActivityNode.1" source="//@ownedActivityNode.0"/>
+  <ownedActivityEdge target="//@ownedActivityNode.4" source="//@ownedActivityNode.1" guard="BOOL">
+    <guardExpression xsi:type="sdme:LiteralExpression" comment="" value="true">
+      <valueType href="../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+    </guardExpression>
+  </ownedActivityEdge>
+  <ownedActivityEdge target="//@ownedActivityNode.5" source="//@ownedActivityNode.1" guard="ELSE"/>
+  <ownedActivityEdge target="//@ownedActivityNode.2" source="//@ownedActivityNode.4"/>
+  <ownedActivityEdge target="//@ownedActivityNode.2" source="//@ownedActivityNode.5"/>
+  <ownedActivityEdge target="//@ownedActivityNode.3" source="//@ownedActivityNode.2"/>
+  <ownedActivityNode xsi:type="sdma:StartNode" outgoing="//@ownedActivityEdge.0"/>
+  <ownedActivityNode xsi:type="sdma:JunctionNode" name="j1" outgoing="//@ownedActivityEdge.1 //@ownedActivityEdge.2" incoming="//@ownedActivityEdge.0"/>
+  <ownedActivityNode xsi:type="sdma:JunctionNode" name="j2" outgoing="//@ownedActivityEdge.5" incoming="//@ownedActivityEdge.3 //@ownedActivityEdge.4"/>
+  <ownedActivityNode xsi:type="sdma:StopNode" incoming="//@ownedActivityEdge.5">
+    <returnValues xsi:type="sdmpe:ObjectVariableExpression" object="//@ownedActivityNode.4/@ownedRule/@variable.0"/>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="v1" outgoing="//@ownedActivityEdge.3" incoming="//@ownedActivityEdge.1">
+    <ownedRule>
+      <variable xsi:type="sdmp:ObjectVariable" name="var1" bindingOperator="CREATE">
+        <classifier href="../testclassmodels/testMetamodel.ecore#//ClassA"/>
+      </variable>
+    </ownedRule>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="v2" outgoing="//@ownedActivityEdge.4" incoming="//@ownedActivityEdge.2">
+    <ownedRule>
+      <variable xsi:type="sdmp:ObjectVariable" name="var2" bindingOperator="CREATE">
+        <classifier href="../testclassmodels/testMetamodel.ecore#//ClassB"/>
+      </variable>
+    </ownedRule>
+  </ownedActivityNode>
+</sdma:Activity>

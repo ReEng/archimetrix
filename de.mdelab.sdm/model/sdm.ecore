@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_RtHvYH6AEd2MDoWQO5hkAQ"
+    name="sdm" nsURI="http://mdelab/sdm/1.0" nsPrefix="sdm">
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Abstract super class of all elements that can have a name and a description."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The name of the element."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The description of the element."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uuid" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActivityDiagram" eSuperTypes="#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The activity diagram is the model root of all activity diagrams. It contains several activities."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activities" upperBound="-1"
+        eType="#_XIWMgH6BEd2MDoWQO5hkAQ" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The activities contained in this story diagram."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" xmi:id="_XIWMgH6BEd2MDoWQO5hkAQ" name="Activity"
+      eSuperTypes="#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The activity describes the behaviour of a method (pointed to by specification). It contains several ActivityNodes that are connected by ActivityEdges. There must be exactly one InitialNode and at least one ActivityFinalNode. The specification is optional. The list of parameters can be used to define (additional) parameters for this activity."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" upperBound="-1"
+        eType="#//nodes/ActivityNode" containment="true" eOpposite="#//nodes/ActivityNode/activity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The action nodes, that are contained in this activity."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specification" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EOperation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The EOperation whose behavior is modeled by this activity. The specification is optional."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="edges" upperBound="-1"
+        eType="#//nodes/ActivityEdge" containment="true" eOpposite="#//nodes/ActivityEdge/activity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Edges, that connect the activity nodes of the activity."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//ActivityParameter" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Parameters of this activity."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActivityParameter" eSuperTypes="#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Defines an activitiy parameter."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classifier" lowerBound="1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClassifier">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The classifier of this parameter."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" lowerBound="1"
+        eType="#//ParameterDirectionEnum" defaultValueLiteral="in">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The direction of this parameter, i.e. input parameter, output parameter, or both."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ParameterDirectionEnum">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Specifies the possible directions of a parameter."/>
+    </eAnnotations>
+    <eLiterals name="IN" literal="in">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Input parameter"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="OUT" value="1" literal="out">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Output parameter"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="INOUT" value="2" literal="inout">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Input and output parameter"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eSubpackages name="callActions" nsURI="http://mdelab/sdm/callActions/1.0" nsPrefix="sdm.callActions">
+    <eClassifiers xsi:type="ecore:EClass" name="CallAction" abstract="true" eSuperTypes="#//NamedElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="CallAction is the base interface for all call actions, i.e. variable declarations, literal statements and method calls."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="classifier" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClassifier">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The EClassifier of the call action. This can be a variable's or literal's type or the return type of a method call."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CallActionParameter" eSuperTypes="#//NamedElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A parameter definition that is used by method call actions, for example."/>
+      </eAnnotations>
+      <eOperations name="toString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (eIsProxy()) return super.toString();&#xD;&#xA;&#xD;&#xA;StringBuffer buffer = new StringBuffer();&#xD;&#xA;&#xD;&#xA;if (getParameterValueAction() == null)&#xD;&#xA;{&#xD;&#xA;&#x9;buffer.append(&quot;[null]&quot;);&#xD;&#xA;}&#xD;&#xA;else&#xD;&#xA;{&#xD;&#xA;&#x9;buffer.append(getParameterValueAction().toString());&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return buffer.toString().trim();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameterValueAction"
+          lowerBound="1" eType="#//expressions/Expression" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="An expression that provides a value when it is evaluated."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameterClassfier" lowerBound="1"
+          eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClassifier">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The EClassifier of the parameter. IMPORTANT: The parameter's type is the type expected by the method for which the parameter is used. It does not need to be the type of the parameterValueAction. Of course, the type of the parameterValueAction must be a subtype of the parameter's type. If the parameterClassifier is not available, the parameterTypeName is used instead."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CallStoryDiagramInterpreterAction"
+        eSuperTypes="#//callActions/CallAction">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A CallStoryDiagramInterpreterAction can be used to call the StoryDiagramInterpreter to execute another activity. The classifier of the CallStoryDiagramInterpreterAction is the expected return type of the activity to be executed. Its return value is also the return value of this CallAction. A CallStoryDiagramInterpreterAction also contains a list of CallActions whose value will be supplied as parameters to the activity, as well as a CallAction that returns the thisObject in whose context the activity will be executed."/>
+      </eAnnotations>
+      <eOperations name="toString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="&#x9;&#x9;if (eIsProxy()) super.toString();&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;StringBuffer buffer = new StringBuffer();&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;buffer.append(&quot;call SDInterpreter(&quot;);&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if (getActivity() != null &amp;&amp; getActivity().getSpecification() != null)&#xD;&#xA;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;buffer.append(getActivity().getSpecification().getName());&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;buffer.append(&quot;[null]&quot;);&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;buffer.append(&quot;, &quot;);&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;for (CallActionParameter parameter: getParameters())&#xD;&#xA;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;buffer.append(parameter.getName());&#xD;&#xA;&#x9;&#x9;&#x9;buffer.append(&quot;:&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;buffer.append(parameter.getParameterClassfier().getName());&#xD;&#xA;&#x9;&#x9;&#x9;buffer.append(&quot; := &quot;);&#xD;&#xA;&#x9;&#x9;&#x9;buffer.append(parameter.getParameterValueAction());&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;&#x9;buffer.append(&quot;, &quot;);&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;buffer.delete(buffer.length() - 2, buffer.length());&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;buffer.append(&quot;)&quot;);&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;return buffer.toString().trim();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
+          eType="#_XIWMgH6BEd2MDoWQO5hkAQ">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The activity to be executed."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+          eType="#//callActions/CallActionParameter" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The parameters supplied to the activity to execute. Each parameter is a CallActionParameter that defines the name, classifier and value of the parameter. If there is a 'this' object in the story activity to be executed, it must be supplied as a special parameter."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="LiteralDeclarationAction" eSuperTypes="#//callActions/CallAction">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The LiteralDeclarationAction declares a literal, e.g. Integer &quot;42&quot;."/>
+      </eAnnotations>
+      <eOperations name="toString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (eIsProxy()) return super.toString();&#xD;&#xA;&#xD;&#xA;if (getLiteral() != null &amp;&amp; !&quot;&quot;.equals(getLiteral()))&#xD;&#xA;{&#xD;&#xA;&#x9;if (getClassifier() != null &amp;&amp; getClassifier() == org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEString())&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;return '&quot;' + getLiteral() + '&quot;';&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;return getLiteral();&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;else return &quot;[null]&quot;;"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="literal" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The literal as String."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MethodCallAction" eSuperTypes="#//callActions/CallAction">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The MethodCallAction can be used to invoke an arbitrary method. Some CallActionParameters can be used for the methods parameters. The instanceVariable CallAction returns the instance object in whose context the method will be executed."/>
+      </eAnnotations>
+      <eOperations name="toString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (eIsProxy()) return super.toString();&#xD;&#xA;&#xD;&#xA;StringBuffer buffer = new StringBuffer();&#xD;&#xA;&#xD;&#xA;if (getInstanceVariable() != null)&#xD;&#xA;{&#xD;&#xA;&#x9;buffer.append(getInstanceVariable().toString());&#xD;&#xA;}&#xD;&#xA;else&#xD;&#xA;{&#xD;&#xA;&#x9;//This may be a static method call&#xD;&#xA;&#x9;if (getMethod() != null &amp;&amp; getMethod().getEContainingClass() != null)&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;buffer.append(getMethod().getEContainingClass().getName());&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else if (getMethodClassName() != null &amp;&amp; !&quot;&quot;.equals(getMethodClassName()))&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;buffer.append(getMethodClassName());&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;buffer.append(&quot;[null]&quot;);&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;buffer.append(&quot;.&quot;);&#xD;&#xA;&#xD;&#xA;if (getMethod() != null)&#xD;&#xA;{&#xD;&#xA;&#x9;if (getMethod().getName() != null &amp;&amp; !&quot;&quot;.equals(getMethod().getName()))&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;buffer.append(getMethod().getName());&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;buffer.append(&quot;[null]&quot;);&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;else&#xD;&#xA;{&#xD;&#xA;&#x9;if (getMethodName() != null &amp;&amp; !&quot;&quot;.equals(getMethodName()))&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;buffer.append(getMethodName());&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;buffer.append(&quot;[null]&quot;);&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;buffer.append(&quot;(&quot;);&#xD;&#xA;&#xD;&#xA;if (!getParameters().isEmpty())&#xD;&#xA;{&#xD;&#xA;&#x9;for (CallActionParameter param : getParameters())&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;buffer.append(param.toString());&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;buffer.append(&quot;, &quot;);&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;buffer.delete(buffer.length() - 2, buffer.length());&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;buffer.append(&quot;)&quot;);&#xD;&#xA;&#xD;&#xA;return buffer.toString().trim();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+          eType="#//callActions/CallActionParameter" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A list of parameters that are supplied to the method."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="method" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The EOperation that will be executed. This attribute has preference over methodClassName and methodName."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="methodClassName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The fully qualified name of the class that contains the method. This is used if no EOperation is available."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="methodName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The name of the method. This is used if no EOperation is available."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="instanceVariable" eType="#//expressions/Expression"
+          containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="An Expression that must return an object in whose context the method will be executed. If this reference is null, the method is considered static."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NewObjectAction" eSuperTypes="#//callActions/CallAction">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The NewObjectAction creates a new instance object. If the classifier of this CallAction is an EClass, the appropriate EMF factory will be used to create the object. Parameters are ignored in this case. If the classifier is something else, Java's reflection mechanism will be used to find an appropriate constructor method using the supplied constructorParameters."/>
+      </eAnnotations>
+      <eOperations name="toString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (eIsProxy()) return super.toString();&#xD;&#xA;&#xD;&#xA;StringBuffer buffer = new StringBuffer();&#xD;&#xA;buffer.append(&quot;new &quot;);&#xD;&#xA;&#xD;&#xA;if (getClassifier() != null &amp;&amp; getClassifier().getName() != null &amp;&amp; !&quot;&quot;.equals(getClassifier().getName()))&#xD;&#xA;{&#xD;&#xA;&#x9;buffer.append(getClassifier().getName());&#xD;&#xA;}&#xD;&#xA;else&#xD;&#xA;{&#xD;&#xA;&#x9;buffer.append(&quot;[null]&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;buffer.append(&quot;(&quot;);&#xD;&#xA;&#xD;&#xA;for (CallActionParameter param : getConstructorParameters())&#xD;&#xA;{&#xD;&#xA;&#x9;buffer.append(param.toString());&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;buffer.append(&quot;)&quot;);&#xD;&#xA;&#xD;&#xA;return buffer.toString().trim();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="constructorParameters"
+          upperBound="-1" eType="#//callActions/CallActionParameter" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A list of CallActionParameters that are used to choose the right constructor. The parameter values are supplied to the constructor when the new object is created."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="VariableDeclarationAction" eSuperTypes="#//callActions/VariableReferenceAction">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The VariableDeclarationAction declares a variable along with its type. A CallAction can be used to assign a value to the variable. If a variable with that name is already in use, it is overwritten."/>
+      </eAnnotations>
+      <eOperations name="toString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (eIsProxy()) return super.toString();&#xD;&#xA;&#xD;&#xA;StringBuffer buffer = new StringBuffer();&#xD;&#xA;&#xD;&#xA;if (getClassifier() != null &amp;&amp; getClassifier().getName() != null &amp;&amp; !&quot;&quot;.equals(getClassifier().getName()))&#xD;&#xA;{&#xD;&#xA;&#x9;buffer.append(getClassifier().getName());&#xD;&#xA;}&#xD;&#xA;else&#xD;&#xA;{&#xD;&#xA;&#x9;buffer.append(&quot;[null]&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;buffer.append(&quot; &quot;);&#xD;&#xA;buffer.append(getVariableName());&#xD;&#xA;buffer.append(&quot; := &quot;);&#xD;&#xA;&#xD;&#xA;if (getValueAssignment() != null)&#xD;&#xA;{&#xD;&#xA;&#x9;buffer.append(getValueAssignment().toString());&#xD;&#xA;}&#xD;&#xA;else&#xD;&#xA;{&#xD;&#xA;&#x9;buffer.append(&quot;[null]&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return buffer.toString().trim();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="valueAssignment" lowerBound="1"
+          eType="#//expressions/Expression" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A CallAction that is evaluated. The value will  be assigned to the declared variable name."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="VariableReferenceAction" eSuperTypes="#//callActions/CallAction">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Refers to an existing variable. The type of the existing variable must match the type given in this VariableReferenceAction."/>
+      </eAnnotations>
+      <eOperations name="toString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (eIsProxy()) return super.toString();&#xD;&#xA;&#xD;&#xA;if (getVariableName() != null) return getVariableName();&#xD;&#xA;else return &quot;[null]&quot;;"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="variableName" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The name of the variable."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NullValueAction" eSuperTypes="#//callActions/CallAction">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The NullValueAction returns the value 'null' when it is evaluated."/>
+      </eAnnotations>
+      <eOperations name="toString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (eIsProxy()) return super.toString();&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;return &quot;null&quot;;"/>
+        </eAnnotations>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OperationAction" eSuperTypes="#//callActions/CallAction">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The operation action executes an operation on the operands and returns the result. Depending on the kind of operation, there must be certain number of operands."/>
+      </eAnnotations>
+      <eOperations name="toString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (eIsProxy())&#xD;&#xA;&#x9;return super.toString();&#xD;&#xA;&#xD;&#xA;StringBuffer buffer = new StringBuffer();&#xD;&#xA;&#xD;&#xA;if (this.getOperator() == Operators.NOT)&#xD;&#xA;{&#xD;&#xA;&#x9;buffer.append(this.getOperator().toString());&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;if (this.getOperand1() != null) {&#xD;&#xA;&#x9;buffer.append(this.getOperand1().toString());&#xD;&#xA;} else {&#xD;&#xA;&#x9;buffer.append(&quot;[null]&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;if (this.getOperator() != Operators.NOT)&#xD;&#xA;{&#xD;&#xA;&#x9;buffer.append(&quot; &quot;);&#xD;&#xA;&#x9;buffer.append(this.getOperator().toString());&#xD;&#xA;&#x9;buffer.append(&quot; &quot;);&#xD;&#xA;&#xD;&#xA;&#x9;if (this.getOperand2() != null) {&#xD;&#xA;&#x9;&#x9;buffer.append(this.getOperand2().toString());&#xD;&#xA;&#x9;} else {&#xD;&#xA;&#x9;&#x9;buffer.append(&quot;[null]&quot;);&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;return buffer.toString();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="operands" lowerBound="1"
+          upperBound="-1" eType="#//expressions/Expression" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The operands of this operation."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+          eType="#//callActions/OperationsEnum">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The operation to execute."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="OperationsEnum">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The operations enumeration provides literals for the operations."/>
+      </eAnnotations>
+      <eLiterals name="EQUALS" literal="="/>
+      <eLiterals name="GREATER_THAN" value="1" literal=">"/>
+      <eLiterals name="LESS_THAN" value="2" literal="&lt;"/>
+      <eLiterals name="GREATER_OR_EQUALS" value="3" literal=">="/>
+      <eLiterals name="LESS_OR_EQUALS" value="4" literal="&lt;="/>
+      <eLiterals name="NOT_EQUAL" value="5" literal="!="/>
+      <eLiterals name="NOT" value="6" literal="!"/>
+      <eLiterals name="AND" value="7" literal="&amp;&amp;"/>
+      <eLiterals name="OR" value="8" literal="||"/>
+      <eLiterals name="ADD" value="9" literal="+"/>
+      <eLiterals name="SUBTRACT" value="10" literal="-"/>
+      <eLiterals name="MULTIPLY" value="11" literal="*"/>
+      <eLiterals name="DIVIDE" value="12" literal="/"/>
+      <eLiterals name="MODULO" value="13" literal="%"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="expressions" nsURI="http://mdelab/sdm/expressions/1.0" nsPrefix="sdm.expressions">
+    <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true" eSuperTypes="#//NamedElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Expression is the abstract super type of all expressions."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CallActionExpression" eSuperTypes="#//expressions/Expression">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A CallActionExpression contains a list of CallActions that are executed consecutively. The return value of the last CallAction is also the return value of the CallActionExpression."/>
+      </eAnnotations>
+      <eOperations name="toString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (eIsProxy()) return super.toString();&#xD;&#xA;&#xD;&#xA;if (getCallActions().isEmpty())&#xD;&#xA;{&#xD;&#xA;&#x9;return &quot;[null]&quot;;&#xD;&#xA;}&#xD;&#xA;else&#xD;&#xA;{&#xD;&#xA;&#x9;StringBuffer buffer = new StringBuffer();&#xD;&#xA;&#xD;&#xA;&#x9;String NL = System.getProperty(&quot;line.separator&quot;);&#xD;&#xA;&#xD;&#xA;&#x9;for (CallAction c : getCallActions())&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;buffer.append(c.toString());&#xD;&#xA;&#x9;&#x9;buffer.append(NL);&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;return buffer.toString().trim();&#xD;&#xA;}"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="callActions" lowerBound="1"
+          upperBound="-1" eType="#//callActions/CallAction" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The CallActions of this CallActionExpression."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="StringExpression" eSuperTypes="#//expressions/Expression">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The StringExpression contains an expression string of an expression language. The available expression languages are supplied by other plugins."/>
+      </eAnnotations>
+      <eOperations name="toString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (eIsProxy())&#xD;&#xA;{&#xD;&#xA;&#x9;return super.toString();&#xD;&#xA;}&#xD;&#xA;else&#xD;&#xA;{&#xD;&#xA;&#x9;if (getExpressionString() == null || &quot;&quot;.equals(getExpressionString()))&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;return &quot;[null]&quot;;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;return getExpressionString();&#xD;&#xA;&#x9;}&#xD;&#xA;}"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="expressionString" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The expression string."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="expressionLanguage" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The expression language of the expression string."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ast" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+          containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This containment reference can be used to store the abstract syntax tree of the expression in the model. This does not work when the model is stored in textual syntax."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="nodes" nsURI="http://mdelab/sdm/nodes/1.0" nsPrefix="sdm.nodes">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This package contains the node types available in an activity."/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="ActivityEdge" eSuperTypes="#//NamedElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The acitivty edges connect activity nodes within an activity. A guard can be set (see ActivityEdgeGuardEnumeration). If the guard is set to boolean a guardExpression must be provided that returns a boolean value."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+          eType="#//nodes/ActivityNode" eOpposite="#//nodes/ActivityNode/outgoing">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The source activity node of this edge."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+          eType="#//nodes/ActivityNode" eOpposite="#//nodes/ActivityNode/incoming">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The target activity node of this edge."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
+          eType="#_XIWMgH6BEd2MDoWQO5hkAQ" eOpposite="#//Activity/edges">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The activity that contains this activity edge."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="guardType" lowerBound="1"
+          eType="#//nodes/ActivityEdgeGuardEnumeration">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The type of this guard."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="guardExpression" eType="#//expressions/Expression"
+          containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="If the type of the guard is BOOLEAN, this expression contains the Boolean condition. The constraint expression must return a boolean value."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ActivityEdgeGuardEnumeration">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This enumeration contains the guard types an activity edge guard can have."/>
+      </eAnnotations>
+      <eLiterals name="NONE">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="No guard."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="FOR_EACH" value="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="If the story action node that is used as the source of the activity edge, the edge is followed each time a valid match was found for the story pattern of the story action node."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="END" value="2">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="If the story action node that is used as the source of the activity edge, the edge is followed when no valid match could be found for the story pattern of the story action node."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="SUCCESS" value="3">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The activity edge is followed if a valid match was found for the story pattern of the story action node where the activity edge starts."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="FAILURE" value="4">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The activity edge is followed if no valid match was found for the story pattern of the story action node where the activity edge starts."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="BOOLEAN" value="5">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The activity edge is followed if the Boolean condition holds. Used in conjunction with ELSE."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="ELSE" value="6">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The activity edge is followed if the Boolean condition does not hold. Used in conjunction with BOOLEAN."/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ActivityFinalNode" eSuperTypes="#//nodes/ActivityNode">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An ActivityFinalNode marks the termination of an activity, comparable to a return statement in Java code. There must be at least on final node in an activity. A final node must have at least one incoming edge and no outgoing edges. If an ActivityFinalNode is reached, all control flows of the activity are terminated."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="returnValue" eType="#//expressions/Expression"
+          containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="An expression that is evaluated to compute the return value of this activity. The expression must return a value of the return type of this operation."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FlowFinalNode" eSuperTypes="#//nodes/ActivityNode">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A FlowFinalNode marks the end of a single control flow inside an activity. If a FlowFinalNode is reached by a control flow, that control flow terminates but all other control flows still continue."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ActivityNode" abstract="true" eSuperTypes="#//NamedElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This is the abstract super class of all ActivityNodes. It holds lists of all incoming and outgoing ActivityEdges and a reference to the containing activity."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="incoming" upperBound="-1"
+          eType="#//nodes/ActivityEdge" eOpposite="#//nodes/ActivityEdge/target">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This list contains all ActivityEdges that use this ActivityNode as target."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outgoing" upperBound="-1"
+          eType="#//nodes/ActivityEdge" eOpposite="#//nodes/ActivityEdge/source">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This list contains all ActivityEdges that use this ActivityNode as source."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
+          eType="#_XIWMgH6BEd2MDoWQO5hkAQ" eOpposite="#//Activity/nodes">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The activity that contains this activity node."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ExpressionActivityNode" eSuperTypes="#//nodes/ActivityNode">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This node contains expressions which model imperative calls."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
+          eType="#//expressions/Expression" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The expression of this ExpressionActivityNode."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DecisionMergeNode" eSuperTypes="#//nodes/ActivityNode">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A decision/merge node branches the control flow based on guards at the outgoing edges. If there are two or more outgoing edges, these must have guards. One of the guards must be ELSE. A decision/merge node can have multiple incoming edges."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InitialNode" eSuperTypes="#//nodes/ActivityNode">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An initial node marks the starting point of the control flow of an activity. There must be exactly one initial node in an activity. An Initial node must have one outgoing edge and no incoming edges."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="StoryActionNode" eSuperTypes="#//nodes/ActivityNode">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A story action contains a story pattern that describes a graph transformation. A story action node can be marked forEach, which means that the story pattern is executed for all possible matches."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="forEach" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Marks this story action node as forEach so the story pattern is executed as long as possible."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="storyPatternObjects"
+          upperBound="-1" eType="#//storyPattern/AbstractStoryPatternObject" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The story pattern objects contained in this story action node."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="storyPatternLinks" upperBound="-1"
+          eType="#//storyPattern/AbstractStoryPatternLink" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The story pattern links contained in this story action node."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="constraints" upperBound="-1"
+          eType="#//expressions/Expression" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A list of constraint expressions that must hold for a successful match of the story action node. The constraint expressions are evaluated after a binding could be found for all story pattern objects and all story pattern links are checked successfully. If the constraint expressions are not satisfied, another binding is sought. The constraint expressions must return a boolean value."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nacSemantic" defaultValueLiteral="OR">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This attribute defines, how Negative Application Conditions should be interpreted."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ForkJoinNode" eSuperTypes="#//nodes/ActivityNode">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A fork/join node can split control flow into multiple control flows. If there are more than one incoming edge, the fork/join node waits for all incoming control flows."/>
+      </eAnnotations>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="storyPattern" nsURI="http://mdelab/sdm/storyPattern/1.0" nsPrefix="sdm.storyPattern">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This package contains all classes specific for story driven modeling."/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EEnum" name="BindingTypeEnumeration">
+      <eLiterals name="UNBOUND" literal="unbound">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Indicates that a story pattern object has to be bound to an instance object during the execution of the story pattern."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="BOUND" value="1" literal="bound">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Indicates that a story pattern object is bound to an instance object before the execution of the story pattern."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="CAN_BE_BOUND" value="2" literal="canBeBound">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Indicates that a story pattern object may be bound to an instance object before the execution of the story pattern. If it is not bound in advance a binding has to be found."/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="MatchTypeEnumeration">
+      <eLiterals name="NONE" literal="none"/>
+      <eLiterals name="OPTIONAL" value="1" literal="optional">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This story pattern element is optional."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="SET" value="2" literal="set">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This story pattern element represents a set of instance objects."/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ModifierEnumeration">
+      <eLiterals name="NONE" literal="none">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This modifier indicates that the instance object of this story pattern object or link has to be matched but is otherwise left untouched."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="CREATE" value="1" literal="create">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This modifier indicates that the instance object of this story pattern object or link is to be created."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="DESTROY" value="2" literal="destroy">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This modifier indicates that the instance object of this story pattern object or link is to be destroyed."/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AttributeAssignment" eSuperTypes="#//NamedElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The attribute assignment contains an assignment expression that is evaluated and the resulting value is assigned to the attribute."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eStructuralFeature" lowerBound="1"
+          eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The EAttribute in the meta model."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assignmentExpression"
+          lowerBound="1" eType="#//expressions/Expression" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The assignment expression that is evaluated to compute a value for this attribute. The expression must return a value of the type of this attribute."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="StoryPatternElement" abstract="true"
+        eSuperTypes="#//NamedElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The abstract super class for all story pattern elements (story pattern objects and links)."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="modifier" lowerBound="1"
+          eType="#//storyPattern/ModifierEnumeration" defaultValueLiteral="none">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The modifier indicates whether this element is to be created, destroyed, etc."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="matchType" lowerBound="1"
+          eType="#//storyPattern/MatchTypeEnumeration" defaultValueLiteral="none">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Indicates how the story pattern element should be matched."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AbstractStoryPatternLink" abstract="true"
+        eSuperTypes="#//storyPattern/StoryPatternElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="AbstractStoryPatternLink is the super class of all StoryPatternLinks."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+          eType="#//storyPattern/AbstractStoryPatternObject" eOpposite="#//storyPattern/AbstractStoryPatternObject/outgoingStoryLinks">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The source story pattern object of this link."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+          eType="#//storyPattern/AbstractStoryPatternObject" eOpposite="#//storyPattern/AbstractStoryPatternObject/incomingStoryLinks">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The target story pattern object of this link."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOnlyExistence" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="If true, the pattern matcher should not use this link to match objects and check only the existence of the link."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="matchingPriority" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The matching priority of this link. If the matching priority is set, i.e. not zero, the pattern matcher will choose links with the highest matching priority first to bind elements. The highest priority is one."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="oppositeStoryPatternLink"
+          eType="#//storyPattern/AbstractStoryPatternLink" eOpposite="#//storyPattern/AbstractStoryPatternLink/oppositeStoryPatternLink">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This reference points to the StoryPatternLink that is associated with the opposite EReference of this StoryPatternLinks EReference."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="StoryPatternLink" eSuperTypes="#//storyPattern/AbstractStoryPatternLink">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Story pattern links represent references between instance objects."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eStructuralFeature" lowerBound="1"
+          eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The EReference this story pattern link is bound to."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ContainmentLink" eSuperTypes="#//storyPattern/AbstractStoryPatternLink">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This link represents a containment relationship between the source and target objects. The target object is directly or indirectly contained in the source object."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ExpressionLink" eSuperTypes="#//storyPattern/AbstractStoryPatternLink">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The StoryPatternExpressionLink can be used to match the target story pattern object to the return value of an expression. This implies, that that StoryPatternObject may not be modified, i.e. its modifier must be NONE."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
+          eType="#//expressions/Expression" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The EOperation that is executed to yield the target story pattern object."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="StoryPatternObject" eSuperTypes="#//storyPattern/AbstractStoryPatternObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Story pattern objects can be bound to instance objects during the execution of the story pattern."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="bindingType" lowerBound="1"
+          eType="#//storyPattern/BindingTypeEnumeration">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Indicates, whether this story pattern object should bound to a specific object in advance or if a valid binding has to be found during the execution of the story pattern."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attributeAssignments"
+          upperBound="-1" eType="#//storyPattern/AttributeAssignment" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A list of AttributeAssignments, which specify the new values of the attributes after a successful match of the story pattern."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="constraints" upperBound="-1"
+          eType="#//expressions/Expression" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A list of constraint expressions that must hold for the instance object bound to this story pattern object. Each constraint expression must return a boolean value."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="directAssignmentExpression"
+          eType="#//expressions/Expression" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A direct assignment expression can be used to return an object to which this StoryPatternObject is bound to. The expression must return a value of the type of the story pattern object."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AbstractStoryPatternObject" abstract="true"
+        eSuperTypes="#//storyPattern/StoryPatternElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="AbstractStoryPatternObject is the super class of all kinds of story pattern objects."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="classifier" lowerBound="1"
+          eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClassifier">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The classifier of this story pattern object. Usually an EClass object whose instances (EObjects) have to be matched in the object graph."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingStoryLinks" upperBound="-1"
+          eType="#//storyPattern/AbstractStoryPatternLink" eOpposite="#//storyPattern/AbstractStoryPatternLink/source">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The list of StoryPatternLinks starting from this StoryPatternObject. This is the opposite of the the source association of the StoryPatternLink."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="incomingStoryLinks" upperBound="-1"
+          eType="#//storyPattern/AbstractStoryPatternLink" eOpposite="#//storyPattern/AbstractStoryPatternLink/target">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The list of StoryPatternLinks pointing to this StoryPatternObject. This is the opposite of the the target association of the StoryPatternLink."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MapEntryLink" eSuperTypes="#//storyPattern/AbstractStoryPatternLink">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The MapEntryLink represents an EMF map-typed reference. The target reference points to the key object, the value reference to the value object. The value reference can be omitted."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="valueTarget" eType="#//storyPattern/AbstractStoryPatternObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eStructuralFeature" lowerBound="1"
+          eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The EReference that conatins the map entry."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="classifier" lowerBound="1"
+          eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClassifier">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The classifier of the map entry, i.e. an EClass whose instance type name is 'java.util.Map$Entry'."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EContainerLink" eSuperTypes="#//storyPattern/AbstractStoryPatternLink">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This link represents a container relationship between the source and target objects. The target object is direct (or indirect if allowIndirectContainment is true) container of the source object."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="allowIndirectContainment"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Defines whether this link represents only the link to the direct container or to all indirect containers."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

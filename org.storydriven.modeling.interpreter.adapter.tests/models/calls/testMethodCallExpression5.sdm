@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdma:Activity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xmlns:sdmce="http://ns.storydriven.org/sdm/calls/expressions/0.1.0" xmlns:sdme="http://ns.storydriven.org/sdm/expressions/0.1.0" xmlns:sdmp="http://ns.storydriven.org/sdm/patterns/0.1.0">
+  <ownedActivityEdge target="//@ownedActivityNode.2" source="//@ownedActivityNode.0"/>
+  <ownedActivityEdge target="//@ownedActivityNode.1" source="//@ownedActivityNode.2"/>
+  <ownedActivityNode xsi:type="sdma:StartNode" outgoing="//@ownedActivityEdge.0"/>
+  <ownedActivityNode xsi:type="sdma:StopNode" incoming="//@ownedActivityEdge.1">
+    <returnValues xsi:type="sdme:ComparisonExpression" operator="EQUAL">
+      <leftExpression xsi:type="sdme:TextualExpression" expressionText="'H'" language="OCL" languageVersion="1.0"/>
+      <rightExpression xsi:type="sdmce:MethodCallExpression" callee="//@ownedActivityNode.1/@returnValue/@rightExpression/@opaqueCallable">
+        <ownedParameterBindings parameter="//@ownedActivityNode.1/@returnValue/@rightExpression/@opaqueCallable/@containedParameters.1">
+          <valueExpression xsi:type="sdme:TextualExpression" expressionText="0" language="OCL" languageVersion="1.0"/>
+        </ownedParameterBindings>
+        <ownedParameterBindings parameter="//@ownedActivityNode.1/@returnValue/@rightExpression/@opaqueCallable/@containedParameters.2">
+          <valueExpression xsi:type="sdme:TextualExpression" expressionText="1" language="OCL" languageVersion="1.0"/>
+        </ownedParameterBindings>
+        <target xsi:type="sdme:TextualExpression" expressionText="myString" language="OCL" languageVersion="1.0"/>
+        <opaqueCallable name="java.lang.String.substring" inParameter="//@ownedActivityNode.1/@returnValue/@rightExpression/@opaqueCallable/@containedParameters.1 //@ownedActivityNode.1/@returnValue/@rightExpression/@opaqueCallable/@containedParameters.2" outParameter="//@ownedActivityNode.1/@returnValue/@rightExpression/@opaqueCallable/@containedParameters.0">
+          <containedParameters name="return">
+            <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          </containedParameters>
+          <containedParameters name="beginIndex">
+            <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+          </containedParameters>
+          <containedParameters name="endIndex">
+            <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+          </containedParameters>
+        </opaqueCallable>
+      </rightExpression>
+    </returnValues>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="create object" outgoing="//@ownedActivityEdge.1" incoming="//@ownedActivityEdge.0">
+    <ownedRule comment="">
+      <variable xsi:type="sdmp:PrimitiveVariable" name="myString" bindingState="BOUND">
+        <bindingExpression xsi:type="sdme:TextualExpression" expressionText="'Hello'" language="OCL" languageVersion="1.0"/>
+        <classifier href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </variable>
+    </ownedRule>
+  </ownedActivityNode>
+</sdma:Activity>

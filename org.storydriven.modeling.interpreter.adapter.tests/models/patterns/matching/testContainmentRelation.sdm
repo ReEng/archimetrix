@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdma:Activity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xmlns:sdme="http://ns.storydriven.org/sdm/expressions/0.1.0" xmlns:sdmp="http://ns.storydriven.org/sdm/patterns/0.1.0">
+  <ownedActivityEdge target="//@ownedActivityNode.1" source="//@ownedActivityNode.2" guard="SUCCESS"/>
+  <ownedActivityEdge target="//@ownedActivityNode.3" source="//@ownedActivityNode.0"/>
+  <ownedActivityEdge target="//@ownedActivityNode.2" source="//@ownedActivityNode.3"/>
+  <ownedActivityEdge target="//@ownedActivityNode.4" source="//@ownedActivityNode.2" guard="FAILURE"/>
+  <ownedActivityNode xsi:type="sdma:StartNode" outgoing="//@ownedActivityEdge.1"/>
+  <ownedActivityNode xsi:type="sdma:StopNode" name="stopTrue" incoming="//@ownedActivityEdge.0">
+    <returnValues xsi:type="sdme:LiteralExpression" value="true">
+      <valueType href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+    </returnValues>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:MatchingStoryNode" name="match" outgoing="//@ownedActivityEdge.0 //@ownedActivityEdge.3" incoming="//@ownedActivityEdge.2">
+    <ownedPattern>
+      <variable xsi:type="sdmp:ObjectVariable" name="listContentVar1" incomingLink="//@ownedActivityNode.2/@ownedPattern/@linkVariable.0">
+        <classifier href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="listVar" bindingState="MAYBE_BOUND" incomingLink="//@ownedActivityNode.2/@ownedPattern/@linkVariable.1" outgoingLink="//@ownedActivityNode.2/@ownedPattern/@linkVariable.0">
+        <classifier href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EStructuralFeature"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="classVar" bindingState="BOUND" outgoingLink="//@ownedActivityNode.2/@ownedPattern/@linkVariable.1">
+        <classifier href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+      </variable>
+      <linkVariable xsi:type="sdmp:ContainmentRelation" name="cr" source="//@ownedActivityNode.2/@ownedPattern/@variable.1" target="//@ownedActivityNode.2/@ownedPattern/@variable.0"/>
+      <linkVariable xsi:type="sdmp:LinkVariable" name="l" source="//@ownedActivityNode.2/@ownedPattern/@variable.2" bindingState="MAYBE_BOUND" target="//@ownedActivityNode.2/@ownedPattern/@variable.1">
+        <targetEnd href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass/eStructuralFeatures"/>
+      </linkVariable>
+    </ownedPattern>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="create elements" outgoing="//@ownedActivityEdge.2" incoming="//@ownedActivityEdge.1">
+    <ownedRule>
+      <variable xsi:type="sdmp:ObjectVariable" name="classVar" outgoingLink="//@ownedActivityNode.3/@ownedRule/@linkVariable.0" bindingOperator="CREATE">
+        <classifier href="../../testclassmodels/testMetamodel.ecore#//ClassA"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="listVar" incomingLink="//@ownedActivityNode.3/@ownedRule/@linkVariable.0" outgoingLink="//@ownedActivityNode.3/@ownedRule/@linkVariable.1 //@ownedActivityNode.3/@ownedRule/@linkVariable.2" bindingOperator="CREATE">
+        <classifier href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EStructuralFeature"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="listContentVar1" incomingLink="//@ownedActivityNode.3/@ownedRule/@linkVariable.1" bindingOperator="CREATE">
+        <classifier href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="listContentVar2" incomingLink="//@ownedActivityNode.3/@ownedRule/@linkVariable.2" bindingOperator="CREATE">
+        <classifier href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+      </variable>
+      <linkVariable xsi:type="sdmp:LinkVariable" name="l1" bindingOperator="CREATE" source="//@ownedActivityNode.3/@ownedRule/@variable.0" target="//@ownedActivityNode.3/@ownedRule/@variable.1">
+        <targetEnd href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass/eStructuralFeatures"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" name="l2" bindingOperator="CREATE" source="//@ownedActivityNode.3/@ownedRule/@variable.1" target="//@ownedActivityNode.3/@ownedRule/@variable.2">
+        <targetEnd href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EAnnotation/contents"/>
+      </linkVariable>
+      <linkVariable xsi:type="sdmp:LinkVariable" name="l3" bindingOperator="CREATE" source="//@ownedActivityNode.3/@ownedRule/@variable.1" target="//@ownedActivityNode.3/@ownedRule/@variable.3">
+        <targetEnd href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EAnnotation/contents"/>
+      </linkVariable>
+    </ownedRule>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:StopNode" name="stopFalse" incoming="//@ownedActivityEdge.3">
+    <returnValues xsi:type="sdme:LiteralExpression" value="false">
+      <valueType href="../../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+    </returnValues>
+  </ownedActivityNode>
+</sdma:Activity>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdma:Activity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xmlns:sdme="http://ns.storydriven.org/sdm/expressions/0.1.0" xmlns:sdmp="http://ns.storydriven.org/sdm/patterns/0.1.0">
+  <ownedActivityEdge target="//@ownedActivityNode.3" source="//@ownedActivityNode.0"/>
+  <ownedActivityEdge target="//@ownedActivityNode.1" source="//@ownedActivityNode.2" guard="FAILURE"/>
+  <ownedActivityEdge target="//@ownedActivityNode.4" source="//@ownedActivityNode.2" guard="SUCCESS"/>
+  <ownedActivityEdge target="//@ownedActivityNode.2" source="//@ownedActivityNode.3" guard="SUCCESS"/>
+  <ownedActivityNode xsi:type="sdma:StartNode" outgoing="//@ownedActivityEdge.0"/>
+  <ownedActivityNode xsi:type="sdma:StopNode" name="stopFalse" incoming="//@ownedActivityEdge.1">
+    <returnValues xsi:type="sdme:LiteralExpression" value="false">
+      <valueType href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </returnValues>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="destroy element" outgoing="//@ownedActivityEdge.1 //@ownedActivityEdge.2" incoming="//@ownedActivityEdge.3">
+    <ownedRule>
+      <variable xsi:type="sdmp:ObjectVariable" name="varA" bindingState="BOUND" outgoingLink="//@ownedActivityNode.2/@ownedRule/@linkVariable.0">
+        <classifier href="../../testclassmodels/testMetamodel.ecore#//ClassA"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="varB" incomingLink="//@ownedActivityNode.2/@ownedRule/@linkVariable.0" bindingOperator="DESTROY">
+        <classifier href="../../testclassmodels/testMetamodel.ecore#//ClassB"/>
+      </variable>
+      <linkVariable xsi:type="sdmp:LinkVariable" name="l" bindingOperator="DESTROY" source="//@ownedActivityNode.2/@ownedRule/@variable.0" bindingState="MAYBE_BOUND" target="//@ownedActivityNode.2/@ownedRule/@variable.1">
+        <targetEnd href="../../testclassmodels/testMetamodel.ecore#//ClassA/toOneRef"/>
+      </linkVariable>
+    </ownedRule>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="create elements" comment="" outgoing="//@ownedActivityEdge.3" incoming="//@ownedActivityEdge.0">
+    <ownedRule>
+      <variable xsi:type="sdmp:ObjectVariable" name="varA" outgoingLink="//@ownedActivityNode.3/@ownedRule/@linkVariable.0" bindingOperator="CREATE">
+        <classifier href="../../testclassmodels/testMetamodel.ecore#//ClassA"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="varB2" incomingLink="//@ownedActivityNode.3/@ownedRule/@linkVariable.0" bindingOperator="CREATE">
+        <classifier href="../../testclassmodels/testMetamodel.ecore#//ClassB"/>
+      </variable>
+      <linkVariable xsi:type="sdmp:LinkVariable" name="l" bindingOperator="CREATE" source="//@ownedActivityNode.3/@ownedRule/@variable.0" target="//@ownedActivityNode.3/@ownedRule/@variable.1">
+        <targetEnd href="../../testclassmodels/testMetamodel.ecore#//ClassA/toOneRef"/>
+      </linkVariable>
+    </ownedRule>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:StopNode" name="stopTrue" incoming="//@ownedActivityEdge.2">
+    <returnValues xsi:type="sdme:LiteralExpression" value="true">
+      <valueType href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </returnValues>
+  </ownedActivityNode>
+</sdma:Activity>

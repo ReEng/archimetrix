@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdma:Activity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xmlns:sdme="http://ns.storydriven.org/sdm/expressions/0.1.0" xmlns:sdmp="http://ns.storydriven.org/sdm/patterns/0.1.0" xmlns:sdmpe="http://ns.storydriven.org/sdm/patterns/expressions/0.1.0">
+  <ownedActivityEdge target="//@ownedActivityNode.2" source="//@ownedActivityNode.1"/>
+  <ownedActivityEdge target="//@ownedActivityNode.0" source="//@ownedActivityNode.4"/>
+  <ownedActivityEdge target="//@ownedActivityNode.3" source="//@ownedActivityNode.0" guard="SUCCESS"/>
+  <ownedActivityEdge target="//@ownedActivityNode.4" source="//@ownedActivityNode.2"/>
+  <ownedActivityEdge target="//@ownedActivityNode.5" source="//@ownedActivityNode.0" guard="FAILURE"/>
+  <ownedActivityNode xsi:type="sdma:MatchingStoryNode" outgoing="//@ownedActivityEdge.2 //@ownedActivityEdge.4" incoming="//@ownedActivityEdge.1">
+    <ownedPattern>
+      <variable xsi:type="sdmp:ObjectVariable" name="a" bindingState="BOUND" outgoingLink="//@ownedActivityNode.0/@ownedPattern/@linkVariable.0">
+        <classifier href="../testclassmodels/testMetamodel.ecore#//ClassA"/>
+      </variable>
+      <variable xsi:type="sdmp:ObjectVariable" name="b" incomingLink="//@ownedActivityNode.0/@ownedPattern/@linkVariable.0">
+        <classifier href="../testclassmodels/testMetamodel.ecore#//ClassB"/>
+      </variable>
+      <linkVariable xsi:type="sdmp:LinkVariable" name="l2" source="//@ownedActivityNode.0/@ownedPattern/@variable.0" target="//@ownedActivityNode.0/@ownedPattern/@variable.1">
+        <targetEnd href="../testclassmodels/testMetamodel.ecore#//ClassA/toOneRef"/>
+      </linkVariable>
+    </ownedPattern>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:StartNode" outgoing="//@ownedActivityEdge.0"/>
+  <ownedActivityNode xsi:type="sdma:ModifyingStoryNode" name="createElement" outgoing="//@ownedActivityEdge.3" incoming="//@ownedActivityEdge.0">
+    <ownedRule>
+      <variable xsi:type="sdmp:ObjectVariable" name="a" bindingOperator="CREATE">
+        <classifier href="../testclassmodels/testMetamodel.ecore#//ClassA"/>
+      </variable>
+    </ownedRule>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:StopNode" name="stopTrue" incoming="//@ownedActivityEdge.2">
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:ActivityCallNode" outgoing="//@ownedActivityEdge.1" incoming="//@ownedActivityEdge.3">
+    <ownedParameterBindings>
+      <valueExpression xsi:type="sdmpe:ObjectVariableExpression" object="//@ownedActivityNode.0/@ownedPattern/@variable.0"/>
+    </ownedParameterBindings>
+    <callee xsi:type="sdma:Activity" href="calledActivity.sdm#/"/>
+    <calledActivity href="calledActivity.sdm#/"/>
+  </ownedActivityNode>
+  <ownedActivityNode xsi:type="sdma:StopNode" name="stopFalse" incoming="//@ownedActivityEdge.4">
+  </ownedActivityNode>
+</sdma:Activity>

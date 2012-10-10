@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xsi:schemaLocation="http://ns.storydriven.org/sdm/activities/0.1.0 http://ns.storydriven.org/sdm/0.1.0#//activities" xmi:id="_qg1d4WQyEeCsBLWZYo-oTg" type="SDM" name="testArithmeticExpressionPlus.sdm_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_q5GM4GQyEeCsBLWZYo-oTg" type="2001">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_q5GM4WQyEeCsBLWZYo-oTg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_q5GM4mQyEeCsBLWZYo-oTg" fontName="Ubuntu"/>
+    <element xmi:type="sdma:StartNode" href="testArithmeticExpressionPlus.sdm#//@ownedActivityNode.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q5GM42QyEeCsBLWZYo-oTg" x="625" y="73"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_rEwDQGQyEeCsBLWZYo-oTg" type="2002">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_rEwDQWQyEeCsBLWZYo-oTg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rEwDQmQyEeCsBLWZYo-oTg" fontName="Ubuntu"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_rEwDQ2QyEeCsBLWZYo-oTg"/>
+    <element xmi:type="sdma:StopNode" href="testArithmeticExpressionPlus.sdm#//@ownedActivityNode.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rEwDRGQyEeCsBLWZYo-oTg" x="636" y="185"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_qg1d4mQyEeCsBLWZYo-oTg"/>
+  <element xmi:type="sdma:Activity" href="testArithmeticExpressionPlus.sdm#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_rXXdQGQyEeCsBLWZYo-oTg" type="4001" source="_q5GM4GQyEeCsBLWZYo-oTg" target="_rEwDQGQyEeCsBLWZYo-oTg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_rXXdQWQyEeCsBLWZYo-oTg" fontName="Ubuntu"/>
+    <element xmi:type="sdma:ActivityEdge" href="testArithmeticExpressionPlus.sdm#//@ownedActivityEdge.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rXXdQmQyEeCsBLWZYo-oTg" points="[1, 8, -14, -108]$[15, 128, 0, 12]"/>
+  </edges>
+</notation:Diagram>

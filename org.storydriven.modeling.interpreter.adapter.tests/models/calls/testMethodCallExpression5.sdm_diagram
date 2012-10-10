@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xsi:schemaLocation="http://ns.storydriven.org/sdm/activities/0.1.0 http://ns.storydriven.org/sdm/0.1.0#//activities" xmi:id="_OG4CsWZ3EeCgFrxpO7auag" type="SDM" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_OjS48GZ3EeCgFrxpO7auag" type="2001">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_OjS48WZ3EeCgFrxpO7auag"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_OjS48mZ3EeCgFrxpO7auag" fontName="Ubuntu"/>
+    <element xmi:type="sdma:StartNode" href="testMethodCallExpression5.sdm#//@ownedActivityNode.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OjS482Z3EeCgFrxpO7auag" x="320" y="60"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_OjUHEGZ3EeCgFrxpO7auag" type="2002">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_OjUHEWZ3EeCgFrxpO7auag"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_OjUHEmZ3EeCgFrxpO7auag" fontName="Ubuntu"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_OjUHE2Z3EeCgFrxpO7auag"/>
+    <element xmi:type="sdma:StopNode" href="testMethodCallExpression5.sdm#//@ownedActivityNode.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OjUHFGZ3EeCgFrxpO7auag" x="300" y="485"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_QvwwgGZ3EeCgFrxpO7auag" type="2007" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Qvx-oGZ3EeCgFrxpO7auag" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_QvylsGZ3EeCgFrxpO7auag" type="7006">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_QvylsWZ3EeCgFrxpO7auag"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_QvylsmZ3EeCgFrxpO7auag"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Qvyls2Z3EeCgFrxpO7auag" type="7007"/>
+    <element xmi:type="sdma:ModifyingStoryNode" href="testMethodCallExpression5.sdm#//@ownedActivityNode.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QvwwgWZ3EeCgFrxpO7auag" x="135" y="135" width="401" height="231"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_OG4CsmZ3EeCgFrxpO7auag"/>
+  <element xmi:type="sdma:Activity" href="testMethodCallExpression5.sdm#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_On8vcGZ3EeCgFrxpO7auag" type="4001" source="_OjS48GZ3EeCgFrxpO7auag" target="_QvwwgGZ3EeCgFrxpO7auag">
+    <styles xmi:type="notation:FontStyle" xmi:id="_On8vcWZ3EeCgFrxpO7auag" fontName="Ubuntu"/>
+    <element xmi:type="sdma:ActivityEdge" href="testMethodCallExpression5.sdm#//@ownedActivityEdge.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_On8vcmZ3EeCgFrxpO7auag" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OphcwGZ3EeCgFrxpO7auag" id="(0.4666666666666667,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OpiD0GZ3EeCgFrxpO7auag" id="(0.47880299251870323,0.12987012987012986)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_TVSBQGZ3EeCgFrxpO7auag" type="4001" source="_QvwwgGZ3EeCgFrxpO7auag" target="_OjUHEGZ3EeCgFrxpO7auag">
+    <styles xmi:type="notation:FontStyle" xmi:id="_TVSBQWZ3EeCgFrxpO7auag" fontName="Ubuntu"/>
+    <element xmi:type="sdma:ActivityEdge" href="testMethodCallExpression5.sdm#//@ownedActivityEdge.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TVSBQmZ3EeCgFrxpO7auag" points="[-15, 218, 5, -130]$[-23, 337, -3, -11]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_TVVEkGZ3EeCgFrxpO7auag" id="(0.48877805486284287,0.05627705627705628)"/>
+  </edges>
+</notation:Diagram>

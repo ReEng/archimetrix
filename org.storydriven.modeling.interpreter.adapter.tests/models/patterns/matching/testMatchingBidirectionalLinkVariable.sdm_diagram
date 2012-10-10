@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sdma="http://ns.storydriven.org/sdm/activities/0.1.0" xsi:schemaLocation="http://ns.storydriven.org/sdm/activities/0.1.0 http://ns.storydriven.org/sdm/0.1.0#//activities" xmi:id="_BpN_IFRjEeCDOYhkSPHy6A" type="SDM" name="testMatchingBidirectionalLinkVariable.sdm_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_CZzukFRjEeCDOYhkSPHy6A" type="2001">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_CZzukVRjEeCDOYhkSPHy6A"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_CZzuklRjEeCDOYhkSPHy6A" fontName="Segoe UI"/>
+    <element xmi:type="sdma:StartNode" href="testMatchingBidirectionalLinkVariable.sdm#//@ownedActivityNode.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CZzuk1RjEeCDOYhkSPHy6A" x="663" y="112"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_C2N9wFRjEeCDOYhkSPHy6A" type="2002">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_C2N9wVRjEeCDOYhkSPHy6A"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_C2N9wlRjEeCDOYhkSPHy6A" fontName="Segoe UI"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_C2N9w1RjEeCDOYhkSPHy6A"/>
+    <element xmi:type="sdma:StopNode" href="testMatchingBidirectionalLinkVariable.sdm#//@ownedActivityNode.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C2N9xFRjEeCDOYhkSPHy6A" x="547" y="342"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_DS-yQFRjEeCDOYhkSPHy6A" type="2002">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_DS_ZUFRjEeCDOYhkSPHy6A"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_DS_ZUVRjEeCDOYhkSPHy6A" fontName="Segoe UI"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_DS_ZUlRjEeCDOYhkSPHy6A"/>
+    <element xmi:type="sdma:StopNode" href="testMatchingBidirectionalLinkVariable.sdm#//@ownedActivityNode.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DS_ZU1RjEeCDOYhkSPHy6A" x="727" y="336"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Ff580FRjEeCDOYhkSPHy6A" type="2006" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Ff6j4FRjEeCDOYhkSPHy6A" type="5006"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Ff6j4VRjEeCDOYhkSPHy6A" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Ff7K8FRjEeCDOYhkSPHy6A" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Ff7K8VRjEeCDOYhkSPHy6A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Ff7K8lRjEeCDOYhkSPHy6A"/>
+    </children>
+    <element xmi:type="sdma:MatchingStoryNode" href="testMatchingBidirectionalLinkVariable.sdm#//@ownedActivityNode.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ff580VRjEeCDOYhkSPHy6A" x="556" y="191"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_BpN_IVRjEeCDOYhkSPHy6A"/>
+  <element xmi:type="sdma:Activity" href="testMatchingBidirectionalLinkVariable.sdm#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_GmWAcFRjEeCDOYhkSPHy6A" type="4001" source="_CZzukFRjEeCDOYhkSPHy6A" target="_Ff580FRjEeCDOYhkSPHy6A">
+    <styles xmi:type="notation:FontStyle" xmi:id="_GmWAcVRjEeCDOYhkSPHy6A" fontName="Segoe UI"/>
+    <element xmi:type="sdma:ActivityEdge" href="testMatchingBidirectionalLinkVariable.sdm#//@ownedActivityEdge.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GmWAclRjEeCDOYhkSPHy6A" points="[-6, 8, 56, -77]$[-61, 72, 1, -13]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GmaR4FRjEeCDOYhkSPHy6A" id="(0.52,0.23636363636363636)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_HG2FcFRjEeCDOYhkSPHy6A" type="4001" source="_Ff580FRjEeCDOYhkSPHy6A" target="_C2N9wFRjEeCDOYhkSPHy6A">
+    <styles xmi:type="notation:FontStyle" xmi:id="_HG2FcVRjEeCDOYhkSPHy6A" fontName="Segoe UI"/>
+    <element xmi:type="sdma:ActivityEdge" href="testMatchingBidirectionalLinkVariable.sdm#//@ownedActivityEdge.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HG2FclRjEeCDOYhkSPHy6A" points="[-20, 43, 50, -107]$[-67, 139, 3, -11]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HG698FRjEeCDOYhkSPHy6A" id="(0.72,0.21818181818181817)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_IAS18FRjEeCDOYhkSPHy6A" type="4001" source="_Ff580FRjEeCDOYhkSPHy6A" target="_DS-yQFRjEeCDOYhkSPHy6A">
+    <styles xmi:type="notation:FontStyle" xmi:id="_IAS18VRjEeCDOYhkSPHy6A" fontName="Segoe UI"/>
+    <element xmi:type="sdma:ActivityEdge" href="testMatchingBidirectionalLinkVariable.sdm#//@ownedActivityEdge.2"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IAS18lRjEeCDOYhkSPHy6A" points="[11, 15, -82, -120]$[95, 124, 2, -11]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IAYVgFRjEeCDOYhkSPHy6A" id="(0.89,0.38181818181818183)"/>
+  </edges>
+</notation:Diagram>
