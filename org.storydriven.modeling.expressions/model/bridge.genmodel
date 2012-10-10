@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.storydriven.modeling.expressions/src"
+    modelPluginID="org.storydriven.modeling.expressions" modelName="Bridge" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../src-gen/org/storydriven/modeling/expressions/PathExpressions.genmodel#//pathExpressions ../../org.storydriven.modeling/model/sdm.uml.genmodel#//modeling">
+  <foreignModel>bridge.ecore</foreignModel>
+  <genPackages prefix="Pathbridge" basePackage="org.storydriven.modeling.expressions"
+      disposableProviderFactory="true" ecorePackage="bridge.ecore#/">
+    <genClasses ecoreClass="bridge.ecore#//PathExpressionBridge">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bridge.ecore#//PathExpressionBridge/pathExpression"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

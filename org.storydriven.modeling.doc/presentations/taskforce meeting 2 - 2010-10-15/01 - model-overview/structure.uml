@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_KxdMQNevEd-X6q7Ijhs6Xg" name="structure_uml">
+  <packagedElement xmi:type="uml:Package" xmi:id="_f_UbsNewEd-X6q7Ijhs6Xg" name="Modeling Core" clientDependency="_qQlK8NfCEd-Ir6yJE9YXXQ">
+    <packagedElement xmi:type="uml:Package" xmi:id="_3Dp6ANewEd-X6q7Ijhs6Xg" name="Expressions"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_7_pS4NewEd-X6q7Ijhs6Xg" name="Templates"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_50pa8NewEd-X6q7Ijhs6Xg" name="Activities"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_6x2DANewEd-X6q7Ijhs6Xg" name="Pattern"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_qQlK8NfCEd-Ir6yJE9YXXQ" name="" supplier="_-E2E0NewEd-X6q7Ijhs6Xg" client="_f_UbsNewEd-X6q7Ijhs6Xg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_-E2E0NewEd-X6q7Ijhs6Xg" name="Ecore"/>
+</uml:Model>

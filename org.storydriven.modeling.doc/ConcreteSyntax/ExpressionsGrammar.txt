@@ -1,0 +1,61 @@
+---Grammar for "usual" Expressions-------------------------------
+
+Expression ::= '(' Expression ')' | LiteralExpression | Variable |
+Invocation | VariableDeclaration
+
+LiteralExpression ::= BooleanLiteral | IntLiteral | DoubleLiteral |
+StringLiteral
+BooleanLiteral ::= 'true' | 'false'
+IntLiteral ::= ('0' | '1' | ... | '9')*
+DoubleLiteral ::= IntLiteral '.' IntLiteral
+StringLiteral ::= ''' ... '''
+
+Variable ::= ObjectVariableExpression | ObjectSetSizeExpression |
+PrimitiveVariableExpression | AttributeValueExpression |
+ParameterExpression | ExceptionVariableExpression
+
+ObjectVariableExpression ::= Identifier
+ObjectSetSizeExpression ::= Identifier '.size'
+PrimitiveVariableExpression ::= Identifier
+AttributeValueExpression ::= Identifier '.' Identifier
+ParameterExpression ::= Identifier
+ExceptionVariableExpression ::= Identifier
+Identifier ::= ...
+
+Formula ::= NotExpression | BinaryExpression
+NotExpression ::= 'not' Expression
+BinaryExpression ::= BinaryLogicExpression | ComparisionExpression |
+ArithmeticExpression
+BinaryLogicExpression ::= Expression BinaryOperator Expression
+BinaryOperator ::= 'and' | 'or' | 'xor' | 'imply' | 'equiv'
+ComparisonExpression ::= Expression ComparisonOperator Expression
+ComparisonOperator ::= '<' | '<=' | '=' | '>=' | '>' | '!=' | '~'
+ArithmeticExpression ::= Expression ArithmeticOperator Expression
+ArithmeticOperator ::= '+' | '-' | '*' | '/' | '%' | '^'
+
+Invocation ::= MethodCallExpression | ActivityCallExpression
+MethodCallExpression ::= Identifier '.' Identifier
+'(' [ ArgumentList ] ')'
+ActivityCallExpression ::= Identifier '(' [ ArgumentList ] ')'
+ArgumentList ::= Argument | Argument ',' ArgumentList
+Argument ::= Expression
+
+VariableDeclaration ::= PrimitiveVariableDeclarationExpression |
+ExceptionVariableDeclarationExpression
+PrimitiveVariableDeclarationExpression ::= Identifier ':'
+PrimitiveType
+PrimitiveType ::= 'boolean' | 'int' | 'double' | 'string'
+ExceptionVariableDeclarationExpression ::= Identifier ':' Identifier
+
+---Grammar for Paths---------------------------------------------
+
+PathExpression ::= Path | ( "(" Path ")" [ "|" "(" Path ")" ]* )
+Path ::= PathSegment [ "." PathSegment ]*
+PathSegment ::= SegmentDescription | ( "(" SegmentDescription [ "|" SegmentDescription ]* ")" )
+SegmentDescription ::= ( ImplicitPathSegment | ExplicitPathSegment ) [ "[" TypeRestrictions "]" ] [ "+" | "*" ]
+ImplicitPathSegment ::= "-->" | "<>-->" | "--><>"
+ExplicitPathSegment ::= AssociationName
+TypeRestrictions ::= TypeRestriction [ "," TypeRestriction ]*
+TypeRestriction ::= [ "!" ] TypeName
+AssociationName ::= Identifier
+TypeName ::= Identifier 

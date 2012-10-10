@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="expressionSourceViewerExtension" name="Expression Source Viewer Extension" schema="schema/expressionSourceViewerExtension.exsd"/>
+   <extension
+         point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
+      <editpartProvider
+            class="org.storydriven.modeling.diagram.custom.providers.CustomSDMEditPartProvider">
+         <Priority
+               name="Low">
+         </Priority>
+      </editpartProvider>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="org.storydriven.modeling.diagram.custom.StopNodeContribution"
+            objectClass="org.storydriven.modeling.diagram.edit.parts.StopNodeEditPart">
+         <action
+               class="org.storydriven.modeling.diagram.custom.edit.commands.StopNodeToggleFlowCommand"
+               id="org.storydriven.modeling.diagram.custom.StopNodeToggleFlowCommand"
+               label="Toggle end flow Attribute"
+               tooltip="This will toggle they isKey Attribute of the Attribute.">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="org.storydriven.modeling.diagram.custom.ModifyingStoryNodeContribution"
+            objectClass="org.storydriven.modeling.diagram.edit.parts.ModifyingStoryNodeEditPart">
+         <action
+               class="org.storydriven.modeling.diagram.custom.edit.commands.StoryNodeToggleForEachCommand"
+               id="org.storydriven.modeling.diagram.custom.ModifyingStoryNodeToogleForEachCommand"
+               label="Toggle forEach"
+               tooltip="This will toggle the for each attribute of the story node.">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="org.storydriven.modeling.diagram.custom.MatchingStoryNodeContribution"
+            objectClass="org.storydriven.modeling.diagram.edit.parts.MatchingStoryNodeEditPart">
+         <action
+               class="org.storydriven.modeling.diagram.custom.edit.commands.StoryNodeToggleForEachCommand"
+               id="org.storydriven.modeling.diagram.custom.MatchingStoryNodeToogleForEachCommand"
+               label="Toggle forEach"
+               tooltip="This will toggle the for each attribute of the story node.">
+         </action>
+         <action
+               class="deprecated.MatchingStoryNodeToggleModifyingCommand"
+               id="org.storydriven.modeling.diagram.custom.MatchingStoryNodeConvertToModifying"
+               label="Toggle Modifying/Matching"
+               tooltip="This will toggle whether the storynode is matching or modifying">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="org.storydriven.modeling.diagram.custom.expressions.OpenExpressionsDialog"
+            objectClass="org.storydriven.modeling.diagram.edit.parts.ObjectVariableEditPart">
+         <action
+               class="org.storydriven.modeling.diagram.custom.expressions.EditExpressionWithDialogAction"
+               id="org.storydriven.modeling.diagram.custom.expressions.OpenExpressionsDialog"
+               label="Edit Expressions"
+               tooltip="This will toggle whether the storynode is matching or modifying">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="org.storydriven.modeling.diagram.custom.expressions.OpenExpressionsDialogForAttributeAssignment"
+            objectClass="org.storydriven.modeling.diagram.edit.parts.AttributeAssignmentEditPart">
+         <action
+               class="org.storydriven.modeling.diagram.custom.expressions.EditAttributeAssignmentWithDialogAction"
+               id="org.storydriven.modeling.diagram.custom.expressions.OpenExpressionsDialogForAttributeAssignment"
+               label="Edit Attribute Assignment"
+               tooltip="This will toggle whether the storynode is matching or modifying">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="org.storydriven.modeling.diagram.custom.ActivityEdgeGuardContribution"
+            objectClass="org.storydriven.modeling.diagram.edit.parts.ActivityEdgeEditPart">
+         <menu
+               id="ActivityEdgeGuardMenu"
+               label="Activity Edge Guard">
+            <separator
+                  name="GuardGroup">
+            </separator>
+         </menu>
+         <action
+               class="org.storydriven.modeling.diagram.custom.edit.commands.SetActivityEdgeGuardTypeAction"
+               id="org.storydriven.modeling.diagram.custom.ActicityEdgeGuardMenuEntry.FINALLY"
+               label="finally"
+               menubarPath="ActivityEdgeGuardMenu/GuardGroup"
+               style="radio"
+               tooltip="This will toggle they isKey Attribute of the Attribute.">
+         </action>
+         <action
+               class="org.storydriven.modeling.diagram.custom.edit.commands.SetActivityEdgeGuardTypeAction"
+               id="org.storydriven.modeling.diagram.custom.ActicityEdgeGuardMenuEntry.BOOL"
+               label="bool"
+               menubarPath="ActivityEdgeGuardMenu/GuardGroup"
+               style="radio"
+               tooltip="This will toggle they isKey Attribute of the Attribute.">
+         </action>
+         <action
+               class="org.storydriven.modeling.diagram.custom.edit.commands.SetActivityEdgeGuardTypeAction"
+               id="org.storydriven.modeling.diagram.custom.ActicityEdgeGuardMenuEntry.END"
+               label="end"
+               menubarPath="ActivityEdgeGuardMenu/GuardGroup"
+               style="radio"
+               tooltip="This will toggle they isKey Attribute of the Attribute.">
+         </action>
+         <action
+               class="org.storydriven.modeling.diagram.custom.edit.commands.SetActivityEdgeGuardTypeAction"
+               id="org.storydriven.modeling.diagram.custom.ActicityEdgeGuardMenuEntry.FAILURE"
+               label="failure"
+               menubarPath="ActivityEdgeGuardMenu/GuardGroup"
+               style="radio"
+               tooltip="This will toggle they isKey Attribute of the Attribute.">
+         </action>
+         <action
+               class="org.storydriven.modeling.diagram.custom.edit.commands.SetActivityEdgeGuardTypeAction"
+               id="org.storydriven.modeling.diagram.custom.ActicityEdgeGuardMenuEntry.EACH_TIME"
+               label="each time"
+               menubarPath="ActivityEdgeGuardMenu/GuardGroup"
+               style="radio"
+               tooltip="This will toggle they isKey Attribute of the Attribute.">
+         </action>
+         <action
+               class="org.storydriven.modeling.diagram.custom.edit.commands.SetActivityEdgeGuardTypeAction"
+               id="org.storydriven.modeling.diagram.custom.ActicityEdgeGuardMenuEntry.SUCCESS"
+               label="success"
+               menubarPath="ActivityEdgeGuardMenu/GuardGroup"
+               style="radio"
+               tooltip="This will toggle they isKey Attribute of the Attribute.">
+         </action>
+         <action
+               class="org.storydriven.modeling.diagram.custom.edit.commands.SetActivityEdgeGuardTypeAction"
+               id="org.storydriven.modeling.diagram.custom.ActicityEdgeGuardMenuEntry.NONE"
+               label="none"
+               menubarPath="ActivityEdgeGuardMenu/GuardGroup"
+               style="radio"
+               tooltip="This will toggle they isKey Attribute of the Attribute.">
+         </action>
+         <action
+               class="org.storydriven.modeling.diagram.custom.edit.commands.SetActivityEdgeGuardTypeAction"
+               id="org.storydriven.modeling.diagram.custom.ActicityEdgeGuardMenuEntry.ELSE"
+               label="else"
+               menubarPath="ActivityEdgeGuardMenu/GuardGroup"
+               style="radio"
+               tooltip="This will toggle they isKey Attribute of the Attribute.">
+         </action>
+         <action
+               class="org.storydriven.modeling.diagram.custom.edit.commands.SetActivityEdgeGuardTypeAction"
+               id="org.storydriven.modeling.diagram.custom.ActicityEdgeGuardMenuEntry.EXCEPTION"
+               label="exception"
+               menubarPath="ActivityEdgeGuardMenu/GuardGroup"
+               style="radio"
+               tooltip="This will toggle they isKey Attribute of the Attribute.">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="org.storydriven.modeling.diagram.custom.ActivityEdgeGuardExpressionContribution"
+            objectClass="org.storydriven.modeling.diagram.edit.parts.ActivityEdgeEditPart">
+         <action
+               class="org.storydriven.modeling.diagram.custom.expressions.EditActivityEdgeGuardExpressionWithDialogAction"
+               id="org.storydriven.modeling.diagram.custom.ActicityEdgeGuardExpressionEdit"
+               label="Edit Guard Expression"
+               tooltip="This will toggle they isKey Attribute of the Attribute.">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="org.storydriven.modeling.diagram.custom.StatementNodeEditExpression"
+            objectClass="org.storydriven.modeling.diagram.edit.parts.StatementNodeEditPart">
+         <action
+               class="org.storydriven.modeling.diagram.custom.expressions.EditStatementExpressionWithDialogAction"
+               id="org.storydriven.modeling.diagram.custom.StatementNodeEditExpression"
+               label="Edit Statement Expression"
+               tooltip="This will toggle they isKey Attribute of the Attribute.">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="org.storydriven.modeling.diagram.custom.expressions.StopNodeReturnExpression"
+            objectClass="org.storydriven.modeling.diagram.edit.parts.StopNodeEditPart">
+         <action
+               class="org.storydriven.modeling.diagram.custom.expressions.EditStopNodeReturnExpressionAction"
+               id="org.storydriven.modeling.diagram.custom.expressions.EditStopNodeReturnExpression"
+               label="Edit Return Value Expression"
+               tooltip="This will toggle whether the storynode is matching or modifying">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.storydriven.modeling.diagram.custom.expressionSourceViewerExtension">
+      <expressionSourceViewer
+            expressionLanguage="Logics"
+            sourceViewerProvider="org.storydriven.modeling.diagram.custom.sourceViewerProviders.logics01ViewerProvider"
+            version="0.1">
+      </expressionSourceViewer>
+   </extension>
+   <extension
+         id="creation-wizard"
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="de.fujaba/de.fujaba.diagrams"
+            class="org.storydriven.modeling.diagram.custom.part.CustomActivityDiagramCreationWizard"
+            id="de.uni_paderborn.fujaba.muml.atomiccomponenteditor.diagram.custom.part.CustomAtomiccomponentDiagramCreationWizard"
+            name="Activity Diagram">
+         <description>
+            Creates a new Activity Diagram.
+         </description>
+      </wizard>
+   </extension>
+
+</plugin>

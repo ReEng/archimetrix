@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/0.9.0" xmi:id="_b8nbQNewEd-X6q7Ijhs6Xg">
+  <modelElement href="structure.uml#_KxdMQNevEd-X6q7Ijhs6Xg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ContainmentVisual" xmi:id="_CbRSgNexEd-X6q7Ijhs6Xg" sourceAnchor="99.0,56.0" targetAnchor="0.0,29.0" containedItem="_3Dp6AdewEd-X6q7Ijhs6Xg" enclosingItem="_f_c-kNewEd-X6q7Ijhs6Xg">
+    <bendpoints xmi:id="_X-oGQNexEd-X6q7Ijhs6Xg" sourceY="200" targetX="-20"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ContainmentVisual" xmi:id="_C8tysNexEd-X6q7Ijhs6Xg" sourceAnchor="22.0,51.0" targetAnchor="82.0,20.0" containedItem="_50qCANewEd-X6q7Ijhs6Xg" enclosingItem="_f_c-kNewEd-X6q7Ijhs6Xg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ContainmentVisual" xmi:id="_D6MuoNexEd-X6q7Ijhs6Xg" sourceAnchor="134.0,49.0" targetAnchor="16.0,4.0" containedItem="_6x2qENewEd-X6q7Ijhs6Xg" enclosingItem="_f_c-kNewEd-X6q7Ijhs6Xg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ContainmentVisual" xmi:id="_Efw50NexEd-X6q7Ijhs6Xg" sourceAnchor="57.0,52.0" targetAnchor="5.0,30.0" containedItem="_7_p58NewEd-X6q7Ijhs6Xg" enclosingItem="_f_c-kNewEd-X6q7Ijhs6Xg">
+    <bendpoints xmi:id="_X-p7cdexEd-X6q7Ijhs6Xg" sourceY="203" targetX="113" targetY="-2"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:DependencyVisual" xmi:id="_qQmZENfCEd-Ir6yJE9YXXQ" sourceAnchor="140.0,34.0" targetAnchor="15.0,34.0" client="_f_c-kNewEd-X6q7Ijhs6Xg" supplier="_-E2r4NewEd-X6q7Ijhs6Xg">
+    <modelElement href="structure.uml#_qQlK8NfCEd-Ir6yJE9YXXQ"/>
+    <visualProperties xmi:id="_qQmZEdfCEd-Ir6yJE9YXXQ"/>
+    <nameVisual xmi:id="_qQmZEtfCEd-Ir6yJE9YXXQ" text=""/>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:PackageVisual" xmi:id="_f_c-kNewEd-X6q7Ijhs6Xg" using="_qQmZENfCEd-Ir6yJE9YXXQ" containments="_CbRSgNexEd-X6q7Ijhs6Xg _C8tysNexEd-X6q7Ijhs6Xg _D6MuoNexEd-X6q7Ijhs6Xg _Efw50NexEd-X6q7Ijhs6Xg" name="Modeling Core" nestedPackages="_3Dp6AdewEd-X6q7Ijhs6Xg _50qCANewEd-X6q7Ijhs6Xg _6x2qENewEd-X6q7Ijhs6Xg _7_p58NewEd-X6q7Ijhs6Xg">
+    <modelElement href="structure.uml#_f_UbsNewEd-X6q7Ijhs6Xg"/>
+    <visualProperties xmi:id="_f_c-kdewEd-X6q7Ijhs6Xg" position="245.0,136.0" size="154.0,59.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:PackageVisual" xmi:id="_50qCANewEd-X6q7Ijhs6Xg" containment="_C8tysNexEd-X6q7Ijhs6Xg" name="Activities" nestingPackage="_f_c-kNewEd-X6q7Ijhs6Xg">
+    <modelElement href="structure.uml#_50pa8NewEd-X6q7Ijhs6Xg"/>
+    <visualProperties xmi:id="_50qCAdewEd-X6q7Ijhs6Xg" position="184.0,267.0" size="-1.0,-1.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:PackageVisual" xmi:id="_6x2qENewEd-X6q7Ijhs6Xg" containment="_D6MuoNexEd-X6q7Ijhs6Xg" name="Pattern" nestingPackage="_f_c-kNewEd-X6q7Ijhs6Xg">
+    <modelElement href="structure.uml#_6x2DANewEd-X6q7Ijhs6Xg"/>
+    <visualProperties xmi:id="_6x2qEdewEd-X6q7Ijhs6Xg" position="364.0,267.0" size="-1.0,-1.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:PackageVisual" xmi:id="_-E2r4NewEd-X6q7Ijhs6Xg" supplying="_qQmZENfCEd-Ir6yJE9YXXQ" name="Ecore">
+    <modelElement href="structure.uml#_-E2E0NewEd-X6q7Ijhs6Xg"/>
+    <visualProperties xmi:id="_-E2r4dewEd-X6q7Ijhs6Xg" position="503.0,136.0" size="-1.0,-1.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:PackageVisual" xmi:id="_7_p58NewEd-X6q7Ijhs6Xg" containment="_Efw50NexEd-X6q7Ijhs6Xg" name="Templates" nestingPackage="_f_c-kNewEd-X6q7Ijhs6Xg">
+    <modelElement href="structure.uml#_7_pS4NewEd-X6q7Ijhs6Xg"/>
+    <visualProperties xmi:id="_7_p58dewEd-X6q7Ijhs6Xg" position="184.0,363.0" size="-1.0,-1.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:PackageVisual" xmi:id="_3Dp6AdewEd-X6q7Ijhs6Xg" containment="_CbRSgNexEd-X6q7Ijhs6Xg" name="Expressions" nestingPackage="_f_c-kNewEd-X6q7Ijhs6Xg">
+    <modelElement href="structure.uml#_3Dp6ANewEd-X6q7Ijhs6Xg"/>
+    <visualProperties xmi:id="_3Dp6AtewEd-X6q7Ijhs6Xg" position="364.0,363.0" size="-1.0,-1.0"/>
+  </nodes>
+  <requiredModelsLocators xmi:id="_b8nbQdewEd-X6q7Ijhs6Xg" location="/org.storydriven.modeling/model/structure.uml"/>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

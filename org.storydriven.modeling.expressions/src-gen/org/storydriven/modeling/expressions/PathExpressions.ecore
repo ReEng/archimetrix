@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="pathExpressions"
+    nsURI="http://www.storydriven.org/modeling/expressions/PathExpressions" nsPrefix="pathExpressions">
+  <eClassifiers xsi:type="ecore:EClass" name="PathExpression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pathAlternatives" upperBound="-1"
+        eType="#//Path" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Path">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="segments" upperBound="-1"
+        eType="#//PathSegment" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PathSegment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alternatives" upperBound="-1"
+        eType="#//PathSegmentDescription" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="repeatOperator" eType="#//RepeatOperator"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PathSegmentDescription">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="restrictionList" eType="#//RestrictionList"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RestrictionList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="restrictions" upperBound="-1"
+        eType="#//TypeRestriction" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RepeatOperator">
+    <eLiterals name="NO_REPEAT" literal="NO_REPEAT"/>
+    <eLiterals name="AT_LEAST_ONCE" value="1" literal="+"/>
+    <eLiterals name="ARBITRARY" value="2" literal="*"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImplicitPathDescription" eSuperTypes="#//PathSegmentDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="#//ImplicitPathKind"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ImplicitPathKind">
+    <eLiterals name="ANY" literal="-->"/>
+    <eLiterals name="CONTAINMENT_SOURCE" value="1" literal="&lt;>-->"/>
+    <eLiterals name="CONTAINMENT_TARGET" value="2" literal="-->&lt;>"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExplicitPathDescription" eSuperTypes="#//PathSegmentDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="associationName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeRestriction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forbidden" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

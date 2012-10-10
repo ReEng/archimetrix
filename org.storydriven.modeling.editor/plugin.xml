@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.storydriven.modeling.activities.presentation.ActivitiesModelWizardID"
+            name="%_UI_ActivitiesModelWizard_label"
+            class="org.storydriven.modeling.activities.presentation.ActivitiesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ActivitiesModelFile.gif">
+         <description>%_UI_ActivitiesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.storydriven.modeling.activities.presentation.ActivitiesEditorID"
+            name="%_UI_ActivitiesEditor_label"
+            icon="icons/full/obj16/ActivitiesModelFile.gif"
+            extensions="activities"
+            class="org.storydriven.modeling.activities.presentation.ActivitiesEditor"
+            contributorClass="org.storydriven.modeling.activities.presentation.ActivitiesActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.storydriven.modeling.activities.expressions.presentation.ExpressionsModelWizardID"
+            name="%_UI_ExpressionsModelWizard_label"
+            class="org.storydriven.modeling.activities.expressions.presentation.ExpressionsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ExpressionsModelFile.gif">
+         <description>%_UI_ExpressionsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.storydriven.modeling.activities.expressions.presentation.ExpressionsEditorID"
+            name="%_UI_ExpressionsEditor_label"
+            icon="icons/full/obj16/ExpressionsModelFile.gif"
+            extensions="expressions"
+            class="org.storydriven.modeling.activities.expressions.presentation.ExpressionsEditor"
+            contributorClass="org.storydriven.modeling.activities.expressions.presentation.ExpressionsActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.storydriven.modeling.expressions.presentation.ExpressionsModelWizardID"
+            name="%_UI_ExpressionsModelWizard_label"
+            class="org.storydriven.modeling.expressions.presentation.ExpressionsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ExpressionsModelFile.gif">
+         <description>%_UI_ExpressionsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.storydriven.modeling.expressions.presentation.ExpressionsEditorID"
+            name="%_UI_ExpressionsEditor_label"
+            icon="icons/full/obj16/ExpressionsModelFile.gif"
+            extensions="expressions"
+            class="org.storydriven.modeling.expressions.presentation.ExpressionsEditor"
+            contributorClass="org.storydriven.modeling.expressions.presentation.ExpressionsActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.storydriven.modeling.calls.presentation.CallsModelWizardID"
+            name="%_UI_CallsModelWizard_label"
+            class="org.storydriven.modeling.calls.presentation.CallsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CallsModelFile.gif">
+         <description>%_UI_CallsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.storydriven.modeling.calls.presentation.CallsEditorID"
+            name="%_UI_CallsEditor_label"
+            icon="icons/full/obj16/CallsModelFile.gif"
+            extensions="calls"
+            class="org.storydriven.modeling.calls.presentation.CallsEditor"
+            contributorClass="org.storydriven.modeling.calls.presentation.CallsActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.storydriven.modeling.calls.expressions.presentation.ExpressionsModelWizardID"
+            name="%_UI_ExpressionsModelWizard_label"
+            class="org.storydriven.modeling.calls.expressions.presentation.ExpressionsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ExpressionsModelFile.gif">
+         <description>%_UI_ExpressionsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.storydriven.modeling.calls.expressions.presentation.ExpressionsEditorID"
+            name="%_UI_ExpressionsEditor_label"
+            icon="icons/full/obj16/ExpressionsModelFile.gif"
+            extensions="expressions"
+            class="org.storydriven.modeling.calls.expressions.presentation.ExpressionsEditor"
+            contributorClass="org.storydriven.modeling.calls.expressions.presentation.ExpressionsActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.storydriven.modeling.patterns.presentation.PatternsModelWizardID"
+            name="%_UI_PatternsModelWizard_label"
+            class="org.storydriven.modeling.patterns.presentation.PatternsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/PatternsModelFile.gif">
+         <description>%_UI_PatternsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.storydriven.modeling.patterns.presentation.PatternsEditorID"
+            name="%_UI_PatternsEditor_label"
+            icon="icons/full/obj16/PatternsModelFile.gif"
+            extensions="patterns"
+            class="org.storydriven.modeling.patterns.presentation.PatternsEditor"
+            contributorClass="org.storydriven.modeling.patterns.presentation.PatternsActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.storydriven.modeling.patterns.expressions.presentation.ExpressionsModelWizardID"
+            name="%_UI_ExpressionsModelWizard_label"
+            class="org.storydriven.modeling.patterns.expressions.presentation.ExpressionsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ExpressionsModelFile.gif">
+         <description>%_UI_ExpressionsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.storydriven.modeling.patterns.expressions.presentation.ExpressionsEditorID"
+            name="%_UI_ExpressionsEditor_label"
+            icon="icons/full/obj16/ExpressionsModelFile.gif"
+            extensions="expressions"
+            class="org.storydriven.modeling.patterns.expressions.presentation.ExpressionsEditor"
+            contributorClass="org.storydriven.modeling.patterns.expressions.presentation.ExpressionsActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.storydriven.modeling.templates.presentation.TemplatesModelWizardID"
+            name="%_UI_TemplatesModelWizard_label"
+            class="org.storydriven.modeling.templates.presentation.TemplatesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TemplatesModelFile.gif">
+         <description>%_UI_TemplatesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.storydriven.modeling.templates.presentation.TemplatesEditorID"
+            name="%_UI_TemplatesEditor_label"
+            icon="icons/full/obj16/TemplatesModelFile.gif"
+            extensions="templates"
+            class="org.storydriven.modeling.templates.presentation.TemplatesEditor"
+            contributorClass="org.storydriven.modeling.templates.presentation.TemplatesActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

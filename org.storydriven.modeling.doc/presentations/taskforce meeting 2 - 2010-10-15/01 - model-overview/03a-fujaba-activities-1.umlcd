@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="ASCII"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/0.9.0" xmi:id="_M6Z18NfUEd-ba507HkEVHA">
+  <modelElement href="fujaba.uml#_DcY1oNfPEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_SMlhQdfUEd-ba507HkEVHA" sourceItem="_SMlhQNfUEd-ba507HkEVHA" targetItem="_SMrn4NfUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_SMmvYdfUEd-ba507HkEVHA" sourceItem="_SMmvYNfUEd-ba507HkEVHA" targetItem="_SMroAtfUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_SMnWcdfUEd-ba507HkEVHA" sourceItem="_SMnWcNfUEd-ba507HkEVHA" targetItem="_SMroBtfUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_SMn9gdfUEd-ba507HkEVHA" sourceItem="_SMn9gNfUEd-ba507HkEVHA" targetItem="_SMroCtfUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_SMn9g9fUEd-ba507HkEVHA" sourceItem="_SMn9gtfUEd-ba507HkEVHA" targetItem="_SMroD9fUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_SMpLoNfUEd-ba507HkEVHA" sourceItem="_SMokkNfUEd-ba507HkEVHA" targetItem="_SMroFNfUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_SMpLotfUEd-ba507HkEVHA" sourceItem="_SMpLodfUEd-ba507HkEVHA" targetItem="_SMroGNfUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_SMqZwdfUEd-ba507HkEVHA" sourceItem="_SMqZwNfUEd-ba507HkEVHA" targetItem="_SMroLNfUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_SMyVkNfUEd-ba507HkEVHA" sourceItem="_SMtdENfUEd-ba507HkEVHA" targetItem="_SNCNMNfUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_TCFl4NfUEd-ba507HkEVHA" sourceAnchor="57.5,0.0" targetAnchor="77.0,52.5" subClass="_TCICINfUEd-ba507HkEVHA" superClass="_SNCNMNfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#__bIUwNfQEd-ba507HkEVHA"/>
+    <bendpoints xmi:id="_4HjnMNfVEd-ba507HkEVHA" sourceY="-13" targetX="-390" targetY="39"/>
+    <bendpoints xmi:id="_4HjnMdfVEd-ba507HkEVHA" sourceX="390" sourceY="-13" targetY="39"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_TCFl4tfUEd-ba507HkEVHA" sourceItem="_TCFl4dfUEd-ba507HkEVHA" targetItem="_TCICINfUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_TCLFcNfUEd-ba507HkEVHA" sourceAnchor="113.0,0.0" targetAnchor="77.0,52.5" subClass="_TCRzINfUEd-ba507HkEVHA" superClass="_SNCNMNfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#__boEANfQEd-ba507HkEVHA"/>
+    <bendpoints xmi:id="_4HkOQNfVEd-ba507HkEVHA" sourceY="-19" targetX="-195" targetY="39"/>
+    <bendpoints xmi:id="_4HkOQdfVEd-ba507HkEVHA" sourceX="195" sourceY="-19" targetY="39"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_TCLsgdfUEd-ba507HkEVHA" sourceItem="_TCLsgNfUEd-ba507HkEVHA" targetItem="_TCRzINfUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_TCa9ENfUEd-ba507HkEVHA" sourceAnchor="77.5,0.0" targetAnchor="77.0,52.5" subClass="_TCencNfUEd-ba507HkEVHA" superClass="_SNCNMNfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#__buKoNfQEd-ba507HkEVHA"/>
+    <bendpoints xmi:id="_4HjAINfVEd-ba507HkEVHA" sourceY="-13" targetX="299" targetY="39"/>
+    <bendpoints xmi:id="_4HjAIdfVEd-ba507HkEVHA" sourceX="-299" sourceY="-13" targetY="39"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_TCbkINfUEd-ba507HkEVHA" sourceItem="_TCa9EdfUEd-ba507HkEVHA" targetItem="_TCencNfUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_TCjf8NfUEd-ba507HkEVHA" sourceAnchor="60.0,0.0" targetAnchor="77.0,52.5" subClass="_TCrbwNfUEd-ba507HkEVHA" superClass="_SNCNMNfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#__bv_0NfQEd-ba507HkEVHA"/>
+    <bendpoints xmi:id="_4HmDcNfVEd-ba507HkEVHA" sourceY="-15" targetX="143" targetY="39"/>
+    <bendpoints xmi:id="_4HmDcdfVEd-ba507HkEVHA" sourceX="-143" sourceY="-15" targetY="39"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_TCkHAdfUEd-ba507HkEVHA" sourceItem="_TCkHANfUEd-ba507HkEVHA" targetItem="_TCrbwNfUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_TCmjQdfUEd-ba507HkEVHA" sourceItem="_TCmjQNfUEd-ba507HkEVHA" targetItem="_TCsC49fUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_TCz-oNfUEd-ba507HkEVHA" sourceAnchor="62.5,0.0" targetAnchor="77.0,52.5" subClass="_TC76cNfUEd-ba507HkEVHA" superClass="_SNCNMNfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#__bx1ANfQEd-ba507HkEVHA"/>
+    <bendpoints xmi:id="_4HhyANfVEd-ba507HkEVHA" sourceY="-27" targetY="39"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_TCz-otfUEd-ba507HkEVHA" sourceItem="_TCz-odfUEd-ba507HkEVHA" targetItem="_TC76cNfUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_aztvIdfUEd-ba507HkEVHA" sourceItem="_aztvINfUEd-ba507HkEVHA" targetItem="_az1q8NfUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_azuWMNfUEd-ba507HkEVHA" sourceAnchor="69.0,26.0" targetAnchor="76.0,0.0" source="_TCencNfUEd-ba507HkEVHA" target="_az1q8NfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#__rK74dfQEd-ba507HkEVHA"/>
+    <nameVisual xmi:id="_azxZgNfUEd-ba507HkEVHA" text="">
+      <visualProperties xmi:id="_bpTTUNfUEd-ba507HkEVHA" position="-68.0,-7.0"/>
+    </nameVisual>
+    <stereotypes xmi:id="_azyAkdfUEd-ba507HkEVHA" name="Reference">
+      <modelElement href="fujaba.uml#__rMxENfQEd-ba507HkEVHA"/>
+    </stereotypes>
+    <sourceRole xmi:id="_sTexoNfUEd-ba507HkEVHA" name="activity" navigable="true">
+      <modelElement href="fujaba.uml#__iqgINfQEd-ba507HkEVHA"/>
+      <visualProperties xmi:id="_tjlHktfUEd-ba507HkEVHA" position="2.0,14.0"/>
+      <stereotypes xmi:id="_KTWN8NfxEd-Ir6yJE9YXXQ" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__irHMNfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_KTWN8dfxEd-Ir6yJE9YXXQ" name="Annotations">
+        <modelElement href="fujaba.uml#__iruQNfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_sTn7kNfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_sTmtcNfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_azxZgdfUEd-ba507HkEVHA" name="state" navigable="true">
+      <modelElement href="fujaba.uml#__iuxkNfQEd-ba507HkEVHA"/>
+      <visualProperties xmi:id="_bpSsQNfUEd-ba507HkEVHA" position="41.0,-32.0"/>
+      <stereotypes xmi:id="_KTWN8tfxEd-Ir6yJE9YXXQ" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__iuxkdfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_KTWN89fxEd-Ir6yJE9YXXQ" name="Annotations">
+        <modelElement href="fujaba.uml#__iv_sNfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_azz1wdfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_azz1wNfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_w8wp4NfUEd-ba507HkEVHA" sourceAnchor="154.0,26.0" targetAnchor="0.0,114.0" source="_SNCNMNfUEd-ba507HkEVHA" target="_w9fpsNfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#__rUF0dfQEd-ba507HkEVHA"/>
+    <nameVisual xmi:id="_w9LgoNfUEd-ba507HkEVHA" text="">
+      <visualProperties xmi:id="_xGvsUNfUEd-ba507HkEVHA" position="-33.0,2.0"/>
+    </nameVisual>
+    <stereotypes xmi:id="_w9MHstfUEd-ba507HkEVHA" name="Reference">
+      <modelElement href="fujaba.uml#__rV7ANfQEd-ba507HkEVHA"/>
+    </stereotypes>
+    <sourceRole xmi:id="_w9MHsNfUEd-ba507HkEVHA" name="revEntry" navigable="true">
+      <modelElement href="fujaba.uml#__jUAYNfQEd-ba507HkEVHA"/>
+      <visualProperties xmi:id="_xGvFQNfUEd-ba507HkEVHA" position="36.0,-33.0"/>
+      <stereotypes xmi:id="_KTW1ANfxEd-Ir6yJE9YXXQ" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__jUAYtfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_KTW1AdfxEd-Ir6yJE9YXXQ" name="Annotations">
+        <modelElement href="fujaba.uml#__jVOgNfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_w9cmYdfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_w9cmYNfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_w9MHsdfUEd-ba507HkEVHA" name="entry" navigable="true">
+      <modelElement href="fujaba.uml#__rUF0tfQEd-ba507HkEVHA"/>
+      <visualProperties xmi:id="_xGvsUdfUEd-ba507HkEVHA" position="-60.0,-33.0"/>
+      <visibility xmi:id="_w9cmZdfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_w9cmZNfUEd-ba507HkEVHA" label="*" max="-1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_w8xQ8NfUEd-ba507HkEVHA" sourceAnchor="76.0,0.0" targetAnchor="0.0,66.0" source="_SNCNMNfUEd-ba507HkEVHA" target="_w9fpsNfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#__rV7AdfQEd-ba507HkEVHA"/>
+    <nameVisual xmi:id="_w9MuwNfUEd-ba507HkEVHA" text="">
+      <visualProperties xmi:id="_xGw6cNfUEd-ba507HkEVHA" position="149.0,-15.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_DQGB4NfWEd-ba507HkEVHA" sourceY="-22" targetX="-414"/>
+    <stereotypes xmi:id="_w9Muw9fUEd-ba507HkEVHA" name="Reference">
+      <modelElement href="fujaba.uml#__rXJINfQEd-ba507HkEVHA"/>
+    </stereotypes>
+    <sourceRole xmi:id="_w9MuwdfUEd-ba507HkEVHA" name="revExit" navigable="true">
+      <modelElement href="fujaba.uml#__jWcoNfQEd-ba507HkEVHA"/>
+      <visualProperties xmi:id="_xGvsUtfUEd-ba507HkEVHA" position="1.0,-37.0"/>
+      <stereotypes xmi:id="_KTW1AtfxEd-Ir6yJE9YXXQ" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__jWcotfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_KTW1A9fxEd-Ir6yJE9YXXQ" name="Annotations">
+        <modelElement href="fujaba.uml#__jXDsdfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_w9cmZ9fUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_w9cmZtfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_w9MuwtfUEd-ba507HkEVHA" name="exit" navigable="true">
+      <modelElement href="fujaba.uml#__rV7AtfQEd-ba507HkEVHA"/>
+      <visualProperties xmi:id="_xGw6cdfUEd-ba507HkEVHA" position="-49.0,-33.0"/>
+      <visibility xmi:id="_w9dNc9fUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_w9dNctfUEd-ba507HkEVHA" label="*" max="-1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_w9IdUNfUEd-ba507HkEVHA" sourceItem="_w89eMNfUEd-ba507HkEVHA" targetItem="_w9fpsNfUEd-ba507HkEVHA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_w9j7INfUEd-ba507HkEVHA" sourceAnchor="105.0,133.0" targetAnchor="103.0,0.0" source="_w9fpsNfUEd-ba507HkEVHA" target="_xA_CkNfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#__rYXQdfQEd-ba507HkEVHA"/>
+    <nameVisual xmi:id="_w-LmMNfUEd-ba507HkEVHA" text="">
+      <visualProperties xmi:id="_xGyIkNfUEd-ba507HkEVHA" position="-68.0,-6.0"/>
+    </nameVisual>
+    <stereotypes xmi:id="_w-MNQdfUEd-ba507HkEVHA" name="Reference">
+      <modelElement href="fujaba.uml#__raMcNfQEd-ba507HkEVHA"/>
+    </stereotypes>
+    <sourceRole xmi:id="_w-LmMdfUEd-ba507HkEVHA" name="revGuard" navigable="true">
+      <modelElement href="fujaba.uml#__jrMwNfQEd-ba507HkEVHA"/>
+      <visualProperties xmi:id="_xGxhgNfUEd-ba507HkEVHA" position="13.0,4.0"/>
+      <stereotypes xmi:id="_KTXcENfxEd-Ir6yJE9YXXQ" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__jrz0NfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_KTXcEdfxEd-Ir6yJE9YXXQ" name="Annotations">
+        <modelElement href="fujaba.uml#__jsa4dfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_w-YagdfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_w-YagNfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_6kPhgNfUEd-ba507HkEVHA" name="guard" navigable="true">
+      <modelElement href="fujaba.uml#__jZf8tfQEd-ba507HkEVHA"/>
+      <visualProperties xmi:id="_7Xj00NfUEd-ba507HkEVHA" position="20.0,-32.0"/>
+      <stereotypes xmi:id="_KTXcEtfxEd-Ir6yJE9YXXQ" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__jaHAdfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_KTXcE9fxEd-Ir6yJE9YXXQ" name="Annotations">
+        <modelElement href="fujaba.uml#__jbVINfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_6kR9wNfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_6kQvoNfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_w-JxANfUEd-ba507HkEVHA" sourceItem="_w97ukNfUEd-ba507HkEVHA" targetItem="_xA_CkNfUEd-ba507HkEVHA"/>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_SMlhQNfUEd-ba507HkEVHA" item="_SMrn4NfUEd-ba507HkEVHA" sourceConnectionVisual="_SMlhQdfUEd-ba507HkEVHA" text="&lt;h2>Associations&lt;/h2>&#xA; *&#xA;&lt;pre>&#xA;                 0..1      contains      n&#xA;UMLComplexState --------------------------- UMLActivityDiagram&#xA;                 revContains      contains&#xA;&lt;/pre>&#xA; *&#xA;@author    $Author: cschneid $&#xA;@version   $Revision: 8843 $ $Date: 2007-11-14 11:26:45 +0100 (Mi, 14 Nov 2007) $">
+    <modelElement href="fujaba.uml#__mnMANfQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_SMmvYNfUEd-ba507HkEVHA" item="_SMroAtfUEd-ba507HkEVHA" sourceConnectionVisual="_SMmvYdfUEd-ba507HkEVHA" text="Get the statechart attribute of the UMLActivityDiagram object&#xA;    *&#xA;    * @return   The statechart value">
+    <modelElement href="fujaba.uml#__mnMAtfQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_SMnWcNfUEd-ba507HkEVHA" item="_SMroBtfUEd-ba507HkEVHA" sourceConnectionVisual="_SMnWcdfUEd-ba507HkEVHA" text="Get the isStoryBoard attribute of the UMLActivityDiagram object&#xA;    *&#xA;    * @return   The isStoryBoard value">
+    <modelElement href="fujaba.uml#__moaINfQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_SMn9gNfUEd-ba507HkEVHA" item="_SMroCtfUEd-ba507HkEVHA" sourceConnectionVisual="_SMn9gdfUEd-ba507HkEVHA" text="setter for field isStoryBoard&#xA;    *&#xA;    * @param value new value">
+    <modelElement href="fujaba.uml#__moaIdfQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_SMn9gtfUEd-ba507HkEVHA" item="_SMroD9fUEd-ba507HkEVHA" sourceConnectionVisual="_SMn9g9fUEd-ba507HkEVHA" text="Returns an iterator containing all objects in the diagram. If there are no UMLActivityStory's&#xA;    * in the diagram an empty iterator is returned.&#xA;    *&#xA;    * @return   iterator of all objects">
+    <modelElement href="fujaba.uml#__moaItfQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_SMokkNfUEd-ba507HkEVHA" item="_SMroFNfUEd-ba507HkEVHA" sourceConnectionVisual="_SMpLoNfUEd-ba507HkEVHA" text="Returns the start activity of this diagram&#xA;    *&#xA;    * @return   The startActivity value">
+    <modelElement href="fujaba.uml#__moaI9fQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_SMpLodfUEd-ba507HkEVHA" item="_SMroGNfUEd-ba507HkEVHA" sourceConnectionVisual="_SMpLotfUEd-ba507HkEVHA" text="Returns the full name like class::method&#xA;    *&#xA;    * @return   The fullName value">
+    <modelElement href="fujaba.uml#__moaJNfQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_SMqZwNfUEd-ba507HkEVHA" item="_SMroLNfUEd-ba507HkEVHA" sourceConnectionVisual="_SMqZwdfUEd-ba507HkEVHA" text="@param project&#xA;    * @param persistent">
+    <modelElement href="fujaba.uml#__mnMAdfQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_SMtdENfUEd-ba507HkEVHA" item="_SNCNMNfUEd-ba507HkEVHA" sourceConnectionVisual="_SMyVkNfUEd-ba507HkEVHA" text="&lt;h2>Associations&lt;/h2>&#xA;&lt;p/>&#xA;&lt;pre>&#xA;             0..1             N&#xA;UMLActivity -------------------- UMLTransition&#xA;             revEntry     entry&#xA;&lt;p/>&#xA;             0..1             N&#xA;UMLActivity -------------------- UMLTransition&#xA;             revExit       exit&#xA;&lt;p/>&#xA;             0..1                         0..1&#xA;UMLActivity ----------------------------------- FlowActivity&#xA;             + UMLActivity      + FlowActivity&#xA;&lt;/pre>&#xA; *&#xA;@author    $Author: cschneid $&#xA;@version   $Revision: 8843 $ $Date: 2007-11-14 11:26:45 +0100 (Mi, 14 Nov 2007) $">
+    <modelElement href="fujaba.uml#__miTgNfQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_TCFl4dfUEd-ba507HkEVHA" item="_TCICINfUEd-ba507HkEVHA" sourceConnectionVisual="_TCFl4tfUEd-ba507HkEVHA" text="No comment provided by developer, please add a comment to improve documentation.&#xA; *&#xA;@author    $Author: cschneid $&#xA;@version   $Revision: 7404 $ $Date: 2006-04-06 14:06:41 +0200 (Do, 06 Apr 2006) $">
+    <modelElement href="fujaba.uml#__oATINfQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_TCLsgNfUEd-ba507HkEVHA" item="_TCRzINfUEd-ba507HkEVHA" sourceConnectionVisual="_TCLsgdfUEd-ba507HkEVHA" text="&lt;h2>Associations&lt;/h2>&#xD;&#xA;&#xD;&#xA;&lt;pre>&#xD;&#xA;                  0..1   startOfStateChart   0..1&#xD;&#xA;UMLStartActivity --------------------------------- UMLClass&#xD;&#xA;                  +                            +&#xD;&#xA;&lt;/pre>&#xD;&#xA;&#xD;&#xA;@author $Author: travkin $&#xD;&#xA;@version $Revision: 9517 $ $Date: 2009-06-26 13:16:45 +0200 (Fr, 26 Jun 2009) $">
+    <modelElement href="fujaba.uml#__obJ4dfQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_TCa9EdfUEd-ba507HkEVHA" item="_TCencNfUEd-ba507HkEVHA" sourceConnectionVisual="_TCbkINfUEd-ba507HkEVHA" text="No comment provided by developer, please add a comment to improve documentation.&#xA; *&#xA;@author    $Author: l3_g5 $&#xA;@version   $Revision: 8735 $ $Date: 2007-09-04 19:34:16 +0200 (Di, 04 Sep 2007) $">
+    <modelElement href="fujaba.uml#__oeNMNfQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_TCkHANfUEd-ba507HkEVHA" item="_TCrbwNfUEd-ba507HkEVHA" sourceConnectionVisual="_TCkHAdfUEd-ba507HkEVHA" text="No comment provided by developer, please add a comment to improve documentation.&#xD;&#xA; *&#xD;&#xA;@author    $Author: cschneid $&#xD;&#xA;@version   $Revision: 9144 $ $Date: 2008-08-12 10:37:42 +0200 (Di, 12 Aug 2008) $">
+    <modelElement href="fujaba.uml#__ofbUtfQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_TCmjQNfUEd-ba507HkEVHA" item="_TCsC49fUEd-ba507HkEVHA" sourceConnectionVisual="_TCmjQdfUEd-ba507HkEVHA" text="No comment provided by developer, please add a comment to improve documentation.&#xD;&#xA;    *&#xD;&#xA;    * @return   No description provided">
+    <modelElement href="fujaba.uml#__ogCYtfQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_TCz-odfUEd-ba507HkEVHA" item="_TC76cNfUEd-ba507HkEVHA" sourceConnectionVisual="_TCz-otfUEd-ba507HkEVHA" text="No comment provided by developer, please add a comment to improve documentation.&#xD;&#xA; *&#xD;&#xA;@author    $Author: rjubeh $&#xD;&#xA;@version   $Revision: 9489 $ $Date: 2009-06-15 17:23:18 +0200 (Mo, 15 Jun 2009) $">
+    <modelElement href="fujaba.uml#__ogpcdfQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_aztvINfUEd-ba507HkEVHA" item="_az1q8NfUEd-ba507HkEVHA" sourceConnectionVisual="_aztvIdfUEd-ba507HkEVHA" text="@author    $Author: cschneid $&#xD;&#xA;@version   $Revision: 9144 $ $Date: 2008-08-12 10:37:42 +0200 (Di, 12 Aug 2008) $">
+    <modelElement href="fujaba.uml#__obw89fQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_w89eMNfUEd-ba507HkEVHA" item="_w9fpsNfUEd-ba507HkEVHA" sourceConnectionVisual="_w9IdUNfUEd-ba507HkEVHA" text="&lt;h2>Associations&lt;/h2> &lt;pre>&#xA;             0..1             N&#xA;UMLActivity -------------------- UMLTransition&#xA;             revEntry     entry&#xA;&lt;p/>&#xA;             0..1             N&#xA;UMLActivity -------------------- UMLTransition&#xA;             revExit       exit&#xA;&lt;/pre>&#xA; *&#xA;@author    $Author: l3_g5 $&#xA;@version   $Revision: 8735 $ $Date: 2007-09-04 19:34:16 +0200 (Di, 04 Sep 2007) $">
+    <modelElement href="fujaba.uml#__opMUtfQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_w97ukNfUEd-ba507HkEVHA" item="_xA_CkNfUEd-ba507HkEVHA" sourceConnectionVisual="_w-JxANfUEd-ba507HkEVHA" text="No comment provided by developer, please add a comment to improve documentation.&#xD;&#xA; *&#xD;&#xA;@author    $Author: rjubeh $&#xD;&#xA;@version   $Revision: 9499 $ $Date: 2009-06-19 16:09:49 +0200 (Fr, 19 Jun 2009) $">
+    <modelElement href="fujaba.uml#__oxvMNfQEd-ba507HkEVHA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_TCencNfUEd-ba507HkEVHA" comments="_TCa9EdfUEd-ba507HkEVHA" targetConnectionVisual="_TCbkINfUEd-ba507HkEVHA" name="UMLStatementActivity" associationsOut="_azuWMNfUEd-ba507HkEVHA" generalizations="_TCa9ENfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#_-10BMNfQEd-ba507HkEVHA"/>
+    <visualAttributeProperties xmi:id="_ZxIQwNfUEd-ba507HkEVHA" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_o97LENfUEd-ba507HkEVHA" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_TCencdfUEd-ba507HkEVHA" position="729.0,286.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_TCenctfUEd-ba507HkEVHA" label="+"/>
+    <attributes xmi:id="_KTZ4UNfxEd-Ir6yJE9YXXQ" name="state">
+      <modelElement href="fujaba.uml#__iuxkNfQEd-ba507HkEVHA"/>
+      <visualProperties xmi:id="_KTZ4UdfxEd-Ir6yJE9YXXQ" visible="false"/>
+      <stereotypes xmi:id="_KTlegNfxEd-Ir6yJE9YXXQ" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__iuxkdfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_KTlegdfxEd-Ir6yJE9YXXQ" name="Annotations">
+        <modelElement href="fujaba.uml#__iv_sNfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_KTh0KNfxEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_KTibMdfxEd-Ir6yJE9YXXQ" label="1" max="1" min="1"/>
+      <type xmi:id="_KTh0J9fxEd-Ir6yJE9YXXQ" name="UMLStatement">
+        <modelElement href="fujaba.uml#_-1t6kNfQEd-ba507HkEVHA"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_TCrbwNfUEd-ba507HkEVHA" comments="_TCkHANfUEd-ba507HkEVHA" targetConnectionVisual="_TCkHAdfUEd-ba507HkEVHA" name="UMLStopActivity" generalizations="_TCjf8NfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#_-14SoNfQEd-ba507HkEVHA"/>
+    <visualAttributeProperties xmi:id="_UmbtgNfUEd-ba507HkEVHA" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_tatC8NfVEd-ba507HkEVHA" collapsed="true" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_TCrbwdfUEd-ba507HkEVHA" position="591.0,288.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_TCrbwtfUEd-ba507HkEVHA" label="+"/>
+    <attributes xmi:id="_TCrbw9fUEd-ba507HkEVHA" name="generateCode">
+      <modelElement href="fujaba.uml#__iyb8NfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_TCrbxNfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_TCrbxdfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_TCrbxtfUEd-ba507HkEVHA" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_TCrbx9fUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="null" name="returnValue">
+      <modelElement href="fujaba.uml#__izDANfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_TCrbyNfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_TCrbydfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_TCsC0NfUEd-ba507HkEVHA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_TCsC49fUEd-ba507HkEVHA" comments="_TCmjQNfUEd-ba507HkEVHA" targetConnectionVisual="_TCmjQdfUEd-ba507HkEVHA" name="returnsVariable">
+      <modelElement href="fujaba.uml#_-17V8NfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_TCsC5NfUEd-ba507HkEVHA" label="+"/>
+      <outParameters xmi:id="_TCsC5dfUEd-ba507HkEVHA">
+        <modelElement href="fujaba.uml#_-17V8dfQEd-ba507HkEVHA"/>
+        <type xmi:id="_TCsC5tfUEd-ba507HkEVHA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_SNCNMNfUEd-ba507HkEVHA" comments="_SMtdENfUEd-ba507HkEVHA" targetConnectionVisual="_SMyVkNfUEd-ba507HkEVHA" name="UMLActivity" abstractClass="true" associationsOut="_w8wp4NfUEd-ba507HkEVHA _w8xQ8NfUEd-ba507HkEVHA" subclassedBy="_TCFl4NfUEd-ba507HkEVHA _TCLFcNfUEd-ba507HkEVHA _TCa9ENfUEd-ba507HkEVHA _TCjf8NfUEd-ba507HkEVHA _TCz-oNfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#_-ybWANfQEd-ba507HkEVHA"/>
+    <visualAttributeProperties xmi:id="_-HiCENfUEd-ba507HkEVHA" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_ji5QUNfVEd-ba507HkEVHA" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_SNDbUNfUEd-ba507HkEVHA" position="431.0,181.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_SNCNMdfUEd-ba507HkEVHA" label="+"/>
+    <attributes xmi:id="_SNCNOtfUEd-ba507HkEVHA" name="name">
+      <modelElement href="fujaba.uml#__evCYdfQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_SNCNO9fUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__evCYtfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_SNCNPNfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_SNCNPdfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_SNCNPtfUEd-ba507HkEVHA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_KTbGcNfxEd-Ir6yJE9YXXQ" name="entry">
+      <modelElement href="fujaba.uml#__rUF0tfQEd-ba507HkEVHA"/>
+      <visualProperties xmi:id="_KTbGcdfxEd-Ir6yJE9YXXQ" visible="false"/>
+      <visibility xmi:id="_KTibONfxEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_KTibOdfxEd-Ir6yJE9YXXQ" label="*" max="-1"/>
+      <type xmi:id="_KTibN9fxEd-Ir6yJE9YXXQ" name="UMLTransition">
+        <modelElement href="fujaba.uml#_-2UXgNfQEd-ba507HkEVHA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_KTbGctfxEd-Ir6yJE9YXXQ" name="exit">
+      <modelElement href="fujaba.uml#__rV7AtfQEd-ba507HkEVHA"/>
+      <visualProperties xmi:id="_KTbGc9fxEd-Ir6yJE9YXXQ" visible="false"/>
+      <visibility xmi:id="_KTjCQdfxEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_KTjCQtfxEd-Ir6yJE9YXXQ" label="*" max="-1"/>
+      <type xmi:id="_KTjCQNfxEd-Ir6yJE9YXXQ" name="UMLTransition">
+        <modelElement href="fujaba.uml#_-2UXgNfQEd-ba507HkEVHA"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_TC76cNfUEd-ba507HkEVHA" comments="_TCz-odfUEd-ba507HkEVHA" targetConnectionVisual="_TCz-otfUEd-ba507HkEVHA" name="UMLStoryActivity" generalizations="_TCz-oNfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#_-1_AUNfQEd-ba507HkEVHA"/>
+    <visualAttributeProperties xmi:id="_nzW_8NfVEd-ba507HkEVHA" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_qs6nANfVEd-ba507HkEVHA" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_TC76cdfUEd-ba507HkEVHA" position="445.0,300.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_TC76ctfUEd-ba507HkEVHA" label="+"/>
+    <attributes xmi:id="_TC76f9fUEd-ba507HkEVHA" name="textComment">
+      <modelElement href="fujaba.uml#__i2GUtfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_TC76gNfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_TC76gdfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_TC76gtfUEd-ba507HkEVHA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_TC76g9fUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="false" name="forEach">
+      <modelElement href="fujaba.uml#__i2tYNfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_TC76hNfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_TC76hdfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_TC76htfUEd-ba507HkEVHA" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_TC76h9fUEd-ba507HkEVHA" name="storyPattern">
+      <modelElement href="fujaba.uml#__i3UcNfQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_TC76iNfUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__i3UcdfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_TC76idfUEd-ba507HkEVHA" name="Annotations">
+        <modelElement href="fujaba.uml#__i4ikNfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_TC76itfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_TC76i9fUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_TC76jNfUEd-ba507HkEVHA" name="UMLStoryPattern">
+        <modelElement href="fujaba.uml#_-2G8INfQEd-ba507HkEVHA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_TC76kdfUEd-ba507HkEVHA" name="iteration">
+      <modelElement href="fujaba.uml#__i6XwNfQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_TC76ktfUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__i6XwdfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_TC76k9fUEd-ba507HkEVHA" name="Annotations">
+        <modelElement href="fujaba.uml#__i7l4NfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_TC76lNfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_TC76ldfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_TC76ltfUEd-ba507HkEVHA" name="UMLIteration">
+        <modelElement href="fujaba.uml#__d578NfQEd-ba507HkEVHA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_TC76l9fUEd-ba507HkEVHA" name="revStory">
+      <modelElement href="fujaba.uml#__i-CINfQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_TC76mNfUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__i-CIdfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_TC76mdfUEd-ba507HkEVHA" name="Annotations">
+        <modelElement href="fujaba.uml#__i_QQNfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_TC76mtfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_TC76m9fUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_TC76nNfUEd-ba507HkEVHA" name="UMLComplexState">
+        <modelElement href="fujaba.uml#__d7xINfQEd-ba507HkEVHA"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_SMrn4NfUEd-ba507HkEVHA" comments="_SMlhQNfUEd-ba507HkEVHA" targetConnectionVisual="_SMlhQdfUEd-ba507HkEVHA" name="UMLActivityDiagram">
+    <modelElement href="fujaba.uml#_-yjR0NfQEd-ba507HkEVHA"/>
+    <visualAttributeProperties xmi:id="_en5ycNfUEd-ba507HkEVHA" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_fDapwNfUEd-ba507HkEVHA" collapsed="true" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_SMsO8NfUEd-ba507HkEVHA" position="234.0,176.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_SMrn4dfUEd-ba507HkEVHA" label="+"/>
+    <attributes xmi:id="_SMrn4tfUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="&quot;storyMethod&quot;" name="STORY_METHOD_PROPERTY" staticAttribute="true">
+      <modelElement href="fujaba.uml#__ezT0NfQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_SMrn49fUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__ez64NfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_SMrn5NfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_SMrn5dfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_SMrn5tfUEd-ba507HkEVHA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_SMrn59fUEd-ba507HkEVHA" name="storyMethod">
+      <modelElement href="fujaba.uml#__ez64dfQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_SMrn6NfUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__ez64tfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_SMrn6dfUEd-ba507HkEVHA" name="Annotations">
+        <modelElement href="fujaba.uml#__e0h8dfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_SMrn6tfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_SMrn69fUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_SMrn7NfUEd-ba507HkEVHA" name="FMethod">
+        <modelElement href="fujaba.uml#_WiLlUNfQEd-ba507HkEVHA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_SMrn7dfUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="false" name="isStoryBoard">
+      <modelElement href="fujaba.uml#__e1JA9fQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_SMrn7tfUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__e1wENfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_SMrn79fUEd-ba507HkEVHA" label="-"/>
+      <cardinality xmi:id="_SMrn8NfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_SMrn8dfUEd-ba507HkEVHA" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_SMrn8tfUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="&quot;isStoryBoard&quot;" name="PROPERTY_IS_STORY_BOARD" staticAttribute="true">
+      <modelElement href="fujaba.uml#__e1wEdfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_SMrn89fUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_SMrn9NfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_SMrn9dfUEd-ba507HkEVHA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_SMrn9tfUEd-ba507HkEVHA" name="setName">
+      <modelElement href="fujaba.uml#_-ylHANfQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_SMrn99fUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#_-yluENfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_SMrn-NfUEd-ba507HkEVHA" name="Annotations">
+        <modelElement href="fujaba.uml#_-yluEdfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_SMrn-dfUEd-ba507HkEVHA" label="+"/>
+      <parameters xmi:id="_SMrn-tfUEd-ba507HkEVHA" name="name">
+        <modelElement href="fujaba.uml#_-ylHAdfQEd-ba507HkEVHA"/>
+        <type xmi:id="_SMrn-9fUEd-ba507HkEVHA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_SMrn_NfUEd-ba507HkEVHA" name="getName">
+      <modelElement href="fujaba.uml#_-yluE9fQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_SMrn_dfUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#_-ymVINfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_SMrn_tfUEd-ba507HkEVHA" name="Annotations">
+        <modelElement href="fujaba.uml#_-ymVItfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_SMrn_9fUEd-ba507HkEVHA" label="+"/>
+      <outParameters xmi:id="_SMroANfUEd-ba507HkEVHA">
+        <modelElement href="fujaba.uml#_-ymVIdfQEd-ba507HkEVHA"/>
+        <type xmi:id="_SMroAdfUEd-ba507HkEVHA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_SMroAtfUEd-ba507HkEVHA" comments="_SMmvYNfUEd-ba507HkEVHA" targetConnectionVisual="_SMmvYdfUEd-ba507HkEVHA" name="isStatechart">
+      <modelElement href="fujaba.uml#_-ym8MNfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_SMroA9fUEd-ba507HkEVHA" label="+"/>
+      <outParameters xmi:id="_SMroBNfUEd-ba507HkEVHA">
+        <modelElement href="fujaba.uml#_-ym8MdfQEd-ba507HkEVHA"/>
+        <type xmi:id="_SMroBdfUEd-ba507HkEVHA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_SMroBtfUEd-ba507HkEVHA" comments="_SMnWcNfUEd-ba507HkEVHA" targetConnectionVisual="_SMnWcdfUEd-ba507HkEVHA" name="getIsStoryBoard">
+      <modelElement href="fujaba.uml#_-ynjQNfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_SMroB9fUEd-ba507HkEVHA" label="+"/>
+      <outParameters xmi:id="_SMroCNfUEd-ba507HkEVHA">
+        <modelElement href="fujaba.uml#_-ynjQdfQEd-ba507HkEVHA"/>
+        <type xmi:id="_SMroCdfUEd-ba507HkEVHA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_SMroCtfUEd-ba507HkEVHA" comments="_SMn9gNfUEd-ba507HkEVHA" targetConnectionVisual="_SMn9gdfUEd-ba507HkEVHA" name="setIsStoryBoard">
+      <modelElement href="fujaba.uml#_-yoKUNfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_SMroC9fUEd-ba507HkEVHA" label="+"/>
+      <parameters xmi:id="_SMroDNfUEd-ba507HkEVHA" name="value">
+        <modelElement href="fujaba.uml#_-yoKUdfQEd-ba507HkEVHA"/>
+        <keywords xmi:id="_SMroDdfUEd-ba507HkEVHA" keyword="final"/>
+        <type xmi:id="_SMroDtfUEd-ba507HkEVHA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_SMroD9fUEd-ba507HkEVHA" comments="_SMn9gtfUEd-ba507HkEVHA" targetConnectionVisual="_SMn9g9fUEd-ba507HkEVHA" name="iteratorOfObjects">
+      <modelElement href="fujaba.uml#_-yoKVNfQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_SMroENfUEd-ba507HkEVHA" name="Generics">
+        <modelElement href="fujaba.uml#_-yoxYNfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_SMroEdfUEd-ba507HkEVHA" label="+"/>
+      <outParameters xmi:id="_SMroEtfUEd-ba507HkEVHA">
+        <modelElement href="fujaba.uml#__Z7a4NfQEd-ba507HkEVHA"/>
+        <type xmi:id="_SMroE9fUEd-ba507HkEVHA" name="Iterator">
+          <modelElement href="fujaba.uml#_0_6vktfPEd-ba507HkEVHA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_SMroFNfUEd-ba507HkEVHA" comments="_SMokkNfUEd-ba507HkEVHA" targetConnectionVisual="_SMpLoNfUEd-ba507HkEVHA" name="getStartActivity">
+      <modelElement href="fujaba.uml#_-yoxYdfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_SMroFdfUEd-ba507HkEVHA" label="+"/>
+      <outParameters xmi:id="_SMroFtfUEd-ba507HkEVHA">
+        <modelElement href="fujaba.uml#__Z7a4dfQEd-ba507HkEVHA"/>
+        <type xmi:id="_SMroF9fUEd-ba507HkEVHA" name="UMLStartActivity">
+          <modelElement href="fujaba.uml#_-1l-wNfQEd-ba507HkEVHA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_SMroGNfUEd-ba507HkEVHA" comments="_SMpLodfUEd-ba507HkEVHA" targetConnectionVisual="_SMpLotfUEd-ba507HkEVHA" name="getFullName">
+      <modelElement href="fujaba.uml#_-ypYcNfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_SMroGdfUEd-ba507HkEVHA" label="+"/>
+      <outParameters xmi:id="_SMroGtfUEd-ba507HkEVHA">
+        <modelElement href="fujaba.uml#_-ypYcdfQEd-ba507HkEVHA"/>
+        <type xmi:id="_SMroG9fUEd-ba507HkEVHA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_SMroHNfUEd-ba507HkEVHA" name="toString">
+      <modelElement href="fujaba.uml#_-ypYctfQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_SMroHdfUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#_-yp_gNfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_SMroHtfUEd-ba507HkEVHA" name="Annotations">
+        <modelElement href="fujaba.uml#_-yp_gtfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_SMroH9fUEd-ba507HkEVHA" label="+"/>
+      <outParameters xmi:id="_SMroINfUEd-ba507HkEVHA">
+        <modelElement href="fujaba.uml#_-yp_gdfQEd-ba507HkEVHA"/>
+        <type xmi:id="_SMroIdfUEd-ba507HkEVHA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_SMroItfUEd-ba507HkEVHA" name="removeYou">
+      <modelElement href="fujaba.uml#_-yp_hNfQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_SMroI9fUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#_-yqmkNfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_SMroJNfUEd-ba507HkEVHA" name="Annotations">
+        <modelElement href="fujaba.uml#_-yqmkdfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_SMroJdfUEd-ba507HkEVHA" label="+"/>
+    </operations>
+    <operations xmi:id="_SMroJtfUEd-ba507HkEVHA" name="getParentElement">
+      <modelElement href="fujaba.uml#_-yqmk9fQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_SMroJ9fUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#_-yrNoNfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_SMroKNfUEd-ba507HkEVHA" name="Annotations">
+        <modelElement href="fujaba.uml#_-yrNodfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_SMroKdfUEd-ba507HkEVHA" label="+"/>
+      <outParameters xmi:id="_SMroKtfUEd-ba507HkEVHA">
+        <modelElement href="fujaba.uml#__Z8B8NfQEd-ba507HkEVHA"/>
+        <type xmi:id="_SMroK9fUEd-ba507HkEVHA" name="FElement">
+          <modelElement href="fujaba.uml#_0_0o8NfPEd-ba507HkEVHA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_SMroLNfUEd-ba507HkEVHA" comments="_SMqZwNfUEd-ba507HkEVHA" targetConnectionVisual="_SMqZwdfUEd-ba507HkEVHA" name="UMLActivityDiagram">
+      <modelElement href="fujaba.uml#__Z6MwNfQEd-ba507HkEVHA"/>
+      <keywords xmi:id="_SMroLdfUEd-ba507HkEVHA" keyword="create"/>
+      <visibility xmi:id="_SMroLtfUEd-ba507HkEVHA" label="#"/>
+      <outParameters xmi:id="_SMroL9fUEd-ba507HkEVHA">
+        <modelElement href="fujaba.uml#__Z6z1NfQEd-ba507HkEVHA"/>
+        <type xmi:id="_SMroMNfUEd-ba507HkEVHA" name="UMLActivityDiagram">
+          <modelElement href="fujaba.uml#_-yjR0NfQEd-ba507HkEVHA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_SMroMdfUEd-ba507HkEVHA" name="project">
+        <modelElement href="fujaba.uml#__Z6z0NfQEd-ba507HkEVHA"/>
+        <type xmi:id="_SMroMtfUEd-ba507HkEVHA" name="FProject">
+          <modelElement href="fujaba.uml#_0_wXgNfPEd-ba507HkEVHA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_SMroM9fUEd-ba507HkEVHA" name="persistent">
+        <modelElement href="fujaba.uml#__Z6z0dfQEd-ba507HkEVHA"/>
+        <type xmi:id="_SMroNNfUEd-ba507HkEVHA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_TCRzINfUEd-ba507HkEVHA" comments="_TCLsgNfUEd-ba507HkEVHA" targetConnectionVisual="_TCLsgdfUEd-ba507HkEVHA" name="UMLStartActivity" generalizations="_TCLFcNfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#_-1l-wNfQEd-ba507HkEVHA"/>
+    <visualAttributeProperties xmi:id="_V8fhgNfUEd-ba507HkEVHA" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_XE7wQNfUEd-ba507HkEVHA" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_TCRzIdfUEd-ba507HkEVHA" position="200.0,292.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_TCRzItfUEd-ba507HkEVHA" label="+"/>
+    <attributes xmi:id="_TCRzI9fUEd-ba507HkEVHA" name="historyKind">
+      <modelElement href="fujaba.uml#__imOsNfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_TCRzJNfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_TCRzJdfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_TCRzJtfUEd-ba507HkEVHA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_TCRzJ9fUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="&quot;&quot;" name="storyName">
+      <modelElement href="fujaba.uml#__im1wNfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_TCRzKNfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_TCRzKdfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_TCRzKtfUEd-ba507HkEVHA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_TCRzK9fUEd-ba507HkEVHA" name="revStartOfStateChart">
+      <modelElement href="fujaba.uml#__inc0NfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_TCRzLNfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_TCRzLdfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_TCRzLtfUEd-ba507HkEVHA" name="UMLClass">
+        <modelElement href="fujaba.uml#_j9CA4NfQEd-ba507HkEVHA"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_xA_CkNfUEd-ba507HkEVHA" comments="_w97ukNfUEd-ba507HkEVHA" targetConnectionVisual="_w-JxANfUEd-ba507HkEVHA" name="UMLTransitionGuard" associationsIn="_w9j7INfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#_-2k2MNfQEd-ba507HkEVHA"/>
+    <visualAttributeProperties xmi:id="_TlA3UNfVEd-ba507HkEVHA" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_UbM4cNfVEd-ba507HkEVHA" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_xBCF4NfUEd-ba507HkEVHA" position="923.0,293.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_xA_CkdfUEd-ba507HkEVHA" label="+"/>
+    <attributes xmi:id="_xA_CltfUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="0" name="NONE" staticAttribute="true">
+      <modelElement href="fujaba.uml#__jltMdfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_xA_Cl9fUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_xA_CmNfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_xA_CmdfUEd-ba507HkEVHA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_xA_CmtfUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="1" name="SUCCESS" staticAttribute="true">
+      <modelElement href="fujaba.uml#__jmUQNfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_xA_Cm9fUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_xA_CnNfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_xA_CndfUEd-ba507HkEVHA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_xA_CntfUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="2" name="FAILURE" staticAttribute="true">
+      <modelElement href="fujaba.uml#__jmUQtfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_xA_Cn9fUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_xA_CoNfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_xA_CodfUEd-ba507HkEVHA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_xA_CotfUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="3" name="EVERYTIMES" staticAttribute="true">
+      <modelElement href="fujaba.uml#__jm7UNfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_xA_Co9fUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_xA_CpNfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_xA_CpdfUEd-ba507HkEVHA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_xA_CptfUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="4" name="TERMINATION" staticAttribute="true">
+      <modelElement href="fujaba.uml#__jm7UtfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_xA_Cp9fUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_xA_CqNfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_xA_CqdfUEd-ba507HkEVHA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_xA_CqtfUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="5" name="ELSE" staticAttribute="true">
+      <modelElement href="fujaba.uml#__jniYNfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_xA_Cq9fUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_xA_CrNfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_xA_CrdfUEd-ba507HkEVHA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_xA_CrtfUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="6" name="BOOL" staticAttribute="true">
+      <modelElement href="fujaba.uml#__jniYtfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_xA_Cr9fUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_xA_CsNfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_xA_CsdfUEd-ba507HkEVHA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_xA_CstfUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="7" name="EXCEPTION" staticAttribute="true">
+      <modelElement href="fujaba.uml#__joJcdfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_xA_Cs9fUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_xA_CtNfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_xA_CtdfUEd-ba507HkEVHA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_xA_CttfUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="8" name="FINALLY" staticAttribute="true">
+      <modelElement href="fujaba.uml#__jowgNfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_xA_Ct9fUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_xA_CuNfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_xA_CudfUEd-ba507HkEVHA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_xA_CutfUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="NONE" name="type">
+      <modelElement href="fujaba.uml#__jowgtfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_xA_Cu9fUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_xA_CvNfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_xA_CvdfUEd-ba507HkEVHA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_xA_CvtfUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="null" name="boolExpr">
+      <modelElement href="fujaba.uml#__jpXkdfQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_xA_Cv9fUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__jp-oNfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_xA_CwNfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_xA_CwdfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_xA_CwtfUEd-ba507HkEVHA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_KTfX4NfxEd-Ir6yJE9YXXQ" defaultValuePresentation="3" defaultValue="null" name="revGuard">
+      <modelElement href="fujaba.uml#__jrMwNfQEd-ba507HkEVHA"/>
+      <visualProperties xmi:id="_KTfX4dfxEd-Ir6yJE9YXXQ" visible="false"/>
+      <stereotypes xmi:id="_KTpI4NfxEd-Ir6yJE9YXXQ" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__jrz0NfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_KTpI4dfxEd-Ir6yJE9YXXQ" name="Annotations">
+        <modelElement href="fujaba.uml#__jsa4dfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_KTjCRNfxEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_KTjCR9fxEd-Ir6yJE9YXXQ" label="1" max="1" min="1"/>
+      <type xmi:id="_KTjCQ9fxEd-Ir6yJE9YXXQ" name="UMLTransition">
+        <modelElement href="fujaba.uml#_-2UXgNfQEd-ba507HkEVHA"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_TCICINfUEd-ba507HkEVHA" comments="_TCFl4dfUEd-ba507HkEVHA" targetConnectionVisual="_TCFl4tfUEd-ba507HkEVHA" name="UMLNopActivity" generalizations="_TCFl4NfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#_-0r_0NfQEd-ba507HkEVHA"/>
+    <visualAttributeProperties xmi:id="_VdXVgNfUEd-ba507HkEVHA" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_TCICIdfUEd-ba507HkEVHA" position="60.0,286.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_TCICItfUEd-ba507HkEVHA" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_w9fpsNfUEd-ba507HkEVHA" comments="_w89eMNfUEd-ba507HkEVHA" targetConnectionVisual="_w9IdUNfUEd-ba507HkEVHA" name="UMLTransition" associationsIn="_w8wp4NfUEd-ba507HkEVHA _w8xQ8NfUEd-ba507HkEVHA" associationsOut="_w9j7INfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#_-2UXgNfQEd-ba507HkEVHA"/>
+    <visualAttributeProperties xmi:id="_JxUvsNfVEd-ba507HkEVHA" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_KjZF0NfVEd-ba507HkEVHA" collapsed="true" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_w9iF8NfUEd-ba507HkEVHA" position="921.0,93.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_w9fpsdfUEd-ba507HkEVHA" label="+"/>
+    <attributes xmi:id="_w9fpzNfUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="null" name="event">
+      <modelElement href="fujaba.uml#__jY44NfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_w9fpzdfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_w9fpztfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_w9fpz9fUEd-ba507HkEVHA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_w9fp0NfUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="null" name="action">
+      <modelElement href="fujaba.uml#__jZf8NfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_w9fp0dfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_w9fp0tfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_w9fp09fUEd-ba507HkEVHA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_w9fp2tfUEd-ba507HkEVHA" name="isForwardEdge">
+      <modelElement href="fujaba.uml#__jb8MdfQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_w9fp29fUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__jcjQtfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_w9fp3NfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_w9fp3dfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_w9fp3tfUEd-ba507HkEVHA" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_w9fp39fUEd-ba507HkEVHA" defaultValuePresentation="3" defaultValue="false" name="isMarked">
+      <modelElement href="fujaba.uml#__jdxYNfQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_w9fp4NfUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__jeYcNfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_w9fp4dfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_w9fp4tfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_w9fp49fUEd-ba507HkEVHA" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_KTYDINfxEd-Ir6yJE9YXXQ" defaultValuePresentation="3" defaultValue="null" name="revEntry">
+      <modelElement href="fujaba.uml#__jUAYNfQEd-ba507HkEVHA"/>
+      <visualProperties xmi:id="_KTYDIdfxEd-Ir6yJE9YXXQ" visible="false"/>
+      <stereotypes xmi:id="_KTmsoNfxEd-Ir6yJE9YXXQ" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__jUAYtfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_KTmsodfxEd-Ir6yJE9YXXQ" name="Annotations">
+        <modelElement href="fujaba.uml#__jVOgNfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_KThNEdfxEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_KThNFNfxEd-Ir6yJE9YXXQ" label="1" max="1" min="1"/>
+      <type xmi:id="_KThNENfxEd-Ir6yJE9YXXQ" name="UMLActivity">
+        <modelElement href="fujaba.uml#_-ybWANfQEd-ba507HkEVHA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_KTYDItfxEd-Ir6yJE9YXXQ" defaultValuePresentation="3" defaultValue="null" name="revExit">
+      <modelElement href="fujaba.uml#__jWcoNfQEd-ba507HkEVHA"/>
+      <visualProperties xmi:id="_KTYDI9fxEd-Ir6yJE9YXXQ" visible="false"/>
+      <stereotypes xmi:id="_KTn6wNfxEd-Ir6yJE9YXXQ" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__jWcotfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_KTn6wdfxEd-Ir6yJE9YXXQ" name="Annotations">
+        <modelElement href="fujaba.uml#__jXDsdfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_KThNFtfxEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_KTh0IdfxEd-Ir6yJE9YXXQ" label="1" max="1" min="1"/>
+      <type xmi:id="_KThNFdfxEd-Ir6yJE9YXXQ" name="UMLActivity">
+        <modelElement href="fujaba.uml#_-ybWANfQEd-ba507HkEVHA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_KTYDJNfxEd-Ir6yJE9YXXQ" defaultValuePresentation="3" defaultValue="null" name="guard">
+      <modelElement href="fujaba.uml#__jZf8tfQEd-ba507HkEVHA"/>
+      <visualProperties xmi:id="_KTYDJdfxEd-Ir6yJE9YXXQ" visible="false"/>
+      <stereotypes xmi:id="_KTqXANfxEd-Ir6yJE9YXXQ" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#__jaHAdfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_KTqXAdfxEd-Ir6yJE9YXXQ" name="Annotations">
+        <modelElement href="fujaba.uml#__jbVINfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_KTh0I9fxEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_KTh0JtfxEd-Ir6yJE9YXXQ" label="1" max="1" min="1"/>
+      <type xmi:id="_KTh0ItfxEd-Ir6yJE9YXXQ" name="UMLTransitionGuard">
+        <modelElement href="fujaba.uml#_-2k2MNfQEd-ba507HkEVHA"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_w9gQytfUEd-ba507HkEVHA" name="getGuardExprText">
+      <modelElement href="fujaba.uml#_-2dhcNfQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_w9gQy9fUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#_-2dhcdfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_w9gQzNfUEd-ba507HkEVHA" name="Annotations">
+        <modelElement href="fujaba.uml#_-2dhc9fQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_w9gQzdfUEd-ba507HkEVHA" label="+"/>
+      <outParameters xmi:id="_w9gQztfUEd-ba507HkEVHA">
+        <modelElement href="fujaba.uml#_-2dhctfQEd-ba507HkEVHA"/>
+        <type xmi:id="_w9gQz9fUEd-ba507HkEVHA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_w9gQ0NfUEd-ba507HkEVHA" name="setGuardExprText">
+      <modelElement href="fujaba.uml#_-2eIg9fQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_w9gQ0dfUEd-ba507HkEVHA" label="+"/>
+      <parameters xmi:id="_w9gQ0tfUEd-ba507HkEVHA" name="text">
+        <modelElement href="fujaba.uml#_-2eIhNfQEd-ba507HkEVHA"/>
+        <type xmi:id="_w9gQ09fUEd-ba507HkEVHA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_w9gQ1NfUEd-ba507HkEVHA" name="getGuardExpr">
+      <modelElement href="fujaba.uml#_-2evkNfQEd-ba507HkEVHA"/>
+      <stereotypes xmi:id="_w9gQ1dfUEd-ba507HkEVHA" name="LegacyStyledElement">
+        <modelElement href="fujaba.uml#_-2evkdfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_w9gQ1tfUEd-ba507HkEVHA" name="Annotations">
+        <modelElement href="fujaba.uml#_-2fWoNfQEd-ba507HkEVHA"/>
+      </stereotypes>
+      <visibility xmi:id="_w9gQ19fUEd-ba507HkEVHA" label="+"/>
+      <outParameters xmi:id="_w9gQ2NfUEd-ba507HkEVHA">
+        <modelElement href="fujaba.uml#_-2evktfQEd-ba507HkEVHA"/>
+        <type xmi:id="_w9gQ2dfUEd-ba507HkEVHA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_w9gQ2tfUEd-ba507HkEVHA" name="setGuardExpr">
+      <modelElement href="fujaba.uml#_-2fWpNfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_w9gQ29fUEd-ba507HkEVHA" label="+"/>
+      <parameters xmi:id="_w9gQ3NfUEd-ba507HkEVHA" name="expr">
+        <modelElement href="fujaba.uml#_-2fWpdfQEd-ba507HkEVHA"/>
+        <type xmi:id="_w9gQ3dfUEd-ba507HkEVHA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_az1q8NfUEd-ba507HkEVHA" comments="_aztvINfUEd-ba507HkEVHA" targetConnectionVisual="_aztvIdfUEd-ba507HkEVHA" name="UMLStatement" associationsIn="_azuWMNfUEd-ba507HkEVHA">
+    <modelElement href="fujaba.uml#_-1t6kNfQEd-ba507HkEVHA"/>
+    <visualAttributeProperties xmi:id="_k5S4ANfUEd-ba507HkEVHA" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_lOXwINfUEd-ba507HkEVHA" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_az1q8dfUEd-ba507HkEVHA" position="722.0,384.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_az1q8tfUEd-ba507HkEVHA" label="+"/>
+    <attributes xmi:id="_az1q99fUEd-ba507HkEVHA" name="statement">
+      <modelElement href="fujaba.uml#__ip5ENfQEd-ba507HkEVHA"/>
+      <visibility xmi:id="_az1q-NfUEd-ba507HkEVHA" label="+"/>
+      <cardinality xmi:id="_az1q-dfUEd-ba507HkEVHA" label="1" max="1" min="1"/>
+      <type xmi:id="_az1q-tfUEd-ba507HkEVHA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_KTafYNfxEd-Ir6yJE9YXXQ" name="activity">
+      <modelElement href="fujaba.uml#__iqgINfQEd-ba507HkEVHA"/>
+      <visualProperties xmi:id="_KTafYdfxEd-Ir6yJE9YXXQ" visible="false"/>
+      <visibility xmi:id="_KTibM9fxEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_KTibNtfxEd-Ir6yJE9YXXQ" label="1" max="1" min="1"/>
+      <type xmi:id="_KTibMtfxEd-Ir6yJE9YXXQ" name="UMLStatementActivity">
+        <modelElement href="fujaba.uml#_-10BMNfQEd-ba507HkEVHA"/>
+      </type>
+    </attributes>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

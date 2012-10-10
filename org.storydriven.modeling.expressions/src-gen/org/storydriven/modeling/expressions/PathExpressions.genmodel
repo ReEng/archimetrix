@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.storydriven.modeling.expressions/src-gen"
+    editDirectory="/org.storydriven.modeling.expressions.edit/src" editorDirectory="/org.storydriven.modeling.expressions.editor/src"
+    modelPluginID="org.storydriven.modeling.expressions" forceOverwrite="true" modelName="PathExpressions"
+    updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.storydriven.modeling.expressions.edit"
+    editorPluginID="org.storydriven.modeling.expressions.editor">
+  <genPackages prefix="PathExpressions" basePackage="org.storydriven.modeling.expressions"
+      disposableProviderFactory="true" ecorePackage="PathExpressions.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PathExpressions.ecore#//RepeatOperator">
+      <genEnumLiterals ecoreEnumLiteral="PathExpressions.ecore#//RepeatOperator/NO_REPEAT"/>
+      <genEnumLiterals ecoreEnumLiteral="PathExpressions.ecore#//RepeatOperator/AT_LEAST_ONCE"/>
+      <genEnumLiterals ecoreEnumLiteral="PathExpressions.ecore#//RepeatOperator/ARBITRARY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PathExpressions.ecore#//ImplicitPathKind">
+      <genEnumLiterals ecoreEnumLiteral="PathExpressions.ecore#//ImplicitPathKind/ANY"/>
+      <genEnumLiterals ecoreEnumLiteral="PathExpressions.ecore#//ImplicitPathKind/CONTAINMENT_SOURCE"/>
+      <genEnumLiterals ecoreEnumLiteral="PathExpressions.ecore#//ImplicitPathKind/CONTAINMENT_TARGET"/>
+    </genEnums>
+    <genClasses ecoreClass="PathExpressions.ecore#//PathExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PathExpressions.ecore#//PathExpression/pathAlternatives"/>
+    </genClasses>
+    <genClasses ecoreClass="PathExpressions.ecore#//Path">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PathExpressions.ecore#//Path/segments"/>
+    </genClasses>
+    <genClasses ecoreClass="PathExpressions.ecore#//PathSegment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PathExpressions.ecore#//PathSegment/alternatives"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PathExpressions.ecore#//PathSegment/repeatOperator"/>
+    </genClasses>
+    <genClasses ecoreClass="PathExpressions.ecore#//PathSegmentDescription">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PathExpressions.ecore#//PathSegmentDescription/restrictionList"/>
+    </genClasses>
+    <genClasses ecoreClass="PathExpressions.ecore#//RestrictionList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PathExpressions.ecore#//RestrictionList/restrictions"/>
+    </genClasses>
+    <genClasses ecoreClass="PathExpressions.ecore#//ImplicitPathDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PathExpressions.ecore#//ImplicitPathDescription/kind"/>
+    </genClasses>
+    <genClasses ecoreClass="PathExpressions.ecore#//ExplicitPathDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PathExpressions.ecore#//ExplicitPathDescription/associationName"/>
+    </genClasses>
+    <genClasses ecoreClass="PathExpressions.ecore#//TypeRestriction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PathExpressions.ecore#//TypeRestriction/forbidden"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PathExpressions.ecore#//TypeRestriction/typeName"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

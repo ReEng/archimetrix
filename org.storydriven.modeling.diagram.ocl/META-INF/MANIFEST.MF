@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OCL Source Viewer
+Bundle-SymbolicName: org.storydriven.modeling.diagram.ocl;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.storydriven.modeling.diagram.ocl.Activator
+Bundle-Vendor: StoryDriven.org
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.jface;bundle-version="3.6.1",
+ org.storydriven.modeling.diagram.custom;bundle-version="1.0.0",
+ org.eclipse.ocl.ecore;bundle-version="3.0.1",
+ org.eclipse.jface.text;bundle-version="3.6.1",
+ org.storydriven.modeling;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: org.storydriven.modeling.diagram.ocl

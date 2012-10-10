@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="ASCII"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/0.9.0" xmi:id="_AqKpMLN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_gsByQLN1Ed-vJ9Qpen_Iuw">
+  <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_gsByQLN1Ed-vJ9Qpen_Iuw"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_MLdiILN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_aOvZALNlEd-vJ9Qpen_Iuw" sourceAnchor="105.0,0.0" targetAnchor="80.0,30.0" subClass="_G2aJALN-Ed-vJ9Qpen_Iuw" superClass="_ML3KwLN-Ed-vJ9Qpen_Iuw">
+    <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_aOvZALNlEd-vJ9Qpen_Iuw"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_MLglcrN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_017nILNyEd-vJ9Qpen_Iuw" sourceAnchor="75.0,0.0" targetAnchor="50.0,30.0" source="_G2aJALN-Ed-vJ9Qpen_Iuw" target="_ML3KwLN-Ed-vJ9Qpen_Iuw">
+    <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_017nILNyEd-vJ9Qpen_Iuw"/>
+    <nameVisual xmi:id="_MLpvYrN-Ed-vJ9Qpen_Iuw" text="ContainsCollaborationBody">
+      <visualProperties xmi:id="_MOxU0LN-Ed-vJ9Qpen_Iuw" position="-11.0,-25.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_MLqWcLN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_017nIbNyEd-vJ9Qpen_Iuw" name="owningCollaboration">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_017nIbNyEd-vJ9Qpen_Iuw"/>
+      <visualProperties xmi:id="_MOwGsLN-Ed-vJ9Qpen_Iuw" position="1081.0,-138.0"/>
+      <visibility xmi:id="_ML1VkbN-Ed-vJ9Qpen_Iuw" label="+"/>
+      <cardinality xmi:id="_ML1VkLN-Ed-vJ9Qpen_Iuw" label="0..1" max="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_MLqWcbN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_018OMbNyEd-vJ9Qpen_Iuw" aggregationKind="2" name="body" navigable="true">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_018OMbNyEd-vJ9Qpen_Iuw"/>
+      <visualProperties xmi:id="_MO4CgbN-Ed-vJ9Qpen_Iuw" position="1083.0,6.0"/>
+      <visibility xmi:id="_ML18obN-Ed-vJ9Qpen_Iuw" label="+"/>
+      <cardinality xmi:id="_ML18oLN-Ed-vJ9Qpen_Iuw" label="0..1" max="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_wg7fULN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_-GmbULLwEd-uk56s-ldeog" sourceAnchor="25.0,0.0" targetAnchor="657.0,30.0" source="_whDbILN-Ed-vJ9Qpen_Iuw" target="_ML3KwLN-Ed-vJ9Qpen_Iuw">
+    <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_-GmbULLwEd-uk56s-ldeog"/>
+    <visualProperties xmi:id="_3D7SQLN-Ed-vJ9Qpen_Iuw" visible="false"/>
+    <nameVisual xmi:id="_wg97kLN-Ed-vJ9Qpen_Iuw" text="HasBindingExpression">
+      <visualProperties xmi:id="_wi9foLN-Ed-vJ9Qpen_Iuw" position="-122.0,0.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_wg97kbN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_-GnCYLLwEd-uk56s-ldeog" name="owningObject">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_-GnCYLLwEd-uk56s-ldeog"/>
+      <visualProperties xmi:id="_wi-GsLN-Ed-vJ9Qpen_Iuw" position="-73.0,-59.0"/>
+      <visibility xmi:id="_whA-4LN-Ed-vJ9Qpen_Iuw" label="+"/>
+      <cardinality xmi:id="_whAX0LN-Ed-vJ9Qpen_Iuw" label="0..1" max="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_wg-ioLN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_-GnpcLLwEd-uk56s-ldeog" aggregationKind="2" name="bindingExpression" navigable="true">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_-GnpcLLwEd-uk56s-ldeog"/>
+      <visualProperties xmi:id="_wi9forN-Ed-vJ9Qpen_Iuw" position="-93.0,27.0"/>
+      <visibility xmi:id="_whA-4rN-Ed-vJ9Qpen_Iuw" label="+"/>
+      <cardinality xmi:id="_whA-4bN-Ed-vJ9Qpen_Iuw" label="0..1" max="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_wg8GYLN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_kRB9ULNlEd-vJ9Qpen_Iuw" sourceAnchor="78.0,52.0" targetAnchor="43.0,0.0" source="_G2aJALN-Ed-vJ9Qpen_Iuw" target="_whDbILN-Ed-vJ9Qpen_Iuw">
+    <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_kRB9ULNlEd-vJ9Qpen_Iuw"/>
+    <nameVisual xmi:id="_wg-iobN-Ed-vJ9Qpen_Iuw" text="HasSource">
+      <visualProperties xmi:id="_wi-twLN-Ed-vJ9Qpen_Iuw" position="-78.0,-6.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_wg-iorN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_kRCkYLNlEd-vJ9Qpen_Iuw" name="sentCollaboration" navigable="true">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_kRCkYLNlEd-vJ9Qpen_Iuw"/>
+      <visualProperties xmi:id="_wi8RgLN-Ed-vJ9Qpen_Iuw" position="-90.0,7.0"/>
+      <visibility xmi:id="_whBl8bN-Ed-vJ9Qpen_Iuw" label="+"/>
+      <cardinality xmi:id="_whBl8LN-Ed-vJ9Qpen_Iuw" label="*" max="-1"/>
+    </sourceRole>
+    <targetRole xmi:id="_wg_JsLN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_kRDLcrNlEd-vJ9Qpen_Iuw" name="source" navigable="true">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_kRDLcrNlEd-vJ9Qpen_Iuw"/>
+      <visualProperties xmi:id="_wi84kLN-Ed-vJ9Qpen_Iuw" position="-43.0,-42.0"/>
+      <visibility xmi:id="_whBl87N-Ed-vJ9Qpen_Iuw" label="+"/>
+      <cardinality xmi:id="_whBl8rN-Ed-vJ9Qpen_Iuw" label="0..1" max="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_wg9UgLN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_wPlaALNlEd-vJ9Qpen_Iuw" sourceAnchor="108.0,52.0" targetAnchor="73.0,0.0" source="_G2aJALN-Ed-vJ9Qpen_Iuw" target="_whDbILN-Ed-vJ9Qpen_Iuw">
+    <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_wPlaALNlEd-vJ9Qpen_Iuw"/>
+    <nameVisual xmi:id="_wg_JsbN-Ed-vJ9Qpen_Iuw" text="HasTarget">
+      <visualProperties xmi:id="_wi9fobN-Ed-vJ9Qpen_Iuw" position="2.0,-7.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_wg_JsrN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_wPmBELNlEd-vJ9Qpen_Iuw" name="receivedCollaboration" navigable="true">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_wPmBELNlEd-vJ9Qpen_Iuw"/>
+      <visualProperties xmi:id="_wi7DYbN-Ed-vJ9Qpen_Iuw" position="4.0,6.0"/>
+      <visibility xmi:id="_whCNAbN-Ed-vJ9Qpen_Iuw" label="+"/>
+      <cardinality xmi:id="_whCNALN-Ed-vJ9Qpen_Iuw" label="*" max="-1"/>
+    </sourceRole>
+    <targetRole xmi:id="_wg_Js7N-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_wPmoIbNlEd-vJ9Qpen_Iuw" name="target" navigable="true">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_wPmoIbNlEd-vJ9Qpen_Iuw"/>
+      <visualProperties xmi:id="_wi84kbN-Ed-vJ9Qpen_Iuw" position="5.0,-41.0"/>
+      <visibility xmi:id="_whC0ELN-Ed-vJ9Qpen_Iuw" label="+"/>
+      <cardinality xmi:id="_whCNArN-Ed-vJ9Qpen_Iuw" label="*" max="-1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_yZ4lALN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_OBFLlbKwEd-DYIlz5ANeHA" sourceAnchor="64.0,0.0" targetAnchor="196.0,30.0" subClass="_yZ5MELN-Ed-vJ9Qpen_Iuw" superClass="_ML3KwLN-Ed-vJ9Qpen_Iuw">
+    <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_OBFLlbKwEd-DYIlz5ANeHA"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_zZtqULN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_OBFLkbKwEd-DYIlz5ANeHA" sourceAnchor="86.0,0.0" targetAnchor="365.0,30.0" subClass="_zZu4cLN-Ed-vJ9Qpen_Iuw" superClass="_ML3KwLN-Ed-vJ9Qpen_Iuw">
+    <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_OBFLkbKwEd-DYIlz5ANeHA"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_dxW-gLxVEd-Ytrd77fw2LA" sourceAnchor="186.0,0.0" targetAnchor="373.0,84.0">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#A_redefinedProperty_property"/>
+    <nameVisual xmi:id="_dxvZArxVEd-Ytrd77fw2LA" text="A_redefinedProperty_property">
+      <visualProperties xmi:id="_d1jiALxVEd-Ytrd77fw2LA" position="-166.0,41.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_d1c0ULxVEd-Ytrd77fw2LA" sourceY="-75" targetX="-187" targetY="-159"/>
+    <bendpoints xmi:id="_d1dbYLxVEd-Ytrd77fw2LA" sourceX="682" sourceY="-75" targetX="495" targetY="-159"/>
+    <bendpoints xmi:id="_d1dbYbxVEd-Ytrd77fw2LA" sourceX="682" sourceY="84" targetX="495"/>
+    <sourceRole xmi:id="_dxwAELxVEd-Ytrd77fw2LA" comments="_dx4i8LxVEd-Ytrd77fw2LA" targetConnectionVisual="_dx4i8bxVEd-Ytrd77fw2LA" name="redefinedProperty" navigable="true">
+      <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-redefinedProperty"/>
+      <visualProperties xmi:id="_d1i68LxVEd-Ytrd77fw2LA" position="1.0,-91.0"/>
+      <visibility xmi:id="_dx4i8rxVEd-Ytrd77fw2LA" label="+"/>
+      <cardinality xmi:id="_dx374LxVEd-Ytrd77fw2LA" label="*" max="-1"/>
+    </sourceRole>
+    <targetRole xmi:id="_dxwAEbxVEd-Ytrd77fw2LA">
+      <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#A_redefinedProperty_property-_ownedEnd.0"/>
+      <visualProperties xmi:id="_d1kJELxVEd-Ytrd77fw2LA" position="-186.0,-118.0"/>
+      <visibility xmi:id="_dx5KALxVEd-Ytrd77fw2LA" label="+"/>
+      <cardinality xmi:id="_dx4i87xVEd-Ytrd77fw2LA" label="*" max="-1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_dxXlkLxVEd-Ytrd77fw2LA" sourceAnchor="186.0,549.0" targetAnchor="373.0,464.0">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#A_opposite_property"/>
+    <nameVisual xmi:id="_dxwAErxVEd-Ytrd77fw2LA" text="A_opposite_property">
+      <visualProperties xmi:id="_d1lXMLxVEd-Ytrd77fw2LA" position="-119.0,-54.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_d1dbYrxVEd-Ytrd77fw2LA" sourceY="75" targetX="-187" targetY="160"/>
+    <bendpoints xmi:id="_d1eCcLxVEd-Ytrd77fw2LA" sourceX="329" sourceY="75" targetX="142" targetY="160"/>
+    <bendpoints xmi:id="_d1eCcbxVEd-Ytrd77fw2LA" sourceX="329" sourceY="-85" targetX="142"/>
+    <sourceRole xmi:id="_dxwAE7xVEd-Ytrd77fw2LA" comments="_dx5xELxVEd-Ytrd77fw2LA" targetConnectionVisual="_dx5xEbxVEd-Ytrd77fw2LA" derived="true" name="opposite" navigable="true">
+      <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-opposite"/>
+      <visualProperties xmi:id="_d1kwILxVEd-Ytrd77fw2LA" position="-30.0,43.0"/>
+      <stereotypes xmi:id="_dx6YILxVEd-Ytrd77fw2LA" name="EReference">
+        <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#_w4SVxZCmEd2CZp-K8yNJig"/>
+      </stereotypes>
+      <visibility xmi:id="_dx5xErxVEd-Ytrd77fw2LA" label="+"/>
+      <cardinality xmi:id="_dx5KAbxVEd-Ytrd77fw2LA" label="0..1" max="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_dxwnILxVEd-Ytrd77fw2LA">
+      <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#A_opposite_property-_ownedEnd.0"/>
+      <visualProperties xmi:id="_d1lXMbxVEd-Ytrd77fw2LA" position="-186.0,88.0"/>
+      <visibility xmi:id="_dx6_MLxVEd-Ytrd77fw2LA" label="+"/>
+      <cardinality xmi:id="_dx6YIbxVEd-Ytrd77fw2LA" label="0..1" max="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_dxXlkbxVEd-Ytrd77fw2LA" sourceAnchor="216.0,0.0" targetAnchor="373.0,54.0">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#A_subsettedProperty_property"/>
+    <nameVisual xmi:id="_dxwnIbxVEd-Ytrd77fw2LA" text="A_subsettedProperty_property">
+      <visualProperties xmi:id="_d1nMYLxVEd-Ytrd77fw2LA" position="-168.0,41.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_d1eCcrxVEd-Ytrd77fw2LA" sourceY="-45" targetX="-157" targetY="-99"/>
+    <bendpoints xmi:id="_d1epgLxVEd-Ytrd77fw2LA" sourceX="382" sourceY="-45" targetX="225" targetY="-99"/>
+    <bendpoints xmi:id="_d1epgbxVEd-Ytrd77fw2LA" sourceX="382" sourceY="54" targetX="225"/>
+    <sourceRole xmi:id="_dxwnIrxVEd-Ytrd77fw2LA" comments="_dx6_MrxVEd-Ytrd77fw2LA" targetConnectionVisual="_dx6_M7xVEd-Ytrd77fw2LA" name="subsettedProperty" navigable="true">
+      <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-subsettedProperty"/>
+      <visualProperties xmi:id="_d1mlULxVEd-Ytrd77fw2LA" position="41.0,-44.0"/>
+      <visibility xmi:id="_dx7mQLxVEd-Ytrd77fw2LA" label="+"/>
+      <cardinality xmi:id="_dx6_MbxVEd-Ytrd77fw2LA" label="*" max="-1"/>
+    </sourceRole>
+    <targetRole xmi:id="_dxwnI7xVEd-Ytrd77fw2LA">
+      <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#A_subsettedProperty_property-_ownedEnd.0"/>
+      <visualProperties xmi:id="_d1nMYbxVEd-Ytrd77fw2LA" position="-155.0,-90.0"/>
+      <visibility xmi:id="_dx7mQrxVEd-Ytrd77fw2LA" label="+"/>
+      <cardinality xmi:id="_dx7mQbxVEd-Ytrd77fw2LA" label="*" max="-1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_dxYMoLxVEd-Ytrd77fw2LA" sourceAnchor="216.0,549.0" targetAnchor="373.0,504.0">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#A_qualifier_associationEnd"/>
+    <nameVisual xmi:id="_dxYMobxVEd-Ytrd77fw2LA" text="A_qualifier_associationEnd">
+      <visualProperties xmi:id="_d1pBkLxVEd-Ytrd77fw2LA" position="-131.0,-14.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_d1epgrxVEd-Ytrd77fw2LA" sourceY="15" targetX="-157" targetY="60"/>
+    <bendpoints xmi:id="_d1fQkLxVEd-Ytrd77fw2LA" sourceX="172" sourceY="15" targetX="15" targetY="60"/>
+    <bendpoints xmi:id="_d1fQkbxVEd-Ytrd77fw2LA" sourceX="172" sourceY="-45" targetX="15"/>
+    <sourceRole xmi:id="_dxYzsLxVEd-Ytrd77fw2LA" comments="_dxxOMbxVEd-Ytrd77fw2LA" targetConnectionVisual="_dxx1QLxVEd-Ytrd77fw2LA" aggregationKind="2" name="qualifier" navigable="true">
+      <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-qualifier"/>
+      <visualProperties xmi:id="_d1oagLxVEd-Ytrd77fw2LA" position="30.0,17.0"/>
+      <visibility xmi:id="_dxx1QbxVEd-Ytrd77fw2LA" label="+"/>
+      <cardinality xmi:id="_dxxOMLxVEd-Ytrd77fw2LA" label="*" max="-1"/>
+    </sourceRole>
+    <targetRole xmi:id="_dxYzsbxVEd-Ytrd77fw2LA" comments="_dxycULxVEd-Ytrd77fw2LA" targetConnectionVisual="_dxycUbxVEd-Ytrd77fw2LA" name="associationEnd" navigable="true">
+      <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-associationEnd"/>
+      <visualProperties xmi:id="_d1pBkbxVEd-Ytrd77fw2LA" position="17.0,10.0"/>
+      <visibility xmi:id="_dxycUrxVEd-Ytrd77fw2LA" label="+"/>
+      <cardinality xmi:id="_dxx1QrxVEd-Ytrd77fw2LA" label="0..1" max="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxZawLxVEd-Ytrd77fw2LA" sourceItem="_dxYzsrxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxZawrxVEd-Ytrd77fw2LA" sourceItem="_dxZawbxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxaB0bxVEd-Ytrd77fw2LA" sourceItem="_dxaB0LxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxao4LxVEd-Ytrd77fw2LA" sourceItem="_dxaB0rxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxao4rxVEd-Ytrd77fw2LA" sourceItem="_dxao4bxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxgIcLxVEd-Ytrd77fw2LA" sourceItem="_dxfhYLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxgvgLxVEd-Ytrd77fw2LA" sourceItem="_dxgIcbxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxhWkbxVEd-Ytrd77fw2LA" sourceItem="_dxhWkLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxh9obxVEd-Ytrd77fw2LA" sourceItem="_dxh9oLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxiksbxVEd-Ytrd77fw2LA" sourceItem="_dxiksLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxjLwbxVEd-Ytrd77fw2LA" sourceItem="_dxjLwLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxjLw7xVEd-Ytrd77fw2LA" sourceItem="_dxjLwrxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxkZ4bxVEd-Ytrd77fw2LA" sourceItem="_dxkZ4LxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxlA8bxVEd-Ytrd77fw2LA" sourceItem="_dxlA8LxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxloAbxVEd-Ytrd77fw2LA" sourceItem="_dxloALxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxm2IbxVEd-Ytrd77fw2LA" sourceItem="_dxm2ILxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxndMbxVEd-Ytrd77fw2LA" sourceItem="_dxndMLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxoEQbxVEd-Ytrd77fw2LA" sourceItem="_dxoEQLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxorUbxVEd-Ytrd77fw2LA" sourceItem="_dxorULxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxp5cLxVEd-Ytrd77fw2LA" sourceItem="_dxpSYLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxp5crxVEd-Ytrd77fw2LA" sourceItem="_dxp5cbxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxqggbxVEd-Ytrd77fw2LA" sourceItem="_dxqggLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxrHkbxVEd-Ytrd77fw2LA" sourceItem="_dxrHkLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxruobxVEd-Ytrd77fw2LA" sourceItem="_dxruoLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxs8wLxVEd-Ytrd77fw2LA" sourceItem="_dxsVsLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxs8wrxVEd-Ytrd77fw2LA" sourceItem="_dxs8wbxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxuK4bxVEd-Ytrd77fw2LA" sourceItem="_dxuK4LxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxux8bxVEd-Ytrd77fw2LA" sourceItem="_dxux8LxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxvZAbxVEd-Ytrd77fw2LA" sourceItem="_dxvZALxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxx1QLxVEd-Ytrd77fw2LA" sourceItem="_dxxOMbxVEd-Ytrd77fw2LA" targetItem="_dxYzsLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dxycUbxVEd-Ytrd77fw2LA" sourceItem="_dxycULxVEd-Ytrd77fw2LA" targetItem="_dxYzsbxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dx0RgbxVEd-Ytrd77fw2LA" sourceItem="_dx0RgLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dx04kbxVEd-Ytrd77fw2LA" sourceItem="_dx04kLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dx1fobxVEd-Ytrd77fw2LA" sourceItem="_dx1foLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dx2GsbxVEd-Ytrd77fw2LA" sourceItem="_dx2GsLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dx2twbxVEd-Ytrd77fw2LA" sourceItem="_dx2twLxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dx4i8bxVEd-Ytrd77fw2LA" sourceItem="_dx4i8LxVEd-Ytrd77fw2LA" targetItem="_dxwAELxVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dx5xEbxVEd-Ytrd77fw2LA" sourceItem="_dx5xELxVEd-Ytrd77fw2LA" targetItem="_dxwAE7xVEd-Ytrd77fw2LA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_dx6_M7xVEd-Ytrd77fw2LA" sourceItem="_dx6_MrxVEd-Ytrd77fw2LA" targetItem="_dxwnIrxVEd-Ytrd77fw2LA"/>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxYzsrxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxZawLxVEd-Ytrd77fw2LA" text="A property is a structural feature of a classifier that characterizes instances of the classifier. A property related by ownedAttribute to a classifier (other than an association) represents an attribute and might also represent an association end. It relates an instance of the class to a value or set of values of the type of the attribute. A property related by memberEnd or its specializations to an association represents an end of the association. The type of the property is the type of the end of the association.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxZawbxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxZawrxVEd-Ytrd77fw2LA" text="A property represents a set of instances that are owned by a containing classifier instance.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-_ownedComment.1"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxaB0LxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxaB0bxVEd-Ytrd77fw2LA" text="A property has the capability of being a deployment target in a deployment relationship. This enables modeling the deployment to hierarchical nodes that have properties functioning as internal parts.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-_ownedComment.2"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxaB0rxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxao4LxVEd-Ytrd77fw2LA" text="Property represents a declared state of one or more instances in terms of a named relationship to a value or values. When a property is an attribute of a classifier, the value or values are related to the instance of the classifier by being held in slots of the instance. When a property is an association end, the value or values are related to the instance or instances at the other end(s) of the association. The range of valid values represented by the property can be controlled by setting the property's type.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-_ownedComment.3"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxao4bxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxao4rxVEd-Ytrd77fw2LA" text="Property specializes ParameterableElement to specify that a property can be exposed as a formal template parameter, and provided as an actual parameter in a binding of a template.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-_ownedComment.4"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxfhYLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxgIcLxVEd-Ytrd77fw2LA" text="Sets the navigability of this property as indicated.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-setIsNavigable-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxgIcbxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxgvgLxVEd-Ytrd77fw2LA" text="Retrieves the other end of the (binary) association in which this property is a member end.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-getOtherEnd-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxhWkLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxhWkbxVEd-Ytrd77fw2LA" text="Sets the default value for this property to the specified Boolean value.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-setBooleanDefaultValue-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxh9oLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxh9obxVEd-Ytrd77fw2LA" text="Sets the default value for this property to the specified integer value.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-setIntegerDefaultValue-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxiksLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxiksbxVEd-Ytrd77fw2LA" text="Sets the default value for this property to the specified string value.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-setStringDefaultValue-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxjLwLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxjLwbxVEd-Ytrd77fw2LA" text="Sets the default value for this property to the specified unlimited natural value.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-setUnlimitedNaturalDefaultValue-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxjLwrxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxjLw7xVEd-Ytrd77fw2LA" text="Sets the default value for this property to the null value.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-setNullDefaultValue-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxkZ4LxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxkZ4bxVEd-Ytrd77fw2LA" text="The query isAttribute() is true if the Property is defined as an attribute of some classifier.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-isAttribute-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxlA8LxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxlA8bxVEd-Ytrd77fw2LA" text="If this property is owned by a class, associated with a binary association, and the other end of the association is also owned by a class, then opposite gives the other end.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-opposite.1-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxloALxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxloAbxVEd-Ytrd77fw2LA" text="The value of isComposite is true only if aggregation is composite.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-isComposite.1-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxm2ILxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxm2IbxVEd-Ytrd77fw2LA" text="The query isConsistentWith() specifies, for any two Properties in a context in which redefinition is possible, whether redefinition would be logically consistent. A redefining property is consistent with a redefined property if the type of the redefining property conforms to the type of the redefined property, the multiplicity of the redefining property (if specified) is contained in the multiplicity of the redefined property, and the redefining property is derived if the redefined property is derived.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-isConsistentWith-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxndMLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxndMbxVEd-Ytrd77fw2LA" text="The query subsettingContext() gives the context for subsetting a property. It consists, in the case of an attribute, of the corresponding classifier, and in the case of an association end, all of the classifiers at the other ends.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-subsettingContext-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxoEQLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxoEQbxVEd-Ytrd77fw2LA" text="The query isNavigable() indicates whether it is possible to navigate across the property.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-isNavigable-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxorULxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxorUbxVEd-Ytrd77fw2LA" text="The query isCompatibleWith() determines if this parameterable element is compatible with the specified parameterable element. By default parameterable element P is compatible with parameterable element Q if the kind of P is the same or a subtype as the kind of Q. In addition, for properties, the type must be conformant with the type of the specified parameterable element.&#xD;&#xA;">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-isCompatibleWith-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxpSYLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxp5cLxVEd-Ytrd77fw2LA" text="If isDerived is true, the value of the attribute is derived from information elsewhere.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-isDerived-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxp5cbxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxp5crxVEd-Ytrd77fw2LA" text="Specifies whether the Property is derived, i.e., whether its value or values can be computed from other information.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-isDerived-_ownedComment.1"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxqggLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxqggbxVEd-Ytrd77fw2LA" text="If isReadOnly is true, the attribute may not be written to after initialization.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-isReadOnly-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxrHkLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxrHkbxVEd-Ytrd77fw2LA" text="If true, the attribute may only be read, and not written.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-isReadOnly-_ownedComment.1"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxruoLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxruobxVEd-Ytrd77fw2LA" text="Specifies whether the property is derived as the union of all of the properties that are constrained to subset it.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-isDerivedUnion-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxsVsLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxs8wLxVEd-Ytrd77fw2LA" text="Specifies a String that represents a value to be used when no argument is supplied for the Property.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-default-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxs8wbxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxs8wrxVEd-Ytrd77fw2LA" text="A String that is evaluated to give a default value for the Property when an object of the owning Classifier is instantiated.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-default-_ownedComment.1"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxuK4LxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxuK4bxVEd-Ytrd77fw2LA" text="Specifies the kind of aggregation that applies to the Property.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-aggregation-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxux8LxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxux8bxVEd-Ytrd77fw2LA" text="If isComposite is true, the object containing the attribute is a container for the object or value contained in the attribute.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-isComposite-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxvZALxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxvZAbxVEd-Ytrd77fw2LA" text="This is a derived value, indicating whether the aggregation of the Property is composite or not.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-isComposite-_ownedComment.1"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxxOMbxVEd-Ytrd77fw2LA" item="_dxYzsLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxx1QLxVEd-Ytrd77fw2LA" text="An optional list of ordered qualifier attributes for the end. If the list is empty, then the Association is not qualified.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-qualifier-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dxycULxVEd-Ytrd77fw2LA" item="_dxYzsbxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dxycUbxVEd-Ytrd77fw2LA" text="Designates the optional association end that owns a qualifier attribute.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-associationEnd-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dx0RgLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dx0RgbxVEd-Ytrd77fw2LA" text="The new navigability.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-setIsNavigable-isNavigable-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dx04kLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dx04kbxVEd-Ytrd77fw2LA" text="The new default value.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-setBooleanDefaultValue-value-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dx1foLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dx1fobxVEd-Ytrd77fw2LA" text="The new default value.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-setIntegerDefaultValue-value-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dx2GsLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dx2GsbxVEd-Ytrd77fw2LA" text="The new default value.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-setStringDefaultValue-value-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dx2twLxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dx2twbxVEd-Ytrd77fw2LA" text="The new default value.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-setUnlimitedNaturalDefaultValue-value-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dx4i8LxVEd-Ytrd77fw2LA" item="_dxwAELxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dx4i8bxVEd-Ytrd77fw2LA" text="References the properties that are redefined by this property.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-redefinedProperty-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dx5xELxVEd-Ytrd77fw2LA" item="_dxwAE7xVEd-Ytrd77fw2LA" sourceConnectionVisual="_dx5xEbxVEd-Ytrd77fw2LA" text="In the case where the property is one navigable end of a binary association with both ends navigable, this gives the other end.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-opposite-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_dx6_MrxVEd-Ytrd77fw2LA" item="_dxwnIrxVEd-Ytrd77fw2LA" sourceConnectionVisual="_dx6_M7xVEd-Ytrd77fw2LA" text="References the properties of which this property is constrained to be a subset.">
+    <modelElement href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property-subsettedProperty-_ownedComment.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_yZ5MELN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#edf3a797-087e-4eac-87e7-8accaceecece" name="ExceptionExpression" generalizations="_yZ4lALN-Ed-vJ9Qpen_Iuw">
+    <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#edf3a797-087e-4eac-87e7-8accaceecece"/>
+    <visualAttributeProperties xmi:id="_yZ5zILN-Ed-vJ9Qpen_Iuw" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_yZ6aMLN-Ed-vJ9Qpen_Iuw" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_yZ6aMbN-Ed-vJ9Qpen_Iuw" collapsed="true" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_yZ5MEbN-Ed-vJ9Qpen_Iuw" position="142.0,350.0" visible="false"/>
+    <visibility xmi:id="_yZ5MErN-Ed-vJ9Qpen_Iuw" label="+"/>
+    <attributes xmi:id="_PuvbULw0Ed-Ytrd77fw2LA" name="variableName">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_M6uDsLbSEd-5oaYsE5oIPw"/>
+      <visibility xmi:id="_Puwpcbw0Ed-Ytrd77fw2LA" label="+"/>
+      <cardinality xmi:id="_Puwpcrw0Ed-Ytrd77fw2LA" label="1" max="1" min="1"/>
+      <type xmi:id="_PuwpcLw0Ed-Ytrd77fw2LA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_05BMcNfGEd-Ir6yJE9YXXQ" name="exceptionType">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_8PaDQrK7Ed-uk56s-ldeog"/>
+      <visibility xmi:id="_05LkgtfGEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_05Lkg9fGEd-Ir6yJE9YXXQ" label="*" max="-1"/>
+      <type xmi:id="_05LkgdfGEd-Ir6yJE9YXXQ" name="EClassifier">
+        <modelElement href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EClassifier"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_zZu4cLN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#7a2dfa9b-9ec9-4f01-a063-e82beed9dafd" name="StringExpression" generalizations="_zZtqULN-Ed-vJ9Qpen_Iuw">
+    <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#7a2dfa9b-9ec9-4f01-a063-e82beed9dafd"/>
+    <visualAttributeProperties xmi:id="_zZwtoLN-Ed-vJ9Qpen_Iuw" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_zZxUsLN-Ed-vJ9Qpen_Iuw" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_zZxUsbN-Ed-vJ9Qpen_Iuw" collapsed="true" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_zZu4cbN-Ed-vJ9Qpen_Iuw" position="289.0,339.0" visible="false"/>
+    <visibility xmi:id="_zZu4crN-Ed-vJ9Qpen_Iuw" label="+"/>
+    <attributes xmi:id="_zZu4c7N-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#803289de-a749-4baf-89ee-cd27edf2172e" name="expression">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#803289de-a749-4baf-89ee-cd27edf2172e"/>
+      <visibility xmi:id="_zZu4dLN-Ed-vJ9Qpen_Iuw" label="+"/>
+      <cardinality xmi:id="_zZu4dbN-Ed-vJ9Qpen_Iuw" label="1" max="1" min="1"/>
+      <type xmi:id="_zZu4drN-Ed-vJ9Qpen_Iuw" abstractModelReference="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_zZu4d7N-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#d160b3a1-439c-4b18-abf9-18e634900a68" name="language">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#d160b3a1-439c-4b18-abf9-18e634900a68"/>
+      <visibility xmi:id="_zZu4eLN-Ed-vJ9Qpen_Iuw" label="+"/>
+      <cardinality xmi:id="_zZvfgLN-Ed-vJ9Qpen_Iuw" label="1" max="1" min="1"/>
+      <type xmi:id="_zZvfgbN-Ed-vJ9Qpen_Iuw" abstractModelReference="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_i8tpELxVEd-Ytrd77fw2LA" name="EAttribute">
+    <modelElement href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EAttribute"/>
+    <visualAttributeProperties xmi:id="_i8veQLxVEd-Ytrd77fw2LA" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_i8wFULxVEd-Ytrd77fw2LA" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_i8wsYLxVEd-Ytrd77fw2LA" collapsed="true" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_i8tpEbxVEd-Ytrd77fw2LA" position="901.0,547.0"/>
+    <stereotypes xmi:id="_i8tpErxVEd-Ytrd77fw2LA" name="Metaclass">
+      <modelElement href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#_iQozosYdEduPJbEsMYXjUQ"/>
+    </stereotypes>
+    <visibility xmi:id="_i8tpE7xVEd-Ytrd77fw2LA" label="+"/>
+    <attributes xmi:id="_i8tpFLxVEd-Ytrd77fw2LA" name="id">
+      <modelElement href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EAttribute-id"/>
+      <stereotypes xmi:id="_i8tpFbxVEd-Ytrd77fw2LA" name="EAttribute">
+        <modelElement href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#_uuJ5tMYcEduPJbEsMYXjUQ"/>
+      </stereotypes>
+      <visibility xmi:id="_i8tpFrxVEd-Ytrd77fw2LA" label="+"/>
+      <cardinality xmi:id="_i8tpF7xVEd-Ytrd77fw2LA" label="0..1" max="1"/>
+      <type xmi:id="_i8tpGLxVEd-Ytrd77fw2LA" name="EBoolean">
+        <modelElement href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EBoolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_05DBoNfGEd-Ir6yJE9YXXQ" derived="true" name="eAttributeType">
+      <modelElement href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EAttribute-eAttributeType"/>
+      <stereotypes xmi:id="_05LkhtfGEd-Ir6yJE9YXXQ" name="EReference">
+        <modelElement href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#_uuJ5tcYcEduPJbEsMYXjUQ"/>
+      </stereotypes>
+      <visibility xmi:id="_05LkhdfGEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_05Lkh9fGEd-Ir6yJE9YXXQ" label="1" max="1" min="1"/>
+      <type xmi:id="_05LkhNfGEd-Ir6yJE9YXXQ" name="EDataType">
+        <modelElement href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDataType"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_whDbILN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#c0f72d07-a643-4da9-859b-d95cfca69eee" name="Object" associationsIn="_wg8GYLN-Ed-vJ9Qpen_Iuw _wg9UgLN-Ed-vJ9Qpen_Iuw" associationsOut="_wg7fULN-Ed-vJ9Qpen_Iuw">
+    <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#c0f72d07-a643-4da9-859b-d95cfca69eee"/>
+    <visualAttributeProperties xmi:id="_whHskLN-Ed-vJ9Qpen_Iuw" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_whIToLN-Ed-vJ9Qpen_Iuw" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_whI6sLN-Ed-vJ9Qpen_Iuw" collapsed="true" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_whDbIbN-Ed-vJ9Qpen_Iuw" position="190.0,564.0" size="87.0,49.0"/>
+    <visibility xmi:id="_whDbIrN-Ed-vJ9Qpen_Iuw" label="+"/>
+    <attributes xmi:id="_whDbI7N-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#60d4fc4e-8a40-44a9-9913-ea51221db1a8" defaultValue="UNBOUND" name="bound">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#60d4fc4e-8a40-44a9-9913-ea51221db1a8"/>
+      <visibility xmi:id="_whDbJLN-Ed-vJ9Qpen_Iuw" label="+"/>
+      <cardinality xmi:id="_whDbJbN-Ed-vJ9Qpen_Iuw" label="1" max="1" min="1"/>
+      <type xmi:id="_whDbJrN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#37d4c959-090c-411e-b62f-a01a5acd650c" name="BoundType">
+        <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#37d4c959-090c-411e-b62f-a01a5acd650c"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_whDbJ7N-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#8af9ddea-a5c4-4017-b709-364964a433cf" defaultValue="NONE" name="matchingType">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#8af9ddea-a5c4-4017-b709-364964a433cf"/>
+      <visibility xmi:id="_whDbKLN-Ed-vJ9Qpen_Iuw" label="+"/>
+      <cardinality xmi:id="_whDbKbN-Ed-vJ9Qpen_Iuw" label="1" max="1" min="1"/>
+      <type xmi:id="_whDbKrN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#5d5c7278-e6e7-4956-ab18-44332c8cc462" name="MatchingType">
+        <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#5d5c7278-e6e7-4956-ab18-44332c8cc462"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_whDbK7N-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#35801d86-4de1-4fb5-becb-10e3f92a3afb" defaultValue="NONE" name="modifier">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#35801d86-4de1-4fb5-becb-10e3f92a3afb"/>
+      <visibility xmi:id="_whDbLLN-Ed-vJ9Qpen_Iuw" label="+"/>
+      <cardinality xmi:id="_whDbLbN-Ed-vJ9Qpen_Iuw" label="1" max="1" min="1"/>
+      <type xmi:id="_whDbLrN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#74737b3a-1725-4fee-b753-d7458eda7189" name="Modifier">
+        <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#74737b3a-1725-4fee-b753-d7458eda7189"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_05AlYNfGEd-Ir6yJE9YXXQ" name="pattern">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#97f7e21a-6cb3-4e71-a689-faf97d6546e6"/>
+      <visibility xmi:id="_05JvUdfGEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_05JvUtfGEd-Ir6yJE9YXXQ" label="0..1" max="1"/>
+      <type xmi:id="_05JvUNfGEd-Ir6yJE9YXXQ" name="ObjectPattern">
+        <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#762a7829-3f0c-4d56-9644-9e12504ce2f4"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_05AlYdfGEd-Ir6yJE9YXXQ" name="ownedAttributeExpression">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#1d75eb5a-c292-4676-951a-809ab4091e6b"/>
+      <visibility xmi:id="_05JvVNfGEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_05JvVdfGEd-Ir6yJE9YXXQ" label="*" max="-1"/>
+      <type xmi:id="_05JvU9fGEd-Ir6yJE9YXXQ" name="AttributeExpression">
+        <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#79151c76-8e24-4f76-8143-e713373a8b68"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_05AlYtfGEd-Ir6yJE9YXXQ" name="linkToTarget">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#e4084d63-9d8b-47a7-9d3e-34aeb0b09440"/>
+      <visibility xmi:id="_05KWYdfGEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_05KWYtfGEd-Ir6yJE9YXXQ" label="*" max="-1"/>
+      <type xmi:id="_05KWYNfGEd-Ir6yJE9YXXQ" name="Link">
+        <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#70a57767-3c96-4cff-87d3-8391bb039afc"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_05AlY9fGEd-Ir6yJE9YXXQ" name="linkToSource">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#f59aeab8-59c7-4a35-bd9b-c05bda92d924"/>
+      <visibility xmi:id="_05KWZNfGEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_05KWZdfGEd-Ir6yJE9YXXQ" label="*" max="-1"/>
+      <type xmi:id="_05KWY9fGEd-Ir6yJE9YXXQ" name="Link">
+        <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#70a57767-3c96-4cff-87d3-8391bb039afc"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_05AlZNfGEd-Ir6yJE9YXXQ" name="classifier">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#5f30323f-8a08-46cd-841e-9f1733bc5943"/>
+      <stereotypes xmi:id="_05KWaNfGEd-Ir6yJE9YXXQ" name="EReference">
+        <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_DyGToLy3Ed-eCY_Peu5fFw"/>
+      </stereotypes>
+      <visibility xmi:id="_05KWZ9fGEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_05K9cNfGEd-Ir6yJE9YXXQ" label="1" max="1" min="1"/>
+      <type xmi:id="_05KWZtfGEd-Ir6yJE9YXXQ" name="EClass">
+        <modelElement href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EClass"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_05AlZdfGEd-Ir6yJE9YXXQ" name="bindingExpression">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_-GnpcLLwEd-uk56s-ldeog"/>
+      <visualProperties xmi:id="_05AlZtfGEd-Ir6yJE9YXXQ" visible="false"/>
+      <visibility xmi:id="_05K9ctfGEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_05K9c9fGEd-Ir6yJE9YXXQ" label="0..1" max="1"/>
+      <type xmi:id="_05K9cdfGEd-Ir6yJE9YXXQ" name="Expression">
+        <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#80a7a6ae-11bf-46c7-8da0-3ce6887b9a58"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_05AlZ9fGEd-Ir6yJE9YXXQ" name="sentCollaboration">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_kRCkYLNlEd-vJ9Qpen_Iuw"/>
+      <visualProperties xmi:id="_05AlaNfGEd-Ir6yJE9YXXQ" visible="false"/>
+      <visibility xmi:id="_05K9ddfGEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_05K9dtfGEd-Ir6yJE9YXXQ" label="*" max="-1"/>
+      <type xmi:id="_05K9dNfGEd-Ir6yJE9YXXQ" name="Collaboration">
+        <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_VIfQ4LNlEd-vJ9Qpen_Iuw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_05AladfGEd-Ir6yJE9YXXQ" name="receivedCollaboration">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_wPmBELNlEd-vJ9Qpen_Iuw"/>
+      <visualProperties xmi:id="_05AlatfGEd-Ir6yJE9YXXQ" visible="false"/>
+      <visibility xmi:id="_05K9eNfGEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_05LkgNfGEd-Ir6yJE9YXXQ" label="*" max="-1"/>
+      <type xmi:id="_05K9d9fGEd-Ir6yJE9YXXQ" name="Collaboration">
+        <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_VIfQ4LNlEd-vJ9Qpen_Iuw"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_G2aJALN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_VIfQ4LNlEd-vJ9Qpen_Iuw" name="Collaboration" associationsOut="_MLglcrN-Ed-vJ9Qpen_Iuw _wg8GYLN-Ed-vJ9Qpen_Iuw _wg9UgLN-Ed-vJ9Qpen_Iuw" generalizations="_MLdiILN-Ed-vJ9Qpen_Iuw">
+    <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_VIfQ4LNlEd-vJ9Qpen_Iuw"/>
+    <visualAttributeProperties xmi:id="_lPCxcNfHEd-Ir6yJE9YXXQ" attributeName="attributeCompartment"/>
+    <visualProperties xmi:id="_G2bXILN-Ed-vJ9Qpen_Iuw" position="155.0,368.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_G2aJAbN-Ed-vJ9Qpen_Iuw" label="+"/>
+    <attributes xmi:id="_G2aJArN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#_FEX5wLN1Ed-vJ9Qpen_Iuw" name="forEach">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_FEX5wLN1Ed-vJ9Qpen_Iuw"/>
+      <visibility xmi:id="_G2aJA7N-Ed-vJ9Qpen_Iuw" label="+"/>
+      <cardinality xmi:id="_G2aJBLN-Ed-vJ9Qpen_Iuw" label="1" max="1" min="1"/>
+      <type xmi:id="_G2aJBbN-Ed-vJ9Qpen_Iuw" abstractModelReference="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean" name="Boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_049iENfGEd-Ir6yJE9YXXQ" name="source">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_kRDLcrNlEd-vJ9Qpen_Iuw"/>
+      <visualProperties xmi:id="_049iEdfGEd-Ir6yJE9YXXQ" visible="false"/>
+      <visibility xmi:id="_05GsAdfGEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_05GsAtfGEd-Ir6yJE9YXXQ" label="0..1" max="1"/>
+      <type xmi:id="_05GsANfGEd-Ir6yJE9YXXQ" name="Object">
+        <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#c0f72d07-a643-4da9-859b-d95cfca69eee"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_049iEtfGEd-Ir6yJE9YXXQ" name="target">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_wPmoIbNlEd-vJ9Qpen_Iuw"/>
+      <visualProperties xmi:id="_049iE9fGEd-Ir6yJE9YXXQ" visible="false"/>
+      <visibility xmi:id="_05HTEdfGEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_05HTEtfGEd-Ir6yJE9YXXQ" label="*" max="-1"/>
+      <type xmi:id="_05HTENfGEd-Ir6yJE9YXXQ" name="Object">
+        <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#c0f72d07-a643-4da9-859b-d95cfca69eee"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_04-JINfGEd-Ir6yJE9YXXQ" name="body">
+      <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#_018OMbNyEd-vJ9Qpen_Iuw"/>
+      <visualProperties xmi:id="_04-JIdfGEd-Ir6yJE9YXXQ" visible="false"/>
+      <visibility xmi:id="_05HTFNfGEd-Ir6yJE9YXXQ" label="+"/>
+      <cardinality xmi:id="_05HTFdfGEd-Ir6yJE9YXXQ" label="0..1" max="1"/>
+      <type xmi:id="_05HTE9fGEd-Ir6yJE9YXXQ" name="Expression">
+        <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#80a7a6ae-11bf-46c7-8da0-3ce6887b9a58"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_ML3KwLN-Ed-vJ9Qpen_Iuw" abstractModelReference="platform:/resource/SDMMetaModel/sdm.uml#80a7a6ae-11bf-46c7-8da0-3ce6887b9a58" name="Expression" abstractClass="true" associationsIn="_MLglcrN-Ed-vJ9Qpen_Iuw _wg7fULN-Ed-vJ9Qpen_Iuw" subclassedBy="_MLdiILN-Ed-vJ9Qpen_Iuw _yZ4lALN-Ed-vJ9Qpen_Iuw _zZtqULN-Ed-vJ9Qpen_Iuw">
+    <modelElement href="platform:/resource/org.storydriven.modeling/model/sdm.uml#80a7a6ae-11bf-46c7-8da0-3ce6887b9a58"/>
+    <visualProperties xmi:id="_ML3KwbN-Ed-vJ9Qpen_Iuw" position="180.0,221.0" size="173.0,30.0"/>
+    <visibility xmi:id="_ML3KwrN-Ed-vJ9Qpen_Iuw" label="+"/>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

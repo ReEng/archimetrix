@@ -1,0 +1,33 @@
+grammar org.storydriven.modeling.expressions.PathExpressions with org.eclipse.xtext.common.Terminals
+
+generate pathExpressions "http://www.storydriven.org/modeling/expressions/PathExpressions"
+
+PathExpression:
+	pathAlternatives+=Path | '(' pathAlternatives+=Path ')' ( '|' '(' pathAlternatives+=Path ')' )+;
+
+Path:
+	segments+=PathSegment ( '.' segments+=PathSegment )*;
+	
+PathSegment:
+	( alternatives+=PathSegmentDescription | '(' alternatives+=PathSegmentDescription ( '|' alternatives+=PathSegmentDescription )+ ')' ) ( repeatOperator=RepeatOperator )?;
+	
+PathSegmentDescription:
+	( ImplicitPathDescription | ExplicitPathDescription ) ( restrictionList=RestrictionList )?;
+
+RestrictionList:
+	'[' restrictions+=TypeRestriction ( ',' restrictions+=TypeRestriction )* ']';
+
+enum RepeatOperator:
+	NO_REPEAT | AT_LEAST_ONCE = '+' | ARBITRARY = '*';
+
+ImplicitPathDescription:
+	kind=ImplicitPathKind;
+
+enum ImplicitPathKind:
+	ANY = '-->' | CONTAINMENT_SOURCE = '<>-->' | CONTAINMENT_TARGET = '--><>';
+
+ExplicitPathDescription:
+	associationName=ID;
+
+TypeRestriction:
+	( forbidden?='!' )? typeName=ID;

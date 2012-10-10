@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>org.storydriven.modeling.doc</name>
+	<comment></comment>
+	<projects>
+		<project>org.storydriven.modeling</project>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+</projectDescription>
