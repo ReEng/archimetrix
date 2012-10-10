@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+  <extension point="org.eclipse.ui.newWizards" >
+    <category name="Fujaba" id="de.fujaba" />
+    <category name="Diagrams" id="de.fujaba.diagrams"
+         parentCategory="de.fujaba"/>
+
+    <wizard
+           category="de.fujaba"
+           class="de.fujaba.newwizard.model.FujabaModelNewWizard"
+           icon="icons/newfujabamodel.gif"
+           id="de.fujaba.muml.modelwizard.FujabaNewModelWizardID"
+           name="Fujaba Model">
+         <description>
+            Creates a new Fujaba model file
+         </description>
+    </wizard>
+    
+  </extension>
+
+</plugin>

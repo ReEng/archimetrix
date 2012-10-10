@@ -1,0 +1,90 @@
+-- @nsURI GM=http://www.eclipse.org/gmf/2009/GenModel
+module sdm;
+create OUT : GM refining IN : GM;
+
+rule GenCompartment1 {
+	from
+		gcin : GM!GenCompartment (
+			gcin.editPartClassName = 'StoryPatternStoryPatternCompartementEditPart'
+		)
+	to
+		gcout : GM!GenCompartment (
+			listLayout <- false
+			canCollapse <- true
+		)
+}
+
+rule GenCompartment2 {
+	from
+		gcin : GM!GenCompartment (
+			gcin.editPartClassName = 'MatchingPatternStoryPatternCompartementEditPart'
+		)
+	to
+		gcout : GM!GenCompartment (
+			listLayout <- false
+		)
+}
+
+rule GenNodeLabel1 {
+	from
+		gnlin : GM!GenNodeLabel (
+			if (gnlin.viewmap.oclIsKindOf(GM!ParentAssignedViewmap)) then
+				gnlin.viewmap.getterName = 'getFigureObjectVariableModifierLabel'
+			else
+				false
+			endif
+		)
+	to
+		gnlout : GM!GenNodeLabel (
+			editPartClassName <- 'ObjectVariableBindingOperatorEditPart',
+			itemSemanticEditPolicyClassName <- 'ObjectVariableBindingOperatorItemSemanticEditPolicy'
+		)
+}
+
+rule GenNodeLabel2 {
+	from
+		gnlin : GM!GenNodeLabel (
+			if (gnlin.viewmap.oclIsKindOf(GM!ParentAssignedViewmap)) then
+				gnlin.viewmap.getterName = 'getFigureObjectVariableClassifierLabel'
+			else
+				false
+			endif
+		)
+	to
+		gnlout : GM!GenNodeLabel (
+			editPartClassName <- 'ObjectVariableClassifierLabelEditPart',
+			itemSemanticEditPolicyClassName <- 'ObjectVariableClassifierItemSemanticEditPolicy'
+		)
+}
+
+rule GenNodeLabel3 {
+	from
+		gnlin : GM!GenNodeLabel (
+			if (gnlin.viewmap.oclIsKindOf(GM!ParentAssignedViewmap)) then
+				gnlin.viewmap.getterName = 'getFigurePrimitiveVariableClassifierLabel'
+			else
+				false
+			endif
+		)
+	to
+		gnlout : GM!GenNodeLabel (
+			editPartClassName <- 'PrimitiveVariableClassifierLabelEditPart',
+			itemSemanticEditPolicyClassName <- 'PrimitiveVariableClassifierLabelItemSemanticEditPolicy'
+		)
+}
+
+rule GenLinkLabel1 {
+	from
+		gllin : GM!GenLinkLabel (
+			if (gllin.viewmap.oclIsKindOf(GM!ParentAssignedViewmap)) then
+				gllin.viewmap.getterName = 'getFigureActivityEdgeGuardFigure'
+			else
+				false
+			endif
+		)
+	to
+		gllout : GM!GenLinkLabel (
+			editPartClassName <- 'ActivityEdgeGuardConstraintLabelEditPart',
+			itemSemanticEditPolicyClassName <- 'ActivityEdgeGuardConstraintLabelItemSemanticEditPolicy'
+		)
+}

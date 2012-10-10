@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+   <extension-point id="modelelementcategory" name="modelelementcategory" schema="schema/modelelementcategory.exsd"/>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="de.fujaba.modelinstance.ModelinstancePackage"
+            genModel="model/modelinstance.genmodel"
+            uri="http://de.fujaba.modelinstance">
+      </package>
+   </extension>
+
+</plugin>

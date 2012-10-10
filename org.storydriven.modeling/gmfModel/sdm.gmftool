@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmftool:ToolRegistry xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <palette
+      title="modelingPalette">
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Story Pattern Tools"
+        collapsible="true"
+        active="//@palette/@tools.0">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Modifying StoryNode"
+          description="create new ModifyingStoryNode">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/ModifyingStoryNode.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/ModifyingStoryNode.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Object Variable Node"
+          description="create new ObjectVariableNode">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/ObjectVariableNode.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/ObjectVariableNode.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Primitive Variable Node"
+          description="create new PrimitveVariableNode">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/PrimitiveVariableNode.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/PrimitiveVariableNode.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Attribute Assignment"
+          description="create new AttributeAssignment">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/AttributeAssignment.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/AttributeAssignment.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Link Variable"
+          description="Create new LinkVariable">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/LinkVariable.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/LinkVariable.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+      </tools>
+    </tools>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Activity Node Tools"
+        collapsible="true"
+        active="//@palette/@tools.1">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Activity Edge"
+          description="Create new ActivityEdge">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/ActivityEdge.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/ActivityEdge.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Start Node"
+          description="create new StartNode">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/StartNode.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/StartNode.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Stop Node"
+          description="create new StopNode">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/StopNode.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/StopNode.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Junction Node"
+          description="create new JunctionNode">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/JunctionNode.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/objects16/JunctionNode.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Structured Node"
+          description="create new StructuredNode">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/StructuredNode.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/StructuredNode.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Statement Node"
+          description="create new StatementNode">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/StatementNode.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/StatementNode.gif"
+            bundle="org.storydriven.modeling.diagram.custom"/>
+      </tools>
+    </tools>
+  </palette>
+</gmftool:ToolRegistry>

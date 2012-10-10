@@ -1,0 +1,7 @@
+# Tracing options for the org.storydriven.modeling.diagram plug-in
+
+# Common issues
+org.storydriven.modeling.diagram/debug=false
+
+# Visual IDs
+org.storydriven.modeling.diagram/debug/visualID=false

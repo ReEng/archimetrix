@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.fujaba.modelinstance/src-gen"
+    modelPluginID="de.fujaba.modelinstance" modelName="Modelinstance" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.storydriven.modeling/model/sdm.uml.genmodel#//modeling">
+  <foreignModel>modelinstance.ecore</foreignModel>
+  <genPackages prefix="Modelinstance" basePackage="de.fujaba" disposableProviderFactory="true"
+      ecorePackage="modelinstance.ecore#/">
+    <genClasses ecoreClass="modelinstance.ecore#//RootNode">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelinstance.ecore#//RootNode/categories"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modelinstance.ecore#//RootNode/ecoreDataTypes"/>
+    </genClasses>
+    <genClasses ecoreClass="modelinstance.ecore#//ModelElementCategory">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelinstance.ecore#//ModelElementCategory/modelElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelinstance.ecore#//ModelElementCategory/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelinstance.ecore#//ModelElementCategory/name"/>
+      <genOperations ecoreOperation="modelinstance.ecore#//ModelElementCategory/isValidElement">
+        <genParameters ecoreParameter="modelinstance.ecore#//ModelElementCategory/isValidElement/object"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

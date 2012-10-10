@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+   <extension-point id="expressionLanguagesExtension" name="Expression Languages Extension" schema="schema/expressionLanguagesExtension.exsd"/>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ns.storydriven.org/sdm/0.1.0"
+            class="org.storydriven.modeling.SDMPackage"
+            genModel="model/sdm.uml.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ns.storydriven.org/sdm/expressions/0.1.0"
+            class="org.storydriven.modeling.expressions.ExpressionsPackage"
+            genModel="model/sdm.uml.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ns.storydriven.org/sdm/patterns/0.1.0"
+            class="org.storydriven.modeling.patterns.PatternsPackage"
+            genModel="model/sdm.uml.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ns.storydriven.org/sdm/activities/0.1.0"
+            class="org.storydriven.modeling.activities.ActivitiesPackage"
+            genModel="model/sdm.uml.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ns.storydriven.org/sdm/templates/0.1.0"
+            class="org.storydriven.modeling.templates.TemplatesPackage"
+            genModel="model/sdm.uml.genmodel"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="org.storydriven.modeling.activities.expressions.ExpressionsPackage"
+            uri="org.storydriven.modeling.expressions">
+      </package>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="org.storydriven.modeling.patterns.expressions.ExpressionsPackage"
+            uri="org.storydriven.modeling.pattern.expressions">
+      </package>
+   </extension>
+   <extension
+         point="org.storydriven.modeling.expressionLanguagesExtension">
+      <expressionLanguage
+            expressionLanguage="OCL"
+            version="0.1">
+      </expressionLanguage>
+   </extension>
+   <extension
+         point="org.storydriven.modeling.expressionLanguagesExtension">
+      <expressionLanguage
+            expressionLanguage="OCL"
+            version="0.2">
+      </expressionLanguage>
+   </extension>
+   <extension
+         point="org.storydriven.modeling.expressionLanguagesExtension">
+      <expressionLanguage
+            expressionLanguage="Logics"
+            version="0.1">
+      </expressionLanguage>
+   </extension>
+
+</plugin>

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Modelwizard
+Bundle-SymbolicName: de.fujaba.newwizard;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: de.fujaba.newwizard.FujabaNewwizardPlugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.gmf.runtime.diagram.ui,
+ org.eclipse.ui.ide,
+ org.eclipse.emf.edit.ui;bundle-version="2.6.0",
+ org.storydriven.modeling;bundle-version="1.0.0",
+ de.fujaba.modelinstance;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: de.fujaba.newwizard.diagrams

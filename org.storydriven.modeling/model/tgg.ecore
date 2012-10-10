@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tgg"
+    nsURI="http://ns.storydriven.org/tgg/0.1.0" nsPrefix="tgg">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="TGGObjectVariable" eSuperTypes="sdm.ecore#//patterns/ObjectVariable">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="NoDeletingVariables"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="NoDeletingVariables" value="self.modifier &lt;> modeling::pattern::Modifier::DESTROY"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A node in the TGG pattern.&#xD;&#xA;Context nodes (modifier=NONE) are matched on an existing, bound object. Produced nodes (modifier=CREATE) matched on an unbound, source element, or a target element will be created for it.&#xD;&#xA;As TGGs are non-destructive, TGGObjectVariable must not have modifier DESTROY."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domain" lowerBound="1"
+        eType="#//Domain"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TGGLinkVariable" eSuperTypes="sdm.ecore#//patterns/LinkVariable">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="An edge in the TGG pattern.&#xD;&#xA;Context edges (modifier=NONE) are matched on an existing, bound link. Produced edges (modifier=CREATE) matched on an unbound, source link, or a target link will be created for it.&#xD;&#xA;As TGGs are non-destructive, TGGLinkVariables must not have modifier DESTROY.&#xD;&#xA;Because links do not have a real object representation whose binding status can be easily stored, the TGG tool should maintain a list of &quot;virtual&quot; model edges that have been bound."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domain" lowerBound="1"
+        eType="#//Domain" changeable="false" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Derived attribute: the domain of the LinkVariable's source ObjectVariable."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TripleGraphGrammar" eSuperTypes="sdm.ecore#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The root of a TGG specification. Contains all rules and axioms, and the typedModels (the used metamodels)."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="axiom" lowerBound="1" upperBound="-1"
+        eType="#//TripleGraphGrammarAxiom" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rule" upperBound="-1" eType="#//TripleGraphGrammarRule"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typedModel" upperBound="-1"
+        eType="#//TypedModel" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The metamodels of the different domains. Note that the correspondence graph is treated like a normal typedModel.&#xD;&#xA;A Triple Graph Grammar may also have more than three typedModels (&quot;Multi Graph Grammar&quot;)."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TripleGraphGrammarRule" eSuperTypes="sdm.ecore#//patterns/StoryPattern">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A TGG rule describes which elements in the different domains are related to each other."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domain" upperBound="-1"
+        eType="#//Domain" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TripleGraphGrammarAxiom" eSuperTypes="#//TripleGraphGrammarRule">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="First rule that is applied at the &quot;root&quot; of the transformation. Contains only produced elements."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Domain" eSuperTypes="#//TypedModel sdm.ecore#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Representation of a &quot;column&quot; in a TGG rule."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typedModel" lowerBound="1"
+        eType="#//TypedModel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypedModel" eSuperTypes="sdm.ecore#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Represents the different metamodels used in the TGG.&#xD;&#xA;One TypedModel can have more than one associated package: E.g., when using a profiled UML, it references the UML package and the profile package."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="packages" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EPackage"/>
+  </eClassifiers>
+</ecore:EPackage>
