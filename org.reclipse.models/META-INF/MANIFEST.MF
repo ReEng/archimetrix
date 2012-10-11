@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Reclipse Gast Meta Model
+Bundle-SymbolicName: org.reclipse.models;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: University of Paderborn
+Require-Bundle: org.reclipse.metrics,
+ org.reclipse.structure.specification;bundle-version="1.0.0",
+ org.eclipse.emf.ecore;bundle-version="2.6.1",
+ org.eclipse.swt;bundle-version="3.6.1",
+ org.reclipse.gast;bundle-version="1.0.0",
+ de.fzi.gast;bundle-version="1.0.0"
