@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Reclipse Inference Extended UI
+Bundle-Name: Archimetrix Pattern Detection Extension UI
 Bundle-SymbolicName: org.reclipse.structure.inference.extended.ui;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.reclipse.structure.inference.extended.ui.Activator
-Bundle-Vendor: Oleg Travkin - Software Engineering Group AG Schäfer - University of Paderborn
+Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.reclipse.structure.inference;bundle-version="1.0.0",

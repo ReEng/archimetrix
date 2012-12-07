@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: ArchitecturePrognosis
+Bundle-Name: Archimetrix Architecture Preview
 Bundle-SymbolicName: org.archimetrix.architecturepreview
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.archimetrix.architectureprognosis.ArchitecturePrognosisPlugin
@@ -28,3 +28,4 @@ Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.archimetrix.architectureprognosis,
  org.archimetrix.architectureprognosis.starters
+Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn

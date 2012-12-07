@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Relevanceanalysis
+Bundle-Name: Archimetrix Component Relevance Analysis and Deficiency Ranking UI
 Bundle-SymbolicName: org.archimetrix.relevanceanalysis.ui;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.archimetrix.relevanceanalysis.ui.RelevanceAnalysisUIPlugin
@@ -26,3 +26,4 @@ Export-Package: org.archimetrix.relevanceanalysis.ui,
  org.archimetrix.relevanceanalysis.ui.providers,
  org.archimetrix.relevanceanalysis.ui.views,
  org.archimetrix.relevanceanalysis.ui.wizards
+Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn

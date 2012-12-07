@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Metric Values Analyzer
+Bundle-Name: Archimetrix Metric Values Analyzer
 Bundle-SymbolicName: org.archimetrix.metricvaluesanalyzer;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.archimetrix.metricvaluesanalyzer.Activator
@@ -16,3 +16,4 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.archimetrix.metricvaluesanalyzer,
  org.archimetrix.metricvaluesanalyzer.calculation,
  org.archimetrix.metricvaluesanalyzer.writer
+Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn
