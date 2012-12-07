@@ -59,21 +59,4 @@
                name="Extract GAST">
          </command>
       </extension>
-            <extension
-                  point="org.eclipse.ui.newWizards">
-               <category
-                     id="org.archimetrix.commons.exampleWizardCategory"
-                     name="Archimetrix Examples"
-                     parentCategory="org.eclipse.ui.Examples">
-               </category>
-               <wizard
-                     canFinishEarly="true"
-                     category="org.eclipse.ui.Examples/org.archimetrix.commons.exampleWizardCategory"
-                     class="org.archimetrix.commons.wizards.ArchimetrixExampleWizard"
-                     hasPages="true"
-                     icon="icons/releng_gears.gif"
-                     id="org.archimetrix.commons.ArchimetrixExampleWizard"
-                     name="Archimetrix Example Wizard">
-               </wizard>
-            </extension>
 </plugin>
