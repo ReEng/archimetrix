@@ -6,7 +6,7 @@
       <command
             defaultHandler="org.reclipse.structure.inference.extended.ui.GeneratingInferenceHandler"
             id="org.reclipse.structure.inference.extended.start"
-            name="Start Pattern Based Architecture Analysis">
+            name="Start Deficiency Detection">
       </command>
    </extension>
    <extension
@@ -18,7 +18,7 @@
                commandId="org.reclipse.structure.inference.extended.start"
                icon="icons/start.png"
                id="org.archimetrix.deficiencydetection.command"
-               label="Start Pattern Based Architecture Analysis"
+               label="Detect Design Deficiencies"
                style="push">
          </command>
       </menuContribution>

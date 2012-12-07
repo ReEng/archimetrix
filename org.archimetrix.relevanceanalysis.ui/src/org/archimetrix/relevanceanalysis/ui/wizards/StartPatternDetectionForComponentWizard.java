@@ -32,9 +32,9 @@ import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
  */
 public class StartPatternDetectionForComponentWizard extends StartInferenceWizard
 {
-   private static final String RECLIPSE_STRUCTURAL_INFERENCE = "Reclipse Structural Inference";
+   private static final String RECLIPSE_STRUCTURAL_INFERENCE = "Detect Design Deficiencies";
 
-   private static final String WIZARD_TITLE = "Start Bad Smell Detection";
+   private static final String WIZARD_TITLE = "Start Design Deficiency Detection";
 
    private Resource engines;
 

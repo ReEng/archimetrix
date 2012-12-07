@@ -32,7 +32,7 @@ public class StartModifyingCatalogWizard extends StartInferenceWizard
    @Override
    public void addPages()
    {
-      this.page = new StartModifyingCatalogWizardPage("Structural Patterns Detection");
+      this.page = new StartModifyingCatalogWizardPage("Design Deficiency Detection");
       //this resource set will only be used for selection and generating story diagrams
       //on perform finish call it will be reseted again
       this.page.initializeResourceSet();
@@ -91,7 +91,7 @@ public class StartModifyingCatalogWizard extends StartInferenceWizard
       PlatformUI.getWorkbench().getDisplay().syncExec(generateAction);
 
       // prepare engine
-      String name = "Reclipse Structural Inference";
+      String name = "Archimetrix Deficiency Detection";
       final InferenceEngine engine = new InterpreterInferenceEngine(name);
 
       engine.setAstRoot(page.getRoot());

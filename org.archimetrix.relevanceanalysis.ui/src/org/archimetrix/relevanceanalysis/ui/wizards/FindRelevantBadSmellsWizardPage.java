@@ -27,7 +27,7 @@ import org.eclipse.swt.widgets.Group;
 public class FindRelevantBadSmellsWizardPage extends AbstractWizardPage
 {
 
-   private static final String WIZARD_PAGE_DESCRIPTION = "Select a file with the detected bad smells and a file with the metric values to start a relevance analysis.";
+   private static final String WIZARD_PAGE_DESCRIPTION = "Select a file with the detected deficiency occurrences and a file with the metric values to start a relevance analysis.";
 
    private ResourceSelectionSection metricValuesSection;
 

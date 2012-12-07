@@ -38,7 +38,7 @@ import org.reclipse.structure.inference.annotations.ASGAnnotation;
 public class FindRelevantBadSmellsWizard extends Wizard
 {
 
-   private static final String JOB_NAME = "Bad Smell Relevance Analysis";
+   private static final String JOB_NAME = "Deficiency Ranking";
 
 
    private static final class BadSmellRelevanceAnalysisJob extends Job
@@ -85,7 +85,7 @@ public class FindRelevantBadSmellsWizard extends Wizard
    }
 
 
-   private static final String WIZARD_TITLE = "Find Relevant Bad Smells";
+   private static final String WIZARD_TITLE = "Rank Detected Deficiency Occurrences";
 
    protected FindRelevantBadSmellsWizardPage page;
 

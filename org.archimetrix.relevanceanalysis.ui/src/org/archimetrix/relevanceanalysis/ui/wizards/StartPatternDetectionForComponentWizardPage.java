@@ -31,7 +31,7 @@ import org.reclipse.structure.inference.ui.wizards.StartInferenceWizardPage;
 public class StartPatternDetectionForComponentWizardPage extends StartInferenceWizardPage
 {
 
-   private static final String WIZARD_PAGE_DESCRIPTION = "Select the pattern catalog where the bad smells are specified.";
+   private static final String WIZARD_PAGE_DESCRIPTION = "Select the pattern catalog in which the design deficiencies are specified.";
 
    private Resource catalog;
 

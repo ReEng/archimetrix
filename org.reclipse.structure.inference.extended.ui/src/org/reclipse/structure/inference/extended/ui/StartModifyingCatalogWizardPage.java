@@ -17,7 +17,7 @@ public class StartModifyingCatalogWizardPage extends StartInferenceWizardPage
    protected StartModifyingCatalogWizardPage(String name)
    {
       super(name);
-      setTitle("Structural Pattern Detection on Architectures");
+      setTitle("Design Deficiency Detection");
    }
 
    @Override
