@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="ASCII"?>
+<staticstructure:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:behaviour="http://q-impress.eu/samm/behaviour" xmlns:datatypes="http://q-impress.eu/samm/datatype" xmlns:staticstructure="http://q-impress.eu/samm/staticstructure" id="_P2NYEBITEeKS1cWnhpE-Fw">
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_P31IsBITEeKS1cWnhpE-Fw" documentation=" &lt;PC No. 1 NetworkManager>" name=" &lt;PC No. 0 NetworkManager>">
+    <provided id="_P39EgBITEeKS1cWnhpE-Fw" name="INetwork 0 (prov)" interfaceType="_P33k8BITEeKS1cWnhpE-Fw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_P3-5sBITEeKS1cWnhpE-Fw" operation="_P34zEBITEeKS1cWnhpE-Fw"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_P4FnYBITEeKS1cWnhpE-Fw" documentation=" &lt;PC No. 3 Reporting>" name=" &lt;PC No. 2 Reporting>">
+    <provided id="_P4G1gxITEeKS1cWnhpE-Fw" name="IReporting 1 (prov)" interfaceType="_P4FnYRITEeKS1cWnhpE-Fw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_P4G1hBITEeKS1cWnhpE-Fw" operation="_P4FnYhITEeKS1cWnhpE-Fw"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_P4J40BITEeKS1cWnhpE-Fw" documentation=" &lt;PC No. 5 Logistics>" name=" &lt;PC No. 4 Logistics>">
+    <provided id="_P4J40xITEeKS1cWnhpE-Fw" name="ILogistics 2 (prov)" interfaceType="_P4J40RITEeKS1cWnhpE-Fw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_P4J41BITEeKS1cWnhpE-Fw" operation="_P4J40hITEeKS1cWnhpE-Fw"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_P4J41RITEeKS1cWnhpE-Fw" documentation=" &lt;PC No. 7 PaymentManager>" name=" &lt;PC No. 6 PaymentManager>">
+    <provided id="_P4Kf5RITEeKS1cWnhpE-Fw" name="IPayment 3 (prov)" interfaceType="_P4Kf4BITEeKS1cWnhpE-Fw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_P4Kf5hITEeKS1cWnhpE-Fw" operation="_P4Kf4RITEeKS1cWnhpE-Fw"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_P4UQ6BITEeKS1cWnhpE-Fw" documentation=" &lt;PC No. 15 ProductSearch>" name=" &lt;PC No. 14 ProductSearch>">
+    <provided id="_P4U38BITEeKS1cWnhpE-Fw" name="ISearch 7 (prov)" interfaceType="_P4OxUhITEeKS1cWnhpE-Fw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_P4U38RITEeKS1cWnhpE-Fw" operation="_P4R0oBITEeKS1cWnhpE-Fw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_P4U38hITEeKS1cWnhpE-Fw" operation="_P4UQ4BITEeKS1cWnhpE-Fw"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_P4U38xITEeKS1cWnhpE-Fw" documentation=" &lt;PC No. 17 Assets>" name=" &lt;PC No. 16 Assets>">
+    <provided id="_P4VfCBITEeKS1cWnhpE-Fw" name="Assets 8 (prov)" interfaceType="_P4VfARITEeKS1cWnhpE-Fw"/>
+    <required id="_P4U39BITEeKS1cWnhpE-Fw" name="IReporting 2 (req)" interfaceType="_P4FnYRITEeKS1cWnhpE-Fw"/>
+    <required id="_P4U39RITEeKS1cWnhpE-Fw" name="IPayment 3 (req)" interfaceType="_P4Kf4BITEeKS1cWnhpE-Fw"/>
+    <required id="_P4U39hITEeKS1cWnhpE-Fw" name="ILogistics 4 (req)" interfaceType="_P4J40RITEeKS1cWnhpE-Fw"/>
+    <required id="_P4U39xITEeKS1cWnhpE-Fw" name="IStoreQuery 5 (req)" interfaceType="_P4OKShITEeKS1cWnhpE-Fw"/>
+    <required id="_P4VfABITEeKS1cWnhpE-Fw" name="Inventory 6 (req)" interfaceType="_P4NjMRITEeKS1cWnhpE-Fw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_P4VfCRITEeKS1cWnhpE-Fw" operation="_P4VfAhITEeKS1cWnhpE-Fw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_P4VfChITEeKS1cWnhpE-Fw" operation="_P4VfAxITEeKS1cWnhpE-Fw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_P4VfCxITEeKS1cWnhpE-Fw" operation="_P4VfBBITEeKS1cWnhpE-Fw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_P4VfDBITEeKS1cWnhpE-Fw" operation="_P4VfBRITEeKS1cWnhpE-Fw"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_P4VfDRITEeKS1cWnhpE-Fw" documentation=" &lt;PC No. 19 Database>" name=" &lt;PC No. 18 Database>">
+    <provided id="_P4WGFxITEeKS1cWnhpE-Fw" name="IDatabase 9 (prov)" interfaceType="_P4VfDhITEeKS1cWnhpE-Fw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_P4WGGBITEeKS1cWnhpE-Fw" operation="_P4WGEBITEeKS1cWnhpE-Fw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_P4WGGRITEeKS1cWnhpE-Fw" operation="_P4WGExITEeKS1cWnhpE-Fw"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_P4WGGhITEeKS1cWnhpE-Fw" documentation=" &lt;PC No. 21 ProductsListView>" name=" &lt;PC No. 20 ProductsListView>">
+    <provided id="_P4WGHhITEeKS1cWnhpE-Fw" name="IListView 10 (prov)" interfaceType="_P4WGHBITEeKS1cWnhpE-Fw"/>
+    <required id="_P4WGGxITEeKS1cWnhpE-Fw" name="ISearch 7 (req)" interfaceType="_P4OxUhITEeKS1cWnhpE-Fw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_P4WGHxITEeKS1cWnhpE-Fw" operation="_P4WGHRITEeKS1cWnhpE-Fw"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_P7BmoBITEeKS1cWnhpE-Fw" documentation=" &lt;PC No. 23 Inventory StoreQuery PriceCalculator>" name=" &lt;PC No. 22 Inventory StoreQuery PriceCalculator>">
+    <provided id="_P7BmohITEeKS1cWnhpE-Fw" name="IStoreQuery 11 (prov)" interfaceType="_P4OKShITEeKS1cWnhpE-Fw"/>
+    <provided id="_P7BmpBITEeKS1cWnhpE-Fw" name="ICalculator 12 (prov)" interfaceType="_P4UQ5BITEeKS1cWnhpE-Fw"/>
+    <required id="_P7BmoRITEeKS1cWnhpE-Fw" name="ISearch 8 (req)" interfaceType="_P4OxUhITEeKS1cWnhpE-Fw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_P7BmoxITEeKS1cWnhpE-Fw" operation="_P4OKSxITEeKS1cWnhpE-Fw"/>
+    <OperationBehaviour xsi:type="behaviour:GastBehaviourStub" id="_P7BmpRITEeKS1cWnhpE-Fw" operation="_P4UQ5RITEeKS1cWnhpE-Fw"/>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:CompositeComponent" id="_QciYQBITEeKS1cWnhpE-Fw" documentation="CC No. 2 de.upb.storeexample.store &lt; &lt;PC No. 22 Inventory StoreQuery PriceCalculator>  &lt;PC No. 14 ProductSearch>  &lt;PC No. 20 ProductsListView>>" name="CC No. 1 de.upb.storeexample.store &lt;... No. 14 ProductSearch>  &lt;PC No. 20 ProductsListView>>">
+    <provided id="_Qck0gBITEeKS1cWnhpE-Fw" documentation="storeexample.store.IStoreQuery" name="IStoreQuery 0 (prov)" interfaceType="_P4OKShITEeKS1cWnhpE-Fw"/>
+    <provided id="_QclbkhITEeKS1cWnhpE-Fw" documentation="storeexample.store.ICalculator" name="ICalculator 1 (prov)" interfaceType="_P4UQ5BITEeKS1cWnhpE-Fw"/>
+    <provided id="_QclblhITEeKS1cWnhpE-Fw" documentation="store.search.ISearch" name="ISearch 2 (prov)" interfaceType="_P4OxUhITEeKS1cWnhpE-Fw"/>
+    <provided id="_QclbmhITEeKS1cWnhpE-Fw" documentation="storeexample.ui.IListView" name="IListView 3 (prov)" interfaceType="_P4WGHBITEeKS1cWnhpE-Fw"/>
+    <subcomponents id="_Qci_UBITEeKS1cWnhpE-Fw" name=" &lt;PC No. 22 Inventory StoreQuery PriceCalculator>-instance" realizedBy="_P7BmoBITEeKS1cWnhpE-Fw"/>
+    <subcomponents id="_Qci_URITEeKS1cWnhpE-Fw" name=" &lt;PC No. 14 ProductSearch>-instance" realizedBy="_P4UQ6BITEeKS1cWnhpE-Fw"/>
+    <subcomponents id="_Qci_UhITEeKS1cWnhpE-Fw" name=" &lt;PC No. 20 ProductsListView>-instance" realizedBy="_P4WGGhITEeKS1cWnhpE-Fw"/>
+    <connector id="_QcjmYBITEeKS1cWnhpE-Fw" documentation="Assembly Connector from  &lt;PC No. 20 ProductsListView> to  &lt;PC No. 14 ProductSearch>">
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_QckNcBITEeKS1cWnhpE-Fw" port="_P4WGGxITEeKS1cWnhpE-Fw" subcomponent="_Qci_UhITEeKS1cWnhpE-Fw"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_QckNcRITEeKS1cWnhpE-Fw" port="_P4U38BITEeKS1cWnhpE-Fw" subcomponent="_Qci_URITEeKS1cWnhpE-Fw"/>
+    </connector>
+    <connector id="_QckNchITEeKS1cWnhpE-Fw" documentation="Assembly Connector from  &lt;PC No. 22 Inventory StoreQuery PriceCalculator> to  &lt;PC No. 14 ProductSearch>">
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_QckNcxITEeKS1cWnhpE-Fw" port="_P7BmoRITEeKS1cWnhpE-Fw" subcomponent="_Qci_UBITEeKS1cWnhpE-Fw"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_QckNdBITEeKS1cWnhpE-Fw" port="_P4U38BITEeKS1cWnhpE-Fw" subcomponent="_Qci_URITEeKS1cWnhpE-Fw"/>
+    </connector>
+    <connector id="_Qck0gRITEeKS1cWnhpE-Fw" documentation="provided delegation connector CC No. 1 de.upb.storeexample.store &lt;... No. 14 ProductSearch>  &lt;PC No. 20 ProductsListView>> to  &lt;PC No. 22 Inventory StoreQuery PriceCalculator>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_QclbkBITEeKS1cWnhpE-Fw" port="_Qck0gBITEeKS1cWnhpE-Fw"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_QclbkRITEeKS1cWnhpE-Fw" port="_P7BmohITEeKS1cWnhpE-Fw" subcomponent="_Qci_UBITEeKS1cWnhpE-Fw"/>
+    </connector>
+    <connector id="_QclbkxITEeKS1cWnhpE-Fw" documentation="provided delegation connector CC No. 1 de.upb.storeexample.store &lt;... No. 14 ProductSearch>  &lt;PC No. 20 ProductsListView>> to  &lt;PC No. 22 Inventory StoreQuery PriceCalculator>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_QclblBITEeKS1cWnhpE-Fw" port="_QclbkhITEeKS1cWnhpE-Fw"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_QclblRITEeKS1cWnhpE-Fw" port="_P7BmpBITEeKS1cWnhpE-Fw" subcomponent="_Qci_UBITEeKS1cWnhpE-Fw"/>
+    </connector>
+    <connector id="_QclblxITEeKS1cWnhpE-Fw" documentation="provided delegation connector CC No. 1 de.upb.storeexample.store &lt;... No. 14 ProductSearch>  &lt;PC No. 20 ProductsListView>> to  &lt;PC No. 14 ProductSearch>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_QclbmBITEeKS1cWnhpE-Fw" port="_QclblhITEeKS1cWnhpE-Fw"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_QclbmRITEeKS1cWnhpE-Fw" port="_P4U38BITEeKS1cWnhpE-Fw" subcomponent="_Qci_URITEeKS1cWnhpE-Fw"/>
+    </connector>
+    <connector id="_QclbmxITEeKS1cWnhpE-Fw" documentation="provided delegation connector CC No. 1 de.upb.storeexample.store &lt;... No. 14 ProductSearch>  &lt;PC No. 20 ProductsListView>> to  &lt;PC No. 20 ProductsListView>">
+      <endpoints xsi:type="staticstructure:ComponentEndpoint" id="_QclbnBITEeKS1cWnhpE-Fw" port="_QclbmhITEeKS1cWnhpE-Fw"/>
+      <endpoints xsi:type="staticstructure:SubcomponentEndpoint" id="_QclbnRITEeKS1cWnhpE-Fw" port="_P4WGHhITEeKS1cWnhpE-Fw" subcomponent="_Qci_UhITEeKS1cWnhpE-Fw"/>
+    </connector>
+  </componenttype>
+  <componenttype xsi:type="staticstructure:PrimitiveComponent" id="_QkxHNhITEeKS1cWnhpE-Fw" documentation="Captures calls to system-external services." name="SoMoX System-Level Dummy Component">
+    <provided id="_QkxuQBITEeKS1cWnhpE-Fw" documentation="SoMoX created provided port" name="Istoreexample.store.Inventory (prov dummy)" interfaceType="_P4NjMRITEeKS1cWnhpE-Fw"/>
+  </componenttype>
+  <interface id="_P33k8BITEeKS1cWnhpE-Fw" documentation="de.upb.storeexample.network.INetwork" name="storeexample.network.INetwork">
+    <signatures id="_P34zEBITEeKS1cWnhpE-Fw" name="sendData" input="_P36BMBITEeKS1cWnhpE-Fw"/>
+  </interface>
+  <interface id="_P4FnYRITEeKS1cWnhpE-Fw" documentation="de.upb.storeexample.controlling.IReporting" name="storeexample.controlling.IReporting">
+    <signatures id="_P4FnYhITEeKS1cWnhpE-Fw" name="sendReport" input="_P4FnYxITEeKS1cWnhpE-Fw"/>
+  </interface>
+  <interface id="_P4J40RITEeKS1cWnhpE-Fw" documentation="de.upb.storeexample.logistics.ILogistics" name="storeexample.logistics.ILogistics">
+    <signatures id="_P4J40hITEeKS1cWnhpE-Fw" name="calculateDaysToDelivery"/>
+  </interface>
+  <interface id="_P4Kf4BITEeKS1cWnhpE-Fw" documentation="de.upb.storeexample.payment.IPayment" name="storeexample.payment.IPayment">
+    <signatures id="_P4Kf4RITEeKS1cWnhpE-Fw" name="sendInvoice" input="_P4Kf4hITEeKS1cWnhpE-Fw"/>
+  </interface>
+  <interface id="_P4NjMRITEeKS1cWnhpE-Fw" documentation="Inventory" name="Istoreexample.store.Inventory">
+    <signatures id="_P4NjMhITEeKS1cWnhpE-Fw" name="setItems" input="_P4NjMxITEeKS1cWnhpE-Fw"/>
+    <signatures id="_P4OKQhITEeKS1cWnhpE-Fw" name="getItems"/>
+    <signatures id="_P4OKQxITEeKS1cWnhpE-Fw" name="checkStock"/>
+  </interface>
+  <interface id="_P4OKShITEeKS1cWnhpE-Fw" documentation="de.upb.storeexample.store.IStoreQuery" name="storeexample.store.IStoreQuery">
+    <signatures id="_P4OKSxITEeKS1cWnhpE-Fw" name="getInventory"/>
+  </interface>
+  <interface id="_P4OxUhITEeKS1cWnhpE-Fw" documentation="de.upb.storeexample.store.search.ISearch" name="store.search.ISearch">
+    <signatures id="_P4R0oBITEeKS1cWnhpE-Fw" name="searchPrice" input="_P4R0oRITEeKS1cWnhpE-Fw"/>
+    <signatures id="_P4UQ4BITEeKS1cWnhpE-Fw" name="searchProducer" input="_P4UQ4RITEeKS1cWnhpE-Fw"/>
+  </interface>
+  <interface id="_P4UQ5BITEeKS1cWnhpE-Fw" documentation="de.upb.storeexample.store.ICalculator" name="storeexample.store.ICalculator">
+    <signatures id="_P4UQ5RITEeKS1cWnhpE-Fw" name="calculate" input="_P4R0oRITEeKS1cWnhpE-Fw"/>
+  </interface>
+  <interface id="_P4VfARITEeKS1cWnhpE-Fw" documentation="Assets" name="Istoreexample.accounting.Assets">
+    <signatures id="_P4VfAhITEeKS1cWnhpE-Fw" name="calculateValue"/>
+    <signatures id="_P4VfAxITEeKS1cWnhpE-Fw" name="getPrice"/>
+    <signatures id="_P4VfBBITEeKS1cWnhpE-Fw" name="handleOrder"/>
+    <signatures id="_P4VfBRITEeKS1cWnhpE-Fw" name="setPrice" input="_P4VfBhITEeKS1cWnhpE-Fw"/>
+  </interface>
+  <interface id="_P4VfDhITEeKS1cWnhpE-Fw" documentation="de.upb.storeexample.database.IDatabase" name="storeexample.database.IDatabase">
+    <signatures id="_P4WGEBITEeKS1cWnhpE-Fw" name="retrieveData" input="_P4WGERITEeKS1cWnhpE-Fw"/>
+    <signatures id="_P4WGExITEeKS1cWnhpE-Fw" name="storedata" input="_P4WGFBITEeKS1cWnhpE-Fw"/>
+  </interface>
+  <interface id="_P4WGHBITEeKS1cWnhpE-Fw" documentation="de.upb.storeexample.ui.IListView" name="storeexample.ui.IListView">
+    <signatures id="_P4WGHRITEeKS1cWnhpE-Fw" name="createListEntry"/>
+  </interface>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_P37PUBITEeKS1cWnhpE-Fw" name="INTEGER" type="int"/>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_P372YRITEeKS1cWnhpE-Fw" name="STRING"/>
+  <type xsi:type="datatypes:ComplexDataType" id="_P4GOcBITEeKS1cWnhpE-Fw" name="Report">
+    <elements id="_P4G1gBITEeKS1cWnhpE-Fw" name="String" type="_P372YRITEeKS1cWnhpE-Fw"/>
+    <elements id="_P4G1gRITEeKS1cWnhpE-Fw" name="Object" type="_P4G1ghITEeKS1cWnhpE-Fw"/>
+  </type>
+  <type xsi:type="datatypes:PrimitiveDataType" id="_P4G1ghITEeKS1cWnhpE-Fw" name="Object"/>
+  <type xsi:type="datatypes:ComplexDataType" id="_P4OKQBITEeKS1cWnhpE-Fw" name="Item">
+    <elements id="_P4OKQRITEeKS1cWnhpE-Fw" name="Object" type="_P4G1ghITEeKS1cWnhpE-Fw"/>
+  </type>
+  <messagetype id="_P36BMBITEeKS1cWnhpE-Fw" name="int_String">
+    <parameters id="_P36BMRITEeKS1cWnhpE-Fw" name="address" type="_P37PUBITEeKS1cWnhpE-Fw"/>
+    <parameters id="_P372YBITEeKS1cWnhpE-Fw" name="data" type="_P372YRITEeKS1cWnhpE-Fw"/>
+  </messagetype>
+  <messagetype id="_P4FnYxITEeKS1cWnhpE-Fw" name="Report">
+    <parameters id="_P4FnZBITEeKS1cWnhpE-Fw" name="r" type="_P4GOcBITEeKS1cWnhpE-Fw"/>
+  </messagetype>
+  <messagetype id="_P4Kf4hITEeKS1cWnhpE-Fw" name="String_int">
+    <parameters id="_P4Kf4xITEeKS1cWnhpE-Fw" name="address" type="_P372YRITEeKS1cWnhpE-Fw"/>
+    <parameters id="_P4Kf5BITEeKS1cWnhpE-Fw" name="amount" type="_P37PUBITEeKS1cWnhpE-Fw"/>
+  </messagetype>
+  <messagetype id="_P4NjMxITEeKS1cWnhpE-Fw" name="Item">
+    <parameters id="_P4NjNBITEeKS1cWnhpE-Fw" name="items" type="_P4OKQBITEeKS1cWnhpE-Fw"/>
+  </messagetype>
+  <messagetype id="_P4R0oRITEeKS1cWnhpE-Fw" name="String">
+    <parameters id="_P4R0ohITEeKS1cWnhpE-Fw" name="productName" type="_P372YRITEeKS1cWnhpE-Fw"/>
+  </messagetype>
+  <messagetype id="_P4UQ4RITEeKS1cWnhpE-Fw" name="String">
+    <parameters id="_P4UQ4hITEeKS1cWnhpE-Fw" name="currentProduct" type="_P372YRITEeKS1cWnhpE-Fw"/>
+  </messagetype>
+  <messagetype id="_P4VfBhITEeKS1cWnhpE-Fw" name="int">
+    <parameters id="_P4VfBxITEeKS1cWnhpE-Fw" name="price" type="_P37PUBITEeKS1cWnhpE-Fw"/>
+  </messagetype>
+  <messagetype id="_P4WGERITEeKS1cWnhpE-Fw" name="String">
+    <parameters id="_P4WGEhITEeKS1cWnhpE-Fw" name="key" type="_P372YRITEeKS1cWnhpE-Fw"/>
+  </messagetype>
+  <messagetype id="_P4WGFBITEeKS1cWnhpE-Fw" name="String_String">
+    <parameters id="_P4WGFRITEeKS1cWnhpE-Fw" name="key" type="_P372YRITEeKS1cWnhpE-Fw"/>
+    <parameters id="_P4WGFhITEeKS1cWnhpE-Fw" name="data" type="_P372YRITEeKS1cWnhpE-Fw"/>
+  </messagetype>
+</staticstructure:Repository>
