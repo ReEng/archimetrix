@@ -1,0 +1,66 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>How To Start</title>
+</head>
+
+<body>
+<h1>How To Start</h1>
+
+<p>To perform the reengineering process as performed in [Pla11], Chapter 3, 
+you have to execute the following steps.</p>
+
+<ol>
+<li><p>Create a GAST of the system under analysis with SISSy:</p>
+	<p> First, a generalized abstract syntax tree (GAST) of the system under analysis has to be created.
+	For this, the parser SISSy can be used.
+	A documentation for SISSy is available under <a href=http://www.sqools.org/sissy>http://www.sqools.org/sissy</a>.
+	</p></li>
+<li><p>Execute a Clustering with SoMoX</p>
+	<p> In the next step, SoMoX is used to cluster the system. 
+	A documentation for SoMoX is available under <a href=http://www.sqools.org/somox>http://www.sqools.org/somox</a>.
+	</p></li>
+<li><p>Perform a Component Relevance Analysis</p>
+	<p> The component relevance analysis can be started via the menu bar: <b>Archimetrix -> Reengineering of Design Deficiencies -> Find Relevant Components</b>.
+	The opened wizard requires the source code decorator model from the clustering (*.sourcecodedecorator) and the metric values model (*.ecore) as input. 
+	Both files were created during the initial clustering. 
+	Using the default settings, they are both saved in a folder ``model" in the surrounding project folder.
+	
+	Depending on the size of the system under analysis, the component relevance analysis takes some time to load the required model elements.
+	After that, the <em>Relevant Component View</em> opens.
+	</p></li>
+<li><p>Start the Bad Smell Detection</p>
+	<p> The bad smell detection on a set of selected components can be started via the menu bar: <b>Reclipse EMF -> Start Pattern Based Architecture Analysis</b>.
+	
+	Another possibility to start the bad smell detection on a selected component is via the context menu in the Relevant Components View.
+	
+	When the bad smell detection is finished, the detected bad smell occurrences are listed in the view <em>Annotations</em>.
+	This view provides buttons for loading and saving the detection results into a file. 
+	To execute a bad smell relevance analysis, the detected bad smells have to be saved.
+	</p></li>
+<li><p>Perform a Bad Smell Relevance Analysis</p>
+	<p>The bad smell relevance analysis can be started via the menu bar: <b>Archimetrix -> Reengineering of Design Deficiencies -> Find Relevant Bad Smells</b>.
+	The opened wizard requires the file with the saved bad smell occurrences (*.psa) and the metric values model as input.
+	
+	Here again, depending on the size of the system under analysis, the bad smell relevance analysis takes some time to load the required model elements.
+	After that, the <em>Relevant Bad Smells View</em> opens.
+	</p></li>
+<li><p>Execute an Architecture Prognosis</p>
+	<p> The architecture prognosis can be started via the menu bar (<b>Archimetrix -> Reengineering of Design Deficiencies -> View Architecture Prognosis</b>) or via the context menu for a bad smell occurrence in the Relevant Bad Smells View.
+	
+	The Architecture Prognosis Wizard takes the metric values model, the detected bad smell occurrences and a file with reengineering strategies as input (*.ecore) as input. 
+	On the second wizard page, the bad smell occurrence to be removed has to be selected and
+	on the third page, the reengineering strategy for which the prognosis shall be executed, has to be selected.
+	
+	After having finished the wizard, the <em>Architecture Prognosis View</em> shows the prognosis results.
+	
+	To perform the next iteration of the reengineering process the clustering results achieved in the architecture prognosis can be used as input for the bad smell detection.
+	</p></li>
+</ol>
+
+
+</body>
+</html>
