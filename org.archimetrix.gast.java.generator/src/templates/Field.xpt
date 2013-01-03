@@ -1,8 +1,0 @@
-«IMPORT gast»
-
-«DEFINE Field FOR variables::Field»
-	«EXPAND Util::Visibility» 
-		«IF final»  final «ENDIF» 
-		«IF static» static «ENDIF»
-		«type.simpleName» «simpleName»; 
-«ENDDEFINE»
