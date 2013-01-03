@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Archimetrix Reengineering Strategies Writer
+Bundle-SymbolicName: org.archimetrix.reengineeringstrategieswriter;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.archimetrix.reengineeringstrategieswriter.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.common;bundle-version="2.6.0",
+ org.eclipse.emf.ecore;bundle-version="2.6.1",
+ org.storydriven.modeling;bundle-version="1.0.0",
+ de.fzi.gast;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn
