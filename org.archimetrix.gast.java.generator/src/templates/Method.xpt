@@ -1,0 +1,10 @@
+«IMPORT gast»
+
+«DEFINE Method FOR functions::Method»
+	«EXPAND Util::Visibility» «this.returnTypeDeclaration.accessedClass.simpleName» «this.simpleName» () {}
+«ENDDEFINE»
+
+«DEFINE MethodDeclaration FOR functions::Method»
+	«EXPAND Util::Visibility» «this.returnTypeDeclaration.accessedClass.simpleName» «this.simpleName» ();
+«ENDDEFINE»
+
