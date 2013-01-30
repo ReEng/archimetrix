@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Archimetrix Pattern Detection Extension
+Bundle-SymbolicName: org.reclipse.structure.inference.extended
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.reclipse.structure.inference.extended.Activator
+Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.resources;bundle-version="3.6.0",
+ org.eclipse.core.runtime,
+ org.fujaba.commons;bundle-version="1.0.0",
+ org.reclipse.structure.inference;bundle-version="1.0.0",
+ org.reclipse.structure.inference.annotations;bundle-version="1.0.0",
+ org.reclipse.generator;bundle-version="1.0.0",
+ org.reclipse.generator.ui;bundle-version="1.0.0",
+ org.reclipse.structure.generator;bundle-version="1.0.0",
+ org.reclipse.structure.generator.ui;bundle-version="1.0.0",
+ org.reclipse.structure.specification;bundle-version="1.0.0",
+ eu.qimpress.samm;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: org.reclipse.structure.inference.extended
