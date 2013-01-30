@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+ <extension
+        point="org.eclipse.help.toc">
+     <toc
+           file="toc.xml"
+           primary="true">
+     </toc>
+     <toc
+           file="userTOC.xml"
+           primary="false">
+     </toc>
+     <toc
+           file="developerTOC.xml"
+           primary="false">
+     </toc>
+  </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               id="org.archimetrix.ui.main.menu"
+               label="Archimetrix">
+            <menu
+                  icon="icons/reengineering.png"
+                  id="org.archimetrix.menu"
+                  label="(Debug)"
+                  tooltip="Tasks that help with the reengineering of design deficiencies in component-based software architectures">
+            </menu>
+            <command
+                  commandId="org.archimetrix.relevanceanalysis.ui.relevantcomponents.start"
+                  icon="icons/components.png"
+                  id="org.archimetrix.relevanceanalysis.findrelevantcomponents.command"
+                  label="Find Relevant Components"
+                  style="push"
+                  tooltip="Identify components that are assumed to contain design deficiencies">
+            </command>
+            <command
+                  commandId="org.archimetrix.relevanceanalysis.ui.relevantbadsmells.start"
+                  icon="icons/badSmells.png"
+                  id="org.archimetrix.relevanceanalysis.findrelevantbadsmells.command"
+                  label="Find Relevant Deficiencies"
+                  style="push"
+                  tooltip="Identify deficiency occurrences that are recommended to be removed">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.archimetrix.relevanceanalysis.ui.relevantComponentsView?after=additions">
+         <command
+               commandId="org.archimetrix.relevanceanalysis.ui.startPatternDetection"
+               icon="icons/badSmells.png"
+               label="Start Deficiency Detection on this Component"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.archimetrix.relevanceanalysis.ui.handlers.RelevantComponentsAnalysisStartingHandler"
+            id="org.archimetrix.relevanceanalysis.ui.relevantcomponents.start"
+            name="Find Critical Components">
+      </command>
+      <command
+            defaultHandler="org.archimetrix.relevanceanalysis.ui.handlers.RelevantBadSmellsAnalysisStartingHandler"
+            id="org.archimetrix.relevanceanalysis.ui.relevantbadsmells.start"
+            name="Find Relevant Deficiencies">
+      </command>
+      <command
+            defaultHandler="org.archimetrix.relevanceanalysis.ui.handlers.StartPatternDetectionForComponentHandler"
+            id="org.archimetrix.relevanceanalysis.ui.startPatternDetection"
+            name="Start Pattern Detection">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+         <category
+      		name="Reengineering of Component-Based Software Architectures"
+            id="org.archimetrix.views">
+      </category>
+      <view
+            category="org.archimetrix.views"
+            class="org.archimetrix.relevanceanalysis.ui.views.RelevantBadSmellsView"
+            icon="icons/badSmells.png"
+            id="org.archimetrix.relevanceanalysis.ui.relevantBadSmellsView"
+            name="Relevant Deficiencies View"
+            restorable="true">
+      </view>
+      <view
+            category="org.archimetrix.views"
+            class="org.archimetrix.relevanceanalysis.ui.views.RelevantComponentsView"
+            icon="icons/components.png"
+            id="org.archimetrix.relevanceanalysis.ui.relevantComponentsView"
+            name="Relevant Components View"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.archimetrix.commons.extension.ui.perspectives.ArchimetrixPerspective">
+         <view
+               id="org.archimetrix.relevanceanalysis.ui.relevantComponentsView"
+               minimized="false"
+               relationship="bottom"
+               relative="org.eclipse.ui.editorss">
+         </view>
+         <view
+               id="org.archimetrix.relevanceanalysis.ui.relevantBadSmellsView"
+               minimized="false"
+               relationship="stack"
+               relative="org.archimetrix.relevanceanalysis.ui.relevantComponentsView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+
+</plugin>

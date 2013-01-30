@@ -1,0 +1,45 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Architecture Prognosis</title>
+</head>
+
+<body>
+<h1>Architecture Prognosis</h1>
+
+<p> The architecture prognosis can be started via the menu bar (<b>Archimetrix -> Reengineering of Design Deficiencies -> View Architecture Prognosis</b>) or via the context menu for a bad smell occurrence in the Relevant Bad Smells View.
+	
+	The Architecture Prognosis Wizard takes the metric values model, the detected bad smell occurrences and a file with reengineering strategies as input (*.ecore) as input. 
+	On the second wizard page, the bad smell occurrence to be removed has to be selected and
+	on the third page, the reengineering strategy for which the prognosis shall be executed, has to be selected.
+	
+	After having finished the wizard, the <em>Architecture Prognosis View</em> shows the prognosis results.
+	
+	To perform the next iteration of the reengineering process the clustering results achieved in the architecture prognosis can be used as input for the bad smell detection.
+	</p>
+
+<h2>The Architecture Prognosis View </h2>
+<p>The Architecture Prognosis View presents the results from the architecture prognosis in
+form of a comparison between original architecture and predicted architecture.
+On the top part of the view, a table juxtaposes the original architecture to the
+predicted architecture. The lines of this table show the total number of components,
+the number of primitive components, the number of composite components,
+the number of interfaces and the number of messages for each architecture.
+Below the table, the elements of the both architectures are shown by two tree
+viewers: the original architecture on the left, the predicted architecture on the
+right. In the first lines only the top level elements are shown: the components.
+Primitive and composite components can be distinguished by different icons and
+by the name of the component. For primitive components, a label between the
+component name shows how many classes it consist of. For composite components,
+the number of sub components is presented in this label. The lines can be
+expanded so that the implementing classes or sub components can be inspected.
+To simplify the comparison of the architectures, lines that differ are highlighted
+with a yellow background. Components that are missing in the predicted architecture
+are highlighted with a red background on the original architecture side,
+while components that are new in the predicted architecture are highlighted with
+a green background on the predicted architecture side.</p>
+</body>
+</html>
