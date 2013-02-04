@@ -1,4 +1,4 @@
-package org.archimetrix.architectureprognosis;
+package org.archimetrix.architecturepreview;
 
 
 import java.io.File;
@@ -7,14 +7,14 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.List;
 
-import org.archimetrix.architectureprognosis.starters.InterpreterStarter;
-import org.archimetrix.architectureprognosis.starters.SoMoXStarter;
-import org.archimetrix.architectureprognosis.util.SCDMFromAnnotationExtractor;
+import org.archimetrix.architecturepreview.starters.InterpreterStarter;
+import org.archimetrix.architecturepreview.starters.SoMoXStarter;
+import org.archimetrix.architecturepreview.util.SCDMFromAnnotationExtractor;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
-import org.storydriven.modeling.activities.Activity;
+import org.storydriven.storydiagrams.activities.Activity;
 
 import eu.qimpress.samm.staticstructure.Repository;
 import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorRepository;
@@ -30,13 +30,13 @@ import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorRepository;
  * @version $Revision$ $Date$
  * 
  */
-public class ArchitecturePrognosis
+public class ArchitecturePreview
 {
    private static final int GAST_FILE_NAME_INDEX = 2;
 
    private static final int PROJECT_NAME_INDEX = 1;
 
-   ArchitecturePrognosisCalculator prognosisCalculator;
+   ArchitecturePreviewCalculator prognosisCalculator;
 
 
    /**
@@ -65,7 +65,7 @@ public class ArchitecturePrognosis
    {
       SourceCodeDecoratorRepository originalSCDM = SCDMFromAnnotationExtractor.getSCDM(badSmellAnnotation);
       SourceCodeDecoratorRepository newSCDM = somoxStarter.loadResultingSCDM();
-      this.prognosisCalculator = new ArchitecturePrognosisCalculator(originalSCDM, newSCDM);
+      this.prognosisCalculator = new ArchitecturePreviewCalculator(originalSCDM, newSCDM);
    }
 
 

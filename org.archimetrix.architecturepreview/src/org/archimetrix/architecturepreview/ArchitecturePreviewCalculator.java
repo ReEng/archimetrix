@@ -1,10 +1,10 @@
-package org.archimetrix.architectureprognosis;
+package org.archimetrix.architecturepreview;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.archimetrix.architectureprognosis.util.RepositoryLoader;
+import org.archimetrix.architecturepreview.util.RepositoryLoader;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import eu.qimpress.samm.staticstructure.ComponentType;
@@ -27,7 +27,7 @@ import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorRepository;
  * @version $Revision$ $Date$
  * 
  */
-public class ArchitecturePrognosisCalculator
+public class ArchitecturePreviewCalculator
 {
    private static final String TOTAL_COMPONENTS_LINE_TITLE = "Total Number of Components";
 
@@ -72,7 +72,7 @@ public class ArchitecturePrognosisCalculator
     * @param newSCDM The source code decorator model from the clustering executed on the
     *           reengineered system.
     */
-   public ArchitecturePrognosisCalculator(final SourceCodeDecoratorRepository originalSCDM,
+   public ArchitecturePreviewCalculator(final SourceCodeDecoratorRepository originalSCDM,
          final SourceCodeDecoratorRepository newSCDM)
    {
       this.originalSammRep = RepositoryLoader.loadSammRep(originalSCDM);

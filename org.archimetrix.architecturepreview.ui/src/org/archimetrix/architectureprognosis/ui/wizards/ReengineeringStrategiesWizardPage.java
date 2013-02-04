@@ -10,8 +10,8 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.ViewerSorter;
 import org.eclipse.swt.widgets.Composite;
-import org.storydriven.modeling.activities.Activity;
-import org.storydriven.modeling.activities.OperationExtension;
+import org.storydriven.storydiagrams.activities.Activity;
+import org.storydriven.storydiagrams.activities.OperationExtension;
 
 
 /**

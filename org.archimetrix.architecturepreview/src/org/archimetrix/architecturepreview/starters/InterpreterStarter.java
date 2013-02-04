@@ -1,4 +1,4 @@
-package org.archimetrix.architectureprognosis.starters;
+package org.archimetrix.architecturepreview.starters;
 
 
 import java.io.IOException;
@@ -9,21 +9,17 @@ import java.util.Map.Entry;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.reclipse.interpreter.adapter.extension.ExtendedSDMainAdapterFactory;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
-import org.storydriven.modeling.activities.Activity;
+import org.storydriven.storydiagrams.activities.Activity;
+import org.storydriven.storydiagrams.interpreter.eclipse.StoryDrivenEclipseInterpreter;
 
 import de.fzi.gast.core.Root;
-import de.mdelab.sdm.interpreter.common.SDMInterpreter;
-import de.mdelab.sdm.interpreter.common.SDMInterpreterException;
-import de.mdelab.sdm.interpreter.common.expressions.EclipseBasedExpressionInterpreterFactory;
-import de.mdelab.sdm.interpreter.common.tasks.notifying.NotifyingMainInterpreterFactory;
-import de.mdelab.sdm.interpreter.common.tasks.notifying.OutputStreamNotificationReceiver;
-import de.mdelab.sdm.interpreter.common.variables.Parameter;
-import de.mdelab.sdm.interpreter.common.variables.Variable;
+import de.mdelab.sdm.interpreter.core.SDMException;
+import de.mdelab.sdm.interpreter.core.variables.Variable;
 import eu.qimpress.qimpressgast.util.qimpressgastResourceFactoryImpl;
 
 
@@ -53,7 +49,7 @@ public class InterpreterStarter
     */
    public Resource callInterpreter(final ASGAnnotation badSmell, final Activity reengineeringStrategy)
    {
-      List<Parameter> params = createParameters(badSmell);
+      List<Variable<EClassifier>> params = createParameters(badSmell);
       startInterpretation(reengineeringStrategy, params);
       Resource newResource = saveTransformedGAST(badSmell);
 
@@ -63,7 +59,6 @@ public class InterpreterStarter
 
    private Resource saveTransformedGAST(final ASGAnnotation badSmell)
    {
-      @SuppressWarnings("unchecked")
       Root root = null;
       EObject element = null;
       for (EList<EObject> annotatedElement : badSmell.getAnnotatedElements().values())
@@ -89,16 +84,14 @@ public class InterpreterStarter
    }
 
 
-   private Map<String, Variable> startInterpretation(final Activity reengineeringStrategy, final List<Parameter> params)
+   private Map<String, Variable<EClassifier>> startInterpretation(final Activity reengineeringStrategy, final List<Variable<EClassifier>> params)
    {
       try
       {
-         SDMInterpreter interpreter = new SDMInterpreter(new NotifyingMainInterpreterFactory(
-               new EclipseBasedExpressionInterpreterFactory(), new OutputStreamNotificationReceiver()),
-               new ExtendedSDMainAdapterFactory(), getClass().getClassLoader());
-         return interpreter.executeActivity(reengineeringStrategy, params, 1);
+         StoryDrivenEclipseInterpreter interpreter = new StoryDrivenEclipseInterpreter(getClass().getClassLoader());
+         return interpreter.executeActivity(reengineeringStrategy, params);
       }
-      catch (SDMInterpreterException e)
+      catch (SDMException e)
       {
          e.printStackTrace();
       }
@@ -113,9 +106,9 @@ public class InterpreterStarter
     * @param badSmell an annotation that represents the bad smell occurrence to be reengineered
     * @return a list of parameters
     */
-   private List<Parameter> createParameters(final ASGAnnotation badSmell)
+   private List<Variable<EClassifier>> createParameters(final ASGAnnotation badSmell)
    {
-      List<Parameter> params = new ArrayList<Parameter>();
+      List<Variable<EClassifier>> params = new ArrayList<Variable<EClassifier>>();
       for (String key : badSmell.getAnnotatedElements().keySet())
       {
          EObject elementFromGAST = badSmell.getAnnotatedElements().get(key).get(0);
@@ -129,7 +122,7 @@ public class InterpreterStarter
                break;
             }
          }
-         Parameter parameter = new Parameter(paramName, elementFromGAST.eClass(), elementFromGAST);
+         Variable<EClassifier> parameter = new Variable<EClassifier>(paramName, elementFromGAST.eClass(), elementFromGAST);
          params.add(parameter);
       }
       return params;

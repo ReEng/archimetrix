@@ -1,4 +1,4 @@
-package org.archimetrix.architectureprognosis;
+package org.archimetrix.architecturepreview;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -6,18 +6,18 @@ import org.osgi.framework.BundleContext;
 /**
  * The activator class controls the plug-in life cycle
  */
-public class ArchitecturePrognosisPlugin extends AbstractUIPlugin {
+public class ArchitecturePreviewPlugin extends AbstractUIPlugin {
 
 	// The plug-in ID
 	public static final String PLUGIN_ID = "org.archimetrix.architecturepreview"; //$NON-NLS-1$
 
 	// The shared instance
-	private static ArchitecturePrognosisPlugin plugin;
+	private static ArchitecturePreviewPlugin plugin;
 	
 	/**
 	 * The constructor
 	 */
-	public ArchitecturePrognosisPlugin() {
+	public ArchitecturePreviewPlugin() {
 	}
 
 	/*
@@ -43,7 +43,7 @@ public class ArchitecturePrognosisPlugin extends AbstractUIPlugin {
 	 *
 	 * @return the shared instance
 	 */
-	public static ArchitecturePrognosisPlugin getDefault() {
+	public static ArchitecturePreviewPlugin getDefault() {
 		return plugin;
 	}
 

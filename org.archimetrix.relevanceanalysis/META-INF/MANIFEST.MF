@@ -6,13 +6,13 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.archimetrix.relevanceanalysis.RelevanceAnalysisPlugin
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui,
- org.somox.metricValuesPersistency;bundle-version="1.0.0",
  eu.qimpress.sourcecodedecorator;bundle-version="1.0.0",
  org.reclipse.structure.inference.annotations;bundle-version="1.0.0",
  org.reclipse.structure.specification;bundle-version="1.0.0",
  org.somox.core;bundle-version="1.0.0",
  org.fujaba.commons;bundle-version="1.0.0",
- org.archimetrix.commons;bundle-version="1.0.0"
+ org.archimetrix.commons;bundle-version="1.0.0",
+ org.somox.metricvaluesstorage;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.archimetrix.relevanceanalysis,

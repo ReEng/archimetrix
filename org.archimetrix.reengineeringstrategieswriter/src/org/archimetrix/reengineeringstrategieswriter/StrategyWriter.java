@@ -13,19 +13,20 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.storydriven.modeling.activities.ActivitiesFactory;
-import org.storydriven.modeling.activities.Activity;
-import org.storydriven.modeling.activities.ActivityNode;
-import org.storydriven.modeling.activities.OperationExtension;
-import org.storydriven.modeling.activities.StoryNode;
-import org.storydriven.modeling.calls.CallsFactory;
-import org.storydriven.modeling.calls.ParameterExtension;
-import org.storydriven.modeling.calls.expressions.ExpressionsFactory;
-import org.storydriven.modeling.calls.expressions.ParameterExpression;
-import org.storydriven.modeling.patterns.AbstractVariable;
-import org.storydriven.modeling.patterns.BindingState;
-import org.storydriven.modeling.patterns.ObjectVariable;
-import org.storydriven.modeling.patterns.StoryPattern;
+import org.storydriven.core.expressions.ExpressionsFactory;
+import org.storydriven.core.expressions.TextualExpression;
+import org.storydriven.storydiagrams.activities.ActivitiesFactory;
+import org.storydriven.storydiagrams.activities.Activity;
+import org.storydriven.storydiagrams.activities.ActivityNode;
+import org.storydriven.storydiagrams.activities.OperationExtension;
+import org.storydriven.storydiagrams.activities.StoryNode;
+import org.storydriven.storydiagrams.calls.CallsFactory;
+import org.storydriven.storydiagrams.calls.ParameterExtension;
+import org.storydriven.storydiagrams.calls.expressions.ParameterExpression;
+import org.storydriven.storydiagrams.patterns.AbstractVariable;
+import org.storydriven.storydiagrams.patterns.BindingState;
+import org.storydriven.storydiagrams.patterns.ObjectVariable;
+import org.storydriven.storydiagrams.patterns.StoryPattern;
 
 
 public class StrategyWriter
@@ -33,16 +34,6 @@ public class StrategyWriter
 
 
    private static final String ACTIVITY_NODE_PARAM_BIND_PREFIX = "(p)";
-
-
-   public ParameterExpression createParameterExpression(final EParameter parameter, final ObjectVariable var)
-   {
-      ParameterExpression expression = ExpressionsFactory.eINSTANCE.createParameterExpression();
-      ParameterExtension paramExtension = CallsFactory.eINSTANCE.createParameterExtension();
-      paramExtension.setParameter(parameter);
-      expression.setParameter(paramExtension);
-      return expression;
-   }
 
 
    public Activity getActivity(final String path)
@@ -130,12 +121,23 @@ public class StrategyWriter
             {
                if (param.getName().equals(paramNames[i]))
                {
-                  var.setBindingExpression(createParameterExpression(param, var));
+                  var.setBindingExpression(createParameterExpression(param));
                }
             }
             break;
          }
       }
+   }
+   
+   
+   public TextualExpression createParameterExpression(final EParameter parameter) {
+      TextualExpression expr = ExpressionsFactory.eINSTANCE.createTextualExpression();
+
+      expr.setLanguage("OCL");
+      expr.setLanguageVersion("1.0");
+      expr.setExpressionText(parameter.getName());
+
+      return expr;
    }
 
 }

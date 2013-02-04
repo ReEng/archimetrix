@@ -1,4 +1,4 @@
-package org.archimetrix.architectureprognosis.util;
+package org.archimetrix.architecturepreview.util;
 
 
 import org.eclipse.emf.common.util.URI;

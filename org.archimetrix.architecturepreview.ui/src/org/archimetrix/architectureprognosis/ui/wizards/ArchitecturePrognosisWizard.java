@@ -3,7 +3,7 @@ package org.archimetrix.architectureprognosis.ui.wizards;
 
 import java.util.List;
 
-import org.archimetrix.architectureprognosis.ArchitecturePrognosis;
+import org.archimetrix.architecturepreview.ArchitecturePreview;
 import org.archimetrix.architectureprognosis.ui.ArchitecturePrognosisUIPlugin;
 import org.archimetrix.architectureprognosis.ui.views.ArchitecturePrognosisView;
 import org.archimetrix.commons.ResourceLoader;
@@ -21,7 +21,7 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
-import org.storydriven.modeling.activities.Activity;
+import org.storydriven.storydiagrams.activities.Activity;
 
 import eu.qimpress.samm.staticstructure.Repository;
 import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorPackage;
@@ -45,7 +45,7 @@ public class ArchitecturePrognosisWizard extends Wizard
 
       private List<List<String>> prognosisResults;
 
-      private ArchitecturePrognosis prognosis;
+      private ArchitecturePreview prognosis;
 
       private ASGAnnotation annotation;
 
@@ -67,7 +67,7 @@ public class ArchitecturePrognosisWizard extends Wizard
       {
          // TODO: use monitor better
          monitor.beginTask(JOB_NAME, 100);
-         this.prognosis = new ArchitecturePrognosis();
+         this.prognosis = new ArchitecturePreview();
          this.prognosisResults = this.prognosis.start(this.annotation, this.activity, this.metricValuesPath);
          monitor.worked(99);
          monitor.done();

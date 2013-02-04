@@ -62,8 +62,6 @@ public class ModifyCatalogAndGenerateAlgorithmsAction implements Runnable
    @Override
    public void run()
    {
-      Generator generator = new Generator(null);
-
       AnnotationsPackage.eINSTANCE.getNsURI();
 
       try
@@ -81,42 +79,6 @@ public class ModifyCatalogAndGenerateAlgorithmsAction implements Runnable
       if (expression != null)
       {
          modifyCatalog(catalog, expression);
-      }
-
-      generator.addToElementsToProcess(catalog);
-      // activateConsole(gen);
-      String fileString = target.getURI().toPlatformString(false);
-      target.unload();
-      String wsLocation = ResourcesPlugin.getWorkspace().getRoot().getLocation().toOSString();
-      String filePath = wsLocation + fileString;
-      File file = new File(filePath);
-      generator.setOutputTo(file);
-
-      if (Status.OK_STATUS != generator.start(null))
-      {
-         if (generator.getException() != null && generator.getException().getMessage() == null)
-         {
-            String message = generator.getException().toString();
-            generator.append(message);
-         }
-      }
-
-
-      try
-      {
-         IFile f = ResourcesPlugin.getWorkspace().getRoot().getFileForLocation(Path.fromOSString(filePath));
-         if (f != null)
-         {
-            f.refreshLocal(IResource.DEPTH_ZERO, null);
-         }
-         else
-         {
-            ResourcesPlugin.getWorkspace().getRoot().refreshLocal(IResource.DEPTH_INFINITE, null);
-         }
-      }
-      catch (CoreException e)
-      {
-         e.printStackTrace();
       }
    }
 
@@ -152,24 +114,6 @@ public class ModifyCatalogAndGenerateAlgorithmsAction implements Runnable
 
    }
 
-
-   // protected void activateConsole(PSGenerator gen)
-   // {
-   // try
-   // {
-   // IViewPart consoleView = GeneratorUIActivator.getDefault()
-   // .getWorkbench().getActiveWorkbenchWindow().getActivePage()
-   // .showView("org.reclipse.generator.ui.console");
-   //
-   // if (consoleView != null && consoleView instanceof GeneratorConsoleView)
-   // {
-   // ((GeneratorConsoleView) consoleView).setInput(gen);
-   // }
-   // }
-   // catch (PartInitException e)
-   // {
-   // }
-   // }
 
    private String getSelectionExpression()
    {

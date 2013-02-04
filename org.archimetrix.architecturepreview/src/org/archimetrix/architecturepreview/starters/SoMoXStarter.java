@@ -1,4 +1,4 @@
-package org.archimetrix.architectureprognosis.starters;
+package org.archimetrix.architecturepreview.starters;
 
 
 import metricvalues.MetricValuesModel;
