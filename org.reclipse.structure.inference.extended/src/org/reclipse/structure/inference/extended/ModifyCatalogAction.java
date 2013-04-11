@@ -4,19 +4,11 @@
 package org.reclipse.structure.inference.extended;
 
 
-import java.io.File;
 import java.io.IOException;
 
-import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.IResource;
-import org.eclipse.core.resources.ResourcesPlugin;
-import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.Path;
-import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.reclipse.structure.generator.Generator;
 import org.reclipse.structure.inference.annotations.AnnotationsPackage;
 import org.reclipse.structure.specification.OperatorType;
 import org.reclipse.structure.specification.PSAttributeConstraint;
@@ -40,14 +32,14 @@ import eu.qimpress.samm.staticstructure.StaticstructurePackage;
  *          the Archimetrix user. Thus the deficiency detection remains confined to the selected
  *          components.
  */
-public class ModifyCatalogAndGenerateAlgorithmsAction implements Runnable
+public class ModifyCatalogAction implements Runnable
 {
    Resource psCatalog, target;
 
    Object[] selectedComponents;
 
 
-   public ModifyCatalogAndGenerateAlgorithmsAction(Resource psCatalog, Resource target, Object[] selectedComponents)
+   public ModifyCatalogAction(Resource psCatalog, Resource target, Object[] selectedComponents)
    {
       super();
       this.psCatalog = psCatalog;
@@ -80,6 +72,7 @@ public class ModifyCatalogAndGenerateAlgorithmsAction implements Runnable
       {
          modifyCatalog(catalog, expression);
       }
+      
    }
 
 

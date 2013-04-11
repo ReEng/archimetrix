@@ -14,7 +14,7 @@ import org.eclipse.ui.PlatformUI;
 import org.fujaba.commons.console.ReportLevel;
 import org.reclipse.structure.inference.DetectPatternsJob;
 import org.reclipse.structure.inference.evaluation.SimilarityEvaluator;
-import org.reclipse.structure.inference.extended.ModifyCatalogAndGenerateAlgorithmsAction;
+import org.reclipse.structure.inference.extended.ModifyCatalogAction;
 import org.reclipse.structure.inference.ui.wizards.StartInferenceWizard;
 
 import eu.qimpress.samm.staticstructure.ComponentType;
@@ -52,7 +52,7 @@ public class StartPatternDetectionForComponentWizard extends StartInferenceWizar
       Object[] selection = getSelectedComponents();
       Resource catalogResource = setupCatalogResource();
 
-      ModifyCatalogAndGenerateAlgorithmsAction generateAction = new ModifyCatalogAndGenerateAlgorithmsAction(catalogResource,
+      ModifyCatalogAction generateAction = new ModifyCatalogAction(catalogResource,
             this.engines, selection);
       PlatformUI.getWorkbench().getDisplay().syncExec(generateAction);
 

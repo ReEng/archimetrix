@@ -15,7 +15,7 @@ import org.reclipse.structure.inference.DetectPatternsJob;
 import org.reclipse.structure.inference.InferenceEngine;
 import org.reclipse.structure.inference.InterpreterInferenceEngine;
 import org.reclipse.structure.inference.evaluation.SimilarityEvaluator;
-import org.reclipse.structure.inference.extended.ModifyCatalogAndGenerateAlgorithmsAction;
+import org.reclipse.structure.inference.extended.ModifyCatalogAction;
 import org.reclipse.structure.inference.ui.wizards.StartInferenceWizard;
 
 
@@ -79,10 +79,7 @@ public class StartModifyingCatalogWizard extends StartInferenceWizard
          engines = catalog.getResourceSet().createResource(uri);
       }
 
-      ModifyCatalogAndGenerateAlgorithmsAction modifyCatalogAction = new ModifyCatalogAndGenerateAlgorithmsAction(
-            catalog, engines, selection);
-      // configure view
-      PlatformUI.getWorkbench().getDisplay().syncExec(modifyCatalogAction);
+      modifySearchEngines(selection, catalog, engines);
 
       // let the user confirm annotation result overwriting
       if (abortStarting())
@@ -107,6 +104,21 @@ public class StartModifyingCatalogWizard extends StartInferenceWizard
 
       job.schedule();
       return true;
+   }
+
+
+   /**
+    * This action modifies the search engines such that only elements in the selected components are searched for deficiencies. 
+    * 
+    * @param selection The selected components that shall be searched for deficiencies.
+    * @param catalog The catalog that contains the deficiencies.
+    * @param engines The generated search engines.
+    */
+   private void modifySearchEngines(Object[] selection, Resource catalog, Resource engines)
+   {
+      ModifyCatalogAction modifyCatalogAction = new ModifyCatalogAction(
+            catalog, engines, selection);
+      PlatformUI.getWorkbench().getDisplay().syncExec(modifyCatalogAction);
    }
 
 
