@@ -20,7 +20,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.resources;bundle-version="3.6.0",
  org.storydriven.core;bundle-version="1.0.0",
  org.storydriven.storydiagrams;bundle-version="1.0.0",
- org.storydriven.storydiagrams.interpreter;bundle-version="1.0.0",
+ org.storydriven.storydiagrams.diagram.interpreter;bundle-version="1.0.1",
  org.storydriven.storydiagrams.interpreter.eclipse;bundle-version="1.0.0",
  org.somox.metricvaluesstorage;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
