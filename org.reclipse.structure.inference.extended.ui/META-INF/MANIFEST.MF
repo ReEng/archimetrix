@@ -23,6 +23,7 @@ Require-Bundle: org.eclipse.ui,
  org.reclipse.generator.ui;bundle-version="1.0.0",
  org.reclipse.structure.generator;bundle-version="1.0.0",
  org.reclipse.structure.generator.ui;bundle-version="1.0.0",
- org.archimetrix.relevanceanalysis.ui;bundle-version="1.0.0"
+ org.archimetrix.relevanceanalysis.ui;bundle-version="1.0.0",
+ org.archimetrix.commons;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy

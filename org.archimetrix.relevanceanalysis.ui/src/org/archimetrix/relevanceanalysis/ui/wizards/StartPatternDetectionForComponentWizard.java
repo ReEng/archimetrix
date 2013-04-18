@@ -10,11 +10,10 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PartInitException;
-import org.eclipse.ui.PlatformUI;
 import org.fujaba.commons.console.ReportLevel;
+import org.reclipse.structure.generator.PrepareDetectionEnginesJob;
 import org.reclipse.structure.inference.DetectPatternsJob;
 import org.reclipse.structure.inference.evaluation.SimilarityEvaluator;
-import org.reclipse.structure.inference.extended.ModifyCatalogAction;
 import org.reclipse.structure.inference.ui.wizards.StartInferenceWizard;
 
 import eu.qimpress.samm.staticstructure.ComponentType;
@@ -40,7 +39,6 @@ public class StartPatternDetectionForComponentWizard extends StartInferenceWizar
 
    public StartPatternDetectionForComponentWizard(final IWorkbench workbench)
    {
-      super();
 
       setWindowTitle(WIZARD_TITLE);
    }
@@ -52,19 +50,19 @@ public class StartPatternDetectionForComponentWizard extends StartInferenceWizar
       Object[] selection = getSelectedComponents();
       Resource catalogResource = setupCatalogResource();
 
-      ModifyCatalogAction generateAction = new ModifyCatalogAction(catalogResource,
-            this.engines, selection);
-      PlatformUI.getWorkbench().getDisplay().syncExec(generateAction);
+      final PrepareDetectionEnginesJob prepareEnginesJob = createPrepareEnginesJob();
+
+      prepareEnginesJob.schedule();
+
 
       // let the user confirm annotation result overwriting
-      if (abortStarting())
+      if (abortStartDueToExistingAnnotations())
       {
          return false;
       }
 
       storePageSettings();
-      final DetectPatternsJob job = createPatternDetectionJob(catalogResource, getHostResource(),
-            engines, ReportLevel.DEBUG, false, false, true, new SimilarityEvaluator());
+      final DetectPatternsJob job = createPatternDetectionJob(true, new SimilarityEvaluator(), ReportLevel.DEBUG);
       
       try
       {
@@ -84,7 +82,7 @@ public class StartPatternDetectionForComponentWizard extends StartInferenceWizar
 
    private Resource setupCatalogResource()
    {
-      Resource catalogResource = this.page.getCatalog();
+      Resource catalogResource = this.mainWizardPage.getCatalogResource();
       StringBuilder catalogPath = new StringBuilder(catalogResource.getURI().toPlatformString(false));
       catalogPath.append(".");
       catalogPath.append(WizardConstants.ECORE_FILE_EXTENSION);
@@ -118,8 +116,8 @@ public class StartPatternDetectionForComponentWizard extends StartInferenceWizar
    @Override
    public void addPages()
    {
-      this.page = new StartPatternDetectionForComponentWizardPage(WIZARD_TITLE);
-      addPage(this.page);
+      this.mainWizardPage = new StartPatternDetectionForComponentWizardPage(WIZARD_TITLE);
+      addPage(this.mainWizardPage);
    }
 
 

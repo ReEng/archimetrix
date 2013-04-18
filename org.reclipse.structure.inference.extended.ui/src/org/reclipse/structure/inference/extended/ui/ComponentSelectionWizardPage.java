@@ -49,7 +49,7 @@ import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorRepository;
  * @version $Revision$ $Date$
  *
  */
-public class ComponentSelectionCatalog extends WizardPage
+public class ComponentSelectionWizardPage extends WizardPage
 {
    private ComposedAdapterFactory adapterFactory;
    private CheckboxTreeViewer viewer;
@@ -57,7 +57,7 @@ public class ComponentSelectionCatalog extends WizardPage
    private Object sammModel;
    private FilteringAdapterFactoryContentProvider provider;
    
-   protected ComponentSelectionCatalog(String pageName)
+   protected ComponentSelectionWizardPage(String pageName)
    {
       super(pageName);
       initAdapterFactory();
@@ -191,6 +191,15 @@ public class ComponentSelectionCatalog extends WizardPage
       Object[] checked = this.viewer.getCheckedElements();
       
       return all.length == checked.length;
+   }
+
+   /**
+    * @see org.eclipse.jface.wizard.WizardPage#isPageComplete()
+    */
+   @Override
+   public boolean isPageComplete()
+   {
+      return (this.getCheckedObjects().length > 0);
    }
    
 }

@@ -105,7 +105,7 @@ public class StartPatternDetectionForComponentWizardPage extends StartInferenceW
    }
 
 
-   public Resource getCatalog()
+   public Resource getCatalogResource()
    {
       ResourceSet resourceSet = new ResourceSetImpl();
       resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap()

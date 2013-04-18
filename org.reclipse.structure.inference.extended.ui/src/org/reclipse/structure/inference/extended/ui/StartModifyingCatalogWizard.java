@@ -11,23 +11,28 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.fujaba.commons.console.ReportLevel;
+import org.reclipse.structure.generator.PrepareDetectionEnginesJob;
+import org.reclipse.structure.generator.preparationstrategies.AbstractEnginePreparationStrategy;
 import org.reclipse.structure.inference.DetectPatternsJob;
-import org.reclipse.structure.inference.InferenceEngine;
-import org.reclipse.structure.inference.InterpreterInferenceEngine;
 import org.reclipse.structure.inference.evaluation.SimilarityEvaluator;
-import org.reclipse.structure.inference.extended.ModifyCatalogAction;
+import org.reclipse.structure.inference.extended.CatalogModifyingGenerateEnginesStrategy;
 import org.reclipse.structure.inference.ui.wizards.StartInferenceWizard;
 
 
 /**
+ * This wizard is used to start the deficiency detection in Archimetrix. In addition to the
+ * {@link StartInferenceWizard}, it also provides a page to select the components in which
+ * deficiencies should be detected.
+ * 
  * @author Oleg
  * @author Last editor: $Author$
  * @version $Revision$ $Date$
  * 
+ * @see StartInferenceWizard
  */
 public class StartModifyingCatalogWizard extends StartInferenceWizard
 {
-   private ComponentSelectionCatalog selectionPage;
+   private ComponentSelectionWizardPage componentSelectionPage;
 
 
    public StartModifyingCatalogWizard(IWorkbench workbench)
@@ -39,86 +44,45 @@ public class StartModifyingCatalogWizard extends StartInferenceWizard
    @Override
    public void addPages()
    {
-      this.page = new StartModifyingCatalogWizardPage("Design Deficiency Detection");
+      this.mainWizardPage = new StartModifyingCatalogWizardPage("Design Deficiency Detection");
       // this resource set will only be used for selection and generating story diagrams
       // on perform finish call it will be reset again
-      this.page.initializeResourceSet();
-      this.addPage(this.page);
+      this.mainWizardPage.initializeResourceSet();
+      this.addPage(this.mainWizardPage);
       // add second page here
-      this.selectionPage = new ComponentSelectionCatalog("Select Components to be analyzed");
-      this.addPage(selectionPage);
+      this.componentSelectionPage = new ComponentSelectionWizardPage("Select Components to be analyzed");
+      this.addPage(componentSelectionPage);
 
    }
 
 
+   /**
+    * @see org.eclipse.jface.wizard.Wizard#getNextPage(org.eclipse.jface.wizard.IWizardPage)
+    */
    @Override
    public IWizardPage getNextPage(IWizardPage page)
    {
       IWizardPage next = super.getNextPage(page);
-      this.selectionPage.setSelection(this.page.getRoot());
+      this.componentSelectionPage.setSelection(this.mainWizardPage.getHostGraphResource());
       return next;
    }
 
 
    /**
-    * @see org.eclipse.jface.wizard.Wizard#performFinish()
+    * Creates the job that prepares the deficiency detection engines. In Archimetrix, we use the
+    * {@link CatalogModifyingGenerateEnginesStrategy} which modifies the catalog - and thus the
+    * generated detection engines - such that only the selected components will be considered during
+    * the detection.
+    * 
+    * @see org.reclipse.structure.inference.ui.wizards.StartInferenceWizard#createPrepareEnginesJob()
     */
    @Override
-   public boolean performFinish()
+   protected PrepareDetectionEnginesJob createPrepareEnginesJob()
    {
-      Object[] selection = null;
-      if (!selectionPage.isAllChecked())
-      {
-         selection = selectionPage.getCheckedObjects();
-      }
-      Resource catalog = page.getCatalog();
-      Resource engines = page.getEngines();
-      if (!this.page.isUseExistingEngines())
-      {
-         URI uri = URI.createPlatformResourceURI(catalog.getURI().toPlatformString(false) + ".ecore", true);
-         engines = catalog.getResourceSet().createResource(uri);
-      }
+      AbstractEnginePreparationStrategy strategy = new CatalogModifyingGenerateEnginesStrategy(
+            mainWizardPage.getCatalogResource(), this.componentSelectionPage.getCheckedObjects());
 
-      modifySearchEngines(selection, catalog, engines);
-
-      // let the user confirm annotation result overwriting
-      if (abortStarting())
-      {
-         return false;
-      }
-
-      storePageSettings();
-      final DetectPatternsJob job = createPatternDetectionJob(page.getCatalogPath(), page.getHostPath(),
-            page.getEnginesPath(), ReportLevel.DEBUG, false, false, true, new SimilarityEvaluator());
-
-      try
-      {
-         configureAnnotationsView(job);
-      }
-      catch (PartInitException e)
-      {
-         e.printStackTrace();
-         return false;
-      }
-      configureMatchingViews();
-
-      job.schedule();
-      return true;
-   }
-
-
-   /**
-    * This action modifies the search engines such that only elements in the selected components are searched for deficiencies. 
-    * 
-    * @param selection The selected components that shall be searched for deficiencies.
-    * @param catalog The catalog that contains the deficiencies.
-    * @param engines The generated search engines.
-    */
-   private void modifySearchEngines(Object[] selection, Resource catalog, Resource engines)
-   {
-      ModifyCatalogAction modifyCatalogAction = new ModifyCatalogAction(
-            catalog, engines, selection);
-      PlatformUI.getWorkbench().getDisplay().syncExec(modifyCatalogAction);
+      return new PrepareDetectionEnginesJob(strategy, mainWizardPage.getReportLevel());
    }
 
 
@@ -126,6 +90,7 @@ public class StartModifyingCatalogWizard extends StartInferenceWizard
    protected void storePageSettings()
    {
       super.storePageSettings();
+      // TODO: The selectionPage should also store its settings.
    }
 
 

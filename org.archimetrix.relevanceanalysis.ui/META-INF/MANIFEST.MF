@@ -18,7 +18,8 @@ Require-Bundle: org.eclipse.ui,
  org.reclipse.structure.inference;bundle-version="1.0.0",
  org.reclipse.structure.inference.extended;bundle-version="1.0.0",
  org.archimetrix.commons;bundle-version="1.0.0",
- org.somox.metricvaluesstorage;bundle-version="1.0.0"
+ org.somox.metricvaluesstorage;bundle-version="1.0.0",
+ org.reclipse.structure.generator;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.archimetrix.relevanceanalysis.ui,
