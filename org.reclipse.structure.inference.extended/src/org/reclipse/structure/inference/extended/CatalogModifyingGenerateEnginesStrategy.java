@@ -8,7 +8,7 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.reclipse.structure.generator.preparationstrategies.NonModifyingGenerateEnginesStrategy;
+import org.reclipse.structure.generator.preparationstrategies.GenerateNewEnginesStrategy;
 import org.reclipse.structure.specification.OperatorType;
 import org.reclipse.structure.specification.PSAttributeConstraint;
 import org.reclipse.structure.specification.PSCatalog;
@@ -34,9 +34,9 @@ import eu.qimpress.samm.staticstructure.StaticstructurePackage;
  * @author Last editor: $Author$
  * @version $Revision$ $Date$
  * 
- * @see NonModifyingGenerateEnginesStrategy
+ * @see GenerateNewEnginesStrategy
  */
-public class CatalogModifyingGenerateEnginesStrategy extends NonModifyingGenerateEnginesStrategy
+public class CatalogModifyingGenerateEnginesStrategy extends GenerateNewEnginesStrategy
 {
 
    private static final String INDIRECT_COMPONENT_CLASSES_NAME = "IndirectComponentClasses";
@@ -66,7 +66,7 @@ public class CatalogModifyingGenerateEnginesStrategy extends NonModifyingGenerat
     * user. 3. The resource for the detection engines is created and loaded. 4. The engines are
     * generated for the modified catalog. 5. The generated engines are saved.
     * 
-    * @see org.reclipse.structure.generator.preparationstrategies.NonModifyingGenerateEnginesStrategy#prepareEngines()
+    * @see org.reclipse.structure.generator.preparationstrategies.GenerateNewEnginesStrategy#prepareEngines()
     */
    @Override
    public IStatus prepareEngines()
