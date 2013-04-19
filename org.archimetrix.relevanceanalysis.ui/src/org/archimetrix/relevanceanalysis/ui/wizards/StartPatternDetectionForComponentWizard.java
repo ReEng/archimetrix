@@ -4,16 +4,11 @@ package org.archimetrix.relevanceanalysis.ui.wizards;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.archimetrix.commons.wizards.WizardConstants;
 import org.archimetrix.relevanceanalysis.ui.views.RelevantComponentsView;
-import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.ui.IWorkbench;
-import org.eclipse.ui.PartInitException;
-import org.fujaba.commons.console.ReportLevel;
 import org.reclipse.structure.generator.PrepareDetectionEnginesJob;
-import org.reclipse.structure.inference.DetectPatternsJob;
-import org.reclipse.structure.inference.evaluation.SimilarityEvaluator;
+import org.reclipse.structure.generator.preparationstrategies.AbstractEnginePreparationStrategy;
+import org.reclipse.structure.inference.extended.CatalogModifyingGenerateEnginesStrategy;
 import org.reclipse.structure.inference.ui.wizards.StartInferenceWizard;
 
 import eu.qimpress.samm.staticstructure.ComponentType;
@@ -21,7 +16,7 @@ import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
 
 
 /**
- * This class represents the wizard that is used to start the bad smell detection from the Relevant
+ * This class represents the wizard that is used to start the deficiency detection from the Relevant
  * Components View. It uses the StartPatternDetectionForComponentWizardPage.
  * 
  * @author mcp
@@ -34,9 +29,11 @@ public class StartPatternDetectionForComponentWizard extends StartInferenceWizar
 
    private static final String WIZARD_TITLE = "Start Design Deficiency Detection";
 
-   private Resource engines;
-
-
+   /**
+    * The constructor.
+    * 
+    * @param workbench The active workbench.
+    */
    public StartPatternDetectionForComponentWizard(final IWorkbench workbench)
    {
 
@@ -44,51 +41,24 @@ public class StartPatternDetectionForComponentWizard extends StartInferenceWizar
    }
 
 
+   /**
+    * Creates the job that prepares the deficiency detection engines. In Archimetrix, we use the
+    * {@link CatalogModifyingGenerateEnginesStrategy} which modifies the catalog - and thus the
+    * generated detection engines - such that only the selected components will be considered during
+    * the detection.
+    * 
+    * In this case the selection is obtained from the {@link RelevantComponentsView}.
+    * 
+    * @see org.reclipse.structure.inference.ui.wizards.StartInferenceWizard#createPrepareEnginesJob()
+    * @see org.reclipse.structure.inference.extended.ui.StartModifyingCatalogWizard#createPrepareEnginesJob()
+    */
    @Override
-   public boolean performFinish()
+   protected PrepareDetectionEnginesJob createPrepareEnginesJob()
    {
-      Object[] selection = getSelectedComponents();
-      Resource catalogResource = setupCatalogResource();
+      AbstractEnginePreparationStrategy strategy = new CatalogModifyingGenerateEnginesStrategy(
+            mainWizardPage.getCatalogResource(), getSelectedComponents());
 
-      final PrepareDetectionEnginesJob prepareEnginesJob = createPrepareEnginesJob();
-
-      prepareEnginesJob.schedule();
-
-
-      // let the user confirm annotation result overwriting
-      if (abortStartDueToExistingAnnotations())
-      {
-         return false;
-      }
-
-      storePageSettings();
-      final DetectPatternsJob job = createPatternDetectionJob(true, new SimilarityEvaluator(), ReportLevel.DEBUG);
-      
-      try
-      {
-         configureAnnotationsView(job);
-      }
-      catch (PartInitException e)
-      {
-         e.printStackTrace();
-         return false;
-      }
-      configureMatchingViews();
-
-      job.schedule();
-      return true;
-   }
-
-
-   private Resource setupCatalogResource()
-   {
-      Resource catalogResource = this.mainWizardPage.getCatalogResource();
-      StringBuilder catalogPath = new StringBuilder(catalogResource.getURI().toPlatformString(false));
-      catalogPath.append(".");
-      catalogPath.append(WizardConstants.ECORE_FILE_EXTENSION);
-      URI uri = URI.createPlatformResourceURI(catalogPath.toString(), true);
-      this.engines = catalogResource.getResourceSet().createResource(uri);
-      return catalogResource;
+      return new PrepareDetectionEnginesJob(strategy, mainWizardPage.getReportLevel());
    }
 
 
@@ -104,26 +74,12 @@ public class StartPatternDetectionForComponentWizard extends StartInferenceWizar
       return selectedComponents.toArray();
    }
 
-   private Resource getHostResource() {
-      Object[] selectedComponents = RelevantComponentsView.getSelectedComponents();
-      ComponentImplementingClassesLink component = null;
-      if(selectedComponents.length != 0) {
-         component = (ComponentImplementingClassesLink) selectedComponents[0];
-      }
-      return component.eResource();
-   }
-   
+
    @Override
    public void addPages()
    {
       this.mainWizardPage = new StartPatternDetectionForComponentWizardPage(WIZARD_TITLE);
       addPage(this.mainWizardPage);
-   }
-
-
-   @Override
-   protected void storePageSettings()
-   {
    }
 
 }

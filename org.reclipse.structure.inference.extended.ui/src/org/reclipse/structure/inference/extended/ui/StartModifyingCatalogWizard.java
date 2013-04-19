@@ -74,6 +74,8 @@ public class StartModifyingCatalogWizard extends StartInferenceWizard
     * generated detection engines - such that only the selected components will be considered during
     * the detection.
     * 
+    * The selection of components is made by the user on the {@link ComponentSelectionWizardPage}.
+    * 
     * @see org.reclipse.structure.inference.ui.wizards.StartInferenceWizard#createPrepareEnginesJob()
     */
    @Override
