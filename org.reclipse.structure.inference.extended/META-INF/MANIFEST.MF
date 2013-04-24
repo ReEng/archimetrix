@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Archimetrix Pattern Detection Extension
-Bundle-SymbolicName: org.reclipse.structure.inference.extended
+Bundle-SymbolicName: org.archimetrix.deficiencydetection
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.reclipse.structure.inference.extended.Activator
 Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn
