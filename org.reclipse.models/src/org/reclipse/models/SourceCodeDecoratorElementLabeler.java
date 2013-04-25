@@ -460,7 +460,7 @@ public class SourceCodeDecoratorElementLabeler extends AbstractElementLabeler
 
    private static String getText(File element)
    {
-      return element.getPathName();
+      return element.getFullQualifiedPath();
    }
 
 
