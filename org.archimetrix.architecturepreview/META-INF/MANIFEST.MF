@@ -6,10 +6,8 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.archimetrix.architecturepreview.ArchitecturePreviewPlugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- eu.qimpress.sourcecodedecorator;bundle-version="1.0.0",
  org.reclipse.structure.inference.annotations;bundle-version="1.0.0",
  org.eclipse.emf;bundle-version="2.6.0",
- eu.qimpress.gast;bundle-version="1.0.0",
  org.somox.core;bundle-version="1.0.0",
  org.somox.filter;bundle-version="1.0.0",
  org.somox.analyzer.sissymodelanalyzer;bundle-version="1.0.0",
@@ -20,11 +18,14 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.resources;bundle-version="3.6.0",
  org.storydriven.core;bundle-version="1.0.0",
  org.storydriven.storydiagrams;bundle-version="1.0.0",
- org.storydriven.storydiagrams.diagram.interpreter;bundle-version="1.0.1",
+ org.storydriven.storydiagrams.interpreter.core;bundle-version="1.0.0",
  org.storydriven.storydiagrams.interpreter.eclipse;bundle-version="1.0.0",
- org.somox.metricvaluesstorage;bundle-version="1.0.0"
+ org.somox.metricvaluesstorage;bundle-version="1.0.0",
+ org.somox.gast;bundle-version="1.0.0",
+ org.somox.sourcecodedecorator;bundle-version="1.0.1"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.archimetrix.architecturepreview,
  org.archimetrix.architecturepreview.starters
 Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn
+Import-Package: de.fzi.gast.core

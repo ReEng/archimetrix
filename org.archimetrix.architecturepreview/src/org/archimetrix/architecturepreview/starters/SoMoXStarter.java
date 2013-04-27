@@ -16,7 +16,7 @@ import org.somox.ui.runconfig.ModelAnalyzerConfiguration;
 import de.uka.ipd.sdq.workflow.OrderPreservingCompositeJob;
 import de.uka.ipd.sdq.workflow.exceptions.JobFailedException;
 import de.uka.ipd.sdq.workflow.exceptions.UserCanceledException;
-import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorRepository;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 
 
 /**
