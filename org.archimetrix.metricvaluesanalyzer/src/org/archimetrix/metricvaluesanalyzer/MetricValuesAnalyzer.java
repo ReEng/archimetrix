@@ -22,7 +22,7 @@ import org.somox.configuration.SoMoXConfiguration;
 
 import de.fzi.gast.core.corePackage;
 
-import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorPackage;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorPackage;
 
 
 public class MetricValuesAnalyzer

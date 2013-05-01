@@ -8,7 +8,7 @@ import de.fzi.gast.types.GASTClass;
 import eu.qimpress.samm.staticstructure.ComponentType;
 import eu.qimpress.samm.staticstructure.CompositeComponent;
 import eu.qimpress.samm.staticstructure.PrimitiveComponent;
-
+//import org.eclipse.gmt.modisco.java.Type;
 
 public class MetricValuesHelper
 {
@@ -16,14 +16,14 @@ public class MetricValuesHelper
    {
       StringBuilder s = new StringBuilder();
       s.append("<");
-      for (GASTClass gastClass : component.getClasses())
+      /*for (GASTClass gastClass : component.getClasses())
       {
          s.append(gastClass.getSimpleName() + " ");
       }
       for (Component subComp : component.getSubComponents())
       {
          s.append(printComponent(subComp));
-      }
+      }*/
       s.append(">");
       return s.toString();
    }
