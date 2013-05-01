@@ -6,6 +6,8 @@ import java.util.List;
 import org.archimetrix.architectureprognosis.ui.ArchitecturePrognosisUIPlugin;
 import org.archimetrix.architectureprognosis.ui.util.ComponentsUtil;
 import org.archimetrix.architectureprognosis.ui.views.ArchitecturePrognosisView;
+import org.eclipse.gmt.modisco.java.ClassDeclaration;
+import org.eclipse.gmt.modisco.java.Type;
 import org.eclipse.jface.viewers.ITableColorProvider;
 import org.eclipse.jface.viewers.ITableLabelProvider;
 import org.eclipse.jface.viewers.LabelProvider;
@@ -13,12 +15,12 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Tree;
 
-import de.fzi.gast.types.GASTClass;
+//import de.fzi.gast.types.GASTClass;
 import eu.qimpress.samm.staticstructure.ComponentType;
 import eu.qimpress.samm.staticstructure.CompositeComponent;
 import eu.qimpress.samm.staticstructure.PrimitiveComponent;
 import eu.qimpress.samm.staticstructure.Repository;
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 
 /**
@@ -72,7 +74,7 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
       {
          return getTextForCompositeComponent(element);
       }
-      else if (element instanceof GASTClass)
+      else if (element instanceof Type)
       {
          return getTextForGASTClass(element);
       }
@@ -82,7 +84,7 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
 
    private String getTextForGASTClass(final Object element)
    {
-      GASTClass gastClass = (GASTClass) element;
+      ClassDeclaration gastClass = (ClassDeclaration) element;
       ComponentType currentComponent = isFromNewArchitecture(gastClass);
       if (currentComponent != null)
       {
@@ -90,10 +92,10 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
          if (originalComponent != null && !originalComponentAccordsToNewComponent(originalComponent, currentComponent))
          {
             this.componentsTreeColorProvider.layoutBackgroundOfGASTClass(gastClass);
-            return gastClass.getQualifiedName() + getOriginalLocationString(gastClass, originalComponent);
+            return gastClass.getName() + getOriginalLocationString(gastClass, originalComponent);
          }
       }
-      return gastClass.getQualifiedName();
+      return gastClass.getName();
    }
 
 
@@ -176,7 +178,7 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
    }
 
 
-   private ComponentType isFromNewArchitecture(final GASTClass element)
+   private ComponentType isFromNewArchitecture(final Type element)
    {
       Repository newSamm = this.architecturePrognosisView.getNewSamm();
       List<ComponentType> components = newSamm.getComponenttype();
@@ -189,8 +191,8 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
                   .getComponentImplementingClassesLinkForComponent(component);
             if (link != null)
             {
-               List<GASTClass> classes = link.getImplementingClasses();
-               for (GASTClass gastClass : classes)
+               List<Type> classes = link.getImplementingClasses();
+               for (Type gastClass : classes)
                {
                   if (gastClass == element)
                   {
@@ -240,7 +242,7 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
    }
 
 
-   private String getOriginalLocationString(final GASTClass element, final ComponentType component)
+   private String getOriginalLocationString(final Type element, final ComponentType component)
    {
       StringBuilder text = new StringBuilder(" (was ");
       if (component != null)
@@ -258,7 +260,7 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
    }
 
 
-   private ComponentType getComponentFromOriginalArchitecture(final GASTClass element)
+   private ComponentType getComponentFromOriginalArchitecture(final Type element)
    {
       Repository originalSamm = this.architecturePrognosisView.getOriginalSamm();
       List<ComponentType> components = originalSamm.getComponenttype();
@@ -271,10 +273,10 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
                   .getComponentImplementingClassesLinkForComponent(component);
             if (link != null)
             {
-               List<GASTClass> classes = link.getImplementingClasses();
-               for (GASTClass gastClass : classes)
+               List<Type> classes = link.getImplementingClasses();
+               for (Type gastClass : classes)
                {
-                  if (gastClass.getId().equals(element.getId()))
+                  if (gastClass.getName().equals(element.getName()))
                   {
                      return component;
                   }
@@ -387,7 +389,7 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
       {
          return ArchitecturePrognosisUIPlugin.getImageDescriptor(PRIMITIVE_COMPONENT_ICON_PATH).createImage();
       }
-      else if (element instanceof GASTClass)
+      else if (element instanceof Type)
       {
          return ArchitecturePrognosisUIPlugin.getImageDescriptor(GASTCLASS_ICON_PATH).createImage();
       }

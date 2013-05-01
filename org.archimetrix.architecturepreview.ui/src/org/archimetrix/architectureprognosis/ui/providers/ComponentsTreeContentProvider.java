@@ -5,16 +5,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.archimetrix.architectureprognosis.ui.util.ComponentsUtil;
+import org.eclipse.gmt.modisco.java.ClassDeclaration;
+import org.eclipse.gmt.modisco.java.Type;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.Viewer;
 
-import de.fzi.gast.types.GASTClass;
+//import de.fzi.gast.types.GASTClass;
 import eu.qimpress.samm.staticstructure.ComponentType;
 import eu.qimpress.samm.staticstructure.CompositeComponent;
 import eu.qimpress.samm.staticstructure.PrimitiveComponent;
 import eu.qimpress.samm.staticstructure.Repository;
 import eu.qimpress.samm.staticstructure.SubcomponentInstance;
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 
 /**
@@ -77,7 +79,7 @@ public class ComponentsTreeContentProvider implements ITreeContentProvider
                parent);
          if (link != null)
          {
-            List<GASTClass> children = link.getImplementingClasses();
+            List<Type> children = link.getImplementingClasses();
             return children.toArray();
          }
       }

@@ -1,13 +1,13 @@
 package org.archimetrix.architectureprognosis.ui.providers;
 
 
+import org.eclipse.gmt.modisco.java.ClassDeclaration;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeItem;
 
-import de.fzi.gast.types.GASTClass;
 
 import eu.qimpress.samm.staticstructure.ComponentType;
 
@@ -121,7 +121,7 @@ public class ComponentsTreeColorProvider
    }
 
 
-   public void layoutBackgroundOfGASTClass(final GASTClass gastClass)
+   public void layoutBackgroundOfGASTClass(final ClassDeclaration gastClass)
    {
       Tree tree = this.componentsTreeLabelProvider.getNewComponentsTree();
       TreeItem item = getItem(tree, gastClass);

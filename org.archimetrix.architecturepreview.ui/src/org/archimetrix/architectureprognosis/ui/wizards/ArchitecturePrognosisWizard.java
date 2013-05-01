@@ -24,7 +24,7 @@ import org.reclipse.structure.inference.annotations.ASGAnnotation;
 import org.storydriven.storydiagrams.activities.Activity;
 
 import eu.qimpress.samm.staticstructure.Repository;
-import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorPackage;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorPackage;
 
 
 /**
