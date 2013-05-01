@@ -7,12 +7,14 @@ import java.util.Map.Entry;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+//import org.eclipse.gmt.modisco.java.ClassDeclaration;
+import org.eclipse.gmt.modisco.java.Type;
 import org.reclipse.metamodel.AbstractElementLabeler;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 import org.reclipse.structure.specification.util.ModelHelper;
 
-import de.fzi.gast.types.GASTClass;
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
+//import de.fzi.gast.types.GASTClass;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 
 /**
@@ -79,10 +81,10 @@ public class OutputFormatter
          final Map<String, Integer> classesMap)
    {
       StringBuilder b = new StringBuilder();
-      for (GASTClass gastClass : classesLink.getImplementingClasses())
+      for (Type gastClass : classesLink.getImplementingClasses())
       {
          EcoreUtil.resolveAll(gastClass);
-         b.append(classesMap.get(gastClass.getQualifiedName()));
+         b.append(classesMap.get(gastClass.getName()));
          b.append(",");
       }
       for (ComponentImplementingClassesLink subComp : classesLink.getSubComponents())

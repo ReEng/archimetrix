@@ -4,7 +4,7 @@ package org.archimetrix.relevanceanalysis.components.strategies;
 import java.util.Set;
 
 import metricvalues.MetricValuesModel;
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 
 /**

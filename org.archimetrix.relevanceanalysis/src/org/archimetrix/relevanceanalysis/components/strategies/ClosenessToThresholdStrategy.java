@@ -18,8 +18,10 @@ import org.archimetrix.commons.ConfigConstants;
 import org.archimetrix.relevanceanalysis.RelevanceAnalysisPlugin;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
-import de.fzi.gast.types.GASTClass;
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.eclipse.gmt.modisco.java.ClassDeclaration;
+import org.eclipse.gmt.modisco.java.Type;
+//import de.fzi.gast.types.GASTClass;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 
 /**
@@ -148,11 +150,11 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy
    private boolean componentAccordsToComponentCandidate(final ComponentImplementingClassesLink component, final Component comp)
    {
       EcoreUtil.resolveAll(component);
-      for (GASTClass compGastClass : comp.getClasses())
+      for (Type compGastClass : comp.getClasses())
       {
-         for (GASTClass componentGastClass : component.getImplementingClasses())
+         for (Type componentGastClass : component.getImplementingClasses())
          {
-            if (compGastClass.getQualifiedName().equals(componentGastClass.getQualifiedName()))
+            if (compGastClass.getName().equals(componentGastClass.getName()))
             {
                return true;
             }
@@ -262,4 +264,5 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy
    }
 
 
+   
 }

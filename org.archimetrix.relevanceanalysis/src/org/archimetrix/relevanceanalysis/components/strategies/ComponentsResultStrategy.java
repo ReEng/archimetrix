@@ -3,7 +3,7 @@ package org.archimetrix.relevanceanalysis.components.strategies;
 
 import org.archimetrix.relevanceanalysis.RelevanceResults;
 
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 
 /**

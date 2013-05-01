@@ -7,7 +7,7 @@ import org.archimetrix.relevanceanalysis.RelevanceResults;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 
 public class RelevanceResultsStorage

@@ -2,17 +2,27 @@ package org.archimetrix.relevanceanalysis.components.strategies;
 
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import de.fzi.gast.functions.Method;
-import de.fzi.gast.types.GASTClass;
-import de.fzi.gast.variables.Field;
-import de.fzi.gast.variables.FormalParameter;
-import de.fzi.gast.variables.Property;
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
-import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorRepository;
+//import de.fzi.gast.functions.Method;
+//import de.fzi.gast.types.GASTClass;
+//import de.fzi.gast.variables.Field;
+//import de.fzi.gast.variables.FormalParameter;
+//import de.fzi.gast.variables.Property;
+
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.gmt.modisco.java.BodyDeclaration;
+import org.eclipse.gmt.modisco.java.ClassDeclaration;
+import org.eclipse.gmt.modisco.java.FieldDeclaration;
+import org.eclipse.gmt.modisco.java.MethodDeclaration;
+import org.eclipse.gmt.modisco.java.SingleVariableDeclaration;
+import org.eclipse.gmt.modisco.java.Type;
+import org.eclipse.gmt.modisco.java.VariableDeclaration;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 
 
 /**
@@ -43,19 +53,19 @@ public final class ComponentsComplexityCalculator
    {
    }
 
-   private final Map<ComponentImplementingClassesLink, List<GASTClass>> componentClassesMap = new HashMap<ComponentImplementingClassesLink, List<GASTClass>>();
+   private final Map<ComponentImplementingClassesLink, List<ClassDeclaration>> componentClassesMap = new HashMap<ComponentImplementingClassesLink, List<ClassDeclaration>>();
 
-   private final Map<ComponentImplementingClassesLink, List<Method>> componentMethodsMap = new HashMap<ComponentImplementingClassesLink, List<Method>>();
+   private final Map<ComponentImplementingClassesLink, List<MethodDeclaration>> componentMethodsMap = new HashMap<ComponentImplementingClassesLink, List<MethodDeclaration>>();
 
-   private final Map<ComponentImplementingClassesLink, List<Property>> componentPropertiesMap = new HashMap<ComponentImplementingClassesLink, List<Property>>();
+   private final Map<ComponentImplementingClassesLink, List<VariableDeclaration>> componentPropertiesMap = new HashMap<ComponentImplementingClassesLink, List<VariableDeclaration>>();
 
-   private final Map<ComponentImplementingClassesLink, List<FormalParameter>> componentArgumentsMap = new HashMap<ComponentImplementingClassesLink, List<FormalParameter>>();
+   private final Map<ComponentImplementingClassesLink, List<VariableDeclaration>> componentArgumentsMap = new HashMap<ComponentImplementingClassesLink, List<VariableDeclaration>>();
 
    private final Map<ComponentImplementingClassesLink, Integer> numberOfGeneralizationsMap = new HashMap<ComponentImplementingClassesLink, Integer>();
 
    private final Map<ComponentImplementingClassesLink, Integer> numberOfReferencesMap = new HashMap<ComponentImplementingClassesLink, Integer>();
 
-   private List<GASTClass> repositoryClassesList;
+   private List<ClassDeclaration> repositoryClassesList;
 
    private int maxClassesSize = 0;
 
@@ -67,18 +77,18 @@ public final class ComponentsComplexityCalculator
 
    private int maxArgumentsSize = 0;
 
-   private List<Method> repositoryMethodsList;
+   private List<MethodDeclaration> repositoryMethodsList;
 
 
-   public List<FormalParameter> getAllArguments(final ComponentImplementingClassesLink component)
+   public List<VariableDeclaration> getAllArguments(final ComponentImplementingClassesLink component)
    {
       if (this.componentArgumentsMap.get(component) == null)
       {
-         List<FormalParameter> params = new ArrayList<FormalParameter>();
-         List<Method> methods = this.getAllMethods(component);
-         for (Method method : methods)
+         List<VariableDeclaration> params = new ArrayList<VariableDeclaration>();
+         List<MethodDeclaration> methods = this.getAllMethods(component);
+         for (MethodDeclaration method : methods)
          {
-            params.addAll(method.getFormalParameters());
+            params.addAll(method.getParameters());
          }
          this.componentArgumentsMap.put(component, params);
          return params;
@@ -90,15 +100,21 @@ public final class ComponentsComplexityCalculator
    }
 
 
-   public List<Property> getAllAttributes(final ComponentImplementingClassesLink component)
+   public List<VariableDeclaration> getAllAttributes(final ComponentImplementingClassesLink component)
    {
       if (this.componentPropertiesMap.get(component) == null)
       {
-         List<Property> properties = new ArrayList<Property>();
-         List<GASTClass> classes = this.getAllClasses(component);
-         for (GASTClass gastClass : classes)
+         List<VariableDeclaration> properties = new ArrayList<VariableDeclaration>();
+         List<ClassDeclaration> classes = this.getAllClasses(component);
+         for (ClassDeclaration gastClass : classes)
          {
-            properties.addAll(gastClass.getProperty());
+        	 List<BodyDeclaration> bds =gastClass.getBodyDeclarations();
+        	 for (BodyDeclaration bd : bds)
+        	 {
+        		 if(bd instanceof FieldDeclaration)
+        			 properties.add((VariableDeclaration)bd);
+        	 }
+        	 //properties.addAll(gastClass.getProperty());
          }
          this.componentPropertiesMap.put(component, properties);
          return properties;
@@ -110,15 +126,18 @@ public final class ComponentsComplexityCalculator
    }
 
 
-   public List<Method> getAllMethods(final ComponentImplementingClassesLink component)
+   public List<MethodDeclaration> getAllMethods(final ComponentImplementingClassesLink component)
    {
       if (this.componentMethodsMap.get(component) == null)
       {
-         List<Method> methods = new ArrayList<Method>();
-         List<GASTClass> classes = this.getAllClasses(component);
-         for (GASTClass gastClass : classes)
+         List<MethodDeclaration> methods = new ArrayList<MethodDeclaration>();
+         List<ClassDeclaration> classes = this.getAllClasses(component);
+         for (ClassDeclaration gastClass : classes)
          {
-            methods.addAll(gastClass.getMethods());
+        	EList<BodyDeclaration> bds = gastClass.getBodyDeclarations();
+        	for(BodyDeclaration bd : bds)
+        		if(bd instanceof MethodDeclaration)
+        			methods.add((MethodDeclaration)bd);
          }
          this.componentMethodsMap.put(component, methods);
          return methods;
@@ -136,14 +155,14 @@ public final class ComponentsComplexityCalculator
    }
 
 
-   public List<GASTClass> getAllClasses(final ComponentImplementingClassesLink component)
+   public List<ClassDeclaration> getAllClasses(final ComponentImplementingClassesLink component)
    {
       if (this.componentClassesMap.get(component) == null)
       {
-         List<GASTClass> classes = new ArrayList<GASTClass>();
-         for (GASTClass gastClass : component.getImplementingClasses())
+         List<ClassDeclaration> classes = new ArrayList<ClassDeclaration>();
+         for (Type gastClass : component.getImplementingClasses())
          {
-            classes.add(gastClass);
+            classes.add((ClassDeclaration)gastClass);
          }
          for (ComponentImplementingClassesLink subComp : component.getSubComponents())
          {
@@ -199,9 +218,16 @@ public final class ComponentsComplexityCalculator
       if (this.maxAttributesSize == 0)
       {
          int sum = 0;
-         for (GASTClass gastClass : this.getAllClasses(repo))
+         for (ClassDeclaration gastClass : this.getAllClasses(repo))
          {
-            sum += gastClass.getProperty().size();
+        	List<BodyDeclaration> bds = gastClass.getBodyDeclarations();
+        	int fields=0;
+        	for(BodyDeclaration bd : bds)
+        	{
+        		if(bd instanceof FieldDeclaration)
+        			fields++;
+        	}
+            sum += fields;
          }
          this.maxAttributesSize = sum;
       }
@@ -214,9 +240,9 @@ public final class ComponentsComplexityCalculator
       if (this.maxArgumentsSize == 0)
       {
          int sum = 0;
-         for (Method method : this.getAllMethods(repo))
+         for (MethodDeclaration method : this.getAllMethods(repo))
          {
-            sum += method.getFormalParameters().size();
+            sum += method.getParameters().size();
          }
          this.maxArgumentsSize = sum;
       }
@@ -224,14 +250,19 @@ public final class ComponentsComplexityCalculator
    }
 
 
-   private List<Method> getAllMethods(final SourceCodeDecoratorRepository repo)
+   private List<MethodDeclaration> getAllMethods(final SourceCodeDecoratorRepository repo)
    {
       if (this.repositoryMethodsList == null)
       {
-         List<Method> methods = new ArrayList<Method>();
-         for (GASTClass gastClass : this.getAllClasses(repo))
+         List<MethodDeclaration> methods = new ArrayList<MethodDeclaration>();
+         for (ClassDeclaration gastClass : this.getAllClasses(repo))
          {
-            methods.addAll(gastClass.getMethods());
+        	List<BodyDeclaration> bds= gastClass.getBodyDeclarations();
+        	for(BodyDeclaration bd : bds)
+        	{
+        		if(bd instanceof MethodDeclaration)
+        			methods.add((MethodDeclaration)bd);
+        	}
          }
          this.repositoryMethodsList = methods;
       }
@@ -239,11 +270,11 @@ public final class ComponentsComplexityCalculator
    }
 
 
-   public List<GASTClass> getAllClasses(final SourceCodeDecoratorRepository repo)
+   public List<ClassDeclaration> getAllClasses(final SourceCodeDecoratorRepository repo)
    {
       if (this.repositoryClassesList == null)
       {
-         List<GASTClass> classes = new ArrayList<GASTClass>();
+         List<ClassDeclaration> classes = new ArrayList<ClassDeclaration>();
          List<ComponentImplementingClassesLink> componentImplementingClassesLinks = repo
                .getComponentImplementingClassesLink();
          for (ComponentImplementingClassesLink comp : componentImplementingClassesLinks)
@@ -268,15 +299,13 @@ public final class ComponentsComplexityCalculator
       if (this.numberOfGeneralizationsMap.get(component) == null)
       {
          int gens = 0;
-         for (GASTClass clazz : component.getImplementingClasses())
+         for (Type clazz : component.getImplementingClasses())
          {
-            for (GASTClass superType : clazz.getSuperTypes())
-            {
-               if (component.getImplementingClasses().contains(superType))
-               {
-                  gens++;
-               }
-            }
+        	 if (component.getImplementingClasses().contains(clazz.getClass().getSuperclass()))
+        	 {
+        		 gens++;
+             }
+            
          }
          this.numberOfGeneralizationsMap.put(component, gens);
       }
@@ -289,15 +318,21 @@ public final class ComponentsComplexityCalculator
       if (this.numberOfReferencesMap.get(component) == null)
       {
          int gens = 0;
-         for (GASTClass clazz : component.getImplementingClasses())
+         for (Type clazz : component.getImplementingClasses())
          {
-            for (Field field : clazz.getFields())
-            {
-               if (component.getImplementingClasses().contains(field.getType()))
-               {
-                  gens++;
-               }
-            }
+        	 if(clazz instanceof ClassDeclaration)
+        	 {
+        		 List<BodyDeclaration> bds =((ClassDeclaration)clazz).getBodyDeclarations();
+        		 for (BodyDeclaration bd:bds)
+        		 {
+        			 if(bd instanceof FieldDeclaration)
+        				 if (component.getImplementingClasses().contains(((FieldDeclaration)bd).getType()))
+        				 {
+        					 gens++;
+        				 }
+        		 }
+        	 }
+ 
          }
          this.numberOfReferencesMap.put(component, gens);
       }

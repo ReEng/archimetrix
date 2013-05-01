@@ -15,8 +15,8 @@ import org.archimetrix.relevanceanalysis.components.strategies.IComponentsStrate
 import org.archimetrix.relevanceanalysis.components.strategies.ParetoOptimalComponentsResultStrategy;
 import org.archimetrix.relevanceanalysis.components.strategies.VectorLengthComponentsResultStrategy;
 
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
-import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorRepository;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 
 
 public class RelevantComponentAnalysis extends AbstractRelevanceAnalysis<ComponentImplementingClassesLink>

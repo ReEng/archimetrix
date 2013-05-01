@@ -28,8 +28,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 
-import de.fzi.gast.types.GASTClass;
-
+//import de.fzi.gast.types.GASTClass;
+import org.eclipse.gmt.modisco.java.ClassDeclaration;
+import org.eclipse.gmt.modisco.java.Type;
 
 public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnnotation>
 {
@@ -173,12 +174,12 @@ public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnno
          final ASGAnnotation annotation)
    {
       // GASTClass nonTOClass = (GASTClass) annotation.getAnnotatedElements().get("nonTO").get(0);
-      GASTClass calledClass = (GASTClass) annotation.getAnnotatedElements().get(PatternConstants.CALLED_CLASS_ROLE)
+      ClassDeclaration calledClass = (ClassDeclaration) annotation.getAnnotatedElements().get(PatternConstants.CALLED_CLASS_ROLE)
             .get(0);
-      GASTClass callingClass = (GASTClass) annotation.getAnnotatedElements().get(PatternConstants.CALLING_CLASS_ROLE)
+      ClassDeclaration callingClass = (ClassDeclaration) annotation.getAnnotatedElements().get(PatternConstants.CALLING_CLASS_ROLE)
             .get(0);
-      String calledClassName = calledClass.getSimpleName();
-      String callingClassName = callingClass.getSimpleName();
+      String calledClassName = calledClass.getName();
+      String callingClassName = callingClass.getName();
       for (ComponentCandidate compCand : this.metricValuesModel.getIterations(0).getComponentCandidates())
       {
          EcoreUtil.resolveAll(compCand);
@@ -195,12 +196,12 @@ public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnno
    private ComponentCandidate getComponentCandidateAccordingToInterfaceViolationOccurrence(
          final ASGAnnotation interfaceViolationAnnotation)
    {
-      GASTClass accessingClassObject = (GASTClass) interfaceViolationAnnotation.getAnnotatedElements()
+	   Type accessingClassObject = (Type) interfaceViolationAnnotation.getAnnotatedElements()
             .get(PatternConstants.IV_ACCESSING_CLASS_ROLE).get(0);
-      String accessingClassName = accessingClassObject.getSimpleName();
-      GASTClass accessedMethodOwnerObject = (GASTClass) interfaceViolationAnnotation.getAnnotatedElements()
+      String accessingClassName = accessingClassObject.getName();
+      Type accessedMethodOwnerObject = (Type) interfaceViolationAnnotation.getAnnotatedElements()
             .get(PatternConstants.IV_ACCESSED_METHOD_OWNER_ROLE).get(0);
-      String accessedMethodOwnerName = accessedMethodOwnerObject.getSimpleName();
+      String accessedMethodOwnerName = accessedMethodOwnerObject.getName();
       for (ComponentCandidate compCand : this.metricValuesModel.getIterations(0).getComponentCandidates())
       {
          EcoreUtil.resolveAll(compCand);
@@ -217,10 +218,10 @@ public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnno
    private boolean componentContainsClass(final Component component, final String className)
    {
       EcoreUtil.resolveAll(component);
-      for (GASTClass clazz : component.getClasses())
+      for (Type clazz : component.getClasses())
       {
          EcoreUtil.resolveAll(clazz);
-         if (clazz.getSimpleName().equals(className))
+         if (clazz.getName().equals(className))
          {
             return true;
          }

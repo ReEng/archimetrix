@@ -8,10 +8,16 @@ import org.archimetrix.commons.PatternConstants;
 import org.archimetrix.relevanceanalysis.badsmells.util.BadSmellOccurrenceUtil;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 
-import de.fzi.gast.functions.Method;
-import de.fzi.gast.types.GASTClass;
-import de.fzi.gast.variables.Field;
+//import de.fzi.gast.functions.Method;
+//import de.fzi.gast.types.GASTClass;
+//import de.fzi.gast.variables.Field;
 
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.gmt.modisco.java.BodyDeclaration;
+import org.eclipse.gmt.modisco.java.MethodDeclaration;
+import org.eclipse.gmt.modisco.java.ClassDeclaration;
+import org.eclipse.gmt.modisco.java.FieldDeclaration;
+//import org.eclipse.gmt.modisco.java.Type;
 
 /**
  * This class calculates the relevance value for the relevance strategy "Data Class Communication"
@@ -52,9 +58,9 @@ public class DataClassCommunicationStrategy extends BadSmellsRelevanceStrategy
 
    private double toIsDataClass(final ASGAnnotation badSmellAnnotation)
    {
-      GASTClass nonTOClass = getTOFromNonTOCommPattern(badSmellAnnotation);
+      ClassDeclaration nonTOClass = getTOFromNonTOCommPattern(badSmellAnnotation);
       int numberOfFields = getNumberOfFields(nonTOClass);
-      int numberOfMethods = nonTOClass.getMethods().size();
+      int numberOfMethods = getNumberOfMethods(nonTOClass);
       if (numberOfFields == 0 || numberOfMethods == 0)
       {
          return 0;
@@ -63,53 +69,78 @@ public class DataClassCommunicationStrategy extends BadSmellsRelevanceStrategy
    }
 
 
-   private int getNumberOfFields(GASTClass nonTOClass)
+   private int getNumberOfFields(ClassDeclaration nonTOClass)
    {
       int numberOfFields = 0;
       // only non-static fields are of interest
-      for (Field field : nonTOClass.getFields())
+      EList<BodyDeclaration> bdeclarations = nonTOClass.getBodyDeclarations();
+      for (BodyDeclaration bd : bdeclarations)
       {
-         if (!field.isStatic())
+    	  if(bd instanceof FieldDeclaration)
+    		  numberOfFields++;
+      }
+      
+      //for (FieldDeclaration field : nonTOClass.getFields())
+      {
+      //   if (!field.isStatic())
          {
-            numberOfFields++;
+      //      numberOfFields++;
          }
       }
       return numberOfFields;
    }
+   
+   private int getNumberOfMethods(ClassDeclaration nonTOClass)
+   {
+      int numberOfMethods = 0;
+      EList<BodyDeclaration> bdeclarations = nonTOClass.getBodyDeclarations();
+      for (BodyDeclaration bd : bdeclarations)
+      {
+    	  if(bd instanceof MethodDeclaration)
+    		  numberOfMethods++;
+      }
+      return numberOfMethods;
+   }
 
 
-   private double sumOfNonAndMissingAccessors(GASTClass nonTOClass, int numberOfFields)
+   private double sumOfNonAndMissingAccessors(ClassDeclaration nonTOClass, int numberOfFields)
    {
       int numberOfSetters = 0;
       int numberOfGetters = 0;
       int numberOfNonAccessors = 0;
-      for (Method method : nonTOClass.getMethods())
+      
+      EList<BodyDeclaration> bdeclarations = nonTOClass.getBodyDeclarations();
+      for (BodyDeclaration method : bdeclarations)
       {
-         if (isGetter(method))
-         {
-            numberOfGetters++;
-         }
-         else if (isSetter(method))
-         {
-            numberOfSetters++;
-         }
-         else
-         {
-            numberOfNonAccessors++;
-         }
+    	  if(method instanceof MethodDeclaration)
+    	  {
+    		  if (isGetter((MethodDeclaration)method))
+    	         {
+    	            numberOfGetters++;
+    	         }
+    	         else if (isSetter((MethodDeclaration)method))
+    	         {
+    	            numberOfSetters++;
+    	         }
+    	         else
+    	         {
+    	            numberOfNonAccessors++;
+    	         }
+    	  }
       }
+
       int numberOfMissingAccessors = Math.abs(2 * numberOfFields - numberOfGetters - numberOfSetters);
       return numberOfNonAccessors + numberOfMissingAccessors;
    }
 
 
-   private boolean isSetter(final Method method)
+   private boolean isSetter(final MethodDeclaration method)
    {
-      if (method.getSimpleName().startsWith(SETTER_PREFIX))
+      if (method.getName().startsWith(SETTER_PREFIX))
       {
-         if (method.getFormalParameters().size() == 1)
+         if (method.getParameters().size() == 1)
          {
-            if (method.getReturnTypeDeclaration().getAccessedClass().getSimpleName().equals(VOID))
+            if (method.getReturnType().getQualifier().getClass().getSimpleName().equals(VOID))
             {
                return true;
             }
@@ -119,11 +150,11 @@ public class DataClassCommunicationStrategy extends BadSmellsRelevanceStrategy
    }
 
 
-   private boolean isGetter(final Method method)
+   private boolean isGetter(final MethodDeclaration method)
    {
-      if (method.getSimpleName().startsWith(GETTER_PREFIX))
+      if (method.getName().startsWith(GETTER_PREFIX))
       {
-         if (method.getFormalParameters().size() == 0)
+         if (method.getParameters().size() == 0)
          {
             return true;
          }
@@ -132,9 +163,9 @@ public class DataClassCommunicationStrategy extends BadSmellsRelevanceStrategy
    }
 
 
-   private GASTClass getTOFromNonTOCommPattern(final ASGAnnotation annotation)
+   private ClassDeclaration getTOFromNonTOCommPattern(final ASGAnnotation annotation)
    {
-      return (GASTClass) annotation.getAnnotatedElements().get(PatternConstants.NON_TO_ROLE).get(0);
+      return (ClassDeclaration) annotation.getAnnotatedElements().get(PatternConstants.NON_TO_ROLE).get(0);
    }
 
 

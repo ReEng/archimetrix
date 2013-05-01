@@ -2,8 +2,8 @@ package org.archimetrix.relevanceanalysis.components.strategies;
 
 
 import metricvalues.MetricValuesModel;
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
-import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorRepository;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 
 
 /**
