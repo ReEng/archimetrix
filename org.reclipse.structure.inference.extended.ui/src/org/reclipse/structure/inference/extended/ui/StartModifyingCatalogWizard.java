@@ -33,6 +33,8 @@ import org.reclipse.structure.inference.ui.wizards.StartInferenceWizard;
 public class StartModifyingCatalogWizard extends StartInferenceWizard
 {
    private ComponentSelectionWizardPage componentSelectionPage;
+   private StartModifyingCatalogWizardPage mainWizardPage;
+private Object selectionPage;
 
 
    public StartModifyingCatalogWizard(IWorkbench workbench)
@@ -63,7 +65,11 @@ public class StartModifyingCatalogWizard extends StartInferenceWizard
    public IWizardPage getNextPage(IWizardPage page)
    {
       IWizardPage next = super.getNextPage(page);
+
+      ((ComponentSelectionWizardPage) this.selectionPage).setSelection(this.page.getCatalogResource());
+
       this.componentSelectionPage.setSelection(this.mainWizardPage.getHostGraphResource());
+
       return next;
    }
 
@@ -78,11 +84,25 @@ public class StartModifyingCatalogWizard extends StartInferenceWizard
     * 
     * @see org.reclipse.structure.inference.ui.wizards.StartInferenceWizard#createPrepareEnginesJob()
     */
-   @Override
+   //@Override
    protected PrepareDetectionEnginesJob createPrepareEnginesJob()
    {
+
+      Object[] selection = null;
+      if (!((ComponentSelectionWizardPage) selectionPage).isAllChecked())
+      {
+         selection = ((ComponentSelectionWizardPage) selectionPage).getCheckedObjects();
+      }
+      Resource catalog = page.getCatalogResource();
+      Resource engines = page.getEnginesResource();
+      if (!this.page.isUseExistingEngines())
+      {
+         URI uri = URI.createPlatformResourceURI(catalog.getURI().toPlatformString(false) + ".ecore", true);
+         engines = catalog.getResourceSet().createResource(uri);
+      }
       AbstractEnginePreparationStrategy strategy = new CatalogModifyingGenerateEnginesStrategy(
             mainWizardPage.getCatalogResource(), this.componentSelectionPage.getCheckedObjects());
+
 
       return new PrepareDetectionEnginesJob(strategy, mainWizardPage.getReportLevel());
    }
