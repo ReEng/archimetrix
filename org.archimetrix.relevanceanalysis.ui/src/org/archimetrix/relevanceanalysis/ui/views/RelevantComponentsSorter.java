@@ -6,8 +6,8 @@ import org.archimetrix.relevanceanalysis.components.strategies.IComponentsStrate
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerSorter;
 
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
-import eu.qimpress.sourcecodedecorator.impl.ComponentImplementingClassesLinkImpl;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.somox.sourcecodedecorator.impl.ComponentImplementingClassesLinkImpl;
 
 public class RelevantComponentsSorter extends ViewerSorter
 {

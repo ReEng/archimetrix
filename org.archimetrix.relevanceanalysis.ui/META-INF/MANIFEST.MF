@@ -15,7 +15,7 @@ Require-Bundle: org.eclipse.ui,
  org.fujaba.commons;bundle-version="1.0.0",
  org.reclipse.structure.inference.ui;bundle-version="1.0.0",
  org.reclipse.structure.inference;bundle-version="1.0.0",
- org.reclipse.structure.inference.extended;bundle-version="1.0.0",
+ org.reclipse.structure.inference.extended;bundle-version="1.0.0";resolution:=optional,
  org.archimetrix.commons;bundle-version="1.0.0",
  org.somox.metricvaluesstorage;bundle-version="1.0.0",
  org.somox.sourcecodedecorator;bundle-version="1.0.1"
@@ -27,3 +27,6 @@ Export-Package: org.archimetrix.relevanceanalysis.ui,
  org.archimetrix.relevanceanalysis.ui.views,
  org.archimetrix.relevanceanalysis.ui.wizards
 Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn
+Import-Package: org.reclipse.structure.generator,
+ org.reclipse.structure.generator.preparationstrategies,
+ org.reclipse.structure.inference.extended

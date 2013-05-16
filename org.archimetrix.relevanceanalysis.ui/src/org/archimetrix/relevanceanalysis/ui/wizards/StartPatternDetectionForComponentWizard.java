@@ -4,15 +4,19 @@ package org.archimetrix.relevanceanalysis.ui.wizards;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.archimetrix.commons.wizards.WizardConstants;
 import org.archimetrix.relevanceanalysis.ui.views.RelevantComponentsView;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.ui.IWorkbench;
 import org.reclipse.structure.generator.PrepareDetectionEnginesJob;
 import org.reclipse.structure.generator.preparationstrategies.AbstractEnginePreparationStrategy;
 import org.reclipse.structure.inference.extended.CatalogModifyingGenerateEnginesStrategy;
 import org.reclipse.structure.inference.ui.wizards.StartInferenceWizard;
+import org.reclipse.structure.inference.ui.wizards.StartInferenceWizardPage;
 
 import eu.qimpress.samm.staticstructure.ComponentType;
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 
 /**
@@ -28,6 +32,8 @@ public class StartPatternDetectionForComponentWizard extends StartInferenceWizar
 {
 
    private static final String WIZARD_TITLE = "Start Design Deficiency Detection";
+   private StartInferenceWizardPage mainWizardPage;
+   private Resource engines;
 
    /**
     * The constructor.
@@ -52,13 +58,26 @@ public class StartPatternDetectionForComponentWizard extends StartInferenceWizar
     * @see org.reclipse.structure.inference.ui.wizards.StartInferenceWizard#createPrepareEnginesJob()
     * @see org.reclipse.structure.inference.extended.ui.StartModifyingCatalogWizard#createPrepareEnginesJob()
     */
-   @Override
+   //@Override
    protected PrepareDetectionEnginesJob createPrepareEnginesJob()
    {
       AbstractEnginePreparationStrategy strategy = new CatalogModifyingGenerateEnginesStrategy(
             mainWizardPage.getCatalogResource(), getSelectedComponents());
 
       return new PrepareDetectionEnginesJob(strategy, mainWizardPage.getReportLevel());
+   }
+
+
+
+   private Resource setupCatalogResource()
+   {
+      Resource catalogResource = this.page.getCatalogResource();
+      StringBuilder catalogPath = new StringBuilder(catalogResource.getURI().toPlatformString(false));
+      catalogPath.append(".");
+      catalogPath.append(WizardConstants.ECORE_FILE_EXTENSION);
+      URI uri = URI.createPlatformResourceURI(catalogPath.toString(), true);
+      this.engines = catalogResource.getResourceSet().createResource(uri);
+      return catalogResource;
    }
 
 

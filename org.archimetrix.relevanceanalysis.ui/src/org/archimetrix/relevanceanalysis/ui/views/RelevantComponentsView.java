@@ -20,8 +20,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
-import eu.qimpress.sourcecodedecorator.impl.ComponentImplementingClassesLinkImpl;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.somox.sourcecodedecorator.impl.ComponentImplementingClassesLinkImpl;
 
 
 /**

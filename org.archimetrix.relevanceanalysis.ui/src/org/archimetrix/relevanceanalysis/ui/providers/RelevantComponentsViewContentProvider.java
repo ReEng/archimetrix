@@ -4,7 +4,7 @@ package org.archimetrix.relevanceanalysis.ui.providers;
 import org.archimetrix.relevanceanalysis.RelevanceResults;
 import org.archimetrix.relevanceanalysis.ui.views.RelevantComponentsView;
 
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 
 /**

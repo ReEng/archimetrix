@@ -13,7 +13,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 
-import eu.qimpress.sourcecodedecorator.impl.ComponentImplementingClassesLinkImpl;
+import org.somox.sourcecodedecorator.impl.ComponentImplementingClassesLinkImpl;
 
 
 /**
