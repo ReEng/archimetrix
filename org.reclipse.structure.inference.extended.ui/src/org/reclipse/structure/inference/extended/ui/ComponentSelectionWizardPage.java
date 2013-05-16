@@ -39,9 +39,9 @@ import eu.qimpress.samm.deployment.targetenvironment.provider.TargetenvironmentI
 import eu.qimpress.samm.qosannotation.provider.QosannotationItemProviderAdapterFactory;
 import eu.qimpress.samm.staticstructure.provider.StaticstructureItemProviderAdapterFactory;
 import eu.qimpress.samm.usagemodel.provider.UsagemodelItemProviderAdapterFactory;
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
-import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorPackage;
-import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorRepository;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorPackage;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 
 /**
  * @author Oleg
