@@ -5,7 +5,6 @@ package org.reclipse.structure.inference.extended.ui;
 
 import java.io.IOException;
 
-import org.archimetrix.relevanceanalysis.ui.views.RelevantComponentsSorter;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
@@ -93,7 +92,8 @@ public class ComponentSelectionWizardPage extends WizardPage
       b.addSelectionListener(new SelectionListener()
       {
          
-         @Override
+         @SuppressWarnings("deprecation")
+		@Override
          public void widgetSelected(SelectionEvent e)
          {
             if(isAllChecked())

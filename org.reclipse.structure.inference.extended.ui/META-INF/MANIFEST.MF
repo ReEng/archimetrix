@@ -15,9 +15,9 @@ Require-Bundle: org.eclipse.ui,
  eu.qimpress.samm;bundle-version="1.0.0",
  eu.qimpress.samm.edit;bundle-version="1.0.0",
  eu.qimpress.samm.editor;bundle-version="1.0.0",
- eu.qimpress.sourcecodedecorator;bundle-version="1.0.0",
- eu.qimpress.sourcecodedecorator.edit;bundle-version="1.0.0",
- eu.qimpress.sourcecodedecorator.editor;bundle-version="1.0.0",
+ org.somox.sourcecodedecorator;bundle-version="1.0.0",
+ org.somox.sourcecodedecorator.edit;bundle-version="1.0.0",
+ org.somox.sourcecodedecorator.editor;bundle-version="1.0.0",
  org.fujaba.commons;bundle-version="1.0.0",
  org.reclipse.generator;bundle-version="1.0.0",
  org.reclipse.generator.ui;bundle-version="1.0.0",
@@ -27,3 +27,6 @@ Require-Bundle: org.eclipse.ui,
  org.archimetrix.commons;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
+Import-Package: de.uka.ipd.sdq.probfunction.provider,
+ de.uka.ipd.sdq.stoex.provider,
+ de.uka.ipd.sdq.units.provider
