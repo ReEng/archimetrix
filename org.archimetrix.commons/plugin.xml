@@ -19,10 +19,10 @@
             allPopups="false"
             locationURI="menu:org.archimetrix.ui.main.menu">
          <command
-               commandId="org.archimetrix.commons.StartGASTExtractionCommand"
-               icon="icons/sissy.gif"
+               commandId="org.archimetrix.commons.StartModiscoExtractionCommand"
+               icon="icons/modisco.gif"
                id="org.archimetrix.commons.StartGASTExtractionMenuContribution"
-               label="Extract GAST"
+               label="Extract MoDisco"
                style="push">
          </command>
          <command
@@ -55,8 +55,8 @@
          </command>
          <command
                defaultHandler="org.archimetrix.commons.handlers.OpenLaunchDialogHandler"
-               id="org.archimetrix.commons.StartGASTExtractionCommand"
-               name="Extract GAST">
+               id="org.archimetrix.commons.StartModiscoExtractionCommand"
+               name="Extract Modisco">
          </command>
       </extension>
 </plugin>
