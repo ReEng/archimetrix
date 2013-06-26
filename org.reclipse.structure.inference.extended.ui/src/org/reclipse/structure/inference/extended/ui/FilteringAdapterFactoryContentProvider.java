@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 
-import eu.qimpress.samm.staticstructure.ComponentType;
+import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
+
+//import eu.qimpress.samm.staticstructure.ComponentType;
 
 /**
  * @author Oleg
@@ -34,9 +36,9 @@ public class FilteringAdapterFactoryContentProvider extends AdapterFactoryConten
       {
          for(Object o : result)
          {
-            if(o instanceof ComponentType)
+            if(o instanceof RepositoryComponent)
             {
-               if(!DUMMY.equals(((ComponentType) o).getName()))
+               if(!DUMMY.equals(((RepositoryComponent) o).getEntityName()))
                {
                   list.add(o);
                }

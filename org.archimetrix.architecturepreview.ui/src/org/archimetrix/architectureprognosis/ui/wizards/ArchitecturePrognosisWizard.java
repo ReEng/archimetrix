@@ -23,8 +23,10 @@ import org.eclipse.ui.PlatformUI;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 import org.storydriven.storydiagrams.activities.Activity;
 
-import eu.qimpress.samm.staticstructure.Repository;
+//simport eu.qimpress.samm.staticstructure.Repository;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorPackage;
+
+import de.uka.ipd.sdq.pcm.repository.Repository;
 
 
 /**

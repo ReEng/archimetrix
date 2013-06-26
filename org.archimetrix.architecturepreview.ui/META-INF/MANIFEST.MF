@@ -17,9 +17,10 @@ Require-Bundle: org.eclipse.ui,
  org.storydriven.core;bundle-version="1.0.0",
  org.storydriven.storydiagrams;bundle-version="1.0.0",
  org.somox.metricvaluesstorage;bundle-version="1.0.0",
- org.somox.gast;bundle-version="1.0.0",
  org.somox.sourcecodedecorator;bundle-version="1.0.1",
- org.eclipse.gmt.modisco.java;bundle-version="0.10.1"
+ org.eclipse.gmt.modisco.java;bundle-version="0.10.1",
+ de.fzi.gast;bundle-version="1.0.0",
+ de.uka.ipd.sdq.pcm;bundle-version="3.2.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn

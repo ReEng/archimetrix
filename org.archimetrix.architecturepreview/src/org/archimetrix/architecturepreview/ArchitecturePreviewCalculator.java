@@ -7,10 +7,14 @@ import java.util.List;
 import org.archimetrix.architecturepreview.util.RepositoryLoader;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
-import eu.qimpress.samm.staticstructure.ComponentType;
-import eu.qimpress.samm.staticstructure.PrimitiveComponent;
-import eu.qimpress.samm.staticstructure.Repository;
+//import eu.qimpress.samm.staticstructure.ComponentType;
+//import eu.qimpress.samm.staticstructure.PrimitiveComponent;
+//simport eu.qimpress.samm.staticstructure.Repository;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
+
+import de.uka.ipd.sdq.pcm.repository.BasicComponent;
+import de.uka.ipd.sdq.pcm.repository.Repository;
+import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
 
 
 /**
@@ -117,8 +121,8 @@ public class ArchitecturePreviewCalculator
    public List<List<String>> start()
    {
       EcoreUtil.resolveAll(this.originalSammRep);
-      List<ComponentType> oldComponentTypes = this.originalSammRep.getComponenttype();
-      List<ComponentType> newComponentTypes = this.newSammRep.getComponenttype();
+      List<RepositoryComponent> oldComponentTypes = this.originalSammRep.getComponents__Repository();
+      List<RepositoryComponent> newComponentTypes = this.newSammRep.getComponents__Repository();
 
       calcTotalComponents(oldComponentTypes, newComponentTypes);
       calcPrimitiveAndCompositeComponents(oldComponentTypes, newComponentTypes);
@@ -135,8 +139,8 @@ public class ArchitecturePreviewCalculator
    private void calcMessages()
    {
       this.messagesLine.add(MESSAGE_LINE_TITLE);
-      this.messagesLine.add(String.valueOf(this.originalSammRep.getMessagetype().size()));
-      this.messagesLine.add(String.valueOf(this.newSammRep.getMessagetype().size()));
+      this.messagesLine.add(String.valueOf(this.originalSammRep.getDataTypes__Repository().size())); // we are supposed to use MessageType 
+      this.messagesLine.add(String.valueOf(this.newSammRep.getDataTypes__Repository().size()));
    }
 
 
@@ -146,8 +150,8 @@ public class ArchitecturePreviewCalculator
    private void calcInterfaces()
    {
       this.interfacesLine.add(INTERFACES_LINE_TITLE);
-      this.interfacesLine.add(String.valueOf(this.originalSammRep.getInterface().size()));
-      this.interfacesLine.add(String.valueOf(this.newSammRep.getInterface().size()));
+      this.interfacesLine.add(String.valueOf(this.originalSammRep.getInterfaces__Repository().size()));
+      this.interfacesLine.add(String.valueOf(this.newSammRep.getInterfaces__Repository().size()));
    }
 
 
@@ -158,8 +162,8 @@ public class ArchitecturePreviewCalculator
     * @param oldComponentTypes the components from the original architecture
     * @param newComponentTypes the components from the predicted architecture
     */
-   private void calcPrimitiveAndCompositeComponents(final List<ComponentType> oldComponentTypes,
-         final List<ComponentType> newComponentTypes)
+   private void calcPrimitiveAndCompositeComponents(final List<RepositoryComponent> oldComponentTypes,
+         final List<RepositoryComponent> newComponentTypes)
    {
       int oldPrimitives = countPrimitiveComponents(oldComponentTypes);
       int newPrimitives = countPrimitiveComponents(newComponentTypes);
@@ -180,12 +184,12 @@ public class ArchitecturePreviewCalculator
     * @param componentTypes a list of components.
     * @return the number of primitive components.
     */
-   private int countPrimitiveComponents(final List<ComponentType> componentTypes)
+   private int countPrimitiveComponents(final List<RepositoryComponent> componentTypes)
    {
       int primitives = 0;
-      for (ComponentType componentType : componentTypes)
+      for (RepositoryComponent componentType : componentTypes)
       {
-         if (componentType instanceof PrimitiveComponent)
+         if (componentType instanceof BasicComponent)
          {
             primitives++;
          }
@@ -200,7 +204,7 @@ public class ArchitecturePreviewCalculator
     * @param oldComponentTypes the components from the original architecture
     * @param newComponentTypes the components from the predicted architecture
     */
-   private void calcTotalComponents(final List<ComponentType> oldComponentTypes, final List<ComponentType> newComponentTypes)
+   private void calcTotalComponents(final List<RepositoryComponent> oldComponentTypes, final List<RepositoryComponent> newComponentTypes)
    {
       this.totalComponentsLine.add(TOTAL_COMPONENTS_LINE_TITLE);
       this.totalComponentsLine.add(String.valueOf(oldComponentTypes.size()));

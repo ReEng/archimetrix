@@ -5,18 +5,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.archimetrix.architectureprognosis.ui.util.ComponentsUtil;
-import org.eclipse.gmt.modisco.java.ClassDeclaration;
+//import org.eclipse.gmt.modisco.java.ClassDeclaration;
 import org.eclipse.gmt.modisco.java.Type;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.Viewer;
 
 //import de.fzi.gast.types.GASTClass;
-import eu.qimpress.samm.staticstructure.ComponentType;
-import eu.qimpress.samm.staticstructure.CompositeComponent;
-import eu.qimpress.samm.staticstructure.PrimitiveComponent;
-import eu.qimpress.samm.staticstructure.Repository;
-import eu.qimpress.samm.staticstructure.SubcomponentInstance;
+//import eu.qimpress.samm.staticstructure.ComponentType;
+//import eu.qimpress.samm.staticstructure.CompositeComponent;
+//import eu.qimpress.samm.staticstructure.PrimitiveComponent;
+//import eu.qimpress.samm.staticstructure.Repository;
+//import eu.qimpress.samm.staticstructure.SubcomponentInstance;
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
+
+import de.uka.ipd.sdq.pcm.core.composition.AssemblyContext;
+import de.uka.ipd.sdq.pcm.repository.BasicComponent;
+import de.uka.ipd.sdq.pcm.repository.CompositeComponent;
+import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
+import de.uka.ipd.sdq.pcm.repository.Repository;
 
 
 /**
@@ -36,11 +42,11 @@ public class ComponentsTreeContentProvider implements ITreeContentProvider
    @Override
    public Object[] getElements(final Object inputElement)
    {
-      List<ComponentType> allComponents = ((Repository) inputElement).getComponenttype();
-      List<ComponentType> filteredComponents = new ArrayList<ComponentType>();
-      for (ComponentType componentType : allComponents)
+      List<RepositoryComponent> allComponents = ((Repository) inputElement).getComponents__Repository();
+      List<RepositoryComponent> filteredComponents = new ArrayList<RepositoryComponent>();
+      for (RepositoryComponent componentType : allComponents)
       {
-         if (!componentType.getName().equals(SOMOX_DUMMY_COMPONENT))
+         if (!componentType.getEntityName().equals(SOMOX_DUMMY_COMPONENT))
          {
             filteredComponents.add(componentType);
          }
@@ -69,12 +75,12 @@ public class ComponentsTreeContentProvider implements ITreeContentProvider
       if (parentElement instanceof CompositeComponent)
       {
          CompositeComponent parent = (CompositeComponent) parentElement;
-         List<ComponentType> children = getChildrenComponents(parent);
+         List<RepositoryComponent> children = getChildrenComponents(parent);
          return children.toArray();
       }
-      else if (parentElement instanceof PrimitiveComponent)
+      else if (parentElement instanceof BasicComponent) //  PrimitiveComponent changed to BasicComponent
       {
-         PrimitiveComponent parent = (PrimitiveComponent) parentElement;
+         BasicComponent parent = (BasicComponent) parentElement;
          ComponentImplementingClassesLink link = ComponentsUtil.get().getComponentImplementingClassesLinkForComponent(
                parent);
          if (link != null)
@@ -87,12 +93,12 @@ public class ComponentsTreeContentProvider implements ITreeContentProvider
    }
 
 
-   private List<ComponentType> getChildrenComponents(final CompositeComponent parent)
+   private List<RepositoryComponent> getChildrenComponents(final CompositeComponent parent)
    {
-      List<ComponentType> children = new ArrayList<ComponentType>();
-      for (SubcomponentInstance subComp : parent.getSubcomponents())
+      List<RepositoryComponent> children = new ArrayList<RepositoryComponent>();
+      for (AssemblyContext subComp : parent.getAssemblyContexts__ComposedStructure())
       {
-         children.add(subComp.getRealizedBy());
+         children.add(subComp.getEncapsulatedComponent__AssemblyContext());
       }
       return children;
    }
@@ -101,29 +107,29 @@ public class ComponentsTreeContentProvider implements ITreeContentProvider
    @Override
    public Object getParent(final Object element)
    {
-      if (element instanceof PrimitiveComponent || element instanceof CompositeComponent)
+      if (element instanceof BasicComponent || element instanceof CompositeComponent)
       {
-         return getParentCompositeComponent((ComponentType) element,
-               ((Repository) ((ComponentType) element).eContainer()).getComponenttype());
+         return getParentCompositeComponent((RepositoryComponent) element,
+               ((Repository) ((RepositoryComponent) element).eContainer()).getComponents__Repository());
       }
       return null;
    }
 
 
-   private ComponentType getParentCompositeComponent(final ComponentType element, final List<ComponentType> components)
+   private RepositoryComponent getParentCompositeComponent(final RepositoryComponent element, final List<RepositoryComponent> components)
    {
-      for (ComponentType component : components)
+      for (RepositoryComponent component : components)
       {
          if (component instanceof CompositeComponent)
          {
-            List<ComponentType> childrenComponents = getChildrenComponents((CompositeComponent) component);
+            List<RepositoryComponent> childrenComponents = getChildrenComponents((CompositeComponent) component);
             if (childrenComponents.contains(element))
             {
                return component;
             }
             else
             {
-               ComponentType result = getParentCompositeComponent(element, childrenComponents);
+            	RepositoryComponent result = getParentCompositeComponent(element, childrenComponents);
                if (result != null)
                {
                   return result;
@@ -138,7 +144,7 @@ public class ComponentsTreeContentProvider implements ITreeContentProvider
    @Override
    public boolean hasChildren(final Object element)
    {
-      if (element instanceof CompositeComponent || element instanceof PrimitiveComponent)
+      if (element instanceof CompositeComponent || element instanceof BasicComponent)
       {
          return true;
       }

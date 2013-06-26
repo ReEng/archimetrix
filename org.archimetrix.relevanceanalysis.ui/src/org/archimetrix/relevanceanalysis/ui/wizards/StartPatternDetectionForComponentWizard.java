@@ -15,7 +15,8 @@ import org.reclipse.structure.inference.extended.CatalogModifyingGenerateEngines
 import org.reclipse.structure.inference.ui.wizards.StartInferenceWizard;
 import org.reclipse.structure.inference.ui.wizards.StartInferenceWizardPage;
 
-import eu.qimpress.samm.staticstructure.ComponentType;
+import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
+//import eu.qimpress.samm.staticstructure.ComponentType;
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 
@@ -84,7 +85,7 @@ public class StartPatternDetectionForComponentWizard extends StartInferenceWizar
    private Object[] getSelectedComponents()
    {
       Object[] selectedComponentImplementingClassesLinks = RelevantComponentsView.getSelectedComponents();
-      List<ComponentType> selectedComponents = new ArrayList<ComponentType>();
+      List<RepositoryComponent> selectedComponents = new ArrayList<RepositoryComponent>(); //ComponentType to RepositoryComponent
       for (Object object : selectedComponentImplementingClassesLinks)
       {
          ComponentImplementingClassesLink link = (ComponentImplementingClassesLink) object;

@@ -12,7 +12,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.fujaba.commons;bundle-version="1.0.0",
  org.archimetrix.commons;bundle-version="1.0.0",
  org.somox.metricvaluesstorage;bundle-version="1.0.0",
- org.somox.sourcecodedecorator;bundle-version="1.0.1"
+ org.somox.sourcecodedecorator;bundle-version="1.0.1",
+ de.fzi.gast;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.archimetrix.relevanceanalysis,

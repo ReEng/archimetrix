@@ -15,7 +15,9 @@ import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.ui.part.ViewPart;
 
-import eu.qimpress.samm.staticstructure.Repository;
+import de.uka.ipd.sdq.pcm.repository.Repository;
+
+//import eu.qimpress.samm.staticstructure.Repository;
 
 
 /**

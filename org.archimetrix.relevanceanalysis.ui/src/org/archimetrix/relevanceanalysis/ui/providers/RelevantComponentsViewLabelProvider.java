@@ -38,7 +38,7 @@ public class RelevantComponentsViewLabelProvider extends AbstractRelevanceAnalys
       switch (columnIndex)
       {
          case 0:
-            text = ((ComponentImplementingClassesLink) element).getComponent().getName();
+            text = ((ComponentImplementingClassesLink) element).getComponent().getEntityName();
             break;
          default:
             int lastColumn = this.relevantComponentsView.getRelevanceResults().getNumberOfRelevanceStrategies();

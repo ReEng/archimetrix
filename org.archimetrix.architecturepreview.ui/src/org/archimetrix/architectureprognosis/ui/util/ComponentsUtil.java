@@ -11,11 +11,16 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
-import eu.qimpress.samm.staticstructure.ComponentType;
-import eu.qimpress.samm.staticstructure.PrimitiveComponent;
-import eu.qimpress.samm.staticstructure.Repository;
+//import eu.qimpress.samm.staticstructure.ComponentType;
+//import eu.qimpress.samm.staticstructure.PrimitiveComponent;
+//import eu.qimpress.samm.staticstructure.Repository;
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
+
+import de.uka.ipd.sdq.pcm.repository.BasicComponent;
+import de.uka.ipd.sdq.pcm.repository.ComponentType;
+import de.uka.ipd.sdq.pcm.repository.Repository;
+import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
 
 
 /**
@@ -36,7 +41,7 @@ public final class ComponentsUtil
 
    private Repository samm;
 
-   private Map<ComponentType, ComponentImplementingClassesLink> componentClasses;
+   private Map<BasicComponent, ComponentImplementingClassesLink> componentClasses; //ComponentType changed to BasicComponent
 
 
    private ComponentsUtil()
@@ -60,11 +65,11 @@ public final class ComponentsUtil
     * @param component a primitive component from a SAMM
     * @return a component implementing classes link of the according SCDM
     */
-   public ComponentImplementingClassesLink getComponentImplementingClassesLinkForComponent(final PrimitiveComponent component)
+   public ComponentImplementingClassesLink getComponentImplementingClassesLinkForComponent(final BasicComponent component) //PrimitivComponent changed to BasicComponent
    {
       if (this.componentClasses == null)
       {
-         this.componentClasses = new HashMap<ComponentType, ComponentImplementingClassesLink>();
+         this.componentClasses = new HashMap<BasicComponent, ComponentImplementingClassesLink>(); // ComponentType changed to BasicCompoment
       }
       ComponentImplementingClassesLink componentImplementingClassesLink = this.componentClasses.get(component);
       if (componentImplementingClassesLink != null)
@@ -94,9 +99,9 @@ public final class ComponentsUtil
     * @param component
     * @return
     */
-   public String createShortComponentName(final ComponentType component)
+   public String createShortComponentName(final RepositoryComponent component)
    {
-      String[] componentNameArray = component.getName().split(" ");
+      String[] componentNameArray = component.getEntityName().split(" ");
       String componentName = componentNameArray[1] + " " + componentNameArray[3];
       return componentName;
    }

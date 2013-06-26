@@ -8,8 +8,10 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeItem;
 
+import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
 
-import eu.qimpress.samm.staticstructure.ComponentType;
+
+//import eu.qimpress.samm.staticstructure.ComponentType;
 
 
 /**
@@ -36,7 +38,7 @@ public class ComponentsTreeColorProvider
 
 
    public void layoutRedLines(final Object element, final boolean isFromOriginalArchitecture,
-         final ComponentType componentFromNewArchitecture)
+         final RepositoryComponent componentFromNewArchitecture) // ComponentType changed to RepositoryComponent
    {
       if (isFromOriginalArchitecture && componentFromNewArchitecture == null)
       {
@@ -50,7 +52,7 @@ public class ComponentsTreeColorProvider
 
 
    public void layoutGreenLines(final Object element, final boolean isFromNewArchitecture,
-         final ComponentType componentFromOriginalArchitecture)
+         final RepositoryComponent componentFromOriginalArchitecture)
    {
       if (isFromNewArchitecture && componentFromOriginalArchitecture == null)
       {
@@ -92,9 +94,9 @@ public class ComponentsTreeColorProvider
    }
 
 
-   public void layoutBackgroundOfComponents(final Object element, final ComponentType component,
-         final boolean isFromOriginalArchitecture, final boolean isFromNewArchitecture, final ComponentType componentFromNewArchitecture,
-         final ComponentType componentFromOriginalArchitecture)
+   public void layoutBackgroundOfComponents(final Object element, final RepositoryComponent component,
+         final boolean isFromOriginalArchitecture, final boolean isFromNewArchitecture, final RepositoryComponent componentFromNewArchitecture,
+         final RepositoryComponent componentFromOriginalArchitecture)
    {
       Tree tree = null;
       if (isFromOriginalArchitecture

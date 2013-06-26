@@ -20,7 +20,7 @@ import org.storydriven.storydiagrams.interpreter.eclipse.StoryDrivenEclipseInter
 import de.fzi.gast.core.Root;
 import de.mdelab.sdm.interpreter.core.SDMException;
 import de.mdelab.sdm.interpreter.core.variables.Variable;
-import org.somox.qimpressgast.util.qimpressgastResourceFactoryImpl;
+//import org.somox.qimpressgast.util.qimpressgastResourceFactoryImpl;
 
 
 /**

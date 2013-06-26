@@ -5,10 +5,13 @@ import metricvalues.Component;
 import metricvalues.Iteration;
 import metricvalues.MetricValuesModel;
 import de.fzi.gast.types.GASTClass;
-import eu.qimpress.samm.staticstructure.ComponentType;
-import eu.qimpress.samm.staticstructure.CompositeComponent;
-import eu.qimpress.samm.staticstructure.PrimitiveComponent;
+import de.uka.ipd.sdq.pcm.repository.BasicComponent;
+import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
+//import eu.qimpress.samm.staticstructure.ComponentType;
+//import eu.qimpress.samm.staticstructure.CompositeComponent;
+//import eu.qimpress.samm.staticstructure.PrimitiveComponent;
 //import org.eclipse.gmt.modisco.java.Type;
+import de.uka.ipd.sdq.pcm.repository.CompositeComponent;
 
 public class MetricValuesHelper
 {
@@ -29,21 +32,21 @@ public class MetricValuesHelper
    }
 
 
-   public static String printComponentType(final ComponentType componentType)
+   public static String printComponentType(final RepositoryComponent comp) // ComponentType changed to RepositoryComponent (also possible RepositoryComponent)
    {
       StringBuilder s = new StringBuilder();
       s.append("<");
-      if (componentType instanceof PrimitiveComponent)
+      if (comp instanceof BasicComponent) //PrimitiveComponent changed to BasicComponent
       {
-         s.append(componentType.getName());
-         // PrimitiveComponent primitiveComp = ((PrimitiveComponent)componentType);
-         // primitiveComp.getPassiveResources();
+         s.append(comp.getEntityName());
+          //BasicComponent primitiveComp = ((BasicComponent)componentType);
+          //primitiveComp.getPassiveResources();
       }
-      else if (componentType instanceof CompositeComponent)
+      else if (comp instanceof CompositeComponent)
       {
-         // CompositeComponent compComp = ((CompositeComponent) componentType);
-         // compComp.getSubcomponents(); // TODO
-         s.append(componentType.getName());
+          //CompositeComponent compComp = ((CompositeComponent) componentType);
+          //compComp.getSubcomponents(); // TODO
+         s.append(comp.getEntityName());
       }
       // for (GASTClass gastClass : componentType.getClasses())
       // {

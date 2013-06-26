@@ -16,11 +16,16 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Tree;
 
 //import de.fzi.gast.types.GASTClass;
-import eu.qimpress.samm.staticstructure.ComponentType;
-import eu.qimpress.samm.staticstructure.CompositeComponent;
-import eu.qimpress.samm.staticstructure.PrimitiveComponent;
-import eu.qimpress.samm.staticstructure.Repository;
+//import eu.qimpress.samm.staticstructure.ComponentType;
+//import eu.qimpress.samm.staticstructure.CompositeComponent;
+//import eu.qimpress.samm.staticstructure.PrimitiveComponent;
+//import eu.qimpress.samm.staticstructure.Repository;
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
+
+import de.uka.ipd.sdq.pcm.repository.BasicComponent;
+import de.uka.ipd.sdq.pcm.repository.CompositeComponent;
+import de.uka.ipd.sdq.pcm.repository.Repository;
+import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
 
 
 /**
@@ -66,7 +71,7 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
    @Override
    public String getText(final Object element)
    {
-      if (element instanceof PrimitiveComponent)
+      if (element instanceof BasicComponent) // PrimitiveComponent changed to BasicComponent
       {
          return getTextForPrimitiveComponent(element);
       }
@@ -85,10 +90,10 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
    private String getTextForGASTClass(final Object element)
    {
       ClassDeclaration gastClass = (ClassDeclaration) element;
-      ComponentType currentComponent = isFromNewArchitecture(gastClass);
+      RepositoryComponent currentComponent = isFromNewArchitecture(gastClass); //ComponentType changed to RepositoryComponent
       if (currentComponent != null)
       {
-         ComponentType originalComponent = getComponentFromOriginalArchitecture(gastClass);
+         RepositoryComponent originalComponent = getComponentFromOriginalArchitecture(gastClass);  //ComponentType changed to RepositoryComponent
          if (originalComponent != null && !originalComponentAccordsToNewComponent(originalComponent, currentComponent))
          {
             this.componentsTreeColorProvider.layoutBackgroundOfGASTClass(gastClass);
@@ -113,24 +118,24 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
    {
       CompositeComponent compositeComponent = (CompositeComponent) element;
       setColors(element, compositeComponent);
-      return ((ComponentType) element).getName() + getCompositeComponentsSizeDescription(compositeComponent);
+      return ((RepositoryComponent) element).getEntityName() + getCompositeComponentsSizeDescription(compositeComponent); //ComponentType changed to RepositoryComponent
    }
 
 
    private String getTextForPrimitiveComponent(final Object element)
    {
-      PrimitiveComponent primitiveComponent = (PrimitiveComponent) element;
+      BasicComponent primitiveComponent = (BasicComponent) element; // PrimitiveComponent changed to BasicComponent
       setColors(element, primitiveComponent);
-      return primitiveComponent.getName() + getPrimitiveComponentSizeDescription(primitiveComponent);
+      return primitiveComponent.getEntityName() + getPrimitiveComponentSizeDescription(primitiveComponent);
    }
 
 
-   private void setColors(final Object element, final ComponentType component)
+   private void setColors(final Object element, final RepositoryComponent component) //ComponentType changed to RepositoryComponent
    {
       boolean isFromOriginalArchitecture = isFromOriginalArchitecture(component);
       boolean isFromNewArchitecture = isFromNewArchitecture(component);
-      ComponentType componentFromNewArchitecture = getComponentFromNewArchitecture(component);
-      ComponentType componentFromOriginalArchitecture = getComponentFromOriginalArchitecture(component);
+      RepositoryComponent componentFromNewArchitecture = getComponentFromNewArchitecture(component);  //ComponentType changed to RepositoryComponent
+      RepositoryComponent componentFromOriginalArchitecture = getComponentFromOriginalArchitecture(component);  //ComponentType changed to RepositoryComponent
       this.componentsTreeColorProvider
             .layoutRedLines(element, isFromOriginalArchitecture, componentFromNewArchitecture);
       this.componentsTreeColorProvider.layoutGreenLines(element, isFromNewArchitecture,
@@ -150,12 +155,12 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
    }
 
 
-   public boolean componentValuesDiffer(final ComponentType originalComponent, final ComponentType newComponent)
+   public boolean componentValuesDiffer(final RepositoryComponent originalComponent, final RepositoryComponent newComponent) //ComponentType changed to RepositoryComponent
    {
-      if (originalComponent instanceof PrimitiveComponent && newComponent instanceof PrimitiveComponent)
+      if (originalComponent instanceof BasicComponent && newComponent instanceof BasicComponent) // PrimitiveComponent changed to BasicComponent
       {
-         return !getPrimitiveComponentSizeDescription((PrimitiveComponent) originalComponent).equals(
-               getPrimitiveComponentSizeDescription((PrimitiveComponent) newComponent));
+         return !getPrimitiveComponentSizeDescription((BasicComponent) originalComponent).equals(
+               getPrimitiveComponentSizeDescription((BasicComponent) newComponent));
       }
       else if (originalComponent instanceof CompositeComponent && newComponent instanceof CompositeComponent)
       {
@@ -166,8 +171,8 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
    }
 
 
-   private boolean originalComponentAccordsToNewComponent(final ComponentType originalComponent,
-         final ComponentType currentComponent)
+   private boolean originalComponentAccordsToNewComponent(final RepositoryComponent originalComponent,  //ComponentType changed to RepositoryComponent
+         final RepositoryComponent currentComponent)
    {
       if (currentComponent != null && originalComponent != null)
       {
@@ -178,15 +183,15 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
    }
 
 
-   private ComponentType isFromNewArchitecture(final Type element)
+   private RepositoryComponent isFromNewArchitecture(final Type element)
    {
       Repository newSamm = this.architecturePrognosisView.getNewSamm();
-      List<ComponentType> components = newSamm.getComponenttype();
-      for (ComponentType componentType : components)
+      List<RepositoryComponent> components = newSamm.getComponents__Repository();
+      for (RepositoryComponent componentType : components)
       {
-         if (componentType instanceof PrimitiveComponent)
+         if (componentType instanceof BasicComponent)
          {
-            PrimitiveComponent component = ((PrimitiveComponent) componentType);
+            BasicComponent component = ((BasicComponent) componentType);
             ComponentImplementingClassesLink link = ComponentsUtil.get()
                   .getComponentImplementingClassesLinkForComponent(component);
             if (link != null)
@@ -206,13 +211,13 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
    }
 
 
-   private boolean isFromNewArchitecture(final ComponentType element)
+   private boolean isFromNewArchitecture(final RepositoryComponent element)
    {
       Repository newSamm = this.architecturePrognosisView.getNewSamm();
       if (newSamm != null)
       {
-         List<ComponentType> components = newSamm.getComponenttype();
-         for (ComponentType componentType : components)
+         List<RepositoryComponent> components = newSamm.getComponents__Repository();
+         for (RepositoryComponent componentType : components)
          {
             if (componentType == element)
             {
@@ -224,13 +229,13 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
    }
 
 
-   private boolean isFromOriginalArchitecture(final ComponentType element)
+   private boolean isFromOriginalArchitecture(final RepositoryComponent element)
    {
       Repository originalSamm = this.architecturePrognosisView.getOriginalSamm();
       if (originalSamm != null)
       {
-         List<ComponentType> components = originalSamm.getComponenttype();
-         for (ComponentType componentType : components)
+         List<RepositoryComponent> components = originalSamm.getComponents__Repository();
+         for (RepositoryComponent componentType : components)
          {
             if (componentType == element)
             {
@@ -242,7 +247,7 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
    }
 
 
-   private String getOriginalLocationString(final Type element, final ComponentType component)
+   private String getOriginalLocationString(final Type element, final RepositoryComponent component)
    {
       StringBuilder text = new StringBuilder(" (was ");
       if (component != null)
@@ -260,15 +265,15 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
    }
 
 
-   private ComponentType getComponentFromOriginalArchitecture(final Type element)
+   private RepositoryComponent getComponentFromOriginalArchitecture(final Type element)
    {
       Repository originalSamm = this.architecturePrognosisView.getOriginalSamm();
-      List<ComponentType> components = originalSamm.getComponenttype();
-      for (ComponentType componentType : components)
+      List<RepositoryComponent> components = originalSamm.getComponents__Repository();
+      for (RepositoryComponent componentType : components)
       {
-         if (componentType instanceof PrimitiveComponent)
+         if (componentType instanceof BasicComponent)
          {
-            PrimitiveComponent component = ((PrimitiveComponent) componentType);
+            BasicComponent component = ((BasicComponent) componentType);
             ComponentImplementingClassesLink link = ComponentsUtil.get()
                   .getComponentImplementingClassesLinkForComponent(component);
             if (link != null)
@@ -288,26 +293,26 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
    }
 
 
-   private ComponentType getComponentFromOriginalArchitecture(final ComponentType element)
+   private RepositoryComponent getComponentFromOriginalArchitecture(final RepositoryComponent element)
    {
       Repository originalSamm = this.architecturePrognosisView.getOriginalSamm();
       return findComponentInRepo(element, originalSamm);
    }
 
 
-   private ComponentType getComponentFromNewArchitecture(final ComponentType element)
+   private RepositoryComponent getComponentFromNewArchitecture(final RepositoryComponent element)
    {
       Repository newSamm = this.architecturePrognosisView.getNewSamm();
       return findComponentInRepo(element, newSamm);
    }
 
 
-   private ComponentType findComponentInRepo(final ComponentType element, final Repository samm)
+   private RepositoryComponent findComponentInRepo(final RepositoryComponent element, final Repository samm)
    {
       if (samm != null)
       {
-         List<ComponentType> components = samm.getComponenttype();
-         for (ComponentType componentType : components)
+         List<RepositoryComponent> components = samm.getComponents__Repository();
+         for (RepositoryComponent componentType : components)
          {
             if (originalComponentAccordsToNewComponent(componentType, element))
             {
@@ -321,12 +326,12 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
 
    private String getCompositeComponentsSizeDescription(final CompositeComponent element)
    {
-      int size = element.getSubcomponents().size();
+      int size = element.getAssemblyContexts__ComposedStructure().size(); // count the components in the Composite component???? 
       return createSizeDescription(size, COMPONENTS_STRING);
    }
 
 
-   private String getPrimitiveComponentSizeDescription(final PrimitiveComponent element)
+   private String getPrimitiveComponentSizeDescription(final BasicComponent element)
    {
       ComponentImplementingClassesLink link = ComponentsUtil.get().getComponentImplementingClassesLinkForComponent(
             element);
@@ -385,7 +390,7 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
       {
          return ArchitecturePrognosisUIPlugin.getImageDescriptor(COMPOSITE_COMPONENT_ICON_PATH).createImage();
       }
-      else if (element instanceof PrimitiveComponent)
+      else if (element instanceof BasicComponent)
       {
          return ArchitecturePrognosisUIPlugin.getImageDescriptor(PRIMITIVE_COMPONENT_ICON_PATH).createImage();
       }

@@ -6,8 +6,10 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 
-import eu.qimpress.samm.staticstructure.Repository;
+//import eu.qimpress.samm.staticstructure.Repository;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
+
+import de.uka.ipd.sdq.pcm.repository.Repository;
 
 
 /**

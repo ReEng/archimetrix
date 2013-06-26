@@ -16,8 +16,10 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 import org.storydriven.storydiagrams.activities.Activity;
 
-import eu.qimpress.samm.staticstructure.Repository;
+//import eu.qimpress.samm.staticstructure.Repository;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
+
+import de.uka.ipd.sdq.pcm.repository.Repository;
 
 
 /**
