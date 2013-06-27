@@ -28,4 +28,3 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.archimetrix.architecturepreview,
  org.archimetrix.architecturepreview.starters
 Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn
-Import-Package: de.fzi.gast.core
