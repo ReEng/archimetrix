@@ -17,9 +17,12 @@ import org.reclipse.structure.specification.PSObject;
 import org.reclipse.structure.specification.PSPatternSpecification;
 import org.reclipse.structure.specification.SpecificationFactory;
 
-import eu.qimpress.identifier.IdentifierPackage;
-import eu.qimpress.samm.staticstructure.ComponentType;
-import eu.qimpress.samm.staticstructure.StaticstructurePackage;
+import de.uka.ipd.sdq.identifier.IdentifierPackage;
+import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
+
+//import eu.qimpress.identifier.IdentifierPackage;
+//import eu.qimpress.samm.staticstructure.ComponentType;
+//import eu.qimpress.samm.staticstructure.StaticstructurePackage;
 
 
 /**
@@ -178,7 +181,8 @@ public class CatalogModifyingGenerateEnginesStrategy extends GenerateNewEnginesS
 
       for (Object o : this.selectedComponents)
       {
-         ComponentType type = (ComponentType) o;
+         
+    	 RepositoryComponent type = (RepositoryComponent) o;
          String id = type.getId();
 
          expression += "(" + id + ")|";
