@@ -4,7 +4,7 @@ package org.archimetrix.metricvaluesanalyzer;
 import metricvalues.Component;
 import metricvalues.Iteration;
 import metricvalues.MetricValuesModel;
-import de.fzi.gast.types.GASTClass;
+
 import de.uka.ipd.sdq.pcm.repository.BasicComponent;
 import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
 //import eu.qimpress.samm.staticstructure.ComponentType;
