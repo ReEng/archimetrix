@@ -20,7 +20,7 @@ import org.reclipse.structure.specification.SpecificationFactory;
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
 
-import eu.qimpress.samm.staticstructure.ComponentType;
+
 import eu.qimpress.samm.staticstructure.StaticstructurePackage;
 
 
