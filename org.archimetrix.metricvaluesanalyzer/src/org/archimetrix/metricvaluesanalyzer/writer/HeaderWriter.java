@@ -35,7 +35,7 @@ public class HeaderWriter
    private void writeProjectInfo(final BufferedWriter bf, final MetricValuesModel model, final String inputFile) throws IOException
    {
       bf.append(inputFile);
-      Iteration lastIteration = model.getIterations(model.getIterationsLength() - 1);
+//      Iteration lastIteration = model.getIterations(model.getIterationsLength() - 1);
 //      bf.append(";;Last Resulting components: " + lastIteration.getComponentCandidatesLength() + ";;");
       bf.append(";;;;;");
    }
