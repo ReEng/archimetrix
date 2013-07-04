@@ -18,7 +18,6 @@ import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 
 import de.uka.ipd.sdq.pcm.repository.BasicComponent;
-import de.uka.ipd.sdq.pcm.repository.ComponentType;
 import de.uka.ipd.sdq.pcm.repository.Repository;
 import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
 
