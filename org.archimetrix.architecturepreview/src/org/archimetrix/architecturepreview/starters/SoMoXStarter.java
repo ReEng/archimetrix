@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.somox.analyzer.simplemodelanalyzer.jobs.SimpleModelAnalyzerJob;
 import org.somox.configuration.SoMoXConfiguration;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 import org.somox.ui.runconfig.ModelAnalyzerConfiguration;
 
 import de.uka.ipd.sdq.workflow.OrderPreservingCompositeJob;
 import de.uka.ipd.sdq.workflow.exceptions.JobFailedException;
 import de.uka.ipd.sdq.workflow.exceptions.UserCanceledException;
-import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 
 
 /**

@@ -168,7 +168,8 @@ public class ComponentsTreeColorProvider
       return null;
    }
 
-
+//TODO: to use system colors 
+   
    public Color getBackground(final Object element, final int columnIndex)
    {
       if (columnIndex == 2)

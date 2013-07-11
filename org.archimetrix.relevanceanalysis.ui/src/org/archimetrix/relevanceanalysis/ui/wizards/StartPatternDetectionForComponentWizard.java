@@ -14,10 +14,10 @@ import org.reclipse.structure.generator.preparationstrategies.AbstractEnginePrep
 import org.reclipse.structure.inference.extended.CatalogModifyingGenerateEnginesStrategy;
 import org.reclipse.structure.inference.ui.wizards.StartInferenceWizard;
 import org.reclipse.structure.inference.ui.wizards.StartInferenceWizardPage;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
 //import eu.qimpress.samm.staticstructure.ComponentType;
-import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 
 /**

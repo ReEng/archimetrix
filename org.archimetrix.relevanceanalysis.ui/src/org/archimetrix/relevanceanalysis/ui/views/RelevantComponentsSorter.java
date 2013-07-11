@@ -5,7 +5,6 @@ import org.archimetrix.relevanceanalysis.badsmells.util.RelevanceResultsStorage;
 import org.archimetrix.relevanceanalysis.components.strategies.IComponentsStrategy;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerSorter;
-
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 import org.somox.sourcecodedecorator.impl.ComponentImplementingClassesLinkImpl;
 

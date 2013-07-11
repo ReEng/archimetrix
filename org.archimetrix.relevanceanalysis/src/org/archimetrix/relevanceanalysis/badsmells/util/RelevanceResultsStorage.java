@@ -6,7 +6,6 @@ import java.util.HashMap;
 import org.archimetrix.relevanceanalysis.RelevanceResults;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
-
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 

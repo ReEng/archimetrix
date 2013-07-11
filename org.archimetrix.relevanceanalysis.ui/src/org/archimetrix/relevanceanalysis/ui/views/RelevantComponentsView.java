@@ -1,27 +1,17 @@
 package org.archimetrix.relevanceanalysis.ui.views;
 
 
-import org.archimetrix.relevanceanalysis.AbstractRelevanceAnalysis;
-import org.archimetrix.relevanceanalysis.badsmells.util.BadSmellOccurrenceUtil;
-import org.archimetrix.relevanceanalysis.badsmells.util.RelevanceResultsStorage;
 import org.archimetrix.relevanceanalysis.ui.providers.RelevantComponentsViewContentProvider;
 import org.archimetrix.relevanceanalysis.ui.providers.RelevantComponentsViewLabelProvider;
-import org.eclipse.emf.common.EMFPlugin;
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.TreeViewer;
-import org.eclipse.jface.viewers.Viewer;
-import org.eclipse.jface.viewers.ViewerSorter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.TreeColumn;
-import org.reclipse.structure.inference.annotations.ASGAnnotation;
-
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
-import org.somox.sourcecodedecorator.impl.ComponentImplementingClassesLinkImpl;
 
 
 /**

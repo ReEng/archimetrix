@@ -2,7 +2,6 @@ package org.archimetrix.relevanceanalysis.components.strategies;
 
 
 import org.archimetrix.relevanceanalysis.RelevanceResults;
-
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 

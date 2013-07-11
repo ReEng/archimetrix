@@ -6,17 +6,15 @@ import metricvalues.MetricValuesModel;
 
 import org.archimetrix.commons.PatternConstants;
 import org.archimetrix.relevanceanalysis.badsmells.util.BadSmellOccurrenceUtil;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.gmt.modisco.java.BodyDeclaration;
+import org.eclipse.gmt.modisco.java.ClassDeclaration;
+import org.eclipse.gmt.modisco.java.FieldDeclaration;
+import org.eclipse.gmt.modisco.java.MethodDeclaration;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
-
 //import de.fzi.gast.functions.Method;
 //import de.fzi.gast.types.GASTClass;
 //import de.fzi.gast.variables.Field;
-
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.gmt.modisco.java.BodyDeclaration;
-import org.eclipse.gmt.modisco.java.MethodDeclaration;
-import org.eclipse.gmt.modisco.java.ClassDeclaration;
-import org.eclipse.gmt.modisco.java.FieldDeclaration;
 //import org.eclipse.gmt.modisco.java.Type;
 
 /**

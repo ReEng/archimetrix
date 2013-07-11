@@ -21,12 +21,11 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorPackage;
 import org.storydriven.storydiagrams.activities.Activity;
 
-//simport eu.qimpress.samm.staticstructure.Repository;
-import org.somox.sourcecodedecorator.SourceCodeDecoratorPackage;
-
 import de.uka.ipd.sdq.pcm.repository.Repository;
+//simport eu.qimpress.samm.staticstructure.Repository;
 
 
 /**

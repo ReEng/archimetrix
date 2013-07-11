@@ -6,15 +6,14 @@ import java.util.List;
 
 import org.archimetrix.architecturepreview.util.RepositoryLoader;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-
-//import eu.qimpress.samm.staticstructure.ComponentType;
-//import eu.qimpress.samm.staticstructure.PrimitiveComponent;
-//simport eu.qimpress.samm.staticstructure.Repository;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 
 import de.uka.ipd.sdq.pcm.repository.BasicComponent;
 import de.uka.ipd.sdq.pcm.repository.Repository;
 import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
+//import eu.qimpress.samm.staticstructure.ComponentType;
+//import eu.qimpress.samm.staticstructure.PrimitiveComponent;
+//simport eu.qimpress.samm.staticstructure.Repository;
 
 
 /**

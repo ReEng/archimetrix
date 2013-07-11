@@ -14,12 +14,11 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 import org.storydriven.storydiagrams.activities.Activity;
 
-//import eu.qimpress.samm.staticstructure.Repository;
-import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
-
 import de.uka.ipd.sdq.pcm.repository.Repository;
+//import eu.qimpress.samm.staticstructure.Repository;
 
 
 /**
@@ -115,7 +114,7 @@ public class ArchitecturePreview
       return this.prognosisCalculator.getOriginalSammRep();
    }
 
-
+// TODO: review this !!
    private void fixGASTResource(final Resource newGASTResource)
    {
       // FIXME!!

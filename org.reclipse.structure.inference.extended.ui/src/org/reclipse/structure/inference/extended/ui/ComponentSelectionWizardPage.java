@@ -23,6 +23,9 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.ui.dialogs.ContainerCheckedTreeViewer;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorPackage;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 
 import de.uka.ipd.sdq.probfunction.provider.ProbfunctionItemProviderAdapterFactory;
 import de.uka.ipd.sdq.stoex.provider.StoexItemProviderAdapterFactory;
@@ -38,9 +41,6 @@ import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
 //import eu.qimpress.samm.qosannotation.provider.QosannotationItemProviderAdapterFactory;
 //import eu.qimpress.samm.staticstructure.provider.StaticstructureItemProviderAdapterFactory;
 //import eu.qimpress.samm.usagemodel.provider.UsagemodelItemProviderAdapterFactory;
-import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
-import org.somox.sourcecodedecorator.SourceCodeDecoratorPackage;
-import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 
 /**
  * @author Oleg

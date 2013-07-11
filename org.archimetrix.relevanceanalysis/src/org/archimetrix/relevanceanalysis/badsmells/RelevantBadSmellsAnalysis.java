@@ -26,11 +26,10 @@ import org.archimetrix.relevanceanalysis.badsmells.util.BadSmellOccurrenceUtil;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.reclipse.structure.inference.annotations.ASGAnnotation;
-
-//import de.fzi.gast.types.GASTClass;
 import org.eclipse.gmt.modisco.java.ClassDeclaration;
 import org.eclipse.gmt.modisco.java.Type;
+import org.reclipse.structure.inference.annotations.ASGAnnotation;
+//import de.fzi.gast.types.GASTClass;
 
 public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnnotation>
 {

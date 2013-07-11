@@ -5,24 +5,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.archimetrix.architectureprognosis.ui.util.ComponentsUtil;
-//import org.eclipse.gmt.modisco.java.ClassDeclaration;
 import org.eclipse.gmt.modisco.java.Type;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.Viewer;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
+import de.uka.ipd.sdq.pcm.core.composition.AssemblyContext;
+import de.uka.ipd.sdq.pcm.repository.BasicComponent;
+import de.uka.ipd.sdq.pcm.repository.CompositeComponent;
+import de.uka.ipd.sdq.pcm.repository.Repository;
+import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
+//import org.eclipse.gmt.modisco.java.ClassDeclaration;
 //import de.fzi.gast.types.GASTClass;
 //import eu.qimpress.samm.staticstructure.ComponentType;
 //import eu.qimpress.samm.staticstructure.CompositeComponent;
 //import eu.qimpress.samm.staticstructure.PrimitiveComponent;
 //import eu.qimpress.samm.staticstructure.Repository;
 //import eu.qimpress.samm.staticstructure.SubcomponentInstance;
-import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
-
-import de.uka.ipd.sdq.pcm.core.composition.AssemblyContext;
-import de.uka.ipd.sdq.pcm.repository.BasicComponent;
-import de.uka.ipd.sdq.pcm.repository.CompositeComponent;
-import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
-import de.uka.ipd.sdq.pcm.repository.Repository;
 
 
 /**

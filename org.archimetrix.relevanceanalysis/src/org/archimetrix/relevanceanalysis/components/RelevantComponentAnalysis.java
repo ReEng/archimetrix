@@ -14,7 +14,6 @@ import org.archimetrix.relevanceanalysis.components.strategies.ComplexityStrateg
 import org.archimetrix.relevanceanalysis.components.strategies.IComponentsStrategy;
 import org.archimetrix.relevanceanalysis.components.strategies.ParetoOptimalComponentsResultStrategy;
 import org.archimetrix.relevanceanalysis.components.strategies.VectorLengthComponentsResultStrategy;
-
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 

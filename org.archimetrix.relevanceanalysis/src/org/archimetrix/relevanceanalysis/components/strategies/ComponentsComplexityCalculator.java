@@ -2,27 +2,24 @@ package org.archimetrix.relevanceanalysis.components.strategies;
 
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-//import de.fzi.gast.functions.Method;
-//import de.fzi.gast.types.GASTClass;
-//import de.fzi.gast.variables.Field;
-//import de.fzi.gast.variables.FormalParameter;
-//import de.fzi.gast.variables.Property;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.gmt.modisco.java.BodyDeclaration;
 import org.eclipse.gmt.modisco.java.ClassDeclaration;
 import org.eclipse.gmt.modisco.java.FieldDeclaration;
 import org.eclipse.gmt.modisco.java.MethodDeclaration;
-import org.eclipse.gmt.modisco.java.SingleVariableDeclaration;
 import org.eclipse.gmt.modisco.java.Type;
 import org.eclipse.gmt.modisco.java.VariableDeclaration;
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
+//import de.fzi.gast.functions.Method;
+//import de.fzi.gast.types.GASTClass;
+//import de.fzi.gast.variables.Field;
+//import de.fzi.gast.variables.FormalParameter;
+//import de.fzi.gast.variables.Property;
 
 
 /**

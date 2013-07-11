@@ -3,7 +3,6 @@ package org.archimetrix.relevanceanalysis.ui.views;
 import org.archimetrix.relevanceanalysis.RelevanceResults;
 import org.archimetrix.relevanceanalysis.badsmells.strategies.IBadSmellsStrategy;
 import org.archimetrix.relevanceanalysis.badsmells.util.RelevanceResultsStorage;
-import org.archimetrix.relevanceanalysis.components.strategies.IComponentsStrategy;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerSorter;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;

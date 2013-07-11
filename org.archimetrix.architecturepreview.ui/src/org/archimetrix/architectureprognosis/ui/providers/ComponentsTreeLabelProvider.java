@@ -14,18 +14,17 @@ import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Tree;
-
-//import de.fzi.gast.types.GASTClass;
-//import eu.qimpress.samm.staticstructure.ComponentType;
-//import eu.qimpress.samm.staticstructure.CompositeComponent;
-//import eu.qimpress.samm.staticstructure.PrimitiveComponent;
-//import eu.qimpress.samm.staticstructure.Repository;
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 import de.uka.ipd.sdq.pcm.repository.BasicComponent;
 import de.uka.ipd.sdq.pcm.repository.CompositeComponent;
 import de.uka.ipd.sdq.pcm.repository.Repository;
 import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
+//import de.fzi.gast.types.GASTClass;
+//import eu.qimpress.samm.staticstructure.ComponentType;
+//import eu.qimpress.samm.staticstructure.CompositeComponent;
+//import eu.qimpress.samm.staticstructure.PrimitiveComponent;
+//import eu.qimpress.samm.staticstructure.Repository;
 
 
 /**
@@ -343,7 +342,7 @@ public class ComponentsTreeLabelProvider extends LabelProvider implements ITable
       return "";
    }
 
-
+// TODO: use Format Method!!
    private String createSizeDescription(final int size, final String classification)
    {
       StringBuilder numberOfString = new StringBuilder(" (");

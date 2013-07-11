@@ -2,6 +2,7 @@ package org.archimetrix.relevanceanalysis.components.strategies;
 
 
 import metricvalues.MetricValuesModel;
+
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 

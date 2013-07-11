@@ -8,13 +8,8 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.ui.IWorkbench;
-import org.eclipse.ui.PartInitException;
-import org.eclipse.ui.PlatformUI;
-import org.fujaba.commons.console.ReportLevel;
 import org.reclipse.structure.generator.PrepareDetectionEnginesJob;
 import org.reclipse.structure.generator.preparationstrategies.AbstractEnginePreparationStrategy;
-import org.reclipse.structure.inference.DetectPatternsJob;
-import org.reclipse.structure.inference.evaluation.SimilarityEvaluator;
 import org.reclipse.structure.inference.extended.CatalogModifyingGenerateEnginesStrategy;
 import org.reclipse.structure.inference.ui.wizards.StartInferenceWizard;
 

@@ -4,14 +4,13 @@ package org.archimetrix.metricvaluesanalyzer;
 import metricvalues.Component;
 import metricvalues.Iteration;
 import metricvalues.MetricValuesModel;
-
 import de.uka.ipd.sdq.pcm.repository.BasicComponent;
+import de.uka.ipd.sdq.pcm.repository.CompositeComponent;
 import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
 //import eu.qimpress.samm.staticstructure.ComponentType;
 //import eu.qimpress.samm.staticstructure.CompositeComponent;
 //import eu.qimpress.samm.staticstructure.PrimitiveComponent;
 //import org.eclipse.gmt.modisco.java.Type;
-import de.uka.ipd.sdq.pcm.repository.CompositeComponent;
 
 public class MetricValuesHelper
 {

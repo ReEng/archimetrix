@@ -19,8 +19,6 @@ import org.reclipse.structure.specification.SpecificationFactory;
 
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
-
-
 import eu.qimpress.samm.staticstructure.StaticstructurePackage;
 
 
@@ -127,6 +125,8 @@ public class CatalogModifyingGenerateEnginesStrategy extends GenerateNewEnginesS
     * @param catalog The pattern catalog to be modified.
     * @param selectedComponents The components to which the detection should be confined.
     */
+   
+   //TODO: restructure this method 
    protected void modifyCatalog(PSCatalog catalog, Object[] selectedComponents)
    {
       String selectionExpression = getSelectionExpression(selectedComponents);

@@ -17,11 +17,9 @@ import org.archimetrix.commons.ClusteringConstants;
 import org.archimetrix.commons.ConfigConstants;
 import org.archimetrix.relevanceanalysis.RelevanceAnalysisPlugin;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-
-import org.eclipse.gmt.modisco.java.ClassDeclaration;
 import org.eclipse.gmt.modisco.java.Type;
-//import de.fzi.gast.types.GASTClass;
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
+//import de.fzi.gast.types.GASTClass;
 
 
 /**
@@ -38,7 +36,7 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy
 
    private MetricValuesModel metricValuesModel;
 
-
+//TODO: the third worst method !!
    @Override
    public double getRelevanceValue(final ComponentImplementingClassesLink component, final MetricValuesModel metricValuesModel)
    {
