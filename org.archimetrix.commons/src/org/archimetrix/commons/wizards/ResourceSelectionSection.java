@@ -18,74 +18,99 @@ import org.fujaba.commons.ui.WorkbenchFileTreeSelectionDialog;
 
 
 /**
- * Defines a combination of ui elements used in wizards to select a resource from the workspace. The
- * section creates a label, a text field and a dialog. The ResourceSelectionSectionProvider provides
+ * Defines a combination of ui elements used in wizards
+ * to select a resource from the workspace. The
+ * section creates a label, a text field and a dialog.
+ * The ResourceSelectionSectionProvider provides
  * helper methods to create ResourceSelectionSections.
- * 
+ *
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
- * 
+ *
  */
-public class ResourceSelectionSection
-{
-
+public class ResourceSelectionSection {
+/**
+ * the parent composite of the section.
+ */
    private final Composite parent;
-
+/**
+ * text field.
+ */
    private Text textField;
-
+/**
+ * selection dialog.
+ */
    private ElementTreeSelectionDialog dialog;
 
-
-   public ResourceSelectionSection(final Composite parent, final String label, final WizardPage page, final String dialogDescription,
-         final String fileExtension)
-   {
+/**
+ * the constructor.
+ * @param parent the composite parent
+ * @param label label (string)
+ * @param page wizard page
+ * @param dialogDescription description
+ * @param fileExtension extension
+ */
+   public ResourceSelectionSection(final Composite parent,
+           final String label, final WizardPage page,
+           final String dialogDescription,
+         final String fileExtension) {
       this.parent = parent;
-      this.dialog = new WorkbenchFileTreeSelectionDialog(page.getShell(), label, dialogDescription, fileExtension);
-      this.textField = addLabeledResourceSelection(parent, label, this.dialog, page);
+      this.dialog = new WorkbenchFileTreeSelectionDialog(page.getShell(),
+              label, dialogDescription, fileExtension);
+      this.textField = addLabeledResourceSelection(parent, label,
+              this.dialog, page);
    }
 
-
-   public Composite getParent()
-   {
+/**
+ * get parent method.
+ * @return parent
+ */
+   public Composite getParent() {
       return this.parent;
    }
 
-
-   public Text getTextField()
-   {
+/**
+ * get text method.
+ * @return text field
+ */
+   public Text getTextField() {
       return this.textField;
    }
 
-
-   public ElementTreeSelectionDialog getDialog()
-   {
+/**
+ * get dialog method.
+ * @return dialog
+ */
+   public ElementTreeSelectionDialog getDialog() {
       return this.dialog;
    }
 
-
-   public Text addLabeledResourceSelection(final Composite parent, final String label, final ElementTreeSelectionDialog dialog,
-         final WizardPage page)
-   {
+/**
+ *
+ * @param parent the composite parent
+ * @param label label (string)
+ * @param dialog dialog
+ * @param page wizard page
+ * @return resource full path
+ */
+   public Text addLabeledResourceSelection(final Composite parent,
+           final String label, final ElementTreeSelectionDialog dialog,
+         final WizardPage page) {
       Label select = new Label(parent, SWT.LEFT);
       select.setText(label + ":");
 
       final Text input = new Text(parent, SWT.BORDER);
       input.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
-      if (page instanceof ModifyListener)
-      {
+      if (page instanceof ModifyListener) {
          input.addModifyListener((ModifyListener) page);
       }
 
       Button browse = new Button(parent, SWT.PUSH);
-      browse.setText(WizardConstants.SELECT_BUTTON_TEXT);
+      browse.setText(WizardConst.WizardConstants_SELECT_BUTTON_TEXT);
       browse.addSelectionListener(new SelectionAdapter()
       {
          @Override
-         public void widgetSelected(final SelectionEvent e)
-         {
-            if (dialog.open() == Window.OK)
-            {
+         public void widgetSelected(final SelectionEvent e) {
+            if (dialog.open() == Window.OK) {
                IResource resource = (IResource) dialog.getFirstResult();
                input.setText(resource.getFullPath().toString());
             }

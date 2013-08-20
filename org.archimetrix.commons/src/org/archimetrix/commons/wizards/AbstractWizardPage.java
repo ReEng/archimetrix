@@ -8,38 +8,46 @@ import org.eclipse.swt.events.SelectionListener;
 
 
 /**
- * A super class for the wizard pages used in archimetrix. Implements a ModifyListener and a
+ * A super class for the wizard pages used in archimetrix.
+ * Implements a ModifyListener and a
  * SelectionListener.
- * 
+ *
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
- * 
  */
-public abstract class AbstractWizardPage extends WizardPage implements ModifyListener, SelectionListener
-{
-
-   public ResourceSelectionSectionProvider resourceSelectionSectionProvider;
-
-
-   protected AbstractWizardPage(final String pageName)
-   {
+public abstract class AbstractWizardPage extends WizardPage
+implements ModifyListener, SelectionListener {
+/**
+ * Provider for resource selection section.
+ */
+   private ResourceSelectionSectionProvider resourceSelectionSectionProvider;
+/**
+ * Get method for resourceSelectionSectionProvider.
+ * @return resourceSelectionSectionProvider resourceSelectionSectionProvider
+ */
+   public ResourceSelectionSectionProvider
+   getResourceSelectionSectionProvider() {
+       return this.resourceSelectionSectionProvider;
+   }
+/**
+ * the constructor.
+ * @param pageName the name of the page
+ */
+   protected AbstractWizardPage(final String pageName) {
       super(pageName);
       this.setTitle(pageName);
-      this.resourceSelectionSectionProvider = new ResourceSelectionSectionProvider();
+      this.resourceSelectionSectionProvider =
+              new ResourceSelectionSectionProvider();
    }
 
 
    @Override
-   public void widgetSelected(final SelectionEvent e)
-   {
+   public void widgetSelected(final SelectionEvent e) {
       widgetDefaultSelected(e);
    }
 
 
    @Override
-   public void widgetDefaultSelected(final SelectionEvent e)
-   {
+   public void widgetDefaultSelected(final SelectionEvent e) {
       setPageComplete(isValid());
    }
 

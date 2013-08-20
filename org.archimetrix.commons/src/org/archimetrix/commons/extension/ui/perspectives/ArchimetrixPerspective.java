@@ -8,29 +8,41 @@ import org.eclipse.ui.console.IConsoleConstants;
 
 
 /**
- *  This class is meant to serve as an example for how various contributions 
+ *  This class is meant to serve as an example for how various contributions
  *  are made to a perspective. Note that some of the extension point id's are
- *  referred to as API constants while others are hardcoded and may be subject 
- *  to change. 
+ *  referred to as API constants while others are hardcoded and may be subject
+ *  to change.
  */
 public class ArchimetrixPerspective implements IPerspectiveFactory {
 
+    /**
+     * Page layout.
+     */
    private IPageLayout factory;
 
+/**
+ * The constructor.
+ */
    public ArchimetrixPerspective() {
       super();
    }
-
-   public void createInitialLayout(IPageLayout factory) {
+/**
+ * Creates the initial layout.
+ * @param factory the page layout
+ */
+   public final void createInitialLayout(IPageLayout factory) {
       this.factory = factory;
       addViews();
       addPerspectiveShortcuts();
       addViewShortcuts();
    }
-
+/**
+ * Adds the view in the editor.
+ */
    private void addViews() {
-      // Creates the overall folder layout. 
-      // Note that each new Folder uses a percentage of the remaining EditorArea.
+      // Creates the overall folder layout.
+      // Note that each new Folder uses a percentage of the
+      // remaining EditorArea.
       IFolderLayout topLeft =
          factory.createFolder(
             "topLeft", //NON-NLS-1
@@ -39,16 +51,25 @@ public class ArchimetrixPerspective implements IPerspectiveFactory {
             factory.getEditorArea());
       topLeft.addView(IPageLayout.ID_PROJECT_EXPLORER);
    }
-
+/**
+ * It can provide perspective shortcuts.
+ */
    private void addPerspectiveShortcuts() {
    }
-
+/**
+ * Adds view shortcuts.
+ */
    private void addViewShortcuts() {
-      factory.addShowViewShortcut("org.eclipse.ant.ui.views.AntView"); //NON-NLS-1
-      factory.addShowViewShortcut("org.eclipse.team.ccvs.ui.AnnotateView"); //NON-NLS-1
-      factory.addShowViewShortcut("org.eclipse.pde.ui.DependenciesView"); //NON-NLS-1
-      factory.addShowViewShortcut("org.eclipse.jdt.junit.ResultView"); //NON-NLS-1
-      factory.addShowViewShortcut("org.eclipse.team.ui.GenericHistoryView"); //NON-NLS-1
+      factory.addShowViewShortcut(
+              "org.eclipse.ant.ui.views.AntView"); //NON-NLS-1
+      factory.addShowViewShortcut(
+              "org.eclipse.team.ccvs.ui.AnnotateView"); //NON-NLS-1
+      factory.addShowViewShortcut(
+              "org.eclipse.pde.ui.DependenciesView"); //NON-NLS-1
+      factory.addShowViewShortcut(
+              "org.eclipse.jdt.junit.ResultView"); //NON-NLS-1
+      factory.addShowViewShortcut(
+              "org.eclipse.team.ui.GenericHistoryView"); //NON-NLS-1
       factory.addShowViewShortcut(IConsoleConstants.ID_CONSOLE_VIEW);
       factory.addShowViewShortcut(JavaUI.ID_PACKAGES);
       factory.addShowViewShortcut(IPageLayout.ID_PROBLEM_VIEW);
