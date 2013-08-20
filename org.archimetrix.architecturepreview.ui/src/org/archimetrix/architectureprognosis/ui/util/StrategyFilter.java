@@ -12,8 +12,7 @@ import java.util.Map;
 import java.util.Properties;
 
 import org.archimetrix.architectureprognosis.ui.ArchitecturePrognosisUIPlugin;
-import org.archimetrix.commons.ConfigConstants;
-import org.archimetrix.commons.PatternConstants;
+import org.archimetrix.commons.Messages;
 import org.eclipse.emf.ecore.EOperation;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 
@@ -68,14 +67,14 @@ public class StrategyFilter
       try
       {
          InputStream stream = ArchitecturePrognosisUIPlugin.getDefault().getBundle()
-               .getEntry(ConfigConstants.CONFIG_PROPERTIES_FILE).openStream();
+               .getEntry(Messages.ConfigConstants_CONFIG_PROPERTIES_FILE).openStream();
          properties.load(stream);
          stream.close();
 
-         addStrategies(strategies, properties, PatternConstants.ILLEGAL_METHOD_ACCESS_PATTERN);
-         addStrategies(strategies, properties, PatternConstants.ILLEGAL_METHOD_ACCESS_BC_PATTERN);
-         addStrategies(strategies, properties, PatternConstants.DISTORTED_ILLEGAL_METHOD_ACCESS_PATTERN);
-         addStrategies(strategies, properties, PatternConstants.DISTORTED_ILLEGAL_METHOD_ACCESS_BC_PATTERN);
+         addStrategies(strategies, properties, Messages.PatternConstants_ILLEGAL_METHOD_ACCESS_PATTERN);
+         addStrategies(strategies, properties, Messages.PatternConstants_ILLEGAL_METHOD_ACCESS_BC_PATTERN);
+         addStrategies(strategies, properties, Messages.PatternConstants_DISTORTED_ILLEGAL_METHOD_ACCESS_PATTERN);
+         addStrategies(strategies, properties, Messages.PatternConstants_DISTORTED_ILLEGAL_METHOD_ACCESS_BC_PATTERN);
       }
       catch (FileNotFoundException e)
       {
@@ -94,7 +93,7 @@ public class StrategyFilter
    {
       String illegalMethodAccessReengineeringStrategies = properties.getProperty(badSmellName);
       String[] strategyNamesArray = illegalMethodAccessReengineeringStrategies
-            .split(ConfigConstants.PROPERTY_SEPARATOR);
+            .split(Messages.ConfigConstants_PROPERTY_SEPARATOR);
       List<String> illegalMethodAccessStrategiesList = new ArrayList<String>();
       Collections.addAll(illegalMethodAccessStrategiesList, strategyNamesArray);
       strategies.put(badSmellName, illegalMethodAccessStrategiesList);

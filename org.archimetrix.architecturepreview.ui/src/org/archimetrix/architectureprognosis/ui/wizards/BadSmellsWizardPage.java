@@ -47,13 +47,13 @@ public class BadSmellsWizardPage extends AbstractTreeViewerPage implements ISele
    protected void setSelection(final Resource selection)
    {
       super.setSelection(selection);
-      if (this.selection != null)
+      if (this.getSelection()!= null)
       {
-         this.badSmellsSelection = this.selection.getContents();
+         this.badSmellsSelection = this.getSelection().getContents();
       }
-      this.viewer.setInput(this.badSmellsSelection);
-      this.viewer.setSorter(new ViewerSorter());
-      this.viewer.addFilter(new ViewerFilter()
+      this.getViewer().setInput(this.badSmellsSelection);
+      this.getViewer().setSorter(new ViewerSorter());
+      this.getViewer().addFilter(new ViewerFilter()
       {
          @Override
          public boolean select(final Viewer viewer, final Object parentElement, final Object element)
@@ -68,9 +68,9 @@ public class BadSmellsWizardPage extends AbstractTreeViewerPage implements ISele
    public void createControl(final Composite parent)
    {
       super.createControl(parent);
-      this.viewer.setContentProvider(new BadSmellsWizardPageContentProvider());
-      this.viewer.setLabelProvider(new BadSmellsWizardPageLabelProvider());
-      this.viewer.addSelectionChangedListener(this);
+      this.getViewer().setContentProvider(new BadSmellsWizardPageContentProvider());
+      this.getViewer().setLabelProvider(new BadSmellsWizardPageLabelProvider());
+      this.getViewer().addSelectionChangedListener(this);
    }
 
 

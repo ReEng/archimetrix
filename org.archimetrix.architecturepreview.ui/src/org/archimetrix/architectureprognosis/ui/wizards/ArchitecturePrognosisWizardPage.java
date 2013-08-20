@@ -3,7 +3,7 @@ package org.archimetrix.architectureprognosis.ui.wizards;
 
 import org.archimetrix.commons.wizards.AbstractWizardPage;
 import org.archimetrix.commons.wizards.ResourceSelectionSection;
-import org.archimetrix.commons.wizards.WizardConstants;
+import org.archimetrix.commons.wizards.WizardConst;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.swt.SWT;
@@ -75,16 +75,16 @@ public class ArchitecturePrognosisWizardPage extends AbstractWizardPage
 
    private void createInputsGroup(final Composite composite)
    {
-      Group inputs = this.resourceSelectionSectionProvider.createInputGroup(composite);
+      Group inputs = this.getResourceSelectionSectionProvider().createInputGroup(composite);
 
-      this.metricValuesSection = this.resourceSelectionSectionProvider.addMetricValuesResourceSelection(inputs, this);
+      this.metricValuesSection = this.getResourceSelectionSectionProvider().addMetricValuesResourceSelection(inputs, this);
       if (this.selectedAnnotationFromRelevantBadSmellsView == null)
       {
          // wizard has been called from menu bar and not from the relevant bad smells view, so an
          // additional section to select the bad smells, is required
-         this.badSmellsSection = this.resourceSelectionSectionProvider.addBadSmellsResourceSelection(inputs, this);
+         this.badSmellsSection = this.getResourceSelectionSectionProvider().addBadSmellsResourceSelection(inputs, this);
       }
-      this.reStrategiesSection = this.resourceSelectionSectionProvider
+      this.reStrategiesSection = this.getResourceSelectionSectionProvider()
             .addReengineeringStrategiesSelection(inputs, this);
    }
 
@@ -95,16 +95,16 @@ public class ArchitecturePrognosisWizardPage extends AbstractWizardPage
       if (s != null)
       {
          this.metricValuesSection.getTextField().setText(
-               s.get(WizardConstants.SETT_METRIC_VALUES_MODEL) == null ? "" : s
-                     .get(WizardConstants.SETT_METRIC_VALUES_MODEL));
+               s.get(WizardConst.WizardConstants_SETT_METRIC_VALUES_MODEL) == null ? "" : s
+                     .get(WizardConst.WizardConstants_SETT_METRIC_VALUES_MODEL));
          if (this.badSmellsSection != null)
          {
             this.badSmellsSection.getTextField().setText(
-                  s.get(WizardConstants.SETT_BAD_SMELLS) == null ? "" : s.get(WizardConstants.SETT_BAD_SMELLS));
+                  s.get(WizardConst.WizardConstants_SETT_BAD_SMELLS) == null ? "" : s.get(WizardConst.WizardConstants_SETT_BAD_SMELLS));
          }
          this.reStrategiesSection.getTextField().setText(
-               s.get(WizardConstants.SETT_REENGINEERING_STRATEGIES) == null ? "" : s
-                     .get(WizardConstants.SETT_REENGINEERING_STRATEGIES));
+               s.get(WizardConst.WizardConstants_SETT_REENGINEERING_STRATEGIES) == null ? "" : s
+                     .get(WizardConst.WizardConstants_SETT_REENGINEERING_STRATEGIES));
 
       }
    }
@@ -173,16 +173,16 @@ public class ArchitecturePrognosisWizardPage extends AbstractWizardPage
    {
       if (this.reStrategiesSection.getTextField().getText() == null)
       {
-         setErrorMessage(WizardConstants.NO_REENGINEERING_STRATEGIES_ERROR_MESSAGE);
+         setErrorMessage(WizardConst.WizardConstants_NO_REENGINEERING_STRATEGIES_ERROR_MESSAGE);
       }
       if (this.metricValuesSection.getTextField().getText() == null)
       {
-         setErrorMessage(WizardConstants.NO_METRIC_VALUES_ERROR_MESSAGE);
+         setErrorMessage(WizardConst.WizardConstants_NO_METRIC_VALUES_ERROR_MESSAGE);
       }
 
       if (this.badSmellsSection != null && this.badSmellsSection.getTextField().getText() == null)
       {
-         setErrorMessage(WizardConstants.NO_BAD_SMELLS_ERROR_MESSAGE);
+         setErrorMessage(WizardConst.WizardConstants_NO_BAD_SMELLS_ERROR_MESSAGE);
       }
 
       if (this.metricValuesSection.getTextField() != null && this.metricValuesSection.getTextField().getText() != null
@@ -201,11 +201,11 @@ public class ArchitecturePrognosisWizardPage extends AbstractWizardPage
       IDialogSettings s = getDialogSettings();
       if (s != null)
       {
-         s.put(WizardConstants.SETT_METRIC_VALUES_MODEL, this.metricValuesSection.getTextField().getText());
-         s.put(WizardConstants.SETT_REENGINEERING_STRATEGIES, this.reStrategiesSection.getTextField().getText());
+         s.put(WizardConst.WizardConstants_SETT_METRIC_VALUES_MODEL, this.metricValuesSection.getTextField().getText());
+         s.put(WizardConst.WizardConstants_SETT_REENGINEERING_STRATEGIES, this.reStrategiesSection.getTextField().getText());
          if (this.badSmellsSection != null)
          {
-            s.put(WizardConstants.SETT_BAD_SMELLS, this.badSmellsSection.getTextField().getText());
+            s.put(WizardConst.WizardConstants_SETT_BAD_SMELLS, this.badSmellsSection.getTextField().getText());
          }
       }
    }

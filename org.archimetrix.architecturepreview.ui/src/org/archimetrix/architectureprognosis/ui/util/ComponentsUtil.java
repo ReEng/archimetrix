@@ -4,7 +4,7 @@ package org.archimetrix.architectureprognosis.ui.util;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.archimetrix.commons.wizards.WizardConstants;
+import org.archimetrix.commons.wizards.WizardConst;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -126,7 +126,7 @@ public final class ComponentsUtil
       String modelsPath = resourceUriPath.split(RESOURCE_SEGMENT)[1].split("\\.")[0];
       StringBuilder path = new StringBuilder(modelsPath);
       path.append(".");
-      path.append(WizardConstants.SOURCECODEDECORATOR_FILE_EXTENSION);
+      path.append(WizardConst.WizardConstants_SOURCECODEDECORATOR_FILE_EXTENSION);
       return path;
    }
 }

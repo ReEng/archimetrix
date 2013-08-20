@@ -4,7 +4,7 @@ package org.archimetrix.architectureprognosis.ui.wizards;
 import org.archimetrix.architectureprognosis.ui.providers.ReengineeringStrategiesWizardPageContentProvider;
 import org.archimetrix.architectureprognosis.ui.providers.ReengineeringStrategiesWizardPageLabelProvider;
 import org.archimetrix.commons.wizards.AbstractTreeViewerPage;
-import org.archimetrix.commons.wizards.WizardConstants;
+import org.archimetrix.commons.wizards.WizardConst;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.viewers.TreeSelection;
@@ -47,13 +47,13 @@ public class ReengineeringStrategiesWizardPage extends AbstractTreeViewerPage
    protected void setSelection(final Resource selection)
    {
       super.setSelection(selection);
-      if (this.selection != null)
+      if (this.getSelection() != null)
       {
-         this.strategiesSelection = this.selection.getContents();
+         this.strategiesSelection = this.getSelection().getContents();
       }
       this.contentProvider.setAnnotation(this.wizard.getSelectedAnnotation());
-      this.viewer.setInput(this.strategiesSelection);
-      this.viewer.setSorter(new ViewerSorter());
+      this.getViewer().setInput(this.strategiesSelection);
+      this.getViewer().setSorter(new ViewerSorter());
    }
 
 
@@ -62,17 +62,17 @@ public class ReengineeringStrategiesWizardPage extends AbstractTreeViewerPage
    {
       super.createControl(parent);
       this.contentProvider = new ReengineeringStrategiesWizardPageContentProvider();
-      this.viewer.setContentProvider(this.contentProvider);
-      this.viewer.setLabelProvider(new ReengineeringStrategiesWizardPageLabelProvider());
+      this.getViewer().setContentProvider(this.contentProvider);
+      this.getViewer().setLabelProvider(new ReengineeringStrategiesWizardPageLabelProvider());
    }
 
 
    public Activity getSelectedStrategy()
    {
-      TreeSelection selection = (TreeSelection) this.viewer.getSelection();
+      TreeSelection selection = (TreeSelection) this.getViewer().getSelection();
       EOperation op = (EOperation) selection.getFirstElement();
       OperationExtension opExt = (OperationExtension) op
-            .getEAnnotation(WizardConstants.STORY_DIAGRAM_ANNOTATION_SOURCE_KEY).getContents().get(0);
+            .getEAnnotation(WizardConst.WizardConstants_STORY_DIAGRAM_ANNOTATION_SOURCE_KEY).getContents().get(0);
       return opExt.getOwnedActivity();
    }
 
