@@ -10,7 +10,7 @@ import metricvalues.Component;
 import metricvalues.ComponentCandidate;
 import metricvalues.MetricValuesModel;
 
-import org.archimetrix.commons.PatternConstants;
+import org.archimetrix.commons.Messages;
 import org.archimetrix.relevanceanalysis.AbstractRelevanceAnalysis;
 import org.archimetrix.relevanceanalysis.RelevanceAnalysisPlugin;
 import org.archimetrix.relevanceanalysis.RelevanceResults;
@@ -152,14 +152,14 @@ public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnno
       if (cc == null)
       {
          if (BadSmellOccurrenceUtil.get().getBadSmellName(annotation)
-               .equals(PatternConstants.ILLEGAL_METHOD_ACCESS_BC_PATTERN)
+               .equals(Messages.PatternConstants_ILLEGAL_METHOD_ACCESS_BC_PATTERN)
                || BadSmellOccurrenceUtil.get().getBadSmellName(annotation)
-                     .equals(PatternConstants.ILLEGAL_METHOD_ACCESS_PATTERN))
+                     .equals(Messages.PatternConstants_ILLEGAL_METHOD_ACCESS_PATTERN))
          {
             cc = getComponentCandidateAccordingToInterfaceViolationOccurrence(annotation);
          }
          if (BadSmellOccurrenceUtil.get().getBadSmellName(annotation)
-               .equals(PatternConstants.NON_TO_COMMUNICATION_PATTERN_NAME))
+               .equals(Messages.PatternConstants_NON_TO_COMMUNICATION_PATTERN_NAME))
          {
             cc = getComponentCandidateAccordingToNonTOCommunicationOccurrence(annotation);
          }
@@ -173,9 +173,9 @@ public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnno
          final ASGAnnotation annotation)
    {
       // GASTClass nonTOClass = (GASTClass) annotation.getAnnotatedElements().get("nonTO").get(0);
-      ClassDeclaration calledClass = (ClassDeclaration) annotation.getAnnotatedElements().get(PatternConstants.CALLED_CLASS_ROLE)
+      ClassDeclaration calledClass = (ClassDeclaration) annotation.getAnnotatedElements().get(Messages.PatternConstants_CALLED_CLASS_ROLE)
             .get(0);
-      ClassDeclaration callingClass = (ClassDeclaration) annotation.getAnnotatedElements().get(PatternConstants.CALLING_CLASS_ROLE)
+      ClassDeclaration callingClass = (ClassDeclaration) annotation.getAnnotatedElements().get(Messages.PatternConstants_CALLING_CLASS_ROLE)
             .get(0);
       String calledClassName = calledClass.getName();
       String callingClassName = callingClass.getName();
@@ -196,10 +196,10 @@ public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnno
          final ASGAnnotation interfaceViolationAnnotation)
    {
 	   Type accessingClassObject = (Type) interfaceViolationAnnotation.getAnnotatedElements()
-            .get(PatternConstants.IV_ACCESSING_CLASS_ROLE).get(0);
+            .get(Messages.PatternConstants_IV_ACCESSING_CLASS_ROLE).get(0);
       String accessingClassName = accessingClassObject.getName();
       Type accessedMethodOwnerObject = (Type) interfaceViolationAnnotation.getAnnotatedElements()
-            .get(PatternConstants.IV_ACCESSED_METHOD_OWNER_ROLE).get(0);
+            .get(Messages.PatternConstants_IV_ACCESSED_METHOD_OWNER_ROLE).get(0);
       String accessedMethodOwnerName = accessedMethodOwnerObject.getName();
       for (ComponentCandidate compCand : this.metricValuesModel.getIterations(0).getComponentCandidates())
       {

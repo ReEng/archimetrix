@@ -6,8 +6,7 @@ import metricvalues.Iteration;
 import metricvalues.MetricValue;
 import metricvalues.MetricValuesModel;
 
-import org.archimetrix.commons.ClusteringConstants;
-import org.archimetrix.commons.PatternConstants;
+import org.archimetrix.commons.Messages;
 import org.archimetrix.relevanceanalysis.badsmells.util.BadSmellOccurrenceUtil;
 import org.archimetrix.relevanceanalysis.badsmells.util.MergeIndicationFunctionCalculator;
 import org.archimetrix.relevanceanalysis.badsmells.util.SoMoXConfigurationCreator;
@@ -51,31 +50,31 @@ public class HigherInterfaceAdherenceStrategy extends BadSmellsRelevanceStrategy
       double directoryMappingValue = 0;
       for (MetricValue metricValue : compCand.getMetricValues())
       {
-         if (metricValue.getMetricID().endsWith(ClusteringConstants.DEFAULT_MERGE_INDICATING_METRIC))
+         if (metricValue.getMetricID().endsWith(Messages.ClusteringConstants_DEFAULT_MERGE_INDICATING_METRIC))
          {
             currentMergeValue = metricValue.getValue();
          }
-         else if (metricValue.getMetricID().endsWith(ClusteringConstants.COUPLING))
+         else if (metricValue.getMetricID().endsWith(Messages.ClusteringConstants_COUPLING))
          {
             couplingValue = metricValue.getValue();
          }
-         else if (metricValue.getMetricID().endsWith(ClusteringConstants.NAME_RESEMBLANCE))
+         else if (metricValue.getMetricID().endsWith(Messages.ClusteringConstants_NAME_RESEMBLANCE))
          {
             nameResemblanceValue = metricValue.getValue();
          }
-         else if (metricValue.getMetricID().endsWith(ClusteringConstants.SUBSYSTEM_COMPONENT))
+         else if (metricValue.getMetricID().endsWith(Messages.ClusteringConstants_SUBSYSTEM_COMPONENT))
          {
             subsystemComponentValue = metricValue.getValue();
          }
-         else if (metricValue.getMetricID().endsWith(ClusteringConstants.SLAQ))
+         else if (metricValue.getMetricID().endsWith(Messages.ClusteringConstants_SLAQ))
          {
             slaqValue = metricValue.getValue();
          }
-         else if (metricValue.getMetricID().endsWith(ClusteringConstants.PACKAGE_MAPPING))
+         else if (metricValue.getMetricID().endsWith(Messages.ClusteringConstants_PACKAGE_MAPPING))
          {
             packageMappingValue = metricValue.getValue();
          }
-         else if (metricValue.getMetricID().endsWith(ClusteringConstants.DIRECTORY_MAPPING))
+         else if (metricValue.getMetricID().endsWith(Messages.ClusteringConstants_DIRECTORY_MAPPING))
          {
             directoryMappingValue = metricValue.getValue();
          }
@@ -115,8 +114,8 @@ public class HigherInterfaceAdherenceStrategy extends BadSmellsRelevanceStrategy
    @Override
    public boolean applicable(final String badSmellName)
    {
-      if (badSmellName.equals(PatternConstants.ILLEGAL_METHOD_ACCESS_PATTERN)
-            || badSmellName.equals(PatternConstants.ILLEGAL_METHOD_ACCESS_BC_PATTERN))
+      if (badSmellName.equals(Messages.PatternConstants_ILLEGAL_METHOD_ACCESS_PATTERN)
+            || badSmellName.equals(Messages.PatternConstants_ILLEGAL_METHOD_ACCESS_BC_PATTERN))
       {
          return true;
       }

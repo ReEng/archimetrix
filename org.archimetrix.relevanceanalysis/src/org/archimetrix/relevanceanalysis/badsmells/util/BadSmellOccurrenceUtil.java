@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-import org.archimetrix.commons.ConfigConstants;
+import org.archimetrix.commons.Messages;
 import org.archimetrix.relevanceanalysis.RelevanceAnalysisPlugin;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 
@@ -60,12 +60,12 @@ public class BadSmellOccurrenceUtil
       try
       {
          InputStream stream = RelevanceAnalysisPlugin.getDefault().getBundle()
-               .getEntry(ConfigConstants.CONFIG_PROPERTIES_FILE).openStream();
+               .getEntry(Messages.ConfigConstants_CONFIG_PROPERTIES_FILE).openStream();
          properties.load(stream);
          stream.close();
 
-         String propertyString = properties.getProperty(ConfigConstants.RELEVANCEANALYSIS_ANNOTATION_NAMES);
-         return propertyString.split(ConfigConstants.PROPERTY_SEPARATOR);
+         String propertyString = properties.getProperty(Messages.ConfigConstants_RELEVANCEANALYSIS_ANNOTATION_NAMES);
+         return propertyString.split(Messages.ConfigConstants_PROPERTY_SEPARATOR);
       }
       catch (IOException e)
       {

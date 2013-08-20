@@ -5,7 +5,7 @@ import metricvalues.ComponentCandidate;
 import metricvalues.MetricValue;
 import metricvalues.MetricValuesModel;
 
-import org.archimetrix.commons.PatternConstants;
+import org.archimetrix.commons.Messages;
 import org.archimetrix.relevanceanalysis.badsmells.util.BadSmellOccurrenceUtil;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 
@@ -45,8 +45,8 @@ public class ExternalAccessesStrategy extends BadSmellsRelevanceStrategy
    @Override
    public boolean applicable(final String badSmellName)
    {
-      if (badSmellName.equals(PatternConstants.ILLEGAL_METHOD_ACCESS_BC_PATTERN)
-            || badSmellName.equals(PatternConstants.ILLEGAL_METHOD_ACCESS_PATTERN))
+      if (badSmellName.equals(Messages.PatternConstants_ILLEGAL_METHOD_ACCESS_BC_PATTERN)
+            || badSmellName.equals(Messages.PatternConstants_ILLEGAL_METHOD_ACCESS_PATTERN))
       {
          return true;
       }

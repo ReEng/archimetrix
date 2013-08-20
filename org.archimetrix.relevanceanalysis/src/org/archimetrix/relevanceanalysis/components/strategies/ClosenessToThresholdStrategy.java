@@ -13,8 +13,7 @@ import metricvalues.Iteration;
 import metricvalues.MetricValue;
 import metricvalues.MetricValuesModel;
 
-import org.archimetrix.commons.ClusteringConstants;
-import org.archimetrix.commons.ConfigConstants;
+import org.archimetrix.commons.Messages;
 import org.archimetrix.relevanceanalysis.RelevanceAnalysisPlugin;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.gmt.modisco.java.Type;
@@ -221,7 +220,7 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy
    {
       for (MetricValue metricValue : compCand.getMetricValues())
       {
-         if (metricValue.getMetricID().endsWith(ClusteringConstants.DEFAULT_MERGE_INDICATING_METRIC))
+         if (metricValue.getMetricID().endsWith(Messages.ClusteringConstants_DEFAULT_MERGE_INDICATING_METRIC))
          {
             return metricValue.getValue();
          }
@@ -234,7 +233,7 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy
    {
       for (MetricValue metricValue : compCand.getMetricValues())
       {
-         if (metricValue.getMetricID().endsWith(ClusteringConstants.DEFAULT_COMPOSITION_INDICATING_METRIC))
+         if (metricValue.getMetricID().endsWith(Messages.ClusteringConstants_DEFAULT_COMPOSITION_INDICATING_METRIC))
          {
             return metricValue.getValue();
          }
@@ -249,11 +248,11 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy
       try
       {
          InputStream stream = RelevanceAnalysisPlugin.getDefault().getBundle()
-               .getEntry(ConfigConstants.CONFIG_PROPERTIES_FILE).openStream();
+               .getEntry(Messages.ConfigConstants_CONFIG_PROPERTIES_FILE).openStream();
          properties.load(stream);
          stream.close();
 
-         return Double.parseDouble(properties.getProperty(ConfigConstants.RELEVANCEANALYSIS_EPSILON));
+         return Double.parseDouble(properties.getProperty(Messages.ConfigConstants_RELEVANCEANALYSIS_EPSILON));
       }
       catch (IOException e)
       {

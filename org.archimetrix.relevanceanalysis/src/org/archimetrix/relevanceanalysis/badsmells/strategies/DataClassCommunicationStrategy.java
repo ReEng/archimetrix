@@ -4,7 +4,7 @@ package org.archimetrix.relevanceanalysis.badsmells.strategies;
 import metricvalues.ComponentCandidate;
 import metricvalues.MetricValuesModel;
 
-import org.archimetrix.commons.PatternConstants;
+import org.archimetrix.commons.Messages;
 import org.archimetrix.relevanceanalysis.badsmells.util.BadSmellOccurrenceUtil;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.gmt.modisco.java.BodyDeclaration;
@@ -163,14 +163,14 @@ public class DataClassCommunicationStrategy extends BadSmellsRelevanceStrategy
 
    private ClassDeclaration getTOFromNonTOCommPattern(final ASGAnnotation annotation)
    {
-      return (ClassDeclaration) annotation.getAnnotatedElements().get(PatternConstants.NON_TO_ROLE).get(0);
+      return (ClassDeclaration) annotation.getAnnotatedElements().get(Messages.PatternConstants_NON_TO_ROLE).get(0);
    }
 
 
    @Override
    public boolean applicable(final String badSmellName)
    {
-      if (badSmellName.equals(PatternConstants.NON_TO_COMMUNICATION_PATTERN_NAME))
+      if (badSmellName.equals(Messages.PatternConstants_NON_TO_COMMUNICATION_PATTERN_NAME))
       {
          return true;
       }
