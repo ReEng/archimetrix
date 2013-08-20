@@ -13,7 +13,7 @@ import de.uka.ipd.sdq.pcm.repository.Repository;
 import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
 //import eu.qimpress.samm.staticstructure.ComponentType;
 //import eu.qimpress.samm.staticstructure.PrimitiveComponent;
-//simport eu.qimpress.samm.staticstructure.Repository;
+//import eu.qimpress.samm.staticstructure.Repository;
 
 
 /**

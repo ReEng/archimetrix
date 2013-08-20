@@ -18,12 +18,11 @@ import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 import org.storydriven.storydiagrams.activities.Activity;
 
 import de.uka.ipd.sdq.pcm.repository.Repository;
-//import eu.qimpress.samm.staticstructure.Repository;
 
 
 /**
- * This class is responsible for starting the architecture prognosis. This includes starting the
- * story diagram editor, starting a clustering with SoMoX and starting the actual prognosis
+ * This class is responsible for starting the architecture preview. This includes starting the
+ * story diagram editor, starting a clustering with SoMoX and starting the actual preview
  * calculation.
  * 
  * @author mcp
@@ -31,17 +30,17 @@ import de.uka.ipd.sdq.pcm.repository.Repository;
  * @version $Revision$ $Date$
  * 
  */
-public class ArchitecturePreview
+public class ArchitecturePreview 
 {
    private static final int GAST_FILE_NAME_INDEX = 2;
 
    private static final int PROJECT_NAME_INDEX = 1;
 
-   ArchitecturePreviewCalculator prognosisCalculator;
+   private ArchitecturePreviewCalculator prognosisCalculator;
 
 
    /**
-    * Starts the architecture prognosis. For this, first a transformation is executed, then a
+    * Starts the architecture preview. For this, first a transformation is executed, then a
     * clustering is started and finally the actual calculation is started.
     * 
     * @param badSmellAnnotation the bad smell occurrences that was selected by the user to be
@@ -50,11 +49,11 @@ public class ArchitecturePreview
     *           accomplish the removal of the bad smell, represented by a story diagram
     * @param metricValuesFilePath the path to the metric values model created in the initial
     *           clustering, it contains the clustering configuration
-    * @return the result of the prognosis calculation
+    * @return the result of the preview calculation
     */
    public List<List<String>> start(final ASGAnnotation badSmellAnnotation, final Activity reengineeringStrategy,
-         final String metricValuesFilePath)
-   {
+         final String metricValuesFilePath) {
+       
       Resource newGASTResource = startTransformation(badSmellAnnotation, reengineeringStrategy);
       SoMoXStarter somoxStarter = startClustering(metricValuesFilePath, newGASTResource);
       startPrognosisCalculation(badSmellAnnotation, somoxStarter);
