@@ -134,6 +134,8 @@ public class CatalogModifyingGenerateEnginesStrategy extends GenerateNewEnginesS
 
       EClass compTypeEClass = StaticstructurePackage.eINSTANCE.getComponentType();
       EAttribute attributeType = IdentifierPackage.eINSTANCE.getIdentifier_Id();
+      
+      
       for (PSPatternSpecification pattern : catalog.getPatternSpecifications())
       {
          if (DIRECT_COMPONENT_CLASSES_NAME.equals(pattern.getName())
