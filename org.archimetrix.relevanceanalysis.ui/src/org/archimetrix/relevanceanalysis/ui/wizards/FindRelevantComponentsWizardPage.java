@@ -3,7 +3,7 @@ package org.archimetrix.relevanceanalysis.ui.wizards;
 
 import org.archimetrix.commons.wizards.AbstractWizardPage;
 import org.archimetrix.commons.wizards.ResourceSelectionSection;
-import org.archimetrix.commons.wizards.WizardConstants;
+import org.archimetrix.commons.wizards.WizardConst;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.jface.dialogs.IDialogSettings;
@@ -46,9 +46,9 @@ public class FindRelevantComponentsWizardPage extends AbstractWizardPage
       Composite composite = new Composite(parent, SWT.NONE);
       composite.setLayout(new GridLayout());
 
-      Group inputs = this.resourceSelectionSectionProvider.createInputGroup(composite);
-      this.scdSection = this.resourceSelectionSectionProvider.addSourceCodeDecoratorResourceSelection(inputs, this);
-      this.metricValuesSection = this.resourceSelectionSectionProvider.addMetricValuesResourceSelection(inputs, this);
+      Group inputs = this.getResourceSelectionSectionProvider().createInputGroup(composite);
+      this.scdSection = this.getResourceSelectionSectionProvider().addSourceCodeDecoratorResourceSelection(inputs, this);
+      this.metricValuesSection = this.getResourceSelectionSectionProvider().addMetricValuesResourceSelection(inputs, this);
 
       setControl(composite);
       setPageComplete(false);
@@ -63,10 +63,10 @@ public class FindRelevantComponentsWizardPage extends AbstractWizardPage
       if (s != null)
       {
          this.scdSection.getTextField().setText(
-               s.get(WizardConstants.SETT_SCDM) == null ? "" : s.get(WizardConstants.SETT_SCDM));
+               s.get(WizardConst.WizardConstants_SETT_SCDM) == null ? "" : s.get(WizardConst.WizardConstants_SETT_SCDM));
          this.metricValuesSection.getTextField().setText(
-               s.get(WizardConstants.SETT_METRIC_VALUES_MODEL) == null ? "" : s
-                     .get(WizardConstants.SETT_METRIC_VALUES_MODEL));
+               s.get(WizardConst.WizardConstants_SETT_METRIC_VALUES_MODEL) == null ? "" : s
+                     .get(WizardConst.WizardConstants_SETT_METRIC_VALUES_MODEL));
 
       }
    }
@@ -107,11 +107,11 @@ public class FindRelevantComponentsWizardPage extends AbstractWizardPage
    {
       if (this.metricValuesSection.getTextField().getText() == null)
       {
-         setErrorMessage(WizardConstants.NO_METRIC_VALUES_ERROR_MESSAGE);
+         setErrorMessage(WizardConst.WizardConstants_NO_METRIC_VALUES_ERROR_MESSAGE);
       }
       if (this.scdSection.getTextField().getText() == null)
       {
-         setErrorMessage(WizardConstants.NO_SCD_ERROR_MESSAGE);
+         setErrorMessage(WizardConst.WizardConstants_NO_SCD_ERROR_MESSAGE);
       }
 
       if (this.metricValuesSection.getTextField().getText() != null && this.scdSection.getTextField().getText() != null)
@@ -129,8 +129,8 @@ public class FindRelevantComponentsWizardPage extends AbstractWizardPage
       IDialogSettings s = getDialogSettings();
       if (s != null)
       {
-         s.put(WizardConstants.SETT_SCDM, this.scdSection.getTextField().getText());
-         s.put(WizardConstants.SETT_METRIC_VALUES_MODEL, this.metricValuesSection.getTextField().getText());
+         s.put(WizardConst.WizardConstants_SETT_SCDM, this.scdSection.getTextField().getText());
+         s.put(WizardConst.WizardConstants_SETT_METRIC_VALUES_MODEL, this.metricValuesSection.getTextField().getText());
       }
    }
 

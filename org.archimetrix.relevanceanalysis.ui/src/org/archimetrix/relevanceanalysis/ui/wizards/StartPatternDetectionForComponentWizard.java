@@ -4,7 +4,7 @@ package org.archimetrix.relevanceanalysis.ui.wizards;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.archimetrix.commons.wizards.WizardConstants;
+import org.archimetrix.commons.wizards.WizardConst;
 import org.archimetrix.relevanceanalysis.ui.views.RelevantComponentsView;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -75,7 +75,7 @@ public class StartPatternDetectionForComponentWizard extends StartInferenceWizar
       Resource catalogResource = this.page.getCatalogResource();
       StringBuilder catalogPath = new StringBuilder(catalogResource.getURI().toPlatformString(false));
       catalogPath.append(".");
-      catalogPath.append(WizardConstants.ECORE_FILE_EXTENSION);
+      catalogPath.append(WizardConst.WizardConstants_ECORE_FILE_EXTENSION);
       URI uri = URI.createPlatformResourceURI(catalogPath.toString(), true);
       this.engines = catalogResource.getResourceSet().createResource(uri);
       return catalogResource;
