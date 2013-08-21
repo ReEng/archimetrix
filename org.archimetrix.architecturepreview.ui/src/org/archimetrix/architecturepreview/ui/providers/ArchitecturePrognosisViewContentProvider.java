@@ -1,4 +1,4 @@
-package org.archimetrix.architectureprognosis.ui.providers;
+package org.archimetrix.architecturepreview.ui.providers;
 
 
 import java.util.List;

@@ -1,9 +1,9 @@
-package org.archimetrix.architectureprognosis.ui.providers;
+package org.archimetrix.architecturepreview.ui.providers;
 
 
 import java.util.List;
 
-import org.archimetrix.architectureprognosis.ui.util.StrategyFilter;
+import org.archimetrix.architecturepreview.ui.util.StrategyFilter;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;

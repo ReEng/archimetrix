@@ -1,7 +1,7 @@
-package org.archimetrix.architectureprognosis.ui.handler;
+package org.archimetrix.architecturepreview.ui.handler;
 
 
-import org.archimetrix.architectureprognosis.ui.wizards.ArchitecturePrognosisWizard;
+import org.archimetrix.architecturepreview.ui.wizards.ArchitecturePrognosisWizard;
 import org.archimetrix.relevanceanalysis.ui.views.RelevantBadSmellsView;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;

@@ -1,8 +1,8 @@
-package org.archimetrix.architectureprognosis.ui.wizards;
+package org.archimetrix.architecturepreview.ui.wizards;
 
 
-import org.archimetrix.architectureprognosis.ui.providers.ReengineeringStrategiesWizardPageContentProvider;
-import org.archimetrix.architectureprognosis.ui.providers.ReengineeringStrategiesWizardPageLabelProvider;
+import org.archimetrix.architecturepreview.ui.providers.ReengineeringStrategiesWizardPageContentProvider;
+import org.archimetrix.architecturepreview.ui.providers.ReengineeringStrategiesWizardPageLabelProvider;
 import org.archimetrix.commons.wizards.AbstractTreeViewerPage;
 import org.archimetrix.commons.wizards.WizardConst;
 import org.eclipse.emf.ecore.EOperation;

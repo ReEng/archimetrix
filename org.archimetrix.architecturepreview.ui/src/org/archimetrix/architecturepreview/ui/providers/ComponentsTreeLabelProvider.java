@@ -1,11 +1,11 @@
-package org.archimetrix.architectureprognosis.ui.providers;
+package org.archimetrix.architecturepreview.ui.providers;
 
 
 import java.util.List;
 
-import org.archimetrix.architectureprognosis.ui.ArchitecturePrognosisUIPlugin;
-import org.archimetrix.architectureprognosis.ui.util.ComponentsUtil;
-import org.archimetrix.architectureprognosis.ui.views.ArchitecturePrognosisView;
+import org.archimetrix.architecturepreview.ui.ArchitecturePrognosisUIPlugin;
+import org.archimetrix.architecturepreview.ui.util.ComponentsUtil;
+import org.archimetrix.architecturepreview.ui.views.ArchitecturePrognosisView;
 import org.eclipse.gmt.modisco.java.ClassDeclaration;
 import org.eclipse.gmt.modisco.java.Type;
 import org.eclipse.jface.viewers.ITableColorProvider;

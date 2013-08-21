@@ -1,4 +1,4 @@
-package org.archimetrix.architectureprognosis.ui.util;
+package org.archimetrix.architecturepreview.ui.util;
 
 
 import java.util.HashMap;

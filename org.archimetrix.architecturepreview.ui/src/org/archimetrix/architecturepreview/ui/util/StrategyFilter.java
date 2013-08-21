@@ -1,4 +1,4 @@
-package org.archimetrix.architectureprognosis.ui.util;
+package org.archimetrix.architecturepreview.ui.util;
 
 
 import java.io.FileNotFoundException;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-import org.archimetrix.architectureprognosis.ui.ArchitecturePrognosisUIPlugin;
+import org.archimetrix.architecturepreview.ui.ArchitecturePrognosisUIPlugin;
 import org.archimetrix.commons.Messages;
 import org.eclipse.emf.ecore.EOperation;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;

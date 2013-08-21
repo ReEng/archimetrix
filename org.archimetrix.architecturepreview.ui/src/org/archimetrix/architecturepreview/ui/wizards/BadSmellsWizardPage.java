@@ -1,8 +1,8 @@
-package org.archimetrix.architectureprognosis.ui.wizards;
+package org.archimetrix.architecturepreview.ui.wizards;
 
 
-import org.archimetrix.architectureprognosis.ui.providers.BadSmellsWizardPageContentProvider;
-import org.archimetrix.architectureprognosis.ui.providers.BadSmellsWizardPageLabelProvider;
+import org.archimetrix.architecturepreview.ui.providers.BadSmellsWizardPageContentProvider;
+import org.archimetrix.architecturepreview.ui.providers.BadSmellsWizardPageLabelProvider;
 import org.archimetrix.commons.wizards.AbstractTreeViewerPage;
 import org.archimetrix.relevanceanalysis.badsmells.util.BadSmellOccurrenceUtil;
 import org.eclipse.emf.ecore.resource.Resource;

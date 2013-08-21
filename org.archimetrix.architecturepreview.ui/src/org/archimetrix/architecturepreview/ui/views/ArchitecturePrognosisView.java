@@ -1,10 +1,10 @@
-package org.archimetrix.architectureprognosis.ui.views;
+package org.archimetrix.architecturepreview.ui.views;
 
 
-import org.archimetrix.architectureprognosis.ui.providers.ArchitecturePrognosisViewContentProvider;
-import org.archimetrix.architectureprognosis.ui.providers.ArchitecturePrognosisViewLabelProvider;
-import org.archimetrix.architectureprognosis.ui.providers.ComponentsTreeContentProvider;
-import org.archimetrix.architectureprognosis.ui.providers.ComponentsTreeLabelProvider;
+import org.archimetrix.architecturepreview.ui.providers.ArchitecturePrognosisViewContentProvider;
+import org.archimetrix.architecturepreview.ui.providers.ArchitecturePrognosisViewLabelProvider;
+import org.archimetrix.architecturepreview.ui.providers.ComponentsTreeContentProvider;
+import org.archimetrix.architecturepreview.ui.providers.ComponentsTreeLabelProvider;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.SWT;

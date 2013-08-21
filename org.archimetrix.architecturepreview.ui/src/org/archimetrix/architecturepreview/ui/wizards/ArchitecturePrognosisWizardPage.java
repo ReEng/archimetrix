@@ -1,4 +1,4 @@
-package org.archimetrix.architectureprognosis.ui.wizards;
+package org.archimetrix.architecturepreview.ui.wizards;
 
 
 import org.archimetrix.commons.wizards.AbstractWizardPage;

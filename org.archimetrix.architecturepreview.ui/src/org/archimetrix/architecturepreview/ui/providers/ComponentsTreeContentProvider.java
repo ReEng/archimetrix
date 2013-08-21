@@ -1,10 +1,10 @@
-package org.archimetrix.architectureprognosis.ui.providers;
+package org.archimetrix.architecturepreview.ui.providers;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.archimetrix.architectureprognosis.ui.util.ComponentsUtil;
+import org.archimetrix.architecturepreview.ui.util.ComponentsUtil;
 import org.eclipse.gmt.modisco.java.Type;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.Viewer;

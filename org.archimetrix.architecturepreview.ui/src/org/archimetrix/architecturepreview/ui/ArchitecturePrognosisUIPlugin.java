@@ -1,4 +1,4 @@
-package org.archimetrix.architectureprognosis.ui;
+package org.archimetrix.architecturepreview.ui;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;

@@ -1,11 +1,11 @@
-package org.archimetrix.architectureprognosis.ui.wizards;
+package org.archimetrix.architecturepreview.ui.wizards;
 
 
 import java.util.List;
 
 import org.archimetrix.architecturepreview.ArchitecturePreview;
-import org.archimetrix.architectureprognosis.ui.ArchitecturePrognosisUIPlugin;
-import org.archimetrix.architectureprognosis.ui.views.ArchitecturePrognosisView;
+import org.archimetrix.architecturepreview.ui.ArchitecturePrognosisUIPlugin;
+import org.archimetrix.architecturepreview.ui.views.ArchitecturePrognosisView;
 import org.archimetrix.commons.ResourceLoader;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
