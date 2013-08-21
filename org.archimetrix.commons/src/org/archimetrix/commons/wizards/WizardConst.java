@@ -1,13 +1,19 @@
 package org.archimetrix.commons.wizards;
 
 import org.eclipse.osgi.util.NLS;
+
 /**
  * Stores the constants visible to the user.
+ *
  * @author Goran Piskachev
  *
  */
-public class WizardConst extends NLS {
-    private static final String BUNDLE_NAME = "org.archimetrix.commons.wizards.messages"; //$NON-NLS-1$
+public final class WizardConst extends NLS {
+    /**
+     * Bundle name.
+     */
+    private static final String BUNDLE_NAME =
+            "org.archimetrix.commons.wizards.messages"; //$NON-NLS-1$
     public static String WizardConstants_BAD_SMELLS_CATALOG_DESCRIPTION;
     public static String WizardConstants_BAD_SMELLS_CATALOG_EXTENSION;
     public static String WizardConstants_BAD_SMELLS_CATALOG_STRING;
@@ -38,6 +44,7 @@ public class WizardConst extends NLS {
         // initialize resource bundle
         NLS.initializeMessages(BUNDLE_NAME, WizardConst.class);
     }
+
     /**
      * the constructor.
      */
