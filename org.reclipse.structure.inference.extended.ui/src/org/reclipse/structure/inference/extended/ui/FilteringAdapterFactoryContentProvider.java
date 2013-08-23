@@ -1,6 +1,3 @@
-/**
- * 
- */
 package org.reclipse.structure.inference.extended.ui;
 
 import java.util.ArrayList;
@@ -10,56 +7,53 @@ import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 
 import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
 
-//import eu.qimpress.samm.staticstructure.ComponentType;
-
 /**
  * @author Oleg
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
- *
  */
-public class FilteringAdapterFactoryContentProvider extends AdapterFactoryContentProvider
-{
+public class FilteringAdapterFactoryContentProvider
+extends AdapterFactoryContentProvider {
 
-   private final static String DUMMY = "SoMoX System-Level Dummy Component";
-   public FilteringAdapterFactoryContentProvider(AdapterFactory adapterFactory)
-   {
-      super(adapterFactory);
-   }
+    /**
+     * SoMoX system dummy component string.
+     */
+    private static final String DUMMY = "SoMoX System-Level Dummy Component";
 
-   @Override
-   public Object[] getElements(Object object)
-   {
-      Object[] result = super.getElements(object);
-      ArrayList<Object> list = new ArrayList<Object>();
-      if(result != null)
-      {
-         for(Object o : result)
-         {
-            if(o instanceof RepositoryComponent)
-            {
-               if(!DUMMY.equals(((RepositoryComponent) o).getEntityName()))
-               {
-                  list.add(o);
-               }
+    /**
+     * the constructor.
+     * @param adapterFactory factory
+     */
+    public FilteringAdapterFactoryContentProvider(
+            final AdapterFactory adapterFactory) {
+        super(adapterFactory);
+    }
+
+    @Override
+    public Object[] getElements(Object object) {
+        Object[] result = super.getElements(object);
+        ArrayList<Object> list = new ArrayList<Object>();
+        if (result != null) {
+            for (Object o : result) {
+                if (o instanceof RepositoryComponent) {
+                    if (!DUMMY.equals(((
+                            RepositoryComponent) o).getEntityName())) {
+                        list.add(o);
+                    }
+                }
             }
-         }
-      }
-      return list.toArray();
-   }
+        }
+        return list.toArray();
+    }
 
-   @Override
-   public Object[] getChildren(Object object)
-   {
-//      return super.getChildren(object);
-      return null;
-   }
+    @Override
+    public Object[] getChildren(Object object) {
+        // return super.getChildren(object);
+        return null;
+    }
 
-   @Override
-   public boolean hasChildren(Object object)
-   {
-//      return super.hasChildren(object);
-      return false;
-   }
+    @Override
+    public boolean hasChildren(Object object) {
+        // return super.hasChildren(object);
+        return false;
+    }
 
 }

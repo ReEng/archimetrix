@@ -1,6 +1,3 @@
-/**
- * 
- */
 package org.reclipse.structure.inference.extended.ui;
 
 import org.eclipse.core.commands.AbstractHandler;
@@ -10,25 +7,21 @@ import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.handlers.HandlerUtil;
 
-
 /**
  * @author Oleg
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
- *
  */
-public class GeneratingInferenceHandler extends AbstractHandler
-{
+public class GeneratingInferenceHandler extends AbstractHandler {
 
-   @Override
-   public Object execute(ExecutionEvent event) throws ExecutionException
-   {
-      IWorkbench workbench = HandlerUtil.getActiveWorkbenchWindowChecked(event).getWorkbench();
-      StartModifyingCatalogWizard wizard = new StartModifyingCatalogWizard(workbench);
-      WizardDialog dialog = new WizardDialog(HandlerUtil.getActiveShell(event), wizard);
-      dialog.open();
-      return null;
-   }
-
+    @Override
+    public Object execute(ExecutionEvent event) throws ExecutionException {
+        IWorkbench workbench = HandlerUtil.getActiveWorkbenchWindowChecked(
+                event).getWorkbench();
+        StartModifyingCatalogWizard wizard = new StartModifyingCatalogWizard(
+                workbench);
+        WizardDialog dialog = new WizardDialog(HandlerUtil.getActiveShell(
+                event), wizard);
+        dialog.open();
+        return null;
+    }
 
 }
