@@ -36,7 +36,9 @@ public class ArchitecturePreview {
      */
     private static final int PROJECT_NAME_INDEX = 1;
 
-    
+    /**
+     * Contains the formatted strings for the UI.
+     */
     private UIDataFormatter uiDataFormatter;
 
     /**
@@ -62,12 +64,23 @@ public class ArchitecturePreview {
         return this.uiDataFormatter.getDataForArchitecturePreview();
     }
 
+    /**
+     * Loads the SCDM objects and creates the dataFormatter object which prepares the strings for the UI.
+     * @param badSmellAnnotation bas smell annotation
+     * @param somoxStarter clustering results from SoMoX
+     */
     private void startPrognosisCalculation(final ASGAnnotation badSmellAnnotation, SoMoXStarter somoxStarter) {
         SourceCodeDecoratorRepository originalSCDM = SCDMFromAnnotationExtractor.getSCDM(badSmellAnnotation);
         SourceCodeDecoratorRepository newSCDM = somoxStarter.loadResultingSCDM();
-        this.uiDataFormatter=new UIDataFormatter(originalSCDM, newSCDM);
+        this.uiDataFormatter = new UIDataFormatter(originalSCDM, newSCDM);
     }
 
+    /**
+     * Calls SoMoX which will execute the clustering.
+     * @param metricValuesFilePath the path of the file with the metrics for the clustering.
+     * @param newGASTResource the resource that will be clustered by SoMoX
+     * @return clustering results as SoMoXStarter object
+     */
     private SoMoXStarter startClustering(final String metricValuesFilePath, Resource newGASTResource) {
         String[] newGASTURISegments = newGASTResource.getURI().segments();
         String projectName = newGASTURISegments[PROJECT_NAME_INDEX];
@@ -80,10 +93,16 @@ public class ArchitecturePreview {
         return somoxStarter;
     }
 
+    /**
+     * Starts the transformation for reengineering. 
+     * @param badSmellAnnotation bad smell annotation
+     * @param reengineeringStrategy activity for reengineering 
+     * @return resulting model from the transformation
+     */
     private Resource startTransformation(final ASGAnnotation badSmellAnnotation, final Activity reengineeringStrategy) {
         InterpreterStarter interpreterStarter = new InterpreterStarter();
         Resource newGASTResource = interpreterStarter.callInterpreter(badSmellAnnotation, reengineeringStrategy);
-        fixGASTResource(newGASTResource);
+     //   fixGASTResource(newGASTResource);
         return newGASTResource;
     }
 
@@ -105,7 +124,7 @@ public class ArchitecturePreview {
         return this.uiDataFormatter.getArchitecturePreviewDataFormatHelper().getOriginalSammRep();
     }
 
-    // TODO: review this !!
+ /*   // TODO: review this !!
     private void fixGASTResource(final Resource newGASTResource) {
         // FIXME!!
         // This method fixes the error "feature 'version' not found", when opening the transformed
@@ -134,7 +153,7 @@ public class ArchitecturePreview {
             e.printStackTrace();
         }
     }
-
+*/
     public static void deleteFromRAF(final String value, final RandomAccessFile raf) {
         // FIXME: see fixGASTResource
         try {
