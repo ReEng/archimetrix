@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Archimetrix Architecture Preview UI
 Bundle-SymbolicName: org.archimetrix.architetureprognosis.ui;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: org.archimetrix.architecturepreview.ui.ArchitecturePrognosisUIPlugin
+Bundle-Activator: org.archimetrix.architecturepreview.ui.ArchitecturePreviewUIPlugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.resources,
  org.reclipse.structure.inference.annotations;bundle-version="1.0.0",

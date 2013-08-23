@@ -5,20 +5,24 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 /**
- * The activator class controls the plug-in life cycle
+ * The activator class controls the plug-in life cycle.
  */
-public class ArchitecturePrognosisUIPlugin extends AbstractUIPlugin {
+public class ArchitecturePreviewUIPlugin extends AbstractUIPlugin {
 
-	// The plug-in ID
+    /**
+     * The plug-in ID.
+     */
 	public static final String PLUGIN_ID = "org.archimetrix.architecturepreview.ui"; //$NON-NLS-1$
 
-	// The shared instance
-   private static ArchitecturePrognosisUIPlugin plugin;
+	/**
+	 * The shared instance.
+	 */
+   private static ArchitecturePreviewUIPlugin plugin;
 	
 	/**
-	 * The constructor
+	 * The constructor.
 	 */
-	public ArchitecturePrognosisUIPlugin() {
+	public ArchitecturePreviewUIPlugin() {
 	}
 
 	/*
@@ -40,17 +44,17 @@ public class ArchitecturePrognosisUIPlugin extends AbstractUIPlugin {
 	}
 
 	/**
-	 * Returns the shared instance
+	 * Returns the shared instance.
 	 *
 	 * @return the shared instance
 	 */
-	public static ArchitecturePrognosisUIPlugin getDefault() {
+	public static ArchitecturePreviewUIPlugin getDefault() {
 		return plugin;
 	}
 	
 	  /**
     * Returns an image descriptor for the image file at the given
-    * plug-in relative path
+    * plug-in relative path.
     *
     * @param path the path
     * @return the image descriptor

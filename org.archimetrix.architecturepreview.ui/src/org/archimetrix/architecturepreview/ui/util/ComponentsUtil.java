@@ -1,6 +1,5 @@
 package org.archimetrix.architecturepreview.ui.util;
 
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,117 +15,129 @@ import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 import de.uka.ipd.sdq.pcm.repository.BasicComponent;
 import de.uka.ipd.sdq.pcm.repository.Repository;
 import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
-//import eu.qimpress.samm.staticstructure.ComponentType;
-//import eu.qimpress.samm.staticstructure.PrimitiveComponent;
-//import eu.qimpress.samm.staticstructure.Repository;
-
 
 /**
  * This class contains helper methods for components.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
-public final class ComponentsUtil
-{
-   private static final String RESOURCE_SEGMENT = "resource";
+public final class ComponentsUtil {
+    /**
+     * String source segment.
+     */
+    private static final String RESOURCE_SEGMENT = "resource";
 
-   private static ComponentsUtil instance = null;
+    /**
+     * instance.
+     */
+    private static ComponentsUtil instance = null;
 
-   private SourceCodeDecoratorRepository scd;
+    /**
+     * SCD repository.
+     */
+    private SourceCodeDecoratorRepository scd;
 
-   private Repository samm;
+    /**
+     * repository.
+     */
+    private Repository samm;
 
-   private Map<BasicComponent, ComponentImplementingClassesLink> componentClasses; //ComponentType changed to BasicComponent
+    /**
+     * map of component classes.
+     */
+    private Map<BasicComponent, ComponentImplementingClassesLink> componentClasses; // ComponentType
+                                                                                    // changed to
+                                                                                    // BasicComponen
+    /**
+     * the constructor.
+     */
+    private ComponentsUtil() {
+    }
 
+    /**
+     * Get method for the static instance.
+     * @return instance
+     */
+    public static ComponentsUtil get() {
+        if (instance == null) {
+            instance = new ComponentsUtil();
+        }
+        return instance;
+    }
 
-   private ComponentsUtil()
-   {
-   }
-
-
-   public static ComponentsUtil get()
-   {
-      if (instance == null)
-      {
-         instance = new ComponentsUtil();
-      }
-      return instance;
-   }
-
-
-   /**
-    * Returns the componentImplementingClassesLink that belongs to the given component.
-    * 
-    * @param component a primitive component from a SAMM
-    * @return a component implementing classes link of the according SCDM
-    */
-   public ComponentImplementingClassesLink getComponentImplementingClassesLinkForComponent(final BasicComponent component) //PrimitivComponent changed to BasicComponent
-   {
-      if (this.componentClasses == null)
-      {
-         this.componentClasses = new HashMap<BasicComponent, ComponentImplementingClassesLink>(); // ComponentType changed to BasicCompoment
-      }
-      ComponentImplementingClassesLink componentImplementingClassesLink = this.componentClasses.get(component);
-      if (componentImplementingClassesLink != null)
-      {
-         return componentImplementingClassesLink;
-      }
-      else
-      {
-         SourceCodeDecoratorRepository scd = getSourceCodeDecoratorModel((Repository) component.eContainer());
-         for (ComponentImplementingClassesLink link : scd.getComponentImplementingClassesLink())
-         {
-            EcoreUtil.resolveAll(link.getComponent());
-            if (link.getComponent().getId().equals(component.getId()))
-            {
-               this.componentClasses.put(component, link);
-               return link;
+    /**
+     * Returns the componentImplementingClassesLink that belongs to the given component.
+     * 
+     * @param component
+     *            a primitive component from a SAMM
+     * @return a component implementing classes link of the according SCDM
+     */
+    public ComponentImplementingClassesLink getComponentImplementingClassesLinkForComponent(
+            final BasicComponent component) // PrimitivComponent changed to BasicComponent
+    {
+        if (this.componentClasses == null) {
+            this.componentClasses = new HashMap<BasicComponent, ComponentImplementingClassesLink>(); // ComponentType
+                                                                                                     // changed
+                                                                                                     // to
+                                                                                                     // BasicCompoment
+        }
+        ComponentImplementingClassesLink componentImplementingClassesLink = this.componentClasses.get(component);
+        if (componentImplementingClassesLink != null) {
+            return componentImplementingClassesLink;
+        } else {
+            SourceCodeDecoratorRepository scd = getSourceCodeDecoratorModel((Repository) component.eContainer());
+            for (ComponentImplementingClassesLink link : scd.getComponentImplementingClassesLink()) {
+                EcoreUtil.resolveAll(link.getComponent());
+                if (link.getComponent().getId().equals(component.getId())) {
+                    this.componentClasses.put(component, link);
+                    return link;
+                }
             }
-         }
-      }
-      return null;
-   }
+        }
+        return null;
+    }
 
+    /**
+     * Creates a short name from the component name generated by SoMoX.
+     * 
+     * @param component repository component
+     * @return short component name
+     */
+    public String createShortComponentName(final RepositoryComponent component) {
+        String[] componentNameArray = component.getEntityName().split(" ");
+        String componentName = componentNameArray[1] + " " + componentNameArray[3];
+        return componentName;
+    }
 
-   /**
-    * Creates a short name from the component name generated by SoMoX.
-    * 
-    * @param component
-    * @return
-    */
-   public String createShortComponentName(final RepositoryComponent component)
-   {
-      String[] componentNameArray = component.getEntityName().split(" ");
-      String componentName = componentNameArray[1] + " " + componentNameArray[3];
-      return componentName;
-   }
+    /**
+     * Returns scdm.
+     * @param sammRepository repository
+     * @return scd repository
+     */
+    private SourceCodeDecoratorRepository getSourceCodeDecoratorModel(final Repository sammRepository) {
+        if (this.scd == null || sammRepository != this.samm) {
+            this.samm = sammRepository;
+            StringBuilder path = createSCDMPath(sammRepository);
+            URI scdmFileUri = URI.createPlatformResourceURI(path.toString(), true);
+            ResourceSet scdmRess = new ResourceSetImpl();
+            Resource scdmRes = scdmRess.getResource(scdmFileUri, true);
+            this.scd = (SourceCodeDecoratorRepository) scdmRes.getContents().get(0);
+        }
+        return this.scd;
+    }
 
-
-   private SourceCodeDecoratorRepository getSourceCodeDecoratorModel(final Repository sammRepository)
-   {
-      if (this.scd == null || sammRepository != this.samm)
-      {
-         this.samm = sammRepository;
-         StringBuilder path = createSCDMPath(sammRepository);
-         URI scdmFileUri = URI.createPlatformResourceURI(path.toString(), true);
-         ResourceSet scdmRess = new ResourceSetImpl();
-         Resource scdmRes = scdmRess.getResource(scdmFileUri, true);
-         this.scd = (SourceCodeDecoratorRepository) scdmRes.getContents().get(0);
-      }
-      return this.scd;
-   }
-
-
-   private StringBuilder createSCDMPath(final Repository sammRepository)
-   {
-      String resourceUriPath = sammRepository.eResource().getURI().path();
-      String modelsPath = resourceUriPath.split(RESOURCE_SEGMENT)[1].split("\\.")[0];
-      StringBuilder path = new StringBuilder(modelsPath);
-      path.append(".");
-      path.append(WizardConst.WizardConstants_SOURCECODEDECORATOR_FILE_EXTENSION);
-      return path;
-   }
+    /**
+     * Creates SCDM path.
+     * @param sammRepository repository
+     * @return path
+     */
+    private StringBuilder createSCDMPath(final Repository sammRepository) {
+        String resourceUriPath = sammRepository.eResource().getURI().path();
+        String modelsPath = resourceUriPath.split(RESOURCE_SEGMENT)[1].split("\\.")[0];
+        StringBuilder path = new StringBuilder(modelsPath);
+        path.append(".");
+        path.append(WizardConst.WizardConstants_SOURCECODEDECORATOR_FILE_EXTENSION);
+        return path;
+    }
 }

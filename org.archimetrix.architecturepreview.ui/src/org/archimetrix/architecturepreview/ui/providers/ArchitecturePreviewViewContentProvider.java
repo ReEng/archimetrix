@@ -4,23 +4,21 @@ import java.util.List;
 
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.Viewer;
-import org.reclipse.structure.inference.annotations.ASGAnnotation;
 
 /**
- * This class provides the content of the bad smells tree in the ArchitecturePrognosisWizard.
+ * This class provides the content of the main table in the Architecture Prognosis View.
  * 
  * @author mcp
  * @author Last editor: $Author$
  * @version $Revision$ $Date$
  * 
  */
-public class BadSmellsWizardPageContentProvider implements ITreeContentProvider {
+public class ArchitecturePreviewViewContentProvider implements ITreeContentProvider {
 
     @SuppressWarnings("unchecked")
     @Override
     public Object[] getElements(final Object inputElement) {
-        List<ASGAnnotation> annotations = (List<ASGAnnotation>) inputElement;
-        return annotations.toArray();
+        return ((List<List<String>>) inputElement).toArray();
     }
 
     @Override

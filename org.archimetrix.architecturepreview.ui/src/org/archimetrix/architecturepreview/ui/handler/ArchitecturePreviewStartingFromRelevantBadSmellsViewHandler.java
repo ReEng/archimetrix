@@ -1,14 +1,12 @@
 package org.archimetrix.architecturepreview.ui.handler;
 
-
-import org.archimetrix.architecturepreview.ui.wizards.ArchitecturePrognosisWizard;
+import org.archimetrix.architecturepreview.ui.wizards.ArchitecturePreviewWizard;
 import org.archimetrix.relevanceanalysis.ui.views.RelevantBadSmellsView;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.ui.handlers.HandlerUtil;
-
 
 /**
  * Opens the wizard for starting the architecture prognosis from the relevant bad smells view per
@@ -19,16 +17,13 @@ import org.eclipse.ui.handlers.HandlerUtil;
  * @version $Revision$ $Date$
  * 
  */
-public class ArchitecturePrognosisStartingFromRelevantBadSmellsViewHandler extends AbstractHandler
-{
+public class ArchitecturePreviewStartingFromRelevantBadSmellsViewHandler extends AbstractHandler {
 
-   @Override
-   public Object execute(final ExecutionEvent event) throws ExecutionException
-   {
-      ArchitecturePrognosisWizard wizard = new ArchitecturePrognosisWizard(
-            RelevantBadSmellsView.getSelectedAnnotation());
-      WizardDialog dialog = new WizardDialog(HandlerUtil.getActiveShell(event), wizard);
-      dialog.open();
-      return null;
-   }
+    @Override
+    public Object execute(final ExecutionEvent event) throws ExecutionException {
+        ArchitecturePreviewWizard wizard = new ArchitecturePreviewWizard(RelevantBadSmellsView.getSelectedAnnotation());
+        WizardDialog dialog = new WizardDialog(HandlerUtil.getActiveShell(event), wizard);
+        dialog.open();
+        return null;
+    }
 }
