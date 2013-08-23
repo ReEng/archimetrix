@@ -42,7 +42,8 @@ public class ResourceSelectionSectionProvider {
    public ResourceSelectionSection addSourceCodeDecoratorResourceSelection(
            final Composite parent, final WizardPage page) {
       return new ResourceSelectionSection(parent,
-              WizardConst.WizardConstants_SOURCE_CODE_DECORATOR_MODEL_STRING, page,
+              WizardConst.WizardConstants_SOURCE_CODE_DECORATOR_MODEL_STRING,
+              page,
             WizardConst.WizardConstants_SOURCE_CODE_DECORATOR_MODEL_DESCRIPTION,
             WizardConst.WizardConstants_SOURCECODEDECORATOR_FILE_EXTENSION);
    }

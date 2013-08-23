@@ -51,6 +51,9 @@ implements ModifyListener, SelectionListener {
       setPageComplete(isValid());
    }
 
-
+/**
+ * Checks the validity of the page.
+ * @return boolean value: true for valis, false for invalid
+ */
    protected abstract boolean isValid();
 }

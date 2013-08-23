@@ -17,7 +17,7 @@ import org.eclipse.swt.widgets.Composite;
  * @author mcp
  *
  */
-public abstract class AbstractTreeViewerPage extends WizardPage{
+public abstract class AbstractTreeViewerPage extends WizardPage {
 
 /**
  * Tree viewer.
