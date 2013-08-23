@@ -1,6 +1,5 @@
 package org.archimetrix.relevanceanalysis.components.strategies;
 
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -18,8 +17,8 @@ import org.archimetrix.relevanceanalysis.RelevanceAnalysisPlugin;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.gmt.modisco.java.Type;
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
-//import de.fzi.gast.types.GASTClass;
 
+//import de.fzi.gast.types.GASTClass;
 
 /**
  * The class calculates the relevance value for the closeness to threshold strategy of the component
@@ -30,236 +29,177 @@ import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
  * @version $Revision$ $Date$
  * 
  */
-public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy
-{
+public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy {
 
-   private MetricValuesModel metricValuesModel;
+    private MetricValuesModel metricValuesModel;
 
-//TODO: the third worst method !!
-   @Override
-   public double getRelevanceValue(final ComponentImplementingClassesLink component, final MetricValuesModel metricValuesModel)
-   {
-      this.metricValuesModel = metricValuesModel;
+    // TODO: the third worst method !!
+    @Override
+    public double getRelevanceValue(final ComponentImplementingClassesLink component,
+            final MetricValuesModel metricValuesModel) {
+        this.metricValuesModel = metricValuesModel;
 
-      double relevanceValue = 0;
+        double relevanceValue = 0;
 
-      // for overall merge metric values, the iterations with the lowest CurrentMergeThreshold are
-      // significant
-      List<Iteration> firstIterations = getIterationsWithLowestMergeThreshold();
-      for (Iteration iteration : firstIterations)
-      {
-         for (ComponentCandidate compCand : iteration.getComponentCandidates())
-         {
-            if (isRelevantForMerge(compCand))
-            {
-               relevanceValue += getRating(compCand, component);
+        // for overall merge metric values, the iterations with the lowest CurrentMergeThreshold are
+        // significant
+        List<Iteration> firstIterations = getIterationsWithLowestMergeThreshold();
+        for (Iteration iteration : firstIterations) {
+            for (ComponentCandidate compCand : iteration.getComponentCandidates()) {
+                if (isRelevantForMerge(compCand)) {
+                    relevanceValue += getRating(compCand, component);
+                }
             }
-         }
-      }
+        }
 
-      // for overall composition metric values, the iterations with the lowest
-      // CurrentComposeThreshold are significant
-      List<Iteration> lastIterations = getIterationsWithLowestCompositionThreshold();
-      for (Iteration iteration : lastIterations)
-      {
-         for (ComponentCandidate compCand : iteration.getComponentCandidates())
-         {
-            if (isRelevantForComposition(compCand))
-            {
-               relevanceValue += getRating(compCand, component);
+        // for overall composition metric values, the iterations with the lowest
+        // CurrentComposeThreshold are significant
+        List<Iteration> lastIterations = getIterationsWithLowestCompositionThreshold();
+        for (Iteration iteration : lastIterations) {
+            for (ComponentCandidate compCand : iteration.getComponentCandidates()) {
+                if (isRelevantForComposition(compCand)) {
+                    relevanceValue += getRating(compCand, component);
+                }
             }
-         }
-      }
-      double normalizedRelevanceValue = relevanceValue / getScale();
-      return normalizedRelevanceValue;
-   }
+        }
+        double normalizedRelevanceValue = relevanceValue / getScale();
+        return normalizedRelevanceValue;
+    }
 
-
-   private List<Iteration> getIterationsWithLowestCompositionThreshold()
-   {
-      double lowestCompositionThreshold = this.metricValuesModel.getIterations(
-            this.metricValuesModel.getIterationsLength() - 1).getCurCompThreshold();
-      List<Iteration> iterations = new ArrayList<Iteration>();
-      for (Iteration iteration : this.metricValuesModel.getIterations())
-      {
-         if (iteration.getCurCompThreshold() == lowestCompositionThreshold)
-         {
-            iterations.add(iteration);
-         }
-      }
-      return iterations;
-   }
-
-
-   private List<Iteration> getIterationsWithLowestMergeThreshold()
-   {
-      double lowestMergeThreshold = this.metricValuesModel.getIterations(0).getCurMergeThreshold();
-      List<Iteration> iterations = new ArrayList<Iteration>();
-      for (Iteration iteration : this.metricValuesModel.getIterations())
-      {
-         if (iteration.getCurMergeThreshold() == lowestMergeThreshold)
-         {
-            iterations.add(iteration);
-         }
-      }
-      return iterations;
-   }
-
-
-   private double getRating(final ComponentCandidate compCand, final ComponentImplementingClassesLink component)
-   {
-      double rating = 0;
-      Component comp1 = compCand.getFirstComponent();
-      EcoreUtil.resolveAll(comp1);
-      Component comp2 = compCand.getSecondComponent();
-      EcoreUtil.resolveAll(comp2);
-      rating += getRatingForComponent(component, comp1);
-      rating += getRatingForComponent(component, comp2);
-      return rating;
-   }
-
-
-   private double getRatingForComponent(final ComponentImplementingClassesLink component, final Component comp)
-   {
-      if (componentAccordsToComponentCandidate(component, comp))
-      {
-         return 1;
-      }
-      return 0;
-   }
-
-
-   private int getScale()
-   {
-      int scale = 0;
-      for (Iteration iteration : getIterationsWithLowestMergeThreshold())
-      {
-         scale += iteration.getComponentCandidatesLength();
-      }
-      for (Iteration iteration : getIterationsWithLowestCompositionThreshold())
-      {
-         scale += iteration.getComponentCandidatesLength();
-      }
-      return scale * 2; // * 2 because of pair (firstComp+secondComp)
-   }
-
-
-   private boolean componentAccordsToComponentCandidate(final ComponentImplementingClassesLink component, final Component comp)
-   {
-      EcoreUtil.resolveAll(component);
-      for (Type compGastClass : comp.getClasses())
-      {
-         for (Type componentGastClass : component.getImplementingClasses())
-         {
-            if (compGastClass.getName().equals(componentGastClass.getName()))
-            {
-               return true;
+    private List<Iteration> getIterationsWithLowestCompositionThreshold() {
+        double lowestCompositionThreshold = this.metricValuesModel.getIterations(
+                this.metricValuesModel.getIterationsLength() - 1).getCurCompThreshold();
+        List<Iteration> iterations = new ArrayList<Iteration>();
+        for (Iteration iteration : this.metricValuesModel.getIterations()) {
+            if (iteration.getCurCompThreshold() == lowestCompositionThreshold) {
+                iterations.add(iteration);
             }
+        }
+        return iterations;
+    }
 
-         }
-      }
-      for (ComponentImplementingClassesLink subComp : component.getSubComponents())
-      {
-         if (componentAccordsToComponentCandidate(subComp, comp))
-         {
+    private List<Iteration> getIterationsWithLowestMergeThreshold() {
+        double lowestMergeThreshold = this.metricValuesModel.getIterations(0).getCurMergeThreshold();
+        List<Iteration> iterations = new ArrayList<Iteration>();
+        for (Iteration iteration : this.metricValuesModel.getIterations()) {
+            if (iteration.getCurMergeThreshold() == lowestMergeThreshold) {
+                iterations.add(iteration);
+            }
+        }
+        return iterations;
+    }
+
+    private double getRating(final ComponentCandidate compCand, final ComponentImplementingClassesLink component) {
+        double rating = 0;
+        Component comp1 = compCand.getFirstComponent();
+        EcoreUtil.resolveAll(comp1);
+        Component comp2 = compCand.getSecondComponent();
+        EcoreUtil.resolveAll(comp2);
+        rating += getRatingForComponent(component, comp1);
+        rating += getRatingForComponent(component, comp2);
+        return rating;
+    }
+
+    private double getRatingForComponent(final ComponentImplementingClassesLink component, final Component comp) {
+        if (componentAccordsToComponentCandidate(component, comp)) {
+            return 1;
+        }
+        return 0;
+    }
+
+    private int getScale() {
+        int scale = 0;
+        for (Iteration iteration : getIterationsWithLowestMergeThreshold()) {
+            scale += iteration.getComponentCandidatesLength();
+        }
+        for (Iteration iteration : getIterationsWithLowestCompositionThreshold()) {
+            scale += iteration.getComponentCandidatesLength();
+        }
+        return scale * 2; // * 2 because of pair (firstComp+secondComp)
+    }
+
+    private boolean componentAccordsToComponentCandidate(final ComponentImplementingClassesLink component,
+            final Component comp) {
+        EcoreUtil.resolveAll(component);
+        for (Type compGastClass : comp.getClasses()) {
+            for (Type componentGastClass : component.getImplementingClasses()) {
+                if (compGastClass.getName().equals(componentGastClass.getName())) {
+                    return true;
+                }
+
+            }
+        }
+        for (ComponentImplementingClassesLink subComp : component.getSubComponents()) {
+            if (componentAccordsToComponentCandidate(subComp, comp)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean isRelevantForMerge(final ComponentCandidate compCand) {
+        double mergeMetricValue = getOverallMergeMetricValue(compCand);
+        double currentMergeThreshold = getCurrentMergeThreshold();
+        double deviation = currentMergeThreshold - mergeMetricValue;
+        if (Math.abs(deviation) <= getEpsilon()) {
             return true;
-         }
-      }
-      return false;
-   }
+        } else {
+            return false;
+        }
+    }
 
+    private boolean isRelevantForComposition(final ComponentCandidate compCand) {
+        double compositionMetricValue = getOverallCompositionMetricValue(compCand);
+        double currentCompositionThreshold = getCurrentCompositionThreshold();
+        double deviation = currentCompositionThreshold - compositionMetricValue;
+        if (Math.abs(deviation) <= getEpsilon()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
-   private boolean isRelevantForMerge(final ComponentCandidate compCand)
-   {
-      double mergeMetricValue = getOverallMergeMetricValue(compCand);
-      double currentMergeThreshold = getCurrentMergeThreshold();
-      double deviation = currentMergeThreshold - mergeMetricValue;
-      if (Math.abs(deviation) <= getEpsilon())
-      {
-         return true;
-      }
-      else
-      {
-         return false;
-      }
-   }
+    private double getCurrentMergeThreshold() {
+        // current merge threshold from first iteration
+        return this.metricValuesModel.getIterations()[0].getCurMergeThreshold();
+    }
 
+    private double getCurrentCompositionThreshold() {
+        // current composition threshold from last iteration
+        return this.metricValuesModel.getIterations()[this.metricValuesModel.getIterationsLength() - 1]
+                .getCurCompThreshold();
+    }
 
-   private boolean isRelevantForComposition(final ComponentCandidate compCand)
-   {
-      double compositionMetricValue = getOverallCompositionMetricValue(compCand);
-      double currentCompositionThreshold = getCurrentCompositionThreshold();
-      double deviation = currentCompositionThreshold - compositionMetricValue;
-      if (Math.abs(deviation) <= getEpsilon())
-      {
-         return true;
-      }
-      else
-      {
-         return false;
-      }
-   }
+    private double getOverallMergeMetricValue(final ComponentCandidate compCand) {
+        for (MetricValue metricValue : compCand.getMetricValues()) {
+            if (metricValue.getMetricID().endsWith(Messages.ClusteringConstants_DEFAULT_MERGE_INDICATING_METRIC)) {
+                return metricValue.getValue();
+            }
+        }
+        return 0;
+    }
 
+    private double getOverallCompositionMetricValue(final ComponentCandidate compCand) {
+        for (MetricValue metricValue : compCand.getMetricValues()) {
+            if (metricValue.getMetricID().endsWith(Messages.ClusteringConstants_DEFAULT_COMPOSITION_INDICATING_METRIC)) {
+                return metricValue.getValue();
+            }
+        }
+        return 0;
+    }
 
-   private double getCurrentMergeThreshold()
-   {
-      // current merge threshold from first iteration
-      return this.metricValuesModel.getIterations()[0].getCurMergeThreshold();
-   }
+    private double getEpsilon() {
+        Properties properties = new Properties();
+        try {
+            InputStream stream = RelevanceAnalysisPlugin.getDefault().getBundle()
+                    .getEntry(Messages.ConfigConstants_CONFIG_PROPERTIES_FILE).openStream();
+            properties.load(stream);
+            stream.close();
 
+            return Double.parseDouble(properties.getProperty(Messages.ConfigConstants_RELEVANCEANALYSIS_EPSILON));
+        } catch (IOException e) {
+        }
+        return 0;
+    }
 
-   private double getCurrentCompositionThreshold()
-   {
-      // current composition threshold from last iteration
-      return this.metricValuesModel.getIterations()[this.metricValuesModel.getIterationsLength() - 1]
-            .getCurCompThreshold();
-   }
-
-
-   private double getOverallMergeMetricValue(final ComponentCandidate compCand)
-   {
-      for (MetricValue metricValue : compCand.getMetricValues())
-      {
-         if (metricValue.getMetricID().endsWith(Messages.ClusteringConstants_DEFAULT_MERGE_INDICATING_METRIC))
-         {
-            return metricValue.getValue();
-         }
-      }
-      return 0;
-   }
-
-
-   private double getOverallCompositionMetricValue(final ComponentCandidate compCand)
-   {
-      for (MetricValue metricValue : compCand.getMetricValues())
-      {
-         if (metricValue.getMetricID().endsWith(Messages.ClusteringConstants_DEFAULT_COMPOSITION_INDICATING_METRIC))
-         {
-            return metricValue.getValue();
-         }
-      }
-      return 0;
-   }
-
-
-   private double getEpsilon()
-   {
-      Properties properties = new Properties();
-      try
-      {
-         InputStream stream = RelevanceAnalysisPlugin.getDefault().getBundle()
-               .getEntry(Messages.ConfigConstants_CONFIG_PROPERTIES_FILE).openStream();
-         properties.load(stream);
-         stream.close();
-
-         return Double.parseDouble(properties.getProperty(Messages.ConfigConstants_RELEVANCEANALYSIS_EPSILON));
-      }
-      catch (IOException e)
-      {
-      }
-      return 0;
-   }
-
-
-   
 }

@@ -1,8 +1,6 @@
 package org.archimetrix.relevanceanalysis;
 
-
 import metricvalues.MetricValuesModel;
-
 
 /**
  * An abstract super class for relevance analyses.
@@ -12,28 +10,21 @@ import metricvalues.MetricValuesModel;
  * @version $Revision$ $Date$
  * 
  */
-public abstract class AbstractRelevanceAnalysis<T>
-{
+public abstract class AbstractRelevanceAnalysis<T> {
 
-   public static final int NUMBER_OF_RESULT_STRATEGIES = 2;
+    public static final int NUMBER_OF_RESULT_STRATEGIES = 2;
 
+    protected MetricValuesModel metricValuesModel;
 
-   protected MetricValuesModel metricValuesModel;
+    protected RelevanceResults<T> relevanceValues;
 
-   protected RelevanceResults<T> relevanceValues;
+    public AbstractRelevanceAnalysis(final MetricValuesModel model) {
+        this.metricValuesModel = model;
+    }
 
+    public abstract void startAnalysis();
 
-   public AbstractRelevanceAnalysis(final MetricValuesModel model)
-   {
-      this.metricValuesModel = model;
-   }
-
-
-   public abstract void startAnalysis();
-
-
-   public RelevanceResults<T> getResult()
-   {
-      return relevanceValues;
-   }
+    public RelevanceResults<T> getResult() {
+        return relevanceValues;
+    }
 }
