@@ -2,14 +2,10 @@ package org.archimetrix.architecturepreview.ui.wizards;
 
 import java.util.List;
 
-import org.archimetrix.architecturepreview.ArchitecturePreview;
 import org.archimetrix.architecturepreview.ui.ArchitecturePreviewUIPlugin;
+import org.archimetrix.architecturepreview.ui.jobs.ArchitecturePreviewJob;
 import org.archimetrix.architecturepreview.ui.views.ArchitecturePreviewView;
 import org.archimetrix.commons.ResourceLoader;
-import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.core.runtime.IStatus;
-import org.eclipse.core.runtime.Status;
-import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.core.runtime.jobs.JobChangeAdapter;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.dialogs.IDialogSettings;
@@ -21,7 +17,6 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorPackage;
-import org.storydriven.storydiagrams.activities.Activity;
 
 import de.uka.ipd.sdq.pcm.repository.Repository;
 
@@ -35,101 +30,19 @@ import de.uka.ipd.sdq.pcm.repository.Repository;
 public class ArchitecturePreviewWizard extends Wizard {
 
     /**
-     * Job subclass.
-     * @author mcp
-     *
-     */
-    private static final class ArchitecturePrognosisJob extends Job {
-        /**
-         * Metric values path.
-         */
-        private final String metricValuesPath;
-
-        /**
-         * Preview results object.
-         */
-        private List<List<String>> previewResults;
-
-        /**
-         * Architecture preview.
-         */
-        private ArchitecturePreview preview;
-
-        /**
-         * Annotation.
-         */
-        private ASGAnnotation annotation;
-
-        /**
-         * Activity.
-         */
-        private Activity activity;
-
-        /**
-         * the constructor.
-         * @param name name
-         * @param selectedAnnotation annotation
-         * @param selectedStrategy strategy
-         * @param metricValuesFilePath metric values path
-         */
-        public ArchitecturePrognosisJob(final String name, final ASGAnnotation selectedAnnotation,
-                final Activity selectedStrategy, final String metricValuesFilePath) {
-            super(name);
-            this.annotation = selectedAnnotation;
-            this.activity = selectedStrategy;
-            this.metricValuesPath = metricValuesFilePath;
-        }
-
-        @Override
-        protected IStatus run(final IProgressMonitor monitor) {
-            // TODO: use monitor better
-            monitor.beginTask(JOB_NAME, 100);
-            this.preview = new ArchitecturePreview();
-            this.previewResults = this.preview.start(this.annotation, this.activity, this.metricValuesPath);
-            monitor.worked(99);
-            monitor.done();
-            return Status.OK_STATUS;
-        }
-
-        /**
-         * Returns preview results.
-         * @return preview results
-         */
-        public List<List<String>> getPreviewResults() {
-            return this.previewResults;
-        }
-
-        /**
-         * Returns new repository.
-         * @return new repository
-         */
-        public Repository getNewSammRep() {
-            return this.preview.getNewSammRep();
-        }
-
-        /**
-         * Returns original repository.
-         * @return original repository
-         */
-        public Repository getOriginalSammRep() {
-            return this.preview.getOriginalSammRep();
-        }
-    }
-
-    /**
-     * Archtecture preview wizard title.
+     * Architecture preview wizard title.
      */
     private static final String ARCHITECTURE_PREVIEW_WIZARD_TITLE = "Architecture Preview";
-
-    /**
-     * Job name.
-     */
-    private static final String JOB_NAME = "Architecture Preview";
 
     /**
      * Architecture Preview Wizard Page.
      */
     protected ArchitecturePreviewWizardPage page;
+    
+    /**
+     * Job name.
+     */
+    private static final String JOB_NAME = "Architecture Preview";
 
     /**
      * Bad Smells Wizard Page.
@@ -170,7 +83,9 @@ public class ArchitecturePreviewWizard extends Wizard {
 
     /**
      * the constructor.
-     * @param selectedAnnotation annotation
+     * 
+     * @param selectedAnnotation
+     *            annotation
      */
     public ArchitecturePreviewWizard(final ASGAnnotation selectedAnnotation) {
         super();
@@ -200,7 +115,7 @@ public class ArchitecturePreviewWizard extends Wizard {
     public boolean performFinish() {
         storePageSettings();
 
-        final ArchitecturePrognosisJob job = new ArchitecturePrognosisJob(JOB_NAME, getSelectedAnnotation(),
+        final ArchitecturePreviewJob job = new ArchitecturePreviewJob(JOB_NAME, getSelectedAnnotation(),
                 this.reengineeringStrategiesPage.getSelectedStrategy(), this.page.getMetricValuesFilePath());
         job.setUser(true);
         job.schedule();
@@ -222,9 +137,13 @@ public class ArchitecturePreviewWizard extends Wizard {
 
     /**
      * Shows Architecture preview results.
-     * @param results results
-     * @param newSAMM new repository
-     * @param oldSAMM original repository
+     * 
+     * @param results
+     *            results
+     * @param newSAMM
+     *            new repository
+     * @param oldSAMM
+     *            original repository
      */
     private void showArchitecturePreviewResults(final List<List<String>> results, final Repository newSAMM,
             final Repository oldSAMM) {
@@ -265,6 +184,7 @@ public class ArchitecturePreviewWizard extends Wizard {
 
     /**
      * Returns Bad smell resource.
+     * 
      * @return bad smell resource
      */
     public Resource getBadSmellsResource() {
@@ -277,6 +197,7 @@ public class ArchitecturePreviewWizard extends Wizard {
 
     /**
      * Returns strategies resource.
+     * 
      * @return strategies resource
      */
     public Resource getReengineeringStrategiesResource() {
@@ -302,7 +223,9 @@ public class ArchitecturePreviewWizard extends Wizard {
 
     /**
      * Sets annotation.
-     * @param annotation annotation
+     * 
+     * @param annotation
+     *            annotation
      */
     public void setSelectedAnnotation(final ASGAnnotation annotation) {
         this.selectedAnnotation = annotation;
@@ -310,6 +233,7 @@ public class ArchitecturePreviewWizard extends Wizard {
 
     /**
      * Returns annotation.
+     * 
      * @return annotation
      */
     public ASGAnnotation getSelectedAnnotation() {
