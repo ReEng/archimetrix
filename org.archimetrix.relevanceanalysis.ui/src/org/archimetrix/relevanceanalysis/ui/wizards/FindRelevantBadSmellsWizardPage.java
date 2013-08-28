@@ -18,18 +18,29 @@ import org.eclipse.swt.widgets.Group;
  * bad smells file and a metric values file.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class FindRelevantBadSmellsWizardPage extends AbstractWizardPage {
 
+    /**
+     * wizard page description string.
+     */
     private static final String WIZARD_PAGE_DESCRIPTION = "Select a file with the detected deficiency occurrences and a file with the metric values to start a relevance analysis.";
 
+    /**
+     * metric values section.
+     */
     private ResourceSelectionSection metricValuesSection;
 
+    /**
+     * resource selection section.
+     */
     private ResourceSelectionSection badSmellsSection;
 
+    /**
+     * the constructor.
+     * @param pageName page name string
+     */
     protected FindRelevantBadSmellsWizardPage(final String pageName) {
         super(pageName);
         setDescription(WIZARD_PAGE_DESCRIPTION);
@@ -52,6 +63,9 @@ public class FindRelevantBadSmellsWizardPage extends AbstractWizardPage {
 
     }
 
+    /**
+     * loading settings.
+     */
     private void loadSettings() {
         IDialogSettings s = getDialogSettings();
         if (s != null) {
@@ -79,10 +93,18 @@ public class FindRelevantBadSmellsWizardPage extends AbstractWizardPage {
         setPageComplete(isValid());
     }
 
+    /**
+     * Returns bad smell file path.
+     * @return path
+     */
     public String getBadSmellsFilePath() {
         return this.badSmellsSection.getTextField().getText();
     }
 
+    /**
+     * Returns metric values file path.
+     * @return path
+     */
     public String getMetricValuesFilePath() {
         return this.metricValuesSection.getTextField().getText();
     }
@@ -106,6 +128,9 @@ public class FindRelevantBadSmellsWizardPage extends AbstractWizardPage {
         return false;
     }
 
+    /**
+     * saves the settings.
+     */
     public void saveSettings() {
         IDialogSettings s = getDialogSettings();
         if (s != null) {

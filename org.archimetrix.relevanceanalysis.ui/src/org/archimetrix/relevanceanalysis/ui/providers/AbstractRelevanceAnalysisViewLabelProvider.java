@@ -12,21 +12,34 @@ import org.eclipse.swt.widgets.Display;
  * An abstract label provider for tables used in the relevance analysis ui.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public abstract class AbstractRelevanceAnalysisViewLabelProvider extends LabelProvider implements ITableLabelProvider,
         ITableColorProvider {
 
+    /**
+     * pareto optimal false string.
+     */
     protected static final String PARETO_OPTIMAL_FALSE = "false";
 
+    /**
+     * pareto optimal true string.
+     */
     protected static final String PARETO_OPTIMAL_TRUE = "true";
 
+    /**
+     * bad smell icon path.
+     */
     protected static final String BAD_SMELL_ICON_PATH = "./icons/badSmells.png";
 
+    /**
+     * components icon path.
+     */
     protected static final String COMPONENTS_ICON_PATH = "./icons/components.png";
 
+    /**
+     * invalid strategy value.
+     */
     protected static final String INVALID_STRATEGY_VALUE = "-1.0";
 
     @Override

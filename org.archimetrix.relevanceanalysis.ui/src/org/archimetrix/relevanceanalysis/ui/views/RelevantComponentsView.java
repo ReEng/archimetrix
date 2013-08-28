@@ -17,22 +17,42 @@ import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
  * table.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class RelevantComponentsView extends AbstractRelevanceAnalysisView<ComponentImplementingClassesLink> {
 
-    private static final String COMPLEXITY_COLUMN_TITLE = "Complexity (CPC)";
+    /**
+     * Complexity column title string.
+     */
+    private static final String COMPLEXITY_COLUMN_TITLE =
+            "Complexity (CPC)";
 
-    private static final String CLOSENESS_TO_THRESHOLD_COLUMN_TITLE = "Closeness To Threshold";
+    /**
+     * closeness to threshold column title.
+     */
+    private static final String CLOSENESS_TO_THRESHOLD_COLUMN_TITLE =
+            "Closeness To Threshold";
 
-    private static final String COMPONENT_COLUMN_TITLE = "Component";
+    /**
+     * component column title string.
+     */
+    private static final String COMPONENT_COLUMN_TITLE =
+            "Component";
 
-    public static final String ID = "org.archimetrix.relevanceanalysis.ui.relevantComponentsView";
+    /**
+     * Id.
+     */
+    public static final String ID =
+            "org.archimetrix.relevanceanalysis.ui.relevantComponentsView";
 
+    /**
+     * selected components.
+     */
     protected static Object[] selectedComponents;
 
+    /**
+     * Creates provider.
+     */
     public void createProvider() {
         this.labelProvider = new RelevantComponentsViewLabelProvider(this);
         this.contentProvider = new RelevantComponentsViewContentProvider(this);
@@ -50,6 +70,10 @@ public class RelevantComponentsView extends AbstractRelevanceAnalysisView<Compon
         this.viewer.setSorter(new RelevantComponentsSorter());
     }
 
+    /**
+     * Creates tree viewer.
+     * @param root composite root
+     */
     protected void createTreeViewer(final Composite root) {
         this.viewer = new TreeViewer(root, SWT.FULL_SELECTION | SWT.MULTI);
         this.viewer.getTree().setLinesVisible(true);
@@ -57,6 +81,9 @@ public class RelevantComponentsView extends AbstractRelevanceAnalysisView<Compon
         this.viewer.getTree().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
     }
 
+    /**
+     * Creates columns.
+     */
     public void createColumns() {
         String[] names = new String[] { COMPONENT_COLUMN_TITLE, CLOSENESS_TO_THRESHOLD_COLUMN_TITLE,
                 COMPLEXITY_COLUMN_TITLE, TOTAL_RELEVANCE_COLUMN_TITLE, PARETO_OPTIMALITY_COLUMN_TITLE };
@@ -73,6 +100,10 @@ public class RelevantComponentsView extends AbstractRelevanceAnalysisView<Compon
         }
     }
 
+    /**
+     * Returns the selected components.
+     * @return selected components
+     */
     public static Object[] getSelectedComponents() {
         return selectedComponents;
     }

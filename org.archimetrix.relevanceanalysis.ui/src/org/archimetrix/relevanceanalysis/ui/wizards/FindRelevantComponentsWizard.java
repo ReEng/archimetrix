@@ -31,19 +31,37 @@ import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
  * consists of one page: the FindRelevantComponentsWizardPage.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class FindRelevantComponentsWizard extends Wizard {
 
+    /**
+     * 
+     * the job subclass.
+     *
+     */
     private static final class ComponentRelevanceAnalysisJob extends Job {
+        /**
+         * metric values path.
+         */
         private final String metricValuesPath;
 
+        /**
+         * source code decorator path.
+         */
         private final String scdPath;
 
+        /**
+         * analysis results.
+         */
         private Object analysisResult;
 
+        /**
+         * the constructor.
+         * @param name name
+         * @param metricValuesPath metric values path
+         * @param scdPath source code decorator path
+         */
         private ComponentRelevanceAnalysisJob(final String name, final String metricValuesPath, final String scdPath) {
             super(name);
             this.metricValuesPath = metricValuesPath;
@@ -69,17 +87,33 @@ public class FindRelevantComponentsWizard extends Wizard {
             return Status.OK_STATUS;
         }
 
+        /**
+         * returns the analysis result.
+         * @return analysis result
+         */
         public Object getAnalysisResult() {
             return this.analysisResult;
         }
     }
 
+    /**
+     * page title string.
+     */
     private static final String PAGE_TITLE = "Find Relevant Components";
 
+    /**
+     * job name string.
+     */
     private static final String JOB_NAME = "Component Relevance Analysis";
 
+    /**
+     * Find relevant components wizard page string.
+     */
     protected FindRelevantComponentsWizardPage page;
 
+    /**
+     * the constructor.
+     */
     public FindRelevantComponentsWizard() {
         super();
 
@@ -120,6 +154,10 @@ public class FindRelevantComponentsWizard extends Wizard {
         return true;
     }
 
+    /**
+     * displays the result view.
+     * @param results results
+     */
     private void showResultView(final Object results) {
         IWorkbenchPage activePage = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
         try {
@@ -131,6 +169,9 @@ public class FindRelevantComponentsWizard extends Wizard {
         }
     }
 
+    /**
+     * stores the page settings.
+     */
     protected void storePageSettings() {
         this.page.saveSettings();
     }

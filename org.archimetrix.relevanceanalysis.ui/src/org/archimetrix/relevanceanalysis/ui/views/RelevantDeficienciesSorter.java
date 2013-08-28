@@ -7,6 +7,11 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerSorter;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 
+/**
+ * 
+ * @author mcp
+ *
+ */
 public class RelevantDeficienciesSorter extends ViewerSorter {
     @Override
     public int compare(final Viewer viewer, final Object e1, final Object e2) {

@@ -12,14 +12,19 @@ import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
  * The label provider for the table in the Relevant Components View.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class RelevantComponentsViewLabelProvider extends AbstractRelevanceAnalysisViewLabelProvider {
 
+    /**
+     * relevant components view.
+     */
     private final RelevantComponentsView relevantComponentsView;
 
+    /**
+     * the constructor.
+     * @param relevantComponentsView relevant components view
+     */
     public RelevantComponentsViewLabelProvider(final RelevantComponentsView relevantComponentsView) {
         this.relevantComponentsView = relevantComponentsView;
     }
@@ -45,6 +50,12 @@ public class RelevantComponentsViewLabelProvider extends AbstractRelevanceAnalys
         return text;
     }
 
+    /**
+     * Returns pareto relevance value string.
+     * @param index index
+     * @param link component implementing classes link
+     * @return pareto string
+     */
     private String getParetoRelevanceValueString(final int index, final ComponentImplementingClassesLink link) {
         Double value = getRelevanceValueFromMap(index, link);
         if (value == 1.0) {
@@ -53,11 +64,23 @@ public class RelevantComponentsViewLabelProvider extends AbstractRelevanceAnalys
         return PARETO_OPTIMAL_FALSE;
     }
 
+    /**
+     * Returns relevance value string.
+     * @param index index
+     * @param element component implementing classes link
+     * @return relevance value string
+     */
     public String getRelevanceValueString(final int index, final ComponentImplementingClassesLink element) {
         Double value = getRelevanceValueFromMap(index, element);
         return value.toString();
     }
 
+    /**
+     * Returns the relevance value.
+     * @param index index
+     * @param link component implementing classes link
+     * @return relevance value
+     */
     public Double getRelevanceValueFromMap(final int index, final ComponentImplementingClassesLink link) {
         if (this.relevantComponentsView.getRelevanceResults().getRelevanceValues(link).length > 0) {
             return this.relevantComponentsView.getRelevanceResults().getRelevanceValues(link)[index];
@@ -81,11 +104,22 @@ public class RelevantComponentsViewLabelProvider extends AbstractRelevanceAnalys
         return Display.getCurrent().getSystemColor(SWT.COLOR_WHITE);
     }
 
+    /**
+     * Checks if value is the highest relevance value.
+     * @param relevanceValue value to be checked
+     * @param currentLink component implementing classes link
+     * @return decision bool value
+     */
     private boolean isHighestRelevanceValue(final Double relevanceValue,
             final ComponentImplementingClassesLink currentLink) {
         return relevanceValue.equals(getMaxRelevanceValue(currentLink));
     }
 
+    /**
+     * Returns the max relevance value.
+     * @param currentLink component implementing classes link
+     * @return max relevance value
+     */
     private Double getMaxRelevanceValue(final ComponentImplementingClassesLink currentLink) {
         Double max = -1.0;
         for (Double value : this.relevantComponentsView.getRelevanceResults().getRelevanceValuesForStrategy(

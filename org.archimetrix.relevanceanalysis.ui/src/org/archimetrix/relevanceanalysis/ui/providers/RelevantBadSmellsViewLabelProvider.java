@@ -15,14 +15,19 @@ import org.reclipse.structure.inference.annotations.ASGAnnotation;
  * The label provider for the table in the Relevant Bad Smells View.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class RelevantBadSmellsViewLabelProvider extends AbstractRelevanceAnalysisViewLabelProvider {
 
+    /**
+     * relevant bad smell view.
+     */
     private final RelevantBadSmellsView relevantBadSmellsView;
 
+    /**
+     * the constructor.
+     * @param relevantBadSmellsView relevant bad smell view
+     */
     public RelevantBadSmellsViewLabelProvider(final RelevantBadSmellsView relevantBadSmellsView) {
         this.relevantBadSmellsView = relevantBadSmellsView;
     }
@@ -52,6 +57,12 @@ public class RelevantBadSmellsViewLabelProvider extends AbstractRelevanceAnalysi
         return text;
     }
 
+    /**
+     * Returns pareto optimal value string.
+     * @param index index
+     * @param annotation annotation
+     * @return string
+     */
     private String getParetoRelevanceValueString(final int index, final ASGAnnotation annotation) {
         Double value = getRelevanceValueFromMap(index, annotation);
         if (value == 1.0) {
@@ -60,11 +71,23 @@ public class RelevantBadSmellsViewLabelProvider extends AbstractRelevanceAnalysi
         return PARETO_OPTIMAL_FALSE;
     }
 
+    /**
+     * Returns relevance value string.
+     * @param index index
+     * @param annotation annotation
+     * @return string
+     */
     public String getRelevanceValueString(final int index, final ASGAnnotation annotation) {
         Double value = getRelevanceValueFromMap(index, annotation);
         return value.toString();
     }
 
+    /**
+     * Returns relevance value from map.
+     * @param index index
+     * @param annotation annotation
+     * @return relevance value
+     */
     public Double getRelevanceValueFromMap(final int index, final ASGAnnotation annotation) {
         if (this.relevantBadSmellsView.getRelevanceResults().getRelevanceValues(annotation).length > 0) {
             return this.relevantBadSmellsView.getRelevanceResults().getRelevanceValues(annotation)[index];
@@ -89,10 +112,21 @@ public class RelevantBadSmellsViewLabelProvider extends AbstractRelevanceAnalysi
         return display.getSystemColor(SWT.COLOR_WHITE);
     }
 
+    /**
+     * Checks if the value is the highest relevance value.
+     * @param relevanceValue value to be checked
+     * @param currentAnno annotation
+     * @return decision bool values
+     */
     private boolean isHighestRelevanceValue(final Double relevanceValue, final ASGAnnotation currentAnno) {
         return relevanceValue.equals(getMaxRelevanceValue(currentAnno));
     }
 
+    /**
+     * Returns max relevance value.
+     * @param currentAnno annotation
+     * @return max relevance value
+     */
     private Double getMaxRelevanceValue(final ASGAnnotation currentAnno) {
         Double max = -1.0;
         for (ASGAnnotation badSmellAnno : this.relevantBadSmellsView.getRelevanceResults().getRelevanceSubjects()) {

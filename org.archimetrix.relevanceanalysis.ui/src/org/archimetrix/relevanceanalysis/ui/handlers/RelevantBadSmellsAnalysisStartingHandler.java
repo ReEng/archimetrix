@@ -12,8 +12,6 @@ import org.eclipse.ui.handlers.HandlerUtil;
  * the according entry in the menu bar (see plugin.xml).
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class RelevantBadSmellsAnalysisStartingHandler extends AbstractHandler {

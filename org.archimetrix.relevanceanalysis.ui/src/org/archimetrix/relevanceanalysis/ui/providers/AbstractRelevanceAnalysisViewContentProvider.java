@@ -7,8 +7,6 @@ import org.eclipse.jface.viewers.Viewer;
  * An abstract content provider for the tree viewers used in the relevance analysis ui.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public abstract class AbstractRelevanceAnalysisViewContentProvider implements ITreeContentProvider {

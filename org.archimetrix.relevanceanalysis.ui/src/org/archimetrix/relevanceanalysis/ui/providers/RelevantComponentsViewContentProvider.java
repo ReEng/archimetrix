@@ -8,14 +8,19 @@ import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
  * The content provider for the table in the Relevant Components View.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class RelevantComponentsViewContentProvider extends AbstractRelevanceAnalysisViewContentProvider {
 
+    /**
+     * Relevant components view.
+     */
     private final RelevantComponentsView relevantComponentsView;
 
+    /**
+     * the constructor.
+     * @param relevantComponentsView relevant components view
+     */
     public RelevantComponentsViewContentProvider(final RelevantComponentsView relevantComponentsView) {
         this.relevantComponentsView = relevantComponentsView;
     }

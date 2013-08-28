@@ -8,13 +8,18 @@ import org.reclipse.structure.inference.annotations.ASGAnnotation;
  * The content provider for the table in the Relevant Bad Smells View.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class RelevantBadSmellsViewContentProvider extends AbstractRelevanceAnalysisViewContentProvider {
+    /**
+     * relevance bad smell view.
+     */
     private final RelevantBadSmellsView relevantBadSmellsView;
 
+    /**
+     * the constructor.
+     * @param relevantBadSmellsView bad smell view
+     */
     public RelevantBadSmellsViewContentProvider(final RelevantBadSmellsView relevantBadSmellsView) {
         this.relevantBadSmellsView = relevantBadSmellsView;
     }

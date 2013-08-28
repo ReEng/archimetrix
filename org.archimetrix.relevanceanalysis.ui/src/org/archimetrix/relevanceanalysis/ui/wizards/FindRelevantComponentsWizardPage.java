@@ -17,18 +17,29 @@ import org.eclipse.swt.widgets.Group;
  * the source code decoratormodel and a metric values model.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class FindRelevantComponentsWizardPage extends AbstractWizardPage {
 
+    /**
+     * page description string.
+     */
     private static final String PAGE_DESCRIPTION = "Select the file with the source code decorator model of the program to be analyzed and a file with the metric values to start a relevance analysis.";
 
+    /**
+     * source code decorator section.
+     */
     private ResourceSelectionSection scdSection;
 
+    /**
+     * resource selection section.
+     */
     private ResourceSelectionSection metricValuesSection;
 
+    /**
+     * the constructor.
+     * @param pageName page name 
+     */
     protected FindRelevantComponentsWizardPage(final String pageName) {
         super(pageName);
         setDescription(PAGE_DESCRIPTION);
@@ -51,6 +62,9 @@ public class FindRelevantComponentsWizardPage extends AbstractWizardPage {
 
     }
 
+    /**
+     * loading.
+     */
     private void loadSettings() {
         IDialogSettings s = getDialogSettings();
         if (s != null) {
@@ -78,14 +92,25 @@ public class FindRelevantComponentsWizardPage extends AbstractWizardPage {
         setPageComplete(isValid());
     }
 
+    /**
+     * Returns metric values file path.
+     * @return metric values path
+     */
     public String getMetricValuesFilePath() {
         return this.metricValuesSection.getTextField().getText();
     }
 
+    /**
+     * Returns source code decorator file path.
+     * @return path
+     */
     public String getSCDFilePath() {
         return this.scdSection.getTextField().getText();
     }
 
+    /**
+     * checks validity.
+     */
     protected boolean isValid() {
         if (this.metricValuesSection.getTextField().getText() == null) {
             setErrorMessage(WizardConst.WizardConstants_NO_METRIC_VALUES_ERROR_MESSAGE);
@@ -103,6 +128,9 @@ public class FindRelevantComponentsWizardPage extends AbstractWizardPage {
         return false;
     }
 
+    /**
+     * saves the settings.
+     */
     public void saveSettings() {
         IDialogSettings s = getDialogSettings();
         if (s != null) {

@@ -17,21 +17,26 @@ import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
 
-//import eu.qimpress.samm.staticstructure.ComponentType;
-
 /**
  * This class represents the wizard that is used to start the deficiency detection from the Relevant
  * Components View. It uses the StartPatternDetectionForComponentWizardPage.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class StartPatternDetectionForComponentWizard extends StartInferenceWizard {
 
+    /**
+     * wizard title string.
+     */
     private static final String WIZARD_TITLE = "Start Design Deficiency Detection";
+    /**
+     * main wizard page.
+     */
     private StartInferenceWizardPage mainWizardPage;
+    /**
+     * engine resources.
+     */
     private Resource engines;
 
     /**
@@ -53,6 +58,7 @@ public class StartPatternDetectionForComponentWizard extends StartInferenceWizar
      * 
      * In this case the selection is obtained from the {@link RelevantComponentsView}.
      * 
+     * @return job
      * @see org.reclipse.structure.inference.ui.wizards.StartInferenceWizard#createPrepareEnginesJob()
      * @see org.reclipse.structure.inference.extended.ui.StartModifyingCatalogWizard#createPrepareEnginesJob()
      */
@@ -64,6 +70,10 @@ public class StartPatternDetectionForComponentWizard extends StartInferenceWizar
         return new PrepareDetectionEnginesJob(strategy, mainWizardPage.getReportLevel());
     }
 
+    /**
+     * setup.
+     * @return resource
+     */
     private Resource setupCatalogResource() {
         Resource catalogResource = this.page.getCatalogResource();
         StringBuilder catalogPath = new StringBuilder(catalogResource.getURI().toPlatformString(false));
@@ -74,6 +84,10 @@ public class StartPatternDetectionForComponentWizard extends StartInferenceWizar
         return catalogResource;
     }
 
+    /**
+     * returns the selected components.
+     * @return selected components
+     */
     private Object[] getSelectedComponents() {
         Object[] selectedComponentImplementingClassesLinks = RelevantComponentsView.getSelectedComponents();
         List<RepositoryComponent> selectedComponents = new ArrayList<RepositoryComponent>(); // ComponentType

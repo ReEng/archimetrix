@@ -8,6 +8,11 @@ import org.eclipse.jface.viewers.ViewerSorter;
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 import org.somox.sourcecodedecorator.impl.ComponentImplementingClassesLinkImpl;
 
+/**
+ * 
+ * @author mcp
+ *
+ */
 public class RelevantComponentsSorter extends ViewerSorter {
     @Override
     public int compare(final Viewer viewer, final Object e1, final Object e2) {

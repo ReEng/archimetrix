@@ -22,18 +22,30 @@ import org.reclipse.structure.inference.ui.wizards.StartInferenceWizardPage;
  * sections for a catalog with bad smell specifications which will be used for the analysis.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class StartPatternDetectionForComponentWizardPage extends StartInferenceWizardPage {
 
+    /**
+     * wizard page description string.
+     */
     private static final String WIZARD_PAGE_DESCRIPTION = "Select the pattern catalog in which the design deficiencies are specified.";
 
+    /**
+     * catalog.
+     */
     private Resource catalog;
 
+    /**
+     * resource selection section for bad smell.
+     * 
+     */
     private ResourceSelectionSection badSmellsSection;
 
+    /**
+     * the constructor.
+     * @param string title
+     */
     public StartPatternDetectionForComponentWizardPage(final String string) {
         super(string);
         setTitle(string);
@@ -64,6 +76,10 @@ public class StartPatternDetectionForComponentWizardPage extends StartInferenceW
         setPageComplete(isValid());
     }
 
+    /**
+     * checks validity.
+     * @return decision bool value
+     */
     protected boolean isValid() {
         if (this.badSmellsSection.getTextField().getText() == null) {
             setErrorMessage(WizardConst.WizardConstants_NO_BAD_SMELLS_CATALOG_ERROR_MESSAGE);
@@ -89,6 +105,10 @@ public class StartPatternDetectionForComponentWizardPage extends StartInferenceW
         setPageComplete(isValid());
     }
 
+    /**
+     * returns the catalog.
+     * @return catalog
+     */
     public Resource getCatalogResource() {
         ResourceSet resourceSet = new ResourceSetImpl();
         resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap()
@@ -102,6 +122,10 @@ public class StartPatternDetectionForComponentWizardPage extends StartInferenceW
         return this.catalog;
     }
 
+    /**
+     * use existing engines.
+     * @return false
+     */
     public boolean isUseExistingEngines() {
         return false;
     }

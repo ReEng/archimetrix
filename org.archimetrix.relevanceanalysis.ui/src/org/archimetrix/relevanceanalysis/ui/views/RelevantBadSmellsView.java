@@ -14,29 +14,48 @@ import org.reclipse.structure.inference.annotations.ASGAnnotation;
  * table.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class RelevantBadSmellsView extends AbstractRelevanceAnalysisView<ASGAnnotation> {
+    /**
+     * Roles column title string.
+     */
     private static final String ROLES_COLUMN_TITLE = "Roles";
 
+    /**
+     * Bad smell column title string.
+     */
     private static final String BAD_SMELL_COLUMN_TITLE = "Bad Smell";
 
-    // data class communication strategy
+    /**
+     * data class communication column title string.
+     */
     private static final String DATA_CLASS_COMMUNICATION_COLUMN_TITLE = "Relevance DCC";
 
-    // higher interface adherence strategy
+    /**
+     * higher interface adherence column title string.
+     */
     private static final String HIGHER_INTERFACE_ADHERENCE_COLUMN_TITLE = "Relevance HIA";
 
-    // number of external accesses strategy
+    /**
+     * number of external accesses column title string.
+     */
     private static final String NUMBER_OF_EXTERNAL_ACCESSES_COLUMN_TITLE = "Relevance NEA";
 
-    // class locations strategy
+    /**
+     * class locations strategy column title string.
+     */
     private static final String CLASS_LOCATIONS_STRATEGY_COLUMN_TITLE = "Relevance CL";
 
-    public static final String ID = "org.archimetrix.relevanceanalysis.ui.relevantBadSmellsView";
+    /**
+     * ID.
+     */
+    public static final String ID =
+            "org.archimetrix.relevanceanalysis.ui.relevantBadSmellsView";
 
+    /**
+     * selected annotation.
+     */
     private static ASGAnnotation selectedAnnotation;
 
     @Override
@@ -81,6 +100,10 @@ public class RelevantBadSmellsView extends AbstractRelevanceAnalysisView<ASGAnno
         this.viewer.setSorter(new RelevantDeficienciesSorter());
     }
 
+    /**
+     * Returns the selected annotation.
+     * @return selected annotation
+     */
     public static ASGAnnotation getSelectedAnnotation() {
         return selectedAnnotation;
     }

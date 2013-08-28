@@ -29,21 +29,41 @@ import org.reclipse.structure.inference.annotations.ASGAnnotation;
  * page, the FindRelevandBadSmellsWizardPage.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class FindRelevantBadSmellsWizard extends Wizard {
 
+    /**
+     * job name string.
+     */
     private static final String JOB_NAME = "Deficiency Ranking";
 
+    /**
+     * This is the job as a subclass.
+     *
+     */
     private static final class BadSmellRelevanceAnalysisJob extends Job {
+        /**
+         * metrics value path.
+         */
         private final String metricValuesPath;
 
+        /**
+         * bad smell path.
+         */
         private final String badSmellsPath;
 
+        /**
+         * analysis result.
+         */
         private Object analysisResult;
 
+        /**
+         * the constructor.
+         * @param name name
+         * @param metricValuesPath metric values path
+         * @param badSmellsPath bad smell path
+         */
         private BadSmellRelevanceAnalysisJob(final String name, final String metricValuesPath,
                 final String badSmellsPath) {
             super(name);
@@ -69,15 +89,28 @@ public class FindRelevantBadSmellsWizard extends Wizard {
             return Status.OK_STATUS;
         }
 
+        /**
+         * Returns the analysis result.
+         * @return analysis result
+         */
         public Object getAnalysisResult() {
             return this.analysisResult;
         }
     }
 
+    /**
+     * wizard title string.
+     */
     private static final String WIZARD_TITLE = "Rank Detected Deficiency Occurrences";
 
+    /**
+     * Find relevant bad smell wizard page.
+     */
     protected FindRelevantBadSmellsWizardPage page;
 
+    /**
+     * the constructor.
+     */
     public FindRelevantBadSmellsWizard() {
         super();
 
@@ -118,6 +151,10 @@ public class FindRelevantBadSmellsWizard extends Wizard {
         return true;
     }
 
+    /**
+     * displays the results view.
+     * @param results results
+     */
     private void showResultView(final Object results) {
         IWorkbenchPage activePage = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
         try {
@@ -129,6 +166,9 @@ public class FindRelevantBadSmellsWizard extends Wizard {
         }
     }
 
+    /**
+     * stores the page settings.
+     */
     protected void storePageSettings() {
         this.page.saveSettings();
     }
