@@ -1,6 +1,7 @@
 package org.archimetrix.architecturepreview.ui.wizards;
 
 import java.util.List;
+import java.util.Map;
 
 import org.archimetrix.architecturepreview.ui.ArchitecturePreviewUIPlugin;
 import org.archimetrix.architecturepreview.ui.jobs.ArchitecturePreviewJob;
@@ -124,7 +125,7 @@ public class ArchitecturePreviewWizard extends Wizard {
                 Display.getDefault().asyncExec(new Runnable() {
                     @Override
                     public void run() {
-                        List<List<String>> results = job.getPreviewResults();
+                        Map<String, List<String>> results = job.getPreviewResults();
                         showArchitecturePreviewResults(results, job.getNewSammRep(), job.getOriginalSammRep());
 
                     }
@@ -145,7 +146,7 @@ public class ArchitecturePreviewWizard extends Wizard {
      * @param oldSAMM
      *            original repository
      */
-    private void showArchitecturePreviewResults(final List<List<String>> results, final Repository newSAMM,
+    private void showArchitecturePreviewResults(final Map<String, List<String>> results, final Repository newSAMM,
             final Repository oldSAMM) {
         IWorkbenchPage activePage = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
         try {

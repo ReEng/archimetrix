@@ -1,6 +1,7 @@
 package org.archimetrix.architecturepreview.ui.jobs;
 
 import java.util.List;
+import java.util.Map;
 
 import org.archimetrix.architecturepreview.ArchitecturePreview;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -29,7 +30,7 @@ public class ArchitecturePreviewJob extends Job {
     /**
      * Preview results object.
      */
-    private List<List<String>> previewResults;
+    private Map<String, List<String>> previewResults;
 
     /**
      * Architecture preview.
@@ -76,7 +77,7 @@ public class ArchitecturePreviewJob extends Job {
      * Returns preview results.
      * @return preview results
      */
-    public List<List<String>> getPreviewResults() {
+    public Map<String, List<String>> getPreviewResults() {
         return this.previewResults;
     }
 
