@@ -1,7 +1,8 @@
 package org.archimetrix.architecturepreview;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 
@@ -19,7 +20,10 @@ public class UIDataFormatter {
      * for the architecture preview view and will be returned when
      * executing the architecture preview.
      */
-    private List<List<String>> allLines;
+    private Map<String, List<String>> allLines =
+            new HashMap<String, List<String>>();
+    
+    
     
     /**
      * DataFormatHelper, which contains all required lists for the ui.
@@ -39,7 +43,7 @@ public class UIDataFormatter {
      * 
      * @return The data required for the Architecture Preview View.
      */
-    public List<List<String>> getDataForArchitecturePreview() {
+    public Map<String, List<String>> getDataForArchitecturePreview() {
         return this.allLines;
     }
     
@@ -62,12 +66,13 @@ public class UIDataFormatter {
      * Gets all lists from the data helper and adds them in to the data object.
      */
     private void aggregateListData() {
-        this.allLines = new ArrayList<List<String>>();
-        this.allLines.add(dataHelper.getTotalComponentsLine());
-        this.allLines.add(dataHelper.getPrimitiveComponentsLine());
-        this.allLines.add(dataHelper.getCompositeComponentsLine());
-        this.allLines.add(dataHelper.getInterfacesLine());
-        this.allLines.add(dataHelper.getMessagesLine());
+        
+        this.allLines.put("totalComponentsLine", dataHelper.getTotalComponentsLine());
+        this.allLines.put("primitiveComponentsLine", dataHelper.getPrimitiveComponentsLine());
+        this.allLines.put("compositeComponentsLine", dataHelper.getCompositeComponentsLine());
+        this.allLines.put("interfacesLine", dataHelper.getInterfacesLine());
+        this.allLines.put("messagesLines", dataHelper.getMessagesLine());
+        
     }
     
 }

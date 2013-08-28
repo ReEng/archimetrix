@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.List;
+import java.util.Map;
 
 import org.archimetrix.architecturepreview.starters.InterpreterStarter;
 import org.archimetrix.architecturepreview.starters.SoMoXStarter;
@@ -52,7 +53,7 @@ public class ArchitecturePreview {
      *            the clustering configuration
      * @return the result of the preview calculation
      */
-    public List<List<String>> start(final ASGAnnotation badSmellAnnotation, final Activity reengineeringStrategy,
+    public Map<String, List<String>> start(final ASGAnnotation badSmellAnnotation, final Activity reengineeringStrategy,
             final String metricValuesFilePath) {
 
         Resource newGASTResource = startTransformation(badSmellAnnotation, reengineeringStrategy);
