@@ -1,6 +1,5 @@
 package org.archimetrix.architecturepreview;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -9,8 +8,6 @@ import java.util.List;
 import org.archimetrix.architecturepreview.starters.InterpreterStarter;
 import org.archimetrix.architecturepreview.starters.SoMoXStarter;
 import org.archimetrix.architecturepreview.util.SCDMFromAnnotationExtractor;
-import org.eclipse.core.resources.ResourcesPlugin;
-import org.eclipse.core.runtime.IPath;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
