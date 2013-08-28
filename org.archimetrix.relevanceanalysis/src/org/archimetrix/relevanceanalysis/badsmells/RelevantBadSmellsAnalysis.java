@@ -29,22 +29,43 @@ import org.eclipse.gmt.modisco.java.ClassDeclaration;
 import org.eclipse.gmt.modisco.java.Type;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 
-//import de.fzi.gast.types.GASTClass;
 
+/**
+ * 
+ * @author mcp
+ *
+ */
 public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnnotation> {
 
+    /**
+     * Occurrences.
+     */
     private List<ASGAnnotation> badSmellOccurrences;
 
+    /**
+     * Strategies.
+     */
     private List<IBadSmellsStrategy> relevanceStrategies;
 
+    /**
+     * component candidates.
+     */
     private Map<ASGAnnotation, ComponentCandidate> componentCandidates;
 
+    /**
+     * the constructor.
+     * @param contents contents
+     * @param metricValuesModel metric values model
+     */
     public RelevantBadSmellsAnalysis(final EList<EObject> contents, final MetricValuesModel metricValuesModel) {
         super(metricValuesModel);
         initializeRelevanceStrategiesMap();
         initializeAnnotationMaps(contents);
     }
 
+    /**
+     * Initialisation of strategies.
+     */
     private void initializeRelevanceStrategiesMap() {
         this.relevanceStrategies = new ArrayList<IBadSmellsStrategy>();
         this.relevanceStrategies.add(new ClassLocationsStrategy());
@@ -55,6 +76,10 @@ public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnno
                 + NUMBER_OF_RESULT_STRATEGIES);
     }
 
+    /**
+     * Initialisation of Occurrences.
+     * @param contents contents
+     */
     private void initializeAnnotationMaps(final EList<EObject> contents) {
         this.badSmellOccurrences = new ArrayList<ASGAnnotation>();
         for (EObject eObject : contents) {
@@ -79,6 +104,10 @@ public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnno
 
     }
 
+    /**
+     * calculate values.
+     * @param i index
+     */
     private void calculateRelevanceValuesForStrategy(final int i) {
         for (ASGAnnotation annotation : this.badSmellOccurrences) {
             ComponentCandidate compCand = getComponentCandidate(annotation);
@@ -97,11 +126,27 @@ public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnno
         }
     }
 
+    /**
+     * Calculate strategies.
+     * @param i index
+     * @param annotation annotation
+     * @param compCand component candidate
+     * @return relevance strategy value
+     */
     private double calculateRelevanceStrategies(final int i, final ASGAnnotation annotation,
             final ComponentCandidate compCand) {
         return this.relevanceStrategies.get(i).getRelevanceValue(annotation, compCand, this.metricValuesModel);
     }
 
+    /**
+     * Calculates result.
+     * @param i index
+     * @param annotation annotation
+     * @param compCand component candidate
+     * @param vectorLengthResultStrategy vector strategy
+     * @param paretoOptimalResultStrategy pareto strategy
+     * @return result value
+     */
     private double calculateResultStrategies(final int i, final ASGAnnotation annotation,
             final ComponentCandidate compCand, final BadSmellsResultStrategy vectorLengthResultStrategy,
             final ParetoOptimalBadSmellsResultStrategy paretoOptimalResultStrategy) {
@@ -120,6 +165,11 @@ public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnno
         return relevanceValue;
     }
 
+    /**
+     * Returns component candidate.
+     * @param annotation annotation
+     * @return component candidate
+     */
     private ComponentCandidate getComponentCandidate(final ASGAnnotation annotation) {
         ComponentCandidate cc = this.componentCandidates.get(annotation);
         if (cc == null) {
@@ -138,6 +188,11 @@ public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnno
         return cc;
     }
 
+    /**
+     * Returns component candidate non communication.
+     * @param annotation annotation
+     * @return component candidate
+     */
     private ComponentCandidate getComponentCandidateAccordingToNonTOCommunicationOccurrence(
             final ASGAnnotation annotation) {
         // GASTClass nonTOClass = (GASTClass) annotation.getAnnotatedElements().get("nonTO").get(0);
@@ -157,6 +212,11 @@ public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnno
         return null;
     }
 
+    /**
+     * Returns component candidate interface violation.
+     * @param interfaceViolationAnnotation annotation
+     * @return component candidate
+     */
     private ComponentCandidate getComponentCandidateAccordingToInterfaceViolationOccurrence(
             final ASGAnnotation interfaceViolationAnnotation) {
         Type accessingClassObject = (Type) interfaceViolationAnnotation.getAnnotatedElements()
@@ -175,6 +235,12 @@ public class RelevantBadSmellsAnalysis extends AbstractRelevanceAnalysis<ASGAnno
         return null;
     }
 
+    /**
+     * Checks if the component contains the class.
+     * @param component component
+     * @param className class name
+     * @return boolean decision value
+     */
     private boolean componentContainsClass(final Component component, final String className) {
         EcoreUtil.resolveAll(component);
         for (Type clazz : component.getClasses()) {

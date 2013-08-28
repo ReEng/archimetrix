@@ -10,21 +10,33 @@ import org.somox.configuration.SoMoXConfiguration;
  * getHierarchyMappingStrategy or getInterfaceAdherenceStrategy).
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class MergeIndicationFunctionCalculator {
 
+    /**
+     * SoMoX configuration object.
+     */
     private final SoMoXConfiguration somoxConfig;
 
+    /**
+     * Weights.
+     */
     private double packageMappingWeight, directoryMappingWeight, interfaceAdherenceWeight, subsystemComponentWeight;
 
+    /**
+     * the constructor.
+     * @param somoxConfiguration somox config object
+     */
     public MergeIndicationFunctionCalculator(final SoMoXConfiguration somoxConfiguration) {
         this.somoxConfig = somoxConfiguration;
         getWeightsFromConfiguration();
     }
 
+    /**
+     * Calculates the max name resemblance weight.
+     * @return weight
+     */
     private double calculateMaxNameResemblanceWeigth() {
         double result = Math.max(this.somoxConfig.getWeightLowCoupling(), this.somoxConfig.getWeightHighCoupling());
         result = Math.max(result, this.somoxConfig.getWeightLowNameResemblance());
@@ -35,6 +47,12 @@ public class MergeIndicationFunctionCalculator {
         return result;
     }
 
+    /**
+     * Calculates name resemblance.
+     * @param nameResemblance name resemblance
+     * @param coupling coupling
+     * @return weighted name resemblance
+     */
     private double calculateNameResemblance(final double nameResemblance, final double coupling) {
 
         // determine nameResemblance
@@ -49,6 +67,12 @@ public class MergeIndicationFunctionCalculator {
         }
     }
 
+    /**
+     * Calculates the interface adherence weight.
+     * @param coupling coupling
+     * @param interfaceAdherence interface adherence
+     * @return weighted interface adherence
+     */
     private double calculateInterfaceAdherenceWeight(final double coupling, final double interfaceAdherence) {
         if (coupling >= 0.3) {
             if (interfaceAdherence > 0.0) {
@@ -62,6 +86,11 @@ public class MergeIndicationFunctionCalculator {
         return this.interfaceAdherenceWeight;
     }
 
+    /**
+     * Calculates subsystem component weight.
+     * @param slaq slaq
+     * @return weighted subsystem component value
+     */
     private double calculateSubsystemComponentWeight(final double slaq) {
         if (slaq >= 0.5) {
             this.subsystemComponentWeight = this.somoxConfig.getWeightHighSLAQ();
@@ -71,6 +100,9 @@ public class MergeIndicationFunctionCalculator {
         return this.subsystemComponentWeight;
     }
 
+    /**
+     * Assigns the package mapping weight and directory mapping weight from somox config.
+     */
     private void getWeightsFromConfiguration() {
         this.packageMappingWeight = this.somoxConfig.getWeightPackageMapping();
         this.directoryMappingWeight = this.somoxConfig.getWeightDirectoryMapping();
@@ -131,10 +163,10 @@ public class MergeIndicationFunctionCalculator {
     /**
      * Returns the overall merge metric value.
      * 
-     * @param nameResemblanceStrategy
-     * @param interfaceAdherenceStrategy
-     * @param subsystemComponentStrategy
-     * @param hierarchyMappingStrategy
+     * @param nameResemblanceStrategy name resemblance
+     * @param interfaceAdherenceStrategy interface adherence
+     * @param subsystemComponentStrategy subsystem component
+     * @param hierarchyMappingStrategy hierarchy mapping
      * @return merge metric double value
      */
     public double computeOverallDirectedMetricValue(final double nameResemblanceStrategy,

@@ -11,18 +11,17 @@ import org.reclipse.metamodel.AbstractElementLabeler;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
 import org.reclipse.structure.specification.util.ModelHelper;
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
-//import org.eclipse.gmt.modisco.java.ClassDeclaration;
-//import de.fzi.gast.types.GASTClass;
 
 /**
  * This class contains helper methods that return readable strings for given model objects.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class OutputFormatter {
+    /**
+     * Separator.
+     */
     private static final String ANNOTATED_ELEMENT_SEPARATOR = ", ";
 
     /**
@@ -43,7 +42,7 @@ public class OutputFormatter {
     }
 
     /**
-     * Returns a String with the annotated elements of an ASGAnnotation
+     * Returns a String with the annotated elements of an ASGAnnotation.
      * 
      * @param annotation
      *            the annotation whose annotated elements are to be printed

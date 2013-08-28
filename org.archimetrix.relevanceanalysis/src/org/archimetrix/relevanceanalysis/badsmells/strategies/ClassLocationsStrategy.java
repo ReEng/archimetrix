@@ -13,8 +13,6 @@ import org.reclipse.structure.inference.annotations.ASGAnnotation;
  * [Pla11], Chapter 4).
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class ClassLocationsStrategy extends BadSmellsRelevanceStrategy {

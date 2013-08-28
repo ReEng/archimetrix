@@ -11,26 +11,30 @@ import org.eclipse.gmt.modisco.java.ClassDeclaration;
 import org.eclipse.gmt.modisco.java.FieldDeclaration;
 import org.eclipse.gmt.modisco.java.MethodDeclaration;
 import org.reclipse.structure.inference.annotations.ASGAnnotation;
-//import de.fzi.gast.functions.Method;
-//import de.fzi.gast.types.GASTClass;
-//import de.fzi.gast.variables.Field;
-//import org.eclipse.gmt.modisco.java.Type;
+
 
 /**
  * This class calculates the relevance value for the relevance strategy "Data Class Communication"
  * (see [Pla11], Chapter 4).
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class DataClassCommunicationStrategy extends BadSmellsRelevanceStrategy {
 
+    /**
+     * void string.
+     */
     private static final String VOID = "void";
 
+    /**
+     * setter prefix.
+     */
     private static final String SETTER_PREFIX = "set";
 
+    /**
+     * getter prefix.
+     */
     private static final String GETTER_PREFIX = "get";
 
     @Override
@@ -47,6 +51,11 @@ public class DataClassCommunicationStrategy extends BadSmellsRelevanceStrategy {
         return relevanceValue;
     }
 
+     /**
+      * 
+      * @param badSmellAnnotation bad smell annotation
+      * @return sum of accessors
+      */
     private double toIsDataClass(final ASGAnnotation badSmellAnnotation) {
         ClassDeclaration nonTOClass = getTOFromNonTOCommPattern(badSmellAnnotation);
         int numberOfFields = getNumberOfFields(nonTOClass);
@@ -57,35 +66,53 @@ public class DataClassCommunicationStrategy extends BadSmellsRelevanceStrategy {
         return 1 - sumOfNonAndMissingAccessors(nonTOClass, numberOfFields) / numberOfMethods;
     }
 
+    /**
+     * Returns number of fields.
+     * @param nonTOClass class to be analysed
+     * @return number of fields
+     */
     private int getNumberOfFields(ClassDeclaration nonTOClass) {
         int numberOfFields = 0;
         // only non-static fields are of interest
         EList<BodyDeclaration> bdeclarations = nonTOClass.getBodyDeclarations();
         for (BodyDeclaration bd : bdeclarations) {
-            if (bd instanceof FieldDeclaration)
+            if (bd instanceof FieldDeclaration) {
                 numberOfFields++;
+            }
         }
 
         // for (FieldDeclaration field : nonTOClass.getFields())
-        {
+        
             // if (!field.isStatic())
-            {
+            
                 // numberOfFields++;
-            }
-        }
+            
+        
         return numberOfFields;
     }
 
+    /**
+     * Returns number of methods.
+     * @param nonTOClass class to be analysed
+     * @return number of methods
+     */
     private int getNumberOfMethods(ClassDeclaration nonTOClass) {
         int numberOfMethods = 0;
         EList<BodyDeclaration> bdeclarations = nonTOClass.getBodyDeclarations();
         for (BodyDeclaration bd : bdeclarations) {
-            if (bd instanceof MethodDeclaration)
+            if (bd instanceof MethodDeclaration) {
                 numberOfMethods++;
+            }
         }
         return numberOfMethods;
     }
 
+    /**
+     * Returns the sum of non and missing accessors.
+     * @param nonTOClass class to be analysed
+     * @param numberOfFields number of fields
+     * @return sum of non and missing accessors
+     */
     private double sumOfNonAndMissingAccessors(ClassDeclaration nonTOClass, int numberOfFields) {
         int numberOfSetters = 0;
         int numberOfGetters = 0;
@@ -108,6 +135,11 @@ public class DataClassCommunicationStrategy extends BadSmellsRelevanceStrategy {
         return numberOfNonAccessors + numberOfMissingAccessors;
     }
 
+    /**
+     * Checks if the method is setter.
+     * @param method method to be checked
+     * @return decision bool value
+     */
     private boolean isSetter(final MethodDeclaration method) {
         if (method.getName().startsWith(SETTER_PREFIX)) {
             if (method.getParameters().size() == 1) {
@@ -119,6 +151,11 @@ public class DataClassCommunicationStrategy extends BadSmellsRelevanceStrategy {
         return false;
     }
 
+    /**
+     * Checks if the method is getter.
+     * @param method method to be checked
+     * @return decision bool value
+     */
     private boolean isGetter(final MethodDeclaration method) {
         if (method.getName().startsWith(GETTER_PREFIX)) {
             if (method.getParameters().size() == 0) {
@@ -128,6 +165,11 @@ public class DataClassCommunicationStrategy extends BadSmellsRelevanceStrategy {
         return false;
     }
 
+    /**
+     * Returns toFromNonToComm Pattern.
+     * @param annotation annotation
+     * @return the pattern
+     */
     private ClassDeclaration getTOFromNonTOCommPattern(final ASGAnnotation annotation) {
         return (ClassDeclaration) annotation.getAnnotatedElements().get(Messages.PatternConstants_NON_TO_ROLE).get(0);
     }

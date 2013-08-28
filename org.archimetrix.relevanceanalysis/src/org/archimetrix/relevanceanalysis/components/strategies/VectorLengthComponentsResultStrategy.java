@@ -9,8 +9,6 @@ import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
  * analysis.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class VectorLengthComponentsResultStrategy extends ComponentsResultStrategy {

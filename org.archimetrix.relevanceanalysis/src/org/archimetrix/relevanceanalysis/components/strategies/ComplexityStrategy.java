@@ -10,8 +10,6 @@ import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
  * relevance analysis (see [Pla11], Chapter 4).
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class ComplexityStrategy extends ComponentsRelevanceStrategy {
@@ -25,9 +23,9 @@ public class ComplexityStrategy extends ComponentsRelevanceStrategy {
     }
 
     /**
-     * Component Cyclomatic Complexity
+     * Component Cyclomatic Complexity.
      * 
-     * @return
+     * @return should return cc complexity
      */
     private double getCCC() {
         // TODO not yet implemented
@@ -35,9 +33,9 @@ public class ComplexityStrategy extends ComponentsRelevanceStrategy {
     }
 
     /**
-     * Component Dynamic Complexity
+     * Component Dynamic Complexity.
      * 
-     * @return
+     * @return should return comp dynamic complexity
      */
     private double getCDC() {
         // TODO not yet implemented
@@ -47,7 +45,8 @@ public class ComplexityStrategy extends ComponentsRelevanceStrategy {
     /**
      * Component Static Complexity.
      * 
-     * @return
+     * @param component component implementing classes link
+     * @return component static complexity
      */
     private double getCSC(final ComponentImplementingClassesLink component) {
         ComponentsComplexityCalculator compHelper = ComponentsComplexityCalculator.get();
@@ -57,10 +56,10 @@ public class ComplexityStrategy extends ComponentsRelevanceStrategy {
     }
 
     /**
-     * Component Plain Complexity
+     * Component Plain Complexity.
      * 
-     * @param component
-     * @return
+     * @param component component implementing classes link
+     * @return component plain complexity
      */
     private double getCPC(final ComponentImplementingClassesLink component) {
         ComponentsComplexityCalculator compHelper = ComponentsComplexityCalculator.get();

@@ -10,8 +10,6 @@ import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
  * The class determines the pareto optimal candidates for the component relevance analysis.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class ParetoOptimalComponentsResultStrategy extends ComponentsResultStrategy {
@@ -32,6 +30,12 @@ public class ParetoOptimalComponentsResultStrategy extends ComponentsResultStrat
         return 1;
     }
 
+    /**
+     * Checks if one component dominates other component.
+     * @param component component
+     * @param otherComponent other component
+     * @return decision bool value
+     */
     public boolean isDominatedByOtherComponent(final ComponentImplementingClassesLink component,
             final ComponentImplementingClassesLink otherComponent) {
         // a solution y dominates a solution z iff for each i in [1..n], f_i(y)>=f_i(z) and it

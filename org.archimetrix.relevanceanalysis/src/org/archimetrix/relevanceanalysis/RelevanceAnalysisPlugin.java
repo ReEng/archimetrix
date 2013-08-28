@@ -6,18 +6,22 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 /**
- * The activator class controls the plug-in life cycle
+ * The activator class controls the plug-in life cycle.
  */
 public class RelevanceAnalysisPlugin extends AbstractUIPlugin {
 
-    // The plug-in ID
+    /**
+     * Plugin id.
+     */
     public static final String PLUGIN_ID = "org.archimetrix.relevanceanalysis"; //$NON-NLS-1$
 
-    // The shared instance
+    /**
+     * the shared instance.
+     */
     private static RelevanceAnalysisPlugin plugin;
 
     /**
-     * The constructor
+     * The constructor.
      */
     public RelevanceAnalysisPlugin() {
     }
@@ -43,7 +47,7 @@ public class RelevanceAnalysisPlugin extends AbstractUIPlugin {
     }
 
     /**
-     * Returns the shared instance
+     * Returns the shared instance.
      * 
      * @return the shared instance
      */
@@ -52,7 +56,7 @@ public class RelevanceAnalysisPlugin extends AbstractUIPlugin {
     }
 
     /**
-     * Returns an image descriptor for the image file at the given plug-in relative path
+     * Returns an image descriptor for the image file at the given plug-in relative path.
      * 
      * @param path
      *            the path
@@ -62,10 +66,19 @@ public class RelevanceAnalysisPlugin extends AbstractUIPlugin {
         return imageDescriptorFromPlugin(PLUGIN_ID, path);
     }
 
+    /**
+     * Log.
+     * @param msg message
+     */
     public void log(final String msg) {
         log(msg, null);
     }
 
+    /**
+     * Log.
+     * @param msg message
+     * @param e exception
+     */
     public void log(final String msg, final Exception e) {
         getLog().log(new Status(Status.INFO, PLUGIN_ID, Status.OK, msg, e));
     }

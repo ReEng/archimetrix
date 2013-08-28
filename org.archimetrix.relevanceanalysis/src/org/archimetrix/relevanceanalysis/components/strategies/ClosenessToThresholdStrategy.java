@@ -18,19 +18,19 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.gmt.modisco.java.Type;
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
-//import de.fzi.gast.types.GASTClass;
 
 /**
  * The class calculates the relevance value for the closeness to threshold strategy of the component
  * relevance analysis (see [Pla11], Chapter 4).
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy {
 
+    /**
+     * Metric values model.
+     */
     private MetricValuesModel metricValuesModel;
 
     // TODO: the third worst method !!
@@ -66,6 +66,10 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy {
         return normalizedRelevanceValue;
     }
 
+    /**
+     * Returns iterations with lowest composition threshold.
+     * @return list of iterations
+     */
     private List<Iteration> getIterationsWithLowestCompositionThreshold() {
         double lowestCompositionThreshold = this.metricValuesModel.getIterations(
                 this.metricValuesModel.getIterationsLength() - 1).getCurCompThreshold();
@@ -78,6 +82,10 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy {
         return iterations;
     }
 
+    /**
+     * Returns iterations with lowest merge threshold.
+     * @return list of iterations
+     */
     private List<Iteration> getIterationsWithLowestMergeThreshold() {
         double lowestMergeThreshold = this.metricValuesModel.getIterations(0).getCurMergeThreshold();
         List<Iteration> iterations = new ArrayList<Iteration>();
@@ -89,6 +97,12 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy {
         return iterations;
     }
 
+    /**
+     * Returns the rating.
+     * @param compCand component candidate
+     * @param component component implementing classes link
+     * @return rating value
+     */
     private double getRating(final ComponentCandidate compCand, final ComponentImplementingClassesLink component) {
         double rating = 0;
         Component comp1 = compCand.getFirstComponent();
@@ -100,6 +114,12 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy {
         return rating;
     }
 
+    /**
+     * Returns rating for component.
+     * @param component component implementing classes link
+     * @param comp component
+     * @return rating
+     */
     private double getRatingForComponent(final ComponentImplementingClassesLink component, final Component comp) {
         if (componentAccordsToComponentCandidate(component, comp)) {
             return 1;
@@ -107,6 +127,10 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy {
         return 0;
     }
 
+    /**
+     * Returns the scale.
+     * @return scale
+     */
     private int getScale() {
         int scale = 0;
         for (Iteration iteration : getIterationsWithLowestMergeThreshold()) {
@@ -118,6 +142,12 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy {
         return scale * 2; // * 2 because of pair (firstComp+secondComp)
     }
 
+    /**
+     * Checks if two components have same names.
+     * @param component component implementing classes link
+     * @param comp component
+     * @return decision bool value
+     */
     private boolean componentAccordsToComponentCandidate(final ComponentImplementingClassesLink component,
             final Component comp) {
         EcoreUtil.resolveAll(component);
@@ -137,6 +167,11 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy {
         return false;
     }
 
+    /**
+     * Checks if the component candidate is relevant for merging.
+     * @param compCand component candidate
+     * @return decision bool value
+     */
     private boolean isRelevantForMerge(final ComponentCandidate compCand) {
         double mergeMetricValue = getOverallMergeMetricValue(compCand);
         double currentMergeThreshold = getCurrentMergeThreshold();
@@ -148,6 +183,11 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy {
         }
     }
 
+    /**
+     * Checks if component candidate is relevant for composition.
+     * @param compCand component candidate
+     * @return decision bool value
+     */
     private boolean isRelevantForComposition(final ComponentCandidate compCand) {
         double compositionMetricValue = getOverallCompositionMetricValue(compCand);
         double currentCompositionThreshold = getCurrentCompositionThreshold();
@@ -159,17 +199,30 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy {
         }
     }
 
+    /**
+     * Returns merge threshold.
+     * @return merge threshold
+     */
     private double getCurrentMergeThreshold() {
         // current merge threshold from first iteration
         return this.metricValuesModel.getIterations()[0].getCurMergeThreshold();
     }
 
+    /**
+     * Returns composition threshold.
+     * @return composition threshold
+     */
     private double getCurrentCompositionThreshold() {
         // current composition threshold from last iteration
         return this.metricValuesModel.getIterations()[this.metricValuesModel.getIterationsLength() - 1]
                 .getCurCompThreshold();
     }
 
+    /**
+     * Returns overall merge metric value.
+     * @param compCand component candidate
+     * @return overall merge metric value
+     */
     private double getOverallMergeMetricValue(final ComponentCandidate compCand) {
         for (MetricValue metricValue : compCand.getMetricValues()) {
             if (metricValue.getMetricID().endsWith(Messages.ClusteringConstants_DEFAULT_MERGE_INDICATING_METRIC)) {
@@ -179,6 +232,11 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy {
         return 0;
     }
 
+    /**
+     * Returns overall composition metric value.
+     * @param compCand component candidate
+     * @return overall composition metric value
+     */
     private double getOverallCompositionMetricValue(final ComponentCandidate compCand) {
         for (MetricValue metricValue : compCand.getMetricValues()) {
             if (metricValue.getMetricID().endsWith(Messages.ClusteringConstants_DEFAULT_COMPOSITION_INDICATING_METRIC)) {
@@ -188,6 +246,10 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy {
         return 0;
     }
 
+    /**
+     * Returns epsilon.
+     * @return epsilon value
+     */
     private double getEpsilon() {
         Properties properties = new Properties();
         try {
@@ -198,6 +260,7 @@ public class ClosenessToThresholdStrategy extends ComponentsRelevanceStrategy {
 
             return Double.parseDouble(properties.getProperty(Messages.ConfigConstants_RELEVANCEANALYSIS_EPSILON));
         } catch (IOException e) {
+            e.printStackTrace();
         }
         return 0;
     }

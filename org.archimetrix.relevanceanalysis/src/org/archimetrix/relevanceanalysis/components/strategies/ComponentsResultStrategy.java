@@ -7,14 +7,19 @@ import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
  * A super class for result strategies of the component relevance analysis.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public abstract class ComponentsResultStrategy implements IComponentsStrategy {
 
+    /**
+     * Relevance results.
+     */
     protected RelevanceResults<ComponentImplementingClassesLink> relevanceResults;
 
+    /**
+     * Sets the relevance results.
+     * @param relevanceResults relevance results
+     */
     public void setRelevanceResults(RelevanceResults<ComponentImplementingClassesLink> relevanceResults) {
         this.relevanceResults = relevanceResults;
     }

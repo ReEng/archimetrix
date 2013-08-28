@@ -16,17 +16,36 @@ import org.archimetrix.relevanceanalysis.components.strategies.VectorLengthCompo
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 
+/**
+ * 
+ * @author mcp
+ *
+ */
 public class RelevantComponentAnalysis extends AbstractRelevanceAnalysis<ComponentImplementingClassesLink> {
+    /**
+     * Source code decorator model.
+     */
     private final SourceCodeDecoratorRepository scdModel;
 
+    /**
+     * List of strategies.
+     */
     private List<IComponentsStrategy> relevanceStrategies;
 
+    /**
+     * the constructor.
+     * @param scdModel source code decrator model
+     * @param model metric values model
+     */
     public RelevantComponentAnalysis(final SourceCodeDecoratorRepository scdModel, final MetricValuesModel model) {
         super(model);
         this.scdModel = scdModel;
         initializeRelevanceStrategiesMap();
     }
 
+    /**
+     * Initialisation of strategies map.
+     */
     private void initializeRelevanceStrategiesMap() {
         this.relevanceStrategies = new ArrayList<IComponentsStrategy>();
         this.relevanceStrategies.add(new ClosenessToThresholdStrategy());
@@ -49,6 +68,10 @@ public class RelevantComponentAnalysis extends AbstractRelevanceAnalysis<Compone
         RelevanceAnalysisPlugin.getDefault().log("Finished Component Relevance Analysis");
     }
 
+    /**
+     * Calculates relevance values for strategy.
+     * @param i index
+     */
     private void calculateRelevanceValuesForStrategy(final int i) {
         for (ComponentImplementingClassesLink link : this.scdModel.getComponentImplementingClassesLink()) {
             VectorLengthComponentsResultStrategy resultStrategy = new VectorLengthComponentsResultStrategy();
@@ -64,10 +87,24 @@ public class RelevantComponentAnalysis extends AbstractRelevanceAnalysis<Compone
         RelevanceAnalysisPlugin.getDefault().log("Finished Component Relevance Analysis");
     }
 
+    /**
+     * Calculates relevance strategies.
+     * @param i index
+     * @param link component implementing classes link
+     * @return calculated value
+     */
     private double calculateRelevanceStrategies(final int i, final ComponentImplementingClassesLink link) {
         return this.relevanceStrategies.get(i).getRelevanceValue(link, this.metricValuesModel);
     }
 
+    /**
+     * Calculates result strategies.
+     * @param i index
+     * @param link component implementing classes link
+     * @param resultStrategy vector length components result strategy
+     * @param paretoOptimalResultStrategy pareto optimal
+     * @return calculated result strategies
+     */
     private double calculateResultStrategies(final int i, final ComponentImplementingClassesLink link,
             final VectorLengthComponentsResultStrategy resultStrategy,
             final ParetoOptimalComponentsResultStrategy paretoOptimalResultStrategy) {

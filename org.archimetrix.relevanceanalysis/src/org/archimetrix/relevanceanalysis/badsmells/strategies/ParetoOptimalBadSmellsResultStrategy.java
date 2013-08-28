@@ -13,8 +13,6 @@ import org.reclipse.structure.inference.annotations.ASGAnnotation;
  * analysis.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class ParetoOptimalBadSmellsResultStrategy extends BadSmellsResultStrategy {
@@ -38,6 +36,12 @@ public class ParetoOptimalBadSmellsResultStrategy extends BadSmellsResultStrateg
         return 1;
     }
 
+    /**
+     * Checks if one annotation is dominated by other.
+     * @param annotation annotation
+     * @param otherAnnotation other annotation
+     * @return decision bool value
+     */
     private boolean isDominatedByOtherAnnotation(final ASGAnnotation annotation, final ASGAnnotation otherAnnotation) {
         // a solution y dominates a solution z iff for each i in [1..n], f_i(y)>=f_i(z)
         // and it exists an i in [1..n] such that f_i(y)>f_i(z).

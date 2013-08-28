@@ -17,15 +17,19 @@ import org.somox.configuration.SoMoXConfiguration;
  * (see [Pla11], Chapter 4).
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class HigherInterfaceAdherenceStrategy extends BadSmellsRelevanceStrategy {
 
+    /**
+     * Coupling threshold.
+     */
     private static final double COUPLING_THRESHOLD = 0.3;
 
     // TODO: to investigate a more adequate heuristic for this value is future work
+    /**
+     * New interface adherence value.
+     */
     private static final int NEW_INTERFACE_ADHERENCE_VALUE = 1;
 
     @Override
@@ -74,6 +78,18 @@ public class HigherInterfaceAdherenceStrategy extends BadSmellsRelevanceStrategy
         return relevanceValue;
     }
 
+    /**
+     * Returns the merge value.
+     * @param nameResemblanceValue name recemblance
+     * @param couplingValue coupling
+     * @param interfaceAdherenceValue interface adherence
+     * @param subsystemComponentValue subsystem component
+     * @param slaqValue slaq
+     * @param packageMappingValue package mapping
+     * @param directoryMappingValue directory mapping
+     * @param metricValuesModel metric values model
+     * @return merge value
+     */
     private double getMergeValue(final double nameResemblanceValue, final double couplingValue,
             final double interfaceAdherenceValue, final double subsystemComponentValue, final double slaqValue,
             final double packageMappingValue, final double directoryMappingValue,
