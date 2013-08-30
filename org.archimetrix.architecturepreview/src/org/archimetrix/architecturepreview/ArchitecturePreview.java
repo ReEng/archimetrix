@@ -152,6 +152,11 @@ public class ArchitecturePreview {
         }
     }
 */
+    /**
+     * 
+     * @param value string
+     * @param raf file
+     */
     public static void deleteFromRAF(final String value, final RandomAccessFile raf) {
         // FIXME: see fixGASTResource
         try {
