@@ -59,8 +59,10 @@ public class StartModifyingCatalogWizard extends StartInferenceWizard {
     }
 
     /**
+     * @param page wizard page
      * @see org.eclipse.jface.wizard.Wizard#getNextPage(
      * org.eclipse.jface.wizard.IWizardPage)
+     * @return wizard page
      */
     @Override
     public IWizardPage getNextPage(IWizardPage page) {
