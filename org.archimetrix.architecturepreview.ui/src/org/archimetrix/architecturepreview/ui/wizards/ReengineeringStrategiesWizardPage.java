@@ -3,7 +3,7 @@ package org.archimetrix.architecturepreview.ui.wizards;
 import org.archimetrix.architecturepreview.ui.providers.ReengineeringStrategiesWizardPageContentProvider;
 import org.archimetrix.architecturepreview.ui.providers.ReengineeringStrategiesWizardPageLabelProvider;
 import org.archimetrix.commons.wizards.AbstractTreeViewerPage;
-import org.archimetrix.commons.wizards.WizardConst;
+import org.archimetrix.commons.wizards.Messages;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.viewers.TreeSelection;
@@ -85,7 +85,7 @@ public class ReengineeringStrategiesWizardPage extends AbstractTreeViewerPage {
         TreeSelection selection = (TreeSelection) this.getViewer().getSelection();
         EOperation op = (EOperation) selection.getFirstElement();
         OperationExtension opExt = (OperationExtension) op
-                .getEAnnotation(WizardConst.WizardConstants_STORY_DIAGRAM_ANNOTATION_SOURCE_KEY).getContents().get(0);
+                .getEAnnotation(Messages.WizardConstants_STORY_DIAGRAM_ANNOTATION_SOURCE_KEY).getContents().get(0);
         return opExt.getOwnedActivity();
     }
 
