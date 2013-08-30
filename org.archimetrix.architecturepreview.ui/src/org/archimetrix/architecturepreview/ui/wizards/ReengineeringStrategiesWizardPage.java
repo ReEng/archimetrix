@@ -16,21 +16,38 @@ import org.storydriven.storydiagrams.activities.OperationExtension;
  * A wizard page that provides a tree viewer that shows a list of reengineering strategies.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class ReengineeringStrategiesWizardPage extends AbstractTreeViewerPage {
+    /**
+     * wizard page description.
+     */
     private static final String WIZARD_PAGE_DESCRIPTION = "Select the reengineering strategy that shall be used to accomplish the removal of the selected deficiency occurrence.";
 
+    /**
+     * wizard page title.
+     */
     private static final String WIZARD_PAGE_TITLE = "Select Reengineering Strategy";
 
+    /**
+     * strategies selection object.
+     */
     private Object strategiesSelection;
 
+    /**
+     * architecture preview wizard.
+     */
     private final ArchitecturePreviewWizard wizard;
 
+    /**
+     * Reengineering Strategies Wizard Page Content Provider.
+     */
     private ReengineeringStrategiesWizardPageContentProvider contentProvider;
 
+    /**
+     * the constructor.
+     * @param wizard architecture preview page
+     */
     protected ReengineeringStrategiesWizardPage(final ArchitecturePreviewWizard wizard) {
         super(WIZARD_PAGE_TITLE);
         setTitle(WIZARD_PAGE_TITLE);
@@ -38,6 +55,10 @@ public class ReengineeringStrategiesWizardPage extends AbstractTreeViewerPage {
         setDescription(WIZARD_PAGE_DESCRIPTION);
     }
 
+    /**
+     * Sets the selection.
+     * @param selection resource selection to be set
+     */
     protected void setSelection(final Resource selection) {
         super.setSelection(selection);
         if (this.getSelection() != null) {
@@ -56,6 +77,10 @@ public class ReengineeringStrategiesWizardPage extends AbstractTreeViewerPage {
         this.getViewer().setLabelProvider(new ReengineeringStrategiesWizardPageLabelProvider());
     }
 
+    /**
+     * Returns the selected strategy.
+     * @return selected strategy
+     */
     public Activity getSelectedStrategy() {
         TreeSelection selection = (TreeSelection) this.getViewer().getSelection();
         EOperation op = (EOperation) selection.getFirstElement();

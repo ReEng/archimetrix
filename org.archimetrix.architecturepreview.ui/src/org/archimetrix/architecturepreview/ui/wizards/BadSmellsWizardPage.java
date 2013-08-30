@@ -18,19 +18,33 @@ import org.reclipse.structure.inference.annotations.ASGAnnotation;
  * A wizard page that provides a tree viewer that shows a list of bad smell occurrences.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
 public class BadSmellsWizardPage extends AbstractTreeViewerPage implements ISelectionChangedListener {
+    /**
+     * wizard page description.
+     */
     private static final String WIZARD_PAGE_DESCRIPTION = "Select the detected deficiency occurrence you want to remove.";
 
+    /**
+     * wizard page title.
+     */
     public static final String WIZARD_PAGE_TITLE = "Select deficiency occurrence";
 
+    /**
+     * bad smell selestion object.
+     */
     private Object badSmellsSelection;
 
+    /**
+     * architecture preview wizard.
+     */
     private final ArchitecturePreviewWizard wizard;
 
+    /**
+     * the constructor.
+     * @param wizard architecture preview wizard
+     */
     protected BadSmellsWizardPage(final ArchitecturePreviewWizard wizard) {
         super(WIZARD_PAGE_TITLE);
         setTitle(WIZARD_PAGE_TITLE);
@@ -38,6 +52,10 @@ public class BadSmellsWizardPage extends AbstractTreeViewerPage implements ISele
         setDescription(WIZARD_PAGE_DESCRIPTION);
     }
 
+    /**
+     * Sets the selection object.
+     * @param selection resource selection to be set
+     */
     protected void setSelection(final Resource selection) {
         super.setSelection(selection);
         if (this.getSelection() != null) {
