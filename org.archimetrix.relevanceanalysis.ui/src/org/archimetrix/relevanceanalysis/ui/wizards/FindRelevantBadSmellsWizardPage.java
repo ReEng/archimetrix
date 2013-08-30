@@ -3,7 +3,7 @@ package org.archimetrix.relevanceanalysis.ui.wizards;
 import org.archimetrix.commons.wizards.AbstractWizardPage;
 import org.archimetrix.commons.wizards.ResourceSelectionSection;
 import org.archimetrix.commons.wizards.ResourceSelectionSectionProvider;
-import org.archimetrix.commons.wizards.WizardConst;
+import org.archimetrix.commons.wizards.Messages;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.jface.dialogs.IDialogSettings;
@@ -70,11 +70,11 @@ public class FindRelevantBadSmellsWizardPage extends AbstractWizardPage {
         IDialogSettings s = getDialogSettings();
         if (s != null) {
             this.badSmellsSection.getTextField().setText(
-                    s.get(WizardConst.WizardConstants_SETT_BAD_SMELLS) == null ? "" : s
-                            .get(WizardConst.WizardConstants_SETT_BAD_SMELLS));
+                    s.get(Messages.WizardConstants_SETT_BAD_SMELLS) == null ? "" : s
+                            .get(Messages.WizardConstants_SETT_BAD_SMELLS));
             this.metricValuesSection.getTextField().setText(
-                    s.get(WizardConst.WizardConstants_SETT_METRIC_VALUES_MODEL) == null ? "" : s
-                            .get(WizardConst.WizardConstants_SETT_METRIC_VALUES_MODEL));
+                    s.get(Messages.WizardConstants_SETT_METRIC_VALUES_MODEL) == null ? "" : s
+                            .get(Messages.WizardConstants_SETT_METRIC_VALUES_MODEL));
 
         }
     }
@@ -113,11 +113,11 @@ public class FindRelevantBadSmellsWizardPage extends AbstractWizardPage {
     protected boolean isValid() {
         String badSmellsText = this.badSmellsSection.getTextField().getText();
         if (badSmellsText == null) {
-            setErrorMessage(WizardConst.WizardConstants_NO_BAD_SMELLS_ERROR_MESSAGE);
+            setErrorMessage(Messages.WizardConstants_NO_BAD_SMELLS_ERROR_MESSAGE);
         }
         String metricValuesText = this.metricValuesSection.getTextField().getText();
         if (metricValuesText == null) {
-            setErrorMessage(WizardConst.WizardConstants_NO_METRIC_VALUES_ERROR_MESSAGE);
+            setErrorMessage(Messages.WizardConstants_NO_METRIC_VALUES_ERROR_MESSAGE);
         }
 
         if (badSmellsText != null && metricValuesText != null) {
@@ -134,8 +134,8 @@ public class FindRelevantBadSmellsWizardPage extends AbstractWizardPage {
     public void saveSettings() {
         IDialogSettings s = getDialogSettings();
         if (s != null) {
-            s.put(WizardConst.WizardConstants_SETT_BAD_SMELLS, this.badSmellsSection.getTextField().getText());
-            s.put(WizardConst.WizardConstants_SETT_METRIC_VALUES_MODEL, this.metricValuesSection.getTextField()
+            s.put(Messages.WizardConstants_SETT_BAD_SMELLS, this.badSmellsSection.getTextField().getText());
+            s.put(Messages.WizardConstants_SETT_METRIC_VALUES_MODEL, this.metricValuesSection.getTextField()
                     .getText());
         }
     }

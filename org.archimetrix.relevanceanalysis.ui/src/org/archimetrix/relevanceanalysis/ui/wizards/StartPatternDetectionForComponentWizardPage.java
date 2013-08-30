@@ -2,7 +2,7 @@ package org.archimetrix.relevanceanalysis.ui.wizards;
 
 import org.archimetrix.commons.wizards.ResourceSelectionSection;
 import org.archimetrix.commons.wizards.ResourceSelectionSectionProvider;
-import org.archimetrix.commons.wizards.WizardConst;
+import org.archimetrix.commons.wizards.Messages;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -82,7 +82,7 @@ public class StartPatternDetectionForComponentWizardPage extends StartInferenceW
      */
     protected boolean isValid() {
         if (this.badSmellsSection.getTextField().getText() == null) {
-            setErrorMessage(WizardConst.WizardConstants_NO_BAD_SMELLS_CATALOG_ERROR_MESSAGE);
+            setErrorMessage(Messages.WizardConstants_NO_BAD_SMELLS_CATALOG_ERROR_MESSAGE);
         }
 
         if (this.badSmellsSection.getTextField().getText() != null) {
