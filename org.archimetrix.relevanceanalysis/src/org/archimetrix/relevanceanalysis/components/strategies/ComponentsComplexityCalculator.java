@@ -354,11 +354,13 @@ public final class ComponentsComplexityCalculator {
             for (Type clazz : component.getImplementingClasses()) {
                 if (component.getImplementingClasses().contains(clazz.getClass().getSuperclass())) {
                     gens++;
+                    System.out.println("Number of generalizations methid !!! gens: " + gens);
                 }
 
             }
             this.numberOfGeneralizationsMap.put(component, gens);
         }
+        System.out.println("Number of generalizations methid !!!");
         return this.numberOfGeneralizationsMap.get(component);
     }
 
