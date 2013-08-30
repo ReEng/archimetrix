@@ -110,6 +110,7 @@ public class FindRelevantComponentsWizardPage extends AbstractWizardPage {
 
     /**
      * checks validity.
+     * @return decision bool value
      */
     protected boolean isValid() {
         if (this.metricValuesSection.getTextField().getText() == null) {

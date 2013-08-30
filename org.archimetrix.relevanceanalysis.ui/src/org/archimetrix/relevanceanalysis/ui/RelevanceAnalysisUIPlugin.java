@@ -30,6 +30,11 @@ public class RelevanceAnalysisUIPlugin extends AbstractUIPlugin {
 	 * (non-Javadoc)
 	 * @see org.eclipse.ui.plugin.AbstractUIPlugin#start(org.osgi.framework.BundleContext)
 	 */
+	/**
+     * Starts the plugin.
+     * @param context bundle context
+     * @throws Exception exception
+     */
 	public void start(final BundleContext context) throws Exception {
 		super.start(context);
 		plugin = this;
@@ -39,6 +44,11 @@ public class RelevanceAnalysisUIPlugin extends AbstractUIPlugin {
 	 * (non-Javadoc)
 	 * @see org.eclipse.ui.plugin.AbstractUIPlugin#stop(org.osgi.framework.BundleContext)
 	 */
+	/**
+     * Stops the plugin.
+     * @param context bundle context
+     * @throws Exception exception
+     */
 	public void stop(final BundleContext context) throws Exception {
 		plugin = null;
 		super.stop(context);
