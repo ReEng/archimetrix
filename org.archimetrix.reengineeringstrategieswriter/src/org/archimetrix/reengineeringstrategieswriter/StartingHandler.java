@@ -68,6 +68,7 @@ public class StartingHandler extends AbstractHandler {
         try {
             resource.save(Collections.EMPTY_MAP);
         } catch (IOException e) {
+            e.printStackTrace();
         }
 
         System.out.println("Reengineering Strategies Writer finished.");
