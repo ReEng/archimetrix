@@ -16,12 +16,13 @@ import org.eclipse.ui.dialogs.ElementTreeSelectionDialog;
 import org.fujaba.commons.ui.WorkbenchFileTreeSelectionDialog;
 
 /**
- * Defines a combination of ui elements used in wizards to select a resource from the workspace. The
- * section creates a label, a text field and a dialog. The ResourceSelectionSectionProvider provides
+ * Defines a combination of ui elements used in wizards to select a
+ * resource from the workspace. The
+ * section creates a label, a text field and a dialog. The
+ * ResourceSelectionSectionProvider provides
  * helper methods to create ResourceSelectionSections.
- * 
+ *
  * @author mcp
- * 
  */
 public class ResourceSelectionSection {
     /**
@@ -39,7 +40,6 @@ public class ResourceSelectionSection {
 
     /**
      * the constructor.
-     * 
      * @param parent
      *            the composite parent
      * @param label
@@ -51,16 +51,18 @@ public class ResourceSelectionSection {
      * @param fileExtension
      *            extension
      */
-    public ResourceSelectionSection(final Composite parent, final String label, final WizardPage page,
+    public ResourceSelectionSection(final Composite parent,
+            final String label, final WizardPage page,
             final String dialogDescription, final String fileExtension) {
         this.parent = parent;
-        this.dialog = new WorkbenchFileTreeSelectionDialog(page.getShell(), label, dialogDescription, fileExtension);
-        this.textField = addLabeledResourceSelection(parent, label, this.dialog, page);
+        this.dialog = new WorkbenchFileTreeSelectionDialog(
+                page.getShell(), label, dialogDescription, fileExtension);
+        this.textField = addLabeledResourceSelection(
+                parent, label, this.dialog, page);
     }
 
     /**
      * get parent method.
-     * 
      * @return parent
      */
     public Composite getParent() {
@@ -69,7 +71,6 @@ public class ResourceSelectionSection {
 
     /**
      * get text method.
-     * 
      * @return text field
      */
     public Text getTextField() {
@@ -78,7 +79,6 @@ public class ResourceSelectionSection {
 
     /**
      * get dialog method.
-     * 
      * @return dialog
      */
     public ElementTreeSelectionDialog getDialog() {
@@ -86,7 +86,6 @@ public class ResourceSelectionSection {
     }
 
     /**
-     * 
      * @param parent
      *            the composite parent
      * @param label
@@ -97,8 +96,10 @@ public class ResourceSelectionSection {
      *            wizard page
      * @return resource full path
      */
-    public Text addLabeledResourceSelection(final Composite parent, final String label,
-            final ElementTreeSelectionDialog dialog, final WizardPage page) {
+    public Text addLabeledResourceSelection(final Composite parent,
+            final String label,
+            final ElementTreeSelectionDialog dialog,
+            final WizardPage page) {
         Label select = new Label(parent, SWT.LEFT);
         select.setText(label + ":");
 
