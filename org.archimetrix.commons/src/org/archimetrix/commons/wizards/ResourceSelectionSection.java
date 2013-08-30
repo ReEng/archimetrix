@@ -110,7 +110,7 @@ public class ResourceSelectionSection {
         }
 
         Button browse = new Button(parent, SWT.PUSH);
-        browse.setText(WizardConst.WizardConstants_SELECT_BUTTON_TEXT);
+        browse.setText(Messages.WizardConstants_SELECT_BUTTON_TEXT);
         browse.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(final SelectionEvent e) {

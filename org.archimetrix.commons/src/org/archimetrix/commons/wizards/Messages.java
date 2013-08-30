@@ -8,7 +8,7 @@ import org.eclipse.osgi.util.NLS;
  * @author Goran Piskachev
  *
  */
-public final class WizardConst extends NLS {
+public final class Messages extends NLS {
     /**
      * Bundle name.
      */
@@ -122,12 +122,12 @@ public final class WizardConst extends NLS {
     public static String WizardConstants_STORY_DIAGRAM_ANNOTATION_SOURCE_KEY;
     static {
         // initialize resource bundle
-        NLS.initializeMessages(BUNDLE_NAME, WizardConst.class);
+        NLS.initializeMessages(BUNDLE_NAME, Messages.class);
     }
 
     /**
      * the constructor.
      */
-    private WizardConst() {
+    private Messages() {
     }
 }
