@@ -148,7 +148,7 @@ public final class ComponentsComplexityCalculator {
             for (ClassDeclaration gastClass : classes) {
                 List<BodyDeclaration> bds = gastClass.getBodyDeclarations();
                 for (BodyDeclaration bd : bds) {
-                    if (bd instanceof FieldDeclaration) {
+                    if (bd instanceof VariableDeclaration) {
                         properties.add((VariableDeclaration) bd);
                         }
                 }
