@@ -13,9 +13,9 @@ import org.somox.configuration.SoMoXConfiguration;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 import org.somox.ui.runconfig.ModelAnalyzerConfiguration;
 
-import de.uka.ipd.sdq.workflow.OrderPreservingCompositeJob;
-import de.uka.ipd.sdq.workflow.exceptions.JobFailedException;
-import de.uka.ipd.sdq.workflow.exceptions.UserCanceledException;
+import de.uka.ipd.sdq.workflow.jobs.SequentialJob;
+import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
+import de.uka.ipd.sdq.workflow.jobs.UserCanceledException;
 
 /**
  * This class is responsible for starting a clustering with SoMoX.
@@ -91,7 +91,7 @@ public class SoMoXStarter {
         SoMoXConfiguration somoxConfiguration = createSoMoXConfig(model);
 
         config.setSomoxConfiguration(somoxConfiguration);
-        OrderPreservingCompositeJob somoxJob = new OrderPreservingCompositeJob();
+        SequentialJob somoxJob = new SequentialJob();
         try {
             somoxJob.add(new SimpleModelAnalyzerJob(config));
             somoxJob.execute(new NullProgressMonitor());
