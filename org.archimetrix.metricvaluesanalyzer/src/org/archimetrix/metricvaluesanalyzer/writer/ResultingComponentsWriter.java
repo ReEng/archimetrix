@@ -13,8 +13,11 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
-import eu.qimpress.samm.staticstructure.ComponentType;
-import eu.qimpress.samm.staticstructure.Repository;
+import de.uka.ipd.sdq.pcm.repository.Repository;
+import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
+
+//import eu.qimpress.samm.staticstructure.ComponentType;
+//import eu.qimpress.samm.staticstructure.Repository;
 
 
 public class ResultingComponentsWriter
@@ -50,7 +53,7 @@ public class ResultingComponentsWriter
       Repository samm = loadSamm(URI.createURI(modelUriString));
 
       this.bf.append(";Last Resulting Components:  ");
-      for (ComponentType comp : samm.getComponenttype())
+      for (RepositoryComponent comp : samm.getComponents__Repository()) // ComponentType changed to RepositoryComponent
       {
          // EcoreUtil.resolveAll(comp);
          this.bf.append(MetricValuesHelper.printComponentType(comp));

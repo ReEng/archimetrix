@@ -1,6 +1,5 @@
 package org.archimetrix.reengineeringstrategieswriter;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Collections;
@@ -22,80 +21,96 @@ import de.fzi.gast.functions.functionsPackage;
 import de.fzi.gast.statements.statementsPackage;
 import de.fzi.gast.types.typesPackage;
 
+/**
+ * 
+ * @author unknown
+ *
+ */
+public class StartingHandler extends AbstractHandler {
 
-public class StartingHandler extends AbstractHandler
-{
+    /**
+     * resource path.
+     */
+    private static final String RESOURCE =
+            "/Store12_WithInterfaceViolation/ReengineeringStrategies.ecore";
 
-   private static final String RESOURCE = "/Store12_WithInterfaceViolation/ReengineeringStrategies.ecore";
+    /**
+     * EClass.
+     */
+    private EClass clazz;
 
-   private EClass clazz;
+    /**
+     * strategy writer.
+     */
+    private StrategyWriter writer;
 
-   private StrategyWriter writer;
+    @Override
+    public Object execute(final ExecutionEvent event) throws ExecutionException {
+        Resource resource = createResource();
+        this.clazz = createEClass();
+        this.writer = new StrategyWriter();
 
+        createInterfaceViolationReengineeringStrategy(
+                "/Store12_WithInterfaceViolation/InterfaceViolationReengineeringStrategy1.sdm",
+                "interfaceViolationReengineeringStrategy1");
+        createInterfaceViolationReengineeringStrategy(
+                "/Store12_WithInterfaceViolation/InterfaceViolationReengineeringStrategy2.sdm",
+                "interfaceViolationReengineeringStrategy2");
+        createInterfaceViolationReengineeringStrategy(
+                "/Store12_WithInterfaceViolation/DistortedInterfaceViolationReengineeringStrategy.sdm",
+                "distortedInterfaceViolationReengineeringStrategy");
 
-   @Override
-   public Object execute(final ExecutionEvent event) throws ExecutionException
-   {
-      Resource resource = createResource();
-      this.clazz = createEClass();
-      this.writer = new StrategyWriter();
+        EPackage ePackage = EcoreFactory.eINSTANCE.createEPackage();
+        ePackage.getEClassifiers().add(this.clazz);
+        ePackage.setName("org.reclipse.reengineering");
+        resource.getContents().add(ePackage);
 
-      createInterfaceViolationReengineeringStrategy(
-            "/Store12_WithInterfaceViolation/InterfaceViolationReengineeringStrategy1.sdm",
-            "interfaceViolationReengineeringStrategy1");
-      createInterfaceViolationReengineeringStrategy(
-            "/Store12_WithInterfaceViolation/InterfaceViolationReengineeringStrategy2.sdm",
-            "interfaceViolationReengineeringStrategy2");
-      createInterfaceViolationReengineeringStrategy(
-            "/Store12_WithInterfaceViolation/DistortedInterfaceViolationReengineeringStrategy.sdm",
-            "distortedInterfaceViolationReengineeringStrategy");
+        try {
+            resource.save(Collections.EMPTY_MAP);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-      EPackage ePackage = EcoreFactory.eINSTANCE.createEPackage();
-      ePackage.getEClassifiers().add(this.clazz);
-      ePackage.setName("org.reclipse.reengineering");
-      resource.getContents().add(ePackage);
+        System.out.println("Reengineering Strategies Writer finished.");
+        return null;
+    }
 
-      try
-      {
-         resource.save(Collections.EMPTY_MAP);
-      }
-      catch (IOException e)
-      {
-      }
+    /**
+     * Creates strategy.
+     * @param sdmPath sdm path
+     * @param methodName mathod name
+     */
+    public void createInterfaceViolationReengineeringStrategy(
+            final String sdmPath, final String methodName) {
+        // all annotated elements can be passed as arguments
+        String[] paramNames = { "class1", "class2", "interface", "method2", "call", "castStmt" };
+        EClassifier[] paramTypes = { typesPackage.eINSTANCE.getGASTClass(), typesPackage.eINSTANCE.getGASTClass(),
+                typesPackage.eINSTANCE.getGASTClass(), functionsPackage.eINSTANCE.getMethod(),
+                accessesPackage.eINSTANCE.getFunctionAccess(), statementsPackage.eINSTANCE.getSimpleStatement() };
+        this.clazz.getEOperations().add(this.writer.createOperation(sdmPath, methodName, paramNames, paramTypes));
+    }
 
-      System.out.println("Reengineering Strategies Writer finished.");
-      return null;
-   }
+    /**
+     * Creates EClass.
+     * @return class
+     */
+    private EClass createEClass() {
+        EClass clazz = EcoreFactory.eINSTANCE.createEClass();
+        clazz.setName("ReengineeringStrategies");
+        return clazz;
+    }
 
+    /**
+     * Creates resource.
+     * @return resource
+     */
+    public Resource createResource() {
+        URI fileURI = URI.createPlatformResourceURI(new File(RESOURCE).getPath(), true);
+        URI resourceURI = fileURI;
 
-   public void createInterfaceViolationReengineeringStrategy(final String sdmPath, final String methodName)
-   {
-      // all annotated elements can be passed as arguments
-      String[] paramNames = { "class1", "class2", "interface", "method2", "call", "castStmt" };
-      EClassifier[] paramTypes = { typesPackage.eINSTANCE.getGASTClass(), typesPackage.eINSTANCE.getGASTClass(),
-            typesPackage.eINSTANCE.getGASTClass(), functionsPackage.eINSTANCE.getMethod(),
-            accessesPackage.eINSTANCE.getFunctionAccess(), statementsPackage.eINSTANCE.getSimpleStatement() };
-      this.clazz.getEOperations().add(this.writer.createOperation(sdmPath, methodName, paramNames, paramTypes));
-   }
-
-
-   private EClass createEClass()
-   {
-      EClass clazz = EcoreFactory.eINSTANCE.createEClass();
-      clazz.setName("ReengineeringStrategies");
-      return clazz;
-   }
-
-
-   public Resource createResource()
-   {
-      URI fileURI = URI.createPlatformResourceURI(new File(RESOURCE).getPath(), true);
-      URI resourceURI = fileURI;
-
-      ResourceSet resourceSet = new ResourceSetImpl();
-      Resource resource = resourceSet.createResource(resourceURI);
-      return resource;
-   }
-
+        ResourceSet resourceSet = new ResourceSetImpl();
+        Resource resource = resourceSet.createResource(resourceURI);
+        return resource;
+    }
 
 }

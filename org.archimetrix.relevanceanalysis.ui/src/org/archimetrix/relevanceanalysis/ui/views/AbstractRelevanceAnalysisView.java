@@ -1,6 +1,5 @@
 package org.archimetrix.relevanceanalysis.ui.views;
 
-
 import org.archimetrix.relevanceanalysis.RelevanceResults;
 import org.archimetrix.relevanceanalysis.ui.providers.AbstractRelevanceAnalysisViewContentProvider;
 import org.archimetrix.relevanceanalysis.ui.providers.AbstractRelevanceAnalysisViewLabelProvider;
@@ -13,125 +12,149 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.ui.part.ViewPart;
 
-
 /**
- * The AbstractRelevanceAnalysisView provides a basic implementation of a view for the relevance
+ *  The AbstractRelevanceAnalysisView provides a basic implementation of a view for the relevance
  * analysis.
- * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
- * 
+ *
+ * @param <T> t
  */
-public abstract class AbstractRelevanceAnalysisView<T> extends ViewPart
-{
+public abstract class AbstractRelevanceAnalysisView<T> extends ViewPart {
 
-   protected static final String PARETO_OPTIMALITY_COLUMN_TITLE = "Pareto Optimality";
+    /**
+     * Pareto optimality column title string.
+     */
+    protected static final String PARETO_OPTIMALITY_COLUMN_TITLE = "Pareto Optimality";
 
-   protected static final String TOTAL_RELEVANCE_COLUMN_TITLE = "Relevance Total";
+    /**
+     * Total relevance column title string.
+     */
+    protected static final String TOTAL_RELEVANCE_COLUMN_TITLE = "Relevance Total";
 
-   protected TreeViewer viewer;
+    /**
+     * Tree viewer.
+     */
+    protected TreeViewer viewer;
 
-   protected RelevanceResults<T> relevanceResults;
+    /**
+     * relevance results.
+     */
+    protected RelevanceResults<T> relevanceResults;
 
-   protected AbstractRelevanceAnalysisViewLabelProvider labelProvider;
+    /**
+     * Abstract Relevance Analysis View Label Provider.
+     */
+    protected AbstractRelevanceAnalysisViewLabelProvider labelProvider;
 
-   protected AbstractRelevanceAnalysisViewContentProvider contentProvider;
+    /**
+     * Abstract Relevance Analysis View Content Provider.
+     */
+    protected AbstractRelevanceAnalysisViewContentProvider contentProvider;
 
+    @Override
+    public void createPartControl(final Composite parent) {
+        // root composite
+        Composite root = new Composite(parent, SWT.NONE);
+        GridLayout rootLayout = new GridLayout();
+        rootLayout.horizontalSpacing = 0;
+        rootLayout.marginHeight = 0;
+        rootLayout.marginWidth = 0;
+        rootLayout.verticalSpacing = 0;
+        root.setLayout(rootLayout);
 
-   @Override
-   public void createPartControl(final Composite parent)
-   {
-      // root composite
-      Composite root = new Composite(parent, SWT.NONE);
-      GridLayout rootLayout = new GridLayout();
-      rootLayout.horizontalSpacing = 0;
-      rootLayout.marginHeight = 0;
-      rootLayout.marginWidth = 0;
-      rootLayout.verticalSpacing = 0;
-      root.setLayout(rootLayout);
+        // bad smells table
+        createTreeViewer(root);
+        createColumns();
+        createSorter();
+        createFilter();
+        createProvider();
 
-      // bad smells table
-      createTreeViewer(root);
-      createColumns();
-      createSorter();
-      createFilter();
-      createProvider();
+        this.viewer.setLabelProvider(this.labelProvider);
+        this.viewer.setContentProvider(this.contentProvider);
 
-      this.viewer.setLabelProvider(this.labelProvider);
-      this.viewer.setContentProvider(this.contentProvider);
+        // register viewer as selection provider
+        getSite().setSelectionProvider(this.viewer);
 
-      // register viewer as selection provider
-      getSite().setSelectionProvider(this.viewer);
+        createContextMenu();
 
-      createContextMenu();
+    }
 
-   }
+    /**
+     * Creates the tree viewer.
+     * @param root composite root element
+     */
+    protected void createTreeViewer(final Composite root) {
+        this.viewer = new TreeViewer(root, SWT.FULL_SELECTION | SWT.SINGLE);
+        this.viewer.getTree().setLinesVisible(true);
+        this.viewer.getTree().setHeaderVisible(true);
+        this.viewer.getTree().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+    }
 
+    /**
+     * Creates context menu.
+     */
+    private void createContextMenu() {
+        MenuManager menuMgr = new MenuManager();
 
-   protected void createTreeViewer(final Composite root)
-   {
-      this.viewer = new TreeViewer(root, SWT.FULL_SELECTION | SWT.SINGLE);
-      this.viewer.getTree().setLinesVisible(true);
-      this.viewer.getTree().setHeaderVisible(true);
-      this.viewer.getTree().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-   }
+        // Create menu.
+        Menu menu = menuMgr.createContextMenu(this.viewer.getControl());
+        this.viewer.getControl().setMenu(menu);
 
+        // Register menu for extension.
+        getSite().registerContextMenu(menuMgr, this.viewer);
+    }
 
-   private void createContextMenu()
-   {
-      MenuManager menuMgr = new MenuManager();
+    /**
+     * no sorter.
+     */
+    public void createSorter() {
+        // no sorter
+    }
 
-      // Create menu.
-      Menu menu = menuMgr.createContextMenu(this.viewer.getControl());
-      this.viewer.getControl().setMenu(menu);
+    /**
+     * no filter.
+     */
+    public void createFilter() {
+        // no filter
+    }
 
-      // Register menu for extension.
-      getSite().registerContextMenu(menuMgr, this.viewer);
-   }
+    /**
+     * Creates provider.
+     */
+    public abstract void createProvider();
 
+    /**
+     * Creates columns.
+     */
+    public abstract void createColumns();
 
-   public void createSorter()
-   {
-      // no sorter
-   }
+    /**
+     * sets input.
+     * @param input input object
+     */
+    public void setInput(final Object input) {
+        this.viewer.setInput(input);
+    }
 
+    @Override
+    public void setFocus() {
+        this.viewer.getControl().setFocus();
+    }
 
-   public void createFilter()
-   {
-      // no filter
-   }
+    /**
+     * Returns the relevance results.
+     * @return relevance results
+     */
+    public RelevanceResults<T> getRelevanceResults() {
+        return this.relevanceResults;
+    }
 
-
-   abstract public void createProvider();
-
-
-   abstract public void createColumns();
-
-
-   public void setInput(final Object input)
-   {
-      this.viewer.setInput(input);
-   }
-
-
-   @Override
-   public void setFocus()
-   {
-      this.viewer.getControl().setFocus();
-   }
-
-
-   public RelevanceResults<T> getRelevanceResults()
-   {
-      return this.relevanceResults;
-   }
-
-
-   public void setRelevanceResults(RelevanceResults<T> relevanceResults)
-   {
-      this.relevanceResults = relevanceResults;
-   }
-
+    /**
+     * Sets the relevance results.
+     * @param relevanceResults relevance results
+     */
+    public void setRelevanceResults(RelevanceResults<T> relevanceResults) {
+        this.relevanceResults = relevanceResults;
+    }
 
 }

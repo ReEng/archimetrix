@@ -5,18 +5,23 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 /**
- * The activator class controls the plug-in life cycle
+ * The activator class controls the plug-in life cycle.
  */
 public class RelevanceAnalysisUIPlugin extends AbstractUIPlugin {
 
-	// The plug-in ID
-	public static final String PLUGIN_ID = "org.archimetrix.relevanceanalysis.ui"; //$NON-NLS-1$
+    /**
+     * The plugin id.
+     */
+	public static final String PLUGIN_ID =
+	        "org.archimetrix.relevanceanalysis.ui"; //$NON-NLS-1$
 
-	// The shared instance
+	/**
+	 * The shared instance.
+	 */
 	private static RelevanceAnalysisUIPlugin plugin;
 	
 	/**
-	 * The constructor
+	 * The constructor.
 	 */
 	public RelevanceAnalysisUIPlugin() {
 	}
@@ -25,6 +30,11 @@ public class RelevanceAnalysisUIPlugin extends AbstractUIPlugin {
 	 * (non-Javadoc)
 	 * @see org.eclipse.ui.plugin.AbstractUIPlugin#start(org.osgi.framework.BundleContext)
 	 */
+	/**
+     * Starts the plugin.
+     * @param context bundle context
+     * @throws Exception exception
+     */
 	public void start(final BundleContext context) throws Exception {
 		super.start(context);
 		plugin = this;
@@ -34,13 +44,18 @@ public class RelevanceAnalysisUIPlugin extends AbstractUIPlugin {
 	 * (non-Javadoc)
 	 * @see org.eclipse.ui.plugin.AbstractUIPlugin#stop(org.osgi.framework.BundleContext)
 	 */
+	/**
+     * Stops the plugin.
+     * @param context bundle context
+     * @throws Exception exception
+     */
 	public void stop(final BundleContext context) throws Exception {
 		plugin = null;
 		super.stop(context);
 	}
 
 	/**
-	 * Returns the shared instance
+	 * Returns the shared instance.
 	 *
 	 * @return the shared instance
 	 */
@@ -50,7 +65,7 @@ public class RelevanceAnalysisUIPlugin extends AbstractUIPlugin {
 
 	/**
 	 * Returns an image descriptor for the image file at the given
-	 * plug-in relative path
+	 * plug-in relative path.
 	 *
 	 * @param path the path
 	 * @return the image descriptor

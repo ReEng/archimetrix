@@ -10,37 +10,53 @@ import org.eclipse.swt.widgets.Composite;
 
 
 /**
- * The AbstractTreeViewerPage is an adequate super class for wizard pages that consist of a tree
+ * The AbstractTreeViewerPage is an adequate super class for
+ * wizard pages that consist of a tree
  * viewer.
- * 
+ *
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
- * 
+ *
  */
-public abstract class AbstractTreeViewerPage extends WizardPage
-{
-   protected TreeViewer viewer;
+public abstract class AbstractTreeViewerPage extends WizardPage {
 
-   protected Resource selection;
+/**
+ * Tree viewer.
+ */
+    private TreeViewer viewer;
+/**
+ * get method the viewer.
+ * @return viewer
+ */
+    public TreeViewer getViewer() {
+        return this.viewer;
+    }
+/**
+ * Selected resource.
+ */
+   private Resource selection;
 
-
-   protected AbstractTreeViewerPage(final String pageName)
-   {
+/**
+ * the constructor.
+ * @param pageName name of the page (string)
+ */
+   protected AbstractTreeViewerPage(final String pageName) {
       super(pageName);
    }
 
-
-   protected Resource getSelection()
-   {
+/**
+ * get method for selected resource.
+ * @return selection selected resource
+ */
+   protected Resource getSelection() {
       return this.selection;
    }
 
-
-   protected void setSelection(final Resource selection)
-   {
-      if (this.selection != null && this.selection != selection)
-      {
+/**
+ * Sets the selected resource.
+ * @param selection selected resource
+ */
+   protected void setSelection(final Resource selection) {
+      if (this.selection != null && this.selection != selection) {
          // important, otherwise an old resource will be loaded together
          // with the selected resource and also will be analyzed
          this.selection.unload();
@@ -52,8 +68,7 @@ public abstract class AbstractTreeViewerPage extends WizardPage
 
 
    @Override
-   public void createControl(final Composite parent)
-   {
+   public void createControl(final Composite parent) {
       Composite composite = new Composite(parent, parent.getStyle());
       composite.setLayout(new FillLayout());
       this.viewer = new TreeViewer(composite);

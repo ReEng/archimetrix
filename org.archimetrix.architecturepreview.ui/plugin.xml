@@ -32,12 +32,12 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="org.archimetrix.architectureprognosis.ui.handler.ArchitecturePrognosisStartingHandler"
+            defaultHandler="org.archimetrix.architecturepreview.ui.handler.ArchitecturePreviewStartingHandler"
             id="architectureprognosis.start"
             name="Architecture Preview">
       </command>
       <command
-            defaultHandler="org.archimetrix.architectureprognosis.ui.handler.ArchitecturePrognosisStartingFromRelevantBadSmellsViewHandler"
+            defaultHandler="org.archimetrix.architecturepreview.ui.handler.ArchitecturePreviewStartingFromRelevantBadSmellsViewHandler"
             id="architectureprognosis.startFromRelevantBadSmellsView"
             name="Architecture Preview">
       </command>
@@ -46,7 +46,7 @@
          point="org.eclipse.ui.views">
       <view
             category="org.archimetrix.views"
-            class="org.archimetrix.architectureprognosis.ui.views.ArchitecturePrognosisView"
+            class="org.archimetrix.architecturepreview.ui.views.ArchitecturePreviewView"
             icon="icons/architectureprognosis.png"
             id="org.archimetrix.architectureprognosis.ui.architecturePrognosisView"
             name="Architecture Preview View"

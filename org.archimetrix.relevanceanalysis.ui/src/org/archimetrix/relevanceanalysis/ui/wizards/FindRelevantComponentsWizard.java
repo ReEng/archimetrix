@@ -1,6 +1,5 @@
 package org.archimetrix.relevanceanalysis.ui.wizards;
 
-
 import metricvalues.MetricValuesModel;
 
 import org.archimetrix.commons.ResourceLoader;
@@ -23,151 +22,163 @@ import org.eclipse.ui.IViewPart;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
-
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
-import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorPackage;
-import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorRepository;
-
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorPackage;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 
 /**
  * This class represents the wizard that is used to start the component relevance analysis. It
  * consists of one page: the FindRelevantComponentsWizardPage.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
-public class FindRelevantComponentsWizard extends Wizard
-{
+public class FindRelevantComponentsWizard extends Wizard {
 
-   private static final class ComponentRelevanceAnalysisJob extends Job
-   {
-      private final String metricValuesPath;
+    /**
+     * 
+     * the job subclass.
+     *
+     */
+    private static final class ComponentRelevanceAnalysisJob extends Job {
+        /**
+         * metric values path.
+         */
+        private final String metricValuesPath;
 
-      private final String scdPath;
+        /**
+         * source code decorator path.
+         */
+        private final String scdPath;
 
-      private Object analysisResult;
+        /**
+         * analysis results.
+         */
+        private Object analysisResult;
 
+        /**
+         * the constructor.
+         * @param name name
+         * @param metricValuesPath metric values path
+         * @param scdPath source code decorator path
+         */
+        private ComponentRelevanceAnalysisJob(final String name, final String metricValuesPath, final String scdPath) {
+            super(name);
+            this.metricValuesPath = metricValuesPath;
+            this.scdPath = scdPath;
+        }
 
-      private ComponentRelevanceAnalysisJob(final String name, final String metricValuesPath, final String scdPath)
-      {
-         super(name);
-         this.metricValuesPath = metricValuesPath;
-         this.scdPath = scdPath;
-      }
+        @Override
+        protected IStatus run(final IProgressMonitor monitor) {
+            // TODO: use monitor better
+            monitor.beginTask(JOB_NAME, 100);
+            Resource scdRes = ResourceLoader.loadResource(this.scdPath);
+            Resource metricValuesRes = ResourceLoader.loadResource(this.metricValuesPath);
+            MetricValuesModel metricValuesModel = (MetricValuesModel) metricValuesRes.getContents().get(0);
+            SourceCodeDecoratorRepository scdModel = (SourceCodeDecoratorRepository) scdRes.getContents().get(0);
+            AbstractRelevanceAnalysis analysis = new RelevantComponentAnalysis(scdModel, metricValuesModel);
+            monitor.worked(10);
+            analysis.startAnalysis();
+            monitor.worked(89);
+            RelevanceResults<ComponentImplementingClassesLink> result = analysis.getResult();
+            RelevanceResultsStorage.storeRelevantComponents(scdRes, result);
+            this.analysisResult = result;
+            monitor.done();
+            return Status.OK_STATUS;
+        }
 
+        /**
+         * returns the analysis result.
+         * @return analysis result
+         */
+        public Object getAnalysisResult() {
+            return this.analysisResult;
+        }
+    }
 
-      @Override
-      protected IStatus run(final IProgressMonitor monitor)
-      {
-         // TODO: use monitor better
-         monitor.beginTask(JOB_NAME, 100);
-         Resource scdRes = ResourceLoader.loadResource(this.scdPath);
-         Resource metricValuesRes = ResourceLoader.loadResource(this.metricValuesPath);
-         MetricValuesModel metricValuesModel = (MetricValuesModel) metricValuesRes.getContents().get(0);
-         SourceCodeDecoratorRepository scdModel = (SourceCodeDecoratorRepository) scdRes.getContents().get(0);
-         AbstractRelevanceAnalysis analysis = new RelevantComponentAnalysis(scdModel, metricValuesModel);
-         monitor.worked(10);
-         analysis.startAnalysis();
-         monitor.worked(89);
-         RelevanceResults<ComponentImplementingClassesLink> result = analysis.getResult();
-         RelevanceResultsStorage.storeRelevantComponents(scdRes, result);
-         this.analysisResult = result;
-         monitor.done();
-         return Status.OK_STATUS;
-      }
+    /**
+     * page title string.
+     */
+    private static final String PAGE_TITLE = "Find Relevant Components";
 
+    /**
+     * job name string.
+     */
+    private static final String JOB_NAME = "Component Relevance Analysis";
 
-      public Object getAnalysisResult()
-      {
-         return this.analysisResult;
-      }
-   }
+    /**
+     * Find relevant components wizard page string.
+     */
+    protected FindRelevantComponentsWizardPage page;
 
+    /**
+     * the constructor.
+     */
+    public FindRelevantComponentsWizard() {
+        super();
 
-   private static final String PAGE_TITLE = "Find Relevant Components";
+        SourceCodeDecoratorPackage.eINSTANCE.eClass();
 
-   private static final String JOB_NAME = "Component Relevance Analysis";
+        setWindowTitle(PAGE_TITLE);
 
-   protected FindRelevantComponentsWizardPage page;
+        IDialogSettings settings = RelevanceAnalysisUIPlugin.getDefault().getDialogSettings();
+        IDialogSettings section = settings.getSection(getClass().getCanonicalName());
+        if (section == null) {
+            section = settings.addNewSection(getClass().getCanonicalName());
+        }
+        setDialogSettings(section);
+    }
 
+    @Override
+    public boolean performFinish() {
+        storePageSettings();
 
-   public FindRelevantComponentsWizard()
-   {
-      super();
+        final String metricValuesPath = this.page.getMetricValuesFilePath();
+        final String scdPath = this.page.getSCDFilePath();
 
-      SourceCodeDecoratorPackage.eINSTANCE.eClass();
+        final ComponentRelevanceAnalysisJob job = new ComponentRelevanceAnalysisJob(JOB_NAME, metricValuesPath, scdPath);
+        job.setUser(true);
+        job.schedule();
+        job.addJobChangeListener(new JobChangeAdapter() {
+            public void done(final org.eclipse.core.runtime.jobs.IJobChangeEvent event) {
+                Display.getDefault().asyncExec(new Runnable() {
+                    @Override
+                    public void run() {
+                        Object results = job.getAnalysisResult();
+                        showResultView(results);
+                    }
+                });
 
-      setWindowTitle(PAGE_TITLE);
+            }
+        });
+        return true;
+    }
 
-      IDialogSettings settings = RelevanceAnalysisUIPlugin.getDefault().getDialogSettings();
-      IDialogSettings section = settings.getSection(getClass().getCanonicalName());
-      if (section == null)
-      {
-         section = settings.addNewSection(getClass().getCanonicalName());
-      }
-      setDialogSettings(section);
-   }
+    /**
+     * displays the result view.
+     * @param results results
+     */
+    private void showResultView(final Object results) {
+        IWorkbenchPage activePage = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
+        try {
+            IViewPart relevantComponentsView = activePage.showView(RelevantComponentsView.ID);
+            ((RelevantComponentsView) relevantComponentsView).setInput(results);
+            relevantComponentsView.setFocus();
+        } catch (PartInitException e) {
+            e.printStackTrace();
+        }
+    }
 
+    /**
+     * stores the page settings.
+     */
+    protected void storePageSettings() {
+        this.page.saveSettings();
+    }
 
-   @Override
-   public boolean performFinish()
-   {
-      storePageSettings();
-
-      final String metricValuesPath = this.page.getMetricValuesFilePath();
-      final String scdPath = this.page.getSCDFilePath();
-
-      final ComponentRelevanceAnalysisJob job = new ComponentRelevanceAnalysisJob(JOB_NAME, metricValuesPath, scdPath);
-      job.setUser(true);
-      job.schedule();
-      job.addJobChangeListener(new JobChangeAdapter()
-      {
-         public void done(final org.eclipse.core.runtime.jobs.IJobChangeEvent event)
-         {
-            Display.getDefault().asyncExec(new Runnable()
-            {
-               @Override
-               public void run()
-               {
-                  Object results = job.getAnalysisResult();
-                  showResultView(results);
-               }
-            });
-
-         }
-      });
-      return true;
-   }
-
-
-   private void showResultView(final Object results)
-   {
-      IWorkbenchPage activePage = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
-      try
-      {
-         IViewPart relevantComponentsView = activePage.showView(RelevantComponentsView.ID);
-         ((RelevantComponentsView) relevantComponentsView).setInput(results);
-         relevantComponentsView.setFocus();
-      }
-      catch (PartInitException e)
-      {
-         e.printStackTrace();
-      }
-   }
-
-
-   protected void storePageSettings()
-   {
-      this.page.saveSettings();
-   }
-
-
-   @Override
-   public void addPages()
-   {
-      this.page = new FindRelevantComponentsWizardPage(PAGE_TITLE);
-      addPage(this.page);
-   }
+    @Override
+    public void addPages() {
+        this.page = new FindRelevantComponentsWizardPage(PAGE_TITLE);
+        addPage(this.page);
+    }
 }

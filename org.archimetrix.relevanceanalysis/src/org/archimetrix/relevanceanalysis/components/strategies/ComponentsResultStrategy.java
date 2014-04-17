@@ -1,27 +1,26 @@
 package org.archimetrix.relevanceanalysis.components.strategies;
 
-
 import org.archimetrix.relevanceanalysis.RelevanceResults;
-
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
-
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 
 /**
  * A super class for result strategies of the component relevance analysis.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
-public abstract class ComponentsResultStrategy implements IComponentsStrategy
-{
+public abstract class ComponentsResultStrategy implements IComponentsStrategy {
 
-   protected RelevanceResults<ComponentImplementingClassesLink> relevanceResults;
+    /**
+     * Relevance results.
+     */
+    protected RelevanceResults<ComponentImplementingClassesLink> relevanceResults;
 
-
-   public void setRelevanceResults(RelevanceResults<ComponentImplementingClassesLink> relevanceResults)
-   {
-      this.relevanceResults = relevanceResults;
-   }
+    /**
+     * Sets the relevance results.
+     * @param relevanceResults relevance results
+     */
+    public void setRelevanceResults(RelevanceResults<ComponentImplementingClassesLink> relevanceResults) {
+        this.relevanceResults = relevanceResults;
+    }
 }

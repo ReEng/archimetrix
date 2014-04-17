@@ -1,0 +1,1949 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="gast"
+    nsURI="http://www.fzi.de/gast" nsPrefix="gast">
+  <eSubpackages name="statements" nsURI="http://www.fzi.de/gast/statements" nsPrefix="statements">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This package contains all classes and interfaces which belong to the statement hierarchy or are otherwise related to it. Statements describe the control flow within a function body."/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="ExceptionHandler" eSuperTypes="#//statements/Statement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents handlings of exceptions. A typical exception handling consists of a guarded block, also known as try block, and several catch blocks. An optional finally block can be contained."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="catchBlocks" ordered="false"
+          upperBound="-1" eType="#//statements/CatchBlock" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of the catch blocks of this exception handler."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="finallyBlock" ordered="false"
+          eType="#//statements/BlockStatement" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the finally block of this exception handler. If there is no finally block then this property will be &quot;null&quot;."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="guardedBlock" ordered="false"
+          lowerBound="1" eType="#//statements/BlockStatement" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the block statement which is guarded by this exception handler."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Statement" abstract="true" eSuperTypes="#//core/SourceEntity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The Statement class is the root of the statement hierarchy and represents a statement, which can occur inside a function body. Non-local class declarations, imports and other object-oriented language statements, which cannot occur inside a function body, are not modelled."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="accesses" ordered="false"
+          upperBound="-1" eType="#//accesses/BaseAccess" containment="true" eOpposite="#//accesses/BaseAccess/parentStatement">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of accesses within this statement."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="cloneInstance" ordered="false"
+          eType="#//annotations/CloneInstance" eOpposite="#//annotations/CloneInstance/statements"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="blockstatement" ordered="false"
+          eType="#//statements/BlockStatement" eOpposite="#//statements/BlockStatement/statements"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingStatement"
+          ordered="false" eType="#//statements/Statement" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the surrounding statement of this statement. If there is no surrounding statement this property is &quot;null&quot;."/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfStatements" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the number of statements within this statement."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximumNestingLevel"
+          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the maximum nesting level of the control-flow structure within the statement, with respect to the depth of encapsulation of statements. "/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfComments" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the number of comments attached to this statement."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="linesOfCode" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the number of code lines that belong to this statement."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfEdgesInCFG" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the number of edges in the control-flow graph of the statement."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfNodesInCFG" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the number of nodes in the control-flow graph of the statement."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="branch" ordered="false"
+          eType="#//statements/Branch" eOpposite="#//statements/Branch/statement"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="loopstatement" ordered="false"
+          eType="#//statements/LoopStatement" eOpposite="#//statements/LoopStatement/body"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BlockStatement" eSuperTypes="#//statements/Statement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The BlockStatement class models a composition statement or a function body. It also represents synchronized blocks."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="synchronized" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this block statement represents a synchronized block."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="statements" ordered="false"
+          upperBound="-1" eType="#//statements/Statement" containment="true" eOpposite="#//statements/Statement/blockstatement">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is an ordered list of statements inside this block statement."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingFunction"
+          ordered="false" eType="#//functions/Function" eOpposite="#//functions/Function/body">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="If this block statement is a function body this is property is a reference to the function. Otherwise it is &quot;null&quot;."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Branch" eSuperTypes="#//core/SourceEntity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a branch of a BranchStatement."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conditionExpression"
+          ordered="false" eType="#//statements/GASTExpression" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="&lt;p>&#xD;&#xA;    This&amp;nbsp;property&amp;nbsp;represents&amp;nbsp;the&amp;nbsp;condition&amp;nbsp;expression&amp;nbsp;for&amp;nbsp;this&amp;nbsp;branch. Set to&#xD;&#xA;    optional only due to tool support: Expressions are currently not always extracted.&#xD;&#xA;&lt;/p>"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="branchstatement" ordered="false"
+          lowerBound="1" eType="#//statements/BranchStatement" eOpposite="#//statements/BranchStatement/branches"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="statement" ordered="false"
+          lowerBound="1" eType="#//statements/Statement" containment="true" eOpposite="#//statements/Statement/branch">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the statement which represents the body of this branch."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GASTExpression" abstract="true" eSuperTypes="#//core/SourceEntity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class is the root class of the expression hierarchy."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BranchStatement" eSuperTypes="#//statements/Statement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class models a branch, also known as selection statements or conditional statements. Typical examples are if statements or switch statements. "/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="branches" ordered="false"
+          lowerBound="1" upperBound="-1" eType="#//statements/Branch" containment="true"
+          eOpposite="#//statements/Branch/branchstatement">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of branches."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="LoopStatement" eSuperTypes="#//statements/Statement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The LoopStatement class models all kinds of looping statements, which can occur in considered object-oriented programming languages, e. g. for, while, do-while or foreach. "/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" ordered="false"
+          lowerBound="1" eType="#//statements/LoopStatementKind"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="breakConditionExpression"
+          ordered="false" eType="#//statements/GASTExpression" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the expression which represents the break condition of this loop statement."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="initExpression" ordered="false"
+          eType="#//statements/GASTExpression" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the initialization expression of the loop. This property is optional."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="incrementExpression"
+          ordered="false" eType="#//statements/GASTExpression" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the incrementation expression of the loop. This property is optional."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="body" ordered="false"
+          lowerBound="1" eType="#//statements/Statement" containment="true" eOpposite="#//statements/Statement/loopstatement">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the statement which represents the body of this loop statement."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="LoopStatementKind">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This enumeration represents the kinds of loop statements."/>
+      </eAnnotations>
+      <eLiterals name="FOREACH">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This literal shows that a loop statement represents a for-each loop."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="WHILE" value="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This literal shows that a loop statement represents a while loop."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="DOWHILE" value="2">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This literal shows that a loop statement represents a do-while loop."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="FOR" value="3">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This literal shows that a loop statement represents a for loop."/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CatchBlock" eSuperTypes="#//statements/BlockStatement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a catch block. It extends the BlockStatement class and has a catch parameter."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="catchParameter" ordered="false"
+          lowerBound="1" eType="#//variables/CatchParameter" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the catch parameter for this catch block."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="JumpStatement" eSuperTypes="#//statements/Statement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class models all kinds of non-conditional jumps. Throwing of exceptions and return-statements are also categorized as non-conditional jumps. "/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" ordered="false"
+          lowerBound="1" eType="#//statements/JumpStatementKind">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is a reference to the kind of the jump statement."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="expression" ordered="false"
+          eType="#//statements/GASTExpression" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a expression contained in this JumpStatement, e. g. body of a return statement, such as &quot;a+b&quot; in &quot;return a+b;&quot;."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="JumpStatementKind">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This enumeration represents the kinds of jump statements."/>
+      </eAnnotations>
+      <eLiterals name="JUMP" value="74">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This literal shows that a statement represents a local jump within the same function body. Typical examples are break, continue, goto, etc."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="RETURN" value="73">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This literal shows that a statement represents a return statement of a function."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="THROW" value="72">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This literal shows that this statement represents the throwing of an exception."/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SimpleStatement" eSuperTypes="#//statements/Statement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The SimpleStatement class represents a statement, whose control-flow is a linear sequence, for example variable assignments.&#xD;&#xA;"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="expression" ordered="false"
+          eType="#//statements/GASTExpression" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents an expression contained in the statement."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GASTBehaviour">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents the behaviour of a service described by G-AST meta-model. It enables description of service behaviour in terms of control-flow and data-flow via model elements of the G-AST meta-model."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="blockstatement" ordered="false"
+          lowerBound="1" eType="#//statements/BlockStatement">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the blockstatement. The control-flow of the behaviour is modelled via the statement structure."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="core" nsURI="http://www.fzi.de/gast/core" nsPrefix="core">
+    <eClassifiers xsi:type="ecore:EClass" name="BasePath" eSuperTypes="#//core/ModelElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The plattform spefic root path containing the software internal directories. Instances of this element encapsulate the&#xD;&#xA;absolute path on the file system to the top level directory of the implementation of the software represented in the GAST&#xD;&#xA;model."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="root" ordered="false"
+          lowerBound="1" eType="#//core/Root" eOpposite="#//core/Root/basePaths"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="directories" ordered="false"
+          upperBound="-1" eType="#//core/Directory" containment="true" eOpposite="#//core/Directory/basePath">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of directories."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelElement" abstract="true" eSuperTypes="#//core/Identifier">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This entity is a super class for all classes which are part of the model. It helps to ensure that each model element can be identified by a unique identifier."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="annotations" ordered="false"
+          upperBound="-1" eType="#//annotations/ModelAnnotation" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Collection with references to the model annotations annotating this model element."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" ordered="false"
+          lowerBound="1" eType="#//core/Status">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Contains the status of the model element. It can contain the following values: &quot;normal&quot; for model elements which are extracted from source code, &quot;library&quot; for model elements which are extracted from a library, &quot;implicit&quot; for model elements which are implicitly specified in source code and &quot;failed dependency&quot; for model elements which have no definition either in source code nor in a library."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="sissyId" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Contains&amp;nbsp;the&amp;nbsp;unique&amp;nbsp;identifier&amp;nbsp;of&amp;nbsp;a&amp;nbsp;model&amp;nbsp;element&amp;nbsp;which&amp;nbsp;is&amp;nbsp;set&amp;nbsp;by&amp;nbsp;SISSy.&amp;nbsp;This&#xD;&#xA;is a technical ID which might differe for the same artifact if a software is processed twice. Due to this, it can not be&#xD;&#xA;used to compare two GAST models of the same software or software versions."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Identifier" abstract="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Identifiers are not fixed to one realization.&#xD;&#xA;GUIDs are recommend. GUIDs are described in their own model. See GUIDModel (GUID.emx).&#xD;&#xA;Identifier implementations can be found in external projects only."/>
+      </eAnnotations>
+      <eOperations name="idHasToBeUnique" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Identifier.allInstances()->isUnique(p | p.id)"/>
+        </eAnnotations>
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          iD="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A UUID (Universal Unique IDentifier) for the model element."/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+          <details key="namespace" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NamedModelElement" abstract="true"
+        eSuperTypes="#//core/ModelElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This entity is a super class for all model elements which have a declared name or identifier."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="simpleName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Represents the simple name of this model element."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Package" eSuperTypes="#//core/NamedModelElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a package or a namespace."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allLocalClasses" ordered="false"
+          upperBound="-1" eType="#//types/GASTClass" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allInnerClasses" ordered="false"
+          upperBound="-1" eType="#//types/GASTClass" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allNormalClasses" ordered="false"
+          upperBound="-1" eType="#//types/GASTClass" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allInterfaces" ordered="false"
+          upperBound="-1" eType="#//types/GASTClass" changeable="false" volatile="true"
+          transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allAccesses" ordered="false"
+          upperBound="-1" eType="#//accesses/Access" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="delegates" ordered="false"
+          upperBound="-1" eType="#//functions/Delegate" containment="true" eOpposite="#//functions/Delegate/surroundingPackage">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all delegates which are directly defined in this package."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="globalFunctions" ordered="false"
+          upperBound="-1" eType="#//functions/GlobalFunction" containment="true" eOpposite="#//functions/GlobalFunction/surroundingPackage">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all global functions which are directly defined in this package."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="globalVariables" ordered="false"
+          upperBound="-1" eType="#//variables/GlobalVariable" containment="true" eOpposite="#//variables/GlobalVariable/surroundingPackage">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all global variables which are directly defined in this package."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="root" ordered="false"
+          eType="#//core/Root" eOpposite="#//core/Root/packages"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="linesOfComments" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          changeable="false" volatile="true" transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="linesOfCode" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          changeable="false" volatile="true" transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualifiedName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          changeable="false" volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the fully qualified name of this package."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="classes" ordered="false"
+          upperBound="-1" eType="#//types/GASTClass" containment="true" eOpposite="#//types/GASTClass/surroundingPackage">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all classes contained in this package. Does not contain classes which are located in subpackages."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subPackages" ordered="false"
+          upperBound="-1" eType="#//core/Package" containment="true" eOpposite="#//core/Package/surroundingPackage">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all packages which are contained in this package."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingPackage" ordered="false"
+          eType="#//core/Package" eOpposite="#//core/Package/subPackages">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the surrounding package of this package."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allAccessedPackages"
+          ordered="false" upperBound="-1" eType="#//core/Package" changeable="false"
+          volatile="true" transient="true" derived="true">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="typeAliases" ordered="false"
+          upperBound="-1" eType="#//types/TypeAlias" containment="true" eOpposite="#//types/TypeAlias/surroundingPackage">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all type aliases which are directly defined in this package."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GenericEntity" abstract="true" eSuperTypes="#//core/ModelElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class is the common base for generic function and generic class. Generic entities can have a set of type parameters."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="typeParameters" ordered="false"
+          upperBound="-1" eType="#//types/TypeParameterClass" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the type parameters of this generic entity."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Root" eSuperTypes="#//core/ModelElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class builds the root of the model. From here the navigation to all model elements is possible."/>
+      </eAnnotations>
+      <eOperations name="getPackageByName" ordered="false" lowerBound="1" eType="#//core/Package">
+        <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getPackageByQualifiedName" ordered="false" lowerBound="1"
+          eType="#//core/Package">
+        <eParameters name="qualifiedName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allAccesses" ordered="false"
+          upperBound="-1" eType="#//accesses/Access" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allInnerClasses" ordered="false"
+          upperBound="-1" eType="#//types/GASTClass" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allInterfaces" ordered="false"
+          upperBound="-1" eType="#//types/GASTClass" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allLocalClasses" ordered="false"
+          upperBound="-1" eType="#//types/GASTClass" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="namespace" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allNormalClasses" ordered="false"
+          upperBound="-1" eType="#//types/GASTClass" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="namespace" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allModelElements" ordered="false"
+          upperBound="-1" eType="#//core/ModelElement" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a collection which contains all model elements of the model."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="linesOfComments" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          changeable="false" volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the number of lines of comments within the system."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="linesOfCode" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          changeable="false" volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the number of lines of code within the system."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="globalVariables" ordered="false"
+          upperBound="-1" eType="#//variables/GlobalVariable" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all global variables."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="packages" ordered="false"
+          upperBound="-1" eType="#//core/Package" containment="true" eOpposite="#//core/Package/root">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all packages in the system. Packages which are contained in other packages are also listed here."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="clones" ordered="false"
+          upperBound="-1" eType="#//annotations/Clone" containment="true" eOpposite="#//annotations/Clone/root">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all clones in the system."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="structuralAbstractions"
+          ordered="false" upperBound="-1" eType="#//annotations/StructuralAbstraction"
+          containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all structural abstractions."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="types" ordered="false"
+          upperBound="-1" eType="#//types/GASTType" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all types defined or used in the system."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="danglingModelElements"
+          ordered="false" upperBound="-1" eType="#//core/ModelElement" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="basePaths" ordered="false"
+          upperBound="-1" eType="#//core/BasePath" containment="true" eOpposite="#//core/BasePath/root">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The base paths of the software where all files and directories of the software are located."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="globalFunctions" ordered="false"
+          upperBound="-1" eType="#//functions/GlobalFunction" containment="true" eOpposite="#//functions/GlobalFunction/root">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all global functions in the system."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Status">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This enumeration provides extraction status information of model elements. "/>
+      </eAnnotations>
+      <eLiterals name="NORMAL" value="161">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="It shows that a model element is properly extracted from the source code."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="LIBRARY" value="162">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="It shows that a model element is a part of a library."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="IMPLICIT" value="163">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="It shows that a model element is implicitly specified in the source code."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="FAILEDDEP" value="164">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="It shows that a model element cannot be resolved properly."/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Directory" eSuperTypes="#//core/NamedModelElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a directory in file system."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="fullQualifiedPath" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          changeable="false" volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="&lt;p>&#xD;&#xA;    The&amp;nbsp;full&amp;nbsp;qualified&amp;nbsp;path&amp;nbsp;of&amp;nbsp;the&amp;nbsp;directory within&amp;nbsp;the software.&lt;br />&#xD;&#xA;    This path includes all parent directories and identifies the relative position within the software.&#xD;&#xA;&lt;/p>"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="fileSystemPath" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          changeable="false" volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="&lt;p>&#xD;&#xA;    The absolute path of the directory within the file system.&lt;br />&#xD;&#xA;    This attribute is dynamically calculated and represent the plattform specific position of the directory within the file&#xD;&#xA;    system.&#xD;&#xA;&lt;/p>"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subDirectory" ordered="false"
+          upperBound="-1" eType="#//core/Directory" containment="true" eOpposite="#//core/Directory/parentDirectory">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents subdirectories of this directory."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parentDirectory" ordered="false"
+          eType="#//core/Directory" eOpposite="#//core/Directory/subDirectory">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the parent directory."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="files" ordered="false"
+          upperBound="-1" eType="#//core/File" containment="true" eOpposite="#//core/File/directory">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of files which are contained in a directory."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="basePath" ordered="false"
+          eType="#//core/BasePath" eOpposite="#//core/BasePath/directories">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The root path the top level directory is contained in."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="File" eSuperTypes="#//core/NamedModelElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents an analysed source file or an assembly file."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="root" ordered="false"
+          lowerBound="1" eType="#//core/Root" changeable="false" volatile="true" transient="true"
+          derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceFile" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this is source file."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="assemblyFile" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          changeable="false" volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if it is a compiled unit (compiled assembly, JAR file or delphi package)."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="importedTypes" ordered="false"
+          upperBound="-1" eType="#//types/GASTType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of types which are directly imported by this file."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="types" ordered="false"
+          upperBound="-1" eType="#//types/GASTType" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all types which are directly defined in this file."/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="globalVariables" ordered="false"
+          upperBound="-1" eType="#//variables/GlobalVariable" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all global variables which are directly defined in this file."/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="globalFunctions" ordered="false"
+          upperBound="-1" eType="#//functions/GlobalFunction" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all global functions which are directly defined in this file."/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="linesOfCode" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the Number of code lines. (What definiton of the lines of code metric actually is used depends on the extraction tools, for details please refer to the documentation of the extraction tools)"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This attribute represents the byte size of the file."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="fullQualifiedPath" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          changeable="false" volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="&lt;p>&#xD;&#xA;    This&amp;nbsp;property&amp;nbsp;represents&amp;nbsp;the&amp;nbsp;full qualified path of the file. It is derived from the fullqualified&#xD;&#xA;    name of the directory and the name of the file as specified by the simpleName attribute.&lt;br />&#xD;&#xA;    This path represents the absolute path within the software represented by the GAST mode.&#xD;&#xA;&lt;/p>"/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+          <details key="namespace" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="importedGlobalFunctions"
+          ordered="false" upperBound="-1" eType="#//functions/GlobalFunction">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of global functions which are directly imported by this file."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="importedGlobalVariables"
+          ordered="false" upperBound="-1" eType="#//variables/GlobalVariable">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of global variables which are directly imported by this file. "/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="importedPackages" ordered="false"
+          upperBound="-1" eType="#//core/Package">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of packages which are directly imported by this file."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="includedFiles" ordered="false"
+          upperBound="-1" eType="#//core/File">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of files which are directly imported by this file."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="fileSystemPath" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          changeable="false" volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The absolute path of the file in the file system. This is derived from the directory structure, the source path of the top&#xD;&#xA;level directory and the simple name of this file."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="directory" ordered="false"
+          lowerBound="1" eType="#//core/Directory" eOpposite="#//core/Directory/files">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the directory in which the given file is contained."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Position">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class contains information about the position of a model element within the source code."/>
+      </eAnnotations>
+      <eOperations name="EitherAssemblyFileOrSourceFileSet" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This OCL constraint ensures that either the assembly attribute or the sourceFile attribute is set.&#xD;&#xA;(self.assembly = null) xor (self.sourceFile = null)"/>
+        </eAnnotations>
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="endColumn" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the end column of the model element in source code."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="startColumn" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the start column of the model element in source code."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="endLine" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the end line of the model element in source code."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="startLine" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the start line of the model element in source code."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceFile" ordered="false"
+          eType="#//core/File">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the object which represents the file in which the model element is declared."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assembly" ordered="false"
+          eType="#//core/File">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the object which represents the compiled file in which the model element is declared."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceentity" ordered="false"
+          lowerBound="1" eType="#//core/SourceEntity" eOpposite="#//core/SourceEntity/position"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PackageAlias" eSuperTypes="#//core/Package">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents aliases for packages which are part of some object-oriented languages."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="aliasedPackage" ordered="false"
+          lowerBound="1" eType="#//core/Package">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the actual package which is aliased."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SourceEntity" abstract="true" eSuperTypes="#//core/ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="position" ordered="false"
+          eType="#//core/Position" containment="true" eOpposite="#//core/Position/sourceentity">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the position of this model entity in source code."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="annotations" nsURI="http://www.fzi.de/gast/annotations" nsPrefix="annotations">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This packages is for model annotations. By implementing the model annotation interfaces arbitrary information can be attached to model elements. Some special kinds of annotations are already provided in this package."/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="Attribute" eSuperTypes="#//types/GASTClass #//annotations/ModelAnnotation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class models class attributes. They are model annotations represented as special kind of interfaces."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Clone" eSuperTypes="#//core/ModelElement #//annotations/ModelAnnotation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a cloned statement sequence. It implements the ModelAnnotation interface, thus it can be attached to arbitrary model elements.&#xD;&#xA;Clones are repeated section in source code. Clone analyses tools can be used to detect clones in source code. Analyses results can be represented in a model instance by instances of this model element."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="cloneInstances" ordered="false"
+          lowerBound="1" upperBound="-1" eType="#//annotations/CloneInstance" containment="true"
+          eOpposite="#//annotations/CloneInstance/clone">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list with references to the clone instances belonging to this clone."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="root" ordered="false"
+          lowerBound="1" eType="#//core/Root" eOpposite="#//core/Root/clones">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is a reference to the model root."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CloneInstance" eSuperTypes="#//core/ModelElement #//annotations/ModelAnnotation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a clone instance."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="statements" ordered="false"
+          lowerBound="1" upperBound="-1" eType="#//statements/Statement" containment="true"
+          eOpposite="#//statements/Statement/cloneInstance">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a collection with references to the statements involved in this clone instance."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="clone" ordered="false"
+          lowerBound="1" eType="#//annotations/Clone" eOpposite="#//annotations/Clone/cloneInstances">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is a reference to the related clone."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="StructuralAbstraction" abstract="true"
+        eSuperTypes="#//core/NamedModelElement #//annotations/ModelAnnotation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class is the supertype for all structural abstractions. It implements the ModelAnnotation interface, thus it can be annotated to arbitrary model elements. Structural abstractions serve as a way to specify high-level structures in the software system like architectural patterns and styles."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Comment" eSuperTypes="#//core/SourceEntity #//annotations/ModelAnnotation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents comments in the program code."/>
+      </eAnnotations>
+      <eOperations name="OCLtodo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="self.todo == (self.todoCount > 0)"/>
+        </eAnnotations>
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          changeable="false" volatile="true" transient="true" unsettable="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if the comment contains TODO tags."/>
+          <details key="suppressedIsSetVisibility" value="true"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="formal" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this is a formal comment."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="todoCount" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the number of TODO, HACK or FIXME tags in this comment."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="texts" ordered="false"
+          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of contains comment lines."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Subsystem" eSuperTypes="#//annotations/StructuralAbstraction">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class enables grouping of model elements into subsystems. Subsystem is a more general term for a group of model elements following a certain purpose. It is a special kind of structural abstraction."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Layer" eSuperTypes="#//annotations/StructuralAbstraction">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents layers as special kind of a structural abstraction. Layers are a common architectural pattern. By applying appropriate extraction tools layer elements can be explicitly represented in a model instance."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelAnnotation" abstract="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class provides a way to attach arbitrary classes to model elements for annotation purposes."/>
+      </eAnnotations>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="types" nsURI="http://www.fzi.de/gast/types" nsPrefix="types">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This package contains all classes and interfaces which belong to the type hierarchy."/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="Reference" eSuperTypes="#//types/TypeDecorator">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class models a pointer (like in C++) or a reference. "/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referencedType" ordered="false"
+          lowerBound="1" eType="#//types/GASTType" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the referenced type."/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="explicit" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if it is a pointer and false if it is a reference."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TypeDecorator" abstract="true" eSuperTypes="#//types/GASTType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This entity is used to model derived types (like arrays) or type proxys."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="decoratedType" ordered="false"
+          lowerBound="1" eType="#//types/GASTType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the type which is decorated by this type decorator."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="undecoratedType" ordered="false"
+          lowerBound="1" eType="#//types/GASTType" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the innermost type which is decorated, which means all type decorators are removed. This property is derived from the chain of type decorators."/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GASTType" abstract="true" eSuperTypes="#//core/NamedModelElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This entity models the root of the type hierarchy. The type hierarchy represents the type system."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualifiedName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          changeable="false" volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the fully qualified name of this type."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="referenceType" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this type is a reference type. It is false if this type is value type."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GASTArray" eSuperTypes="#//types/TypeDecorator">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents an array. It implements the interface TypeDecorator."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseType" ordered="false"
+          lowerBound="1" eType="#//types/GASTType" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the base type of this array."/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="dimensions" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the number of dimensions of this array."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TypeAlias" eSuperTypes="#//types/Member #//types/TypeDecorator">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class models a type alias (e. g. typedef-constructs in C++)."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="aliasedType" ordered="false"
+          lowerBound="1" eType="#//types/GASTType" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the aliased type."/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="innerTypeAlias" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this type alias is an inner class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingClass" ordered="false"
+          eType="#//types/GASTClass" eOpposite="#//types/GASTClass/innerTypeAliases">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the class which contains this type alias."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingPackage" ordered="false"
+          eType="#//core/Package" eOpposite="#//core/Package/typeAliases">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the package which contains this type alias."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Member" abstract="true" eSuperTypes="#//core/SourceEntity">
+      <eOperations name="getSurroundingClass" ordered="false" lowerBound="1" eType="#//types/GASTClass"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibility" ordered="false"
+          lowerBound="1" eType="#//types/Visibilities"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="overriddenMember" ordered="false"
+          eType="#//types/Member"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="abstract" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this member is abstract."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="extern" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this member is a declaration of an external entity."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="final" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if the member is final which means it cannot be overridden or redefined."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="internal" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true when a member is accessible within its own assembly."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="introspectable" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this member is visible to introspection."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="override" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          changeable="false" volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this member overrides another member."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="static" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this member is static which means no object is necessary for accessing this member, but only the class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeParameterClassMember"
+          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          changeable="false" volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this member belongs to a type parameter class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="virtual" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this member is virtual."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Visibilities">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This enumeration models possible visibilities of class members. The exact semantics of these visibilities depends on the considered programming language."/>
+      </eAnnotations>
+      <eLiterals name="VISIBILITYSTRICTPROTECTED" value="147">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This literal shows that the visibility is strict protected."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="VISIBILITYPUBLIC" value="145">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This literal shows that the visibility is public."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="VISIBILITYPACKAGE" value="148">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This literal shows that the visibility is package scope."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="VISIBILITYPROTECTED" value="146">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This literal shows that the visibility is protected."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="VISIBILITYPRIVAT" value="149">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This literal shows that the visibility is privat scope."/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TypeParameterClass" eSuperTypes="#//types/GASTClass">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a type of a generic type parameter."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="typeBounds" ordered="false"
+          upperBound="-1" eType="#//types/GASTType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of type bounds of this type parameter class. These are the types which are bound to this type parameter when instantiating a generic class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GenericClass" eSuperTypes="#//types/GASTClass #//core/GenericEntity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a generic class. "/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GASTEnumeration" eSuperTypes="#//types/GASTClass">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a enumeration type."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GASTStruct" eSuperTypes="#//types/GASTClass">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a struct type, like it is present in C/C++."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GASTUnion" eSuperTypes="#//types/GASTClass">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a union type, like it is present in C/C++."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GASTClass" eSuperTypes="#//types/Member #//types/GASTType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents the class elements like they are known in the UML. It models classes, primitive types as well as interfaces."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="innerTypeAliases" ordered="false"
+          upperBound="-1" eType="#//types/TypeAlias" containment="true" eOpposite="#//types/TypeAlias/surroundingClass">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all type aliases declared in this class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="innerDelegates" ordered="false"
+          upperBound="-1" eType="#//functions/Delegate" containment="true" eOpposite="#//functions/Delegate/surroundingClass">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all delegates declared in this class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="constructors" ordered="false"
+          upperBound="-1" eType="#//functions/Constructor" containment="true" eOpposite="#//functions/Constructor/surroundingClass">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all constructors of this class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="destructors" ordered="false"
+          upperBound="-1" eType="#//functions/Destructor" containment="true" eOpposite="#//functions/Destructor/surroundingClass">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all destructors of this class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="fields" ordered="false"
+          upperBound="-1" eType="#//variables/Field" containment="true" eOpposite="#//variables/Field/surroundingClass">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all fields of this class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="methods" ordered="false"
+          upperBound="-1" eType="#//functions/Method" containment="true" eOpposite="#//functions/Method/surroundingClass">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all methods of this class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingFunction"
+          ordered="false" eType="#//functions/Function" eOpposite="#//functions/Function/localClasses"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingPackage" ordered="false"
+          eType="#//core/Package" eOpposite="#//core/Package/classes">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the package, in which this class is contained."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="superTypes" ordered="false"
+          upperBound="-1" eType="#//types/GASTClass" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents all direct super types of this class. It is derived from the inheritance hierarchy which is represented by inheritance type accesses."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="linesOfComments" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the number of comments within this class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="local" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          changeable="false" volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this class is a local class, which means that it is declared within a function body."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="primitive" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this class object represents a primitive type (e. g. int)."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="interface" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this class object represents an interface."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="anonymous" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this class is an anonymous class, which is declared without an explicit name."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="innerClasses" ordered="false"
+          upperBound="-1" eType="#//types/GASTClass" containment="true" eOpposite="#//types/GASTClass/surroundingClass">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all inner classes of this class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingClass" ordered="false"
+          eType="#//types/GASTClass" eOpposite="#//types/GASTClass/innerClasses">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the class in which this class is contained, only in the case of inner and local classes. Otherwise this property is &quot;null&quot;."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inheritanceTypeAccesses"
+          ordered="false" upperBound="-1" eType="#//accesses/InheritanceTypeAccess"
+          containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all direct inheritance relationships of this class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="self" ordered="false"
+          lowerBound="1" eType="#//variables/Field" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is a helping construct, which is used as a target for all explicit and implicit &quot;this&quot; and &quot;super&quot; accesses."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="friendClasses" ordered="false"
+          upperBound="-1" eType="#//types/GASTClass" containment="true" eOpposite="#//types/GASTClass/gastClass">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all friend classes of this class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="gastClass" ordered="false"
+          eType="#//types/GASTClass" eOpposite="#//types/GASTClass/friendClasses"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="friendFunctions" ordered="false"
+          upperBound="-1" eType="#//functions/Function" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all friend functions of this class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="property" ordered="false"
+          upperBound="-1" eType="#//variables/Property" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all properties of this class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allAccesses" ordered="false"
+          upperBound="-1" eType="#//accesses/Access" changeable="false" volatile="true"
+          transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allAccessedClasses" ordered="false"
+          upperBound="-1" eType="#//types/GASTClass" changeable="false" volatile="true"
+          transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="inner" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          changeable="false" volatile="true" transient="true" derived="true"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="accesses" nsURI="http://www.fzi.de/gast/accesses" nsPrefix="accesses">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This package contains all access types. Accesses represent relations between program elements like variable accesses, function calls, and type accesses. "/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterInstantiationTypeAccess"
+        eSuperTypes="#//accesses/TypeAccess">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class models a type access in the case of a type parameter instantiation."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TypeAccess" abstract="true" eSuperTypes="#//accesses/Access">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class is the root class for all type accesses. "/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetType" ordered="false"
+          lowerBound="1" eType="#//types/GASTType" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the reference to the accessed type."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="typeArguments" ordered="false"
+          upperBound="-1" eType="#//types/GASTType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of type arguments in case of an access to a generic type."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CastTypeAccess" eSuperTypes="#//accesses/TypeAccess">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents accesses to types due to a type cast. E. g. in case of (MyClass) var it represents a type access to MyClass."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CompositeAccess" eSuperTypes="#//accesses/BaseAccess">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class is a helping construct which represents function type arguments in the case of function calls. It bundles all accesses in the range of one function argument, e. g. in case of method call m(a, b+c) for each function argument one composite access is created. The first contains a variable access to a, the second contains variable accesses to b and c. This construct enables mapping of accesses to function arguments."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="accesses" ordered="false"
+          upperBound="-1" eType="#//accesses/BaseAccess" containment="true" eOpposite="#//accesses/BaseAccess/surroundingCompositeAccess">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a collection with references to all contained accesses."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BaseAccess" abstract="true" eSuperTypes="#//core/SourceEntity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Base class for complex accesses (the CompositeAccess) and access which directly have a target associated."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parentStatement" ordered="false"
+          eType="#//statements/Statement" eOpposite="#//statements/Statement/accesses"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingStatement"
+          ordered="false" eType="#//statements/Statement" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Reference to the statement, which contains the access."/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingClass" ordered="false"
+          lowerBound="1" eType="#//types/GASTClass" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Reference to the class in which this access is contained."/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+          <details key="namespace" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingFunction"
+          ordered="false" eType="#//functions/Function" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Reference to the function in which this access is contained."/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+          <details key="namespace" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingCompositeAccess"
+          ordered="false" eType="#//accesses/CompositeAccess" eOpposite="#//accesses/CompositeAccess/accesses">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="If the access is placed in a composite access this is a reference to the surrounding composite access. "/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DeclarationTypeAccess" eSuperTypes="#//accesses/TypeAccess">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class models variable and return type declarations."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="function" ordered="false"
+          eType="#//functions/Function" eOpposite="#//functions/Function/returnTypeDeclaration"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingVariable"
+          ordered="false" eType="#//variables/Variable" eOpposite="#//variables/Variable/typeDeclaration">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is a reference to the variable which is declared by this access."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ThrowTypeAccess" eSuperTypes="#//accesses/TypeAccess">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class models throws declarations. "/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="declared" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property shows, whether an exception is declared in a function signature or not. The accessed target is the type of exception."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DelegateAccess" eSuperTypes="#//accesses/FunctionAccess">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a special case of a function access. Due to the fact that delegates are able to act as &quot;multicast call forwarder&quot;, delegate accesses can have several target functions."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="accessedFunctions" ordered="false"
+          upperBound="-1" eType="#//functions/Function" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of possible functions accessed via this delegate access. Due to the dynamics of a delegate an exact list of called functions cannot be given. Thus a conservative approach is taken, that means a list of all possible functions is returned."/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="accessedDelegate" ordered="false"
+          lowerBound="1" eType="#//functions/Delegate" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the delegate which is accessed."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FunctionAccess" eSuperTypes="#//accesses/Access">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents function calls. The usage of operators (for example in C/C++) is modelled as function call as well."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="typeArguments" ordered="false"
+          upperBound="-1" eType="#//types/GASTType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This represents the list of the actual type arguments accessed in case of a generic function call."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetFunction" ordered="false"
+          lowerBound="1" eType="#//functions/Function" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This represents the reference to the accessed function."/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InheritanceTypeAccess" eSuperTypes="#//accesses/TypeAccess">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents references to types in the case of inheriting from a class or implementing of an interface. Hence the inheritance and interface implementation relationships are modelled by this class."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="implementationInheritance"
+          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The property is true if it is a private or protected inheritance relationship. It is false if it is a public inheritance relationship. "/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="VariableAccess" eSuperTypes="#//accesses/Access">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents accesses to variables. It can be distinguished between read and write access."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="write" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if it is a write access and false if it is a read access."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targetVariable" ordered="false"
+          lowerBound="1" eType="#//variables/Variable" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the reference to the accessed variable."/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RunTimeTypeAccess" eSuperTypes="#//accesses/TypeAccess">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class models type identification at runtime, e. g. with &quot;object instanceof Type&quot; (in Java)."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SelfAccess" eSuperTypes="#//accesses/VariableAccess">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class models &quot;this&quot; and &quot;super&quot; accesses."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="super" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this access models a &quot;super&quot; access. It is false if it is a &quot;this&quot; access."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="StaticTypeAccess" eSuperTypes="#//accesses/TypeAccess">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents the type access to the class or interface which is used as prefix while accessing a static attribute."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PropertyAccess" eSuperTypes="#//accesses/VariableAccess">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents accesses to properties. Since a property is modelled as a subtype of a variable, a property access is also modelled as a subtype of a variable access.&#xD;&#xA;A property access has two access targets. One target is the accessed method and the other target is the accessed field."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Access" abstract="true" eSuperTypes="#//accesses/BaseAccess">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class is the root of the access hierarchy. Accesses represent relationships between program elements, like function calls, variable accesses or type references."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="accessedClass" ordered="false"
+          lowerBound="1" eType="#//types/GASTClass" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Represents the class in which the access target is located. If the access target is a class itself it is returned."/>
+        </eAnnotations>
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value=""/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="accessedTarget" ordered="false"
+          lowerBound="1" eType="#//core/ModelElement">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Represents the accessed model element. It is the staticaly derivable model element, which means that polymorphy etc. is not resolved."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="functions" nsURI="http://www.fzi.de/gast/functions" nsPrefix="functions">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This package contains all classes and interfaces which represent the function hierarchy. "/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EEnum" name="GlobalFunctionKind">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This enumeration contains literals which describe the kinds of global functions."/>
+      </eAnnotations>
+      <eLiterals name="NORMAL" value="50">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Shows that it is a normal global function."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="UNITINITIALIZER" value="58">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Shows that a global function serves as unit initializer."/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="UNITFINALIZER" value="59">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Shows that a global function serves as unit finalizer."/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Delegate" eSuperTypes="#//functions/Function #//types/Member #//types/GASTType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a delegate which is a method to encapsulate one or more function pointers. "/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="innerDelegate" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this delegate is an inner class, which means that it is declared in the context of another class."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="superClass" ordered="false"
+          eType="#//types/GASTClass">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the common, direct super class of all delegates. This is the System.Delegate class, which is a part of the Common Language Infrastructure (CLI), Base Class Library (BCL)."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="invocations" ordered="false"
+          upperBound="-1" eType="#//functions/Function">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all functions which are called when this delegate is called."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingClass" ordered="false"
+          eType="#//types/GASTClass" eOpposite="#//types/GASTClass/innerDelegates">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the surrounding class of this delegate in the case of an inner delegate. Otherwise it is &quot;null&quot;."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingPackage" ordered="false"
+          eType="#//core/Package" eOpposite="#//core/Package/delegates">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the package in which this delegate is contained."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Constructor" eSuperTypes="#//functions/Function #//types/Member">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a constructor of class. A constructor is a function which is called during the instantiation of a class."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="initializer" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this method represents an initializer."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingClass" ordered="false"
+          lowerBound="1" eType="#//types/GASTClass" eOpposite="#//types/GASTClass/constructors">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the class which this constructor belongs to."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Destructor" eSuperTypes="#//functions/Function #//types/Member">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a destructor, which is called when an instance of its class is being deleted."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingClass" ordered="false"
+          lowerBound="1" eType="#//types/GASTClass" eOpposite="#//types/GASTClass/destructors">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the class which this destructor belongs to."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GenericFunction" eSuperTypes="#//functions/GlobalFunction #//core/GenericEntity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class models generic functions. It is derived from generic entity, which provides references to its type parameters."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GlobalFunction" eSuperTypes="#//functions/Function">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class models a global function. "/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingPackage" ordered="false"
+          eType="#//core/Package" eOpposite="#//core/Package/globalFunctions">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the package which contains this global function."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" ordered="false"
+          lowerBound="1" eType="#//functions/GlobalFunctionKind">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the kind of the global function. It can have the following values: &quot;NORMAL&quot; for a normal global function, &quot;UNITINITIALIZER&quot; for a global function which serves as unit initializer, &quot;UNITFINALIZER&quot; for a global function which serves as unit finalizer."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="root" ordered="false"
+          eType="#//core/Root" eOpposite="#//core/Root/globalFunctions"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Method" eSuperTypes="#//functions/Function #//types/Member">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a methods of a class. Constructors and destructors are modelled explicitly."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyMethod" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          changeable="false" volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this method represents a property accessor method."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingProperty"
+          ordered="false" eType="#//variables/Property">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="If this method is a property method this property represents a reference to the property. Otherwise it is &quot;null&quot;."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingClass" ordered="false"
+          lowerBound="1" eType="#//types/GASTClass" eOpposite="#//types/GASTClass/methods">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the class which contains this method."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GenericMethod" eSuperTypes="#//functions/Method #//core/GenericEntity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class models generic methods. It is derived from generic entity, which provides references to its type parameters."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GenericConstructor" eSuperTypes="#//functions/Constructor #//core/GenericEntity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Function" abstract="true" eSuperTypes="#//core/NamedModelElement #//core/SourceEntity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This is the common supertype for any kind of function. "/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="returnTypeDeclaration"
+          ordered="false" eType="#//accesses/DeclarationTypeAccess" containment="true"
+          eOpposite="#//accesses/DeclarationTypeAccess/function">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a TypeAccess which points to the declared return type of the function."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="formalParameters" ordered="false"
+          upperBound="-1" eType="#//variables/FormalParameter" containment="true"
+          eOpposite="#//variables/FormalParameter/surroundingFunction">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of the formal parameters of the function."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="localVariables" ordered="false"
+          upperBound="-1" eType="#//variables/LocalVariable" containment="true" eOpposite="#//variables/LocalVariable/surroundingFunction">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of local variables declared within this function."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allStatements" ordered="false"
+          upperBound="-1" eType="#//statements/Statement" changeable="false" volatile="true"
+          transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="throwTypeAccesses" ordered="false"
+          upperBound="-1" eType="#//accesses/ThrowTypeAccess">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of ThrowTypeAccesses of this function."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="accesses" ordered="false"
+          upperBound="-1" eType="#//accesses/Access" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of all accesses, which are contained within this function, inclusive ThrowTypeAccesses and return type declarations. It is derived from the statements within the function body and from the signature."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfStatements" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the number of statements within this function."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximumNestingLevel"
+          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the maximum nesting level of the control-flow structure within the function body, with respect to the depth of encapsulation of statements. "/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="linesOfComments" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the number of comment lines in this function."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="linesOfCode" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the number of code lines in this function."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfEdgesInCFG" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the number of edges in the control-flow graph of the function."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfNodesInCFG" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the number of nodes in the control-flow graph of the function."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if the function is an operator. Operators are modelled as functions and their usage is modelled as FunctionAccess."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="body" ordered="false"
+          eType="#//statements/BlockStatement" containment="true" eOpposite="#//statements/BlockStatement/surroundingFunction">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the BlockStatement which contains the function body. This property can be empty in case of an abstract function."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="localClasses" ordered="false"
+          upperBound="-1" eType="#//types/GASTClass" containment="true" eOpposite="#//types/GASTClass/surroundingFunction">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a list of local classes which are declared within this function."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="variables" nsURI="http://www.fzi.de/gast/variables" nsPrefix="variables">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This package contains all classes and interfaces which belong to the variable hierarchy. "/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="FormalParameter" eSuperTypes="#//variables/Variable">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a formal parameter of a function."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="passedByReference" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this parameter is passed by reference, it is false if it is passed by value."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingFunction"
+          ordered="false" lowerBound="1" eType="#//functions/Function" eOpposite="#//functions/Function/formalParameters">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the function this formal parameter belongs to."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Variable" abstract="true" eSuperTypes="#//core/NamedModelElement #//core/SourceEntity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class is the root of the variable hierarchy. "/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" ordered="false"
+          lowerBound="1" eType="#//types/GASTType" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the declared type of this variable. It is derived from typeDeclaration.getType()."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="const" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          unsettable="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if this variable is declared as constant."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="typeDeclaration" ordered="false"
+          eType="#//accesses/DeclarationTypeAccess" containment="true" eOpposite="#//accesses/DeclarationTypeAccess/surroundingVariable">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to a type access which points to the declared type of this variable."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CatchParameter" eSuperTypes="#//variables/Variable">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class models a parameter of a catch expression."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="rethrown" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if the exception, which is handled by this catch parameter is rethrown to the caller."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Field" eSuperTypes="#//types/Member #//variables/Variable">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents fields. They are class members."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyField" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property is true if it is a property field."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingClass" ordered="false"
+          eType="#//types/GASTClass" eOpposite="#//types/GASTClass/fields">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the class the field belongs to."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="LocalVariable" eSuperTypes="#//variables/Variable">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a local variable. Local variables are declared variables within a function body. "/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingFunction"
+          ordered="false" lowerBound="1" eType="#//functions/Function" eOpposite="#//functions/Function/localVariables">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the function in which the local variable is declared."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Property" eSuperTypes="#//variables/Field #//types/Member">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a property, which is basically a field with accessor methods."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="setter" ordered="false"
+          eType="#//functions/Method">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the &quot;set&quot; method of this property."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="getter" ordered="false"
+          eType="#//functions/Method">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the &quot;get&quot; method of this property."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GlobalVariable" eSuperTypes="#//variables/Variable">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This class represents a global variable. Since global variables are not declared within the context of another model element, they are primarily accessible via the root object of the model."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surroundingPackage" ordered="false"
+          eType="#//core/Package" eOpposite="#//core/Package/globalVariables">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents a reference to the package which contains the declaration of this global variable."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

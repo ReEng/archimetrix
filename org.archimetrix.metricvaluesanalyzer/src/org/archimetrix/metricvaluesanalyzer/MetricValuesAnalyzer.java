@@ -19,10 +19,9 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.somox.configuration.SoMoXConfiguration;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorPackage;
 
 import de.fzi.gast.core.corePackage;
-
-import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorPackage;
 
 
 public class MetricValuesAnalyzer

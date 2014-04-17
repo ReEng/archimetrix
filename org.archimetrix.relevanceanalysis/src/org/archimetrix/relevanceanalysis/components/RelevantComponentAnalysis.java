@@ -1,6 +1,5 @@
 package org.archimetrix.relevanceanalysis.components;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,95 +13,110 @@ import org.archimetrix.relevanceanalysis.components.strategies.ComplexityStrateg
 import org.archimetrix.relevanceanalysis.components.strategies.IComponentsStrategy;
 import org.archimetrix.relevanceanalysis.components.strategies.ParetoOptimalComponentsResultStrategy;
 import org.archimetrix.relevanceanalysis.components.strategies.VectorLengthComponentsResultStrategy;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 
-import eu.qimpress.sourcecodedecorator.ComponentImplementingClassesLink;
-import eu.qimpress.sourcecodedecorator.SourceCodeDecoratorRepository;
+/**
+ * 
+ * @author mcp
+ *
+ */
+public class RelevantComponentAnalysis extends AbstractRelevanceAnalysis<ComponentImplementingClassesLink> {
+    /**
+     * Source code decorator model.
+     */
+    private final SourceCodeDecoratorRepository scdModel;
 
+    /**
+     * List of strategies.
+     */
+    private List<IComponentsStrategy> relevanceStrategies;
 
-public class RelevantComponentAnalysis extends AbstractRelevanceAnalysis<ComponentImplementingClassesLink>
-{
-   private final SourceCodeDecoratorRepository scdModel;
+    /**
+     * the constructor.
+     * @param scdModel source code decrator model
+     * @param model metric values model
+     */
+    public RelevantComponentAnalysis(final SourceCodeDecoratorRepository scdModel, final MetricValuesModel model) {
+        super(model);
+        this.scdModel = scdModel;
+        initializeRelevanceStrategiesMap();
+    }
 
-   private List<IComponentsStrategy> relevanceStrategies;
+    /**
+     * Initialisation of strategies map.
+     */
+    private void initializeRelevanceStrategiesMap() {
+        this.relevanceStrategies = new ArrayList<IComponentsStrategy>();
+        this.relevanceStrategies.add(new ClosenessToThresholdStrategy());
+        this.relevanceStrategies.add(new ComplexityStrategy());
+        this.relevanceValues = new RelevanceResults<ComponentImplementingClassesLink>(this.relevanceStrategies.size()
+                + NUMBER_OF_RESULT_STRATEGIES);
+    }
 
+    @Override
+    public void startAnalysis() {
+        RelevanceAnalysisPlugin.getDefault().log("Started Component Relevance Analysis");
+        RelevanceAnalysisPlugin.getDefault().log("Started Component Relevance Analysis");
+        for (int i = 0; i < this.relevanceStrategies.size() + AbstractRelevanceAnalysis.NUMBER_OF_RESULT_STRATEGIES; i++) {
+            calculateRelevanceValuesForStrategy(i);
+            RelevanceAnalysisPlugin.getDefault().log(
+                    "Components Rating: Finished rating for relevance strategy " + (i + 1) + "/"
+                            + (this.relevanceStrategies.size() + AbstractRelevanceAnalysis.NUMBER_OF_RESULT_STRATEGIES)
+                            + ".");
+        }
+        RelevanceAnalysisPlugin.getDefault().log("Finished Component Relevance Analysis");
+    }
 
-   public RelevantComponentAnalysis(final SourceCodeDecoratorRepository scdModel, final MetricValuesModel model)
-   {
-      super(model);
-      this.scdModel = scdModel;
-      initializeRelevanceStrategiesMap();
-   }
+    /**
+     * Calculates relevance values for strategy.
+     * @param i index
+     */
+    private void calculateRelevanceValuesForStrategy(final int i) {
+        for (ComponentImplementingClassesLink link : this.scdModel.getComponentImplementingClassesLink()) {
+            VectorLengthComponentsResultStrategy resultStrategy = new VectorLengthComponentsResultStrategy();
+            ParetoOptimalComponentsResultStrategy paretoOptimalResultStrategy = new ParetoOptimalComponentsResultStrategy();
+            double relevanceValue = 0;
+            if (i < this.relevanceStrategies.size()) {
+                relevanceValue = calculateRelevanceStrategies(i, link);
+            } else {
+                relevanceValue = calculateResultStrategies(i, link, resultStrategy, paretoOptimalResultStrategy);
+            }
+            this.relevanceValues.setRelevanceValue(link, i, relevanceValue);
+        }
+        RelevanceAnalysisPlugin.getDefault().log("Finished Component Relevance Analysis");
+    }
 
+    /**
+     * Calculates relevance strategies.
+     * @param i index
+     * @param link component implementing classes link
+     * @return calculated value
+     */
+    private double calculateRelevanceStrategies(final int i, final ComponentImplementingClassesLink link) {
+        return this.relevanceStrategies.get(i).getRelevanceValue(link, this.metricValuesModel);
+    }
 
-   private void initializeRelevanceStrategiesMap()
-   {
-      this.relevanceStrategies = new ArrayList<IComponentsStrategy>();
-      this.relevanceStrategies.add(new ClosenessToThresholdStrategy());
-      this.relevanceStrategies.add(new ComplexityStrategy());
-      this.relevanceValues = new RelevanceResults<ComponentImplementingClassesLink>(this.relevanceStrategies.size()
-            + NUMBER_OF_RESULT_STRATEGIES);
-   }
-
-
-   @Override
-   public void startAnalysis()
-   {
-	   RelevanceAnalysisPlugin.getDefault().log("Started Component Relevance Analysis");
-	   RelevanceAnalysisPlugin.getDefault().log("Started Component Relevance Analysis");
-      for (int i = 0; i < this.relevanceStrategies.size() + AbstractRelevanceAnalysis.NUMBER_OF_RESULT_STRATEGIES; i++)
-      {
-         calculateRelevanceValuesForStrategy(i);
-         RelevanceAnalysisPlugin.getDefault().log(
-               "Components Rating: Finished rating for relevance strategy " + (i + 1) + "/"
-                     + (this.relevanceStrategies.size() + AbstractRelevanceAnalysis.NUMBER_OF_RESULT_STRATEGIES) + ".");
-      }
-      RelevanceAnalysisPlugin.getDefault().log("Finished Component Relevance Analysis");
-   }
-
-
-   private void calculateRelevanceValuesForStrategy(final int i)
-   {
-      for (ComponentImplementingClassesLink link : this.scdModel.getComponentImplementingClassesLink())
-      {
-         VectorLengthComponentsResultStrategy resultStrategy = new VectorLengthComponentsResultStrategy();
-         ParetoOptimalComponentsResultStrategy paretoOptimalResultStrategy = new ParetoOptimalComponentsResultStrategy();
-         double relevanceValue = 0;
-         if (i < this.relevanceStrategies.size())
-         {
-            relevanceValue = calculateRelevanceStrategies(i, link);
-         }
-         else
-         {
-            relevanceValue = calculateResultStrategies(i, link, resultStrategy, paretoOptimalResultStrategy);
-         }
-         this.relevanceValues.setRelevanceValue(link, i, relevanceValue);
-      }
-      RelevanceAnalysisPlugin.getDefault().log("Finished Component Relevance Analysis");
-   }
-
-
-   private double calculateRelevanceStrategies(final int i, final ComponentImplementingClassesLink link)
-   {
-      return this.relevanceStrategies.get(i).getRelevanceValue(link, this.metricValuesModel);
-   }
-
-
-   private double calculateResultStrategies(final int i, final ComponentImplementingClassesLink link,
-         final VectorLengthComponentsResultStrategy resultStrategy,
-         final ParetoOptimalComponentsResultStrategy paretoOptimalResultStrategy)
-   {
-      double relevanceValue;
-      if (i == this.relevanceStrategies.size())
-      {
-         resultStrategy.setRelevanceResults(this.relevanceValues);
-         relevanceValue = resultStrategy.getRelevanceValue(link, this.metricValuesModel);
-      }
-      else
-      {
-         paretoOptimalResultStrategy.setRelevanceResults(this.relevanceValues);
-         relevanceValue = paretoOptimalResultStrategy.getRelevanceValue(link, this.metricValuesModel);
-      }
-      return relevanceValue;
-   }
+    /**
+     * Calculates result strategies.
+     * @param i index
+     * @param link component implementing classes link
+     * @param resultStrategy vector length components result strategy
+     * @param paretoOptimalResultStrategy pareto optimal
+     * @return calculated result strategies
+     */
+    private double calculateResultStrategies(final int i, final ComponentImplementingClassesLink link,
+            final VectorLengthComponentsResultStrategy resultStrategy,
+            final ParetoOptimalComponentsResultStrategy paretoOptimalResultStrategy) {
+        double relevanceValue;
+        if (i == this.relevanceStrategies.size()) {
+            resultStrategy.setRelevanceResults(this.relevanceValues);
+            relevanceValue = resultStrategy.getRelevanceValue(link, this.metricValuesModel);
+        } else {
+            paretoOptimalResultStrategy.setRelevanceResults(this.relevanceValues);
+            relevanceValue = paretoOptimalResultStrategy.getRelevanceValue(link, this.metricValuesModel);
+        }
+        return relevanceValue;
+    }
 
 }

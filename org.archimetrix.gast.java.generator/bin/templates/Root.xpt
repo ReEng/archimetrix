@@ -1,0 +1,18 @@
+«IMPORT gast::core»
+«IMPORT gast::types»
+«IMPORT templates»
+
+«EXTENSION org::eclipse::xtend::util::stdlib::io»
+
+«DEFINE Root FOR core::Root»
+		«EXPAND Package FOREACH packages.typeSelect(core::Package)»
+«ENDDEFINE»
+
+
+«DEFINE Package FOR core::Package»
+	«IF !this.qualifiedName.startsWith("java")»
+		«EXPAND GASTClass::Type FOREACH allNormalClasses»
+		«EXPAND GASTClass::Type FOREACH allInterfaces»
+	«ENDIF»
+«ENDDEFINE»
+

@@ -1,9 +1,8 @@
 package org.archimetrix.relevanceanalysis.ui.wizards;
 
-
 import org.archimetrix.commons.wizards.ResourceSelectionSection;
 import org.archimetrix.commons.wizards.ResourceSelectionSectionProvider;
-import org.archimetrix.commons.wizards.WizardConstants;
+import org.archimetrix.commons.wizards.Messages;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -18,114 +17,117 @@ import org.eclipse.swt.widgets.Group;
 import org.fujaba.commons.utils.IDUsingResourceFactory;
 import org.reclipse.structure.inference.ui.wizards.StartInferenceWizardPage;
 
-
 /**
  * This wizard page is used in the StartPatternDetectionForComponentWizard. It contains an input
  * sections for a catalog with bad smell specifications which will be used for the analysis.
  * 
  * @author mcp
- * @author Last editor: $Author$
- * @version $Revision$ $Date$
  * 
  */
-public class StartPatternDetectionForComponentWizardPage extends StartInferenceWizardPage
-{
+public class StartPatternDetectionForComponentWizardPage extends StartInferenceWizardPage {
 
-   private static final String WIZARD_PAGE_DESCRIPTION = "Select the pattern catalog in which the design deficiencies are specified.";
+    /**
+     * wizard page description string.
+     */
+    private static final String WIZARD_PAGE_DESCRIPTION = "Select the pattern catalog in which the design deficiencies are specified.";
 
-   private Resource catalog;
+    /**
+     * catalog.
+     */
+    private Resource catalog;
 
-   private ResourceSelectionSection badSmellsSection;
+    /**
+     * resource selection section for bad smell.
+     * 
+     */
+    private ResourceSelectionSection badSmellsSection;
 
+    /**
+     * the constructor.
+     * @param string title
+     */
+    public StartPatternDetectionForComponentWizardPage(final String string) {
+        super(string);
+        setTitle(string);
+        setDescription(WIZARD_PAGE_DESCRIPTION);
+    }
 
-   public StartPatternDetectionForComponentWizardPage(final String string)
-   {
-      super(string);
-      setTitle(string);
-      setDescription(WIZARD_PAGE_DESCRIPTION);
-   }
+    @Override
+    public void createControl(final Composite parent) {
+        Composite composite = new Composite(parent, SWT.NONE);
+        composite.setLayout(new GridLayout());
 
+        ResourceSelectionSectionProvider sectionProvider = new ResourceSelectionSectionProvider();
+        Group inputs = sectionProvider.createInputGroup(composite);
+        this.badSmellsSection = new ResourceSelectionSectionProvider().addBadSmellsCatalogResourceSelection(inputs,
+                this);
 
-   @Override
-   public void createControl(final Composite parent)
-   {
-      Composite composite = new Composite(parent, SWT.NONE);
-      composite.setLayout(new GridLayout());
+        setControl(composite);
+        setPageComplete(false);
+    }
 
-      ResourceSelectionSectionProvider sectionProvider = new ResourceSelectionSectionProvider();
-      Group inputs = sectionProvider.createInputGroup(composite);
-      this.badSmellsSection = new ResourceSelectionSectionProvider().addBadSmellsCatalogResourceSelection(inputs, this);
+    @Override
+    public void widgetSelected(final SelectionEvent e) {
+        widgetDefaultSelected(e);
+    }
 
-      setControl(composite);
-      setPageComplete(false);
-   }
+    @Override
+    public void widgetDefaultSelected(final SelectionEvent e) {
+        setPageComplete(isValid());
+    }
 
+    /**
+     * checks validity.
+     * @return decision bool value
+     */
+    protected boolean isValid() {
+        if (this.badSmellsSection.getTextField().getText() == null) {
+            setErrorMessage(Messages.WizardConstants_NO_BAD_SMELLS_CATALOG_ERROR_MESSAGE);
+        }
 
-   @Override
-   public void widgetSelected(final SelectionEvent e)
-   {
-      widgetDefaultSelected(e);
-   }
+        if (this.badSmellsSection.getTextField().getText() != null) {
+            setErrorMessage(null);
+            return true;
+        }
 
+        return false;
+    }
 
-   @Override
-   public void widgetDefaultSelected(final SelectionEvent e)
-   {
-      setPageComplete(isValid());
-   }
+    @Override
+    public void modifyText(final ModifyEvent e) {
+        if (e.getSource() == this.badSmellsSection.getTextField()) {
+            this.badSmellsSection.getDialog()
+                    .setInitialSelection(
+                            ResourcesPlugin.getWorkspace().getRoot()
+                                    .findMember(this.badSmellsSection.getTextField().getText()));
+        }
 
+        setPageComplete(isValid());
+    }
 
-   protected boolean isValid()
-   {
-      if (this.badSmellsSection.getTextField().getText() == null)
-      {
-         setErrorMessage(WizardConstants.NO_BAD_SMELLS_CATALOG_ERROR_MESSAGE);
-      }
+    /**
+     * returns the catalog.
+     * @return catalog
+     */
+    public Resource getCatalogResource() {
+        ResourceSet resourceSet = new ResourceSetImpl();
+        resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap()
+                .put(Resource.Factory.Registry.DEFAULT_EXTENSION, new IDUsingResourceFactory());
+        String text = this.badSmellsSection.getTextField().getText();
+        if (text != null && text.length() > 0) {
+            this.catalog = resourceSet.getResource(URI.createPlatformResourceURI(text, true), true);
+        } else {
+            this.catalog = null;
+        }
+        return this.catalog;
+    }
 
-      if (this.badSmellsSection.getTextField().getText() != null)
-      {
-         setErrorMessage(null);
-         return true;
-      }
-
-      return false;
-   }
-
-
-   @Override
-   public void modifyText(final ModifyEvent e)
-   {
-      if (e.getSource() == this.badSmellsSection.getTextField())
-      {
-         this.badSmellsSection.getDialog().setInitialSelection(
-               ResourcesPlugin.getWorkspace().getRoot().findMember(this.badSmellsSection.getTextField().getText()));
-      }
-
-      setPageComplete(isValid());
-   }
-
-
-   public Resource getCatalog()
-   {
-      ResourceSet resourceSet = new ResourceSetImpl();
-      resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap()
-            .put(Resource.Factory.Registry.DEFAULT_EXTENSION, new IDUsingResourceFactory());
-      String text = this.badSmellsSection.getTextField().getText();
-      if (text != null && text.length() > 0)
-      {
-         this.catalog = resourceSet.getResource(URI.createPlatformResourceURI(text, true), true);
-      }
-      else
-      {
-         this.catalog = null;
-      }
-      return this.catalog;
-   }
-
-
-   public boolean isUseExistingEngines()
-   {
-      return false;
-   }
+    /**
+     * use existing engines.
+     * @return false
+     */
+    public boolean isUseExistingEngines() {
+        return false;
+    }
 
 }

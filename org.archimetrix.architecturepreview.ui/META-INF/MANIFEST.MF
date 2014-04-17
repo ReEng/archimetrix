@@ -1,23 +1,23 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Archimetrix Architecture Preview UI
-Bundle-SymbolicName: org.archimetrix.architecturepreview.ui;singleton:=true
+Bundle-SymbolicName: org.archimetrix.architetureprognosis.ui;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: org.archimetrix.architectureprognosis.ui.ArchitecturePrognosisUIPlugin
+Bundle-Activator: org.archimetrix.architecturepreview.ui.ArchitecturePreviewUIPlugin
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime,
  org.eclipse.core.resources,
  org.reclipse.structure.inference.annotations;bundle-version="1.0.0",
  org.archimetrix.relevanceanalysis;bundle-version="1.0.0",
- org.storydriven.modeling;bundle-version="1.0.0",
- eu.qimpress.sourcecodedecorator;bundle-version="1.0.0",
  org.archimetrix.relevanceanalysis.ui;bundle-version="1.0.0",
  org.archimetrix.architecturepreview;bundle-version="1.0.0",
- org.somox.metricValuesPersistency;bundle-version="1.0.0",
- eu.qimpress.gast;bundle-version="1.0.0",
+ org.archimetrix.commons;bundle-version="1.0.0",
+ org.storydriven.core;bundle-version="1.0.0",
+ org.storydriven.storydiagrams;bundle-version="1.0.0",
+ org.somox.sourcecodedecorator;bundle-version="1.0.1",
+ org.eclipse.gmt.modisco.java;bundle-version="0.10.1",
+ de.uka.ipd.sdq.pcm;bundle-version="3.2.0",
  org.reclipse.structure.specification;bundle-version="1.0.0",
- org.fujaba.commons;bundle-version="1.0.0",
- org.archimetrix.commons;bundle-version="1.0.0"
+ org.fujaba.commons;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn
