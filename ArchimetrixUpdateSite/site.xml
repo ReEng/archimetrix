@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/ArchimetrixFeature_1.0.0.201404241447.jar" id="ArchimetrixFeature" version="1.0.0.201404241447">
+      <category name="Archimetrix"/>
+   </feature>
+   <category-def name="Archimetrix" label="Archimetrix">
+      <description>
+         Archimetrix is a tool-supported reengineering process that combines different reverse engineering approaches to enable an iterative recovery and reengineering of component-based software architectures. It is developed by the Software Engineering Group at the University of Paderborn.
+      </description>
+   </category-def>
+</site>
