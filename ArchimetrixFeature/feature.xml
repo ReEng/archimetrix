@@ -17,10 +17,6 @@
    </license>
 
    <includes
-         id="de.uka.ipd.sdq.workflow.feature.core"
-         version="0.0.0"/>
-
-   <includes
          id="org.somox.buckminster"
          version="0.0.0"/>
 
