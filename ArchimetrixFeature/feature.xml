@@ -17,15 +17,7 @@
    </license>
 
    <includes
-         id="de.uka.ipd.sdq.workflow.buckminster"
-         version="0.0.0"/>
-
-   <includes
          id="de.uka.ipd.sdq.workflow.feature.core"
-         version="0.0.0"/>
-
-   <includes
-         id="de.uka.ipd.sdq.workflow.feature.mdsd"
          version="0.0.0"/>
 
    <includes
