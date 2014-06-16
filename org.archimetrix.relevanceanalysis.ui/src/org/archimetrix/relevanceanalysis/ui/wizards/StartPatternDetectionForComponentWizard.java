@@ -75,7 +75,7 @@ public class StartPatternDetectionForComponentWizard extends StartInferenceWizar
      * @return resource
      */
     private Resource setupCatalogResource() {
-        Resource catalogResource = this.page.getCatalogResource();
+        Resource catalogResource = this.mainWizardPage.getCatalogResource();
         StringBuilder catalogPath = new StringBuilder(catalogResource.getURI().toPlatformString(false));
         catalogPath.append(".");
         catalogPath.append(Messages.WizardConstants_ECORE_FILE_EXTENSION);
