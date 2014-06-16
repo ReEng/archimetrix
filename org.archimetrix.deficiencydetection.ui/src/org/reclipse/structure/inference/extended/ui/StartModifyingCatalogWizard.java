@@ -52,7 +52,7 @@ public class StartModifyingCatalogWizard extends StartInferenceWizard {
         
         this.mainWizardPage.initializeResourceSet();
         this.addPage(this.mainWizardPage);
-        page= mainWizardPage;
+        //page= mainWizardPage;
         // add second page here
         this.componentSelectionPage = new ComponentSelectionWizardPage(
                 "Select Components to be analyzed");
@@ -103,9 +103,9 @@ public class StartModifyingCatalogWizard extends StartInferenceWizard {
             selection = ((ComponentSelectionWizardPage)
                     selectionPage).getCheckedObjects();
         }
-        Resource catalog = page.getCatalogResource();
-        Resource engines = page.getEnginesResource();
-        if (!this.page.isUseExistingEngines()) {
+        Resource catalog = mainWizardPage.getCatalogResource();
+        Resource engines = mainWizardPage.getEnginesResource();
+        if (!this.mainWizardPage.isUseExistingEngines()) {
             URI uri = URI.createPlatformResourceURI(
                     catalog.getURI().toPlatformString(false) + ".ecore", true);
             engines = catalog.getResourceSet().createResource(uri);
@@ -122,7 +122,7 @@ public class StartModifyingCatalogWizard extends StartInferenceWizard {
     @Override
     protected void storePageSettings() {
         //super.storePageSettings();
-        page.saveSettings();
+        mainWizardPage.saveSettings();
         // TODO: The selectionPage should also store its settings.
         
     }
