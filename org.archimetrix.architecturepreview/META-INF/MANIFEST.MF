@@ -16,11 +16,9 @@ Require-Bundle: org.eclipse.ui,
  org.somox.sourcecodedecorator;bundle-version="1.0.1",
  de.uka.ipd.sdq.pcm;bundle-version="3.2.0",
  org.reclipse.structure.specification;bundle-version="1.0.0",
- org.fujaba.commons;bundle-version="1.0.0",
- de.fzi.gast;bundle-version="1.0.0"
+ org.fujaba.commons;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.archimetrix.architecturepreview,
  org.archimetrix.architecturepreview.starters
 Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn
-Import-Package: eu.qimpress.qimpressgast.util

@@ -16,10 +16,14 @@ import org.reclipse.structure.inference.annotations.ASGAnnotation;
 import org.storydriven.storydiagrams.activities.Activity;
 import org.storydriven.storydiagrams.interpreter.eclipse.StoryDrivenEclipseInterpreter;
 
-import de.fzi.gast.core.Root;
+//import de.fzi.gast.core.Root;
 import de.mdelab.sdm.interpreter.core.SDMException;
 import de.mdelab.sdm.interpreter.core.variables.Variable;
-import eu.qimpress.qimpressgast.util.qimpressgastResourceFactoryImpl;
+//import eu.qimpress.qimpressgast.util.qimpressgastResourceFactoryImpl;
+
+
+// TODO: This class should be adapted to MoDisco (kdm model). Gast is not used anymore! 
+
 
 /**
  * This class is responsible for starting the story diagram interpreter in order to execute a

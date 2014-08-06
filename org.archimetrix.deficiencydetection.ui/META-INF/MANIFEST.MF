@@ -12,9 +12,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.somox.sourcecodedecorator.editor;bundle-version="1.0.0",
  org.fujaba.commons;bundle-version="1.0.0",
  org.reclipse.structure.generator;bundle-version="1.0.0",
- de.fzi.gast;bundle-version="1.0.0",
  de.uka.ipd.sdq.pcm;bundle-version="3.2.0",
- eu.qimpress.samm.edit;bundle-version="1.0.0"
+ de.uka.ipd.sdq.identifier.edit,
+ de.uka.ipd.sdq.pcm.edit
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Import-Package: de.uka.ipd.sdq.probfunction.provider,

@@ -18,7 +18,6 @@ Require-Bundle: org.eclipse.ui,
  org.archimetrix.commons;bundle-version="1.0.0",
  org.somox.metricvaluesstorage;bundle-version="1.0.0",
  org.somox.sourcecodedecorator;bundle-version="1.0.1",
- de.fzi.gast;bundle-version="1.0.0",
  de.uka.ipd.sdq.pcm;bundle-version="3.2.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

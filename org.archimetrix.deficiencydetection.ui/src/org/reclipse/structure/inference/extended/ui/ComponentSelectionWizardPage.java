@@ -24,21 +24,31 @@ import org.eclipse.ui.dialogs.ContainerCheckedTreeViewer;
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorPackage;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
+import org.somox.sourcecodedecorator.provider.SourceCodeDecoratorItemProviderAdapterFactory;
 
+import de.uka.ipd.sdq.identifier.provider.IdentifierItemProviderAdapterFactory;
+import de.uka.ipd.sdq.pcm.allocation.provider.AllocationItemProviderAdapterFactory;
+import de.uka.ipd.sdq.pcm.core.provider.CoreItemProviderAdapterFactory;
+import de.uka.ipd.sdq.pcm.qosannotations.provider.QosannotationsItemProviderAdapterFactory;
+import de.uka.ipd.sdq.pcm.resourceenvironment.provider.ResourceenvironmentItemProviderAdapterFactory;
+import de.uka.ipd.sdq.pcm.seff.provider.SeffItemProviderAdapterFactory;
+import de.uka.ipd.sdq.pcm.system.provider.SystemItemProviderAdapterFactory;
+import de.uka.ipd.sdq.pcm.usagemodel.provider.UsagemodelItemProviderAdapterFactory;
 import de.uka.ipd.sdq.probfunction.provider.ProbfunctionItemProviderAdapterFactory;
 import de.uka.ipd.sdq.stoex.provider.StoexItemProviderAdapterFactory;
 import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
-import eu.qimpress.identifier.provider.IdentifierItemProviderAdapterFactory;
-import eu.qimpress.samm.annotation.provider.AnnotationItemProviderAdapterFactory;
-import eu.qimpress.samm.behaviour.provider.BehaviourItemProviderAdapterFactory;
-import eu.qimpress.samm.core.provider.CoreItemProviderAdapterFactory;
-import eu.qimpress.samm.datatypes.provider.DatatypesItemProviderAdapterFactory;
-import eu.qimpress.samm.deployment.allocation.provider.AllocationItemProviderAdapterFactory;
-import eu.qimpress.samm.deployment.hardware.provider.HardwareItemProviderAdapterFactory;
-import eu.qimpress.samm.deployment.targetenvironment.provider.TargetenvironmentItemProviderAdapterFactory;
-import eu.qimpress.samm.qosannotation.provider.QosannotationItemProviderAdapterFactory;
-import eu.qimpress.samm.staticstructure.provider.StaticstructureItemProviderAdapterFactory;
-import eu.qimpress.samm.usagemodel.provider.UsagemodelItemProviderAdapterFactory;
+
+//import eu.qimpress.identifier.provider.IdentifierItemProviderAdapterFactory;
+//import eu.qimpress.samm.annotation.provider.AnnotationItemProviderAdapterFactory;
+//import eu.qimpress.samm.behaviour.provider.BehaviourItemProviderAdapterFactory;
+//import eu.qimpress.samm.core.provider.CoreItemProviderAdapterFactory;
+//import eu.qimpress.samm.datatypes.provider.DatatypesItemProviderAdapterFactory;
+//import eu.qimpress.samm.deployment.allocation.provider.AllocationItemProviderAdapterFactory;
+//import eu.qimpress.samm.deployment.hardware.provider.HardwareItemProviderAdapterFactory;
+//import eu.qimpress.samm.deployment.targetenvironment.provider.TargetenvironmentItemProviderAdapterFactory;
+//import eu.qimpress.samm.qosannotation.provider.QosannotationItemProviderAdapterFactory;
+//import eu.qimpress.samm.staticstructure.provider.StaticstructureItemProviderAdapterFactory;
+//import eu.qimpress.samm.usagemodel.provider.UsagemodelItemProviderAdapterFactory;
 
 
 /**
@@ -159,29 +169,26 @@ public class ComponentSelectionWizardPage extends WizardPage {
         adapterFactory.addAdapterFactory(
                 new ResourceItemProviderAdapterFactory());
          adapterFactory.addAdapterFactory(new
-         StaticstructureItemProviderAdapterFactory());
+         SystemItemProviderAdapterFactory());
          adapterFactory.addAdapterFactory(new
          CoreItemProviderAdapterFactory());
          adapterFactory.addAdapterFactory(new
-         DatatypesItemProviderAdapterFactory());
+                 SeffItemProviderAdapterFactory());
          adapterFactory.addAdapterFactory(new
-         BehaviourItemProviderAdapterFactory());
-         adapterFactory.addAdapterFactory(new
-         TargetenvironmentItemProviderAdapterFactory());
-         adapterFactory.addAdapterFactory(new
-         HardwareItemProviderAdapterFactory());
+         ResourceenvironmentItemProviderAdapterFactory());
          adapterFactory.addAdapterFactory(new
          AllocationItemProviderAdapterFactory());
          adapterFactory.addAdapterFactory(new
-         AnnotationItemProviderAdapterFactory());
-         adapterFactory.addAdapterFactory(new
          UsagemodelItemProviderAdapterFactory());
          adapterFactory.addAdapterFactory(new
-         QosannotationItemProviderAdapterFactory());
+         QosannotationsItemProviderAdapterFactory());
          adapterFactory.addAdapterFactory(new
          IdentifierItemProviderAdapterFactory());
+         adapterFactory.addAdapterFactory(new
+                 SourceCodeDecoratorItemProviderAdapterFactory());
         adapterFactory.addAdapterFactory(new
                 ProbfunctionItemProviderAdapterFactory());
+        
         adapterFactory.addAdapterFactory(new StoexItemProviderAdapterFactory());
         adapterFactory.addAdapterFactory(new UnitsItemProviderAdapterFactory());
         adapterFactory.addAdapterFactory(new

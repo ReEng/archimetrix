@@ -15,10 +15,11 @@ import org.reclipse.structure.specification.PSNode;
 import org.reclipse.structure.specification.PSObject;
 import org.reclipse.structure.specification.PSPatternSpecification;
 import org.reclipse.structure.specification.SpecificationFactory;
+import org.somox.sourcecodedecorator.SourceCodeDecoratorPackage;
 
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
-import eu.qimpress.samm.staticstructure.StaticstructurePackage;
+//import eu.qimpress.samm.staticstructure.StaticstructurePackage;
 
 /**
  * This strategy prepares the detection engines for the deficiency detection in Archimetrix. Because
@@ -123,7 +124,8 @@ public class CatalogModifyingGenerateEnginesStrategy extends GenerateNewEnginesS
         String selectionExpression = getSelectionExpression(selectedComponents);
         // TODO: If all components are selected, no modification should be executed.
 
-        EClass compTypeEClass = StaticstructurePackage.eINSTANCE.getComponentType();
+        EClass compTypeEClass = SourceCodeDecoratorPackage.eINSTANCE.getComponentImplementingClassesLink();
+        //EClass compTypeEClass = StaticstructurePackage.eINSTANCE.getComponentType();
         EAttribute attributeType = IdentifierPackage.eINSTANCE.getIdentifier_Id();
 
         for (PSPatternSpecification pattern : catalog.getPatternSpecifications()) {
