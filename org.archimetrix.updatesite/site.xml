@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/ArchimetrixFeature_1.0.0.201408131515.jar" id="ArchimetrixFeature" version="1.0.0.201408131515">
+   <feature url="features/org.archimetrix.feature_1.0.0.201408140027.jar" id="org.archimetrix.feature" version="1.0.0.201408140027">
       <category name="Archimetrix"/>
    </feature>
    <category-def name="Archimetrix" label="Archimetrix"/>
