@@ -4,8 +4,8 @@
       label="Archimetrix"
       version="1.0.0.qualifier">
 
-   <description url="http://www.example.com/description">
-      [Enter Feature Description here.]
+   <description url="https://code.google.com/p/archimetrix/">
+      Archimetrix is a tool-supported reengineering process that combines different reverse engineering approaches to enable an iterative recovery and reengineering of component-based software architectures. It is developed by the Software Engineering Group at the University of Paderborn.
    </description>
 
    <copyright url="http://www.example.com/copyright">
@@ -15,20 +15,6 @@
    <license url="http://www.example.com/license">
       [Enter License Description here.]
    </license>
-
-   <plugin
-         id="org.archimetrix.architecturepreview"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.archimetrix.architetureprognosis.ui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
 
    <plugin
          id="org.archimetrix.commons"
