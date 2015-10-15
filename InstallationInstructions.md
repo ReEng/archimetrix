@@ -8,7 +8,7 @@ If you only want to try out Archimetrix without actively developing it, there is
 
   * (1) Download and install the [Eclipse Modeling Tools (Luna)](https://www.eclipse.org/downloads/index-developer.php) by choosing the your target OS.
   * (2) Select Help -> Install New Software... and from the category Modelling under Eclipse Luna update site install MoDisco SDK and QVT Operational SDK.
-  * (3) Select Help -> Install New Software... and install Palladio from the nightly build [site](https://sdqweb.ipd.kit.edu/eclipse/palladio/nightly/).
+  * (3) Select Help -> Install New Software... and install Palladio from the nightly build [site](https://sdqweb.ipd.kit.edu/eclipse/palladiosimulator/nightly/).
   * (4) Select Help -> Install New Software... and install SoMoX from the nightly build [site](https://sdqweb.ipd.kit.edu/eclipse/somox/nightly/).
   * (5) Select Help -> Install New Software... and install Reclipse from the [updatesite](https://reclipse-emf.googlecode.com/svn/trunk/org.reclipse.updatesite/).
   * (6) Select Help -> Install New Software... and install Archimetrix from our [update site](https://archimetrix.googlecode.com/svn/branches/ArchimetrixForKepler/org.archimetrix.updatesite/).
@@ -24,18 +24,18 @@ In order to set up Eclipse Luna environment to develop Archimetrix, you need to 
 
   * (1) Download and install the [Eclipse Modeling Tools (Luna)](https://www.eclipse.org/downloads/index-developer.php) by choosing the your target OS.
   * (2) Select Help -> Install New Software... and from the category Modelling under Eclipse Luna update site install MoDisco SDK, and QVT Operational SDK.
-  * (3) Select Help -> Install New Software... and install Palladio from the nightly build [site](https://sdqweb.ipd.kit.edu/eclipse/palladio/nightly/).
+  * (3) Select Help -> Install New Software... and install Palladio from the nightly build [site](https://sdqweb.ipd.kit.edu/eclipse/palladiosimulator/nightly/).
   * (4) Check out all projects of SoMoX from the trunk folder of [SoMoX repository](https://svnserver.informatik.kit.edu/i43/svn/code/SoMoX/Core/trunk/) (anonymous, anonymous). Alternatively, you may install SoMoX from the nightly build [site](https://sdqweb.ipd.kit.edu/eclipse/somox/nightly/).
-  * (5) Check out the required projects (see figure bellow) from [Story diagrams repository](https://svn.codespot.com/a/eclipselabs.org/sdm-commons/). Alternatively, you may install Story diagrams from the nightly build [site](https://sdqweb.ipd.kit.edu/eclipse/storydiagraminterpreter/nightly/).
+  * (5) Check out the required projects (see figure bellow) from [Story diagrams repository](https://github.com/ReEng/sdm-commons). Alternatively, you may install Story diagrams from the nightly build [site](https://sdqweb.ipd.kit.edu/eclipse/storydiagraminterpreter/nightly/).
 
 ![http://archimetrix.googlecode.com/svn/wiki/images/plugins/SDPlugins.png](http://archimetrix.googlecode.com/svn/wiki/images/plugins/SDPlugins.png)
 
   * (6) Check out the required projects (see figure bellow) from
-[Reclipse repository](https://reclipse-emf.googlecode.com/svn/trunk/). Alternatively, you may install Reclipse following the installation instructions from [Reclipse project page](https://code.google.com/p/reclipse-emf/).
+[Reclipse repository](https://github.com/ReEng/reclipse-emf). Alternatively, you may install Reclipse following the installation instructions from [Reclipse project page](https://github.com/ReEng/reclipse-emf/blob/master/wiki/InstallationInstructions.wiki).
 
 ![http://archimetrix.googlecode.com/svn/wiki/images/plugins/ReclipsePlugins.png](http://archimetrix.googlecode.com/svn/wiki/images/plugins/ReclipsePlugins.png)
 
-  * (7) Finally, check out the projects from [Archimetrix repository](https://archimetrix.googlecode.com/svn/branches/ArchimetrixForKepler/).
+  * (7) Finally, check out the projects from [Archimetrix repository](https://github.com/ReEng/archimetrix.git).
 
 ![http://archimetrix.googlecode.com/svn/wiki/images/plugins/ArchimetrixPlugins.png](http://archimetrix.googlecode.com/svn/wiki/images/plugins/ArchimetrixPlugins.png)
 
